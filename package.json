@@ -1,0 +1,30 @@
+{
+  "name": "tallo-ui-kit",
+  "version": "0.1.0",
+  "description": "Tallo Inc.'s react component library and ui documentation",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/STEMPremier/tallo-ui-kit.git"
+  },
+  "keywords": [
+    "react",
+    "ui-kit",
+    "styleguide",
+    "user-interface",
+    "components",
+    "style",
+    "documentation"
+  ],
+  "author": "Tallo Inc., Engineering",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/STEMPremier/tallo-ui-kit/issues"
+  },
+  "homepage": "https://github.com/STEMPremier/tallo-ui-kit#readme"
+}
