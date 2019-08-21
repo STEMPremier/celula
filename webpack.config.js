@@ -16,7 +16,7 @@ function generateBaseConfig() {
       filename: '[name].js',
     },
     resolve: {
-      extensions: ['.js', '.jsx'],
+      extensions: ['*', '.js', '.jsx'],
     },
     module: {},
     plugins: [],
@@ -72,7 +72,7 @@ function applyLoaders(config) {
       rules: [{
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: ['babel-loader', 'eslint-loader'],
         // keep options here, so you can control them programatically, if needed
         options: {
           presets: [
