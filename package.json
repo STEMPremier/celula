@@ -2,13 +2,16 @@
   "name": "tallo-ui-kit",
   "version": "0.1.0",
   "description": "Tallo Inc.'s react component library and ui documentation",
-  "main": "index.js",
+  "main": "dist/tui-kit.js",
   "dependencies": {},
   "devDependencies": {
+    "lodash.flowright": "^3.5.0",
+    "terser-webpack-plugin": "^1.4.1",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7"
   },
   "scripts": {
+    "start": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
