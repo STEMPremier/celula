@@ -1,0 +1,9 @@
+# Built into browserslist; expands out to:
+# > 0.5%
+# last 2 versions
+# Firefox ESR
+# not dead
+
+# For more info. see https://browserl.ist/?q=defaults
+
+defaults

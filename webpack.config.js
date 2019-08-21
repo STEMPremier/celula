@@ -68,6 +68,24 @@ function applyEnv(config) {
 function applyLoaders(config) {
   const newConfig = {
     ...config,
+    module: {
+      rules: [{
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        // keep options here, so you can control them programatically, if needed
+        options: {
+          presets: [
+            ['@babel/preset-env', {
+              useBuiltIns: 'usage',
+              corejs: 3,
+            }],
+            '@babel/preset-react'
+          ],
+          plugins: ['@babel/plugin-proposal-class-properties'],
+        }
+      }],
+    },
   };
 
   return newConfig;
