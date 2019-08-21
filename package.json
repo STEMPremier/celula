@@ -24,10 +24,11 @@
     "lodash.flowright": "^3.5.0",
     "terser-webpack-plugin": "^1.4.1",
     "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7"
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
   },
   "scripts": {
-    "start": "webpack",
+    "start": "webpack-dev-server --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

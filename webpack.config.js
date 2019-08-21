@@ -57,6 +57,13 @@ function applyEnv(config) {
       ...config,
       mode: 'development',
       devtool: 'cheap-module-eval-source-map',
+      devServer: {
+        port: 3000,
+        historyApiFallback: true,
+        hot: true,
+        open: true, 
+        overlay: true,
+      },
     };
   }
 
