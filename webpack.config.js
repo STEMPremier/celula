@@ -9,7 +9,7 @@ function generateBaseConfig() {
     mode: '',
     devtool: '',
     entry: {
-      "tui-kit": './src/index.js",
+      'tui-kit': './src/index.js',
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
@@ -26,9 +26,7 @@ function generateBaseConfig() {
 }
 
 function applyEnv(config) {
-  const newConfig ={
-    ...config,
-  };
+  let newConfig;
 
   if (NODE_ENV === 'production') {
     newConfig = {
@@ -83,7 +81,7 @@ function applyLoaders(config) {
             '@babel/preset-react'
           ],
           plugins: ['@babel/plugin-proposal-class-properties'],
-        }
+        },
       }],
     },
   };
