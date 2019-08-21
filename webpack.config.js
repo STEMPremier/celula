@@ -5,7 +5,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const NODE_ENV = process.env.NODE_ENV || '';
 
 function generateBaseConfig() {
-  const config ={
+  const config = {
     mode: '',
     devtool: '',
     entry: {
@@ -61,7 +61,7 @@ function applyEnv(config) {
         port: 3000,
         historyApiFallback: true,
         hot: true,
-        open: true, 
+        open: true,
         overlay: true,
       },
     };
@@ -85,7 +85,7 @@ function applyLoaders(config) {
               useBuiltIns: 'usage',
               corejs: 3,
             }],
-            '@babel/preset-react'
+            '@babel/preset-react',
           ],
           plugins: ['@babel/plugin-proposal-class-properties'],
         },
