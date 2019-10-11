@@ -1,5 +1,5 @@
 const path = require('path');
-const flowright = require('lodash.flowright');
+const flowright = require('lodash.flow');
 const TerserPlugin = require('terser-webpack-plugin');
 
 const NODE_ENV = process.env.NODE_ENV || '';
