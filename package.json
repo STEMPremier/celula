@@ -2,10 +2,10 @@
   "name": "tallo-ui-kit",
   "version": "0.1.0",
   "description": "Tallo Inc.'s react component library and ui documentation",
-  "main": "dist/tui-kit.js",
+  "main": "dist/tui-kit.cjs.js",
+  "module": "dist/tui-kit.esm.js",
+  "browser": "dist/tui-kit.umd.js",
   "dependencies": {
-    "core-js": "^3.2.1",
-    "regenerator-runtime": "^0.13.3"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
@@ -21,7 +21,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^1.7.0",
+    "eslint-plugin-react-hooks": "^1.7.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
