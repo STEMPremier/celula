@@ -1,7 +1,7 @@
-A very simple button.
+General component description in a markdown file.
 
 ```jsx
 import Button from "./Button";
 
-<Button text="We Salute You!" />
+<Button label="We Salute You!" />
 ```
