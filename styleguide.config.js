@@ -1,4 +1,12 @@
+const path = require('path');
+const webpackConfig = require('./webpack.config.js');
+
 module.exports = {
+  title: 'Célula Style Guide',
+  require: [
+    path.join(__dirname, './src/styles/celula.less'),
+  ],
+  webpackConfig: { ...webpackConfig },
   ignore: [
     '**/__tests__/**',
     '**/*.test.{js,jsx,ts,tsx}',
