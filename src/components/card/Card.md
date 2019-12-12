@@ -1,4 +1,4 @@
-A very simple card.
+This is information about our Card component.
 
 ```jsx
 import Card from "./Card";
@@ -8,3 +8,4 @@ import Card from "./Card";
 </Card>
 ```
 
+> This text comes from a markdown file in the `/src/components/[component]` dir.
