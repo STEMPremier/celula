@@ -1,11 +1,9 @@
 {
-  "name": "tallo-ui-kit",
+  "name": "celula-ui-kit",
   "version": "0.1.0",
-  "description": "Tallo Inc.'s react component library and ui documentation",
-  "main": "dist/tui.js",
-  "dependencies": {
-    "prop-types": "^15.7.2"
-  },
+  "description": "Tallo Inc.'s React component library and ui documentation",
+  "main": "dist/celula.js",
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
@@ -37,7 +35,8 @@
     "webpack-cli": "^3.3.9"
   },
   "peerDependencies": {
-    "react": "^16.10.2"
+    "react": "^16.10.2",
+    "prop-types": "^15.7.2"
   },
   "scripts": {
     "build": "NODE_ENV=production webpack -p",
@@ -49,6 +48,7 @@
     "url": "git+https://github.com/STEMPremier/tallo-ui-kit.git"
   },
   "keywords": [
+    "celula",
     "react",
     "ui-kit",
     "styleguide",

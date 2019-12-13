@@ -26,7 +26,7 @@ function generateBaseConfig() {
   return {
     context: path.resolve(__dirname),
     entry: {
-      tui: ['./src/index.js'],
+      celula: ['./src/index.js'],
     },
     externals: [
       'react',
@@ -35,7 +35,7 @@ function generateBaseConfig() {
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: '[name].js',
-      library: 'tui',
+      library: 'celula',
       libraryTarget: 'umd',
     },
     plugins: [],
@@ -106,7 +106,7 @@ function applyOptimizations(config) {
     splitChunks: {
       cacheGroups: {
         styles: {
-          name: 'tui',
+          name: 'celula',
           test: /\.css$/,
           chunks: 'all',
           enforce: true,
