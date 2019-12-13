@@ -18,16 +18,16 @@ module.exports = {
     {
       name: 'Typography',
       description: 'This is a word about our Typography.',
-      content: 'src/styleguide/content/typography.md',
+      content: 'src/styleguide/typography.md',
     },
     {
       name: 'Colors',
       description: 'This is a description about our color pallette.',
-      content: 'src/styleguide/content/colors.md',
+      content: 'src/styleguide/colors.md',
     },
     {
       name: 'Components',
-      content: 'src/styleguide/content/components.md',
+      content: 'src/styleguide/components.md',
       components: path.join(__dirname, 'src/components/**/*.jsx'),
     },
   ],
