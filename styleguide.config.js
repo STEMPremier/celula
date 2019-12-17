@@ -3,6 +3,7 @@ const webpackConfig = require('./webpack.config.js');
 
 module.exports = {
   title: 'Célula Style Guide',
+  pagePerSection: true,
   require: [
     path.join(__dirname, './src/styles/celula.less'),
   ],
@@ -15,6 +16,11 @@ module.exports = {
     '**/src/components/**/index.{js, jsx, ts, tsx}',
   ],
   sections: [
+    {
+      name: 'Logo',
+      description: 'This is a word about our Logo.',
+      content: 'src/styleguide/logo.md',
+    },
     {
       name: 'Typography',
       description: 'This is a word about our Typography.',
