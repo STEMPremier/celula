@@ -22,14 +22,14 @@ module.exports = {
       content: 'src/styleguide/logo.md',
     },
     {
-      name: 'Typography',
-      description: 'This is a word about our Typography.',
-      content: 'src/styleguide/typography.md',
-    },
-    {
       name: 'Colors',
       description: 'This is a description about our color pallette.',
       content: 'src/styleguide/colors.md',
+    },
+    {
+      name: 'Typography',
+      description: 'This is a word about our Typography.',
+      content: 'src/styleguide/typography.md',
     },
     {
       name: 'Components',
