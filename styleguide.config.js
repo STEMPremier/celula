@@ -17,14 +17,9 @@ module.exports = {
   ],
   sections: [
     {
-      name: 'Logo',
-      description: 'This is a word about our Logo.',
-      content: 'src/styleguide/logo.md',
-    },
-    {
-      name: 'Colors',
-      description: 'This is a description about our color pallette.',
-      content: 'src/styleguide/colors.md',
+      name: 'Palettes',
+      description: 'This is a description about our color palettes.',
+      content: 'src/styleguide/palettes.md',
     },
     {
       name: 'Typography',
@@ -34,7 +29,61 @@ module.exports = {
     {
       name: 'Components',
       content: 'src/styleguide/components.md',
-      components: path.join(__dirname, 'src/components/**/*.jsx'),
+      sectionDepth: 1,
+      sections: [
+        {
+          name: 'Atoms',
+          components: path.join(__dirname, 'src/components/**/*.jsx'),
+          ignore: [
+            path.join(__dirname, 'src/components/avatar/*.jsx'),
+            path.join(__dirname, 'src/components/badge/*.jsx'),
+            path.join(__dirname, 'src/components/chart/**/*.jsx'),
+            path.join(__dirname, 'src/components/dialog/**/*.jsx'),
+            path.join(__dirname, 'src/components/form/**/*.jsx'),
+            path.join(__dirname, 'src/components/nav/*.jsx'),
+          ],
+        },
+        {
+          name: 'Molecules',
+          sections: [
+            {
+              name: 'Charts',
+              content: 'src/components/chart/chart.md',
+              components: path.join(__dirname, 'src/components/chart/**/*.jsx'),
+            },
+            {
+              name: 'Dialogs',
+              content: 'src/components/dialog/dialog.md',
+              components: path.join(__dirname, 'src/components/dialog/**/*.jsx'),
+            },
+            {
+              name: 'Selection Controls',
+              content: 'src/components/form/form.md',
+              components: path.join(__dirname, 'src/components/form/**/*.jsx'),
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'Header',
+      description: 'This is a word about our Header.',
+      content: 'src/styleguide/header.md',
+      components: path.join(__dirname, 'src/components/nav/*.jsx'),
+    },
+    {
+      name: 'Footer',
+      description: 'This is a word about our Footer.',
+      content: 'src/styleguide/footer.md',
+    },
+    {
+      name: 'Sheets',
+      description: 'This is a word about our Sheets.',
+      content: 'src/styleguide/sheets.md',
+      components: [
+        path.join(__dirname, 'src/components/avatar/*.jsx'),
+        path.join(__dirname, 'src/components/badge/*.jsx'),
+      ],
     },
   ],
 };
