@@ -29,6 +29,7 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-styleguidist": "^9.1.16",
+    "rxjs": "^6.5.3",
     "style-loader": "^1.0.0",
     "terser-webpack-plugin": "^2.2.1",
     "webpack": "^4.41.2",
