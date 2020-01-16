@@ -3,17 +3,29 @@ import PropTypes from 'prop-types';
 
 import './button.less';
 
-const Button = ({ label, handleClick }) => <button className="button" onClick={handleClick} type="button">{label}</button>;
+const Button = (props) => {
+  const { handleClick, children, type } = props;
+
+  return <button className="button" onClick={handleClick} type={type}>{children}</button>; // eslint-disable-line react/button-has-type
+};
 
 Button.propTypes = {
   /**
-   * Description of prop `label`. This text is from the source code.
+   * The text of the button.
    */
-  label: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
   /**
-   * Description of prop `handleClick`. This text is from the source code.
+   * A function that is called when the button is clicked.
    */
   handleClick: PropTypes.func.isRequired,
+  /**
+   * The type of button. This should always be `button` unless you are making a form.
+   */
+  type: PropTypes.oneOf(['button', 'submit']),
+};
+
+Button.defaultProps = {
+  type: 'button',
 };
 
 export default Button;
