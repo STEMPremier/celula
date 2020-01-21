@@ -1,6 +1,6 @@
 ---
 name: New Component Template
-about: This is the template to add a new component to the styleguide.
+about: This is the template for a new component.
 title: Make [Component] Component
 labels: Story
 assignees: ''
