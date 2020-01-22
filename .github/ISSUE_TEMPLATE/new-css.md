@@ -1,7 +1,7 @@
 ---
 name: New Styles
 about: This is the template for new styles for the design system.
-title: Create Styles for [DESIGN SECTION]
+title: Create Styles for [SECTION]
 labels: Story, Style
 assignees: ''
 
