@@ -2,10 +2,11 @@
 name: New Styles
 about: This is the template for new styles for the design system.
 title: Create Styles for [DESIGN SECTION]
-labels: Story
+labels: Story, Style
 assignees: ''
 
 ---
+
 ## User Story
 As a user of the styleguide, when I use the styleguide in my application, I should have the [SECTION] styles available to me in my application.
 

@@ -6,6 +6,7 @@ labels: Story
 assignees: ''
 
 ---
+
 ## User Story
 As a user of the styleguide, when I am on the [SECTION] documentation page, I should see the documentation on [SECTION].
 
