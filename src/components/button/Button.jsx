@@ -3,10 +3,16 @@ import PropTypes from 'prop-types';
 
 import './button.less';
 
-const Button = (props) => {
+const Button = props => {
   const { handleClick, children, type } = props;
 
-  return <button className="button" onClick={handleClick} type={type}>{children}</button>; // eslint-disable-line react/button-has-type
+  /* eslint-disable react/button-has-type */
+  return (
+    <button className="button" onClick={handleClick} type={type}>
+      {children}
+    </button>
+  );
+  /* eslint-enable react/button-has-type */
 };
 
 Button.propTypes = {

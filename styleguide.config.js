@@ -4,9 +4,7 @@ const webpackConfig = require('./webpack.config.js');
 module.exports = {
   title: 'Célula Style Guide',
   pagePerSection: true,
-  require: [
-    path.join(__dirname, './src/styles/celula.less'),
-  ],
+  require: [path.join(__dirname, './src/styles/celula.less')],
   webpackConfig: { ...webpackConfig },
   ignore: [
     '**/__tests__/**',
@@ -54,7 +52,10 @@ module.exports = {
             {
               name: 'Dialogs',
               content: 'src/components/dialog/dialog.md',
-              components: path.join(__dirname, 'src/components/dialog/**/*.jsx'),
+              components: path.join(
+                __dirname,
+                'src/components/dialog/**/*.jsx',
+              ),
             },
             {
               name: 'Selection Controls',

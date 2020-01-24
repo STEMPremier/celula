@@ -6,10 +6,7 @@ module.exports = {
     'plugin:react/recommended',
     'prettier',
   ],
-  plugins: [
-    'react',
-    'prettier',
-  ],
+  plugins: ['react', 'prettier'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -18,4 +15,4 @@ module.exports = {
   rules: {
     'prettier/prettier': ['error'],
   },
-}
+};

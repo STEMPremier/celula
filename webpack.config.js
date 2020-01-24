@@ -28,10 +28,7 @@ function generateBaseConfig() {
     entry: {
       celula: ['./src/index.js'],
     },
-    externals: [
-      'react',
-      'prop-types',
-    ],
+    externals: ['react', 'prop-types'],
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: '[name].js',
@@ -48,19 +45,23 @@ function generateBaseConfig() {
 }
 
 function applyLoaders(config) {
-  const styleLoader = (env === MODES.PRODUCTION) ? MiniCssExtractPlugin.loader : 'style-loader';
+  const styleLoader =
+    env === MODES.PRODUCTION ? MiniCssExtractPlugin.loader : 'style-loader';
 
   return {
     ...config,
     module: {
-      rules: [{
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        loader: ['babel-loader', 'eslint-loader'],
-      }, {
-        test: /\.less$/,
-        use: [styleLoader, 'css-loader', 'less-loader'],
-      }],
+      rules: [
+        {
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          loader: ['babel-loader', 'eslint-loader'],
+        },
+        {
+          test: /\.less$/,
+          use: [styleLoader, 'css-loader', 'less-loader'],
+        },
+      ],
     },
   };
 }
@@ -76,9 +77,7 @@ function applyPlugins(config) {
       }),
     ];
   } else {
-    plugins = [
-      ...plugins,
-    ];
+    plugins = [...plugins];
   }
 
   return {
