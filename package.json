@@ -43,6 +43,7 @@
   },
   "scripts": {
     "build": "yarn run prebuild && NODE_ENV=production webpack -p",
+    "check": "yarn run lint:check && yarn run pretty:check",
     "lint:check": "eslint \"**/*.{js,jsx}\"",
     "lint:fix": "eslint --fix \"**/*.{js,jsx}\"",
     "prebuild": "yarn run pretty:fix && yarn lint:fix",
