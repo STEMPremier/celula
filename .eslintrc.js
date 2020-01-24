@@ -1,17 +1,21 @@
 module.exports = {
-  "parser": "babel-eslint",
-  "extends": [
-    "eslint:recommended",
-    "airbnb",
-    "plugin:react/recommended"
+  parser: 'babel-eslint',
+  extends: [
+    'eslint:recommended',
+    'airbnb',
+    'plugin:react/recommended',
+    'prettier',
   ],
-  "plugins": [
-    "react"
+  plugins: [
+    'react',
+    'prettier',
   ],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    }
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
-  "rules": {}
+  rules: {
+    'prettier/prettier': ['error'],
+  },
 }

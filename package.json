@@ -15,9 +15,11 @@
     "css-loader": "^3.2.0",
     "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.9.0",
     "eslint-loader": "^2.2.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "less": "^3.10.3",
@@ -25,6 +27,7 @@
     "lodash.flow": "^3.5.0",
     "mini-css-extract-plugin": "^0.8.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
@@ -35,11 +38,14 @@
     "webpack-cli": "^3.3.9"
   },
   "peerDependencies": {
-    "react": "^16.10.2",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2"
   },
   "scripts": {
     "build": "NODE_ENV=production webpack -p",
+    "lint": "eslint ./src",
+    "pretty:check": "prettier --check \"**/*.{js,jsx}\"",
+    "pretty:fix": "prettier --write \"**/*.{js,jsx}\"",
     "start": "styleguidist server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
