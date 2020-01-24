@@ -2,7 +2,7 @@
 name: New Component Template
 about: This is the template for a new component.
 title: Make [COMPONENT] Component
-labels: Story, Style, Documentation, Javascript
+labels: Documentation, Javascript, Story, Style
 assignees: ''
 
 ---
