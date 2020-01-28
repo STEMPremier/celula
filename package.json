@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "description": "Tallo Inc.'s React component library and ui documentation",
   "main": "dist/celula.js",
-  "dependencies": {},
+  "dependencies": {
+    "classnames": "^2.2.6"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
