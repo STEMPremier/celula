@@ -69,6 +69,10 @@
     "documentation"
   ],
   "author": "Tallo Inc., Engineering",
+  "engines": {
+    "node": "10.x",
+    "yarn": "1.x"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/STEMPremier/tallo-ui-kit/issues"
