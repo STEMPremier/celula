@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import '../../styles/palettes';
 //////////////////////////////////
 //          ALL BUTTONS         //
@@ -60,6 +61,99 @@
 //////////////////////////////////
 .ce-button--text {
   .ce-button;
+=======
+//////////////////////////////////
+//          ALL BUTTONS         //
+//////////////////////////////////
+
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  line-height: 26px;
+  text-transform: uppercase;
+  border: 0;
+  &.small {
+    font-size: 12px;
+  }
+  &:disbled {
+    color: #ccc9c9;
+  }
+  @media screen {
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
+
+//////////////////////////////////
+//            SIZES             //
+//////////////////////////////////
+
+.ce-button--jumbo {
+  height: 70px;
+  width: 250px;
+  .mobile-100-width;
+}
+.ce-button--large {
+  height: 50px;
+  width: 256px;
+  .mobile-100-width;
+}
+.ce-button--small {
+  height: 36px;
+  width: 180px;
+  font-size: 12px;
+  line-height: 26px;
+  .mobile-100-width;
+}
+.mobile-100-width {
+  @media screen {
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
+
+////////////////////////////////////////////
+// COLORS (only applies to text buttons)  //
+////////////////////////////////////////////
+
+.ce-button--blue {
+  color: #007ab2;
+  &:hover {
+    color: #008dd2;
+  }
+  &:active {
+    color: #006999;
+  }
+  &:focus {
+    outline: none;
+    border-color: #008dd2;
+  }
+}
+.ce-button--red {
+  color: #982d7c;
+  &:hover {
+    color: #bc178f;
+  }
+  &:active {
+    color: #900068;
+  }
+  &:focus {
+    outline: none;
+    border-color: #900068;
+  }
+}
+
+//////////////////////////////////
+//       TEXT BUTTONS           //
+//////////////////////////////////
+
+.ce-button--text {
+  .button;
+>>>>>>> fe342a7... drafted text, outline and solid buttons css and md
   border-radius: 0;
   background-color: transparent;
   font-style: normal;
@@ -67,6 +161,7 @@
   border-bottom: 2px solid transparent;
   padding: 2px 4px;
 }
+<<<<<<< HEAD
 //////////////////////////////////
 //        OUTLINE BUTTONS       //
 //////////////////////////////////
@@ -74,36 +169,75 @@
   .ce-button;
   padding: 4px;
   border-radius: 3.5rem;
+=======
+
+//////////////////////////////////
+//       OUTLINE BUTTONS        //
+/////////////////////////////////
+
+.ce-button--outline {
+  .button;
+  box-sizing: border-box;
+  padding: 4px;
+  border-radius: 35px;
+>>>>>>> fe342a7... drafted text, outline and solid buttons css and md
   background-color: #ffffff;
   color: #0f1422;
   background: linear-gradient(317.58deg, #098dc9 0%, #7838a8 100%);
   span {
     background: white;
+<<<<<<< HEAD
     border-radius: 3.5rem;
+=======
+    border-radius: 35px;
+>>>>>>> fe342a7... drafted text, outline and solid buttons css and md
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+<<<<<<< HEAD
   &.ce-button--disabled {
     color: #ccc9c9;
     background: #ccc9c9;
     border: 0.3rem solid #e0e0e0;
+=======
+  &:disabled {
+    box-sizing: border-box;
+    height: 70px;
+    color: #ccc9c9;
+    background: #ccc9c9;
+    width: 256px;
+    border: 3px solid #e0e0e0;
+    border-radius: 35px;
+>>>>>>> fe342a7... drafted text, outline and solid buttons css and md
     background-color: #ffffff;
   }
   &:hover {
     background: #007bb7;
     color: #007bb7;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> fe342a7... drafted text, outline and solid buttons css and md
   &:active {
     background: #005883;
     color: #005883;
   }
+<<<<<<< HEAD
   &:focus {
     outline: none;
     color: #0f1422;
     box-shadow: 0 0 0 0.5rem #b2e7ff;
     text-transform: underline;
+=======
+
+  &:focus {
+    outline: none;
+    color: #0f1422;
+    box-shadow: 0 0 0 5px #b2e7ff;
+>>>>>>> fe342a7... drafted text, outline and solid buttons css and md
   }
 
   &:disabled {
@@ -112,10 +246,15 @@
     cursor: auto;
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> fe342a7... drafted text, outline and solid buttons css and md
 //////////////////////////////////
 //         SOLID BUTTONS       //
 /////////////////////////////////
 .ce-button--solid {
+<<<<<<< HEAD
   .ce-button;
   margin: 1rem;
   border-radius: 3.5rem;
@@ -125,6 +264,17 @@
   &.ce-button--disabled {
     background: #e0e0e0;
     color: #ffffff;
+=======
+  .button;
+  margin: 10px;
+  border-radius: 35px;
+  background: linear-gradient(317.58deg, #098dc9 0%, #7838a8 100%);
+  border: 0;
+  color: #ffffff;
+  &:disabled {
+    background: #e0e0e0;
+    color: #e0e0e0;
+>>>>>>> fe342a7... drafted text, outline and solid buttons css and md
     cursor: auto;
   }
   &:hover {
@@ -135,8 +285,14 @@
   }
   &:focus {
     outline: none;
+<<<<<<< HEAD
     border: 0.5rem solid #b2e7ff;
     background: linear-gradient(317.58deg, #098dc9 0%, #7838a8 100%);
     box-shadow: 0 0 0 0.5rem #b2e7ff;
+=======
+    border: 5px solid #b2e7ff;
+    background: linear-gradient(317.58deg, #098dc9 0%, #7838a8 100%);
+    box-shadow: 0 0 0 5px #b2e7ff;
+>>>>>>> fe342a7... drafted text, outline and solid buttons css and md
   }
 }
