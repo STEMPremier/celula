@@ -1,25 +1,45 @@
+@import '../../styles/palettes';
+
 //////////////////////////////////
 //          ALL BUTTONS         //
 //////////////////////////////////
-
-.button {
+// waht is the default height and width?  Large button size?
+// deafult colors: border, backgroun-color, color  (how depends on what the outline value is)
+// size:  height, width, margin, padding, font-size
+// textL border, background-color
+// in the palette page the word primary is associated with each color type.  Is this just a variable to reference a specific color or is it to be defined on this page as well
+.ce-button {
   font-family: inherit;
-  font-size: 16px;
+  // font-size: 12px;
+  // still needs: height, width, margin, padding, border
+  height: 3.6rem;
+  width: 18rem;
+  font-size: 1.2rem;
   font-weight: 900;
-  letter-spacing: 0.5px;
-  line-height: 26px;
+  // letter-spacing: 0.5px; will be in typography
+  // line-height: 26px;  will be in typography
   text-transform: uppercase;
   border: 0;
-  &.small {
-    font-size: 12px;
-  }
-  &:disbled {
-    color: #ccc9c9;
-  }
+
+  /// color here to default grey
+
   @media screen {
-    @media (max-width: 768px) {
+    @media (max-width: 76.8rem) {
       width: 100%;
     }
+  }
+
+  &.ce-button--large {
+    height: 5rem;
+    width: 25.6rem;
+    font-size: 1.6rem;
+  }
+  &.ce-button--jumbo {
+    height: 7rem;
+    width: 25rem;
+    font-size: 1.6rem;
+    // font-size: 16px;
+    // add margin, padding and font size
   }
 }
 
@@ -27,37 +47,12 @@
 //            SIZES             //
 //////////////////////////////////
 
-.ce-button--jumbo {
-  height: 70px;
-  width: 250px;
-  .mobile-100-width;
-}
-.ce-button--large {
-  height: 50px;
-  width: 256px;
-  .mobile-100-width;
-}
-.ce-button--small {
-  height: 36px;
-  width: 180px;
-  font-size: 12px;
-  line-height: 26px;
-  .mobile-100-width;
-}
-.mobile-100-width {
-  @media screen {
-    @media (max-width: 768px) {
-      width: 100%;
-    }
-  }
-}
-
 ////////////////////////////////////////////
 // COLORS (only applies to text buttons)  //
 ////////////////////////////////////////////
 
 .ce-button--blue {
-  color: #007ab2;
+  color: @blue;
   &:hover {
     color: #008dd2;
   }
@@ -70,7 +65,7 @@
   }
 }
 .ce-button--red {
-  color: #982d7c;
+  color: @red;
   &:hover {
     color: #bc178f;
   }
@@ -88,7 +83,7 @@
 //////////////////////////////////
 
 .ce-button--text {
-  .button;
+  .ce-button;
   border-radius: 0;
   background-color: transparent;
   font-style: normal;
@@ -102,29 +97,25 @@
 /////////////////////////////////
 
 .ce-button--outline {
-  .button;
-  box-sizing: border-box;
+  .ce-button;
+  // box-sizing: border-box;  will be applied at the top
   padding: 4px;
-  border-radius: 35px;
+  border-radius: 3.5rem;
   background-color: #ffffff;
   color: #0f1422;
   background: linear-gradient(317.58deg, #098dc9 0%, #7838a8 100%);
   span {
     background: white;
-    border-radius: 35px;
+    border-radius: 3.5rem;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  &:disabled {
-    box-sizing: border-box;
-    height: 70px;
+  &.ce-button--disabled {
     color: #ccc9c9;
     background: #ccc9c9;
-    width: 256px;
-    border: 3px solid #e0e0e0;
-    border-radius: 35px;
+    border: 0.3rem solid #e0e0e0;
     background-color: #ffffff;
   }
   &:hover {
@@ -140,7 +131,8 @@
   &:focus {
     outline: none;
     color: #0f1422;
-    box-shadow: 0 0 0 5px #b2e7ff;
+    box-shadow: 0 0 0 0.5rem #b2e7ff;
+    text-transform: underline;
   }
 
   &:disabled {
@@ -154,13 +146,13 @@
 //         SOLID BUTTONS       //
 /////////////////////////////////
 .ce-button--solid {
-  .button;
-  margin: 10px;
-  border-radius: 35px;
+  .ce-button;
+  margin: 1rem;
+  border-radius: 3.5rem;
   background: linear-gradient(317.58deg, #098dc9 0%, #7838a8 100%);
   border: 0;
   color: #ffffff;
-  &:disabled {
+  &.ce-button--disabled {
     background: #e0e0e0;
     color: #e0e0e0;
     cursor: auto;
@@ -173,8 +165,8 @@
   }
   &:focus {
     outline: none;
-    border: 5px solid #b2e7ff;
+    border: 0.5rem solid #b2e7ff;
     background: linear-gradient(317.58deg, #098dc9 0%, #7838a8 100%);
-    box-shadow: 0 0 0 5px #b2e7ff;
+    box-shadow: 0 0 0 0.5rem #b2e7ff;
   }
 }

@@ -4,6 +4,18 @@ import cx from 'classnames';
 
 import './button.less';
 
+const COLORS = [
+  'primary', // ask Ferg
+  'secondary', // ask Ferg
+  'blue',
+  'red',
+  'purple',
+  'orange',
+  'green',
+];
+
+const SIZE = ['small', 'large', 'jumbo'];
+
 const Button = props => {
   const {
     children,
@@ -14,15 +26,17 @@ const Button = props => {
     outline,
     size,
     type,
+    disabled,
   } = props;
 
   const classes = cx(
     'ce-button',
     {
-      [`ce-button-${color}`]: color,
-      'ce-button-outline': outline,
-      [`ce-button-${size}`]: size,
-      [`ce-button-${type}`]: type,
+      [`ce-button--${color}`]: COLORS.includes(color.toString().toLowerCase()),
+      [`ce-button--${size}`]: SIZE.includes(size.toString().toLowerCase()),
+      [`ce-button--${type}`]: type, // same array control format
+      'ce-button--outline': outline,
+      'ce-button--disabled': disabled,
     },
     className,
   );
@@ -48,16 +62,7 @@ Button.propTypes = {
   /**
    * The color of the button.
    */
-  color: PropTypes.oneOf([
-    'default',
-    'primary',
-    'secondary',
-    'blue',
-    'red',
-    'purple',
-    'orange',
-    'green',
-  ]),
+  color: PropTypes.oneOf(COLORS),
   /**
    * A function that is called when the button is clicked.
    */
@@ -73,13 +78,17 @@ Button.propTypes = {
    */
   outline: PropTypes.bool,
   /**
+   * Make the button inactive.
+   */
+  disabled: PropTypes.bool,
+  /**
    * The size of the button.
    */
   size: PropTypes.oneOf(['small', 'large', 'jumbo']),
   /**
    * Which type of button to render.
    */
-  type: PropTypes.oneOf(['default', 'text', 'icon']),
+  type: PropTypes.oneOf(['text', 'icon']),
 };
 
 Button.defaultProps = {
@@ -89,6 +98,7 @@ Button.defaultProps = {
   outline: false,
   size: 'small',
   type: 'default',
+  disabled: false,
 };
 
 export default Button;
