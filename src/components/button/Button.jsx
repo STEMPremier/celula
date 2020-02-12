@@ -5,13 +5,8 @@ import cx from 'classnames';
 import './button.less';
 
 const COLORS = [
-<<<<<<< HEAD
   'primary',
   'secondary',
-=======
-  'primary', // ask Ferg
-  'secondary', // ask Ferg
->>>>>>> 88c86ff... drafted all button types in the md  and styles in the less, created color variables in palettes, added disable to propTypes in the button.jsx
   'blue',
   'red',
   'purple',
@@ -21,11 +16,8 @@ const COLORS = [
 
 const SIZE = ['small', 'large', 'jumbo'];
 
-<<<<<<< HEAD
 const TYPE = ['text', 'outline', 'solid'];
 
-=======
->>>>>>> 88c86ff... drafted all button types in the md  and styles in the less, created color variables in palettes, added disable to propTypes in the button.jsx
 const Button = props => {
   const {
     children,
@@ -44,11 +36,7 @@ const Button = props => {
     {
       [`ce-button--${color}`]: COLORS.includes(color.toString().toLowerCase()),
       [`ce-button--${size}`]: SIZE.includes(size.toString().toLowerCase()),
-<<<<<<< HEAD
       [`ce-button--${type}`]: TYPE.includes(type.toString().toLowerCase()),
-=======
-      [`ce-button--${type}`]: type, // same array control format
->>>>>>> 88c86ff... drafted all button types in the md  and styles in the less, created color variables in palettes, added disable to propTypes in the button.jsx
       'ce-button--outline': outline,
       'ce-button--disabled': disabled,
     },
@@ -98,15 +86,11 @@ Button.propTypes = {
   /**
    * The size of the button.
    */
-  size: PropTypes.oneOf(['small', 'large', 'jumbo']),
+  size: PropTypes.oneOf(SIZE),
   /**
    * Which type of button to render.
    */
-<<<<<<< HEAD
   type: PropTypes.oneOf(TYPE),
-=======
-  type: PropTypes.oneOf(['text', 'icon']),
->>>>>>> 88c86ff... drafted all button types in the md  and styles in the less, created color variables in palettes, added disable to propTypes in the button.jsx
 };
 
 Button.defaultProps = {
