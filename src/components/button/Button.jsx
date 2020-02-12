@@ -16,6 +16,8 @@ const COLORS = [
 
 const SIZE = ['small', 'large', 'jumbo'];
 
+const TYPE = ['text', 'outline', 'solid'];
+
 const Button = props => {
   const {
     children,
@@ -34,7 +36,7 @@ const Button = props => {
     {
       [`ce-button--${color}`]: COLORS.includes(color.toString().toLowerCase()),
       [`ce-button--${size}`]: SIZE.includes(size.toString().toLowerCase()),
-      [`ce-button--${type}`]: type, // same array control format
+      [`ce-button--${type}`]: TYPE.includes(type.toString().toLowerCase()),
       'ce-button--outline': outline,
       'ce-button--disabled': disabled,
     },
@@ -88,7 +90,7 @@ Button.propTypes = {
   /**
    * Which type of button to render.
    */
-  type: PropTypes.oneOf(['text', 'icon']),
+  type: PropTypes.oneOf(TYPE),
 };
 
 Button.defaultProps = {

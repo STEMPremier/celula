@@ -3,32 +3,23 @@
 //////////////////////////////////
 //          ALL BUTTONS         //
 //////////////////////////////////
-// waht is the default height and width?  Large button size?
-// deafult colors: border, backgroun-color, color  (how depends on what the outline value is)
-// size:  height, width, margin, padding, font-size
-// textL border, background-color
-// in the palette page the word primary is associated with each color type.  Is this just a variable to reference a specific color or is it to be defined on this page as well
 .ce-button {
   font-family: inherit;
-  // font-size: 12px;
-  // still needs: height, width, margin, padding, border
   height: 3.6rem;
   width: 18rem;
   font-size: 1.2rem;
   font-weight: 900;
-  // letter-spacing: 0.5px; will be in typography
-  // line-height: 26px;  will be in typography
+  color: #ccc9c9;
+  margin: 0.5rem;
+  background-color: #ffffff;
+  // box-sizing: border-box;  will be applied at the top
   text-transform: uppercase;
   border: 0;
-
-  /// color here to default grey
-
   @media screen {
     @media (max-width: 76.8rem) {
       width: 100%;
     }
   }
-
   &.ce-button--large {
     height: 5rem;
     width: 25.6rem;
@@ -38,48 +29,38 @@
     height: 7rem;
     width: 25rem;
     font-size: 1.6rem;
-    // font-size: 16px;
-    // add margin, padding and font size
+    // add margin, padding
+  }
+  &.ce-button--blue {
+    color: @blue;
+    &:hover {
+      color: #008dd2;
+    }
+    &:active {
+      color: #006999;
+    }
+    &:focus {
+      outline: none;
+      border-color: #008dd2;
+    }
+  }
+  &.ce-button--red {
+    color: @red;
+    &:hover {
+      color: #bc178f;
+    }
+    &:active {
+      color: #900068;
+    }
+    &:focus {
+      outline: none;
+      border-color: #900068;
+    }
   }
 }
 
 //////////////////////////////////
-//            SIZES             //
-//////////////////////////////////
-
-////////////////////////////////////////////
-// COLORS (only applies to text buttons)  //
-////////////////////////////////////////////
-
-.ce-button--blue {
-  color: @blue;
-  &:hover {
-    color: #008dd2;
-  }
-  &:active {
-    color: #006999;
-  }
-  &:focus {
-    outline: none;
-    border-color: #008dd2;
-  }
-}
-.ce-button--red {
-  color: @red;
-  &:hover {
-    color: #bc178f;
-  }
-  &:active {
-    color: #900068;
-  }
-  &:focus {
-    outline: none;
-    border-color: #900068;
-  }
-}
-
-//////////////////////////////////
-//       TEXT BUTTONS           //
+//            TYPES             //
 //////////////////////////////////
 
 .ce-button--text {
@@ -92,13 +73,9 @@
   padding: 2px 4px;
 }
 
-//////////////////////////////////
-//       OUTLINE BUTTONS        //
-/////////////////////////////////
-
 .ce-button--outline {
   .ce-button;
-  // box-sizing: border-box;  will be applied at the top
+
   padding: 4px;
   border-radius: 3.5rem;
   background-color: #ffffff;
@@ -154,7 +131,7 @@
   color: #ffffff;
   &.ce-button--disabled {
     background: #e0e0e0;
-    color: #e0e0e0;
+    color: #ffffff;
     cursor: auto;
   }
   &:hover {
