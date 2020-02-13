@@ -1,5 +1,4 @@
 @import '../../styles/palettes';
-
 //////////////////////////////////
 //          ALL BUTTONS         //
 //////////////////////////////////
@@ -12,7 +11,6 @@
   color: #ccc9c9;
   margin: 0.5rem;
   background-color: #ffffff;
-  // box-sizing: border-box;  will be applied at the top
   text-transform: uppercase;
   border: 0;
   @media screen {
@@ -29,7 +27,6 @@
     height: 7rem;
     width: 25rem;
     font-size: 1.6rem;
-    // add margin, padding
   }
   &.ce-button--blue {
     color: @blue;
@@ -58,11 +55,9 @@
     }
   }
 }
-
 //////////////////////////////////
-//            TYPES             //
+//         TEXT BUTTONS         //
 //////////////////////////////////
-
 .ce-button--text {
   .ce-button;
   border-radius: 0;
@@ -72,10 +67,11 @@
   border-bottom: 2px solid transparent;
   padding: 2px 4px;
 }
-
+//////////////////////////////////
+//        OUTLINE BUTTONS       //
+//////////////////////////////////
 .ce-button--outline {
   .ce-button;
-
   padding: 4px;
   border-radius: 3.5rem;
   background-color: #ffffff;
@@ -99,12 +95,10 @@
     background: #007bb7;
     color: #007bb7;
   }
-
   &:active {
     background: #005883;
     color: #005883;
   }
-
   &:focus {
     outline: none;
     color: #0f1422;
@@ -118,7 +112,6 @@
     cursor: auto;
   }
 }
-
 //////////////////////////////////
 //         SOLID BUTTONS       //
 /////////////////////////////////
