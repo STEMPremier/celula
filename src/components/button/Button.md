@@ -12,7 +12,7 @@ const myAlert = () => {
     <Button color="blue" size="small" type="text" handleClick={myAlert}>
       text button blue
     </Button>
-    <Button color="red" type="text" handleClick={myAlert}>
+    <Button color="red" size="small" type="text" handleClick={myAlert}>
       text button red
     </Button>
     <Button color="blue" size="large" type="text" handleClick={myAlert}>
@@ -21,13 +21,13 @@ const myAlert = () => {
   </div>
 
   <div>
-    <Button size="small" outline handleClick={myAlert}>
+    <Button size="small" handleClick={myAlert} outline>
       <span>outline small</span>
     </Button>
-    <Button size="large" outline handleClick={myAlert}>
+    <Button size="large" handleClick={myAlert} outline>
       <span>outline large</span>
     </Button>
-    <Button size="jumbo" outline handleClick={myAlert}>
+    <Button size="jumbo" handleClick={myAlert} outline>
       <span>outline jumbo</span>
     </Button>
   </div>
@@ -44,7 +44,7 @@ const myAlert = () => {
     </Button>
   </div>
   <div>
-    <Button type="text" handleClick={myAlert} disabled>
+    <Button size="small" type="text" handleClick={myAlert} disabled>
       text button inactive
     </Button>
     <Button size="small" outline handleClick={myAlert} disabled>
