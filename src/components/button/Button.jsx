@@ -5,8 +5,8 @@ import cx from 'classnames';
 import './button.less';
 
 const COLORS = [
-  'primary', // ask Ferg
-  'secondary', // ask Ferg
+  'primary',
+  'secondary',
   'blue',
   'red',
   'purple',
