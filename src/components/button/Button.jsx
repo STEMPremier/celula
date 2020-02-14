@@ -45,7 +45,12 @@ const Button = props => {
 
   /* eslint-disable react/button-has-type */
   return (
-    <button className={classes} onClick={handleClick} type={htmlType}>
+    <button
+      className={classes}
+      disabled={disabled}
+      onClick={handleClick}
+      type={htmlType}
+    >
       {children}
     </button>
   );
