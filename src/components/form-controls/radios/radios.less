@@ -1,0 +1,99 @@
+@import '../../../styles/palettes';
+////////////////////////////
+//          RADIO         //
+////////////////////////////
+fieldset {
+  border: none;
+}
+
+.ce-radio {
+}
+
+.radioContainer {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  margin: 5px 0px 5px 0px;
+  label {
+    padding-left: 30px;
+    font-size: 14px;
+  }
+  & .circle {
+    // styling main default radio unselected
+    // most of these sizes in width, height, and border are diff. discuss with ian
+    // hover is bigger in the stetches but show how it looks with them moving
+    box-sizing: border-box;
+    width: 21px;
+    height: 21px;
+    background-color: #fbfbfb;
+    border: 1px solid #b2b2b2;
+    position: absolute;
+    margin-left: 0px;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+  }
+}
+
+.radioContainer & :hover .circle {
+  // show Ian that when I try to put this under radioContainer circle hover it stops working
+  // background: #e5004b;
+  background-color: #fbfbfb;
+  height: 25px;
+  width: 25px;
+  border: 5px solid #e5e5e5;
+  position: absolute;
+  margin-left: 0px;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  // box-sizing: border-box;
+}
+
+input:checked + .circle {
+  background-color: #9bc247;
+  &::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    left: 0px;
+    border-radius: 50%;
+    border: 1px solid #6f686a;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    left: 0px;
+    top: 0px;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #192344; //circle color working
+    border: 5px solid #ffffff;
+  }
+  // + label {
+  //   position: relative;
+  //   display: inline-block;
+  //   cursor: pointer;
+  //   margin-left: 20px;
+  // }
+}
+
+.radioContainer input {
+  display: none;
+}
+.radio {
+  // background-color: #192344;
+}
+
+////////////////////////////
+//       RADIO GROUP      //
+////////////////////////////
+.ce-radio--disabled {
+  color: #aeaeae;
+}
