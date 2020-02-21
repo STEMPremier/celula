@@ -60,6 +60,28 @@ const myAlert = () => {
 
   <h4>button colors</h4>
   <div>
+    <Button color="primary" handleClick={myAlert} size="small">
+      primary normal
+    </Button>
+    <Button color="primary" handleClick={myAlert} size="small" type="outline">
+      primary outline
+    </Button>
+    <Button color="primary" handleClick={myAlert} size="small" type="text">
+      primary text
+    </Button>
+  </div>
+  <div>
+    <Button color="secondary" handleClick={myAlert} size="small">
+      secondary normal
+    </Button>
+    <Button color="secondary" handleClick={myAlert} size="small" type="outline">
+      secondary outline
+    </Button>
+    <Button color="secondary" handleClick={myAlert} size="small" type="text">
+      secondary text
+    </Button>
+  </div>
+  <div>
     <Button color="blue" handleClick={myAlert} size="small">
       blue normal
     </Button>
@@ -71,25 +93,14 @@ const myAlert = () => {
     </Button>
   </div>
   <div>
-    <Button color="red" handleClick={myAlert} size="small">
-      red normal
+    <Button color="green" handleClick={myAlert} size="small">
+      green normal
     </Button>
-    <Button color="red" handleClick={myAlert} size="small" type="outline">
-      red outline
+    <Button color="green" handleClick={myAlert} size="small" type="outline">
+      green outline
     </Button>
-    <Button color="red" handleClick={myAlert} size="small" type="text">
-      red text
-    </Button>
-  </div>
-  <div>
-    <Button color="purple" handleClick={myAlert} size="small">
-      purple normal
-    </Button>
-    <Button color="purple" handleClick={myAlert} size="small" type="outline">
-      purple outline
-    </Button>
-    <Button color="purple" handleClick={myAlert} size="small" type="text">
-      purple text
+    <Button color="green" handleClick={myAlert} size="small" type="text">
+      green text
     </Button>
   </div>
   <div>
@@ -104,14 +115,25 @@ const myAlert = () => {
     </Button>
   </div>
   <div>
-    <Button color="green" handleClick={myAlert} size="small">
-      green normal
+    <Button color="purple" handleClick={myAlert} size="small">
+      purple normal
     </Button>
-    <Button color="green" handleClick={myAlert} size="small" type="outline">
-      green outline
+    <Button color="purple" handleClick={myAlert} size="small" type="outline">
+      purple outline
     </Button>
-    <Button color="green" handleClick={myAlert} size="small" type="text">
-      green text
+    <Button color="purple" handleClick={myAlert} size="small" type="text">
+      purple text
+    </Button>
+  </div>
+  <div>
+    <Button color="red" handleClick={myAlert} size="small">
+      red normal
+    </Button>
+    <Button color="red" handleClick={myAlert} size="small" type="outline">
+      red outline
+    </Button>
+    <Button color="red" handleClick={myAlert} size="small" type="text">
+      red text
     </Button>
   </div>
 </div>
