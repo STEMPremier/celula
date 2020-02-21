@@ -85,7 +85,7 @@ Button.propTypes = {
   /**
    * The size of the button.
    */
-  size: PropTypes.oneOf(['small', 'large', 'jumbo']),
+  size: PropTypes.oneOf(SIZE),
   /**
    * Which type of button to render.
    */
