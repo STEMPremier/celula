@@ -8,10 +8,10 @@ const COLORS = [
   'primary',
   'secondary',
   'blue',
-  'red',
-  'purple',
-  'orange',
   'green',
+  'orange',
+  'purple',
+  'red',
 ];
 
 const SIZE = ['small', 'large', 'jumbo'];
@@ -94,7 +94,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   className: '',
-  color: 'default',
+  color: 'primary',
   htmlType: 'button',
   size: 'small',
   type: 'default',
