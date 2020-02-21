@@ -1,142 +1,351 @@
 @import '../../styles/palettes';
-//////////////////////////////////
-//          ALL BUTTONS         //
-//////////////////////////////////
+
+// Reset here, because Styleguidist inserts its css between tou base, and the component.
+button {
+  margin: 0;
+  padding: 0;
+}
+
+// Base Buttons
 .ce-button {
+  background: @gradient-cool;
+  border-radius: 3.5rem;
+  border-width: 0;
+  color: @white;
+  display: inline-block;
   font-family: inherit;
-  height: 3.6rem;
-  width: 18rem;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 900;
-  color: #ccc9c9;
-  margin: 0.5rem;
-  background-color: #ffffff;
   text-transform: uppercase;
-  border: 0;
+
+  // Responsive Rules
   @media screen {
-    @media (max-width: 76.8rem) {
+    @media (max-width: 768px) {
       width: 100%;
     }
   }
-  &.ce-button--large {
-    height: 5rem;
-    width: 25.6rem;
-    font-size: 1.6rem;
-  }
-  &.ce-button--jumbo {
-    height: 7rem;
-    width: 25rem;
-    font-size: 1.6rem;
-  }
-  &.ce-button--blue {
-    color: @blue;
-    &:hover {
-      color: #008dd2;
+
+  // Sizes
+  &.ce-button--small {
+    .ce-button__label {
+      border-radius: 3.5rem;
+      display: inline-block;
+      font-size: 1.2rem;
+      margin: .2rem;
+      padding: .85rem 3.8rem;
+
+      @media screen {
+        @media (max-width: 768px) {
+          width: ~"calc(100% - 8rem)"; // 100% - the total of the l/r padding
+        }
+      }
     }
-    &:active {
-      color: #006999;
-    }
-    &:focus {
-      outline: none;
-      border-color: #008dd2;
-    }
-  }
-  &.ce-button--red {
-    color: @red;
-    &:hover {
-      color: #bc178f;
-    }
-    &:active {
-      color: #900068;
-    }
-    &:focus {
-      outline: none;
-      border-color: #900068;
-    }
-  }
-}
-//////////////////////////////////
-//         TEXT BUTTONS         //
-//////////////////////////////////
-.ce-button--text {
-  .ce-button;
-  border-radius: 0;
-  background-color: transparent;
-  font-style: normal;
-  text-transform: uppercase;
-  border-bottom: 2px solid transparent;
-  padding: 2px 4px;
-}
-//////////////////////////////////
-//        OUTLINE BUTTONS       //
-//////////////////////////////////
-.ce-button--outline {
-  .ce-button;
-  padding: 4px;
-  border-radius: 3.5rem;
-  background-color: #ffffff;
-  color: #0f1422;
-  background: linear-gradient(317.58deg, #098dc9 0%, #7838a8 100%);
-  span {
-    background: white;
-    border-radius: 3.5rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  &.ce-button--disabled {
-    color: #ccc9c9;
-    background: #ccc9c9;
-    border: 0.3rem solid #e0e0e0;
-    background-color: #ffffff;
-  }
-  &:hover {
-    background: #007bb7;
-    color: #007bb7;
-  }
-  &:active {
-    background: #005883;
-    color: #005883;
-  }
-  &:focus {
-    outline: none;
-    color: #0f1422;
-    box-shadow: 0 0 0 0.5rem #b2e7ff;
-    text-transform: underline;
   }
 
-  &:disabled {
-    background: #e0e0e0;
-    color: #e0e0e0;
-    cursor: auto;
+  &.ce-button--large {
+    .ce-button__label {
+      border-radius: 3.5rem;
+      display: inline-block;
+      font-size: 1.6rem;
+      margin: .2rem;
+      padding: 1.3rem 5.8rem;
+
+      @media screen {
+        @media (max-width: 768px) {
+          width: ~"calc(100% - 12rem)"; // 100% - the total of the l/r padding
+        }
+      }
+    }
   }
-}
-//////////////////////////////////
-//         SOLID BUTTONS       //
-/////////////////////////////////
-.ce-button--solid {
-  .ce-button;
-  margin: 1rem;
-  border-radius: 3.5rem;
-  background: linear-gradient(317.58deg, #098dc9 0%, #7838a8 100%);
-  border: 0;
-  color: #ffffff;
-  &.ce-button--disabled {
-    background: #e0e0e0;
-    color: #ffffff;
-    cursor: auto;
+
+  &.ce-button--jumbo {
+    .ce-button__label {
+      border-radius: 3.5rem;
+      display: inline-block;
+      font-size: 1.6rem;
+      margin: .2rem;
+      padding: 2.3rem 5.8rem;
+
+      @media screen {
+        @media (max-width: 768px) {
+          width: ~"calc(100% - 12rem)"; // 100% - the total of the l/r padding
+        }
+      }
+    }
   }
+
+  // States
   &:hover {
     background: #007ab2;
   }
+
   &:active {
     background: #00577f;
   }
+
   &:focus {
+    box-shadow: 0 0 0 5px #b2e7ff;
     outline: none;
-    border: 0.5rem solid #b2e7ff;
-    background: linear-gradient(317.58deg, #098dc9 0%, #7838a8 100%);
-    box-shadow: 0 0 0 0.5rem #b2e7ff;
+  }
+
+  &.ce-button--disabled {
+    background: #ccc;
+  }
+}
+
+// Outline Buttons
+.ce-button--outline {
+  .ce-button;
+  color: @black;
+
+  // Sizes
+  &.ce-button--small {
+    .ce-button__label {
+      background-color: @white;
+    }
+  }
+
+  &.ce-button--large {
+    .ce-button__label {
+      background-color: @white;
+    }
+  }
+
+  &.ce-button--jumbo {
+    .ce-button__label {
+      background-color: @white;
+    }
+  }
+
+  // States
+  &:hover {
+    color: #007ab2;
+  }
+
+  &:active {
+    color: #00577f;
+  }
+
+  &.ce-button--disabled {
+    color: #ccc;
+  }
+}
+
+// Text Buttons
+.ce-button--text {
+  .ce-button;
+  background-color: @white;
+  color: #007ab2;
+
+  // Sizes
+  &.ce-button--small {
+    .ce-button__label {
+      border-radius: 0;
+      background-color: @white;
+      margin: 0;
+      padding: 1.05rem 4rem;
+    }
+  }
+
+  &.ce-button--large {
+    .ce-button__label {
+      border-radius: 0;
+      background-color: @white;
+      margin: 0;
+      padding: 1.5rem 6rem;
+    }
+  }
+
+  &.ce-button--jumbo {
+    .ce-button__label {
+      border-radius: 0;
+      background-color: @white;
+      margin: 0;
+      padding: 2.5rem 6rem;
+    }
+  }
+
+  // States
+  &:hover {
+    color: #008dd2;
+  }
+
+  &:active {
+    color: #006999;
+  }
+
+  &:focus {
+    box-shadow: none;
+    color: #006999;
+    outline: none;
+
+    .ce-button__label {
+      text-decoration: underline;
+    }
+  }
+
+  &.ce-button--disabled {
+    color: #ccc;
+  }
+}
+
+// Colors
+.ce-button--blue {
+  background: @blue;
+
+  &.ce-button--outline {
+    color: @blue;
+
+    &:hover {
+      color: #007ab2;
+    }
+
+    &:active {
+      color: #00577f;
+    }
+  }
+
+  &.ce-button--text {
+    color: @blue;
+
+    &:hover {
+      color: #008dd2;
+    }
+
+    &:active {
+      color: #006999;
+    }
+
+    &:focus {
+      color: #006999;
+    }
+  }
+}
+
+.ce-button--red {
+  background: @red;
+
+  &.ce-button--outline {
+    color: @red;
+
+    &:hover {
+      color: #007ab2;
+    }
+
+    &:active {
+      color: #00577f;
+    }
+  }
+
+  &.ce-button--text {
+    color: @red;
+
+    &:hover {
+      color: #008dd2;
+    }
+
+    &:active {
+      color: #006999;
+    }
+
+    &:focus {
+      color: #006999;
+    }
+  }
+}
+
+.ce-button--purple {
+  background: @purple;
+
+  &.ce-button--outline {
+    color: @purple;
+
+    &:hover {
+      color: #007ab2;
+    }
+
+    &:active {
+      color: #00577f;
+    }
+  }
+
+  &.ce-button--text {
+    color: @purple;
+
+    &:hover {
+      color: #008dd2;
+    }
+
+    &:active {
+      color: #006999;
+    }
+
+    &:focus {
+      color: #006999;
+    }
+  }
+}
+
+.ce-button--orange {
+  background: @orange;
+
+  &.ce-button--outline {
+    color: @orange;
+
+    &:hover {
+      color: #007ab2;
+    }
+
+    &:active {
+      color: #00577f;
+    }
+  }
+
+  &.ce-button--text {
+    color: @orange;
+
+    &:hover {
+      color: #008dd2;
+    }
+
+    &:active {
+      color: #006999;
+    }
+
+    &:focus {
+      color: #006999;
+    }
+  }
+}
+
+.ce-button--green {
+  background: @green;
+
+  &.ce-button--outline {
+    color: @green;
+
+    &:hover {
+      color: #007ab2;
+    }
+
+    &:active {
+      color: #00577f;
+    }
+  }
+
+  &.ce-button--text {
+    color: @green;
+
+    &:hover {
+      color: #008dd2;
+    }
+
+    &:active {
+      color: #006999;
+    }
+
+    &:focus {
+      color: #006999;
+    }
   }
 }
