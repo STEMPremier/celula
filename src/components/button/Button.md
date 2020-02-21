@@ -8,53 +8,111 @@ const myAlert = () => {
 };
 
 <div>
+  <h4>button types and sizes</h4>
   <div>
-    <Button color="blue" size="small" type="text" handleClick={myAlert}>
-      text button blue
+    <Button handleClick={myAlert} size="small">
+      normal small
     </Button>
-    <Button color="red" size="small" type="text" handleClick={myAlert}>
-      text button red
+    <Button handleClick={myAlert} size="large">
+      normal large
     </Button>
-    <Button color="blue" size="large" type="text" handleClick={myAlert}>
-      text button large
+    <Button handleClick={myAlert} size="jumbo">
+      normal jumbo
     </Button>
   </div>
 
   <div>
-    <Button size="small" handleClick={myAlert} outline>
-      <span>outline small</span>
+    <Button handleClick={myAlert} size="small" type="outline">
+      outline small
     </Button>
-    <Button size="large" handleClick={myAlert} outline>
-      <span>outline large</span>
+    <Button handleClick={myAlert} size="large" type="outline">
+      outline large
     </Button>
-    <Button size="jumbo" handleClick={myAlert} outline>
-      <span>outline jumbo</span>
+    <Button handleClick={myAlert} size="jumbo" type="outline">
+      outline jumbo
     </Button>
   </div>
 
   <div>
-    <Button size="small" type="solid" handleClick={myAlert}>
-      <span>solid small</span>
+    <Button handleClick={myAlert} size="small" type="text">
+      text small
     </Button>
-    <Button size="large" type="solid" handleClick={myAlert}>
-      <span>solid large</span>
+    <Button handleClick={myAlert} size="large" type="text">
+      text large
     </Button>
-    <Button size="jumbo" type="solid" handleClick={myAlert}>
-      <span>solid jumbo</span>
+    <Button handleClick={myAlert} size="jumbo" type="text">
+      text jumbo
+    </Button>
+  </div>
+
+  <h4>button states</h4>
+  <div>
+    <Button handleClick={myAlert} size="small" disabled>
+      small disabled
+    </Button>
+    <Button handleClick={myAlert} size="small" type="outline" disabled>
+      small disabled outline
+    </Button>
+    <Button handleClick={myAlert} size="small" type="text" disabled>
+      small disbaled text
+    </Button>
+  </div>
+
+  <h4>button colors</h4>
+  <div>
+    <Button color="blue" handleClick={myAlert} size="small">
+      blue normal
+    </Button>
+    <Button color="blue" handleClick={myAlert} size="small" type="outline">
+      blue outline
+    </Button>
+    <Button color="blue" handleClick={myAlert} size="small" type="text">
+      blue text
     </Button>
   </div>
   <div>
-    <Button size="small" type="text" handleClick={myAlert} disabled>
-      text button inactive
+    <Button color="red" handleClick={myAlert} size="small">
+      red normal
     </Button>
-    <Button size="small" outline handleClick={myAlert} disabled>
-      <span>outline inactive </span>
+    <Button color="red" handleClick={myAlert} size="small" type="outline">
+      red outline
     </Button>
-    <Button size="small" type="solid" handleClick={myAlert} disabled>
-      <span>solid inactive</span>
+    <Button color="red" handleClick={myAlert} size="small" type="text">
+      red text
     </Button>
   </div>
-</div>;
+  <div>
+    <Button color="purple" handleClick={myAlert} size="small">
+      purple normal
+    </Button>
+    <Button color="purple" handleClick={myAlert} size="small" type="outline">
+      purple outline
+    </Button>
+    <Button color="purple" handleClick={myAlert} size="small" type="text">
+      purple text
+    </Button>
+  </div>
+  <div>
+    <Button color="orange" handleClick={myAlert} size="small">
+      orange normal
+    </Button>
+    <Button color="orange" handleClick={myAlert} size="small" type="outline">
+      orange outline
+    </Button>
+    <Button color="orange" handleClick={myAlert} size="small" type="text">
+      ornage text
+    </Button>
+  </div>
+  <div>
+    <Button color="green" handleClick={myAlert} size="small">
+      green normal
+    </Button>
+    <Button color="green" handleClick={myAlert} size="small" type="outline">
+      green outline
+    </Button>
+    <Button color="green" handleClick={myAlert} size="small" type="text">
+      green text
+    </Button>
+  </div>
+</div>
 ```
-
-> This text comes from a markdown file in the `/src/components/button` dir.
