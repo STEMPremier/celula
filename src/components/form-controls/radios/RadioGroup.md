@@ -32,7 +32,7 @@ const myChangeHandler = event => {
       label="Option 3 selected disabled"
       value="option3"
       id="option3"
-      className="radioContainer"
+      className="radioContainer; ce-radio--disabled"
       checked
       disabled
     />
