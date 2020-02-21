@@ -16,7 +16,7 @@ const COLORS = [
 
 const SIZE = ['small', 'large', 'jumbo'];
 
-const TYPE = ['text', 'outline', 'solid'];
+const TYPE = ['text', 'outline'];
 
 const Button = props => {
   const {
@@ -25,7 +25,6 @@ const Button = props => {
     color,
     handleClick,
     htmlType,
-    outline,
     size,
     type,
     disabled,
@@ -34,10 +33,9 @@ const Button = props => {
   const classes = cx(
     'ce-button',
     {
-      [`ce-button--${color}`]: COLORS.includes(color.toString().toLowerCase()),
-      [`ce-button--${size}`]: SIZE.includes(size.toString().toLowerCase()),
       [`ce-button--${type}`]: TYPE.includes(type.toString().toLowerCase()),
-      'ce-button--outline': outline,
+      [`ce-button--${size}`]: SIZE.includes(size.toString().toLowerCase()),
+      [`ce-button--${color}`]: COLORS.includes(color.toString().toLowerCase()),
       'ce-button--disabled': disabled,
     },
     className,
@@ -51,7 +49,7 @@ const Button = props => {
       onClick={handleClick}
       type={htmlType}
     >
-      {children}
+      <span className="ce-button__label">{children}</span>
     </button>
   );
   /* eslint-enable react/button-has-type */
@@ -81,10 +79,6 @@ Button.propTypes = {
    */
   htmlType: PropTypes.oneOf(['button', 'submit']),
   /**
-   * Make the button an outline button.
-   */
-  outline: PropTypes.bool,
-  /**
    * Make the button inactive.
    */
   disabled: PropTypes.bool,
@@ -102,7 +96,6 @@ Button.defaultProps = {
   className: '',
   color: 'default',
   htmlType: 'button',
-  outline: false,
   size: 'small',
   type: 'default',
   disabled: false,
