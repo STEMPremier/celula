@@ -10,7 +10,6 @@ const myChangeHandler = event => {
 
 <div>
   <RadioGroup
-    /* error={this.state.error} */
     label="Label Goes Here"
     name="radioGroupName"
     handleChange={myChangeHandler}

@@ -18,6 +18,9 @@ fieldset {
     padding-left: 30px;
     font-size: 14px;
   }
+}
+
+.radioContainer :not(:hover) {
   & .circle {
     // styling main default radio unselected
     // most of these sizes in width, height, and border are diff. discuss with ian
@@ -33,55 +36,79 @@ fieldset {
     top: 0;
     border-radius: 50%;
   }
+
+  input:checked + .circle {
+    background-color: #9bc247;
+    &::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      left: 0px;
+      border-radius: 50%;
+      border: 1px solid #6f686a;
+      width: 20px;
+      height: 20px;
+      background: transparent;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      left: 0px;
+      top: 0px;
+      border-radius: 50%;
+      width: 11px;
+      height: 11px;
+      background-color: #192344; //circle color working
+      border: 5px solid #ffffff;
+    }
+  }
 }
 
-.radioContainer & :hover .circle {
+// input:checked +
+// THIS CODE WORKS FOR HOVER ON UNSELECTED BUT TRYING TO TRIGGER HOVER OF SELECTED / CHECKED
+.radioContainer & :hover {
   // show Ian that when I try to put this under radioContainer circle hover it stops working
   // background: #e5004b;
-  background-color: #fbfbfb;
-  height: 25px;
-  width: 25px;
-  border: 5px solid #e5e5e5;
-  position: absolute;
-  margin-left: 0px;
-  left: 0;
-  top: 0;
-  border-radius: 50%;
-  // box-sizing: border-box;
-}
-
-input:checked + .circle {
-  background-color: #9bc247;
-  &::before {
-    content: '';
+  input:not(:checked) + .circle {
+    background-color: #fbfbfb;
+    height: 25px;
+    width: 25px;
+    border: 5px solid #e5e5e5;
     position: absolute;
-    display: inline-block;
-    left: 0px;
+    margin-left: 0px;
+    left: 0;
+    top: 0;
     border-radius: 50%;
-    border: 1px solid #6f686a;
-    width: 20px;
-    height: 20px;
-    background: transparent;
   }
+  input:checked + .circle {
+    background-color: #9bc247;
+    &::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      left: 0px;
+      border-radius: 50%;
+      border: 5px solid #e6f7ff;
+      width: 20px;
+      height: 20px;
+      background: transparent;
+    }
 
-  &::after {
-    content: '';
-    position: absolute;
-    display: inline-block;
-    left: 0px;
-    top: 0px;
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    background-color: #192344; //circle color working
-    border: 5px solid #ffffff;
+    &::after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      left: 0px;
+      top: 0px;
+      border-radius: 50%;
+      width: 11px;
+      height: 11px;
+      background-color: #192344; //circle color working
+      border: 5px solid #ffffff;
+    }
   }
-  // + label {
-  //   position: relative;
-  //   display: inline-block;
-  //   cursor: pointer;
-  //   margin-left: 20px;
-  // }
 }
 
 .radioContainer input {
