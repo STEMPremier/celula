@@ -1,9 +1,15 @@
-module.exports = {
-  stories: ['../stories/**/*.stories.js'],
-  addons: ['@storybook/addon-actions', '@storybook/addon-links'],
-  webpackFinal: async config => {
-    // do mutation to the config
+const ceConfig = require('../webpack.config.js');
 
-    return config;
+module.exports = {
+  addons: ['@storybook/addon-actions', '@storybook/addon-links'],
+  stories: ['../src/components/**/*.stories.js'],
+  webpackFinal: async config => {
+    return {
+      ...config,
+      module: {
+        ...config.module,
+        rules: ceConfig.module.rules,
+      },
+    };
   },
 };
