@@ -13,10 +13,8 @@ const COLORS = [
   'purple',
   'red',
 ];
-
-const SIZE = ['small', 'large', 'jumbo'];
-
 const TYPE = ['text', 'outline'];
+const SIZE = ['small', 'large', 'jumbo'];
 
 const Button = props => {
   const {
@@ -95,10 +93,10 @@ Button.propTypes = {
 Button.defaultProps = {
   className: '',
   color: 'primary',
+  disabled: false,
   htmlType: 'button',
   size: 'small',
   type: 'default',
-  disabled: false,
 };
 
 export default Button;

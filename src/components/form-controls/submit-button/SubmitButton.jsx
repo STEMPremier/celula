@@ -3,13 +3,25 @@ import PropTypes from 'prop-types';
 
 import Button from '../../button';
 
+const COLORS = [
+  'primary',
+  'secondary',
+  'blue',
+  'green',
+  'orange',
+  'purple',
+  'red',
+];
+const TYPE = ['text', 'outline'];
+const SIZE = ['small', 'large', 'jumbo'];
+
 const SubmitButton = props => {
   const {
-    className,
     children,
+    className,
     color,
+    disabled,
     handleClick,
-    outline,
     size,
     type,
   } = props;
@@ -18,8 +30,9 @@ const SubmitButton = props => {
     <Button
       className={className}
       color={color}
+      disabled={disabled}
       handleClick={handleClick}
-      outline={outline}
+      htmlType="submit"
       size={size}
       type={type}
     >
@@ -42,38 +55,29 @@ SubmitButton.propTypes = {
   /**
    * The color of the button.
    */
-  color: PropTypes.oneOf([
-    'default',
-    'primary',
-    'secondary',
-    'blue',
-    'red',
-    'purple',
-    'orange',
-    'green',
-  ]),
+  color: PropTypes.oneOf(COLORS),
   /**
    * A function that is called when the button is clicked.
    */
   handleClick: PropTypes.func.isRequired,
   /**
-   * Make the button an outline button.
+   * Make the button inactive.
    */
-  outline: PropTypes.bool,
+  disabled: PropTypes.bool,
   /**
    * The size of the button.
    */
-  size: PropTypes.oneOf(['small', 'large', 'jumbo']),
+  size: PropTypes.oneOf(SIZE),
   /**
    * Which type of button to render.
    */
-  type: PropTypes.oneOf(['default', 'text', 'icon']),
+  type: PropTypes.oneOf(TYPE),
 };
 
 SubmitButton.defaultProps = {
   className: '',
-  color: 'default',
-  outline: false,
+  color: 'primary',
+  disabled: false,
   size: 'small',
   type: 'default',
 };
