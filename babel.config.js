@@ -16,7 +16,7 @@ function configurePresets() {
 }
 
 function configurePlugins() {
-  return ['@babel/plugin-proposal-class-properties'];
+  return ['@babel/plugin-proposal-class-properties', 'react-docgen'];
 }
 
 module.exports = api => {

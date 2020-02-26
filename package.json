@@ -4,6 +4,7 @@
   "description": "Tallo Inc.'s React component library and ui documentation",
   "main": "dist/celula.js",
   "dependencies": {
+    "@storybook/addon-a11y": "^5.3.14",
     "classnames": "^2.2.6"
   },
   "devDependencies": {
@@ -11,12 +12,18 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
+    "@mdx-js/loader": "^1.5.7",
     "@storybook/addon-actions": "^5.3.13",
+    "@storybook/addon-centered": "^5.3.14",
+    "@storybook/addon-docs": "^5.3.13",
+    "@storybook/addon-knobs": "^5.3.14",
     "@storybook/addon-links": "^5.3.13",
+    "@storybook/addon-viewport": "^5.3.14",
     "@storybook/addons": "^5.3.13",
     "@storybook/react": "^5.3.13",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
+    "babel-plugin-react-docgen": "^4.1.0",
     "cross-env": "^5.2.1",
     "css-loader": "^3.2.0",
     "eslint": "^6.5.1",
@@ -37,7 +44,6 @@
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-styleguidist": "^9.1.16",
     "style-loader": "^1.0.0",
     "terser-webpack-plugin": "^2.2.1",
     "webpack": "^4.41.2",
@@ -48,17 +54,17 @@
     "react": "^16.10.2"
   },
   "scripts": {
-    "build": "yarn run prebuild && NODE_ENV=production webpack -p",
+    "build": "yarn run prebuild && yarn run build:components && yarn run build:styleguide",
+    "build:components": "NODE_ENV=production webpack -p",
+    "build:styleguide": "build-storybook",
     "check": "yarn run lint:check && yarn run pretty:check",
     "lint:check": "eslint \"**/*.{js,jsx}\"",
     "lint:fix": "eslint --fix \"**/*.{js,jsx}\"",
     "prebuild": "yarn run pretty:fix && yarn lint:fix",
     "pretty:check": "prettier --check \"**/*.{js,jsx}\"",
     "pretty:fix": "prettier --write \"**/*.{js,jsx}\"",
-    "start": "styleguidist server",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "start": "start-storybook -p 6006",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
