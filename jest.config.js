@@ -81,6 +81,8 @@ module.exports = {
   // A map from regular expressions to module names that allow to stub out resources with a single module
   moduleNameMapper: {
     '^.+\\.(css|less)$': '<rootDir>/src/test/lessStub.js',
+    'react-syntax-highlighter/dist/esm/(.*)':
+      'react-syntax-highlighter/dist/cjs/$1',
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
@@ -149,12 +151,12 @@ module.exports = {
   // ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '<rooDir>/src/styleguide',
-    '<rooDir>/src/styles',
-    '<rooDir>/src/test',
-  ],
+  // testPathIgnorePatterns: [
+  //   '/node_modules/',
+  //   '<rooDir>/src/styleguide/',
+  //   '<rooDir>/src/styles/',
+  //   '<rooDir>/src/test/',
+  // ],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],
@@ -172,7 +174,10 @@ module.exports = {
   // timers: "real",
 
   // A map from regular expressions to paths to transformers
-  // transform: undefined,
+  transform: {
+    '^.+\\.[tj]sx?$': 'babel-jest',
+    '^.+\\.mdx?$': '@storybook/addon-docs/jest-transform-mdx',
+  },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
