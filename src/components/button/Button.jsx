@@ -90,7 +90,7 @@ Button.propTypes = {
   /**
    * Which type of button to render.
    */
-  type: PropTypes.oneOf(TYPES),
+  type: PropTypes.oneOf([...TYPES, 'default']),
 };
 
 Button.defaultProps = {
