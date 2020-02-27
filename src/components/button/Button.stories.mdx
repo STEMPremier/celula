@@ -17,7 +17,7 @@ import Button from '.';
     disabled={boolean('disabled', false)}
     handleClick={action('clicked')}
     size={select('size', ['small', 'large', 'jumbo'], 'small')}
-    type={select('type', ['', 'text', 'outline'], '')}
+    type={select('type', ['default', 'text', 'outline'], 'default')}
   >
     {text('children', 'a button')}
   </Button>

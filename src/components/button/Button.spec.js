@@ -7,7 +7,7 @@ import Button from '.';
 
 describe('<Button />', () => {
   describe('render()', () => {
-    test('renders the compnent', () => {
+    test('renders the component', () => {
       const wrapper = shallow(<Button handleClick={() => {}}>click me</Button>);
 
       expect(toJson(wrapper)).toMatchSnapshot();

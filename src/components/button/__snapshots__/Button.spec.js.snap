@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> render() renders the compnent 1`] = `
+exports[`<Button /> render() renders the component 1`] = `
 <button
   className="ce-button ce-button--small ce-button--primary"
   disabled={false}
