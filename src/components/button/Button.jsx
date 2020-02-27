@@ -13,9 +13,12 @@ const COLORS = [
   'purple',
   'red',
 ];
-const TYPE = ['text', 'outline'];
-const SIZE = ['small', 'large', 'jumbo'];
+const SIZES = ['small', 'large', 'jumbo'];
+const TYPES = ['text', 'outline'];
 
+/**
+ * `Buttons` allow users to take actions, and make choices, with a single tap. They are typically placed throughout your UI, in places like dialogs, modal windows, forms, cards, and toolbars.
+ */
 const Button = props => {
   const {
     children,
@@ -31,8 +34,8 @@ const Button = props => {
   const classes = cx(
     'ce-button',
     {
-      [`ce-button--${type}`]: TYPE.includes(type.toString().toLowerCase()),
-      [`ce-button--${size}`]: SIZE.includes(size.toString().toLowerCase()),
+      [`ce-button--${type}`]: TYPES.includes(type.toString().toLowerCase()),
+      [`ce-button--${size}`]: SIZES.includes(size.toString().toLowerCase()),
       [`ce-button--${color}`]: COLORS.includes(color.toString().toLowerCase()),
       'ce-button--disabled': disabled,
     },
@@ -67,6 +70,10 @@ Button.propTypes = {
    */
   color: PropTypes.oneOf(COLORS),
   /**
+   * Make the button inactive.
+   */
+  disabled: PropTypes.bool,
+  /**
    * A function that is called when the button is clicked.
    */
   handleClick: PropTypes.func.isRequired,
@@ -77,17 +84,13 @@ Button.propTypes = {
    */
   htmlType: PropTypes.oneOf(['button', 'submit']),
   /**
-   * Make the button inactive.
-   */
-  disabled: PropTypes.bool,
-  /**
    * The size of the button.
    */
-  size: PropTypes.oneOf(SIZE),
+  size: PropTypes.oneOf(SIZES),
   /**
    * Which type of button to render.
    */
-  type: PropTypes.oneOf(TYPE),
+  type: PropTypes.oneOf(TYPES),
 };
 
 Button.defaultProps = {
