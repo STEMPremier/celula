@@ -1,5 +1,566 @@
-.button {
+// Why aren't the variables avaliable with out importing them here?
+@import '../../styles/palettes';
+
+// Reset here because Styleguidist inserts its css between tou base, and the component.
+button {
+  margin: 0;
+  padding: 0;
+}
+
+//////////////////////////////////
+//          Base Button         //
+//////////////////////////////////
+.ce-button {
+  border-radius: 3.5rem;
+  border-width: 0;
+  display: inline-block;
   font-family: inherit;
-  font-size: inherit;
-  color: blue;
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  // Responsive Rules
+  @media screen {
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  // Sizes
+  &.ce-button--small {
+    .ce-button__label {
+      border-radius: 3.5rem;
+      display: inline-block;
+      font-size: 1.2rem;
+      margin: .2rem;
+      padding: .85rem 3.8rem;
+
+      @media screen {
+        @media (max-width: 768px) {
+          width: ~"calc(100% - 8rem)"; // 100% - the total of the l/r padding
+        }
+      }
+    }
+  }
+
+  &.ce-button--large {
+    .ce-button__label {
+      border-radius: 3.5rem;
+      display: inline-block;
+      font-size: 1.6rem;
+      margin: .2rem;
+      padding: 1.3rem 5.8rem;
+
+      @media screen {
+        @media (max-width: 768px) {
+          width: ~"calc(100% - 12rem)"; // 100% - the total of the l/r padding
+        }
+      }
+    }
+  }
+
+  &.ce-button--jumbo {
+    .ce-button__label {
+      border-radius: 3.5rem;
+      display: inline-block;
+      font-size: 1.6rem;
+      margin: .2rem;
+      padding: 2.3rem 5.8rem;
+
+      @media screen {
+        @media (max-width: 768px) {
+          width: ~"calc(100% - 12rem)"; // 100% - the total of the l/r padding
+        }
+      }
+    }
+  }
+
+  // States
+  &:focus {
+    box-shadow: 0 0 0 5px #b2e7ff;
+    outline: none;
+  }
+}
+
+//////////////////////////////////
+//        Outline Button        //
+//////////////////////////////////
+.ce-button--outline {
+  // Sizes
+  &.ce-button--small {
+    .ce-button__label {
+      background: @white;
+    }
+  }
+
+  &.ce-button--large {
+    .ce-button__label {
+      background: @white;
+    }
+  }
+
+  &.ce-button--jumbo {
+    .ce-button__label {
+      background: @white;
+    }
+  }
+}
+
+//////////////////////////////////
+//          Text Button         //
+//////////////////////////////////
+.ce-button--text {
+  // Sizes
+  &.ce-button--small {
+    .ce-button__label {
+      margin: 0;
+      padding: 1.05rem 4rem;
+    }
+  }
+
+  &.ce-button--large {
+    .ce-button__label {
+      margin: 0;
+      padding: 1.5rem 6rem;
+    }
+  }
+
+  &.ce-button--jumbo {
+    .ce-button__label {
+      margin: 0;
+      padding: 2.5rem 6rem;
+    }
+  }
+
+  // States
+  &:focus {
+    box-shadow: none;
+
+    .ce-button__label {
+      text-decoration: underline;
+    }
+  }
+}
+
+//////////////////////////////////
+//        Button Colors         //
+//////////////////////////////////
+// Primary Base Colors
+.ce-button--primary {
+  background: @gradient-cool;
+  color: @white;
+
+  // States
+  &:hover {
+    background: #007ab2;
+  }
+
+  &:active {
+    background: #00577f;
+  }
+
+  &.ce-button--disabled {
+    background: #ccc;
+  }
+
+  // Outline Colors
+  &.ce-button--outline {
+    color: @black;
+
+    // States
+    &:hover {
+      color: #007ab2;
+    }
+
+    &:active {
+      color: #00577f;
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+
+  // Text Colors
+  &.ce-button--text {
+    background: @white;
+    color: #007ab2;
+
+    // States
+    &:hover {
+      color: #008dd2;
+    }
+
+    &:active {
+      color: #006999;
+    }
+
+    &:focus {
+      color: #006999;
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+}
+
+// Secondary Base Colors
+.ce-button--secondary {
+  background: @gradient-hot;
+  color: @white;
+
+  // States
+  &:hover {
+    background: #b3003a;
+  }
+
+  &:active {
+    background: #80002a;
+  }
+
+  &.ce-button--disabled {
+    background: #ccc;
+  }
+
+  // Outline Colors
+  &.ce-button--outline {
+    color: @black;
+
+    // States
+    &:hover {
+      color: #b3003a;
+    }
+
+    &:active {
+      color: #80002a;
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+
+  // Text Colors
+  &.ce-button--text {
+    background: @white;
+    color: #982d7c;
+
+    // States
+    &:hover {
+      color: #bc178f;
+    }
+
+    &:active {
+      color: #900086;
+    }
+
+    &:focus {
+      color: #900086;
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+}
+
+// Blue Base Colors
+.ce-button--blue {
+  background: @blue;
+  color: @white;
+
+  // States
+  &:hover {
+    background: #007ab2; // 30% darker
+  }
+
+  &:active {
+    background: #00577f; // 50% darker
+  }
+
+  &.ce-button--disabled {
+    background: #ccc;
+  }
+
+  // Outline Colors
+  &.ce-button--outline {
+    color: @black;
+
+    // States
+    &:hover {
+      color: #007ab2; // 30% darker
+    }
+
+    &:active {
+      color: #00577f; // 50% darker
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+
+  // Text Colors
+  &.ce-button--text {
+    background: @white;
+    color: @blue;
+
+    // States
+    &:hover {
+      color: #007ab2; // 30% darker
+    }
+
+    &:active {
+      color: #00577f; // 50% darker
+    }
+
+    &:focus {
+      color: #00577f; // 50% darker
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+}
+
+// Green Base Colors
+.ce-button--green {
+  background: @green;
+  color: @white;
+
+  // States
+  &:hover {
+    background: #789737; // 30% darker
+  }
+
+  &:active {
+    background: #566c27; // 50% darker
+  }
+
+  &.ce-button--disabled {
+    background: #ccc;
+  }
+
+  // Outline Colors
+  &.ce-button--outline {
+    color: @black;
+
+    // States
+    &:hover {
+      color: #789737; // 30% darker
+    }
+
+    &:active {
+      color: #566c27; // 50% darker
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+
+  // Text Colors
+  &.ce-button--text {
+    background: @white;
+    color: @green;
+
+    // States
+    &:hover {
+      color: #789737; // 30% darker
+    }
+
+    &:active {
+      color: #566c27; // 50% darker
+    }
+
+    &:focus {
+      color: #566c27; // 50% darker
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+}
+
+// Orange Base Colors
+.ce-button--orange {
+  background: @orange;
+  color: @white;
+
+  // States
+  &:hover {
+    background: #b07425; // 30% darker
+  }
+
+  &:active {
+    background: #7d521a; // 50% darker
+  }
+
+  &.ce-button--disabled {
+    background: #ccc;
+  }
+
+  // Outline Colors
+  &.ce-button--outline {
+    color: @black;
+
+    // States
+    &:hover {
+      color: #b07425; // 30% darker
+    }
+
+    &:active {
+      color: #7d521a; // 50% darker
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+
+  // Text Colors
+  &.ce-button--text {
+    background: @white;
+    color: @orange;
+
+    // States
+    &:hover {
+      color: #b07425; // 30% darker
+    }
+
+    &:active {
+      color: #7d521a; // 50% darker
+    }
+
+    &:focus {
+      color: #7d521a; // 50% darker
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+}
+
+// Purple Base Colors
+.ce-button--purple {
+  background: @purple;
+  color: @white;
+
+  // States
+  &:hover {
+    background: #542775; // 30% darker
+  }
+
+  &:active {
+    background: #3c1c54; // 50% darker
+  }
+
+  &.ce-button--disabled {
+    background: #ccc;
+  }
+
+  // Outline Colors
+  &.ce-button--outline {
+    color: @black;
+
+    // States
+    &:hover {
+      color: #542775; // 30% darker
+    }
+
+    &:active {
+      color: #3c1c54; // 50% darker
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+
+  // Text Colors
+  &.ce-button--text {
+    background: @white;
+    color: @purple;
+
+    // States
+    &:hover {
+      color: #542775; // 30% darker
+    }
+
+    &:active {
+      color: #3c1c54; // 50% darker
+    }
+
+    &:focus {
+      color: #3c1c54; // 50% darker
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+}
+
+// Red Base Colors
+.ce-button--red {
+  background: @red;
+  color: @white;
+
+  // States
+  &:hover {
+    background: #b3003a; // 30% darker
+  }
+
+  &:active {
+    background: #80002a; // 50% darker
+  }
+
+  &.ce-button--disabled {
+    background: #ccc;
+  }
+
+  // Outline Colors
+  &.ce-button--outline {
+    color: @black;
+
+    // States
+    &:hover {
+      color: #b3003a; // 30% darker
+    }
+
+    &:active {
+      color: #80002a; // 50% darker
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+
+  // Text Colors
+  &.ce-button--text {
+    background: @white;
+    color: @red;
+
+    // States
+    &:hover {
+      color: #b3003a; // 30% darker
+    }
+
+    &:active {
+      color: #80002a; // 50% darker
+    }
+
+    &:focus {
+      color: #80002a; // 50% darker
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
 }
