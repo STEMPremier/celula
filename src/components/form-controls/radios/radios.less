@@ -18,43 +18,11 @@ fieldset {
     padding-left: 30px;
     font-size: 14px;
   }
-}
-
-// .before{
-//   &::before {
-//     content: '';
-//     position: absolute;
-//     display: inline-block;
-//     left: 0px;
-//     border-radius: 50%;
-//     border: 1px solid #6f686a;
-//     width: 20px;
-//     height: 20px;
-//     background: transparent;
-//   }
-//   }
-//
-//   .after{
-//     &::after {
-//       content: '';
-//       position: absolute;
-//       display: inline-block;
-//       left: 0px;
-//       top: 0px;
-//       border-radius: 50%;
-//       width: 11px;
-//       height: 11px;
-//       background-color: #192344; //circle color working
-//       border: 5px solid #ffffff;
-//     }
-//   }
-
-.radioContainer :not(:hover) {
-  & .circle {
-    // styling main default radio unselected
-    // most of these sizes in width, height, and border are diff. discuss with ian
-    // this is making the code less reusable because I'm rewriting the input styles over and over
-    // hover is bigger in the stetches but show how it looks with them moving
+  // not checked  and not hover not(:checked)
+  & input:not(:checked) + .circle {
+    background-color: #9bc247;
+    //   // most of these sizes in width, height, and border are diff. discuss with ian
+    //   // this is making the code less reusable because I'm rewriting the input styles over and over
     box-sizing: border-box;
     width: 21px;
     height: 21px;
@@ -65,21 +33,32 @@ fieldset {
     left: 0;
     top: 0;
     border-radius: 50%;
+    // not checked and hover
+    &:hover {
+      background-color: #fbfbfb;
+      height: 35px; // GET RIGHT MEASUREMENTS
+      width: 35px; // GET RIGHT MEASUREMENTS
+      border: 5px solid #e5e5e5;
+      position: absolute;
+      margin-left: -3px;
+      left: -5px;
+      top: -5px;
+      border-radius: 50%;
+    }
   }
-
+  // checked and not hover
   input:checked + .circle {
-    background-color: #9bc247;
-    // .before;
-    // .after;
     &::before {
       content: '';
       position: absolute;
       display: inline-block;
-      left: 0px;
+      margin-left: 0px;
+      left: -1px;
+      top: -1px;
       border-radius: 50%;
-      border: 1px solid #6f686a;
-      width: 20px;
-      height: 20px;
+      border: 1px solid #192344;
+      width: 21px;
+      height: 21px;
       background: transparent;
     }
 
@@ -95,60 +74,42 @@ fieldset {
       background-color: #192344; //circle color working
       border: 5px solid #ffffff;
     }
-  }
-}
+    // checked and hover
+    &:hover {
+      // background-color: #9bc247;
+      &::before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        margin-left: -3px;
+        left: -5px;
+        top: -5px;
+        border-radius: 50%;
+        border: 5px solid #e6f7ff;
+        width: 26px;
+        height: 26px;
+        background: transparent;
+      }
 
-// THIS CODE WORKS FOR HOVER ON UNSELECTED BUT TRYING TO TRIGGER HOVER OF SELECTED / CHECKED
-.radioContainer & :hover {
-  // show Ian that when I try to put this under radioContainer circle hover it stops working
-  input:not(:checked) + .circle {
-    background-color: #fbfbfb;
-    height: 25px;
-    width: 25px;
-    border: 5px solid #e5e5e5;
-    position: absolute;
-    margin-left: -3px;
-    left: -5px;
-    top: -5px;
-    border-radius: 50%;
-  }
-  input:checked + .circle {
-    background-color: #9bc247;
-    &::before {
-      content: '';
-      position: absolute;
-      display: inline-block;
-      margin-left: -3px;
-      left: -5px;
-      top: -5px;
-      border-radius: 50%;
-      border: 5px solid #e6f7ff;
-      width: 26px;
-      height: 26px;
-      background: transparent;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      display: inline-block;
-      margin-left: 3px;
-      left: -3px;
-      top: 3px;
-      border-radius: 50%;
-      width: 10px;
-      height: 10px;
-      background-color: #192344;
-      border: 5px solid #ffffff;
+      &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        margin-left: 3px;
+        left: -3px;
+        top: 3px;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: #192344;
+        border: 5px solid #ffffff;
+      }
     }
   }
 }
 
 .radioContainer input {
   display: none;
-}
-.radio {
-  // background-color: #192344;
 }
 
 ////////////////////////////
@@ -170,7 +131,6 @@ fieldset {
       height: 20px;
       background: transparent;
     }
-
     &::after {
       content: '';
       position: absolute;

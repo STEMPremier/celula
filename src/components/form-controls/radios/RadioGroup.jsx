@@ -17,7 +17,6 @@ const RadioGroup = props => {
     // validators,
   } = props;
 
-  // const status =
   const classes = cx(
     'ce-radio',
     {
