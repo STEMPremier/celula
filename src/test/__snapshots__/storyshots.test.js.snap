@@ -482,3 +482,486 @@ exports[`Storyshots Components/Atoms/Button Button Types 1`] = `
   </button>
 </div>
 `;
+
+exports[`Storyshots Components/Molecules/Form Controls/SubmitButton All SubmitButtons 1`] = `
+<button
+  className="ce-button ce-button--small ce-button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="submit"
+>
+  <span
+    className="ce-button__label"
+  >
+    a button
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton Colors 1`] = `
+<div>
+  <div>
+    <button
+      className="ce-button ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        primary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--small ce-button--secondary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        secondary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--small ce-button--blue"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        blue
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--small ce-button--green"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        green
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--small ce-button--orange"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        orange
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--small ce-button--purple"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        purple
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--small ce-button--red"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        red
+      </span>
+    </button>
+  </div>
+  <br />
+  <div>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        primary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--secondary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        secondary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--blue"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        blue
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--green"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        green
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--orange"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        orange
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--purple"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        purple
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--red"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        red
+      </span>
+    </button>
+  </div>
+  <br />
+  <div>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        primary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--secondary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        secondary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--blue"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        blue
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--green"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        green
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--orange"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        ornage
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--purple"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        purple
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--red"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        red
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton Sizes 1`] = `
+<div>
+  <div>
+    <button
+      className="ce-button ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        normal small
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--large ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        normal large
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--jumbo ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        normal jumbo
+      </span>
+    </button>
+  </div>
+  <br />
+  <div>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        outline small
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--large ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        outline large
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--jumbo ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        outline jumbo
+      </span>
+    </button>
+  </div>
+  <br />
+  <div>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        text small
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--large ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        text large
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--jumbo ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        text jumbo
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton States 1`] = `
+<div>
+  <button
+    className="ce-button ce-button--small ce-button--primary ce-button--disabled"
+    disabled={true}
+    onClick={[Function]}
+    type="submit"
+  >
+    <span
+      className="ce-button__label"
+    >
+      small disabled
+    </span>
+  </button>
+  <button
+    className="ce-button ce-button--outline ce-button--small ce-button--primary ce-button--disabled"
+    disabled={true}
+    onClick={[Function]}
+    type="submit"
+  >
+    <span
+      className="ce-button__label"
+    >
+      small outline disabled
+    </span>
+  </button>
+  <button
+    className="ce-button ce-button--text ce-button--small ce-button--primary ce-button--disabled"
+    disabled={true}
+    onClick={[Function]}
+    type="submit"
+  >
+    <span
+      className="ce-button__label"
+    >
+      small text disabled
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton Types 1`] = `
+<div>
+  <button
+    className="ce-button ce-button--small ce-button--primary"
+    disabled={false}
+    onClick={[Function]}
+    type="submit"
+  >
+    <span
+      className="ce-button__label"
+    >
+      standard button
+    </span>
+  </button>
+  <button
+    className="ce-button ce-button--outline ce-button--small ce-button--primary"
+    disabled={false}
+    onClick={[Function]}
+    type="submit"
+  >
+    <span
+      className="ce-button__label"
+    >
+      outline button
+    </span>
+  </button>
+  <button
+    className="ce-button ce-button--text ce-button--small ce-button--primary"
+    disabled={false}
+    onClick={[Function]}
+    type="submit"
+  >
+    <span
+      className="ce-button__label"
+    >
+      text button
+    </span>
+  </button>
+</div>
+`;
