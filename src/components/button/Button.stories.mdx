@@ -1,0 +1,109 @@
+import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { boolean, select, text } from '@storybook/addon-knobs';
+
+import Button from '.';
+
+<Meta component={Button} title="Components/Atoms/Button" />
+
+# Button
+<Description of={Button} />
+<Props of={Button} />
+
+<Story name="All Buttons" parameters={{ docs: { disable: true }}}>
+  <Button
+    className={text('className', '')}
+    color={select('color', ['primary', 'secondary', 'blue', 'green', 'orange', 'purple', 'red'], 'primary')}
+    disabled={boolean('disabled', false)}
+    handleClick={action('clicked')}
+    size={select('size', ['small', 'large', 'jumbo'], 'small')}
+    type={select('type', ['default', 'text', 'outline'], 'default')}
+  >
+    {text('children', 'a button')}
+  </Button>
+</Story>
+
+### Types
+<Preview>
+  <Story name="Button Types">
+    <div>
+      <Button handleClick={action('clicked')}>standard button</Button>
+      <Button handleClick={action('clicked')} type="outline">outline button</Button>
+      <Button handleClick={action('clicked')} type="text">text button</Button>
+    </div>
+  </Story>
+</Preview>
+
+### Sizes
+<Preview>
+  <Story name="Button Sizes">
+    <div>
+      <div>
+        <Button handleClick={action('clicked')} size="small">normal small</Button>
+        <Button handleClick={action('clicked')} size="large">normal large</Button>
+        <Button handleClick={action('clicked')} size="jumbo">normal jumbo</Button>
+      </div>
+      <br />
+      <div>
+        <Button handleClick={action('clicked')} size="small" type="outline">outline small</Button>
+        <Button handleClick={action('clicked')} size="large" type="outline">outline large</Button>
+        <Button handleClick={action('clicked')} size="jumbo" type="outline">outline jumbo</Button>
+      </div>
+      <br />
+      <div>
+        <Button handleClick={action('clicked')} size="small" type="text">text small</Button>
+        <Button handleClick={action('clicked')} size="large" type="text">text large</Button>
+        <Button handleClick={action('clicked')} size="jumbo" type="text">text jumbo</Button>
+      </div>
+    </div>
+  </Story>
+</Preview>
+
+### Button States
+<Preview>
+  <Story name="Button States">
+    <div>
+      <Button handleClick={action('clicked')} disabled>small disabled</Button>
+      <Button handleClick={action('clicked')} type="outline" disabled>small outline disabled</Button>
+      <Button handleClick={action('clicked')} type="text" disabled>small text disabled</Button>
+    </div>
+  </Story>
+</Preview>
+
+### Button Colors
+<Preview>
+  <Story name="Button Colors">
+    <div>
+      <div>
+        <Button color="primary" handleClick={() => action('clicked')}>primary</Button>
+        <Button color="secondary" handleClick={() => action('clicked')}>secondary</Button>
+        <Button color="blue" handleClick={() => action('clicked')}>blue</Button>
+        <Button color="green" handleClick={() => action('clicked')}>green</Button>
+        <Button color="orange" handleClick={() => action('clicked')}>orange</Button>
+        <Button color="purple" handleClick={() => action('clicked')}>purple</Button>
+        <Button color="red" handleClick={() => action('clicked')}>red</Button>
+      </div>
+      <br />
+      <div>
+        <Button color="primary" handleClick={() => action('clicked')} type="outline">primary</Button>
+        <Button color="secondary" handleClick={() => action('clicked')} type="outline">secondary</Button>
+        <Button color="blue" handleClick={() => action('clicked')} type="outline">blue</Button>
+        <Button color="green" handleClick={() => action('clicked')} type="outline">green</Button>
+        <Button color="orange" handleClick={() => action('clicked')} type="outline">orange</Button>
+        <Button color="purple" handleClick={() => action('clicked')} type="outline">purple</Button>
+        <Button color="red" handleClick={() => action('clicked')} type="outline">red</Button>
+      </div>
+      <br />
+      <div>
+        <Button color="primary" handleClick={() => action('clicked')} type="text">primary</Button>
+        <Button color="secondary" handleClick={() => action('clicked')} type="text">secondary</Button>
+        <Button color="blue" handleClick={() => action('clicked')} type="text">blue</Button>
+        <Button color="green" handleClick={() => action('clicked')} type="text">green</Button>
+        <Button color="orange" handleClick={() => action('clicked')} type="text">ornage</Button>
+        <Button color="purple" handleClick={() => action('clicked')} type="text">purple</Button>
+        <Button color="red" handleClick={() => action('clicked')} type="text">red</Button>
+      </div>
+    </div>
+  </Story>
+</Preview>
+

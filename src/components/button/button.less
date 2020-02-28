@@ -1,5 +1,5 @@
 // Why aren't the variables avaliable with out importing them here?
-@import '../../styles/palettes';
+@import '../../styles/celula';
 
 // Reset here because less/css imports dont work correctly in Storybook.
 button {
@@ -377,6 +377,186 @@ button {
 
     &:focus {
       color: #566c27; // 50% darker
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+}
+
+// Orange Base Colors
+.ce-button--orange {
+  background: @orange;
+  color: @white;
+
+  // States
+  &:hover {
+    background: #b07425; // 30% darker
+  }
+
+  &:active {
+    background: #7d521a; // 50% darker
+  }
+
+  &.ce-button--disabled {
+    background: #ccc;
+  }
+
+  // Outline Colors
+  &.ce-button--outline {
+    color: @black;
+
+    // States
+    &:hover {
+      color: #b07425; // 30% darker
+    }
+
+    &:active {
+      color: #7d521a; // 50% darker
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+
+  // Text Colors
+  &.ce-button--text {
+    background: @white;
+    color: @orange;
+
+    // States
+    &:hover {
+      color: #b07425; // 30% darker
+    }
+
+    &:active {
+      color: #7d521a; // 50% darker
+    }
+
+    &:focus {
+      color: #7d521a; // 50% darker
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+}
+
+// Purple Base Colors
+.ce-button--purple {
+  background: @purple;
+  color: @white;
+
+  // States
+  &:hover {
+    background: #542775; // 30% darker
+  }
+
+  &:active {
+    background: #3c1c54; // 50% darker
+  }
+
+  &.ce-button--disabled {
+    background: #ccc;
+  }
+
+  // Outline Colors
+  &.ce-button--outline {
+    color: @black;
+
+    // States
+    &:hover {
+      color: #542775; // 30% darker
+    }
+
+    &:active {
+      color: #3c1c54; // 50% darker
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+
+  // Text Colors
+  &.ce-button--text {
+    background: @white;
+    color: @purple;
+
+    // States
+    &:hover {
+      color: #542775; // 30% darker
+    }
+
+    &:active {
+      color: #3c1c54; // 50% darker
+    }
+
+    &:focus {
+      color: #3c1c54; // 50% darker
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+}
+
+// Red Base Colors
+.ce-button--red {
+  background: @red;
+  color: @white;
+
+  // States
+  &:hover {
+    background: #b3003a; // 30% darker
+  }
+
+  &:active {
+    background: #80002a; // 50% darker
+  }
+
+  &.ce-button--disabled {
+    background: #ccc;
+  }
+
+  // Outline Colors
+  &.ce-button--outline {
+    color: @black;
+
+    // States
+    &:hover {
+      color: #b3003a; // 30% darker
+    }
+
+    &:active {
+      color: #80002a; // 50% darker
+    }
+
+    &.ce-button--disabled {
+      color: #ccc;
+    }
+  }
+
+  // Text Colors
+  &.ce-button--text {
+    background: @white;
+    color: @red;
+
+    // States
+    &:hover {
+      color: #b3003a; // 30% darker
+    }
+
+    &:active {
+      color: #80002a; // 50% darker
+    }
+
+    &:focus {
+      color: #80002a; // 50% darker
     }
 
     &.ce-button--disabled {

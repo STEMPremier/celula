@@ -1,17 +1,22 @@
 module.exports = {
-  parser: 'babel-eslint',
+  env: {
+    browser: true,
+    node: true,
+    jest: true
+  },
   extends: [
     'eslint:recommended',
     'airbnb',
     'plugin:react/recommended',
     'prettier',
   ],
-  plugins: ['react', 'prettier'],
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
   },
+  plugins: ['react', 'prettier'],
   rules: {
     'prettier/prettier': ['error'],
   },
