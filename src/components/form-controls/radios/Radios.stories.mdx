@@ -34,80 +34,119 @@ import Radio from './Radio';
 </Story>
 
 
-### Types
+### Enabled Radio Buttons 
 <Preview>
-  <Story name="Radio Group Types">
+  <Story name="Enabled Radio Buttons">
+    <div>
+      <RadioGroup
+        className="my-radio"
+        label="Label Goes Here"
+        name="radioGroupName1"
+        handleChange={action('changed')}
+        form="formName1"
+      >
+        <Radio
+          label="Option 1 unselected"
+          className="ce-radio--button"
+          value="option1"
+          id="option1"
+        />
+        <Radio
+          label="Option 2 selected "
+          value="option3"
+          id="option3"
+          className="ce-radio--button"
+          checked
+        />
+      </RadioGroup>
+    </div>
+  </Story>
+</Preview>
+
+### Disabled Radio Buttons 
+<Preview>
+  <Story name="Disabled Radio Buttons">
     <div>
       <RadioGroup
         className="my-class"
         label="Label Goes Here"
-        name="radioGroupName"
+        name="radioGroupName2"
         handleChange={action('changed')}
-        form="formName"
+        form="formName2"
       >
         <Radio
           label="Option 1 unselected"
-          className="radioContainer"
+          className="ce-radio--button"
           value="option1"
           id="option1"
+          disabled
         />
         <Radio
-          label="Option 2 unselected disabled"
+          label="Option 2 selected"
           value="option2"
           id="option2"
-          className="radioContainer"
-          disabled
-        />
-        <Radio
-          label="Option 3 selected disabled"
-          value="option3"
-          id="option3"
-          className="radioContainer"
+          className="ce-radio--button"
           checked
           disabled
-        />
-        <Radio
-          label="Option 4 checked"
-          value="option4"
-          className="radioContainer"
-          id="option4"
-          checked
         />
       </RadioGroup>
+      
+    </div>
+  </Story>
+</Preview>
+
+### Disabled Radio Form 
+<Preview>
+  <Story name="Disabled Radio Form">
+    <div>
       <RadioGroup
-        label="Entire Form Disabled"
-        className="ce-radio--groupDisabled"
-        name="radioGroupName"
+        className="my-class"
+        label="Label Goes Here"
+        name="radioGroupName3"
         handleChange={action('changed')}
-        form="secondFormName"
-        disabled
+        form="formName3"
       >
         <Radio
           label="Option 1 unselected"
-          className="radioContainer"
+          className="ce-radio--button"
           value="option1"
           id="option1"
         />
         <Radio
-          label="Option 2 unselected"
+          label="Option 2 selected"
           value="option2"
           id="option2"
-          className="radioContainer"
-          disabled
-        />
-        <Radio
-          label="Option 3 selected"
-          value="option3"
-          id="option3"
-          className="radioContainer"
+          className="ce-radio--button"
           checked
           disabled
         />
+      </RadioGroup>
+    </div>
+  </Story>
+</Preview>
+
+### Error Radio Button  
+<Preview>
+  <Story name="Error Radio Button">
+    <div>
+      <RadioGroup
+        className="my-class"
+        label="Label Goes Here"
+        name="radioGroupName4"
+        handleChange={action('changed')}
+        form="formName4"
+      >
         <Radio
-          label="Option 4 checked"
-          value="option4"
-          className="radioContainer"
-          id="option4"
+          label="Option 1 unselected"
+          className="ce-radio--button"
+          value="option1"
+          id="option1"
+        />
+        <Radio
+          label="Option 2 selected"
+          value="option2"
+          id="option2"
+          className="ce-radio--button"
           checked
         />
       </RadioGroup>

@@ -7,14 +7,16 @@ fieldset {
 }
 
 .ce-radio {
+  // not yet sure what to put here
+  padding: 8px;
 }
 
-.radioContainer {
+.ce-radio--button {
   position: relative;
   cursor: pointer;
   user-select: none;
   margin: 15px 0px 15px 0px;
-  label {
+   label {
     padding-left: 30px;
     font-size: 14px;
   }
@@ -50,7 +52,7 @@ fieldset {
       background-color: #232020;
       height: 35px; // GET RIGHT MEASUREMENTS
       width: 35px; // GET RIGHT MEASUREMENTS
-      border: 5px solid #e5e5e5;
+      border: 5px solid #CCCCCC;
       position: absolute;
       margin-left: -3px;
       left: -5px;
@@ -62,7 +64,7 @@ fieldset {
       background-color: #fbfbfb;
       height: 35px; // GET RIGHT MEASUREMENTS
       width: 35px; // GET RIGHT MEASUREMENTS
-      border: 5px solid #e5e5e5;
+      border: 5px solid #B3B3B3;
       position: absolute;
       margin-left: -3px;
       left: -5px;
@@ -95,7 +97,7 @@ fieldset {
       border-radius: 50%;
       width: 11px;
       height: 11px;
-      background-color: #192344; //circle color working
+      background-color: #192344; 
       border: 5px solid #ffffff;
     }
     // checked and hover
@@ -109,7 +111,7 @@ fieldset {
         left: -5px;
         top: -5px;
         border-radius: 50%;
-        border: 5px solid #e6f7ff;
+        border: 5px solid #E6F7FF;
         width: 26px;
         height: 26px;
         background: transparent;
@@ -132,42 +134,70 @@ fieldset {
 
     //checked and focus
     &:focus {
-      background-color: #df003f;
-      // &::before {
-      //   content: '';
-      //   position: absolute;
-      //   display: inline-block;
-      //   margin-left: -3px;
-      //   left: -5px;
-      //   top: -5px;
-      //   border-radius: 50%;
-      //   border: 5px solid #ccefff;
-      //   width: 26px;
-      //   height: 26px;
-      //   background: transparent;
-      // }
-      //
-      // &::after {
-      //   content: '';
-      //   position: absolute;
-      //   display: inline-block;
-      //   margin-left: 3px;
-      //   left: -3px;
-      //   top: 3px;
-      //   border-radius: 50%;
-      //   width: 10px;
-      //   height: 10px;
-      //   background-color: #192344;
-      //   border: 5px solid #ffffff;
-      // }
+      // background-color: #df003f;
+      &::before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        margin-left: -3px;
+        left: -5px;
+        top: -5px;
+        border-radius: 50%;
+        border: 5px solid #ccefff;
+        width: 26px;
+        height: 26px;
+        background: transparent;
+      }
+      
+      &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        margin-left: 3px;
+        left: -3px;
+        top: 3px;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: #192344;
+        border: 5px solid #ffffff;
+      }
     }
     //checked and active
     &:active {
+       // background-color: #df003f;
+       &::before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        margin-left: -3px;
+        left: -5px;
+        top: -5px;
+        border-radius: 50%;
+        border: 5px solid #B2E7FF;
+        width: 26px;
+        height: 26px;
+        background: transparent;
+      }
+      
+      &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        margin-left: 3px;
+        left: -3px;
+        top: 3px;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: #192344;
+        border: 5px solid #ffffff;
+      }
     }
   }
 }
 
-.radioContainer input {
+.ce-radio--button input {
   display: none;
 }
 
@@ -176,7 +206,7 @@ fieldset {
 ////////////////////////////
 .ce-radio--disabled {
   color: #aeaeae;
-  .radioContainer;
+  .ce-radio--button;
   input:checked + .circle {
     // background-color: #9bc247;
     &::before {
@@ -195,7 +225,7 @@ fieldset {
       position: absolute;
       display: inline-block;
       left: 1px;
-      top: -1px;
+      top: 0px;
       border-radius: 50%;
       width: 10px;
       height: 10px;

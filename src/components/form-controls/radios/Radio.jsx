@@ -22,7 +22,7 @@ const Radio = props => {
 
   return (
     <div className={classes}>
-      <label htmlFor={id} className="radioContainer">
+      <label htmlFor={id} className="ce-radio--button">
         <input
           type="radio"
           value={value}
