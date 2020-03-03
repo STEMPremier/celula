@@ -1,4 +1,4 @@
-This is information about our radio component.
+<!-- This is information about our radio component.
 
 ```jsx
 import RadioGroup from './RadioGroup';
