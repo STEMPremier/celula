@@ -11,6 +11,10 @@ fieldset {
   padding: 8px;
 }
 
+.ce-radio--form{
+  background-color: #9bc247;
+}
+
 .ce-radio--button {
   position: relative;
   cursor: pointer;
@@ -20,11 +24,10 @@ fieldset {
     padding-left: 30px;
     font-size: 14px;
   }
+      // most of these sizes in width, height, and border are diff. discuss with ian
   // not checked  and not hover not(:checked)
-  & input:not(:checked) + .circle {
-    background-color: #9bc247;
-    //   // most of these sizes in width, height, and border are diff. discuss with ian
-    //   // this is making the code less reusable because I'm rewriting the input styles over and over
+  & input:not([disabled]):not(:checked) + .circle {
+   // background-color: #9bc247;
     box-sizing: border-box;
     width: 21px;
     height: 21px;
@@ -73,7 +76,7 @@ fieldset {
     }
   }
   // checked and not hover
-  input:checked + .circle {
+  input:not([disabled]):checked + .circle {
     &::before {
       content: '';
       position: absolute;
@@ -195,19 +198,23 @@ fieldset {
       }
     }
   }
+
+  // checked and disabled 
+
+  
+  // not checked and disabled 
 }
 
 .ce-radio--button input {
   display: none;
 }
 
-////////////////////////////
-//       RADIO GROUP      //
-////////////////////////////
+
 .ce-radio--disabled {
   color: #aeaeae;
-  .ce-radio--button;
-  input:checked + .circle {
+  // .ce-radio--button;
+   // checked and disabled 
+  input:disabled:checked + .circle {
     // background-color: #9bc247;
     &::before {
       content: '';
@@ -233,4 +240,19 @@ fieldset {
       border: 5px solid #ffffff;
     }
   }
+  // not checked and disabled 
+  input:disabled:not(:checked) + .circle {
+    // background-color: #9bc247;
+     box-sizing: border-box;
+     width: 21px;
+     height: 21px;
+     background-color: #fbfbfb;
+     border: 1px solid #b2b2b2;
+     position: absolute;
+     margin-left: 0px;
+     left: 0;
+     top: 0;
+     border-radius: 50%;
+   }
+
 }

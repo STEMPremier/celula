@@ -63,7 +63,7 @@ import Radio from './Radio';
   </Story>
 </Preview>
 
-### Disabled Radio Buttons 
+### Disabled Radio Buttons (individual buttons)
 <Preview>
   <Story name="Disabled Radio Buttons">
     <div>
@@ -74,17 +74,30 @@ import Radio from './Radio';
         handleChange={action('changed')}
         form="formName2"
       >
-        <Radio
+      <Radio
           label="Option 1 unselected"
           className="ce-radio--button"
           value="option1"
           id="option1"
-          disabled
         />
         <Radio
           label="Option 2 selected"
           value="option2"
           id="option2"
+          className="ce-radio--button"
+          checked
+        />
+        <Radio
+          label="Option 3 unselected disabled"
+          className="ce-radio--button"
+          value="option3"
+          id="option3"
+          disabled
+        />
+        <Radio
+          label="Option 4 selected disabled"
+          value="option4"
+          id="option4"
           className="ce-radio--button"
           checked
           disabled
@@ -95,7 +108,7 @@ import Radio from './Radio';
   </Story>
 </Preview>
 
-### Disabled Radio Form 
+### Disabled Radio Form (entire form)
 <Preview>
   <Story name="Disabled Radio Form">
     <div>
@@ -105,6 +118,7 @@ import Radio from './Radio';
         name="radioGroupName3"
         handleChange={action('changed')}
         form="formName3"
+        disabled
       >
         <Radio
           label="Option 1 unselected"
@@ -118,7 +132,6 @@ import Radio from './Radio';
           id="option2"
           className="ce-radio--button"
           checked
-          disabled
         />
       </RadioGroup>
     </div>

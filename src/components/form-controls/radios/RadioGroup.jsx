@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import './radios.less';
-
+/* eslint-disable no-unused-expressions */
 const RadioGroup = props => {
   const {
     children,
@@ -27,7 +27,10 @@ const RadioGroup = props => {
     },
     className,
   );
-
+  const handleClick = event => {
+    // disabled = true ? event.preventDefault() : handleChange();
+    disabled === true ? console.log('event', event) : handleChange();
+  };
   const renderChildren = () => {
     return React.Children.map(children, child => {
       return React.cloneElement(child, handleChange, name);
@@ -39,7 +42,7 @@ const RadioGroup = props => {
       className={classes}
       name={name}
       form={form}
-      onChange={handleChange}
+      onChange={handleClick}
       disabled={disabled}
     >
       <legend>{label}</legend>
