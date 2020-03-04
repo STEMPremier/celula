@@ -39,7 +39,6 @@ import Radio from './Radio';
   <Story name="Enabled Radio Buttons">
     <div>
       <RadioGroup
-        className="my-radio"
         label="Label Goes Here"
         name="radioGroupName1"
         handleChange={action('changed')}
@@ -47,7 +46,6 @@ import Radio from './Radio';
       >
         <Radio
           label="Option 1 unselected"
-          className="ce-radio--button"
           value="option1"
           id="option1"
         />
@@ -55,7 +53,6 @@ import Radio from './Radio';
           label="Option 2 selected "
           value="option3"
           id="option3"
-          className="ce-radio--button"
           checked
         />
       </RadioGroup>
@@ -68,7 +65,6 @@ import Radio from './Radio';
   <Story name="Disabled Radio Buttons">
     <div>
       <RadioGroup
-        className="my-class"
         label="Label Goes Here"
         name="radioGroupName2"
         handleChange={action('changed')}
@@ -109,7 +105,6 @@ import Radio from './Radio';
   <Story name="Disabled Radio Form">
     <div>
       <RadioGroup
-        className="my-class"
         label="Label Goes Here"
         name="radioGroupName3"
         handleChange={action('changed')}
@@ -118,7 +113,6 @@ import Radio from './Radio';
       >
         <Radio
           label="Option 1 unselected"
-          className="ce-radio--button"
           value="option1"
           id="option1"
         />
@@ -126,7 +120,6 @@ import Radio from './Radio';
           label="Option 2 selected"
           value="option2"
           id="option2"
-          className="ce-radio--button"
           checked
         />
       </RadioGroup>
@@ -139,7 +132,6 @@ import Radio from './Radio';
   <Story name="Error Radio Button">
     <div>
       <RadioGroup
-        className="my-class"
         label="Label Goes Here"
         name="radioGroupName4"
         handleChange={action('changed')}
