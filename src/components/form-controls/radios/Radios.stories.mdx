@@ -76,7 +76,6 @@ import Radio from './Radio';
       >
       <Radio
           label="Option 1 unselected"
-          className="ce-radio--button"
           value="option1"
           id="option1"
         />
@@ -84,12 +83,10 @@ import Radio from './Radio';
           label="Option 2 selected"
           value="option2"
           id="option2"
-          className="ce-radio--button"
           checked
         />
         <Radio
           label="Option 3 unselected disabled"
-          className="ce-radio--button"
           value="option3"
           id="option3"
           disabled
@@ -98,7 +95,6 @@ import Radio from './Radio';
           label="Option 4 selected disabled"
           value="option4"
           id="option4"
-          className="ce-radio--button"
           checked
           disabled
         />
@@ -148,10 +144,10 @@ import Radio from './Radio';
         name="radioGroupName4"
         handleChange={action('changed')}
         form="formName4"
+        disabled
       >
         <Radio
           label="Option 1 unselected"
-          className="ce-radio--button"
           value="option1"
           id="option1"
         />
@@ -159,7 +155,6 @@ import Radio from './Radio';
           label="Option 2 selected"
           value="option2"
           id="option2"
-          className="ce-radio--button"
           checked
         />
       </RadioGroup>

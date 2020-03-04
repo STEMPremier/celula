@@ -12,14 +12,14 @@ const Radio = props => {
   const classes = cx(
     'ce-radio',
     {
-      'ce-radio--disabled': disabled,
+      'ce-radio--buttonDisabled': disabled,
       'ce-radio--checked': checked,
     },
     className,
   );
-  const handleDisabled = event => {
-    disabled === true ? event.preventDefault() : console.log('notDisabled');
-  };
+  // const handleDisabled = event => {
+  //   disabled === true ? event.preventDefault() : console.log('notDisabled');
+  // };
   return (
     <div className={classes}>
       <label htmlFor={id} className="ce-radio--button">
@@ -29,7 +29,7 @@ const Radio = props => {
           id={id}
           checked={checked}
           disabled={disabled}
-          onChange={handleDisabled}
+          // onChange={handleDisabled}
         />
         <span className="circle">
           <span />

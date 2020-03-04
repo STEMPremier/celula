@@ -20,7 +20,7 @@ const RadioGroup = props => {
   const classes = cx(
     'ce-radio',
     {
-      'ce-radio--disabled': disabled,
+      'ce-radio--formDisabled': disabled,
       'ce-radio--error': error,
       // 'ce-radio--form': form,
       // 'ce-radio--label': label,

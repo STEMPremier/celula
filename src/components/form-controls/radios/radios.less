@@ -11,20 +11,25 @@ fieldset {
   padding: 8px;
 }
 
+
+label {
+  padding-left: 30px;
+  font-size: 14px;
+}
+
 .ce-radio--form{
   background-color: #9bc247;
 }
 
 .ce-radio--button {
+  input {
+    display: none;
+  }
   position: relative;
   cursor: pointer;
   user-select: none;
-  margin: 15px 0px 15px 0px;
-   label {
-    padding-left: 30px;
-    font-size: 14px;
-  }
-      // most of these sizes in width, height, and border are diff. discuss with ian
+  // most of these sizes in width, height, and border are diff. discuss with ian
+
   // not checked  and not hover not(:checked)
   & input:not([disabled]):not(:checked) + .circle {
    // background-color: #9bc247;
@@ -198,22 +203,57 @@ fieldset {
       }
     }
   }
-
-  // checked and disabled 
-
-  
-  // not checked and disabled 
 }
 
-.ce-radio--button input {
-  display: none;
-}
-
-
-.ce-radio--disabled {
+.ce-radio--buttonDisabled {
   color: #aeaeae;
-  // .ce-radio--button;
    // checked and disabled 
+  input:disabled:checked + .circle {
+    // background-color: #9bc247;
+    &::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      left: 0px;
+      border-radius: 50%;
+      border: 1px solid #aeaeae;
+      width: 20px;
+      height: 20px;
+      background: transparent;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      left: 1px;
+      top: 1px;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      background-color: #aeaeae;
+      border: 5px solid #ffffff;
+    }
+  }
+  // not checked and disabled 
+  input:disabled:not(:checked) + .circle {
+    // background-color: #9bc247;
+     box-sizing: border-box;
+     width: 21px;
+     height: 21px;
+     background-color: #fbfbfb;
+     border: 1px solid #b2b2b2;
+     position: absolute;
+     margin-left: 0px;
+     left: 0;
+     top: 0;
+     border-radius: 50%;
+   }
+}
+
+.ce-radio--formDisabled {
+  pointer-events:none;
+  color: #aeaeae;
+  //  // checked and disabled 
   input:disabled:checked + .circle {
     // background-color: #9bc247;
     &::before {
@@ -254,5 +294,5 @@ fieldset {
      top: 0;
      border-radius: 50%;
    }
-
 }
+
