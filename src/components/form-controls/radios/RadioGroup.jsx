@@ -50,7 +50,7 @@ const RadioGroup = props => {
       >
         <legend className="ce-radio-group--label">{label}</legend>
         {renderChildren()}
-        <div className="ce-radio-error-text">Error Message</div>
+        <div className="ce-radio-error--text">Error Message</div>
       </fieldset>
     </form>
   );
