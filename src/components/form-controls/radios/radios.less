@@ -203,52 +203,7 @@ label {
   }
 }
 
-.ce-radio--buttonDisabled {
-  color: #aeaeae;
-   // checked and disabled 
-  input:disabled:checked + .circle {
-    // background-color: #9bc247;
-    &::before {
-      content: '';
-      position: absolute;
-      display: inline-block;
-      left: 0rem;
-      border-radius: 50%;
-      border: .1rem solid #aeaeae;
-      width: 2rem;
-      height: 2rem;
-      background: transparent;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      display: inline-block;
-      left: .1rem;
-      top: .1rem;
-      border-radius: 50%;
-      width: 1rem;
-      height: 1rem;
-      background-color: #aeaeae;
-      border: .5rem solid #ffffff;
-    }
-  }
-  // not checked and disabled 
-  input:disabled:not(:checked) + .circle {
-    // background-color: #9bc247;
-     box-sizing: border-box;
-     width: 2.1rem;
-     height: 2.1rem;
-     background-color: #fbfbfb;
-     border: .1rem solid #b2b2b2;
-     position: absolute;
-     margin-left: 0rem;
-     left: 0;
-     top: 0;
-     border-radius: 50%;
-   }
-}
-
-.ce-radio--formDisabled {
+.ce-radio--disabled {
   pointer-events:none;
   color: #aeaeae;
   // checked and disabled 

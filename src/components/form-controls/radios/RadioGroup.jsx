@@ -20,10 +20,8 @@ const RadioGroup = props => {
   const classes = cx(
     'ce-radio',
     {
-      'ce-radio--formDisabled': disabled,
+      'ce-radio--disabled': disabled,
       'ce-radio--error': error,
-      // 'ce-radio--form': form,
-      // 'ce-radio--label': label,
     },
     className,
   );
@@ -45,7 +43,7 @@ const RadioGroup = props => {
       onChange={handleChange}
       disabled={disabled}
     >
-      <legend>{label}</legend>
+      <legend className="ce-radio-group--label">{label}</legend>
       {renderChildren()}
     </fieldset>
   );

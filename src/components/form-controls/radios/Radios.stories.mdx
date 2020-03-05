@@ -20,12 +20,12 @@ import Radio from './Radio';
   <RadioGroup
     className={text('className', '')}
     handleChange={action('click')}
-    label={text('label', '')}
+    label={text('label', 'Default Fieldset Label')}
     name={text('name', '')}
     form={text('form', '')}
   >
     <Radio
-      label={text('label', '')}
+      label={text('label', 'Default Radio Label')}
       name={text('name', '')}
       value={text('value', '')}
       id={text('text', '')}
@@ -45,62 +45,33 @@ import Radio from './Radio';
         form="formName1"
       >
         <Radio
-          label="Option 1 unselected"
+          label="Option 1"
           value="option1"
           id="option1"
         />
         <Radio
-          label="Option 2 selected "
-          value="option3"
-          id="option3"
-          checked
-        />
-      </RadioGroup>
-    </div>
-  </Story>
-</Preview>
-
-### Disabled Radio Buttons (individual buttons)
-<Preview>
-  <Story name="Disabled Radio Buttons">
-    <div>
-      <RadioGroup
-        label="Label Goes Here"
-        name="radioGroupName2"
-        handleChange={action('changed')}
-        form="formName2"
-      >
-      <Radio
-          label="Option 1 unselected"
-          value="option1"
-          id="option1"
-        />
-        <Radio
-          label="Option 2 selected"
+          label="Option 2"
           value="option2"
           id="option2"
-          checked
         />
-        <Radio
-          label="Option 3 unselected disabled"
+           <Radio
+          label="Option 3"
           value="option3"
           id="option3"
-          disabled
         />
         <Radio
-          label="Option 4 selected disabled"
+          label="Option 4"
           value="option4"
           id="option4"
           checked
-          disabled
         />
       </RadioGroup>
-      
     </div>
   </Story>
 </Preview>
 
-### Disabled Radio Form (entire form)
+
+### Disabled Radio Group 
 <Preview>
   <Story name="Disabled Radio Form">
     <div>
@@ -112,14 +83,24 @@ import Radio from './Radio';
         disabled
       >
         <Radio
-          label="Option 1 unselected"
+          label="Option 1"
           value="option1"
           id="option1"
         />
         <Radio
-          label="Option 2 selected"
+          label="Option 2"
           value="option2"
           id="option2"
+        />
+           <Radio
+          label="Option 3"
+          value="option3"
+          id="option3"
+        />
+        <Radio
+          label="Option 3"
+          value="option4"
+          id="option4"
           checked
         />
       </RadioGroup>
@@ -139,14 +120,24 @@ import Radio from './Radio';
         disabled
       >
         <Radio
-          label="Option 1 unselected"
+          label="Option 1"
           value="option1"
           id="option1"
         />
         <Radio
-          label="Option 2 selected"
+          label="Option 2"
           value="option2"
           id="option2"
+        />
+        <Radio
+          label="Option 3"
+          value="option3"
+          id="option3"
+        />
+        <Radio
+          label="Option 3"
+          value="option4"
+          id="option4"
           checked
         />
       </RadioGroup>
