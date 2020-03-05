@@ -4,6 +4,12 @@
 ////////////////////////////
 fieldset {
   border: none;
+  width: 225px;
+  height: 100%;
+}
+
+legend {
+  padding: .5rem;
 }
 
 .ce-radio {
@@ -247,5 +253,52 @@ label {
      top: 0;
      border-radius: 50%;
    }
+
+}
+
+
+.ce-radio--error{
+  border: .5rem solid #CC0043;
+  border-radius: .5rem;
+  color:#CC0043;
+  label {
+    margin-top: 5rem;
+  }
+   // checked and error --> THIS CODE IS NOT BEING TOUCHED 
+   .ce-radio--button{
+    input:checked + .circle {
+      &::before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        left: 0rem;
+        border-radius: 50%;
+        border: .1rem solid #CC0043;
+        width: 2rem;
+        height: 2rem;
+        background: transparent;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        left: .1rem;
+        top: 0rem;
+        border-radius: 50%;
+        width: 1rem;
+        height: 1rem;
+        background-color: #CC0043;
+        border: .5rem solid #ffffff;
+      }
+    } 
+   }
+
+  .ce-radio-error-text{
+    position: absolute;
+    background-color: white;
+    padding: .5rem;
+    line-height: 1.2rem;
+    right: 63.2rem;
+  }
 }
 

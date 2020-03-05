@@ -25,10 +25,14 @@ const RadioGroup = props => {
     },
     className,
   );
-  // const handleClick = event => {
-  //   // disabled = true ? event.preventDefault() : handleChange();
-  //   disabled === true ? console.log('event', event) : handleChange();
-  // };
+  const handleClick = event => {
+    // if (event.target.checked) {
+    if (event) {
+      // eslint-disable-next-line no-console
+      console.log('clicked', props);
+      handleChange();
+    }
+  };
   const renderChildren = () => {
     return React.Children.map(children, child => {
       return React.cloneElement(child, handleChange, name);
@@ -36,16 +40,19 @@ const RadioGroup = props => {
   };
 
   return (
-    <fieldset
-      className={classes}
-      name={name}
-      form={form}
-      onChange={handleChange}
-      disabled={disabled}
-    >
-      <legend className="ce-radio-group--label">{label}</legend>
-      {renderChildren()}
-    </fieldset>
+    <form>
+      <fieldset
+        className={classes}
+        name={name}
+        form={form}
+        onChange={handleClick}
+        disabled={disabled}
+      >
+        <legend className="ce-radio-group--label">{label}</legend>
+        {renderChildren()}
+        <div className="ce-radio-error-text">Error Message</div>
+      </fieldset>
+    </form>
   );
 };
 

@@ -7,7 +7,7 @@ import './radios.less';
 // import { types } from '@babel/core';
 /* eslint-disable no-unused-expressions */
 const Radio = props => {
-  const { className, checked, id, label, value, disabled } = props;
+  const { className, checked, id, label, value, disabled, name } = props;
 
   const classes = cx(
     'ce-radio',
@@ -16,21 +16,22 @@ const Radio = props => {
     },
     className,
   );
-  const handleDisabled = event =>
-    disabled === true ? event.preventDefault() : console.log('notDisabled');
-  // const handleDisabled = event => {
-  //   disabled === true ? event.preventDefault() : console.log('notDisabled');
-  // };
+  const update = event => {
+    console.log('event.target.value', event.target.value);
+    console.log('props', props);
+    // checked = true;
+  };
   return (
     <div className={classes}>
       <label htmlFor={id} className="ce-radio--button">
         <input
           type="radio"
           value={value}
+          name={name}
           id={id}
           checked={checked}
+          onClick={update}
           disabled={disabled}
-          onChange={handleDisabled}
         />
         <span className="circle">
           <span />
@@ -48,6 +49,7 @@ Radio.propTypes = {
    * Make the radio option inactive.
    */
   disabled: PropTypes.bool,
+  name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([
