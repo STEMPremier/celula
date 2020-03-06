@@ -1,11 +1,17 @@
 @import '../../../styles/palettes';
-////////////////////////////
-//          RADIO         //
-////////////////////////////
+
+
+
+
 fieldset {
   border: none;
   width: 225px;
   height: 100%;
+  @media screen {
+    @media (max-width: 768px) {
+      width: 93%;
+    }
+  }
 }
 
 legend {
@@ -261,8 +267,14 @@ label {
   border: .5rem solid #CC0043;
   border-radius: .5rem;
   color:#CC0043;
+
   label {
     margin-top: 5rem;
+  }
+  @media screen {
+    @media (max-width: 768px) {
+      width: 93%;
+    }
   }
    // checked and error --> THIS CODE IS NOT BEING TOUCHED 
    .ce-radio--button{
@@ -298,7 +310,13 @@ label {
     background-color: white;
     padding: .5rem;
     line-height: 1.2rem;
-    right: 63.2rem;
+    right: 52.2rem;
+    bottom: -4%;
+    @media screen {
+      @media (max-width: 768px) {
+        right:0rem;
+      }
+    }
   }
 }
 

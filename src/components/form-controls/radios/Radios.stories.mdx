@@ -36,7 +36,7 @@ import Radio from './Radio';
 
 ### Enabled Radio Buttons 
 <Preview>
-  <Story name="Enabled Radio Buttons">
+  <Story name="Enabled Radio Group">
     <div>
       <RadioGroup
         label="Label Goes Here"
@@ -45,25 +45,28 @@ import Radio from './Radio';
         form="formName1"
       >
         <Radio
+          name="radioGroupName1"
           label="Option 1"
           value="option1"
           id="option1"
         />
         <Radio
+          name="radioGroupName1"
           label="Option 2"
           value="option2"
           id="option2"
         />
            <Radio
+          name="radioGroupName1"
           label="Option 3"
           value="option3"
           id="option3"
         />
         <Radio
+          name="radioGroupName1"
           label="Option 4"
           value="option4"
           id="option4"
-          checked
         />
       </RadioGroup>
     </div>
@@ -73,7 +76,7 @@ import Radio from './Radio';
 
 ### Disabled Radio Group 
 <Preview>
-  <Story name="Disabled Radio Form">
+  <Story name="Disabled Radio Group">
     <div>
       <RadioGroup
         label="Label Goes Here"
@@ -83,21 +86,25 @@ import Radio from './Radio';
         disabled
       >
         <Radio
+        name="radioGroupName3"
           label="Option 1"
           value="option1"
           id="option1"
         />
         <Radio
+        name="radioGroupName3"
           label="Option 2"
           value="option2"
           id="option2"
         />
            <Radio
+           name="radioGroupName3"
           label="Option 3"
           value="option3"
           id="option3"
         />
         <Radio
+        name="radioGroupName3"
           label="Option 3"
           value="option4"
           id="option4"
@@ -114,35 +121,34 @@ import Radio from './Radio';
     <div>
       <RadioGroup
         label="Label Goes Here"
-        name="radioGroupName4"
+        name="radioGroupName3"
         handleChange={action('changed')}
         form="formName4"
         error
       >
         <Radio
+          name="radioGroupName3"
           label="Option 1"
           value="option1"
           id="option1"
-          name="radioGroupName4"
         />
         <Radio
+          name="radioGroupName3"
           label="Option 2"
           value="option2"
           id="option2"
-          name="radioGroupName4"
         />
         <Radio
+          name="radioGroupName3"
           label="Option 3"
           value="option3"
           id="option3"
-          name="radioGroupName4"
         />
         <Radio
-          label="Option 3"
+          name="radioGroupName3"
+          label="Option 4"
           value="option4"
           id="option4"
-          name="radioGroupName4"
-          checked
         />
       </RadioGroup>
     </div>
