@@ -10,11 +10,6 @@
     border: none;
     width: 225px;
     height: 100%;
-    @media screen {
-      @media (max-width: 768px) {
-        width: 93%;
-      }
-    }
   }
   legend {
     padding: .5rem;
@@ -257,11 +252,9 @@
   label {
     margin-top: 5rem;
   }
-  // Dothe calc functino of css like in the buttons.less **************
   @media screen {
     @media (max-width: 768px) {
-      width: 93%;
-      width: 100%;
+      width: ~'calc(100% - 3rem)'; // 100% - the total of the l/r padding;
     }
   }
    .ce-radio--button{
@@ -293,8 +286,6 @@
     } 
    }
 
-
-
    // this error text handles when I want it shown inside the radio--error
   .ce-radio-error--text{
     position: absolute;
@@ -305,7 +296,7 @@
     bottom: -4%;
     @media screen {
       @media (max-width: 768px) {
-        right:0rem;
+        width: ~'calc(100% - 3rem)'; // 100% - the total of the l/r padding;
       }
     }
   }
