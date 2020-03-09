@@ -1,71 +1,95 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import './radios.less';
-/* eslint-disable no-unused-expressions */
-const RadioGroup = props => {
-  const {
-    children,
-    className,
-    disabled,
-    error,
-    form,
-    label,
-    name,
-    handleChange,
-    // validators,
-  } = props;
 
-  const classes = cx(
-    'ce-radio',
-    {
-      'ce-radio--disabled': disabled,
-      'ce-radio--error': error,
-    },
-    className,
-  );
-  const renderChildren = () => {
+class RadioGroup extends Component {
+  state = {
+    checkedValue: '',
+  };
+
+  handleChange = event => {
+    this.setState(
+      { checkedValue: event.target.value },
+      // eslint-disable-next-line react/destructuring-assignment
+      this.props.handleChange,
+    );
+  };
+
+  renderChildren = () => {
+    const { children, name } = this.props;
+    const { checkedValue } = this.state;
+
     return React.Children.map(children, child => {
-      return React.cloneElement(child, handleChange, name);
+      const props = {
+        checked: checkedValue === child.props.value,
+        handleChange: this.handleChange,
+        name,
+      };
+      return React.cloneElement(child, { ...props });
     });
   };
 
-  return (
-    <form>
-      <fieldset
-        className={classes}
-        name={name}
-        form={form}
-        onChange={handleChange}
-        disabled={disabled}
-      >
-        <legend className="ce-radio-group--label">
-          {label}
-          <div className="ce-radio-error--text">Error Message</div>
-        </legend>
-        {renderChildren()}
-      </fieldset>
-    </form>
-  );
-};
+  render() {
+    const {
+      className,
+      disabled,
+      error,
+      form,
+      label,
+      name,
+      // validators,
+    } = this.props;
+
+    const classes = cx(
+      'ce-radio',
+      {
+        'ce-radio--disabled': disabled,
+        'ce-radio--error': error,
+      },
+      className,
+    );
+
+    return (
+      <form>
+        <fieldset
+          className={classes}
+          name={name}
+          form={form}
+          onChange={this.handleChange}
+          disabled={disabled}
+        >
+          <legend className="ce-radio-group--label">
+            {label}
+            {error && <div className="ce-radio-error--text">{error}</div>}
+          </legend>
+          {this.renderChildren()}
+        </fieldset>
+      </form>
+    );
+  }
+}
 
 RadioGroup.propTypes = {
+  /**
+   * This is the Radios for the radio group.
+   */
   children: PropTypes.node.isRequired,
   /**
-   * A class name added to the radio.
+   * A class name added to the` <RadioGroup />`.
    */
   className: PropTypes.string,
   /**
-   * Make the radio group inactive.
+   * Makes the entire radio group inactive.
    */
   disabled: PropTypes.bool,
   /**
-   * The error message on the radio.
+   * The error message on the radio. I JUST NOW SAW THIS....SHOULD I CHANGE HOW THE ERROR MESSAGE IS DISPLAYED
    */
   error: PropTypes.string,
   /**
-   * ?????????????????
+   * The name of the form the RadioGroup belongs to.
    */
   form: PropTypes.string,
   /**
@@ -73,11 +97,11 @@ RadioGroup.propTypes = {
    */
   handleChange: PropTypes.func.isRequired,
   /**
-   * Acts similar to a legen on the radio group.
+   * The text that gets placed into the legend element.
    */
   label: PropTypes.string.isRequired,
   /**
-   * Need to assign a name to each.
+   * The name is a unique name for the RadioGroup given to all the Radios.
    */
   name: PropTypes.string.isRequired,
   // validators: PropTypes.array,

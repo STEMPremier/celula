@@ -19,5 +19,6 @@ module.exports = {
   plugins: ['react', 'prettier'],
   rules: {
     'prettier/prettier': ['error'],
+    'react/state-in-constructor': 0,
   },
 };

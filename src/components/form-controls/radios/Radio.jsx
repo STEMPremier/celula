@@ -1,69 +1,69 @@
-/* eslint-disable no-console */
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import './radios.less';
 
-/* eslint-disable no-unused-expressions */
-class Radio extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      // eslint-disable-next-line react/no-unused-state
-      selectedOption: '',
-    };
-  }
-
-  update = event => {
-    this.setState({
-      // eslint-disable-next-line react/no-unused-state
-      selectedOption: event.target.value,
-    });
+const Radio = props => {
+  const update = () => {
+    //  event.target.value =
   };
 
-  render() {
-    const { className, checked, id, label, value, disabled, name } = this.props;
-    const classes = cx(
-      'ce-radio',
-      {
-        'ce-radio--checked': checked,
-      },
-      className,
-    );
-    return (
-      <div className={classes}>
-        <label htmlFor={id} className="ce-radio--button">
-          <input
-            type="radio"
-            value={value}
-            name={name}
-            id={id}
-            // eslint-disable-next-line react/destructuring-assignment
-            checked={this.selectedOption}
-            onClick={this.update}
-            disabled={disabled}
-          />
-          <span className="circle">
-            <span />
-          </span>
-          {label}
-        </label>
-      </div>
-    );
-  }
-}
+  const { className, checked, label, value, disabled, name } = props;
+  const id = `${name}_${value}`;
+  const classes = cx(
+    'ce-radio',
+    {
+      'ce-radio--checked': checked,
+    },
+    className,
+  );
+  return (
+    <div className={classes}>
+      <label htmlFor={id} className="ce-radio--button">
+        <input
+          type="radio"
+          value={value}
+          name={name}
+          id={id}
+          checked={checked}
+          onChange={update}
+          disabled={disabled}
+        />
+        <span className="circle">
+          <span />
+        </span>
+        {label}
+      </label>
+    </div>
+  );
+};
 
 Radio.propTypes = {
+  /**
+   * A class name added to the RadioGroup.
+   */
   className: PropTypes.string,
+  /**
+   * The current checked state.
+   */
   checked: PropTypes.bool,
   /**
-   * Make the radio option inactive.
+   * Make the RadioGroup inactive.
    */
   disabled: PropTypes.bool,
-  name: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  /**
+   * Need to assign a matching name to each radio in the RadioGroup.
+   * @ignore
+   */
+  name: PropTypes.string,
+  /**
+   * The label you assign is the text that shows up next to each individual radio button.
+   */
   label: PropTypes.string.isRequired,
+  /**
+   * The value is not visible to the user, but rather it is the unique value passed when selecting each individual radio button.
+   */
   value: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
@@ -75,6 +75,7 @@ Radio.defaultProps = {
   className: '',
   checked: false,
   disabled: false,
+  name: undefined,
 };
 
 export default Radio;

@@ -26,13 +26,16 @@ import Radio from './Radio';
   >
     <Radio
       label={text('label', 'Default Radio Label')}
-      name={text('name', '')}
-      value={text('value', '')}
-      id={text('text', '')}
+      value={text('value', 'value1')}
+    />
+     <Radio
+      label={text('label', 'Default Radio Label')}
+      value={text('value', 'value2')}
     />
   </RadioGroup>
 </Story>
 
+<!-- // do same lines 16-24 for the radio. Change this faile to radioGroups and the other will be radios  -->
 
 ### Enabled Radio Buttons 
 <Preview>
@@ -45,28 +48,20 @@ import Radio from './Radio';
         form="formName1"
       >
         <Radio
-          name="radioGroupName1"
           label="Option 1"
           value="option1"
-          id="option1"
         />
         <Radio
-          name="radioGroupName1"
           label="Option 2"
           value="option2"
-          id="option2"
         />
            <Radio
-          name="radioGroupName1"
           label="Option 3"
           value="option3"
-          id="option3"
         />
         <Radio
-          name="radioGroupName1"
           label="Option 4"
           value="option4"
-          id="option4"
         />
       </RadioGroup>
     </div>
@@ -86,29 +81,21 @@ import Radio from './Radio';
         disabled
       >
         <Radio
-        name="radioGroupName3"
           label="Option 1"
           value="option1"
-          id="option1"
         />
         <Radio
-        name="radioGroupName3"
           label="Option 2"
           value="option2"
-          id="option2"
-        />
-           <Radio
-           name="radioGroupName3"
-          label="Option 3"
-          value="option3"
-          id="option3"
+          checked
         />
         <Radio
-        name="radioGroupName3"
+          label="Option 3"
+          value="option3"
+        />
+        <Radio
           label="Option 3"
           value="option4"
-          id="option4"
-          checked
         />
       </RadioGroup>
     </div>
@@ -124,31 +111,23 @@ import Radio from './Radio';
         name="radioGroupName3"
         handleChange={action('changed')}
         form="formName4"
-        error
+        error="Error message"
       >
         <Radio
-          name="radioGroupName3"
           label="Option 1"
           value="option1"
-          id="option1"
         />
         <Radio
-          name="radioGroupName3"
           label="Option 2"
           value="option2"
-          id="option2"
         />
         <Radio
-          name="radioGroupName3"
           label="Option 3"
           value="option3"
-          id="option3"
         />
         <Radio
-          name="radioGroupName3"
           label="Option 4"
           value="option4"
-          id="option4"
         />
       </RadioGroup>
     </div>

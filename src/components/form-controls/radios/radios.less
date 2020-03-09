@@ -19,17 +19,13 @@ legend {
 }
 
 .ce-radio {
-  // not yet sure what to put here
+  // anything more?????
   padding: .8rem;
 }
 
 label {
   padding-left: 3rem;
   font-size: 1.4rem;
-}
-
-.ce-radio--form{
-  background-color: #9bc247;
 }
 
 .ce-radio--button {
@@ -39,9 +35,7 @@ label {
   position: relative;
   cursor: pointer;
   user-select: none;
-  // most of these sizes in width, height, and border are diff. discuss with ian
-
-  // not checked  and not hover not(:checked)
+  // not checked  and not hover 
   & input:not([disabled]):not(:checked) + .circle {
    // background-color: #9bc247;
     box-sizing: border-box;
@@ -152,7 +146,6 @@ label {
 
     //checked and focus
     &:focus {
-      // background-color: #df003f;
       &::before {
         content: '';
         position: absolute;
@@ -276,7 +269,6 @@ label {
       width: 93%;
     }
   }
-   // checked and error --> THIS CODE IS NOT BEING TOUCHED 
    .ce-radio--button{
     input:checked + .circle {
       &::before {
