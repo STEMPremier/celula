@@ -1,30 +1,29 @@
 @import '../../../styles/palettes';
 
 
-fieldset {
-  border: none;
-  width: 225px;
-  height: 100%;
-  @media screen {
-    @media (max-width: 768px) {
-      width: 93%;
-    }
-  }
-}
 
-legend {
-  padding: .5rem;
-}
 
 .ce-radio {
-  // anything more?????
+  // anything more?????  WILL FOLLOW UP WITH REG ABOUT HOW THEY ARE RELATED TO ONE ANOTHER.  NEED A TICKETING SYTEM IN THE FUTURE ON HOW TO COMMUNICATE  
   padding: .8rem;
-}
-
-label {
-  padding-left: 3rem;
-  font-size: 1.4rem;
-}
+  fieldset {
+    border: none;
+    width: 225px;
+    height: 100%;
+    @media screen {
+      @media (max-width: 768px) {
+        width: 93%;
+      }
+    }
+  }
+  legend {
+    padding: .5rem;
+  }
+  label {
+    padding-left: 3rem;
+    font-size: 1.4rem;
+  }
+};
 
 .ce-radio--button {
   input {
@@ -34,8 +33,7 @@ label {
   cursor: pointer;
   user-select: none;
   // not checked  and not hover 
-  & input:not([disabled]):not(:checked) + .circle {
-   // background-color: #9bc247;
+  & input:not(:checked) + .circle {
     box-sizing: border-box;
     width: 2.1rem;
     height: 2.1rem;
@@ -84,7 +82,7 @@ label {
     }
   }
   // checked and not hover
-  input:not([disabled]):checked + .circle {
+  input:checked + .circle {
     &::before {
       content: '';
       position: absolute;
@@ -174,7 +172,6 @@ label {
     }
     //checked and active
     &:active {
-       // background-color: #df003f;
        &::before {
         content: '';
         position: absolute;
@@ -204,13 +201,13 @@ label {
       }
     }
   }
-}
+};
 
 .ce-radio--disabled {
   pointer-events:none;
   color: #aeaeae;
   // checked and disabled 
-  input:disabled:checked + .circle {
+  input:checked + .circle {
     &::before {
       content: '';
       position: absolute;
@@ -236,7 +233,7 @@ label {
     }
   }
   // not checked and disabled 
-  input:disabled:not(:checked) + .circle {
+  input:not(:checked) + .circle {
      box-sizing: border-box;
      width: 2.1rem;
      height: 2.1rem;
@@ -248,11 +245,11 @@ label {
      top: 0;
      border-radius: 50%;
    }
-
-}
+};
 
 
 .ce-radio--error{
+  pointer-events:none;
   // error mode not checked 
   border: .5rem solid #CC0043;
   border-radius: .5rem;
@@ -260,7 +257,7 @@ label {
   label {
     margin-top: 5rem;
   }
-  // SHOW IAN THE MEDIA QUERY VIEW 
+  // Dothe calc functino of css like in the buttons.less **************
   @media screen {
     @media (max-width: 768px) {
       width: 93%;
@@ -295,13 +292,16 @@ label {
       }
     } 
    }
+
+
+
    // this error text handles when I want it shown inside the radio--error
   .ce-radio-error--text{
     position: absolute;
     background-color: white;
     padding: .5rem;
     line-height: 1.2rem;
-    right: 52.2rem;
+    margin-left: 10.2rem;
     bottom: -4%;
     @media screen {
       @media (max-width: 768px) {
@@ -309,9 +309,4 @@ label {
       }
     }
   }
-}
-
-// this error text handles when I am NOT inside radio-error; and therefore want to hide it 
-.ce-radio-error--text{
-  margin-left: -9999px;
 }

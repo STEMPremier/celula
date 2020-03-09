@@ -6,7 +6,8 @@ import './radios.less';
 
 class RadioGroup extends Component {
   state = {
-    checkedValue: '',
+    // eslint-disable-next-line react/destructuring-assignment
+    checkedValue: this.props.value,
   };
 
   handleChange = event => {
@@ -105,6 +106,11 @@ RadioGroup.propTypes = {
    */
   name: PropTypes.string.isRequired,
   // validators: PropTypes.array,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.bool,
+  ]),
 };
 
 RadioGroup.defaultProps = {
@@ -112,6 +118,7 @@ RadioGroup.defaultProps = {
   disabled: false,
   error: '',
   form: '',
+  value: '',
   // validators: [],
 };
 
