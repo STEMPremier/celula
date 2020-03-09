@@ -1,8 +1,6 @@
 @import '../../../styles/palettes';
 
 
-
-
 fieldset {
   border: none;
   width: 225px;
@@ -72,7 +70,7 @@ label {
       top: -.5rem;
       border-radius: 50%;
     }
-    // not checked and active
+    // not checked and active -- CHECK WITH IAN THAT MY ACTIVE IS ACTUALLY WORKING 
     &:active {
       background-color: #fbfbfb;
       height: 3.5rem; // GET RIGHT MEASUREMENTS
@@ -213,7 +211,6 @@ label {
   color: #aeaeae;
   // checked and disabled 
   input:disabled:checked + .circle {
-    // background-color: #9bc247;
     &::before {
       content: '';
       position: absolute;
@@ -240,7 +237,6 @@ label {
   }
   // not checked and disabled 
   input:disabled:not(:checked) + .circle {
-    // background-color: #9bc247;
      box-sizing: border-box;
      width: 2.1rem;
      height: 2.1rem;
@@ -257,19 +253,22 @@ label {
 
 
 .ce-radio--error{
+  // error mode not checked 
   border: .5rem solid #CC0043;
   border-radius: .5rem;
   color:#CC0043;
-
   label {
     margin-top: 5rem;
   }
+  // SHOW IAN THE MEDIA QUERY VIEW 
   @media screen {
     @media (max-width: 768px) {
       width: 93%;
+      width: 100%;
     }
   }
    .ce-radio--button{
+     // error mode checked 
     input:checked + .circle {
       &::before {
         content: '';
@@ -296,7 +295,7 @@ label {
       }
     } 
    }
-
+   // this error text handles when I want it shown inside the radio--error
   .ce-radio-error--text{
     position: absolute;
     background-color: white;
@@ -312,6 +311,7 @@ label {
   }
 }
 
+// this error text handles when I am NOT inside radio-error; and therefore want to hide it 
 .ce-radio-error--text{
   margin-left: -9999px;
 }
