@@ -24,18 +24,27 @@ import Radio from './Radio';
     name={text('name', '')}
     form={text('form', '')}
   >
-    <Radio
-      label={text('label', 'Default Radio Label')}
-      value={text('value', 'value1')}
-    />
-     <Radio
-      label={text('label', 'Default Radio Label')}
-      value={text('value', 'value2')}
-    />
+    <Radio/>
+     <Radio/>
   </RadioGroup>
 </Story>
 
-<!-- // do same lines 16-24 for the radio. Change this faile to radioGroups and the other will be radios  -->
+# Radio
+<Description of={Radio} />
+<Props of={Radio} />
+
+<Story name="Radio" parameters={{ docs: {disable: true}}}>
+  <RadioGroup>
+    <Radio
+      label={text('label', 'Default Radio Label')}
+      value={text('value', '')}
+    />
+     <Radio
+      label={text('label', 'Default Radio Label')}
+      value={text('value', '')}
+    />
+  </RadioGroup>
+</Story>
 
 ### Enabled Radio Buttons 
 <Preview>
