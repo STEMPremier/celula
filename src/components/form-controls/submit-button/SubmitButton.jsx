@@ -12,9 +12,12 @@ const COLORS = [
   'purple',
   'red',
 ];
-const TYPE = ['text', 'outline'];
-const SIZE = ['small', 'large', 'jumbo'];
+const SIZES = ['small', 'large', 'jumbo'];
+const TYPES = ['text', 'outline'];
 
+/**
+ * `Submit Buttons` allow users to submit forms with a single tap.. They are typically placed throughout your UI in every form.
+ */
 const SubmitButton = props => {
   const {
     children,
@@ -57,21 +60,24 @@ SubmitButton.propTypes = {
    */
   color: PropTypes.oneOf(COLORS),
   /**
-   * A function that is called when the button is clicked.
-   */
-  handleClick: PropTypes.func.isRequired,
-  /**
    * Make the button inactive.
    */
   disabled: PropTypes.bool,
   /**
+   * A function that is called when the button is clicked.
+   */
+  handleClick: PropTypes.func.isRequired,
+  /**
    * The size of the button.
    */
-  size: PropTypes.oneOf(SIZE),
+  size: PropTypes.oneOf(SIZES),
   /**
    * Which type of button to render.
    */
-  type: PropTypes.oneOf(TYPE),
+  type: PropTypes.oneOf([...TYPES, 'default']),
+  /**
+   * A function that is called when the button is clicked.
+   */
 };
 
 SubmitButton.defaultProps = {
