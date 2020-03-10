@@ -5,10 +5,6 @@ import cx from 'classnames';
 import './radios.less';
 
 const Radio = props => {
-  const update = () => {
-    //  event.target.value =
-  };
-
   const { className, checked, label, value, disabled, name } = props;
   const id = `${name}_${value}`;
   const classes = cx(
@@ -27,7 +23,6 @@ const Radio = props => {
           name={name}
           id={id}
           checked={checked}
-          onChange={update}
           disabled={disabled}
         />
         <span className="circle">
@@ -41,7 +36,7 @@ const Radio = props => {
 
 Radio.propTypes = {
   /**
-   * A class name added to the RadioGroup.
+   * A class name added to the `<RadioGroup />`.
    */
   className: PropTypes.string,
   /**
@@ -53,16 +48,16 @@ Radio.propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * Need to assign a matching name to each radio in the RadioGroup.
+   * Need to assign a matching name to each `<Radio />` in the `<RadioGroup />`.
    * @ignore
    */
   name: PropTypes.string,
   /**
-   * The label you assign is the text that shows up next to each individual radio button.
+   * The label you assign is the text that shows up next to each individual `<Radio />` button.
    */
   label: PropTypes.string.isRequired,
   /**
-   * The value is not visible to the user, but rather it is the unique value passed when selecting each individual radio button.
+   * The value is not visible to the user, but rather it is the unique value passed when selecting each individual `<Radio />` button.
    */
   value: PropTypes.oneOfType([
     PropTypes.string,
