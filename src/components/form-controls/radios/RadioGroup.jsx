@@ -74,27 +74,27 @@ class RadioGroup extends Component {
 
 RadioGroup.propTypes = {
   /**
-   * This is the Radios for the radio group.
+   * This is the Radios for the ` <RadioGroup />`.
    */
   children: PropTypes.node.isRequired,
   /**
-   * A class name added to the` <RadioGroup />`.
+   * A class name added to the ` <RadioGroup />`.
    */
   className: PropTypes.string,
   /**
-   * Makes the entire radio group inactive.
+   * Makes the entire ` <RadioGroup />` inactive.
    */
   disabled: PropTypes.bool,
   /**
-   * The error message on the radio. I JUST NOW SAW THIS....SHOULD I CHANGE HOW THE ERROR MESSAGE IS DISPLAYED
+   * The error message on the `<Radio />`.
    */
   error: PropTypes.string,
   /**
-   * The name of the form the RadioGroup belongs to.
+   * The name of the form the ` <RadioGroup />` belongs to.
    */
   form: PropTypes.string,
   /**
-   * A function that is called when the radio is clicked.
+   * A function that is called when the `<Radio />` is clicked.
    */
   handleChange: PropTypes.func.isRequired,
   /**
@@ -102,7 +102,7 @@ RadioGroup.propTypes = {
    */
   label: PropTypes.string.isRequired,
   /**
-   * The name is a unique name for the RadioGroup given to all the Radios.
+   * The name is a unique name for the ` <RadioGroup />` given to all the Radios.
    */
   name: PropTypes.string.isRequired,
   // validators: PropTypes.array,
