@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './system-icons/icons.svg';
 import './icon.less';
 
-import T from './types';
+import { SYSTEM_ICONS } from './types';
 
 /**
  * Icons are for sprucing up the joint.
@@ -23,7 +23,7 @@ SystemIcon.propTypes = {
   /**
    * The `<SystemIcon />`.
    */
-  name: PropTypes.oneOf(T.SYSTEM_ICONS).isRequired,
+  name: PropTypes.oneOf(SYSTEM_ICONS).isRequired,
 };
 
 export default SystemIcon;

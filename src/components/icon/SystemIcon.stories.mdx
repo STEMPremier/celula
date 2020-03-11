@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
 
 import { SystemIcon } from '.';
-import T from './types';
+import { SYSTEM_ICONS } from './types';
 
 <Meta component={SystemIcon} title="Components/Molecules/Icons/SystemIcon" />
 
@@ -15,7 +15,7 @@ import T from './types';
 <Preview>
   <Story name="SystemIcon Examples">
     <div>
-      {T.SYSTEM_ICONS.map(icon => {
+      {SYSTEM_ICONS.map(icon => {
         return (
           <div style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
             <SystemIcon name={icon} />
