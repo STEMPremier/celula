@@ -31,6 +31,25 @@ import Radio from './Radio';
   </RadioGroup>
 </Story>
 
+# Radio
+<Description of={Radio} />
+<Props of={Radio} />
+
+<Story name="Radio" parameters={{ docs: {disable: true}}}>
+  <RadioGroup
+    className={text('className', '')}
+    handleChange={action('click')}
+    label={text('label', 'Default Fieldset Label')}
+    name={text('name', '')}
+    form={text('form', '')}
+  >
+    <Radio
+      label={text('label', 'Default Radio Label')}
+      value={text('value', 'value1')}
+    />
+  </RadioGroup>
+</Story>
+
 
 ### Enabled Radio Buttons 
 <Preview>

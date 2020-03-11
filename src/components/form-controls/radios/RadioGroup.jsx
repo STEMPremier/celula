@@ -74,7 +74,7 @@ class RadioGroup extends Component {
 
 RadioGroup.propTypes = {
   /**
-   * This is the Radios for the ` <RadioGroup />`.
+   * This is the `<Radio />`s for the ` <RadioGroup />`.
    */
   children: PropTypes.node.isRequired,
   /**
