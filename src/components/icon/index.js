@@ -1,3 +1,3 @@
-import Icon from './Icon';
+import SystemIcon from './SystemIcon';
 
-export default Icon;
+export { SystemIcon }; // eslint-disable-line import/prefer-default-export

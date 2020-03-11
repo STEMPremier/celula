@@ -1,0 +1,28 @@
+import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { boolean, select, text } from '@storybook/addon-knobs';
+
+import { SystemIcon } from '.';
+import T from './types';
+
+<Meta component={SystemIcon} title="Components/Molecules/Icons/SystemIcon" />
+
+# Icon
+<Description of={SystemIcon} />
+<Props of={SystemIcon} />
+
+### Types
+<Preview>
+  <Story name="SystemIcon Examples">
+    <div>
+      {T.SYSTEM_ICONS.map(icon => {
+        return (
+          <div style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
+            <SystemIcon name={icon} />
+            <span>{icon}</span>
+          </div>
+        );
+      })}
+    </div>
+  </Story>
+</Preview>
