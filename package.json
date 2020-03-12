@@ -68,6 +68,10 @@
   "scripts": {
     "build": "yarn run prebuild && yarn run build:components && yarn run build:styleguide",
     "build:components": "NODE_ENV=production webpack -p",
+    "build:icons": "yarn run build:icons:product && yarn run build:icons:secondary && yarn run build:icons:system",
+    "build:icons:product": "svg-sprite-generate -d src/components/icon/product-icons -o src/components/icon/product-icons.svg",
+    "build:icons:secondary": "svg-sprite-generate -d src/components/icon/secondary-icons -o src/components/icon/secondary-icons.svg",
+    "build:icons:system": "svg-sprite-generate -d src/components/icon/system-icons -o src/components/icon/system-icons.svg",
     "build:styleguide": "build-storybook",
     "check": "yarn run lint:check && yarn run pretty:check",
     "lint:check": "eslint \"**/*.{js,jsx}\"",
