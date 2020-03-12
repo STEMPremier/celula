@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './system-icons/icons.svg';
+import './system-icons.svg';
 import './icon.less';
 
 import { SYSTEM_ICONS } from './types';
