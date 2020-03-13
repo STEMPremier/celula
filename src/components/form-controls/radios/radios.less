@@ -6,6 +6,7 @@
 .ce-radio {
   // anything more?????  WILL FOLLOW UP WITH REG ABOUT HOW THEY ARE RELATED TO ONE ANOTHER.  NEED A TICKETING SYTEM IN THE FUTURE ON HOW TO COMMUNICATE  
   padding: .8rem;
+  
   fieldset {
     border: none;
     width: 225px;
@@ -20,66 +21,73 @@
     padding-left: 3rem;
     font-size: 1.4rem;
   }
-};
-
-.ce-radio--button {
   input {
     opacity: 0;
   }
-  position: relative;
-  cursor: pointer;
-  user-select: none;
+  .ce-radio--button {
+    margin: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
   // not checked  and not hover 
-  & input:not(:checked) + .circle {
-    box-sizing: border-box;
-    width: 2.1rem;
-    height: 2.1rem;
-    background-color: #fbfbfb;
-    border: .1rem solid #b2b2b2;
-    position: absolute;
-    margin-left: 0rem;
-    left: 0;
-    top: 0;
-    border-radius: 50%;
+   input:not(:checked) + label {
+     &::before {
+       content: '';
+       display: inline-block;
+       position: absolute;
+       left: -.1rem;
+       top: -.1rem;
+       border-radius: 50%;
+       border:  .1rem solid #b2b2b2;
+       width: 2.1rem;
+       height: 2.1rem;
+       background-color:#fbfbfb;
+     }
     // not checked and hover
     &:hover {
-      background-color: #fbfbfb;
-      height: 3.5rem; 
-      width: 3.5rem; 
-      border: .5rem solid #e5e5e5;
-      position: absolute;
-      margin-left: -.3rem;
-      left: -.5rem;
-      top: -.5rem;
-      border-radius: 50%;
+      &::before{
+        content: '';
+        display: inline-block;
+        height: 2.6rem; 
+        width: 2.6rem; 
+        border: .5rem solid #e5e5e5;
+        margin-left: -.3rem;
+        left: -.5rem;
+        top: -.5rem;
+      }
     }
     // not checked and focus
     &:focus {
-      background-color: #232020;
-      height: 3.5rem; // GET RIGHT MEASUREMENTS
-      width: 3.5rem; // GET RIGHT MEASUREMENTS
-      border: .5rem solid #CCCCCC;
-      position: absolute;
-      margin-left: -.3rem;
-      left: -.5rem;
-      top: -.5rem;
-      border-radius: 50%;
+      &::before{
+        height: 2.6rem; 
+        width: 2.6rem; 
+        border: .5rem solid #CCCCCC;
+        position: absolute;
+        margin-left: -.3rem;
+        left: -.5rem;
+        top: -.5rem;
+        border-radius: 50%;
+        background-color: #232020;
+      }
     }
     // not checked and active -- CHECK WITH IAN THAT MY ACTIVE IS ACTUALLY WORKING 
     &:active {
-      background-color: #fbfbfb;
-      height: 3.5rem; // GET RIGHT MEASUREMENTS
-      width: 3.5rem; // GET RIGHT MEASUREMENTS
-      border: .5rem solid #B3B3B3;
-      position: absolute;
-      margin-left: -.3rem;
-      left: -.5rem;
-      top: -.5rem;
-      border-radius: 50%;
+      &::before{
+        background-color: #fbfbfb;
+        height: 2.6rem; 
+        width: 2.6rem; 
+        border: .5rem solid #B3B3B3;
+        position: absolute;
+        margin-left: -.3rem;
+        left: -.5rem;
+        top: -.5rem;
+        border-radius: 50%;
+      }
+      
     }
   }
   // checked and not hover
-  input:checked + .circle {
+  input:checked + label {
     &::before {
       content: '';
       position: absolute;
@@ -204,7 +212,7 @@
   pointer-events:none;
   color: #aeaeae;
   // checked and disabled 
-  input:checked + .circle {
+  input:checked + label {
     &::before {
       content: '';
       position: absolute;
@@ -230,7 +238,7 @@
     }
   }
   // not checked and disabled 
-  input:not(:checked) + .circle {
+  input:not(:checked) + label {
      box-sizing: border-box;
      width: 2.1rem;
      height: 2.1rem;
@@ -261,7 +269,7 @@
   }
    .ce-radio--button{
      // error mode checked 
-    input:checked + .circle {
+    input:checked + label {
       &::before {
         content: '';
         position: absolute;
@@ -303,3 +311,4 @@
     }
   }
 }
+};

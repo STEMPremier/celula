@@ -16,7 +16,7 @@ const Radio = props => {
   );
   return (
     <div className={classes}>
-      <label htmlFor={id} className="ce-radio--button">
+      <div className="ce-radio--button">
         <input
           type="radio"
           value={value}
@@ -25,11 +25,8 @@ const Radio = props => {
           checked={checked}
           disabled={disabled}
         />
-        <span className="circle">
-          <span />
-        </span>
-        {label}
-      </label>
+        <label htmlFor={id}>{label}</label>
+      </div>
     </div>
   );
 };

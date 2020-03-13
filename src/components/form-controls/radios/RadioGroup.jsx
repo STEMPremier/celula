@@ -61,7 +61,7 @@ class RadioGroup extends Component {
           onChange={this.handleChange}
           disabled={disabled}
         >
-          <legend className="ce-radio-group--label">
+          <legend>
             {label}
             {error && <div className="ce-radio-error--text">{error}</div>}
           </legend>
