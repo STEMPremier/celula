@@ -18,7 +18,7 @@ import { SYSTEM_ICONS } from './types';
       {SYSTEM_ICONS.map(icon => {
         return (
           <div style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
-            <SystemIcon name={icon} />
+            <SystemIcon name={icon} color="red" key={icon}/>
             <span>{icon}</span>
           </div>
         );
