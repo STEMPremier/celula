@@ -62,80 +62,80 @@
         }
       }
     }
-  // not checked (color only)
-   input:not(:checked) + label {
-    // not checked and hover
-    &:hover {
-      &::before{
-        border: .5rem solid #e5e5e5;
+    // not checked (color only)
+    input:not(:checked) + label {
+      // not checked and hover
+      &:hover {
+        &::before{
+          border: .5rem solid #e5e5e5;
+        }
+      }
+      // not checked and focus
+      &:focus {
+        &::before{
+          border: .5rem solid #CCCCCC;
+          background-color: #232020;
+        }
+      }
+      // not checked and active -- CHECK WITH IAN THAT MY ACTIVE IS ACTUALLY WORKING 
+      &:active {
+        &::before{
+          background-color: #fbfbfb;
+          border: .5rem solid #B3B3B3;
+        }
       }
     }
-    // not checked and focus
-    &:focus {
-      &::before{
-        border: .5rem solid #CCCCCC;
-        background-color: #232020;
-      }
-    }
-     // not checked and active -- CHECK WITH IAN THAT MY ACTIVE IS ACTUALLY WORKING 
-     &:active {
-      &::before{
-        background-color: #fbfbfb;
-        border: .5rem solid #B3B3B3;
-      }
-    }
-  }
-  // checked and not hover (color only)
-  input:checked + label {
-    &::before {
-      border: .1rem solid #192344;
-      background: transparent;
-    }
-    // setting after defaults here because 'after' does not exist in the default unchecked 
-    &::after {
-      content: '';
-      position: absolute;
-      display: inline-block;
-      left: 0rem;
-      top: 0rem;
-      border-radius: 50%;
-      width: 1.1rem;
-      height: 1.1rem;
-      background-color: #192344; 
-      border: .5rem solid #ffffff;
-    }
-    // checked and hover (color cahnge only; setting after sizing bc diff from default)
-    &:hover {
+    // checked and not hover (color only)
+    input:checked + label {
       &::before {
-        border: .5rem solid #E6F7FF;
+        border: .1rem solid #192344;
+        background: transparent;
       }
+      // setting after defaults here because 'after' does not exist in the default unchecked 
       &::after {
-        background-color: #192344;
+        content: '';
+        position: absolute;
+        display: inline-block;
+        left: 0rem;
+        top: 0rem;
+        border-radius: 50%;
+        width: 1.1rem;
+        height: 1.1rem;
+        background-color: #192344; 
         border: .5rem solid #ffffff;
       }
+      // checked and hover (color cahnge only; setting after sizing bc diff from default)
+      &:hover {
+        &::before {
+          border: .5rem solid #E6F7FF;
+        }
+        &::after {
+          background-color: #192344;
+          border: .5rem solid #ffffff;
+        }
+      }
+      //checked and focus
+      &:focus {
+        &::before {
+          border: .5rem solid #ccefff;
+        }
+        &::after {
+          background-color: #192344;
+          border: .5rem solid #ffffff;
+        }
+      }
+      //checked and active (color change only)
+      &:active {
+        &::before {
+          border: .5rem solid #B2E7FF;
+        }
+        &::after {
+          background-color: #192344;
+          border: .5rem solid #ffffff;
+        }
+      }
     }
-    //checked and focus
-    &:focus {
-      &::before {
-        border: .5rem solid #ccefff;
-      }
-      &::after {
-        background-color: #192344;
-        border: .5rem solid #ffffff;
-      }
-    }
-    //checked and active (color change only)
-    &:active {
-       &::before {
-        border: .5rem solid #B2E7FF;
-      }
-      &::after {
-        background-color: #192344;
-        border: .5rem solid #ffffff;
-      }
-    }
-  }
-};
+  };
 };
 
 .ce-radio--disabled {
@@ -169,8 +169,8 @@
       width: ~'calc(100% - 3rem)'; // 100% - the total of the l/r padding;
     }
   }
-   .ce-radio--button{
-     // error mode checked 
+  .ce-radio--button{
+    // error mode checked 
     input:checked + label {
       &::before {
         border: .1rem solid #CC0043;
@@ -181,8 +181,8 @@
         border: .5rem solid #ffffff;
       }
     } 
-   }
-   // this error text handles when I want it shown inside the radio--error
+  }
+  // this error text handles when I want it shown inside the radio--error
   .ce-radio-error--text{
     position: absolute;
     background-color: white;
@@ -196,5 +196,5 @@
       }
     }
   }
-}
+};
 
