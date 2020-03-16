@@ -1,12 +1,8 @@
 @import '../../../styles/palettes';
 
 
-
-
-.ce-radio {
-  // anything more?????  WILL FOLLOW UP WITH REG ABOUT HOW THEY ARE RELATED TO ONE ANOTHER.  NEED A TICKETING SYTEM IN THE FUTURE ON HOW TO COMMUNICATE  
+.ce-radio { 
   padding: .8rem;
-  
   fieldset {
     border: none;
     width: 225px;
@@ -29,79 +25,73 @@
     position: relative;
     cursor: pointer;
     user-select: none;
-  // not checked  and not hover 
+    // default radio label sizes (unchecked and default grey color)
+    label {
+      &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: -.1rem;
+        top: -.1rem;
+        border-radius: 50%;
+        border:  .1rem solid #b2b2b2;
+        width: 2.1rem;
+        height: 2.1rem;
+        background-color:#fbfbfb;
+      }
+      &:hover {
+        &::before{
+          content: '';
+          display: inline-block;
+          height: 2.6rem; 
+          width: 2.6rem; 
+          margin-left: -.3rem;
+          left: -.5rem;
+          top: -7px;
+        }
+      }
+      &:focus{
+        &::before{
+          height: 2.6rem; 
+          width: 2.6rem; 
+          position: absolute;
+          margin-left: -.3rem;
+          left: -.5rem;
+          top: -7px;
+          border-radius: 50%;
+        }
+      }
+    }
+  // not checked (color only)
    input:not(:checked) + label {
-     &::before {
-       content: '';
-       display: inline-block;
-       position: absolute;
-       left: -.1rem;
-       top: -.1rem;
-       border-radius: 50%;
-       border:  .1rem solid #b2b2b2;
-       width: 2.1rem;
-       height: 2.1rem;
-       background-color:#fbfbfb;
-     }
     // not checked and hover
     &:hover {
       &::before{
-        content: '';
-        display: inline-block;
-        height: 2.6rem; 
-        width: 2.6rem; 
         border: .5rem solid #e5e5e5;
-        margin-left: -.3rem;
-        left: -.5rem;
-        top: -.5rem;
       }
     }
     // not checked and focus
     &:focus {
       &::before{
-        height: 2.6rem; 
-        width: 2.6rem; 
         border: .5rem solid #CCCCCC;
-        position: absolute;
-        margin-left: -.3rem;
-        left: -.5rem;
-        top: -.5rem;
-        border-radius: 50%;
         background-color: #232020;
       }
     }
-    // not checked and active -- CHECK WITH IAN THAT MY ACTIVE IS ACTUALLY WORKING 
-    &:active {
+     // not checked and active -- CHECK WITH IAN THAT MY ACTIVE IS ACTUALLY WORKING 
+     &:active {
       &::before{
         background-color: #fbfbfb;
-        height: 2.6rem; 
-        width: 2.6rem; 
         border: .5rem solid #B3B3B3;
-        position: absolute;
-        margin-left: -.3rem;
-        left: -.5rem;
-        top: -.5rem;
-        border-radius: 50%;
       }
-      
     }
   }
-  // checked and not hover
+  // checked and not hover (color only)
   input:checked + label {
     &::before {
-      content: '';
-      position: absolute;
-      display: inline-block;
-      margin-left: 0rem;
-      left: -.1rem;
-      top: -.1rem;
-      border-radius: 50%;
       border: .1rem solid #192344;
-      width: 2.1rem;
-      height: 2.1rem;
       background: transparent;
     }
-
+    // setting after defaults here because 'after' does not exist in the default unchecked 
     &::after {
       content: '';
       position: absolute;
@@ -114,147 +104,59 @@
       background-color: #192344; 
       border: .5rem solid #ffffff;
     }
-    // checked and hover
+    // checked and hover (color cahnge only; setting after sizing bc diff from default)
     &:hover {
       &::before {
-        content: '';
-        position: absolute;
-        display: inline-block;
-        margin-left: -.3rem;
-        left: -.5rem;
-        top: -.5rem;
-        border-radius: 50%;
         border: .5rem solid #E6F7FF;
-        width: 2.6rem;
-        height: 2.6rem;
-        background: transparent;
       }
-
       &::after {
-        content: '';
-        position: absolute;
-        display: inline-block;
-        margin-left: .3rem;
-        left: -.3rem;
-        top: .3rem;
-        border-radius: 50%;
-        width: 1rem;
-        height: 1rem;
         background-color: #192344;
         border: .5rem solid #ffffff;
       }
     }
-
     //checked and focus
     &:focus {
       &::before {
-        content: '';
-        position: absolute;
-        display: inline-block;
-        margin-left: -.3rem;
-        left: -.5rem;
-        top: -.5rem;
-        border-radius: 50%;
         border: .5rem solid #ccefff;
-        width: 2.6rem;
-        height: 2.6rem;
-        background: transparent;
       }
-      
       &::after {
-        content: '';
-        position: absolute;
-        display: inline-block;
-        margin-left: .3rem;
-        left: -.3rem;
-        top: .3rem;
-        border-radius: 50%;
-        width: 1rem;
-        height: 1rem;
         background-color: #192344;
         border: .5rem solid #ffffff;
       }
     }
-    //checked and active
+    //checked and active (color change only)
     &:active {
        &::before {
-        content: '';
-        position: absolute;
-        display: inline-block;
-        margin-left: -.3rem;
-        left: -.5rem;
-        top: -.5rem;
-        border-radius: 50%;
         border: .5rem solid #B2E7FF;
-        width: 2.6rem;
-        height: 2.6rem;
-        background: transparent;
       }
-      
       &::after {
-        content: '';
-        position: absolute;
-        display: inline-block;
-        margin-left: .3rem;
-        left: -.3rem;
-        top: .3rem;
-        border-radius: 50%;
-        width: 1rem;
-        height: 1rem;
         background-color: #192344;
         border: .5rem solid #ffffff;
       }
     }
   }
 };
+};
 
 .ce-radio--disabled {
+  .ce-radio;
   pointer-events:none;
   color: #aeaeae;
-  // checked and disabled 
+  // checked and disabled (only need to alter checked because unchecked falls into default setting above)
   input:checked + label {
     &::before {
-      content: '';
-      position: absolute;
-      display: inline-block;
-      left: 0rem;
-      border-radius: 50%;
       border: .1rem solid #aeaeae;
-      width: 2rem;
-      height: 2rem;
-      background: transparent;
     }
     &::after {
-      content: '';
-      position: absolute;
-      display: inline-block;
-      left: .1rem;
-      top: 0rem;
-      border-radius: 50%;
-      width: 1rem;
-      height: 1rem;
       background-color: #aeaeae;
       border: .5rem solid #ffffff;
     }
   }
-  // not checked and disabled 
-  input:not(:checked) + label {
-     box-sizing: border-box;
-     width: 2.1rem;
-     height: 2.1rem;
-     background-color: #fbfbfb;
-     border: .1rem solid #b2b2b2;
-     position: absolute;
-     margin-left: 0rem;
-     left: 0;
-     top: 0;
-     border-radius: 50%;
-   }
 };
 
 
 .ce-radio--error{
-  pointer-events:none;
+  //pointer-events:none;   ASK IAN ABOUT THIS
   // error mode not checked 
   border: .5rem solid #CC0043;
   border-radius: .5rem;
@@ -271,31 +173,15 @@
      // error mode checked 
     input:checked + label {
       &::before {
-        content: '';
-        position: absolute;
-        display: inline-block;
-        left: 0rem;
-        border-radius: 50%;
         border: .1rem solid #CC0043;
-        width: 2rem;
-        height: 2rem;
         background: transparent;
       }
       &::after {
-        content: '';
-        position: absolute;
-        display: inline-block;
-        left: .1rem;
-        top: 0rem;
-        border-radius: 50%;
-        width: 1rem;
-        height: 1rem;
         background-color: #CC0043;
         border: .5rem solid #ffffff;
       }
     } 
    }
-
    // this error text handles when I want it shown inside the radio--error
   .ce-radio-error--text{
     position: absolute;
@@ -311,4 +197,4 @@
     }
   }
 }
-};
+
