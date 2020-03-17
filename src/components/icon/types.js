@@ -1,4 +1,40 @@
-/* eslint-disable import/prefer-default-export */
+const PRODUCT_ICONS = [
+  'college',
+  'military',
+  'workforce',
+  'career-interests',
+  'location',
+  'organizations-clubs',
+  'arts-crafts',
+  'sports-excersize',
+  'volunteer',
+  'cooking-baking',
+  'music',
+  'certification',
+  'desk',
+  'outdoor',
+  'private-office',
+  'open-office',
+  'indoor',
+  'manufacturing',
+  'remote',
+  'travel',
+  'colleges',
+  'demographics',
+  'profile',
+  'career-interests',
+];
+
+const SECONDARY_ICONS = [
+  'pdf',
+  'doc',
+  'video',
+  'image',
+  'more',
+  'grade',
+  'play',
+];
+
 const SYSTEM_ICONS = [
   'share',
   'preview',
@@ -32,5 +68,4 @@ const SYSTEM_ICONS = [
   'popular',
 ];
 
-export { SYSTEM_ICONS };
-/* eslint-enable import/prefer-default-export */
+export { PRODUCT_ICONS, SECONDARY_ICONS, SYSTEM_ICONS };
