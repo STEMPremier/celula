@@ -21,12 +21,20 @@ import Radio from './Radio';
     className={text('className', '')}
     handleChange={action('click')}
     label={text('label', 'Default Fieldset Label')}
-    name={text('name', '')}
+    name={text('name', 'Default Name for Radio Group')}
     form={text('form', '')}
   >
+   <Radio
+      label='label 1'
+      value='value 1'
+    />
     <Radio
-      label={text('label', 'Default Radio Label')}
-      value={text('value', 'value1')}
+      label='label 2'
+      value='value 2'
+    />
+    <Radio
+      label='label 3'
+      value='value 3'
     />
   </RadioGroup>
 </Story>
@@ -38,14 +46,12 @@ import Radio from './Radio';
 <Story name="Radio" parameters={{ docs: {disable: true}}}>
   <form> 
   <RadioGroup
-    className={text('className', '')}
     handleChange={action('click')}
-    label={text('label', 'Default Fieldset Label')}
-    name={text('name', '')}
-    form={text('form', '')}
+    label='label for radio'
+    name='name for radio'
   >
     <Radio
-      label={text('label', 'Default Radio Label')}
+      label={text('label', 'Default Radio Label 1')}
       value={text('value', 'value1')}
     />
   </RadioGroup>
@@ -62,7 +68,6 @@ import Radio from './Radio';
         name="radioGroupName1"
         handleChange={action('changed')}
         form="formName1"
-  
       >
         <Radio
           label="Option 1"
