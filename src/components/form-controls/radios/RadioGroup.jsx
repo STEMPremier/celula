@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -6,14 +7,12 @@ import './radios.less';
 
 class RadioGroup extends Component {
   state = {
-    // eslint-disable-next-line react/destructuring-assignment
     checkedValue: this.props.value,
   };
 
   handleChange = event => {
     this.setState(
       { checkedValue: event.target.value },
-      // eslint-disable-next-line react/destructuring-assignment
       this.props.handleChange,
     );
   };
@@ -92,7 +91,7 @@ RadioGroup.propTypes = {
    */
   form: PropTypes.string,
   /**
-   * A function that is called when the `<Radio />` is clicked.
+   * A function that is passed to the all `<Radios />`s to be called when the `<Radio />` is clicked.
    */
   handleChange: PropTypes.func.isRequired,
   /**
@@ -121,3 +120,4 @@ RadioGroup.defaultProps = {
 };
 
 export default RadioGroup;
+/* eslint-enable react/destructuring-assignment */
