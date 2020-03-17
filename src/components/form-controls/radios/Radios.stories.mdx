@@ -36,6 +36,7 @@ import Radio from './Radio';
 <Props of={Radio} />
 
 <Story name="Radio" parameters={{ docs: {disable: true}}}>
+  <form> 
   <RadioGroup
     className={text('className', '')}
     handleChange={action('click')}
@@ -48,18 +49,20 @@ import Radio from './Radio';
       value={text('value', 'value1')}
     />
   </RadioGroup>
+  </form>
 </Story>
 
 
 ### Enabled Radio Buttons 
 <Preview>
   <Story name="Enabled Radio Group">
-    <div>
+    <form>
       <RadioGroup
         label="Label Goes Here"
         name="radioGroupName1"
         handleChange={action('changed')}
         form="formName1"
+  
       >
         <Radio
           label="Option 1"
@@ -78,7 +81,7 @@ import Radio from './Radio';
           value="option4"
         />
       </RadioGroup>
-    </div>
+    </form>
   </Story>
 </Preview>
 
@@ -86,10 +89,10 @@ import Radio from './Radio';
 ### Disabled Radio Group 
 <Preview>
   <Story name="Disabled Radio Group">
-    <div>
+    <form>
       <RadioGroup
         label="Label Goes Here"
-        name="radioGroupName3"
+        name="radioGroupName2"
         handleChange={action('changed')}
         form="formName3"
         value="option1"
@@ -112,14 +115,14 @@ import Radio from './Radio';
           value="option4"
         />
       </RadioGroup>
-    </div>
+    </form>
   </Story>
 </Preview>
 
 ### Error Radio Group  
 <Preview>
   <Story name="Error Radio Group">
-    <div>
+    <form>
       <RadioGroup
         label="Label Goes Here"
         name="radioGroupName3"
@@ -145,6 +148,6 @@ import Radio from './Radio';
           value="option4"
         />
       </RadioGroup>
-    </div>
+    </form>
   </Story>
 </Preview>
