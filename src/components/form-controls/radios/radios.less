@@ -136,24 +136,21 @@
       }
     }
   };
-};
-
-.ce-radio--disabled {
-  .ce-radio;
-  pointer-events:none;
-  color: #aeaeae;
-  // checked and disabled (only need to alter checked because unchecked falls into default setting above)
-  input:checked + label {
-    &::before {
-      border: .1rem solid #aeaeae;
+  &.ce-radio--disabled {
+    pointer-events:none;
+    color: #aeaeae;
+    // checked and disabled (only need to alter checked because unchecked falls into default setting above)
+    input:checked + label {
+      &::before {
+        border: .1rem solid #aeaeae;
+      }
+      &::after {
+        background-color: #aeaeae;
+        border: .5rem solid #ffffff;
+      }
     }
-    &::after {
-      background-color: #aeaeae;
-      border: .5rem solid #ffffff;
-    }
-  }
+  };
 };
-
 
 .ce-radio--error{
   //pointer-events:none;   ASK IAN ABOUT THIS
