@@ -1,0 +1,26 @@
+import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+
+import { SecondaryIcon } from '.';
+import { SECONDARY_ICONS } from './types';
+
+<Meta component={SecondaryIcon} title="Components/Molecules/Icons/SecondaryIcon" />
+
+# Icon
+<Description of={SecondaryIcon} />
+<Props of={SecondaryIcon} />
+
+### Types
+<Preview>
+  <Story name="SecondaryIcon Examples">
+    <div>
+      {SECONDARY_ICONS.map(icon => {
+        return (
+          <div style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
+            <SecondaryIcon name={icon} color="red" key={icon}/>
+            <span>{icon}</span>
+          </div>
+        );
+      })}
+    </div>
+  </Story>
+</Preview>

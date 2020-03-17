@@ -1,3 +1,5 @@
+import ProductIcon from './ProductIcon';
+import SecondaryIcon from './SecondaryIcon';
 import SystemIcon from './SystemIcon';
 
-export { SystemIcon }; // eslint-disable-line import/prefer-default-export
+export { ProductIcon, SecondaryIcon, SystemIcon };

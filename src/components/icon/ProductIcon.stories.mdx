@@ -1,0 +1,26 @@
+import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+
+import { ProductIcon } from '.';
+import { PRODUCT_ICONS } from './types';
+
+<Meta component={ProductIcon} title="Components/Molecules/Icons/ProductIcon" />
+
+# Icon
+<Description of={ProductIcon} />
+<Props of={ProductIcon} />
+
+### Types
+<Preview>
+  <Story name="ProductIcon Examples">
+    <div>
+      {PRODUCT_ICONS.map(icon => {
+        return (
+          <div style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
+            <ProductIcon name={icon} key={icon}/>
+            <span>{icon}</span>
+          </div>
+        );
+      })}
+    </div>
+  </Story>
+</Preview>
