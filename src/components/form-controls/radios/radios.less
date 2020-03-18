@@ -62,7 +62,7 @@
         }
       }
     }
-    // not checked (color only)
+    // not checked (color change only)
     input:not(:checked) + label {
       // not checked and hover
       &:hover {
@@ -70,14 +70,14 @@
           border: .5rem solid #e5e5e5;
         }
       }
-      // not checked and focus
+      // not checked and focus (color change only)
       &:focus {
         &::before{
           border: .5rem solid #CCCCCC;
           background-color: #232020;
         }
       }
-      // not checked and active 
+      // not checked and active (color change only)
       &:active {
         &::before{
           background-color: #fbfbfb;
@@ -85,13 +85,13 @@
         }
       }
     }
-    // checked and not hover (color only)
+    // checked and not hover (color change only)
     input:checked + label {
       &::before {
         border: .1rem solid #192344;
         background: transparent;
       }
-      // setting after defaults here because 'after' does not exist in the default unchecked 
+      // setting 'after' defaults here because 'after' cannot exist in the default unchecked (or it will override the custom input unchecked)
       &::after {
         content: '';
         position: absolute;
@@ -170,6 +170,36 @@
       &::after {
         background-color: @error-text;
         border: .5rem solid #ffffff;
+      }
+      // checked error and hover (color change only)
+      &:hover {
+        &::before {
+          border: .5rem solid #FFE5ED;
+        }
+        &::after {
+          background-color: #FFE5ED;
+          border: .5rem solid #ffffff;
+        }
+      }
+      //checked error and focus (color change only)
+      &:focus {
+        &::before {
+          border: .5rem solid #FFCCDC;
+        }
+        &::after {
+          background-color: #FFCCDC;
+          border: .5rem solid #ffffff;
+        }
+      }
+      //checked error and active (color change only)
+      &:active {
+        &::before {
+          border: .5rem solid #FFB3CC;
+        }
+        &::after {
+          background-color: #FFB3CC;
+          border: .5rem solid #ffffff;
+        }
       }
     } 
   }
