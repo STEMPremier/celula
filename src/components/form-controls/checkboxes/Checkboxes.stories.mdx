@@ -1,0 +1,78 @@
+import { Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { boolean, select, text } from '@storybook/addon-knobs';
+
+import CheckboxGroup from './CheckboxGroup';
+import Checkbox from './Checkbox';
+
+<Meta component={CheckboxGroup} title="Components/Molecules/Form Controls/Checkbox Group"/>
+
+# CheckboxGroup
+<Description of={CheckboxGroup}/>
+<Props of={CheckboxGroup}/>
+
+<Story name="Checkbox Group" parameters={{docs: {disable: true}}}>
+  <CheckboxGroup 
+    className={text('className', '')}
+    handleChange={action('click')}
+    label={text('label', 'Default Fieldset Label')}
+    name={text('name', 'Default Name for Checkbox Group')}
+    form={text('form', '')}
+    >
+    <Checkbox 
+      label='label 1'
+      value='value 1'
+    />
+    <Checkbox 
+      label='label 2'
+      value='value 2'
+    />
+  </CheckboxGroup>
+</Story>
+
+# Checkbox 
+<Decription of={Checkbox} />
+<Props of={Checkbox}/>
+
+<Story name="Checkbox" parameters={{docs: {disable: true}}}>
+  <form>
+    <CheckboxGroup 
+    handleChange={action('click')}
+    label='label for checkbox'
+    name='name for checkbox'
+    >
+      <Checkbox
+        label={text('label', 'Default Checkbox Label 1')}
+        value={text('value', 'value1')}
+      />
+    </CheckboxGroup>
+  </form>
+</Story>
+
+# Enabled Checkbox Group 
+<Preview>
+  <Story name="Enabled Checkbox Group">
+    <form>
+      <CheckboxGroup 
+        label="Label Goes Here"
+        name="checkboxGroupName1"
+        handleChange={action('changed')}
+        form="formName1"
+      >
+        <Checkbox 
+         label="Option 1"
+         value="option1"
+        />
+        <Checkbox 
+          label="Option 2"
+          value="option2"
+        />
+      </CheckboxGroup>
+    </form>
+  </Story>
+</Preview>
