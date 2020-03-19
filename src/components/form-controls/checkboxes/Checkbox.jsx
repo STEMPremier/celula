@@ -19,17 +19,17 @@ const Checkbox = props => {
   );
   return (
     <div className={classes}>
-      {/* <div className='ce-checkbox--box'> */}
-      <input
-        type="checkbox"
-        value={value}
-        id={id}
-        disabled={disabled}
-        name={name}
-      />
-      <label htmlFor={id}>{label}</label>
+      <div className="ce-checkbox--box">
+        <input
+          type="checkbox"
+          value={value}
+          id={id}
+          disabled={disabled}
+          name={name}
+        />
+        <label htmlFor={id}>{label}</label>
+      </div>
     </div>
-    // </div>
   );
 };
 

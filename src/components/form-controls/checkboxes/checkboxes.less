@@ -1,0 +1,72 @@
+@import '../../../styles/celula';
+
+.ce-checkbox {
+  padding: 1rem;
+  fieldset {
+    border: none;
+    width: 225px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  legend {
+    padding: 3.0rem 0 2.2rem .6rem;
+  }
+  label {
+    padding-left: 2rem;
+    font-size: 1.4rem;
+  }
+  input {
+    opacity: 0;
+  }
+  .ce-checkbox--box {
+    margin: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    // default checkbox sizes (unchecked and enabled outline color)
+    label {
+      &::before{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: -1rem;
+        top: -0rem;
+        border-radius: 3px;
+        border: 1px solid #B2B2B2;
+        background-color: #FBFBFB;
+        height: 20px;
+        width: 20px;
+        box-sizing: border-box;
+      }
+    //  &:hover {
+       // need to create a circular image that changes colors behind the fixed square input checkbox
+      //  &::before{
+      //    content: '';
+      //    display: inline-block;
+      //    height: 36px;
+      //    width: 36px;
+      //  }
+    //  } 
+    }
+    // not checked 
+    // input: not(:checked) + label {
+    //   //not checked and hover 
+    //   // &:hover {
+    //   //   &::before{
+    //   //     border: .5rem solid #E5E5E5;
+    //   //   }
+    //   // };
+    //   // not checked and focus
+    //   // &:focus {
+
+    //   // }
+    // }
+    .ce-checkbox--disable { 
+      pointer-events: none;
+    }
+  }
+
+
+
+}
