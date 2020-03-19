@@ -3,37 +3,73 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import './checkboxes.less';
-import RadioGroup from '../radios/RadioGroup';
 
 class CheckboxGroup extends Component {
+  // state = {
+  //   // eslint-disable-next-line react/prop-types
+  //   // eslint-disable-next-line react/destructuring-assignment
+  //   checkedValue: this.props.value,
+  // };
 
-};
+  handlChange = event => {
+    // eslint-disable-next-line no-console
+    console.log(event);
+    // eslint-disable-next-line no-unused-expressions
+    // eslint-disable-next-line react/destructuring-assignment
+    // this.setState
+    // this.props.handleChange;
+  };
 
-render() {
-  const {
-    className,
-    disabled,
-    error,
-    form,
-    handleChange,
-    label,
-    name,
-    // validators
-  } = this.props;
+  renderChildren = () => {
+    const { children, name } = this.props;
+    // const { checkedValue } = this.state;
 
-  const classes = cx(
-    'ce-checkbox',
-    {
-      'ce-checkbox--disabled': disabled,
-      'ce-checkbox--error': error,
-    },
-    className,
-  );
+    return React.Children.map(children, child => {
+      const props = {
+        // checked: checkedValue === child.props.value,
+        handleChange: this.handleChange,
+        name,
+      };
+      return React.cloneElement(child, { ...props });
+    });
+  };
 
-  return (
+  render() {
+    const {
+      className,
+      disabled,
+      error,
+      form,
+      label,
+      name,
+      // validators
+    } = this.props;
 
-  );
-}
+    const classes = cx(
+      'ce-checkbox',
+      {
+        'ce-checkbox--disabled': disabled,
+        'ce-checkbox--error': error,
+      },
+      className,
+    );
+
+    return (
+      <fieldset
+        className={classes}
+        name={name}
+        form={form}
+        onChange={this.handleChange}
+        disabled={disabled}
+      >
+        <legend>
+          {label}
+          {/* {error && <div className='ce-checkbox--error-text'>{error}</div>} */}
+        </legend>
+        {this.renderChildren()}
+      </fieldset>
+    );
+  }
 }
 
 CheckboxGroup.propTypes = {
@@ -60,7 +96,7 @@ CheckboxGroup.propTypes = {
   /**
    * A function that is passed to the all `<Radios />`s to be called when the `<Radio />` is clicked.
    */
-  handleChange: PropTypes.func.isRequired,
+  // handleChange: PropTypes.func.isRequired,
   /**
    * The text that gets placed into the legend element.
    */
@@ -73,7 +109,7 @@ CheckboxGroup.propTypes = {
   // validators: PropTypes.array,
 };
 
-RadioGroup.defaultProps = {
+CheckboxGroup.defaultProps = {
   className: '',
   disabled: false,
   error: '',

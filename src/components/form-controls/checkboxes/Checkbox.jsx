@@ -7,18 +7,29 @@ import './checkboxes.less';
 const Checkbox = props => {
   // NOTE THAT THERE WAS NO CHECKED IN THE STORY.  SEE IF NEEDED
   // DUPLICATE HANDLECHANGE IN BOTH CHECKBOX AND GROUP.  LETS WAIT AND SEE WHERE THIS FALLS
-  const { className, disabled, form, handleChange, id, label, value } = props;
+  const { className, disabled, name, label, value } = props;
   // NOT SURE IF THE BELOW ID FORMAT WILL BE THE SAME;
   const id = `${name}_${value}`;
   const classes = cx(
     'ce-checkbox',
     {
-      'ce-radio--checked': checked,
+      // 'ce-radio--checked': checked,
     },
     className,
   );
   return (
-
+    <div className={classes}>
+      {/* <div className='ce-checkbox--box'> */}
+      <input
+        type="checkbox"
+        value={value}
+        id={id}
+        disabled={disabled}
+        name={name}
+      />
+      <label htmlFor={id}>{label}</label>
+    </div>
+    // </div>
   );
 };
 
@@ -30,16 +41,20 @@ Checkbox.propTypes = {
   /**
    * The current checked state.
    */
-  checked: PropTypes.bool,
+  // checked: PropTypes.bool,
   /**
    * Make the RadioGroup inactive.
    */
   disabled: PropTypes.bool,
-  // NAME NOT IN STORY 
+  // NAME NOT IN STORY
+  /**
+   * Need to assign a matching name to each `<Checkbox />` in the `<CheckboxGroup />`.
+   */
+  name: PropTypes.string.isRequired,
   // /**
-  //  * Need to assign a matching name to each `<Checkbox />` in the `<CheckboxGroup />`.
+  //  * The id will also be the name of the checkbox, unless in a group.
   //  */
-  // name: PropTypes.string.isRequired,
+  // id: PropTypes.string.isRequired,
   /**
    * The label you assign is the text that shows up next to each individual `<Checkbox />` button.
    */
@@ -57,5 +72,7 @@ Checkbox.propTypes = {
 Checkbox.defaultProps = {
   className: '',
   disabled: false,
-  error: ''
-}
+  // error: ''
+};
+
+export default Checkbox;
