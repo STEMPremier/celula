@@ -6,7 +6,7 @@ const PRODUCT_ICONS = [
   'location',
   'organizations-clubs',
   'arts-crafts',
-  'sports-excersize',
+  'sports-exercize',
   'volunteer',
   'cooking-baking',
   'music',
