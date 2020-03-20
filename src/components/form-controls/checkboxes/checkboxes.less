@@ -53,33 +53,24 @@
         height: 36px;
         width: 36px;
         margin-left: -18px;
-        // top: -10px;
         margin-top: -3px;
         border-radius: 50%;
         background-position: -9999px -9999px;
+        // on state changes, only alter color and background-positoin so that it can inherit the rest 
         &:hover{
           background-color: #E5E5E5;
           background-position: center top !important;
         }
-      }
         &:focus {
-          height: 36px;
-          width: 36px;
-          margin-left: -18px;
-          border-radius: 50%;
           background-color: #CCCCCC;
           background-position: center top !important;
         }
         &:active {
-          height: 36px;
-          width: 36px;
-          margin-left: -18px;
-          // top: -10px;
-          // margin-top: -10px;
-          border-radius: 50%;
           background-color: #B3B3B3;
           background-position: center top !important;
         }
+      }
+        
     // } 
     // not checked 
     // input: not(:checked) + label {
@@ -94,13 +85,34 @@
 
     //   // }
     // }
-    .ce-checkbox--disable { 
-      pointer-events: none;
-    }
+
 
     
   }
 
-
-
+  &.ce-checkbox--disabled { 
+    pointer-events: none;
+    color: #DBDBDB;
+  }
 }
+
+.ce-checkbox--error{
+  // error mode not checked 
+  border: .5rem solid @error-text;
+  border-radius: .5rem;
+  color:@error-text;
+  // this error text handles when I want it shown inside the radio--error
+  .ce-checkbox-error--text{
+    position: absolute;
+    background-color: white;
+    padding: .5rem;
+    line-height: 1.2rem;
+    margin-left: 77%;
+    bottom: -4%;
+    @media screen {
+      @media (max-width: 768px) {
+       margin-left: 50%;
+      }
+    }
+  }
+};

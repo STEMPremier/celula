@@ -64,7 +64,7 @@ class CheckboxGroup extends Component {
       >
         <legend>
           {label}
-          {/* {error && <div className='ce-checkbox--error-text'>{error}</div>} */}
+          {/* {error && <div className="ce-checkbox--error-text">{error}</div>} */}
         </legend>
         {this.renderChildren()}
       </fieldset>

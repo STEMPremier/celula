@@ -72,6 +72,78 @@ import Checkbox from './Checkbox';
           label="Option 2"
           value="option2"
         />
+           <Checkbox 
+         label="Option 3"
+         value="option3"
+        />
+        <Checkbox 
+          label="Option 4"
+          value="option4"
+        />
+      </CheckboxGroup>
+    </form>
+  </Story>
+</Preview>
+
+# Disabled Checkbox Group 
+<Preview>
+  <Story name="Disabled Checkbox Group">
+    <form>
+      <CheckboxGroup 
+        label="Label Goes Here"
+        name="checkboxGroupName2"
+        handleChange={action('changed')}
+        form="formName2"
+        disabled
+      >
+        <Checkbox 
+         label="Option 1"
+         value="option1"
+        />
+        <Checkbox 
+          label="Option 2"
+          value="option2"
+        />
+           <Checkbox 
+         label="Option 3"
+         value="option3"
+        />
+        <Checkbox 
+          label="Option 4"
+          value="option4"
+        />
+      </CheckboxGroup>
+    </form>
+  </Story>
+</Preview>
+
+# Error Checkbox Group 
+<Preview>
+  <Story name="Error Checkbox Group">
+    <form>
+      <CheckboxGroup 
+        label="Label Goes Here"
+        name="checkboxGroupName2"
+        handleChange={action('changed')}
+        form="formName2"
+        error="Error message"
+      >
+        <Checkbox 
+         label="Option 1"
+         value="option1"
+        />
+        <Checkbox 
+          label="Option 2"
+          value="option2"
+        />
+           <Checkbox 
+         label="Option 3"
+         value="option3"
+        />
+        <Checkbox 
+          label="Option 4"
+          value="option4"
+        />
       </CheckboxGroup>
     </form>
   </Story>
