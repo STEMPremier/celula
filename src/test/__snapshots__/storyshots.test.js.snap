@@ -483,6 +483,429 @@ exports[`Storyshots Components/Atoms/Button Button Types 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/Molecules/Form Controls/RadioGroup Disabled Radio Group 1`] = `
+<form>
+  <fieldset
+    className="ce-radio ce-radio--disabled"
+    disabled={true}
+    form="formName3"
+    name="radioGroupName2"
+    onChange={[Function]}
+  >
+    <legend>
+      Label Goes Here
+      
+    </legend>
+    <div
+      className="ce-radio ce-radio--checked"
+    >
+      <div
+        className="ce-radio--button"
+      >
+        <input
+          checked={true}
+          disabled={false}
+          id="radioGroupName2_option1"
+          name="radioGroupName2"
+          type="radio"
+          value="option1"
+        />
+        <label
+          htmlFor="radioGroupName2_option1"
+        >
+          Option 1
+        </label>
+      </div>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <div
+        className="ce-radio--button"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          id="radioGroupName2_option2"
+          name="radioGroupName2"
+          type="radio"
+          value="option2"
+        />
+        <label
+          htmlFor="radioGroupName2_option2"
+        >
+          Option 2
+        </label>
+      </div>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <div
+        className="ce-radio--button"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          id="radioGroupName2_option3"
+          name="radioGroupName2"
+          type="radio"
+          value="option3"
+        />
+        <label
+          htmlFor="radioGroupName2_option3"
+        >
+          Option 3
+        </label>
+      </div>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <div
+        className="ce-radio--button"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          id="radioGroupName2_option4"
+          name="radioGroupName2"
+          type="radio"
+          value="option4"
+        />
+        <label
+          htmlFor="radioGroupName2_option4"
+        >
+          Option 3
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/RadioGroup Enabled Radio Group 1`] = `
+<form>
+  <fieldset
+    className="ce-radio"
+    disabled={false}
+    form="formName1"
+    name="radioGroupName1"
+    onChange={[Function]}
+  >
+    <legend>
+      Label Goes Here
+      
+    </legend>
+    <div
+      className="ce-radio"
+    >
+      <div
+        className="ce-radio--button"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          id="radioGroupName1_option1"
+          name="radioGroupName1"
+          type="radio"
+          value="option1"
+        />
+        <label
+          htmlFor="radioGroupName1_option1"
+        >
+          Option 1
+        </label>
+      </div>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <div
+        className="ce-radio--button"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          id="radioGroupName1_option2"
+          name="radioGroupName1"
+          type="radio"
+          value="option2"
+        />
+        <label
+          htmlFor="radioGroupName1_option2"
+        >
+          Option 2
+        </label>
+      </div>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <div
+        className="ce-radio--button"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          id="radioGroupName1_option3"
+          name="radioGroupName1"
+          type="radio"
+          value="option3"
+        />
+        <label
+          htmlFor="radioGroupName1_option3"
+        >
+          Option 3
+        </label>
+      </div>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <div
+        className="ce-radio--button"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          id="radioGroupName1_option4"
+          name="radioGroupName1"
+          type="radio"
+          value="option4"
+        />
+        <label
+          htmlFor="radioGroupName1_option4"
+        >
+          Option 4
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/RadioGroup Error Radio Group 1`] = `
+<form>
+  <fieldset
+    className="ce-radio ce-radio--error"
+    disabled={false}
+    form="formName4"
+    name="radioGroupName3"
+    onChange={[Function]}
+  >
+    <legend>
+      Label Goes Here
+      <div
+        className="ce-radio-error--text"
+      >
+        Error message
+      </div>
+    </legend>
+    <div
+      className="ce-radio ce-radio--checked"
+    >
+      <div
+        className="ce-radio--button"
+      >
+        <input
+          checked={true}
+          disabled={false}
+          id="radioGroupName3_option1"
+          name="radioGroupName3"
+          type="radio"
+          value="option1"
+        />
+        <label
+          htmlFor="radioGroupName3_option1"
+        >
+          Option 1
+        </label>
+      </div>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <div
+        className="ce-radio--button"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          id="radioGroupName3_option2"
+          name="radioGroupName3"
+          type="radio"
+          value="option2"
+        />
+        <label
+          htmlFor="radioGroupName3_option2"
+        >
+          Option 2
+        </label>
+      </div>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <div
+        className="ce-radio--button"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          id="radioGroupName3_option3"
+          name="radioGroupName3"
+          type="radio"
+          value="option3"
+        />
+        <label
+          htmlFor="radioGroupName3_option3"
+        >
+          Option 3
+        </label>
+      </div>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <div
+        className="ce-radio--button"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          id="radioGroupName3_option4"
+          name="radioGroupName3"
+          type="radio"
+          value="option4"
+        />
+        <label
+          htmlFor="radioGroupName3_option4"
+        >
+          Option 4
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/RadioGroup Radio 1`] = `
+<form>
+  <fieldset
+    className="ce-radio"
+    disabled={false}
+    form=""
+    name="name for radio"
+    onChange={[Function]}
+  >
+    <legend>
+      label for radio
+      
+    </legend>
+    <div
+      className="ce-radio"
+    >
+      <div
+        className="ce-radio--button"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          id="name for radio_value1"
+          name="name for radio"
+          type="radio"
+          value="value1"
+        />
+        <label
+          htmlFor="name for radio_value1"
+        >
+          Default Radio Label 1
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/RadioGroup Radio Group 1`] = `
+<fieldset
+  className="ce-radio"
+  disabled={false}
+  form=""
+  name="Default Name for Radio Group"
+  onChange={[Function]}
+>
+  <legend>
+    Default Fieldset Label
+    
+  </legend>
+  <div
+    className="ce-radio"
+  >
+    <div
+      className="ce-radio--button"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        id="Default Name for Radio Group_value 1"
+        name="Default Name for Radio Group"
+        type="radio"
+        value="value 1"
+      />
+      <label
+        htmlFor="Default Name for Radio Group_value 1"
+      >
+        label 1
+      </label>
+    </div>
+  </div>
+  <div
+    className="ce-radio"
+  >
+    <div
+      className="ce-radio--button"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        id="Default Name for Radio Group_value 2"
+        name="Default Name for Radio Group"
+        type="radio"
+        value="value 2"
+      />
+      <label
+        htmlFor="Default Name for Radio Group_value 2"
+      >
+        label 2
+      </label>
+    </div>
+  </div>
+  <div
+    className="ce-radio"
+  >
+    <div
+      className="ce-radio--button"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        id="Default Name for Radio Group_value 3"
+        name="Default Name for Radio Group"
+        type="radio"
+        value="value 3"
+      />
+      <label
+        htmlFor="Default Name for Radio Group_value 3"
+      >
+        label 3
+      </label>
+    </div>
+  </div>
+</fieldset>
+`;
+
 exports[`Storyshots Components/Molecules/Form Controls/SubmitButton All SubmitButtons 1`] = `
 <button
   className="ce-button ce-button--small ce-button--primary"

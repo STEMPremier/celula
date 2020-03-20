@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioGroup /> render() render the RadioGroup component 1`] = `
+<fieldset
+  className="ce-radio"
+  disabled={false}
+  form=""
+  name="RadioGroup Test Name"
+  onChange={[Function]}
+>
+  <legend>
+    RadioGroup Test Label
+  </legend>
+  <Radio
+    checked={false}
+    className=""
+    disabled={false}
+    handleChange={[Function]}
+    key=".0"
+    label="Radio test label"
+    name="RadioGroup Test Name"
+    value="Radio value here"
+  />
+</fieldset>
+`;

@@ -1,0 +1,252 @@
+@import '../../../styles/celula';
+
+.ce-radio {
+  padding: 1rem;
+
+  fieldset {
+    border: none;
+    width: 225px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  legend {
+    padding: 3.0rem 0 2.2rem .6rem;
+  }
+
+  label {
+    padding-left: 2rem;
+    font-size: 1.4rem;
+  }
+
+  input {
+    opacity: 0;
+  }
+
+  .ce-radio--button {
+    margin: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+    // default radio label sizes (unchecked and default grey color)
+    label {
+      &::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: -.1rem;
+        top: -.1rem;
+        border-radius: 50%;
+        border: .1rem solid #b2b2b2;
+        width: 2.1rem;
+        height: 2.1rem;
+        background-color: #fbfbfb;
+      }
+
+      &:hover {
+        &::before{
+          content: '';
+          display: inline-block;
+          height: 2.6rem;
+          width: 2.6rem;
+          margin-left: -.3rem;
+          left: -.5rem;
+          top: -.7rem;
+        }
+      }
+
+      &:focus{
+        &::before{
+          height: 2.6rem;
+          width: 2.6rem;
+          position: absolute;
+          margin-left: -.3rem;
+          left: -.5rem;
+          top: -.7rem;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    // not checked (color change only)
+    input:not(:checked) + label {
+      // not checked and hover
+      &:hover {
+        &::before{
+          border: .5rem solid #e5e5e5;
+        }
+      }
+
+      // not checked and focus (color change only)
+      &:focus {
+        &::before{
+          border: .5rem solid #cccccc;
+          background-color: #232020;
+        }
+      }
+
+      // not checked and active (color change only)
+      &:active {
+        &::before{
+          background-color: #fbfbfb;
+          border: .5rem solid #B3B3B3;
+        }
+      }
+    }
+
+    // checked and not hover (color change only)
+    input:checked + label {
+      &::before {
+        border: .1rem solid #192344;
+        background: transparent;
+      }
+
+      // setting 'after' defaults here because 'after' cannot exist in the default unchecked (or it will override the custom input unchecked)
+      &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        left: 0rem;
+        top: 0rem;
+        border-radius: 50%;
+        width: 1.1rem;
+        height: 1.1rem;
+        background-color: #192344;
+        border: .5rem solid @white;
+      }
+
+      // checked and hover (color change only)
+      &:hover {
+        &::before {
+          border: .5rem solid #e6f7ff;
+        }
+
+        &::after {
+          background-color: #192344;
+          border: .5rem solid @white;
+        }
+      }
+
+      //checked and focus (color change only)
+      &:focus {
+        &::before {
+          border: .5rem solid #ccefff;
+        }
+
+        &::after {
+          background-color: #192344;
+          border: .5rem solid @white;
+        }
+      }
+
+      //checked and active (color change only)
+      &:active {
+        &::before {
+          border: .5rem solid #b2e7ff;
+        }
+
+        &::after {
+          background-color: #192344;
+          border: .5rem solid @white;
+        }
+      }
+    }
+  }
+
+  &.ce-radio--disabled {
+    pointer-events: none;
+    color: #aeaeae;
+
+    // checked and disabled (only need to alter checked because unchecked falls into default setting above)
+    input:checked + label {
+      &::before {
+        border: .1rem solid #aeaeae;
+      }
+
+      &::after {
+        background-color: #aeaeae;
+        border: .5rem solid @white;
+      }
+    }
+  }
+}
+
+.ce-radio--error{
+  // error mode not checked
+  border: .5rem solid @error-text;
+  border-radius: .5rem;
+  color: @error-text;
+
+  label {
+    margin-top: 5rem;
+  }
+
+  .ce-radio--button{
+    // error mode checked
+    input:checked + label {
+      &::before {
+        border: .1rem solid @error-text;
+        background: transparent;
+      }
+
+      &::after {
+        background-color: @error-text;
+        border: .5rem solid @white;
+      }
+
+      // checked error and hover (color change only)
+      &:hover {
+        &::before {
+          border: .5rem solid #ffe5ed;
+        }
+
+        &::after {
+          background-color: @error-text;
+          border: .5rem solid @white;
+        }
+      }
+
+      //checked error and focus (color change only)
+      &:focus {
+        &::before {
+          border: .5rem solid #ffccdc;
+        }
+
+        &::after {
+          background-color: @error-text;
+          border: .5rem solid @white;
+        }
+      }
+
+      //checked error and active (color change only)
+      &:active {
+        &::before {
+          border: .5rem solid #ffb3cc;
+        }
+
+        &::after {
+          background-color: @error-text;
+          border: .5rem solid @white;
+        }
+      }
+    }
+  }
+
+  // this error text handles when I want it shown inside the radio--error
+  .ce-radio-error--text{
+    position: absolute;
+    background-color: @white;
+    padding: .5rem;
+    line-height: 1.2rem;
+    margin-left: 77%;
+    bottom: -4%;
+
+    @media screen {
+      @media (max-width: 768px) {
+       margin-left: 50%;
+      }
+    }
+  }
+}
