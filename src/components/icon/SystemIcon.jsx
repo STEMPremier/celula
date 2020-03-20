@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './system-icons/icons.svg';
+import './icons/icons.svg';
 import './icon.less';
 
 import { SYSTEM_ICONS } from './types';
@@ -19,14 +19,15 @@ const COLORS = [
 ];
 
 /**
- * Icons are for sprucing up the joint.
+ * System icons are designed to be simple, modern and friendly.
+ * Each icon is reduced to its minimal form, expressing essential characteristics within the interface.
  */
 const SystemIcon = props => {
   const { color, name } = props;
 
   return (
-    <svg className={`ce-icon ce-icon--system ce-icon--${color}`}>
-      <use xlinkHref={`#icons_${name}`} />
+    <svg className={`ce-icon ce-icon__system ce-icon--${color}`}>
+      <use xlinkHref={`#icons_system-${name}`} />
     </svg>
   );
 };

@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './secondary-icons/icons.svg';
+import './icons/icons.svg';
 import './icon.less';
+
 import { SECONDARY_ICONS } from './types';
 
-const COLORS = ['primary', 'secondary'];
+const COLORS = ['primary', 'secondary', 'black'];
 
 /**
  * These light icons are mostly used as an actionable element.
@@ -15,15 +16,15 @@ const SecondaryIcon = props => {
   const { color, name } = props;
 
   return (
-    <svg className={`ce-icon ce-icon--system ce-icon--${color}`}>
-      <use xlinkHref={`#icons_${name}`} />
+    <svg className={`ce-icon ce-icon__secondary ce-icon--${color}`}>
+      <use xlinkHref={`#icons_secondary-${name}`} />
     </svg>
   );
 };
 
 SecondaryIcon.propTypes = {
   /**
-   * The color of the `<SecondaryIcon /> background gradient.
+   * The color of the `<SecondaryIcon />` background gradient.
    */
   color: PropTypes.oneOf(COLORS),
   /**
