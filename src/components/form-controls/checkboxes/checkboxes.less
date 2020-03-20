@@ -1,7 +1,7 @@
 @import '../../../styles/celula';
 
 .ce-checkbox {
-  padding: 1rem;
+  padding-left: 1rem;
   fieldset {
     border: none;
     width: 225px;
@@ -13,12 +13,15 @@
     padding: 3.0rem 0 2.2rem .6rem;
   }
   label {
-    padding-left: 2rem;
+    padding-left: 4rem;
+    padding-top: 13px;
+    position: absolute;
     font-size: 1.4rem;
   }
   input {
     opacity: 0;
   }
+
   .ce-checkbox--box {
     margin: 0.5rem;
     position: relative;
@@ -31,7 +34,7 @@
         display: inline-block;
         position: absolute;
         left: -1rem;
-        top: -0rem;
+        top: 8px;
         border-radius: 3px;
         border: 1px solid #B2B2B2;
         background-color: #FBFBFB;
@@ -39,16 +42,45 @@
         width: 20px;
         box-sizing: border-box;
       }
-    //  &:hover {
-       // need to create a circular image that changes colors behind the fixed square input checkbox
-      //  &::before{
-      //    content: '';
-      //    display: inline-block;
-      //    height: 36px;
-      //    width: 36px;
-      //  }
-    //  } 
+      // &::after{
+       
+      // }
     }
+    // state changes with new background image to appear on entire checkbox
+
+      // first set state defaults with size, position, and default color for unchecked 
+    .ce-checkbox--background {
+        height: 36px;
+        width: 36px;
+        margin-left: -18px;
+        // top: -10px;
+        margin-top: -3px;
+        border-radius: 50%;
+        background-position: -9999px -9999px;
+        &:hover{
+          background-color: #E5E5E5;
+          background-position: center top !important;
+        }
+      }
+        &:focus {
+          height: 36px;
+          width: 36px;
+          margin-left: -18px;
+          border-radius: 50%;
+          background-color: #CCCCCC;
+          background-position: center top !important;
+        }
+        &:active {
+          height: 36px;
+          width: 36px;
+          margin-left: -18px;
+          // top: -10px;
+          // margin-top: -10px;
+          border-radius: 50%;
+          background-color: #B3B3B3;
+          background-position: center top !important;
+        }
+    // } 
     // not checked 
     // input: not(:checked) + label {
     //   //not checked and hover 
@@ -65,6 +97,8 @@
     .ce-checkbox--disable { 
       pointer-events: none;
     }
+
+    
   }
 
 
