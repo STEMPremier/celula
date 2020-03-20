@@ -71,15 +71,15 @@ class RadioGroup extends Component {
 
 RadioGroup.propTypes = {
   /**
-   * This is the `<Radio />`s for the ` <RadioGroup />`.
+   * This is the `<Radio />`s for the `<RadioGroup />`.
    */
   children: PropTypes.node.isRequired,
   /**
-   * A class name added to the ` <RadioGroup />`.
+   * A class name added to the `<RadioGroup />`.
    */
   className: PropTypes.string,
   /**
-   * Makes the entire ` <RadioGroup />` inactive.
+   * Makes the entire `<RadioGroup />` inactive.
    */
   disabled: PropTypes.bool,
   /**
@@ -87,7 +87,7 @@ RadioGroup.propTypes = {
    */
   error: PropTypes.string,
   /**
-   * The name of the form the ` <RadioGroup />` belongs to.
+   * The name of the form the `<RadioGroup />` belongs to.
    */
   form: PropTypes.string,
   /**
@@ -99,7 +99,7 @@ RadioGroup.propTypes = {
    */
   label: PropTypes.string.isRequired,
   /**
-   * The name is a unique name for the ` <RadioGroup />` given to all the Radios.
+   * The name is a unique name for the `<RadioGroup />` given to all the Radios.
    */
   name: PropTypes.string.isRequired,
   // validators: PropTypes.array,
