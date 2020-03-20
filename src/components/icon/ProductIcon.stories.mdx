@@ -13,10 +13,10 @@ import { PRODUCT_ICONS } from './types';
 <Preview>
   <Story name="ProductIcon Examples">
     <div>
-      {PRODUCT_ICONS.map(icon => {
+      {PRODUCT_ICONS.map((icon, idx) => {
         return (
-          <div style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
-            <ProductIcon name={icon} key={icon}/>
+          <div>
+            <ProductIcon name={icon} key={`${icon}_${idx}`}/>
             <span>{icon}</span>
           </div>
         );

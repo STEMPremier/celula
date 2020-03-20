@@ -13,10 +13,10 @@ import { SECONDARY_ICONS } from './types';
 <Preview>
   <Story name="SecondaryIcon Examples">
     <div>
-      {SECONDARY_ICONS.map(icon => {
+      {SECONDARY_ICONS.map((icon, idx) => {
         return (
           <div style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
-            <SecondaryIcon name={icon} color="red" key={icon}/>
+            <SecondaryIcon name={icon} color="black" key={`${icon}_${idx}`}/>
             <span>{icon}</span>
           </div>
         );

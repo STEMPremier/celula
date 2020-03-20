@@ -13,10 +13,10 @@ import { SYSTEM_ICONS } from './types';
 <Preview>
   <Story name="SystemIcon Examples">
     <div>
-      {SYSTEM_ICONS.map(icon => {
+      {SYSTEM_ICONS.map((icon, idx) => {
         return (
           <div style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
-            <SystemIcon name={icon} color="red" key={icon}/>
+            <SystemIcon name={icon} color="red" key={`${icon}_${idx}`}/>
             <span>{icon}</span>
           </div>
         );
