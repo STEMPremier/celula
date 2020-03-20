@@ -14,6 +14,7 @@ const Radio = props => {
     },
     className,
   );
+
   return (
     <div className={classes}>
       <div className="ce-radio--button">
@@ -41,7 +42,7 @@ Radio.propTypes = {
    */
   checked: PropTypes.bool,
   /**
-   * Make the RadioGroup inactive.
+   * Make the `<RadioGroup />` inactive.
    */
   disabled: PropTypes.bool,
   /**
