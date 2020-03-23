@@ -9,14 +9,47 @@ import { PRODUCT_ICONS } from './types';
 <Description of={ProductIcon} />
 <Props of={ProductIcon} />
 
-### Types
+### Product Icons Small
 <Preview>
-  <Story name="ProductIcon Examples">
-    <div>
+  <Story name="ProductIcon Small">
+    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
       {PRODUCT_ICONS.map((icon, idx) => {
         return (
-          <div>
+          <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'75px',width:'75px'}}>
             <ProductIcon name={icon} key={`${icon}_${idx}`}/>
+            <span>{icon}</span>
+          </div>
+        );
+      })}
+    </div>
+  </Story>
+</Preview>
+
+
+### Product Icons Large
+<Preview>
+  <Story name="ProductIcon Large">
+    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
+      {PRODUCT_ICONS.map((icon, idx) => {
+        return (
+          <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'100px',width:'100px'}}>
+            <ProductIcon name={icon} size="large" key={`${icon}_${idx}`}/>
+            <span>{icon}</span>
+          </div>
+        );
+      })}
+    </div>
+  </Story>
+</Preview>
+
+### Product Icons Jumbo
+<Preview>
+  <Story name="ProductIcon Jumbo">
+    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
+      {PRODUCT_ICONS.map((icon, idx) => {
+        return (
+          <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'125px',width:'125px'}}>
+            <ProductIcon name={icon} size="jumbo" key={`${icon}_${idx}`}/>
             <span>{icon}</span>
           </div>
         );
