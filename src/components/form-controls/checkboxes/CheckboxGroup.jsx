@@ -5,28 +5,24 @@ import cx from 'classnames';
 import './checkboxes.less';
 
 class CheckboxGroup extends Component {
-  // state = {
-  //   // eslint-disable-next-line react/prop-types
-  //   // eslint-disable-next-line react/destructuring-assignment
-  //   checkedValue: this.props.value,
-  // };
+  state = {
+    checked: false,
+  };
 
-  handlChange = event => {
-    // eslint-disable-next-line no-console
-    console.log(event);
-    // eslint-disable-next-line no-unused-expressions
+  handleChange = event => {
     // eslint-disable-next-line react/destructuring-assignment
-    // this.setState
+    this.setState({ checked: event.target.checked });
+    // // eslint-disable-next-line react/destructuring-assignment
     // this.props.handleChange;
   };
 
   renderChildren = () => {
     const { children, name } = this.props;
-    // const { checkedValue } = this.state;
+    const { checked } = this.state;
 
     return React.Children.map(children, child => {
       const props = {
-        // checked: checkedValue === child.props.value,
+        checked: checked === child.props.value,
         handleChange: this.handleChange,
         name,
       };
