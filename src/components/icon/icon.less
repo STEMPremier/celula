@@ -1,57 +1,128 @@
 @import '../../styles/celula';
 
 @icon-size: @base-font-size;
+@product-icon-small: 5rem;
+@product-icon-large: 7.5rem;
+@product-icon-jumbo: 10rem;
 
 .ce-icon {
-  height: @icon-size;
-  width: @icon-size;
+  &.ce-icon__product {
+    align-items: center;
+    background: @gradient-cool;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+
+    &.ce-icon--small {
+      height: @product-icon-small;
+      width: @product-icon-small;
+
+      svg {
+        height: ~"calc(5rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        margin: 0 auto;
+        width: ~"calc(5rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+      }
+    }
+
+    &.ce-icon--large {
+      height: @product-icon-large;
+      width: @product-icon-large;
+
+      svg {
+        height: ~"calc(7.5rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        margin: 0 auto;
+        width: ~"calc(7.5rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+      }
+    }
+
+    &.ce-icon--jumbo {
+      height: @product-icon-jumbo;
+      width: @product-icon-jumbo;
+
+      svg {
+        height: ~"calc(10rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        margin: 0 auto;
+        width: ~"calc(10rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+      }
+    }
+    .ce-icon--white {
+      fill: @white;
+    }
+  }
 }
 
-//////////////////////////////////
-//         Icon Colors          //
-//////////////////////////////////
-// Primary Base Colors
-.ce-icon--system {
+// SecondaryIcon Base Colors
+.ce-icon__secondary {
   &.ce-icon--primary {
     stroke: @gradient-cool;
   }
 
-  // Secondary Base Colors
   &.ce-icon--secondary {
     stroke: @gradient-hot;
   }
 
-  // Black Base Colors
   &.ce-icon--black {
     stroke: @black;
   }
 
-  // Blue Base Colors
   &.ce-icon--blue {
     stroke: @blue;
   }
 
-  // Green Base Colors
   &.ce-icon--green {
     stroke: @green;
   }
 
-  // Orange Base Colors
   &.ce-icon--orange {
     stroke: @orange;
   }
 
-  // Purple Base Colors
   &.ce-icon--purple {
     stroke: @purple;
   }
 
-  // Red Base Colors
   &.ce-icon--red {
     stroke: @red;
   }
 
-  // White Base Colors
+  &.ce-icon--white {
+    stroke: @white;
+  }
+}
+// System Base Colors
+.ce-icon__system {
+  &.ce-icon--primary {
+    stroke: @gradient-cool;
+  }
+
+  &.ce-icon--secondary {
+    stroke: @gradient-hot;
+  }
+
+  &.ce-icon--black {
+    stroke: @black;
+  }
+
+  &.ce-icon--blue {
+    stroke: @blue;
+  }
+
+  &.ce-icon--green {
+    stroke: @green;
+  }
+
+  &.ce-icon--orange {
+    stroke: @orange;
+  }
+
+  &.ce-icon--purple {
+    stroke: @purple;
+  }
+
+  &.ce-icon--red {
+    stroke: @red;
+  }
+
   &.ce-icon--white {
     stroke: @white;
   }
