@@ -28,7 +28,7 @@
     cursor: pointer;
     user-select: none;
     // default checkbox sizes (unchecked and enabled outline color)
-    label {
+    input:not(:checked) + label {
       &::before{
         content: '';
         display: inline-block;
@@ -42,13 +42,38 @@
         width: 20px;
         box-sizing: border-box;
       }
-      // &::after{
-       
-      // }
+    }
+    // checked default 
+    input:checked + label {
+      &::before{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: -1rem;
+        top: 8px;
+        border-radius: 3px;
+        // border: 1x solid #192344;
+        background-color:#192344;
+        // background-color: #FFFFFF;
+        height: 20px;
+        width: 20px;
+        box-sizing: border-box;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        left: -9px;
+        top: 9px;
+        border-radius: 3px;
+        width: 8px;
+        height: 8px;
+        background-color:#192344; 
+        border: 5px solid  #ffffff ;
+      }
     }
     // state changes with new background image to appear on entire checkbox
-
-      // first set state defaults with size, position, and default color for unchecked 
+    // first set state defaults with size, position, and default color for unchecked 
     .ce-checkbox--background {
         height: 36px;
         width: 36px;
@@ -70,24 +95,6 @@
           background-position: center top !important;
         }
       }
-        
-    // } 
-    // not checked 
-    // input: not(:checked) + label {
-    //   //not checked and hover 
-    //   // &:hover {
-    //   //   &::before{
-    //   //     border: .5rem solid #E5E5E5;
-    //   //   }
-    //   // };
-    //   // not checked and focus
-    //   // &:focus {
-
-    //   // }
-    // }
-
-
-    
   }
 
   &.ce-checkbox--disabled { 
