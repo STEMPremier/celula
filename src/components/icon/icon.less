@@ -4,6 +4,9 @@
 @product-icon-small: 5rem;
 @product-icon-large: 7.5rem;
 @product-icon-jumbo: 10rem;
+@secondary-icon-small: 3rem;
+@secondary-icon-large: 3.6rem;
+@secondary-icon-jumbo: 5rem;
 
 .ce-icon {
   &.ce-icon__product {
@@ -45,6 +48,7 @@
         width: ~"calc(10rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
       }
     }
+
     .ce-icon--white {
       fill: @white;
     }
@@ -52,43 +56,60 @@
 }
 
 // SecondaryIcon Base Colors
-.ce-icon__secondary {
-  &.ce-icon--primary {
-    stroke: @gradient-cool;
-  }
+.ce-icon {
+  &.ce-icon__secondary {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
 
-  &.ce-icon--secondary {
-    stroke: @gradient-hot;
-  }
+    &.ce-icon--small {
+      height: @secondary-icon-small;
+      width: @secondary-icon-small;
 
-  &.ce-icon--black {
-    stroke: @black;
-  }
+      svg {
+        height: ~"calc(3rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        margin: 0 auto;
+        width: ~"calc(3rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+      }
+    }
 
-  &.ce-icon--blue {
-    stroke: @blue;
-  }
+    &.ce-icon--large {
+      height: @secondary-icon-large;
+      width: @secondary-icon-large;
 
-  &.ce-icon--green {
-    stroke: @green;
-  }
+      svg {
+        height: ~"calc(3.6rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        margin: 0 auto;
+        width: ~"calc(3.6rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+      }
+    }
 
-  &.ce-icon--orange {
-    stroke: @orange;
-  }
+    &.ce-icon--jumbo {
+      height: @secondary-icon-jumbo;
+      width: @secondary-icon-jumbo;
 
-  &.ce-icon--purple {
-    stroke: @purple;
-  }
+      svg {
+        height: ~"calc(5rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        margin: 0 auto;
+        width: ~"calc(5rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+      }
+    }
 
-  &.ce-icon--red {
-    stroke: @red;
-  }
+    &.ce-icon--primary {
+      background: @gradient-cool;
+    }
 
-  &.ce-icon--white {
-    stroke: @white;
+    &.ce-icon--secondary {
+      background: @gradient-warm;
+    }
+
+    .ce-icon--white {
+      stroke: @white;
+    }
   }
 }
+
 // System Base Colors
 .ce-icon__system {
   &.ce-icon--primary {

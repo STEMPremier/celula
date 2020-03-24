@@ -36,7 +36,7 @@ const ProductIcon = props => {
 
 ProductIcon.propTypes = {
   /**
-   * The `<ProductIcon />`
+   * The `<ProductIcon />`.
    */
   name: PropTypes.oneOf(PRODUCT_ICONS).isRequired,
   /**
