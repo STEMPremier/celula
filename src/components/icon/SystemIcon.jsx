@@ -26,9 +26,11 @@ const SystemIcon = props => {
   const { color, name } = props;
 
   return (
-    <svg className={`ce-icon ce-icon__system ce-icon--${color}`}>
-      <use xlinkHref={`#icons_system-${name}`} />
-    </svg>
+    <span className="ce-icon ce-icon__system">
+      <svg className={`ce-icon--${color}`}>
+        <use xlinkHref={`#icons_system-${name}`} />
+      </svg>
+    </span>
   );
 };
 

@@ -1,13 +1,14 @@
 @import '../../styles/celula';
 
-@icon-size: @base-font-size;
 @product-icon-small: 5rem;
 @product-icon-large: 7.5rem;
 @product-icon-jumbo: 10rem;
 @secondary-icon-small: 3rem;
 @secondary-icon-large: 3.6rem;
 @secondary-icon-jumbo: 5rem;
+@system-icon-size: @base-font-size;
 
+// Primary icons
 .ce-icon {
   &.ce-icon__product {
     align-items: center;
@@ -55,7 +56,7 @@
   }
 }
 
-// SecondaryIcon Base Colors
+// Secondary icons
 .ce-icon {
   &.ce-icon__secondary {
     align-items: center;
@@ -110,41 +111,40 @@
   }
 }
 
-// System Base Colors
-.ce-icon__system {
-  &.ce-icon--primary {
-    stroke: @gradient-cool;
-  }
+// System icons
+.ce-icon {
+  &.ce-icon__system {
+    svg {
+      height: @system-icon-size;
+      width: @system-icon-size;
+    }
 
-  &.ce-icon--secondary {
-    stroke: @gradient-hot;
-  }
+    .ce-icon--black {
+      stroke: @black;
+    }
 
-  &.ce-icon--black {
-    stroke: @black;
-  }
+    .ce-icon--blue {
+      stroke: @blue;
+    }
 
-  &.ce-icon--blue {
-    stroke: @blue;
-  }
+    .ce-icon--green {
+      stroke: @green;
+    }
 
-  &.ce-icon--green {
-    stroke: @green;
-  }
+    .ce-icon--orange {
+      stroke: @orange;
+    }
 
-  &.ce-icon--orange {
-    stroke: @orange;
-  }
+    .ce-icon--purple {
+      stroke: @purple;
+    }
 
-  &.ce-icon--purple {
-    stroke: @purple;
-  }
+    .ce-icon--red {
+      stroke: @red;
+    }
 
-  &.ce-icon--red {
-    stroke: @red;
-  }
-
-  &.ce-icon--white {
-    stroke: @white;
+    .ce-icon--white {
+      stroke: @white;
+    }
   }
 }
