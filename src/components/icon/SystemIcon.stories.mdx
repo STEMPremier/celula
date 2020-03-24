@@ -9,15 +9,31 @@ import { SYSTEM_ICONS } from './types';
 <Description of={SystemIcon} />
 <Props of={SystemIcon} />
 
-### Types
+### System Icons
 <Preview>
-  <Story name="SystemIcon Examples">
-    <div>
+  <Story name="SystemIcons">
+    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
       {SYSTEM_ICONS.map((icon, idx) => {
         return (
-          <div style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
-            <SystemIcon name={icon} color="red" key={`${icon}_${idx}`}/>
+          <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 1px',borderRadius:'5px',height:'25px',minWidth:'25px'}}>
+            <SystemIcon name={icon} key={`${icon}_${idx}`}/>
             <span>{icon}</span>
+          </div>
+        );
+      })}
+    </div>
+  </Story>
+</Preview>
+
+### The Colors
+<Preview>
+  <Story name="SystemIcon Colors">
+    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
+      {['black', 'blue', 'green', 'orange', 'purple', 'red'].map((color, idx) => {
+        return (
+          <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 1px',borderRadius:'5px',height:'25px',minWidth:'25px'}}>
+            <SystemIcon name="edit" color={color} key={`${color}_${idx}`}/>
+            <span>{color}</span>
           </div>
         );
       })}
