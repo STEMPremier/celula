@@ -9,14 +9,47 @@ import { SECONDARY_ICONS } from './types';
 <Description of={SecondaryIcon} />
 <Props of={SecondaryIcon} />
 
-### Types
+### Secondary Icons Small
 <Preview>
-  <Story name="SecondaryIcon Examples">
-    <div>
+  <Story name="SecondaryIcon Small">
+    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
       {SECONDARY_ICONS.map((icon, idx) => {
         return (
-          <div style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
-            <SecondaryIcon name={icon} color="black" key={`${icon}_${idx}`}/>
+          <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'40px',width:'40px'}}>
+            <SecondaryIcon name={icon} key={`${icon}_${idx}`}/>
+            <span>{icon}</span>
+          </div>
+        );
+      })}
+    </div>
+  </Story>
+</Preview>
+
+
+### Secondary Icons Large
+<Preview>
+  <Story name="SecondaryIcon Large">
+    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
+      {SECONDARY_ICONS.map((icon, idx) => {
+        return (
+          <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'50px',width:'50px'}}>
+            <SecondaryIcon name={icon} size="large" key={`${icon}_${idx}`}/>
+            <span>{icon}</span>
+          </div>
+        );
+      })}
+    </div>
+  </Story>
+</Preview>
+
+### Secondary Icons Jumbo
+<Preview>
+  <Story name="SecondaryIcon Jumbo">
+    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
+      {SECONDARY_ICONS.map((icon, idx) => {
+        return (
+          <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'65px',width:'65px'}}>
+            <SecondaryIcon name={icon} size="jumbo" key={`${icon}_${idx}`}/>
             <span>{icon}</span>
           </div>
         );
