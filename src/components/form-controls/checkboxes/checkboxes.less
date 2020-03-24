@@ -22,6 +22,10 @@
     opacity: 0;
   }
 
+  // .ce-checkbox--box: checked{
+  //   background-color: 
+  // }
+
   .ce-checkbox--box {
     margin: 0.5rem;
     position: relative;
@@ -71,8 +75,10 @@
         background-color:#192344; 
         border: 5px solid  #ffffff ;
       }
-    }
+     
+      }
     // state changes with new background image to appear on entire checkbox
+
     // first set state defaults with size, position, and default color for unchecked 
     .ce-checkbox--background {
         height: 36px;
@@ -81,10 +87,14 @@
         margin-top: -3px;
         border-radius: 50%;
         background-position: -9999px -9999px;
-        // on state changes, only alter color and background-positoin so that it can inherit the rest 
+        // on state changes, only alter color and background-position  
         &:hover{
           background-color: #E5E5E5;
           background-position: center top !important;
+          // input:checked ~ .ce-checkbox--background {
+          // background-color: #CC0043;
+          // background-position: center top !important;
+          // }
         }
         &:focus {
           background-color: #CCCCCC;
@@ -94,12 +104,45 @@
           background-color: #B3B3B3;
           background-position: center top !important;
         }
-      }
+    }
   }
 
   &.ce-checkbox--disabled { 
     pointer-events: none;
     color: #DBDBDB;
+    .ce-checkbox--box{
+     // checked disabled coloring
+    // input:not(:checked) + label {
+      // &::before{
+      //   content: '';
+      //   display: inline-block;
+      //   position: absolute;
+      //   left: -1rem;
+      //   top: 8px;
+      //   border-radius: 3px;
+      //   // border: 1x solid #192344;
+      //   background-color: #FFFFFF;;
+      //   // background-color: #FFFFFF;
+      //   height: 40px;
+      //   width: 40px;
+      //   box-sizing: border-box;
+      // }
+      &::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        left: -9px;
+        top: 9px;
+        border-radius: 3px;
+        width: 8px;
+        height: 8px;
+        background-color:#AEAEAE; 
+        border: 5px solid  #ffffff ;
+      }
+    // }
+    
+     
+      }
   }
 }
 
