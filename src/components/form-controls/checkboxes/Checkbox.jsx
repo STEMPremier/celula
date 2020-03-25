@@ -1,39 +1,51 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import './checkboxes.less';
 
-const Checkbox = props => {
-  // NOTE THAT THERE WAS NO CHECKED IN THE STORY.  SEE IF NEEDED
-  // DUPLICATE HANDLECHANGE IN BOTH CHECKBOX AND GROUP.  LETS WAIT AND SEE WHERE THIS FALLS
-  const { className, disabled, name, label, value } = props;
-  // NOT SURE IF THE BELOW ID FORMAT WILL BE THE SAME;
-  const id = `${name}_${value}`;
-  const classes = cx(
-    'ce-checkbox',
-    {
-      // 'ce-radio--checked': checked,
-    },
-    className,
-  );
-  return (
-    <div className={classes}>
-      <div className="ce-checkbox--box">
-        <div className="ce-checkbox--background">
+class Checkbox extends Component {
+  state = {
+    checked: false,
+  };
+
+  handleChange = event => {
+    this.setState({ checked: event.target.checked });
+  };
+
+  render() {
+    const { className, disabled, name, label, value } = this.props;
+    const { checked } = this.state;
+    const id = `${name}_${value}`;
+    const classes = cx(
+      'ce-checkbox',
+      {
+        // 'ce-checkbox--checked': checked,
+      },
+      className,
+    );
+    return (
+      <div className={classes}>
+        <div className="ce-checkbox--box">
           <input
             type="checkbox"
             value={value}
             id={id}
+            checked={checked}
+            onChange={this.handleChange}
             disabled={disabled}
             name={name}
           />
           <label htmlFor={id}>{label}</label>
+          <div className="ce-checkbox--background" />
         </div>
+        {/* </div> */}
       </div>
-    </div>
-  );
-};
+    );
+  }
+  // NOTE THAT THERE WAS NO CHECKED IN THE STORY.  SEE IF NEEDED
+  // DUPLICATE HANDLECHANGE IN BOTH CHECKBOX AND GROUP.  LETS WAIT AND SEE WHERE THIS FALLS
+}
 
 Checkbox.propTypes = {
   /**
@@ -73,6 +85,7 @@ Checkbox.propTypes = {
 
 Checkbox.defaultProps = {
   className: '',
+  // checked: false,
   disabled: false,
   // error: ''
 };
