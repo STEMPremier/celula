@@ -4,13 +4,13 @@
   padding-left: 1rem;
   fieldset {
     border: none;
-    width: 225px;
-    height: 100%;
     display: flex;
+    height: 100%;
     justify-content: flex-start;
+    width: 225px;
   }
   legend {
-    padding: 3.0rem 0 2.2rem .6rem;
+    padding: 3rem 0 2.2rem 0.6rem;
   }
   label {
     padding-left: 4rem;
@@ -21,11 +21,6 @@
   input {
     opacity: 0;
   }
-
-  // .ce-checkbox--box: checked{
-  //   background-color: 
-  // }
-
   .ce-checkbox--box {
     margin: 0.5rem;
     position: relative;
@@ -33,32 +28,30 @@
     user-select: none;
     // default checkbox sizes (unchecked and enabled outline color)
     input:not(:checked) + label {
-      &::before{
+      &::before {
         content: '';
         display: inline-block;
         position: absolute;
         left: -1rem;
         top: 8px;
         border-radius: 3px;
-        border: 1px solid #B2B2B2;
-        background-color: #FBFBFB;
+        border: 1px solid #b2b2b2;
+        background-color: #fbfbfb;
         height: 20px;
         width: 20px;
         box-sizing: border-box;
       }
     }
-    // checked default 
+    // checked default
     input:checked + label {
-      &::before{
+      &::before {
         content: '';
         display: inline-block;
         position: absolute;
         left: -1rem;
         top: 8px;
         border-radius: 3px;
-        // border: 1x solid #192344;
-        background-color:#192344;
-        // background-color: #FFFFFF;
+        background-color: #192344;
         height: 20px;
         width: 20px;
         box-sizing: border-box;
@@ -72,97 +65,111 @@
         border-radius: 3px;
         width: 8px;
         height: 8px;
-        background-color:#192344; 
-        border: 5px solid  #ffffff ;
+        background-color: #192344;
+        border: 5px solid #ffffff;
       }
-     
-      }
-    // state changes with new background image to appear on entire checkbox
-
-    // first set state defaults with size, position, and default color for unchecked 
+    }
+    // first set state defaults with size and position for the background div appearing on state changes
     .ce-checkbox--background {
-        height: 36px;
-        width: 36px;
-        margin-left: -18px;
-        margin-top: -3px;
-        border-radius: 50%;
-        background-position: -9999px -9999px;
-        // on state changes, only alter color and background-position  
-        &:hover{
-          background-color: #E5E5E5;
-          background-position: center top !important;
-          // input:checked ~ .ce-checkbox--background {
-          // background-color: #CC0043;
-          // background-position: center top !important;
-          // }
-        }
-        &:focus {
-          background-color: #CCCCCC;
-          background-position: center top !important;
-        }
-        &:active {
-          background-color: #B3B3B3;
-          background-position: center top !important;
-        }
+      height: 36px;
+      width: 36px;
+      margin-top: -18px;
+      border-radius: 50%;
+      background-position: -9999px -9999px;
+    }
+    // change background colors for unchecked boxes
+    input:not(:checked):hover ~ .ce-checkbox--background {
+      background-color: #e5e5e5;
+      background-position: center top !important;
+    }
+    input:not(:checked):focus ~ .ce-checkbox--background {
+      background-color: #cccccc;
+      background-position: center top !important;
+    }
+    input:not(:checked):active ~ .ce-checkbox--background {
+      background-color: #b3b3b3;
+      background-position: center top !important;
+    }
+    // checked state changes
+    input:checked:hover ~ .ce-checkbox--background {
+      background-color: #e6f7ff;
+      background-position: center top !important;
+    }
+    input:checked:focus ~ .ce-checkbox--background {
+      background-color: #ccefff;
+      background-position: center top !important;
+    }
+    input:checked:active ~ .ce-checkbox--background {
+      background-color: #b2e7ff;
+      background-position: center top !important;
     }
   }
-
-  &.ce-checkbox--disabled { 
+  &.ce-checkbox--disabled {
     pointer-events: none;
-    color: #DBDBDB;
-    .ce-checkbox--box{
-     // checked disabled coloring
-    // input:not(:checked) + label {
-      // &::before{
-      //   content: '';
-      //   display: inline-block;
-      //   position: absolute;
-      //   left: -1rem;
-      //   top: 8px;
-      //   border-radius: 3px;
-      //   // border: 1x solid #192344;
-      //   background-color: #FFFFFF;;
-      //   // background-color: #FFFFFF;
-      //   height: 40px;
-      //   width: 40px;
-      //   box-sizing: border-box;
-      // }
-      &::after {
-        content: '';
-        position: absolute;
-        display: inline-block;
-        left: -9px;
-        top: 9px;
-        border-radius: 3px;
-        width: 8px;
-        height: 8px;
-        background-color:#AEAEAE; 
-        border: 5px solid  #ffffff ;
+    color: #dbdbdb;
+    &.ce-checkbox--box {
+      // checked disabled coloring
+      input:checked + label {
+        &::after {
+          content: '';
+          position: absolute;
+          display: inline-block;
+          left: -9px;
+          top: 9px;
+          border-radius: 3px;
+          width: 8px;
+          height: 8px;
+          background-color: #aeaeae;
+          border: 5px solid #ffffff;
+        }
       }
-    // }
-    
-     
-      }
+    }
   }
 }
 
-.ce-checkbox--error{
-  // error mode not checked 
-  border: .5rem solid @error-text;
-  border-radius: .5rem;
-  color:@error-text;
+.ce-checkbox--error {
+  // error mode not checked
+  border: 0.5rem solid @error-text;
+  border-radius: 0.5rem;
+  color: @error-text;
+  .ce-checkbox--box {
+    // error mode checked
+    input:checked + label {
+      &::before {
+        border: 0.1rem solid @error-text;
+        background: transparent;
+      }
+      &::after {
+        background-color: @error-text;
+        border: 0.5rem solid #ffffff;
+      }
+    }
+    // checked state changes on error checked
+    input:checked:hover ~ .ce-checkbox--background {
+      background-color: #ffe5ed;
+      background-position: center top !important;
+    }
+    input:checked:focus ~ .ce-checkbox--background {
+      background-color: #ffccdc;
+      background-position: center top !important;
+    }
+    input:checked:active ~ .ce-checkbox--background {
+      background-color: #ffb3cc;
+      background-position: center top !important;
+    }
+  }
   // this error text handles when I want it shown inside the radio--error
-  .ce-checkbox-error--text{
+  .ce-checkbox-error--text {
     position: absolute;
     background-color: white;
-    padding: .5rem;
+    padding: 0.5rem;
     line-height: 1.2rem;
     margin-left: 77%;
     bottom: -4%;
     @media screen {
       @media (max-width: 768px) {
-       margin-left: 50%;
+        margin-left: 50%;
       }
     }
   }
-};
+}
