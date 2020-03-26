@@ -25,15 +25,15 @@ const PRODUCT_ICONS = [
   'career-interests',
 ];
 
+/* eslint-disable prettier/prettier */
 const SECONDARY_ICONS = [
   'pdf',
   'doc',
   'video',
   'image',
-  'more',
-  'grade',
   'play',
 ];
+/* eslint-enable prettier/prettier */
 
 const SYSTEM_ICONS = [
   'share',
