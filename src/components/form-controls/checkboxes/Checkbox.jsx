@@ -6,15 +6,25 @@ import './checkboxes.less';
 
 class Checkbox extends Component {
   state = {
-    checked: false,
+    checked: '',
   };
 
   handleChange = event => {
+    // // eslint-disable-next-line no-console
+    // console.log('indv checkbox', event);
     this.setState({ checked: event.target.checked });
   };
 
   render() {
-    const { className, disabled, name, label, value } = this.props;
+    const {
+      className,
+      disabled,
+      name,
+      label,
+      value,
+      form,
+      // handleChange,
+    } = this.props;
     const { checked } = this.state;
     const id = `${name}_${value}`;
     const classes = cx(
@@ -35,15 +45,14 @@ class Checkbox extends Component {
             onChange={this.handleChange}
             disabled={disabled}
             name={name}
+            form={form}
           />
           <label htmlFor={id}>{label}</label>
           <div className="ce-checkbox--background" />
         </div>
-        {/* </div> */}
       </div>
     );
   }
-  // NOTE THAT THERE WAS NO CHECKED IN THE STORY.  SEE IF NEEDED
   // DUPLICATE HANDLECHANGE IN BOTH CHECKBOX AND GROUP.  LETS WAIT AND SEE WHERE THIS FALLS
 }
 
@@ -62,13 +71,21 @@ Checkbox.propTypes = {
   disabled: PropTypes.bool,
   // NAME NOT IN STORY
   /**
-   * Need to assign a matching name to each `<Checkbox />` in the `<CheckboxGroup />`.
+   * Need to assign a matching name to each `<Checkbox />` if being used the `<CheckboxGroup />`.  In  a `<CheckboxGroup />`, each individual `<Checkbox />` should have the same name.
    */
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   // /**
   //  * The id will also be the name of the checkbox, unless in a group.
   //  */
   // id: PropTypes.string.isRequired,
+  /**
+   * The handleChange function is overwritten by any handleChange function passed into `<CheckboxGroup />`.
+   */
+  // handleChange: PropTypes.func.isRequired,
+  /**
+   * The form value is over-written by any form avlue passed into the `<CheckboxGroup />`.
+   */
+  form: PropTypes.string,
   /**
    * The label you assign is the text that shows up next to each individual `<Checkbox />` button.
    */
@@ -85,6 +102,8 @@ Checkbox.propTypes = {
 
 Checkbox.defaultProps = {
   className: '',
+  form: '',
+  name: '',
   // checked: false,
   disabled: false,
   // error: ''

@@ -10,9 +10,10 @@ class CheckboxGroup extends Component {
   };
 
   handleChange = event => {
+    // eslint-disable-next-line no-console
+    console.log('checkbox grp', event);
     // eslint-disable-next-line react/destructuring-assignment
     this.setState({ checked: event.target.checked });
-    // // eslint-disable-next-line react/destructuring-assignment
     // this.props.handleChange;
   };
 
@@ -38,6 +39,7 @@ class CheckboxGroup extends Component {
       form,
       label,
       name,
+      handleChange,
       // validators
     } = this.props;
 
@@ -55,7 +57,7 @@ class CheckboxGroup extends Component {
         className={classes}
         name={name}
         form={form}
-        onChange={this.handleChange}
+        onChange={handleChange}
         disabled={disabled}
       >
         <legend>
@@ -90,9 +92,9 @@ CheckboxGroup.propTypes = {
    */
   form: PropTypes.string,
   /**
-   * A function that is passed to the all `<Radios />`s to be called when the `<Radio />` is clicked.
+   * A function that is passed to the all `<Checkbox />`s to be called when the `<Checkbox />` is clicked.
    */
-  // handleChange: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
   /**
    * The text that gets placed into the legend element.
    */
@@ -101,7 +103,6 @@ CheckboxGroup.propTypes = {
    * The name is a unique name for the ` <RadioGroup />` given to all the Radios.
    */
   name: PropTypes.string.isRequired,
-  // DOUBLE CHECK THAT THERE IS NO VALUE BC SEEMS IMPORTANT BUT NOT IN STORY
   // validators: PropTypes.array,
 };
 
