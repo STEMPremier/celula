@@ -1,3 +1,4 @@
+/* eslint-disable react/no-access-state-in-setstate */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -6,14 +7,25 @@ import './checkboxes.less';
 
 class CheckboxGroup extends Component {
   state = {
-    checked: false,
+    checkedValues: [],
   };
 
-  handleChange = event => {
+  handleChangeGroup = event => {
     // eslint-disable-next-line no-console
-    console.log('checkbox grp', event);
+    console.log('checkbox grp', event.target);
     // eslint-disable-next-line react/destructuring-assignment
-    this.setState({ checked: event.target.checked });
+    // eslint-disable-next-line react/no-access-state-in-setstate
+    // eslint-disable-next-line react/destructuring-assignment
+    const values = this.state.checkedValues;
+    let index;
+    if (event.target.checked) {
+      values.push(event.target.value);
+    } else {
+      index = values.indexOf(event.target.value);
+      values.splice(index, 1);
+    }
+    // eslint-disable-next-line react/destructuring-assignment
+    this.setState({ checkedValues: values });
     // this.props.handleChange;
   };
 
@@ -39,7 +51,7 @@ class CheckboxGroup extends Component {
       form,
       label,
       name,
-      handleChange,
+      // handleChangeGroup,
       // validators
     } = this.props;
 
@@ -57,7 +69,7 @@ class CheckboxGroup extends Component {
         className={classes}
         name={name}
         form={form}
-        onChange={handleChange}
+        onChange={this.handleChangeGroup}
         disabled={disabled}
       >
         <legend>
@@ -94,7 +106,7 @@ CheckboxGroup.propTypes = {
   /**
    * A function that is passed to the all `<Checkbox />`s to be called when the `<Checkbox />` is clicked.
    */
-  handleChange: PropTypes.func.isRequired,
+  // handleChangeGroup: PropTypes.func.isRequired,
   /**
    * The text that gets placed into the legend element.
    */
