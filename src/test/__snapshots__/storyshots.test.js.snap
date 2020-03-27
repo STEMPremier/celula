@@ -1388,3 +1388,3996 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
   </button>
 </div>
 `;
+
+exports[`Storyshots Components/Molecules/Icons/ProductIcon ProductIcon Jumbo 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-college"
+        />
+      </svg>
+    </span>
+    <span>
+      college
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-military"
+        />
+      </svg>
+    </span>
+    <span>
+      military
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-workforce"
+        />
+      </svg>
+    </span>
+    <span>
+      workforce
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-career-interests"
+        />
+      </svg>
+    </span>
+    <span>
+      career-interests
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-location"
+        />
+      </svg>
+    </span>
+    <span>
+      location
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-organizations-clubs"
+        />
+      </svg>
+    </span>
+    <span>
+      organizations-clubs
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-arts-crafts"
+        />
+      </svg>
+    </span>
+    <span>
+      arts-crafts
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-sports-exercise"
+        />
+      </svg>
+    </span>
+    <span>
+      sports-exercise
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-volunteer"
+        />
+      </svg>
+    </span>
+    <span>
+      volunteer
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-cooking-baking"
+        />
+      </svg>
+    </span>
+    <span>
+      cooking-baking
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-music"
+        />
+      </svg>
+    </span>
+    <span>
+      music
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-certification"
+        />
+      </svg>
+    </span>
+    <span>
+      certification
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-desk"
+        />
+      </svg>
+    </span>
+    <span>
+      desk
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-outdoor"
+        />
+      </svg>
+    </span>
+    <span>
+      outdoor
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-private-office"
+        />
+      </svg>
+    </span>
+    <span>
+      private-office
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-open-office"
+        />
+      </svg>
+    </span>
+    <span>
+      open-office
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-indoor"
+        />
+      </svg>
+    </span>
+    <span>
+      indoor
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-manufacturing"
+        />
+      </svg>
+    </span>
+    <span>
+      manufacturing
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-remote"
+        />
+      </svg>
+    </span>
+    <span>
+      remote
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-travel"
+        />
+      </svg>
+    </span>
+    <span>
+      travel
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-colleges"
+        />
+      </svg>
+    </span>
+    <span>
+      colleges
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-demographics"
+        />
+      </svg>
+    </span>
+    <span>
+      demographics
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-profile"
+        />
+      </svg>
+    </span>
+    <span>
+      profile
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-career-interests"
+        />
+      </svg>
+    </span>
+    <span>
+      career-interests
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/ProductIcon ProductIcon Large 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-college"
+        />
+      </svg>
+    </span>
+    <span>
+      college
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-military"
+        />
+      </svg>
+    </span>
+    <span>
+      military
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-workforce"
+        />
+      </svg>
+    </span>
+    <span>
+      workforce
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-career-interests"
+        />
+      </svg>
+    </span>
+    <span>
+      career-interests
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-location"
+        />
+      </svg>
+    </span>
+    <span>
+      location
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-organizations-clubs"
+        />
+      </svg>
+    </span>
+    <span>
+      organizations-clubs
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-arts-crafts"
+        />
+      </svg>
+    </span>
+    <span>
+      arts-crafts
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-sports-exercise"
+        />
+      </svg>
+    </span>
+    <span>
+      sports-exercise
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-volunteer"
+        />
+      </svg>
+    </span>
+    <span>
+      volunteer
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-cooking-baking"
+        />
+      </svg>
+    </span>
+    <span>
+      cooking-baking
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-music"
+        />
+      </svg>
+    </span>
+    <span>
+      music
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-certification"
+        />
+      </svg>
+    </span>
+    <span>
+      certification
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-desk"
+        />
+      </svg>
+    </span>
+    <span>
+      desk
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-outdoor"
+        />
+      </svg>
+    </span>
+    <span>
+      outdoor
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-private-office"
+        />
+      </svg>
+    </span>
+    <span>
+      private-office
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-open-office"
+        />
+      </svg>
+    </span>
+    <span>
+      open-office
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-indoor"
+        />
+      </svg>
+    </span>
+    <span>
+      indoor
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-manufacturing"
+        />
+      </svg>
+    </span>
+    <span>
+      manufacturing
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-remote"
+        />
+      </svg>
+    </span>
+    <span>
+      remote
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-travel"
+        />
+      </svg>
+    </span>
+    <span>
+      travel
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-colleges"
+        />
+      </svg>
+    </span>
+    <span>
+      colleges
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-demographics"
+        />
+      </svg>
+    </span>
+    <span>
+      demographics
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-profile"
+        />
+      </svg>
+    </span>
+    <span>
+      profile
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-career-interests"
+        />
+      </svg>
+    </span>
+    <span>
+      career-interests
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/ProductIcon ProductIcon Small 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-college"
+        />
+      </svg>
+    </span>
+    <span>
+      college
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-military"
+        />
+      </svg>
+    </span>
+    <span>
+      military
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-workforce"
+        />
+      </svg>
+    </span>
+    <span>
+      workforce
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-career-interests"
+        />
+      </svg>
+    </span>
+    <span>
+      career-interests
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-location"
+        />
+      </svg>
+    </span>
+    <span>
+      location
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-organizations-clubs"
+        />
+      </svg>
+    </span>
+    <span>
+      organizations-clubs
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-arts-crafts"
+        />
+      </svg>
+    </span>
+    <span>
+      arts-crafts
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-sports-exercise"
+        />
+      </svg>
+    </span>
+    <span>
+      sports-exercise
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-volunteer"
+        />
+      </svg>
+    </span>
+    <span>
+      volunteer
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-cooking-baking"
+        />
+      </svg>
+    </span>
+    <span>
+      cooking-baking
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-music"
+        />
+      </svg>
+    </span>
+    <span>
+      music
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-certification"
+        />
+      </svg>
+    </span>
+    <span>
+      certification
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-desk"
+        />
+      </svg>
+    </span>
+    <span>
+      desk
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-outdoor"
+        />
+      </svg>
+    </span>
+    <span>
+      outdoor
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-private-office"
+        />
+      </svg>
+    </span>
+    <span>
+      private-office
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-open-office"
+        />
+      </svg>
+    </span>
+    <span>
+      open-office
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-indoor"
+        />
+      </svg>
+    </span>
+    <span>
+      indoor
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-manufacturing"
+        />
+      </svg>
+    </span>
+    <span>
+      manufacturing
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-remote"
+        />
+      </svg>
+    </span>
+    <span>
+      remote
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-travel"
+        />
+      </svg>
+    </span>
+    <span>
+      travel
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-colleges"
+        />
+      </svg>
+    </span>
+    <span>
+      colleges
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-demographics"
+        />
+      </svg>
+    </span>
+    <span>
+      demographics
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-profile"
+        />
+      </svg>
+    </span>
+    <span>
+      profile
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-career-interests"
+        />
+      </svg>
+    </span>
+    <span>
+      career-interests
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/SecondaryIcon SecondaryIcon Jumbo 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "65px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "65px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--jumbo ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-pdf"
+        />
+      </svg>
+    </span>
+    <span>
+      pdf
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "65px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "65px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--jumbo ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-doc"
+        />
+      </svg>
+    </span>
+    <span>
+      doc
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "65px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "65px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--jumbo ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-video"
+        />
+      </svg>
+    </span>
+    <span>
+      video
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "65px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "65px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--jumbo ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-image"
+        />
+      </svg>
+    </span>
+    <span>
+      image
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "65px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "65px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--jumbo ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-play"
+        />
+      </svg>
+    </span>
+    <span>
+      play
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/SecondaryIcon SecondaryIcon Large 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "50px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "50px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--large ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-pdf"
+        />
+      </svg>
+    </span>
+    <span>
+      pdf
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "50px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "50px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--large ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-doc"
+        />
+      </svg>
+    </span>
+    <span>
+      doc
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "50px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "50px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--large ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-video"
+        />
+      </svg>
+    </span>
+    <span>
+      video
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "50px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "50px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--large ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-image"
+        />
+      </svg>
+    </span>
+    <span>
+      image
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "50px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "50px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--large ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-play"
+        />
+      </svg>
+    </span>
+    <span>
+      play
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/SecondaryIcon SecondaryIcon Small 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "40px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "40px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-pdf"
+        />
+      </svg>
+    </span>
+    <span>
+      pdf
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "40px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "40px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-doc"
+        />
+      </svg>
+    </span>
+    <span>
+      doc
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "40px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "40px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-video"
+        />
+      </svg>
+    </span>
+    <span>
+      video
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "40px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "40px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-image"
+        />
+      </svg>
+    </span>
+    <span>
+      image
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "40px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "40px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-play"
+        />
+      </svg>
+    </span>
+    <span>
+      play
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/SecondaryIcon SecondaryIcon with Text 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexWrap": "wrap",
+        "justifyContent": "space-around",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "border": "solid black 2px",
+          "borderRadius": "5px",
+          "display": "flex",
+          "flexDirection": "column",
+          "margin": "5px",
+          "padding": "15px",
+        }
+      }
+    >
+      <span
+        className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+      >
+        <span
+          className="ce-icon--text"
+        >
+          A
+        </span>
+      </span>
+      <span>
+        w/text
+      </span>
+    </div>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "border": "solid black 2px",
+          "borderRadius": "5px",
+          "display": "flex",
+          "flexDirection": "column",
+          "margin": "5px",
+          "padding": "15px",
+        }
+      }
+    >
+      <span
+        className="ce-icon ce-icon__secondary ce-icon--small ce-icon--secondary"
+      >
+        <span
+          className="ce-icon--text"
+        >
+          +1
+        </span>
+      </span>
+      <span>
+        w/text
+      </span>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexWrap": "wrap",
+        "justifyContent": "space-around",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "border": "solid black 2px",
+          "borderRadius": "5px",
+          "display": "flex",
+          "flexDirection": "column",
+          "height": "50px",
+          "margin": "5px",
+          "padding": "15px",
+          "width": "50px",
+        }
+      }
+    >
+      <span
+        className="ce-icon ce-icon__secondary ce-icon--large ce-icon--primary"
+      >
+        <span
+          className="ce-icon--text"
+        >
+          A
+        </span>
+      </span>
+      <span>
+        w/text
+      </span>
+    </div>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "border": "solid black 2px",
+          "borderRadius": "5px",
+          "display": "flex",
+          "flexDirection": "column",
+          "height": "50px",
+          "margin": "5px",
+          "padding": "15px",
+          "width": "50px",
+        }
+      }
+    >
+      <span
+        className="ce-icon ce-icon__secondary ce-icon--large ce-icon--secondary"
+      >
+        <span
+          className="ce-icon--text"
+        >
+          +1
+        </span>
+      </span>
+      <span>
+        w/text
+      </span>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexWrap": "wrap",
+        "justifyContent": "space-around",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "border": "solid black 2px",
+          "borderRadius": "5px",
+          "display": "flex",
+          "flexDirection": "column",
+          "height": "65px",
+          "margin": "5px",
+          "padding": "15px",
+          "width": "65px",
+        }
+      }
+    >
+      <span
+        className="ce-icon ce-icon__secondary ce-icon--jumbo ce-icon--primary"
+      >
+        <span
+          className="ce-icon--text"
+        >
+          A
+        </span>
+      </span>
+      <span>
+        with text
+      </span>
+    </div>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "border": "solid black 2px",
+          "borderRadius": "5px",
+          "display": "flex",
+          "flexDirection": "column",
+          "height": "65px",
+          "margin": "5px",
+          "padding": "15px",
+          "width": "65px",
+        }
+      }
+    >
+      <span
+        className="ce-icon ce-icon__secondary ce-icon--jumbo ce-icon--secondary"
+      >
+        <span
+          className="ce-icon--text"
+        >
+          +1
+        </span>
+      </span>
+      <span>
+        with text
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcon Colors 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-edit"
+        />
+      </svg>
+    </span>
+    <span>
+      black
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--blue"
+      >
+        <use
+          xlinkHref="#icons_system-edit"
+        />
+      </svg>
+    </span>
+    <span>
+      blue
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--green"
+      >
+        <use
+          xlinkHref="#icons_system-edit"
+        />
+      </svg>
+    </span>
+    <span>
+      green
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--orange"
+      >
+        <use
+          xlinkHref="#icons_system-edit"
+        />
+      </svg>
+    </span>
+    <span>
+      orange
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--purple"
+      >
+        <use
+          xlinkHref="#icons_system-edit"
+        />
+      </svg>
+    </span>
+    <span>
+      purple
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--red"
+      >
+        <use
+          xlinkHref="#icons_system-edit"
+        />
+      </svg>
+    </span>
+    <span>
+      red
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-share"
+        />
+      </svg>
+    </span>
+    <span>
+      share
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-preview"
+        />
+      </svg>
+    </span>
+    <span>
+      preview
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-export"
+        />
+      </svg>
+    </span>
+    <span>
+      export
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-follow"
+        />
+      </svg>
+    </span>
+    <span>
+      follow
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-message"
+        />
+      </svg>
+    </span>
+    <span>
+      message
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-badges"
+        />
+      </svg>
+    </span>
+    <span>
+      badges
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-website"
+        />
+      </svg>
+    </span>
+    <span>
+      website
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-edit"
+        />
+      </svg>
+    </span>
+    <span>
+      edit
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-clear"
+        />
+      </svg>
+    </span>
+    <span>
+      clear
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-navigate"
+        />
+      </svg>
+    </span>
+    <span>
+      navigate
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-down"
+        />
+      </svg>
+    </span>
+    <span>
+      down
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-up"
+        />
+      </svg>
+    </span>
+    <span>
+      up
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-user"
+        />
+      </svg>
+    </span>
+    <span>
+      user
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-visibility"
+        />
+      </svg>
+    </span>
+    <span>
+      visibility
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-help"
+        />
+      </svg>
+    </span>
+    <span>
+      help
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-close"
+        />
+      </svg>
+    </span>
+    <span>
+      close
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-calendar"
+        />
+      </svg>
+    </span>
+    <span>
+      calendar
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-warning"
+        />
+      </svg>
+    </span>
+    <span>
+      warning
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-add"
+        />
+      </svg>
+    </span>
+    <span>
+      add
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-filter"
+        />
+      </svg>
+    </span>
+    <span>
+      filter
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-menu"
+        />
+      </svg>
+    </span>
+    <span>
+      menu
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-search"
+        />
+      </svg>
+    </span>
+    <span>
+      search
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-tutorial"
+        />
+      </svg>
+    </span>
+    <span>
+      tutorial
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-yes"
+        />
+      </svg>
+    </span>
+    <span>
+      yes
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-no"
+        />
+      </svg>
+    </span>
+    <span>
+      no
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-hobby"
+        />
+      </svg>
+    </span>
+    <span>
+      hobby
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-interest"
+        />
+      </svg>
+    </span>
+    <span>
+      interest
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-outdoor"
+        />
+      </svg>
+    </span>
+    <span>
+      outdoor
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-indoor"
+        />
+      </svg>
+    </span>
+    <span>
+      indoor
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-popular"
+        />
+      </svg>
+    </span>
+    <span>
+      popular
+    </span>
+  </div>
+</div>
+`;

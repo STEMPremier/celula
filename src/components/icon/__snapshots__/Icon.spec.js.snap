@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductIcon /> render renders the component 1`] = `
+<span
+  className="ce-icon ce-icon__product ce-icon--small"
+>
+  <svg
+    className="ce-icon--white"
+  >
+    <use
+      xlinkHref="#icons_product-music"
+    />
+  </svg>
+</span>
+`;
+
+exports[`<SecondaryIcon /> render renders the component with an icon 1`] = `
+<span
+  className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+>
+  <svg
+    className="ce-icon--white"
+  >
+    <use
+      xlinkHref="#icons_secondary-image"
+    />
+  </svg>
+</span>
+`;
+
+exports[`<SecondaryIcon /> render renders the component with text 1`] = `
+<span
+  className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+>
+  <span
+    className="ce-icon--text"
+  >
+    +1
+  </span>
+</span>
+`;
+
+exports[`<SystemIcon /> render renders the component 1`] = `
+<span
+  className="ce-icon ce-icon__system"
+>
+  <svg
+    className="ce-icon--black"
+  >
+    <use
+      xlinkHref="#icons_system-share"
+    />
+  </svg>
+</span>
+`;
