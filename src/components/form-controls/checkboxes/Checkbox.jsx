@@ -33,7 +33,7 @@ class Checkbox extends Component {
     const classes = cx(
       'ce-checkbox',
       {
-        // 'ce-checkbox--checked': checked,
+        'ce-checkbox--disabled': disabled,
       },
       className,
     );
