@@ -15,8 +15,8 @@ import { PRODUCT_ICONS } from './types';
     <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
       {PRODUCT_ICONS.map((icon, idx) => {
         return (
-          <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'75px',width:'75px'}}>
-            <ProductIcon name={icon} key={`${icon}_${idx}`}/>
+          <div key={`${icon}_${idx}`} style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'75px',width:'75px'}}>
+            <ProductIcon name={icon} />
             <span>{icon}</span>
           </div>
         );
@@ -32,8 +32,8 @@ import { PRODUCT_ICONS } from './types';
     <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
       {PRODUCT_ICONS.map((icon, idx) => {
         return (
-          <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'100px',width:'100px'}}>
-            <ProductIcon name={icon} size="large" key={`${icon}_${idx}`}/>
+          <div key={`${icon}_${idx}_large`} style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'100px',width:'100px'}}>
+            <ProductIcon name={icon} size="large" />
             <span>{icon}</span>
           </div>
         );
@@ -48,8 +48,8 @@ import { PRODUCT_ICONS } from './types';
     <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
       {PRODUCT_ICONS.map((icon, idx) => {
         return (
-          <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'125px',width:'125px'}}>
-            <ProductIcon name={icon} size="jumbo" key={`${icon}_${idx}`}/>
+          <div key={`${icon}_${idx}_jumbo`} style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'125px',width:'125px'}}>
+            <ProductIcon name={icon} size="jumbo" />
             <span>{icon}</span>
           </div>
         );

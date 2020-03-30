@@ -15,8 +15,8 @@ import { SECONDARY_ICONS } from './types';
     <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
       {SECONDARY_ICONS.map((icon, idx) => {
         return (
-          <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'40px',width:'40px'}}>
-            <SecondaryIcon name={icon} key={`${icon}_${idx}`}/>
+          <div key={`${icon}_${idx}`} style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'40px',width:'40px'}}>
+            <SecondaryIcon name={icon} />
             <span>{icon}</span>
           </div>
         );
@@ -32,8 +32,8 @@ import { SECONDARY_ICONS } from './types';
     <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
       {SECONDARY_ICONS.map((icon, idx) => {
         return (
-          <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'50px',width:'50px'}}>
-            <SecondaryIcon name={icon} size="large" key={`${icon}_${idx}`}/>
+          <div size="large" key={`${icon}_${idx}_large`} style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'50px',width:'50px'}}>
+            <SecondaryIcon name={icon} />
             <span>{icon}</span>
           </div>
         );
@@ -48,8 +48,8 @@ import { SECONDARY_ICONS } from './types';
     <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
       {SECONDARY_ICONS.map((icon, idx) => {
         return (
-          <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'65px',width:'65px'}}>
-            <SecondaryIcon name={icon} size="jumbo" key={`${icon}_${idx}`}/>
+          <div key={`${icon}_${idx}_jumbo`} style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'65px',width:'65px'}}>
+            <SecondaryIcon name={icon} size="jumbo" />
             <span>{icon}</span>
           </div>
         );
