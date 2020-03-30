@@ -1,42 +1,48 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable no-console */
 /* eslint-disable react/no-access-state-in-setstate */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+// eslint-disable-next-line import/no-unresolved
 import cx from 'classnames';
 
 import './checkboxes.less';
 
 class CheckboxGroup extends Component {
+  // state = {
+  //   // eslint-disable-next-line react/destructuring-assignment
+  //   checkedValues: this.props.defaultValue,
+  // };
+
   state = {
-    checkedValues: [],
+    // eslint-disable-next-line react/destructuring-assignment
+    checkedValues: this.props.defaultValue ? [this.props.defaultValue] : [],
   };
 
   handleChangeGroup = event => {
-    // eslint-disable-next-line no-console
-    console.log('checkbox grp', event.target);
-    // eslint-disable-next-line react/destructuring-assignment
-    // eslint-disable-next-line react/no-access-state-in-setstate
-    // eslint-disable-next-line react/destructuring-assignment
-    const values = this.state.checkedValues;
-    let index;
-    if (event.target.checked) {
-      values.push(event.target.value);
-    } else {
-      index = values.indexOf(event.target.value);
-      values.splice(index, 1);
-    }
-    // eslint-disable-next-line react/destructuring-assignment
+    const { checkedValues } = this.state;
+    let values = checkedValues;
+    // eslint-disable-next-line no-unused-expressions
+    event.target.checked === true
+      ? values.push(event.target.value)
+      : (values = values.filter(
+          arrayValue => arrayValue === event.target.value,
+        ));
     this.setState({ checkedValues: values });
-    // this.props.handleChange;
   };
 
   renderChildren = () => {
     const { children, name } = this.props;
     const { checked } = this.state;
-
+    // eslint-disable-next-line no-console
+    // console.log('this.props.defaultValue', this.props.defaultValue);
     return React.Children.map(children, child => {
+      // eslint-disable-next-line no-console
+      console.log('this.props in children', this.props);
       const props = {
         checked: checked === child.props.value,
         handleChange: this.handleChange,
+        defaultValue: this.props.defaultValue,
         name,
       };
       return React.cloneElement(child, { ...props });
@@ -51,10 +57,12 @@ class CheckboxGroup extends Component {
       form,
       label,
       name,
+      defaultValue,
       // handleChangeGroup,
       // validators
     } = this.props;
 
+    console.log('props in the group', this.props);
     const classes = cx(
       'ce-checkbox',
       {
@@ -69,6 +77,7 @@ class CheckboxGroup extends Component {
         className={classes}
         name={name}
         form={form}
+        defaultValue={defaultValue}
         onChange={this.handleChangeGroup}
         disabled={disabled}
       >
@@ -116,6 +125,11 @@ CheckboxGroup.propTypes = {
    */
   name: PropTypes.string.isRequired,
   // validators: PropTypes.array,
+  defaultValue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.bool,
+  ]),
 };
 
 CheckboxGroup.defaultProps = {
@@ -123,6 +137,7 @@ CheckboxGroup.defaultProps = {
   disabled: false,
   error: '',
   form: '',
+  defaultValue: '',
   // validators: [],
 };
 

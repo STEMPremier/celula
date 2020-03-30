@@ -61,8 +61,8 @@ import Checkbox from './Checkbox';
       <CheckboxGroup 
         label="Label Goes Here"
         name="checkboxGroupName1"
-        handleChange={action('changed')}
         form="formName1"
+        defaultValue="option1"
       >
         <Checkbox 
          label="Option 1"
@@ -74,7 +74,7 @@ import Checkbox from './Checkbox';
           value="option2"
           name="check2"
         />
-           <Checkbox 
+        <Checkbox 
          label="Option 3"
          value="option3"
          name="check3"
@@ -98,6 +98,7 @@ import Checkbox from './Checkbox';
         name="checkboxGroupName2"
         handleChange={action('changed')}
         form="formName2"
+        defaultValue="option1"
         disabled
       >
         <Checkbox 
@@ -108,7 +109,7 @@ import Checkbox from './Checkbox';
           label="Option 2"
           value="option2"
         />
-           <Checkbox 
+        <Checkbox 
          label="Option 3"
          value="option3"
         />

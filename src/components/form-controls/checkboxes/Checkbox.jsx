@@ -1,3 +1,7 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-console */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -6,16 +10,26 @@ import './checkboxes.less';
 
 class Checkbox extends Component {
   state = {
-    checked: '',
+    checked: this.props.defaultValue === this.props.value,
   };
 
   handleChange = event => {
     // // eslint-disable-next-line no-console
-    // console.log('indv checkbox', event);
+    // console.log('indv checkbox', event.target);
     this.setState({ checked: event.target.checked });
   };
 
   render() {
+    this.props.defaultValue
+      ? console.log('this.props.defaultValue')
+      : console.log('props in invd box', this.props) &&
+        console.log('state in ind', this.state);
+    // this.props
+    //   ? console.log(
+    //       'this.props.defaultValue in indv checkbox',
+    //       this.props.defaultValue,
+    //     )
+    //   : null;
     const {
       className,
       disabled,
@@ -34,6 +48,7 @@ class Checkbox extends Component {
       },
       className,
     );
+    // if (value)
     return (
       <div className={classes}>
         <div className="ce-checkbox--box">
