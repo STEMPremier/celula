@@ -107,21 +107,14 @@
   &.ce-checkbox--disabled {
     pointer-events: none;
     color: #dbdbdb;
-    &.ce-checkbox--box {
-      // checked disabled coloring
-      input:checked + label {
-        &::after {
-          content: '';
-          position: absolute;
-          display: inline-block;
-          left: -9px;
-          top: 9px;
-          border-radius: 3px;
-          width: 8px;
-          height: 8px;
-          background-color: #aeaeae;
-          border: 5px solid #ffffff;
-        }
+    // checked disabled coloring
+    input:checked + label {
+      &::before {
+        background-color: #aeaeae;
+      }
+      &::after {
+        background-color: #aeaeae;
+        border: 5px solid #ffffff;
       }
     }
   }

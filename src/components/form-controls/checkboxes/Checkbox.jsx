@@ -10,26 +10,14 @@ import './checkboxes.less';
 
 class Checkbox extends Component {
   state = {
-    checked: this.props.defaultValue === this.props.value,
+    checked: !!this.props.defaultValue.includes(this.props.value),
   };
 
   handleChange = event => {
-    // // eslint-disable-next-line no-console
-    // console.log('indv checkbox', event.target);
     this.setState({ checked: event.target.checked });
   };
 
   render() {
-    this.props.defaultValue
-      ? console.log('this.props.defaultValue')
-      : console.log('props in invd box', this.props) &&
-        console.log('state in ind', this.state);
-    // this.props
-    //   ? console.log(
-    //       'this.props.defaultValue in indv checkbox',
-    //       this.props.defaultValue,
-    //     )
-    //   : null;
     const {
       className,
       disabled,
@@ -39,6 +27,7 @@ class Checkbox extends Component {
       form,
       // handleChange,
     } = this.props;
+
     const { checked } = this.state;
     const id = `${name}_${value}`;
     const classes = cx(
@@ -48,7 +37,7 @@ class Checkbox extends Component {
       },
       className,
     );
-    // if (value)
+
     return (
       <div className={classes}>
         <div className="ce-checkbox--box">
@@ -68,7 +57,6 @@ class Checkbox extends Component {
       </div>
     );
   }
-  // DUPLICATE HANDLECHANGE IN BOTH CHECKBOX AND GROUP.  LETS WAIT AND SEE WHERE THIS FALLS
 }
 
 Checkbox.propTypes = {

@@ -9,19 +9,14 @@ import cx from 'classnames';
 import './checkboxes.less';
 
 class CheckboxGroup extends Component {
-  // state = {
-  //   // eslint-disable-next-line react/destructuring-assignment
-  //   checkedValues: this.props.defaultValue,
-  // };
-
   state = {
-    // eslint-disable-next-line react/destructuring-assignment
-    checkedValues: this.props.defaultValue ? [this.props.defaultValue] : [],
+    checkedValues: [this.props.defaultValue],
   };
 
   handleChangeGroup = event => {
     const { checkedValues } = this.state;
     let values = checkedValues;
+    // NOT SURE WHY THIS IS SAYING IT IS UNUSED BC THE WHOLE CLICK AND UNCLICK THING BREAKS IF I REMOVE THIS FUNCTION
     // eslint-disable-next-line no-unused-expressions
     event.target.checked === true
       ? values.push(event.target.value)
@@ -34,11 +29,8 @@ class CheckboxGroup extends Component {
   renderChildren = () => {
     const { children, name } = this.props;
     const { checked } = this.state;
-    // eslint-disable-next-line no-console
-    // console.log('this.props.defaultValue', this.props.defaultValue);
+
     return React.Children.map(children, child => {
-      // eslint-disable-next-line no-console
-      console.log('this.props in children', this.props);
       const props = {
         checked: checked === child.props.value,
         handleChange: this.handleChange,
@@ -62,7 +54,6 @@ class CheckboxGroup extends Component {
       // validators
     } = this.props;
 
-    console.log('props in the group', this.props);
     const classes = cx(
       'ce-checkbox',
       {
