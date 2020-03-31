@@ -1,4 +1,4 @@
+import * as Radios from './radios';
 import SubmitButton from './submit-button';
 
-// eslint-disable-next-line import/prefer-default-export
-export { SubmitButton };
+export { Radios, SubmitButton };
