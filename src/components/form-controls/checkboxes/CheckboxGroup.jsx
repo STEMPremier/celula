@@ -33,7 +33,7 @@ class CheckboxGroup extends Component {
     return React.Children.map(children, child => {
       const props = {
         checked: checked === child.props.value,
-        handleChange: this.handleChange,
+        // handleChange: this.handleChange,
         defaultValue: this.props.defaultValue,
         name,
       };
@@ -50,7 +50,6 @@ class CheckboxGroup extends Component {
       label,
       name,
       defaultValue,
-      // handleChangeGroup,
       // validators
     } = this.props;
 
@@ -106,7 +105,7 @@ CheckboxGroup.propTypes = {
   /**
    * A function that is passed to the all `<Checkbox />`s to be called when the `<Checkbox />` is clicked.
    */
-  // handleChangeGroup: PropTypes.func.isRequired,
+  // handleChange: PropTypes.func.isRequired,
   /**
    * The text that gets placed into the legend element.
    */
