@@ -116,10 +116,14 @@ CheckboxGroup.propTypes = {
    */
   name: PropTypes.string.isRequired,
   // validators: PropTypes.array,
+  /**
+   * This optional value preassigns checked to certain checkboxes in the `<CheckboxGroup />`.  The string values will be pushed into the defaultValue array.
+   */
   defaultValue: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
     PropTypes.bool,
+    PropTypes.array,
   ]),
 };
 

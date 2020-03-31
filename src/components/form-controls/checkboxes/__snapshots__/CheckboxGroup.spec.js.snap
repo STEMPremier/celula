@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CheckboxGroup /> render() render the CheckboxGroup component 1`] = `
+<fieldset
+  className="ce-checkbox"
+  defaultValue=""
+  disabled={false}
+  form=""
+  name="CheckboxGroup Test Name"
+  onChange={[Function]}
+>
+  <legend>
+    CheckboxGroup Test Label
+  </legend>
+  <Checkbox
+    checked={false}
+    className=""
+    defaultValue=""
+    disabled={false}
+    form=""
+    key=".0"
+    label="Checkbox Test Label"
+    name="CheckboxGroup Test Name"
+    value="Checkbox Value Here"
+  />
+</fieldset>
+`;
