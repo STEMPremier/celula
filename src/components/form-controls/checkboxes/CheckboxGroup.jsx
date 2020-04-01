@@ -105,19 +105,21 @@ CheckboxGroup.propTypes = {
   /**
    * A function that is passed to the all `<Checkbox />`s to be called when the `<Checkbox />` is clicked.
    */
+  // ASK IAN ABOUT WHAT TO DO HERE
   // handleChange: PropTypes.func.isRequired,
   /**
    * The text that gets placed into the legend element.
    */
   label: PropTypes.string.isRequired,
   /**
-   * The name is a unique name for the ` <RadioGroup />` given to all the Radios.
+   * The name is a unique name for the `<CheckboxGroup />` given to all the `<Checkbox />`s.
    */
   name: PropTypes.string.isRequired,
   // validators: PropTypes.array,
   /**
    * This optional value preassigns checked to certain checkboxes in the `<CheckboxGroup />`.  The string values will be pushed into the defaultValue array.
    */
+  // ASK IAN ABOUT ALL THESE TYPES BEING APPLICABLE OR IF WE SHOULD RESTRICT IT
   defaultValue: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,

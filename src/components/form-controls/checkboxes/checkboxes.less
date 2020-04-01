@@ -10,13 +10,10 @@
     width: 22.5rem;
   }
   legend {
-    padding: 3rem 0 1.5rem 0.6rem;
+    padding: 1.3rem 0.5rem 1.5rem 0.6rem;
   }
   label {
     padding-left: 1.8rem;
-    // padding-top: 1.3rem;
-    // position: absolute;
-    // font-size: 1.4rem;
   }
   input {
     opacity: 0;
@@ -75,33 +72,26 @@
       margin-left: -1.8rem;
       margin-top: -2.7rem;
       border-radius: 50%;
-      background-position: -9999px -9999px;
     }
     // change background colors for unchecked boxes
     input:not(:checked):hover ~ .ce-checkbox--background {
       background-color: #e5e5e5;
-      background-position: center top !important;
     }
     input:not(:checked):focus ~ .ce-checkbox--background {
       background-color: #cccccc;
-      background-position: center top !important;
     }
     input:not(:checked):active ~ .ce-checkbox--background {
       background-color: #b3b3b3;
-      background-position: center top !important;
     }
     // checked state changes
     input:checked:hover ~ .ce-checkbox--background {
       background-color: #e6f7ff;
-      background-position: center top !important;
     }
     input:checked:focus ~ .ce-checkbox--background {
       background-color: #ccefff;
-      background-position: center top !important;
     }
     input:checked:active ~ .ce-checkbox--background {
       background-color: #b2e7ff;
-      background-position: center top !important;
     }
   }
   &.ce-checkbox--disabled {
@@ -140,15 +130,12 @@
     // checked state changes on error checked
     input:checked:hover ~ .ce-checkbox--background {
       background-color: #ffe5ed;
-      background-position: center top !important;
     }
     input:checked:focus ~ .ce-checkbox--background {
       background-color: #ffccdc;
-      background-position: center top !important;
     }
     input:checked:active ~ .ce-checkbox--background {
       background-color: #ffb3cc;
-      background-position: center top !important;
     }
   }
   // this error text handles when I want it shown inside the radio--error

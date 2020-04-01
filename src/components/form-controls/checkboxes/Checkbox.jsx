@@ -74,7 +74,7 @@ Checkbox.propTypes = {
   disabled: PropTypes.bool,
   // NAME NOT IN STORY
   /**
-   * Need to assign a matching name to each `<Checkbox />` if being used the `<CheckboxGroup />`.  In  a `<CheckboxGroup />`, each individual `<Checkbox />` should have the same name.
+   * Need to assign a matching name to each `<Checkbox />` if it is being used in the `<CheckboxGroup />`.  In  a `<CheckboxGroup />`, each individual `<Checkbox />` should have the same name.
    */
   name: PropTypes.string,
   // /**
@@ -86,8 +86,9 @@ Checkbox.propTypes = {
    */
   // handleChange: PropTypes.func.isRequired,
   /**
-   * The form value is over-written by any form avlue passed into the `<CheckboxGroup />`.
+   * The form value is over-written by any form value passed into the `<CheckboxGroup />`.
    */
+  // IS THIS FORM VALUE REALLY NECSSARY HERE OR JUST IN THE CHECKBOX GROUP????
   form: PropTypes.string,
   /**
    * The label you assign is the text that shows up next to each individual `<Checkbox />` button.
