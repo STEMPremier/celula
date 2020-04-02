@@ -61,28 +61,34 @@ import Checkbox from './Checkbox';
       <CheckboxGroup 
         label="Label Goes Here"
         name="checkboxGroupName1"
+        handleChangeGroup={action('click')}
         form="formName1"
-        defaultValue={["option1", "option2"]}
+        defaultGroupValue={["option1", "option2"]}
       >
         <Checkbox 
          label="Option 1"
          value="option1"
          name="check1"
+         handleChange={action('click')}
         />
         <Checkbox 
           label="Option 2"
           value="option2"
           name="check2"
+          handleChange={action('click')}
         />
         <Checkbox 
          label="Option 3"
          value="option3"
          name="check3"
+         checkedIndividualDefault
+         handleChange={action('click')}
         />
         <Checkbox 
           label="Option 4"
           value="option4"
           name="check4"
+          handleChange={action('click')}
         />
       </CheckboxGroup>
     </form>
@@ -97,7 +103,7 @@ import Checkbox from './Checkbox';
         label="Label Goes Here"
         name="checkboxGroupName2"
         form="formName2"
-        defaultValue={["option1", "option2"]}
+        defaultGroupValue={["option1", "option2"]}
       >
         <Checkbox 
          label="Option 1"
@@ -134,7 +140,7 @@ import Checkbox from './Checkbox';
         name="checkboxGroupName3"
         handleChange={action('changed')}
         form="formName3"
-        defaultValue={["option1", "option2"]}
+        defaultGroupValue={["option1", "option2"]}
         disabled
       >
         <Checkbox 
@@ -177,7 +183,7 @@ import Checkbox from './Checkbox';
           label="Option 2"
           value="option2"
         />
-           <Checkbox 
+        <Checkbox 
          label="Option 3"
          value="option3"
         />

@@ -7,7 +7,7 @@ import './checkboxes.less';
 class CheckboxGroup extends Component {
   state = {
     // eslint-disable-next-line react/destructuring-assignment
-    checkedValues: this.props.defaultValue,
+    checkedValues: this.props.defaultGroupValue,
   };
 
   handleChangeGroup = event => {
@@ -23,15 +23,15 @@ class CheckboxGroup extends Component {
   };
 
   renderChildren = () => {
-    const { children, name, defaultValue } = this.props;
-    const { checked } = this.state;
+    const { children, name, defaultGroupValue } = this.props;
+    // const { checked } = this.state;
 
     return React.Children.map(children, child => {
       const props = {
-        checked: checked === child.props.value,
+        // checked: checked === this.props.value,
         handleChange: this.handleChange,
         // eslint-disable-next-line object-shorthand
-        defaultValue: defaultValue,
+        defaultGroupValue,
         name,
       };
       return React.cloneElement(child, { ...props });
@@ -46,7 +46,7 @@ class CheckboxGroup extends Component {
       form,
       label,
       name,
-      defaultValue,
+      defaultGroupValue,
       // validators
     } = this.props;
 
@@ -64,7 +64,7 @@ class CheckboxGroup extends Component {
         className={classes}
         name={name}
         form={form}
-        defaultValue={defaultValue}
+        defaultGroupValue={defaultGroupValue}
         onChange={this.handleChangeGroup}
         disabled={disabled}
       >
@@ -109,9 +109,9 @@ CheckboxGroup.propTypes = {
   name: PropTypes.string.isRequired,
   // validators: PropTypes.array,
   /**
-   * This optional value preassigns checked to certain checkboxes in the `<CheckboxGroup />`.  The string values will be pushed into the defaultValue array.
+   * This optional value preassigns checked to certain checkboxes in the `<CheckboxGroup />`.  The string values will be pushed into the defaultGroupValue array.
    */
-  defaultValue: PropTypes.arrayOf(PropTypes.any),
+  defaultGroupValue: PropTypes.arrayOf(PropTypes.any),
 };
 
 CheckboxGroup.defaultProps = {
@@ -119,7 +119,7 @@ CheckboxGroup.defaultProps = {
   disabled: false,
   error: '',
   form: '',
-  defaultValue: '',
+  defaultGroupValue: '',
   // validators: [],
 };
 

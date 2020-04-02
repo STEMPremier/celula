@@ -1,7 +1,5 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable no-console */
+/* eslint-disable react/no-unused-state */
 /* eslint-disable react/prop-types */
-/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -10,11 +8,22 @@ import './checkboxes.less';
 
 class Checkbox extends Component {
   state = {
-    checked: !!this.props.defaultValue.includes(this.props.value),
+    // eslint-disable-next-line react/destructuring-assignment
+    // eslint-disable-next-line react/prop-types
+    // eslint-disable-next-line react/destructuring-assignment
+    checked:
+      // eslint-disable-next-line react/destructuring-assignment
+      !!this.props.defaultGroupValue.includes(this.props.value) ||
+      // eslint-disable-next-line react/destructuring-assignment
+      this.props.checkedIndividualDefault,
+    // eslint-disable-next-line react/destructuring-assignment
+    // checked: this.props.checked,
   };
 
   handleChange = event => {
     this.setState({ checked: event.target.checked });
+    // eslint-disable-next-line react/destructuring-assignment
+    this.props.handleChange();
   };
 
   render() {
@@ -25,7 +34,7 @@ class Checkbox extends Component {
       label,
       value,
       form,
-      // handleChange,
+      checkedIndividualDefault,
     } = this.props;
 
     const { checked } = this.state;
@@ -45,8 +54,9 @@ class Checkbox extends Component {
             type="checkbox"
             value={value}
             id={id}
+            checkedIndividualDefault={checkedIndividualDefault}
             checked={checked}
-            onChange={this.handleChange}
+            onClick={this.handleChange}
             disabled={disabled}
             name={name}
             form={form}
@@ -67,28 +77,22 @@ Checkbox.propTypes = {
   /**
    * The current checked state.
    */
-  // checked: PropTypes.bool,
+  checkedIndividualDefault: PropTypes.bool,
   /**
    * Make the RadioGroup inactive.
    */
   disabled: PropTypes.bool,
-  // NAME NOT IN STORY
   /**
    * Need to assign a matching name to each `<Checkbox />` if it is being used in the `<CheckboxGroup />`.  In  a `<CheckboxGroup />`, each individual `<Checkbox />` should have the same name.
    */
   name: PropTypes.string,
-  // /**
-  //  * The id will also be the name of the checkbox, unless in a group.
-  //  */
-  // id: PropTypes.string.isRequired,
   /**
-   * The handleChange function is overwritten by any handleChange function passed into `<CheckboxGroup />`.
+   * The handleChange function sets the checked state of the individual `<Checkbox />` and also trigger the handleChangeGroup of the `<CheckboxGroup />`.
    */
-  // handleChange: PropTypes.func.isRequired,
+  handleChange: PropTypes.func,
   /**
    * The form value is over-written by any form value passed into the `<CheckboxGroup />`.
    */
-  // IS THIS FORM VALUE REALLY NECSSARY HERE OR JUST IN THE CHECKBOX GROUP????
   form: PropTypes.string,
   /**
    * The label you assign is the text that shows up next to each individual `<Checkbox />` button.
@@ -107,9 +111,10 @@ Checkbox.propTypes = {
 Checkbox.defaultProps = {
   className: '',
   form: '',
+  checkedIndividualDefault: false,
   name: '',
-  // checked: false,
   disabled: false,
+  handleChange: () => {},
   // error: ''
 };
 
