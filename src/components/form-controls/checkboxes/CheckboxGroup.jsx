@@ -1,40 +1,37 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable no-console */
-/* eslint-disable react/no-access-state-in-setstate */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// eslint-disable-next-line import/no-unresolved
 import cx from 'classnames';
 
 import './checkboxes.less';
 
 class CheckboxGroup extends Component {
   state = {
-    checkedValues: [this.props.defaultValue],
+    // eslint-disable-next-line react/destructuring-assignment
+    checkedValues: this.props.defaultValue,
   };
 
   handleChangeGroup = event => {
     const { checkedValues } = this.state;
     let values = checkedValues;
-    // NOT SURE WHY THIS IS SAYING IT IS UNUSED BC THE WHOLE CLICK AND UNCLICK THING BREAKS IF I REMOVE THIS FUNCTION
-    // eslint-disable-next-line no-unused-expressions
-    event.target.checked === true
-      ? values.push(event.target.value)
-      : (values = values.filter(
-          arrayValue => arrayValue === event.target.value,
-        ));
+
+    if (event.target.checked) {
+      values.push(event.target.value);
+    } else {
+      values = values.filter(arrayValue => arrayValue !== event.target.value);
+    }
     this.setState({ checkedValues: values });
   };
 
   renderChildren = () => {
-    const { children, name } = this.props;
+    const { children, name, defaultValue } = this.props;
     const { checked } = this.state;
 
     return React.Children.map(children, child => {
       const props = {
         checked: checked === child.props.value,
-        // handleChange: this.handleChange,
-        defaultValue: this.props.defaultValue,
+        handleChange: this.handleChange,
+        // eslint-disable-next-line object-shorthand
+        defaultValue: defaultValue,
         name,
       };
       return React.cloneElement(child, { ...props });
@@ -103,11 +100,6 @@ CheckboxGroup.propTypes = {
    */
   form: PropTypes.string,
   /**
-   * A function that is passed to the all `<Checkbox />`s to be called when the `<Checkbox />` is clicked.
-   */
-  // ASK IAN ABOUT WHAT TO DO HERE
-  // handleChange: PropTypes.func.isRequired,
-  /**
    * The text that gets placed into the legend element.
    */
   label: PropTypes.string.isRequired,
@@ -119,13 +111,7 @@ CheckboxGroup.propTypes = {
   /**
    * This optional value preassigns checked to certain checkboxes in the `<CheckboxGroup />`.  The string values will be pushed into the defaultValue array.
    */
-  // ASK IAN ABOUT ALL THESE TYPES BEING APPLICABLE OR IF WE SHOULD RESTRICT IT
-  defaultValue: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.bool,
-    PropTypes.array,
-  ]),
+  defaultValue: PropTypes.arrayOf(PropTypes.any),
 };
 
 CheckboxGroup.defaultProps = {
