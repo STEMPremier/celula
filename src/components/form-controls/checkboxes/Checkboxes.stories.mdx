@@ -32,6 +32,14 @@ import Checkbox from './Checkbox';
       label='label 2'
       value='value 2'
     />
+    <Checkbox 
+      label='label 3'
+      value='value 3'
+    />
+    <Checkbox 
+      label='label 4'
+      value='value 4'
+    />
   </CheckboxGroup>
 </Story>
 
@@ -40,18 +48,14 @@ import Checkbox from './Checkbox';
 <Props of={Checkbox}/>
 
 <Story name="Checkbox" parameters={{docs: {disable: true}}}>
-  <form>
-    <CheckboxGroup 
-    handleChange={action('click')}
-    label='label for checkbox'
-    name='name for checkbox'
-    >
       <Checkbox
         label={text('label', 'Default Checkbox Label 1')}
         value={text('value', 'value1')}
+        className={text('className', 'classNameExample')}
+        checkedIndividualDefault={text('checkedIndividualDefault', )}
+        handleChange={action('click')}
+        checkedIndividualDefault
       />
-    </CheckboxGroup>
-  </form>
 </Story>
 
 # Enabled Checkbox Group 
@@ -81,7 +85,6 @@ import Checkbox from './Checkbox';
          label="Option 3"
          value="option3"
          name="check3"
-         checkedIndividualDefault
          handleChange={action('click')}
         />
         <Checkbox 

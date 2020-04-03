@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/no-unused-state */
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
@@ -8,16 +9,18 @@ import './checkboxes.less';
 
 class Checkbox extends Component {
   state = {
-    // eslint-disable-next-line react/destructuring-assignment
-    // eslint-disable-next-line react/prop-types
-    // eslint-disable-next-line react/destructuring-assignment
     checked:
-      // eslint-disable-next-line react/destructuring-assignment
-      !!this.props.defaultGroupValue.includes(this.props.value) ||
-      // eslint-disable-next-line react/destructuring-assignment
-      this.props.checkedIndividualDefault,
-    // eslint-disable-next-line react/destructuring-assignment
-    // checked: this.props.checked,
+      this.props.defaultGroupValue &&
+      !!this.props.defaultGroupValue.includes(this.props.value)
+        ? this.props.defaultGroupValue
+        : this.props.checkedIndividualDefault,
+    // ? this.props.defaultGroupValue || this.props.checkedIndividualDefault
+    // : '',
+
+    // this.props.defaultGroupValue &&
+    // !!this.props.defaultGroupValue.includes(this.props.value)
+    //   ? this.props.defaultGroupValue
+    //     this.props.checkedIndividualDefault,
   };
 
   handleChange = event => {
