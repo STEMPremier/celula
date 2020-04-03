@@ -81,6 +81,7 @@ module.exports = {
   // A map from regular expressions to module names that allow to stub out resources with a single module
   moduleNameMapper: {
     '^.+\\.(css|less)$': '<rootDir>/src/test/lessStub.js',
+    '^.+\\.(svg)$': '<rootDir>/src/test/svgStub.js',
     'react-syntax-highlighter/dist/esm/(.*)':
       'react-syntax-highlighter/dist/cjs/$1',
   },

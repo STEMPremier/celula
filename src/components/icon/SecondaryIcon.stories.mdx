@@ -1,0 +1,107 @@
+import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { select, text } from '@storybook/addon-knobs';
+
+import { SecondaryIcon } from '.';
+import { SECONDARY_ICONS } from './types';
+
+<Meta component={SecondaryIcon} title="Components/Molecules/Icons/SecondaryIcon" />
+
+# Icon
+<Description of={SecondaryIcon} />
+<Props of={SecondaryIcon} />
+
+<Story name="All SecondaryIcons" parameters={{ docs: { disable: true }}}>
+  <SecondaryIcon
+    color={select('color', ['primary', 'secondary'], 'primary')}
+    name={select('name', ['', ...SECONDARY_ICONS], 'pdf')}
+    size={select('size', ['small', 'large', 'jumbo'], 'small')}
+    text={text('text', '')}
+  />
+</Story>
+
+### Secondary Icons Small
+<Preview>
+  <Story name="SecondaryIcon Small">
+    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
+      {SECONDARY_ICONS.map((icon, idx) => {
+        return (
+          <div key={`${icon}_${idx}`} style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'40px',width:'40px'}}>
+            <SecondaryIcon name={icon} />
+            <span>{icon}</span>
+          </div>
+        );
+      })}
+    </div>
+  </Story>
+</Preview>
+
+
+### Secondary Icons Large
+<Preview>
+  <Story name="SecondaryIcon Large">
+    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
+      {SECONDARY_ICONS.map((icon, idx) => {
+        return (
+          <div size="large" key={`${icon}_${idx}_large`} style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'50px',width:'50px'}}>
+            <SecondaryIcon name={icon} />
+            <span>{icon}</span>
+          </div>
+        );
+      })}
+    </div>
+  </Story>
+</Preview>
+
+### Secondary Icons Jumbo
+<Preview>
+  <Story name="SecondaryIcon Jumbo">
+    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
+      {SECONDARY_ICONS.map((icon, idx) => {
+        return (
+          <div key={`${icon}_${idx}_jumbo`} style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'65px',width:'65px'}}>
+            <SecondaryIcon name={icon} size="jumbo" />
+            <span>{icon}</span>
+          </div>
+        );
+      })}
+    </div>
+  </Story>
+</Preview>
+
+### Secondary Icons with Text
+<Preview>
+  <Story name="SecondaryIcon with Text">
+    <div>
+      <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
+        <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px'}}>
+          <SecondaryIcon text="A" size="small" />
+          <span>w/text</span>
+        </div>
+        <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px'}}>
+          <SecondaryIcon text="+1" color="secondary" size="small" />
+          <span>w/text</span>
+        </div>
+      </div>
+      <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
+        <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'50px',width:'50px'}}>
+          <SecondaryIcon text="A" size="large" />
+          <span>w/text</span>
+        </div>
+        <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'50px',width:'50px'}}>
+          <SecondaryIcon text="+1" color="secondary" size="large" />
+          <span>w/text</span>
+        </div>
+      </div>
+      <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
+        <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'65px',width:'65px'}}>
+          <SecondaryIcon text="A" size="jumbo" />
+          <span>with text</span>
+        </div>
+        <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'65px',width:'65px'}}>
+          <SecondaryIcon text="+1" color="secondary" size="jumbo" />
+          <span>with text</span>
+        </div>
+      </div>
+    </div>
+  </Story>
+</Preview>
