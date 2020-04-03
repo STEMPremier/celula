@@ -33,6 +33,7 @@ class Checkbox extends Component {
     const {
       className,
       disabled,
+      error,
       name,
       label,
       value,
@@ -46,6 +47,7 @@ class Checkbox extends Component {
       'ce-checkbox',
       {
         'ce-checkbox--disabled': disabled,
+        'ce-checkbox--error': error,
       },
       className,
     );
@@ -66,6 +68,12 @@ class Checkbox extends Component {
           />
           <label htmlFor={id}>{label}</label>
           <div className="ce-checkbox--background" />
+          <div className="ce-checkbox--error-box-wrapper">
+            <div className="ce-checkbox--arrow" />
+            <div className="ce-checkbox--error-box">
+              <div className="ce-checkbox--error-box-text">{error}</div>
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -85,6 +93,10 @@ Checkbox.propTypes = {
    * Make the RadioGroup inactive.
    */
   disabled: PropTypes.bool,
+  /**
+   * Error message on single `<Checkbox />'
+   */
+  error: PropTypes.string,
   /**
    * Need to assign a matching name to each `<Checkbox />` if it is being used in the `<CheckboxGroup />`.  In  a `<CheckboxGroup />`, each individual `<Checkbox />` should have the same name.
    */
@@ -118,7 +130,7 @@ Checkbox.defaultProps = {
   name: '',
   disabled: false,
   handleChange: () => {},
-  // error: ''
+  error: '',
 };
 
 export default Checkbox;
