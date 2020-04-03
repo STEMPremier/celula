@@ -1,4 +1,5 @@
 import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { select } from '@storybook/addon-knobs';
 
 import { ProductIcon } from '.';
 import { PRODUCT_ICONS } from './types';
@@ -8,6 +9,13 @@ import { PRODUCT_ICONS } from './types';
 # Icon
 <Description of={ProductIcon} />
 <Props of={ProductIcon} />
+
+<Story name="All ProductIcons" parameters={{ docs: { disable: true }}}>
+  <ProductIcon
+    name={select('name', PRODUCT_ICONS, 'college')}
+    size={select('size', ['small', 'large', 'jumbo'], 'small')}
+  />
+</Story>
 
 ### Product Icons Small
 <Preview>

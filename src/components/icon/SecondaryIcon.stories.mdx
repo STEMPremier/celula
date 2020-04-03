@@ -1,4 +1,5 @@
 import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { select, text } from '@storybook/addon-knobs';
 
 import { SecondaryIcon } from '.';
 import { SECONDARY_ICONS } from './types';
@@ -8,6 +9,15 @@ import { SECONDARY_ICONS } from './types';
 # Icon
 <Description of={SecondaryIcon} />
 <Props of={SecondaryIcon} />
+
+<Story name="All SecondaryIcons" parameters={{ docs: { disable: true }}}>
+  <SecondaryIcon
+    color={select('color', ['primary', 'secondary'], 'primary')}
+    name={select('name', ['', ...SECONDARY_ICONS], 'pdf')}
+    size={select('size', ['small', 'large', 'jumbo'], 'small')}
+    text={text('text', '')}
+  />
+</Story>
 
 ### Secondary Icons Small
 <Preview>
