@@ -98,7 +98,7 @@ import Checkbox from './Checkbox';
   </Story>
 </Preview>
 
-# Disabled Checkbox
+# Disabled Individual Checkbox
 <Preview>
   <Story name="Disabled Checkbox">
     <form>
@@ -169,30 +169,50 @@ import Checkbox from './Checkbox';
 
 # Error Checkbox Group 
 <Preview>
+  <Story name="Error Individual Checkbox">
+  
+        <Checkbox 
+         label="Option 1"
+         value="option1"
+        />
+  </Story>
+</Preview>
+
+# Error Checkbox Group 
+<Preview>
   <Story name="Error Checkbox Group">
     <form>
       <CheckboxGroup 
         label="Label Goes Here"
-        name="checkboxGroupName4"
-        handleChange={action('changed')}
-        form="formName4"
+        name="checkboxGroupName1"
+        handleChangeGroup={action('click')}
+        form="formName1"
+        defaultGroupValue={["option1", "option2"]}
         error="Error message"
       >
         <Checkbox 
          label="Option 1"
          value="option1"
+         name="check1"
+         handleChange={action('click')}
         />
         <Checkbox 
           label="Option 2"
           value="option2"
+          name="check2"
+          handleChange={action('click')}
         />
         <Checkbox 
          label="Option 3"
          value="option3"
+         name="check3"
+         handleChange={action('click')}
         />
         <Checkbox 
           label="Option 4"
           value="option4"
+          name="check4"
+          handleChange={action('click')}
         />
       </CheckboxGroup>
     </form>
