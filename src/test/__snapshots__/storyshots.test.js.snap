@@ -1389,6 +1389,20 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
 </div>
 `;
 
+exports[`Storyshots Components/Molecules/Icons/ProductIcon All ProductIcons 1`] = `
+<span
+  className="ce-icon ce-icon__product ce-icon--small"
+>
+  <svg
+    className="ce-icon--white"
+  >
+    <use
+      xlinkHref="#icons_product-college"
+    />
+  </svg>
+</span>
+`;
+
 exports[`Storyshots Components/Molecules/Icons/ProductIcon ProductIcon Jumbo 1`] = `
 <div
   style={
@@ -3588,6 +3602,20 @@ exports[`Storyshots Components/Molecules/Icons/ProductIcon ProductIcon Small 1`]
 </div>
 `;
 
+exports[`Storyshots Components/Molecules/Icons/SecondaryIcon All SecondaryIcons 1`] = `
+<span
+  className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+>
+  <svg
+    className="ce-icon--white"
+  >
+    <use
+      xlinkHref="#icons_secondary-pdf"
+    />
+  </svg>
+</span>
+`;
+
 exports[`Storyshots Components/Molecules/Icons/SecondaryIcon SecondaryIcon Jumbo 1`] = `
 <div
   style={
@@ -4279,6 +4307,20 @@ exports[`Storyshots Components/Molecules/Icons/SecondaryIcon SecondaryIcon with 
     </div>
   </div>
 </div>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/SystemIcon All SystemIcons 1`] = `
+<span
+  className="ce-icon ce-icon__system"
+>
+  <svg
+    className="ce-icon--red"
+  >
+    <use
+      xlinkHref="#icons_system-share"
+    />
+  </svg>
+</span>
 `;
 
 exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcon Colors 1`] = `
