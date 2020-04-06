@@ -10,6 +10,7 @@ class CheckboxGroup extends Component {
     checkedValues: this.props.defaultGroupValue,
   };
 
+  // eslint-disable-next-line no-unused-vars
   handleChangeGroup = event => {
     const { checkedValues } = this.state;
     let values = checkedValues;
@@ -19,6 +20,7 @@ class CheckboxGroup extends Component {
     } else {
       values = values.filter(arrayValue => arrayValue !== event.target.value);
     }
+
     this.setState({ checkedValues: values });
   };
 

@@ -18,8 +18,6 @@ class Checkbox extends Component {
 
   handleChange = event => {
     this.setState({ checked: event.target.checked });
-    // eslint-disable-next-line react/destructuring-assignment
-    this.props.handleChange();
   };
 
   render() {
@@ -99,7 +97,7 @@ Checkbox.propTypes = {
   /**
    * The handleChange function sets the checked state of the individual `<Checkbox />` and also trigger the handleChangeGroup of the `<CheckboxGroup />`.
    */
-  handleChange: PropTypes.func,
+  // handleChange: PropTypes.func,
   /**
    * The form value is over-written by any form value passed into the `<CheckboxGroup />`.
    */
@@ -124,7 +122,7 @@ Checkbox.defaultProps = {
   checkedIndividualDefault: false,
   name: '',
   disabled: false,
-  handleChange: () => {},
+  // handleChange: () => {},
   error: '',
 };
 
