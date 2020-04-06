@@ -14,13 +14,6 @@ class Checkbox extends Component {
       !!this.props.defaultGroupValue.includes(this.props.value)
         ? this.props.defaultGroupValue
         : this.props.checkedIndividualDefault,
-    // ? this.props.defaultGroupValue || this.props.checkedIndividualDefault
-    // : '',
-
-    // this.props.defaultGroupValue &&
-    // !!this.props.defaultGroupValue.includes(this.props.value)
-    //   ? this.props.defaultGroupValue
-    //     this.props.checkedIndividualDefault,
   };
 
   handleChange = event => {

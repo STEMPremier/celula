@@ -24,13 +24,10 @@ class CheckboxGroup extends Component {
 
   renderChildren = () => {
     const { children, name, defaultGroupValue } = this.props;
-    // const { checked } = this.state;
 
     return React.Children.map(children, child => {
       const props = {
-        // checked: checked === this.props.value,
         handleChange: this.handleChange,
-        // eslint-disable-next-line object-shorthand
         defaultGroupValue,
         name,
       };
