@@ -45,7 +45,7 @@ class CheckboxGroup extends Component {
       form,
       label,
       name,
-      defaultGroupValue,
+      // defaultGroupValue,
       // validators
     } = this.props;
 
@@ -63,7 +63,6 @@ class CheckboxGroup extends Component {
         className={classes}
         name={name}
         form={form}
-        defaultGroupValue={defaultGroupValue}
         onChange={this.handleChangeGroup}
         disabled={disabled}
       >
@@ -118,7 +117,7 @@ CheckboxGroup.defaultProps = {
   disabled: false,
   error: '',
   form: '',
-  defaultGroupValue: '',
+  defaultGroupValue: [],
   // validators: [],
 };
 

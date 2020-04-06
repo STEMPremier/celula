@@ -1,6 +1,3 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/no-unused-state */
-/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -12,7 +9,8 @@ class Checkbox extends Component {
     checked:
       this.props.defaultGroupValue &&
       !!this.props.defaultGroupValue.includes(this.props.value)
-        ? this.props.defaultGroupValue
+        ? // eslint-disable-next-line react/destructuring-assignment
+          this.props.defaultGroupValue
         : this.props.checkedIndividualDefault,
   };
 
@@ -21,16 +19,7 @@ class Checkbox extends Component {
   };
 
   render() {
-    const {
-      className,
-      disabled,
-      error,
-      name,
-      label,
-      value,
-      form,
-      checkedIndividualDefault,
-    } = this.props;
+    const { className, disabled, error, name, label, value, form } = this.props;
 
     const { checked } = this.state;
     const id = `${name}_${value}`;
@@ -50,9 +39,8 @@ class Checkbox extends Component {
             type="checkbox"
             value={value}
             id={id}
-            checkedIndividualDefault={checkedIndividualDefault}
             checked={checked}
-            onClick={this.handleChange}
+            onChange={this.handleChange}
             disabled={disabled}
             name={name}
             form={form}
@@ -91,7 +79,7 @@ Checkbox.propTypes = {
    */
   error: PropTypes.string,
   /**
-   * Need to assign a matching name to each `<Checkbox />` if it is being used in the `<CheckboxGroup />`.  In  a `<CheckboxGroup />`, each individual `<Checkbox />` should have the same name.
+   * Need to assign a matching name to each `<Checkbox />` if it is being used outside of the `<CheckboxGroup />`.  In  a `<CheckboxGroup />`, each individual `<Checkbox />` will have the same name, but that will come from the `<CheckboxGroup />`.
    */
   name: PropTypes.string,
   /**

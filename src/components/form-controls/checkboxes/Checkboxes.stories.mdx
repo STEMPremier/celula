@@ -54,6 +54,7 @@ import Checkbox from './Checkbox';
         className={text('className', 'classNameExample')}
         checkedIndividualDefault={text('checkedIndividualDefault', )}
         handleChange={action('click')}
+        name={text('name', 'checkbox name 1')}
         checkedIndividualDefault
       />
 </Story>
@@ -72,25 +73,21 @@ import Checkbox from './Checkbox';
         <Checkbox 
          label="Option 1"
          value="option1"
-         name="check1"
          handleChange={action('click')}
         />
         <Checkbox 
           label="Option 2"
           value="option2"
-          name="check2"
           handleChange={action('click')}
         />
         <Checkbox 
          label="Option 3"
          value="option3"
-         name="check3"
          handleChange={action('click')}
         />
         <Checkbox 
           label="Option 4"
           value="option4"
-          name="check4"
           handleChange={action('click')}
         />
       </CheckboxGroup>
@@ -111,23 +108,19 @@ import Checkbox from './Checkbox';
         <Checkbox 
          label="Option 1"
          value="option1"
-         name="check1"
          disabled
         />
         <Checkbox 
           label="Option 2"
           value="option2"
-          name="check2"
         />
         <Checkbox 
          label="Option 3"
          value="option3"
-         name="check3"
         />
         <Checkbox 
           label="Option 4"
           value="option4"
-          name="check4"
         />
       </CheckboxGroup>
     </form>
@@ -167,14 +160,13 @@ import Checkbox from './Checkbox';
   </Story>
 </Preview>
 
-# Error Checkbox Individual
+# Error Checkbox Group
 <Preview>
   <Story name="Error Individual Checkbox">
         <Checkbox 
          label="Option 1"
          value="option1"
          error="Error message"
-         checkedIndividualDefault
         />
   </Story>
 </Preview>
@@ -194,25 +186,21 @@ import Checkbox from './Checkbox';
         <Checkbox 
          label="Option 1"
          value="option1"
-         name="check1"
          handleChange={action('click')}
         />
         <Checkbox 
           label="Option 2"
           value="option2"
-          name="check2"
           handleChange={action('click')}
         />
         <Checkbox 
          label="Option 3"
          value="option3"
-         name="check3"
          handleChange={action('click')}
         />
         <Checkbox 
           label="Option 4"
           value="option4"
-          name="check4"
           handleChange={action('click')}
         />
       </CheckboxGroup>
