@@ -47,7 +47,7 @@ class Checkbox extends Component {
       'ce-checkbox',
       {
         'ce-checkbox--disabled': disabled,
-        'ce-checkbox--error-box-wrapper': error,
+        'ce-checkbox--individual-checkbox-error': error,
       },
       className,
     );

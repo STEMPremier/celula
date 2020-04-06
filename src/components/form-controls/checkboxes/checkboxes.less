@@ -94,6 +94,33 @@
     input:checked:active ~ .ce-checkbox--background {
       background-color: #b2e7ff;
     }
+
+    .ce-checkbox--error-box-wrapper {
+      width: 206px;
+      color: @error-text;
+      .ce-checkbox--arrow {
+        width: 0;
+        height: 5;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        position: center;
+        // border-bottom: 5px solid #cc0043;
+        border-bottom: 5px solid #cc0043;
+        margin-left: 48%;
+      }
+      .ce-checkbox--error-box {
+        height: 56px;
+        width: 206px;
+        background-color: #cc0043;
+        border-radius: 5px;
+        .ce-checkbox--error-box-text {
+          color: white;
+          text-align: center;
+          padding-top: 20px;
+        }
+      }
+    }
+    // }
   }
   &.ce-checkbox--disabled {
     pointer-events: none;
@@ -109,34 +136,17 @@
       }
     }
   }
+}
 
-  .ce-checkbox--error-box-wrapper {
-    width: 206px;
-    .ce-checkbox--arrow {
-      width: 0;
-      height: 5;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      position: center;
-      // border-bottom: 5px solid #cc0043;
-      border-bottom: 5px solid #cc0043;
-      margin-left: 48%;
-    }
-    .ce-checkbox--error-box {
-      height: 56px;
-      width: 206px;
-      background-color: #cc0043;
-      border-radius: 5px;
-      .ce-checkbox--error-box-text {
-        color: white;
-        text-align: center;
-        padding-top: 20px;
-      }
-    }
-  }
+.ce-checkbox--individual-checkbox-error {
+  .ce-checkbox--error;
+  border: none;
 }
 
 .ce-checkbox--error {
+  & .ce-checkbox--individual-checkbox-error {
+    background-color: @green;
+  }
   // error mode not checked
   border: 0.5rem solid @error-text;
   border-radius: 0.5rem;
