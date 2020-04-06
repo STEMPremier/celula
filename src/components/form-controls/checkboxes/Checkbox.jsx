@@ -47,7 +47,7 @@ class Checkbox extends Component {
       'ce-checkbox',
       {
         'ce-checkbox--disabled': disabled,
-        'ce-checkbox--error': error,
+        'ce-checkbox--error-box-wrapper': error,
       },
       className,
     );
@@ -68,12 +68,14 @@ class Checkbox extends Component {
           />
           <label htmlFor={id}>{label}</label>
           <div className="ce-checkbox--background" />
-          <div className="ce-checkbox--error-box-wrapper">
-            <div className="ce-checkbox--arrow" />
-            <div className="ce-checkbox--error-box">
-              <div className="ce-checkbox--error-box-text">{error}</div>
+          {error && (
+            <div className="ce-checkbox--error-box-wrapper">
+              <div className="ce-checkbox--arrow" />
+              <div className="ce-checkbox--error-box">
+                <div className="ce-checkbox--error-box-text">{error}</div>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     );
