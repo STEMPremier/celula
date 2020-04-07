@@ -99,10 +99,6 @@ Checkbox.propTypes = {
    */
   name: PropTypes.string,
   /**
-   * The handleChange function sets the checked state of the individual `<Checkbox />` and also trigger the handleChangeGroup of the `<CheckboxGroup />`.
-   */
-  // handleChange: PropTypes.func,
-  /**
    * The form value is over-written by any form value passed into the `<CheckboxGroup />`.
    */
   form: PropTypes.string,
@@ -126,7 +122,6 @@ Checkbox.defaultProps = {
   checkedIndividualDefault: false,
   name: '',
   disabled: false,
-  // handleChange: () => {},
   error: '',
 };
 

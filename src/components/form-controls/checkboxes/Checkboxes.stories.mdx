@@ -19,7 +19,7 @@ import Checkbox from './Checkbox';
 <Story name="Checkbox Group" parameters={{docs: {disable: true}}}>
   <CheckboxGroup 
     className={text('className', '')}
-    handleChange={action('click')}
+    handleChangeGroup={action('click')}
     label={text('label', 'Default Fieldset Label')}
     name={text('name', 'Default Name for Checkbox Group')}
     form={text('form', '')}
@@ -53,7 +53,6 @@ import Checkbox from './Checkbox';
         value={text('value', 'value1')}
         className={text('className', 'classNameExample')}
         checkedIndividualDefault={text('checkedIndividualDefault', )}
-        handleChange={action('click')}
         name={text('name', 'checkbox name 1')}
         checkedIndividualDefault
       />
@@ -73,22 +72,18 @@ import Checkbox from './Checkbox';
         <Checkbox 
          label="Option 1"
          value="option1"
-         handleChange={action('click')}
         />
         <Checkbox 
           label="Option 2"
           value="option2"
-          handleChange={action('click')}
         />
         <Checkbox 
          label="Option 3"
          value="option3"
-         handleChange={action('click')}
         />
         <Checkbox 
           label="Option 4"
           value="option4"
-          handleChange={action('click')}
         />
       </CheckboxGroup>
     </form>
@@ -186,22 +181,18 @@ import Checkbox from './Checkbox';
         <Checkbox 
          label="Option 1"
          value="option1"
-         handleChange={action('click')}
         />
         <Checkbox 
           label="Option 2"
           value="option2"
-          handleChange={action('click')}
         />
         <Checkbox 
          label="Option 3"
          value="option3"
-         handleChange={action('click')}
         />
         <Checkbox 
           label="Option 4"
           value="option4"
-          handleChange={action('click')}
         />
       </CheckboxGroup>
     </form>

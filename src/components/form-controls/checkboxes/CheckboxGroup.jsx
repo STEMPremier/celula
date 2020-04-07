@@ -16,19 +16,12 @@ class CheckboxGroup extends Component {
   handleChangeGroup = event => {
     const { checkedValues } = this.state;
     let values = checkedValues;
-
     if (event.target.checked) {
       values.push(event.target.value);
     } else {
       values = values.filter(arrayValue => arrayValue !== event.target.value);
     }
-
     this.setState({ checkedValues: values });
-    // eslint-disable-next-line react/destructuring-assignment
-    // eslint-disable-next-line no-console
-    // console.log('checkedValues', checkedValues);
-    console.log('event.target.checked', event.target.checked);
-    // console.log(this.state.checked);
   };
 
   renderChildren = () => {
@@ -36,7 +29,6 @@ class CheckboxGroup extends Component {
 
     return React.Children.map(children, child => {
       const props = {
-        handleChangeGroup: this.handleChangeGroup,
         defaultGroupValue,
         name,
       };
@@ -52,7 +44,6 @@ class CheckboxGroup extends Component {
       form,
       label,
       name,
-      // defaultGroupValue,
       // validators
     } = this.props;
 
@@ -85,7 +76,7 @@ class CheckboxGroup extends Component {
 
 CheckboxGroup.propTypes = {
   /**
-   * DOUBLE CHECK WITH IAN BECAUSE NOT ACTUALLY IN THE STORY
+   * This is the `<Checkbox />` for the `<CheckboxGroup />`;
    */
   children: PropTypes.node.isRequired,
   /**
