@@ -1,3 +1,6 @@
+/* eslint-disable no-console */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -6,16 +9,29 @@ import './checkboxes.less';
 
 class Checkbox extends Component {
   state = {
-    checked:
-      this.props.defaultGroupValue &&
-      !!this.props.defaultGroupValue.includes(this.props.value)
-        ? // eslint-disable-next-line react/destructuring-assignment
-          this.props.defaultGroupValue
-        : this.props.checkedIndividualDefault,
+    checked: false,
   };
 
+  componentDidMount() {
+    if (
+      this.props.defaultGroupValue &&
+      this.props.defaultGroupValue.includes(this.props.value)
+    ) {
+      this.setState({
+        checked: true,
+      });
+    }
+    if (this.props.checkedIndividualDefault) {
+      this.setState({
+        checked: true,
+      });
+    }
+  }
+
   handleChange = event => {
-    this.setState({ checked: event.target.checked });
+    this.setState({
+      checked: event.target.checked,
+    });
   };
 
   render() {

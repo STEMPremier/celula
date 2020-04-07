@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -22,6 +24,11 @@ class CheckboxGroup extends Component {
     }
 
     this.setState({ checkedValues: values });
+    // eslint-disable-next-line react/destructuring-assignment
+    // eslint-disable-next-line no-console
+    // console.log('checkedValues', checkedValues);
+    console.log('event.target.checked', event.target.checked);
+    // console.log(this.state.checked);
   };
 
   renderChildren = () => {
@@ -29,7 +36,7 @@ class CheckboxGroup extends Component {
 
     return React.Children.map(children, child => {
       const props = {
-        handleChange: this.handleChange,
+        handleChangeGroup: this.handleChangeGroup,
         defaultGroupValue,
         name,
       };
