@@ -13,8 +13,16 @@ describe('<CheckboxGroup />', () => {
         <CheckboxGroup
           label="CheckboxGroup Test Label"
           name="CheckboxGroup Test Name"
+          handleChangeGroup={() => {}}
         >
-          <Checkbox label="Checkbox Test Label" value="Checkbox Value Here" />
+          <Checkbox
+            label="Checkbox Test Label 1"
+            value="Checkbox Value Here 1"
+          />
+          <Checkbox
+            label="Checkbox Test Label 2"
+            value="Checkbox Value Here 2"
+          />
         </CheckboxGroup>,
       );
       expect(toJson(wrapper)).toMatchSnapshot();

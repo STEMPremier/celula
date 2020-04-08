@@ -3,7 +3,6 @@
 exports[`<CheckboxGroup /> render() render the CheckboxGroup component 1`] = `
 <fieldset
   className="ce-checkbox"
-  defaultValue=""
   disabled={false}
   form=""
   name="CheckboxGroup Test Name"
@@ -13,15 +12,28 @@ exports[`<CheckboxGroup /> render() render the CheckboxGroup component 1`] = `
     CheckboxGroup Test Label
   </legend>
   <Checkbox
-    checked={false}
+    checkedIndividualDefault={false}
     className=""
-    defaultValue=""
+    defaultGroupValue={Array []}
     disabled={false}
+    error=""
     form=""
     key=".0"
-    label="Checkbox Test Label"
+    label="Checkbox Test Label 1"
     name="CheckboxGroup Test Name"
-    value="Checkbox Value Here"
+    value="Checkbox Value Here 1"
+  />
+  <Checkbox
+    checkedIndividualDefault={false}
+    className=""
+    defaultGroupValue={Array []}
+    disabled={false}
+    error=""
+    form=""
+    key=".1"
+    label="Checkbox Test Label 2"
+    name="CheckboxGroup Test Name"
+    value="Checkbox Value Here 2"
   />
 </fieldset>
 `;

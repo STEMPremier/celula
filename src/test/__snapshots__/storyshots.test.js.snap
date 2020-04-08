@@ -484,52 +484,38 @@ exports[`Storyshots Components/Atoms/Button Button Types 1`] = `
 `;
 
 exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Checkbox 1`] = `
-<form>
-  <fieldset
-    className="ce-checkbox"
-    defaultValue=""
-    disabled={false}
-    form=""
-    name="name for checkbox"
-    onChange={[Function]}
+<div
+  className="ce-checkbox classNameExample"
+>
+  <div
+    className="ce-checkbox--box"
   >
-    <legend>
-      label for checkbox
-    </legend>
-    <div
-      className="ce-checkbox"
+    <input
+      checked={true}
+      disabled={false}
+      form=""
+      id="checkbox name 1_value1"
+      name="checkbox name 1"
+      onChange={[Function]}
+      type="checkbox"
+      value="value1"
+    />
+    <label
+      htmlFor="checkbox name 1_value1"
     >
-      <div
-        className="ce-checkbox--box"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          form=""
-          id="name for checkbox_value1"
-          name="name for checkbox"
-          onChange={[Function]}
-          type="checkbox"
-          value="value1"
-        />
-        <label
-          htmlFor="name for checkbox_value1"
-        >
-          Default Checkbox Label 1
-        </label>
-        <div
-          className="ce-checkbox--background"
-        />
-      </div>
-    </div>
-  </fieldset>
-</form>
+      Default Checkbox Label 1
+    </label>
+    <div
+      className="ce-checkbox--background"
+    />
+    
+  </div>
+</div>
 `;
 
 exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Checkbox Group 1`] = `
 <fieldset
   className="ce-checkbox"
-  defaultValue=""
   disabled={false}
   form=""
   name="Default Name for Checkbox Group"
@@ -537,6 +523,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Checkbox G
 >
   <legend>
     Default Fieldset Label
+    
   </legend>
   <div
     className="ce-checkbox"
@@ -562,6 +549,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Checkbox G
       <div
         className="ce-checkbox--background"
       />
+      
     </div>
   </div>
   <div
@@ -588,6 +576,61 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Checkbox G
       <div
         className="ce-checkbox--background"
       />
+      
+    </div>
+  </div>
+  <div
+    className="ce-checkbox"
+  >
+    <div
+      className="ce-checkbox--box"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="Default Name for Checkbox Group_value 3"
+        name="Default Name for Checkbox Group"
+        onChange={[Function]}
+        type="checkbox"
+        value="value 3"
+      />
+      <label
+        htmlFor="Default Name for Checkbox Group_value 3"
+      >
+        label 3
+      </label>
+      <div
+        className="ce-checkbox--background"
+      />
+      
+    </div>
+  </div>
+  <div
+    className="ce-checkbox"
+  >
+    <div
+      className="ce-checkbox--box"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="Default Name for Checkbox Group_value 4"
+        name="Default Name for Checkbox Group"
+        onChange={[Function]}
+        type="checkbox"
+        value="value 4"
+      />
+      <label
+        htmlFor="Default Name for Checkbox Group_value 4"
+      >
+        label 4
+      </label>
+      <div
+        className="ce-checkbox--background"
+      />
+      
     </div>
   </div>
 </fieldset>
@@ -597,12 +640,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Disabled C
 <form>
   <fieldset
     className="ce-checkbox"
-    defaultValue={
-      Array [
-        "option1",
-        "option2",
-      ]
-    }
     disabled={false}
     form="formName2"
     name="checkboxGroupName2"
@@ -610,6 +647,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Disabled C
   >
     <legend>
       Label Goes Here
+      
     </legend>
     <div
       className="ce-checkbox ce-checkbox--disabled"
@@ -635,6 +673,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Disabled C
         <div
           className="ce-checkbox--background"
         />
+        
       </div>
     </div>
     <div
@@ -661,6 +700,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Disabled C
         <div
           className="ce-checkbox--background"
         />
+        
       </div>
     </div>
     <div
@@ -687,6 +727,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Disabled C
         <div
           className="ce-checkbox--background"
         />
+        
       </div>
     </div>
     <div
@@ -713,6 +754,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Disabled C
         <div
           className="ce-checkbox--background"
         />
+        
       </div>
     </div>
   </fieldset>
@@ -723,7 +765,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Disabled C
 <form>
   <fieldset
     className="ce-checkbox ce-checkbox--disabled"
-    defaultValue="option1"
     disabled={true}
     form="formName3"
     name="checkboxGroupName3"
@@ -731,6 +772,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Disabled C
   >
     <legend>
       Label Goes Here
+      
     </legend>
     <div
       className="ce-checkbox"
@@ -756,6 +798,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Disabled C
         <div
           className="ce-checkbox--background"
         />
+        
       </div>
     </div>
     <div
@@ -765,7 +808,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Disabled C
         className="ce-checkbox--box"
       >
         <input
-          checked={false}
+          checked={true}
           disabled={false}
           form=""
           id="checkboxGroupName3_option2"
@@ -782,6 +825,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Disabled C
         <div
           className="ce-checkbox--background"
         />
+        
       </div>
     </div>
     <div
@@ -808,6 +852,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Disabled C
         <div
           className="ce-checkbox--background"
         />
+        
       </div>
     </div>
     <div
@@ -834,6 +879,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Disabled C
         <div
           className="ce-checkbox--background"
         />
+        
       </div>
     </div>
   </fieldset>
@@ -844,12 +890,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Enabled Ch
 <form>
   <fieldset
     className="ce-checkbox"
-    defaultValue={
-      Array [
-        "option1",
-        "option2",
-      ]
-    }
     disabled={false}
     form="formName1"
     name="checkboxGroupName1"
@@ -857,6 +897,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Enabled Ch
   >
     <legend>
       Label Goes Here
+      
     </legend>
     <div
       className="ce-checkbox"
@@ -882,6 +923,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Enabled Ch
         <div
           className="ce-checkbox--background"
         />
+        
       </div>
     </div>
     <div
@@ -908,6 +950,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Enabled Ch
         <div
           className="ce-checkbox--background"
         />
+        
       </div>
     </div>
     <div
@@ -934,6 +977,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Enabled Ch
         <div
           className="ce-checkbox--background"
         />
+        
       </div>
     </div>
     <div
@@ -960,6 +1004,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Enabled Ch
         <div
           className="ce-checkbox--background"
         />
+        
       </div>
     </div>
   </fieldset>
@@ -970,14 +1015,18 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Error Chec
 <form>
   <fieldset
     className="ce-checkbox ce-checkbox--error"
-    defaultValue=""
     disabled={false}
-    form="formName4"
-    name="checkboxGroupName4"
+    form="formName1"
+    name="checkboxGroupName1"
     onChange={[Function]}
   >
     <legend>
       Label Goes Here
+      <div
+        className="ce-checkbox--error-text"
+      >
+        Error message
+      </div>
     </legend>
     <div
       className="ce-checkbox"
@@ -986,23 +1035,24 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Error Chec
         className="ce-checkbox--box"
       >
         <input
-          checked={false}
+          checked={true}
           disabled={false}
           form=""
-          id="checkboxGroupName4_option1"
-          name="checkboxGroupName4"
+          id="checkboxGroupName1_option1"
+          name="checkboxGroupName1"
           onChange={[Function]}
           type="checkbox"
           value="option1"
         />
         <label
-          htmlFor="checkboxGroupName4_option1"
+          htmlFor="checkboxGroupName1_option1"
         >
           Option 1
         </label>
         <div
           className="ce-checkbox--background"
         />
+        
       </div>
     </div>
     <div
@@ -1012,23 +1062,24 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Error Chec
         className="ce-checkbox--box"
       >
         <input
-          checked={false}
+          checked={true}
           disabled={false}
           form=""
-          id="checkboxGroupName4_option2"
-          name="checkboxGroupName4"
+          id="checkboxGroupName1_option2"
+          name="checkboxGroupName1"
           onChange={[Function]}
           type="checkbox"
           value="option2"
         />
         <label
-          htmlFor="checkboxGroupName4_option2"
+          htmlFor="checkboxGroupName1_option2"
         >
           Option 2
         </label>
         <div
           className="ce-checkbox--background"
         />
+        
       </div>
     </div>
     <div
@@ -1041,20 +1092,21 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Error Chec
           checked={false}
           disabled={false}
           form=""
-          id="checkboxGroupName4_option3"
-          name="checkboxGroupName4"
+          id="checkboxGroupName1_option3"
+          name="checkboxGroupName1"
           onChange={[Function]}
           type="checkbox"
           value="option3"
         />
         <label
-          htmlFor="checkboxGroupName4_option3"
+          htmlFor="checkboxGroupName1_option3"
         >
           Option 3
         </label>
         <div
           className="ce-checkbox--background"
         />
+        
       </div>
     </div>
     <div
@@ -1067,24 +1119,70 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Error Chec
           checked={false}
           disabled={false}
           form=""
-          id="checkboxGroupName4_option4"
-          name="checkboxGroupName4"
+          id="checkboxGroupName1_option4"
+          name="checkboxGroupName1"
           onChange={[Function]}
           type="checkbox"
           value="option4"
         />
         <label
-          htmlFor="checkboxGroupName4_option4"
+          htmlFor="checkboxGroupName1_option4"
         >
           Option 4
         </label>
         <div
           className="ce-checkbox--background"
         />
+        
       </div>
     </div>
   </fieldset>
 </form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Error Individual Checkbox 1`] = `
+<div
+  className="ce-checkbox ce-checkbox--individual-checkbox-error"
+>
+  <div
+    className="ce-checkbox--box"
+  >
+    <input
+      checked={true}
+      disabled={false}
+      form=""
+      id="_option1"
+      name=""
+      onChange={[Function]}
+      type="checkbox"
+      value="option1"
+    />
+    <label
+      htmlFor="_option1"
+    >
+      Option 1
+    </label>
+    <div
+      className="ce-checkbox--background"
+    />
+    <div
+      className="ce-checkbox--error-box-wrapper"
+    >
+      <div
+        className="ce-checkbox--arrow"
+      />
+      <div
+        className="ce-checkbox--error-box"
+      >
+        <div
+          className="ce-checkbox--error-box-text"
+        >
+          Error message
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Storyshots Components/Molecules/Form Controls/RadioGroup Disabled Radio Group 1`] = `
