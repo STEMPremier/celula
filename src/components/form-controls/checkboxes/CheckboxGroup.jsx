@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -12,7 +11,6 @@ class CheckboxGroup extends Component {
     checkedValues: this.props.defaultGroupValue,
   };
 
-  // eslint-disable-next-line no-unused-vars
   handleChangeGroup = event => {
     const { checkedValues } = this.state;
     let values = checkedValues;
@@ -26,7 +24,6 @@ class CheckboxGroup extends Component {
 
   renderChildren = () => {
     const { children, name, defaultGroupValue } = this.props;
-
     return React.Children.map(children, child => {
       const props = {
         defaultGroupValue,

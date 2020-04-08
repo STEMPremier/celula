@@ -5,7 +5,7 @@ import { Description,
   Story,
 } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { boolean, select, text } from '@storybook/addon-knobs';
+import { boolean, select, text, array } from '@storybook/addon-knobs';
 
 import CheckboxGroup from './CheckboxGroup';
 import Checkbox from './Checkbox';
@@ -22,7 +22,8 @@ import Checkbox from './Checkbox';
     handleChangeGroup={action('click')}
     label={text('label', 'Default Fieldset Label')}
     name={text('name', 'Default Name for Checkbox Group')}
-    form={text('form', '')}
+    form={text('form', 'Form 1')}
+    defaultGroupValue={array('defaultGroupValue', '["option1", "option2"]')}
     >
     <Checkbox 
       label='label 1'
@@ -162,6 +163,7 @@ import Checkbox from './Checkbox';
          label="Option 1"
          value="option1"
          error="Error message"
+         checkedIndividualDefault
         />
   </Story>
 </Preview>
