@@ -52,19 +52,21 @@ class RadioGroup extends Component {
     );
 
     return (
-      <fieldset
-        className={classes}
-        name={name}
-        form={form}
-        onChange={this.handleChange}
-        disabled={disabled}
-      >
-        <legend>
-          {label}
-          {error && <div className="ce-radio-error--text">{error}</div>}
-        </legend>
-        {this.renderChildren()}
-      </fieldset>
+      <div className="ce-radio--group">
+        <fieldset
+          className={classes}
+          name={name}
+          form={form}
+          onChange={this.handleChange}
+          disabled={disabled}
+        >
+          <legend>
+            {label}
+            {error && <div className="ce-radio-error--text">{error}</div>}
+          </legend>
+          {this.renderChildren()}
+        </fieldset>
+      </div>
     );
   }
 }
