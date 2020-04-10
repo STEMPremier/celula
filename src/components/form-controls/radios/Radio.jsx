@@ -23,7 +23,7 @@ const Radio = props => {
           value={value}
           name={name}
           id={id}
-          checked={checked}
+          defaultChecked={checked}
           disabled={disabled}
         />
         <label htmlFor={id}>{label}</label>
@@ -46,6 +46,11 @@ Radio.propTypes = {
    */
   disabled: PropTypes.bool,
   /**
+   * This component is to be treated as a radio button in `<FormControlGroup />`.
+   * @ignore
+   */
+  isA: PropTypes.string, // eslint-disable-line react/no-unused-prop-types
+  /**
    * Need to assign a matching name to each `<Radio />` in the `<RadioGroup />`.
    * @ignore
    */
@@ -65,9 +70,10 @@ Radio.propTypes = {
 };
 
 Radio.defaultProps = {
-  className: '',
   checked: false,
+  className: '',
   disabled: false,
+  isA: 'radio',
   name: undefined,
 };
 
