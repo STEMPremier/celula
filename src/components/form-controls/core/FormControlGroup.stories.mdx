@@ -1,0 +1,37 @@
+import { Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from '@storybook/addon-docs/blocks';
+
+import FormControlGroup from '.';
+import { Radio } from '../radios';
+
+<Meta component={FormControlGroup} title="Components/Molecules/Form Controls/FormControlGroup" />
+
+# FormControlGroup
+<Description of={FormControlGroup} />
+<Props of={FormControlGroup} />
+
+<Preview>
+  <Story name="Form Control Group">
+    <form>
+      <FormControlGroup
+        label="Test Group"
+        name="myGroup"
+        handleChange={val => console.log(`The value is ${val}`)}
+        selectedValues={['radioOne']}
+      >
+        <Radio
+          label="Radio 1"
+          value="radioOne"
+        />
+        <Radio
+          label="Radio 2"
+          value="radioTwo"
+        />
+      </FormControlGroup>
+    </form>
+  </Story>
+</Preview>
