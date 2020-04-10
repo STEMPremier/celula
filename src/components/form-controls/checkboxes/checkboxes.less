@@ -76,11 +76,24 @@
     }
 
     .ce-checkbox--focus {
-      height: 3.6rem;
-      width: 3.6rem;
+      height: 3.5rem;
+      width: 3.5rem;
       margin-left: -1.8rem;
       margin-top: -3.5rem;
       border-radius: 50%;
+    }
+
+    // remove the border on squares when in hover, active, or focus
+    input:checked:hover + label {
+      &::before {
+        background-color: white;
+      }
+    }
+
+    input:not(:checked):hover + label {
+      &::before {
+        border: 0rem solid white;
+      }
     }
 
     // change background colors for unchecked boxes
