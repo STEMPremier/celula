@@ -96,6 +96,16 @@
       }
     }
 
+    // put default focus ce-checkbox-focus hidden div to transparent above below hover changes
+    input:not(:checked):not(focus) ~ .ce-checkbox--focus {
+      // background-color: #cccccc;
+      background-color: transparent;
+    }
+    input:checked:not(focus) ~ .ce-checkbox--focus {
+      // background-color: #ccefff;
+      background-color: transparent;
+    }
+
     // change background colors for unchecked boxes
     input:not(:checked):hover ~ .ce-checkbox--background {
       background-color: #e5e5e5;
@@ -118,15 +128,6 @@
     }
     input:checked:focus ~ .ce-checkbox--focus {
       background-color: #ccefff;
-    }
-
-    input:not(:checked):not(focus) ~ .ce-checkbox--focus {
-      // background-color: #cccccc;
-      background-color: transparent;
-    }
-    input:checked:not(focus) ~ .ce-checkbox--focus {
-      // background-color: #ccefff;
-      background-color: transparent;
     }
 
     .ce-checkbox--error-box-wrapper {
@@ -155,7 +156,6 @@
         }
       }
     }
-    // }
   }
   &.ce-checkbox--disabled {
     pointer-events: none;
