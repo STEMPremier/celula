@@ -81,7 +81,6 @@
       margin-left: -1.8rem;
       margin-top: -3.5rem;
       border-radius: 50%;
-      background-color: rgb(15, 15, 241);
     }
 
     // change background colors for unchecked boxes
@@ -102,16 +101,18 @@
     }
 
     input:not(:checked):focus ~ .ce-checkbox--focus {
-      background-color: rgb(228, 31, 31);
+      background-color: #ccefff;
     }
     input:checked:focus ~ .ce-checkbox--focus {
-      background-color: #ccffd3;
+      background-color: #ccefff;
     }
 
     input:not(:checked):not(focus) ~ .ce-checkbox--focus {
+      // background-color: #cccccc;
       background-color: transparent;
     }
     input:checked:not(focus) ~ .ce-checkbox--focus {
+      // background-color: #ccefff;
       background-color: transparent;
     }
 
