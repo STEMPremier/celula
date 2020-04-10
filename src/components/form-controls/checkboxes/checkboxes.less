@@ -74,13 +74,21 @@
       margin-top: -2.7rem;
       border-radius: 50%;
     }
+
+    .ce-checkbox--focus {
+      height: 3.6rem;
+      width: 3.6rem;
+      margin-left: -1.8rem;
+      margin-top: -3.5rem;
+      border-radius: 50%;
+      background-color: rgb(15, 15, 241);
+    }
+
     // change background colors for unchecked boxes
     input:not(:checked):hover ~ .ce-checkbox--background {
       background-color: #e5e5e5;
     }
-    input:not(:checked):focus ~ .ce-checkbox--background {
-      background-color: #cccccc;
-    }
+
     input:not(:checked):active ~ .ce-checkbox--background {
       background-color: #b3b3b3;
     }
@@ -88,11 +96,23 @@
     input:checked:hover ~ .ce-checkbox--background {
       background-color: #e6f7ff;
     }
-    input:checked:focus ~ .ce-checkbox--background {
-      background-color: #ccefff;
-    }
+
     input:checked:active ~ .ce-checkbox--background {
       background-color: #b2e7ff;
+    }
+
+    input:not(:checked):focus ~ .ce-checkbox--focus {
+      background-color: rgb(228, 31, 31);
+    }
+    input:checked:focus ~ .ce-checkbox--focus {
+      background-color: #ccffd3;
+    }
+
+    input:not(:checked):not(focus) ~ .ce-checkbox--focus {
+      background-color: transparent;
+    }
+    input:checked:not(focus) ~ .ce-checkbox--focus {
+      background-color: transparent;
     }
 
     .ce-checkbox--error-box-wrapper {

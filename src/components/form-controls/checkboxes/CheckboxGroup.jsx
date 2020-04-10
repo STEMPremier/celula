@@ -24,6 +24,7 @@ class CheckboxGroup extends Component {
 
   renderChildren = () => {
     const { children, name, defaultGroupValue } = this.props;
+
     return React.Children.map(children, child => {
       const props = {
         defaultGroupValue,

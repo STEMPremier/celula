@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/mouse-events-have-key-events */
 /* eslint-disable no-console */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
@@ -10,6 +11,7 @@ import './checkboxes.less';
 class Checkbox extends Component {
   state = {
     checked: false,
+    showFocus: false,
   };
 
   componentDidMount() {
@@ -34,10 +36,18 @@ class Checkbox extends Component {
     });
   };
 
+  // eslint-disable-next-line react/no-access-state-in-setstate
+  onMouseEnter = () =>
+    this.setState({
+      showFocus: true,
+    });
+
+  onMouseLeave = () => this.setState({ showFocus: false });
+
   render() {
     const { className, disabled, error, name, label, value, form } = this.props;
 
-    const { checked } = this.state;
+    const { checked, showFocus } = this.state;
     const id = `${name}_${value}`;
     const classes = cx(
       'ce-checkbox',
@@ -50,27 +60,31 @@ class Checkbox extends Component {
 
     return (
       <div className={classes}>
-        <div className="ce-checkbox--box">
-          <input
-            type="checkbox"
-            value={value}
-            id={id}
-            checked={checked}
-            onChange={this.handleChange}
-            disabled={disabled}
-            name={name}
-            form={form}
-          />
-          <label htmlFor={id}>{label}</label>
-          <div className="ce-checkbox--background" />
-          {error && (
-            <div className="ce-checkbox--error-box-wrapper">
-              <div className="ce-checkbox--arrow" />
-              <div className="ce-checkbox--error-box">
-                <div className="ce-checkbox--error-box-text">{error}</div>
+        <div onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
+          <div className="ce-checkbox--box">
+            <input
+              type="checkbox"
+              value={value}
+              id={id}
+              checked={checked}
+              onChange={this.handleChange}
+              disabled={disabled}
+              name={name}
+              form={form}
+            />
+            <label htmlFor={id}>{label}</label>
+
+            <div className="ce-checkbox--background" />
+            {showFocus ? <div className="ce-checkbox--focus" /> : null}
+            {error && (
+              <div className="ce-checkbox--error-box-wrapper">
+                <div className="ce-checkbox--arrow" />
+                <div className="ce-checkbox--error-box">
+                  <div className="ce-checkbox--error-box-text">{error}</div>
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     );
