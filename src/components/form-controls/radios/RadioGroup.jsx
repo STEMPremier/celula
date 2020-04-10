@@ -1,123 +1,102 @@
-/* eslint-disable react/destructuring-assignment */
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
+import FormControlGroup from '../core';
+
 import './radios.less';
 
-class RadioGroup extends Component {
-  state = {
-    checkedValue: this.props.value,
-  };
+const RadioGroup = props => {
+  const {
+    children,
+    className,
+    disabled,
+    errorMsg,
+    formId,
+    handleChange,
+    label,
+    name,
+    selectedValue,
+    // validators,
+  } = props;
 
-  handleChange = event => {
-    this.setState(
-      { checkedValue: event.target.value },
-      this.props.handleChange,
-    );
-  };
+  const classes = cx(
+    'ce-radio-group',
+    {
+      'ce-radio--disabled': disabled,
+      'ce-radio--error': errorMsg,
+    },
+    className,
+  );
 
-  renderChildren = () => {
-    const { children, name } = this.props;
-    const { checkedValue } = this.state;
-
-    return React.Children.map(children, child => {
-      const props = {
-        checked: checkedValue === child.props.value,
-        handleChange: this.handleChange,
-        name,
-      };
-      return React.cloneElement(child, { ...props });
-    });
-  };
-
-  render() {
-    const {
-      className,
-      disabled,
-      error,
-      form,
-      label,
-      name,
-      // validators,
-    } = this.props;
-
-    const classes = cx(
-      'ce-radio-group',
-      {
-        'ce-radio--disabled': disabled,
-        'ce-radio--error': error,
-      },
-      className,
-    );
-
-    return (
-      <fieldset
-        className={classes}
-        name={name}
-        form={form}
-        onChange={this.handleChange}
-        disabled={disabled}
-      >
-        <legend>
-          {label}
-          {error && <div className="ce-radio-error--text">{error}</div>}
-        </legend>
-        {this.renderChildren()}
-      </fieldset>
-    );
-  }
-}
+  return (
+    <FormControlGroup
+      className={classes}
+      disabled={disabled}
+      errorClass="ce-radio-error--text"
+      errorMsg={errorMsg}
+      formId={formId}
+      handleChange={handleChange}
+      label={label}
+      name={name}
+      selectedValues={[selectedValue]}
+    >
+      {children}
+    </FormControlGroup>
+  );
+};
 
 RadioGroup.propTypes = {
   /**
-   * This is the `<Radio />`s for the `<RadioGroup />`.
+   * The `<Radio />`s you want the `<RadioGroup />` to group together.
    */
   children: PropTypes.node.isRequired,
   /**
-   * A class name added to the `<RadioGroup />`.
+   * A class name, or string of class names, to add to the `<RadioGroup />`.
    */
   className: PropTypes.string,
   /**
-   * Makes the entire `<RadioGroup />` inactive.
+   * Disables the `<RadioGroup />` and all of its children.
    */
   disabled: PropTypes.bool,
   /**
-   * The error message on the `<Radio />`.
+   * An error message to display in the `<RadioGroup />`.
    */
-  error: PropTypes.string,
+  errorMsg: PropTypes.string,
   /**
-   * The name of the form the `<RadioGroup />` belongs to.
+   * The id of the form the `<RadioGroup />` belongs to.
    */
-  form: PropTypes.string,
+  formId: PropTypes.string,
   /**
-   * A function that is passed to the all `<Radios />`s to be called when the `<Radio />` is clicked.
+   * A function to trigger when the state of the `<RadioGroup />` changes.
    */
   handleChange: PropTypes.func.isRequired,
   /**
-   * The text that gets placed into the legend element.
+   * The `<RadioGroup />` legend..
    */
   label: PropTypes.string.isRequired,
   /**
-   * The name is a unique name for the `<RadioGroup />` given to all the Radios.
+   * The name given to all the children of the `<RadioGroup />`.
    */
   name: PropTypes.string.isRequired,
-  // validators: PropTypes.array,
-  value: PropTypes.oneOfType([
+  /**
+   * The value used to pre-select a child of the `<RadioGroup />`.
+   */
+  selectedValue: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
     PropTypes.bool,
   ]),
+  // validators: PropTypes.array,
 };
 
 RadioGroup.defaultProps = {
   className: '',
   disabled: false,
-  error: '',
-  form: '',
-  value: '',
+  errorMsg: '',
+  formId: '',
+  selectedValue: '',
   // validators: [],
 };
 
 export default RadioGroup;
-/* eslint-enable react/destructuring-assignment */
