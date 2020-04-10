@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -11,18 +12,13 @@ class Checkbox extends Component {
   };
 
   componentDidMount() {
-    if (
-      // eslint-disable-next-line react/destructuring-assignment
-      this.props.defaultGroupValue &&
-      // eslint-disable-next-line react/destructuring-assignment
-      this.props.defaultGroupValue.includes(this.props.value)
-    ) {
+    const { defaultGroupValue, value, checkedIndividualDefault } = this.props;
+    if (defaultGroupValue && defaultGroupValue.includes(value)) {
       this.setState({
         checked: true,
       });
     }
-    // eslint-disable-next-line react/destructuring-assignment
-    if (this.props.checkedIndividualDefault) {
+    if (checkedIndividualDefault) {
       this.setState({
         checked: true,
       });
@@ -35,12 +31,15 @@ class Checkbox extends Component {
     });
   };
 
-  onMouseEnter = () =>
-    this.setState({
+  onMouseEnter = () => {
+    this.setState(() => ({
       showFocus: true,
-    });
+    }));
+  };
 
-  onMouseLeave = () => this.setState({ showFocus: false });
+  onMouseLeave = () => {
+    this.setState(() => ({ showFocus: false }));
+  };
 
   render() {
     const { className, disabled, error, name, label, value, form } = this.props;
@@ -71,7 +70,6 @@ class Checkbox extends Component {
               form={form}
             />
             <label htmlFor={id}>{label}</label>
-
             <div className="ce-checkbox--background" />
             {showFocus ? <div className="ce-checkbox--focus" /> : null}
             {error && (
