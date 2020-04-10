@@ -8,12 +8,12 @@ import './checkboxes.less';
 class CheckboxGroup extends Component {
   state = {
     // eslint-disable-next-line react/destructuring-assignment
-    checkedValues: this.props.defaultGroupValue,
+    checkedValues: [this.props.defaultGroupValue],
   };
 
   handleChangeGroup = event => {
     const { checkedValues } = this.state;
-    let values = checkedValues;
+    let values = checkedValues.flat();
     if (event.target.checked) {
       values.push(event.target.value);
     } else {

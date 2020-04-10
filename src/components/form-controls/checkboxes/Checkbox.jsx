@@ -1,7 +1,3 @@
-/* eslint-disable jsx-a11y/mouse-events-have-key-events */
-/* eslint-disable no-console */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -16,13 +12,16 @@ class Checkbox extends Component {
 
   componentDidMount() {
     if (
+      // eslint-disable-next-line react/destructuring-assignment
       this.props.defaultGroupValue &&
+      // eslint-disable-next-line react/destructuring-assignment
       this.props.defaultGroupValue.includes(this.props.value)
     ) {
       this.setState({
         checked: true,
       });
     }
+    // eslint-disable-next-line react/destructuring-assignment
     if (this.props.checkedIndividualDefault) {
       this.setState({
         checked: true,
@@ -36,7 +35,6 @@ class Checkbox extends Component {
     });
   };
 
-  // eslint-disable-next-line react/no-access-state-in-setstate
   onMouseEnter = () =>
     this.setState({
       showFocus: true,
@@ -121,6 +119,10 @@ Checkbox.propTypes = {
    */
   label: PropTypes.string.isRequired,
   /**
+   * The default array of values being passed down from the `<CheckboxGroup />`.  They are the pre-selected checkboxes from that outer `<CheckboxGroup />`.
+   */
+  defaultGroupValue: PropTypes.arrayOf(PropTypes.any),
+  /**
    * The value is not visible to the user, but rather it is the unique value passed when selecting each individual `<Checkbox />` button.
    */
   value: PropTypes.oneOfType([
@@ -137,6 +139,7 @@ Checkbox.defaultProps = {
   name: '',
   disabled: false,
   error: '',
+  defaultGroupValue: [],
 };
 
 export default Checkbox;
