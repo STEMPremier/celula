@@ -1,0 +1,26 @@
+import {
+  Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { boolean, select, text } from '@storybook/addon-knobs';
+
+import Select from './Select';
+
+<Meta component={Select} title="Components/Molecules/Form Controles/Select" />
+
+# Select
+
+<Description of={Select} />
+<Props of={Select} />
+<Story name="Select" parameters={{ docs: {disable: true}}}>
+<Select
+className={text('className', '')}
+handleChange={action('click')}
+label={text('label', 'Default Fieldset Label')}
+name={text('name', 'Default Name for Select')}
+form={text('form', '')}
+options=['optoins'] >
