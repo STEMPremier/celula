@@ -86,13 +86,13 @@
     // remove the border on squares when in hover, active, or focus
     input:checked:hover + label {
       &::before {
-        background-color: white;
+        background-color: @white;
       }
     }
 
     input:not(:checked):hover + label {
       &::before {
-        border: 0rem solid white;
+        border: 0rem solid @white;
       }
     }
 
@@ -209,7 +209,7 @@
   // this error text handles when I want it shown inside the radio--error
   .ce-checkbox--error-text {
     position: absolute;
-    background-color: white;
+    background-color: @white;
     padding: 0.5rem;
     line-height: 1.2rem;
     margin-left: 77%;
