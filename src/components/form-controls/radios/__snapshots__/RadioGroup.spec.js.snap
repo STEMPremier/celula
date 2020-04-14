@@ -2,7 +2,7 @@
 
 exports[`<RadioGroup /> render() render the RadioGroup component 1`] = `
 <fieldset
-  className="ce-radio"
+  className="ce-radio-group"
   disabled={false}
   form=""
   name="RadioGroup Test Name"

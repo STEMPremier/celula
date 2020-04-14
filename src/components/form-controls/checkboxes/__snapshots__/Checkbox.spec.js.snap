@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Checkbox /> render() render the CheckboxGroup 1`] = `
+exports[`<Checkbox /> render() render the Checkbox 1`] = `
 <div
   className="ce-checkbox"
 >
@@ -30,35 +30,6 @@ exports[`<Checkbox /> render() render the CheckboxGroup 1`] = `
         className="ce-checkbox--background"
       />
     </div>
-  </div>
-</div>
-`;
-
-exports[`<Checkbox /> render() render the CheckboxGroup component 1`] = `
-<div
-  className="ce-checkbox"
->
-  <div
-    className="ce-checkbox--box"
-  >
-    <input
-      checked={false}
-      disabled={false}
-      form=""
-      id="_Checkbox Value Here 1"
-      name=""
-      onChange={[Function]}
-      type="checkbox"
-      value="Checkbox Value Here 1"
-    />
-    <label
-      htmlFor="_Checkbox Value Here 1"
-    >
-      Checkbox Test Label 1
-    </label>
-    <div
-      className="ce-checkbox--background"
-    />
   </div>
 </div>
 `;
