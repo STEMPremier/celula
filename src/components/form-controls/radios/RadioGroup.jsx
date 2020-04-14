@@ -43,7 +43,7 @@ class RadioGroup extends Component {
     } = this.props;
 
     const classes = cx(
-      'ce-radio',
+      'ce-radio-group',
       {
         'ce-radio--disabled': disabled,
         'ce-radio--error': error,
@@ -52,21 +52,19 @@ class RadioGroup extends Component {
     );
 
     return (
-      <div className="ce-radio--group">
-        <fieldset
-          className={classes}
-          name={name}
-          form={form}
-          onChange={this.handleChange}
-          disabled={disabled}
-        >
-          <legend>
-            {label}
-            {error && <div className="ce-radio-error--text">{error}</div>}
-          </legend>
-          {this.renderChildren()}
-        </fieldset>
-      </div>
+      <fieldset
+        className={classes}
+        name={name}
+        form={form}
+        onChange={this.handleChange}
+        disabled={disabled}
+      >
+        <legend>
+          {label}
+          {error && <div className="ce-radio-error--text">{error}</div>}
+        </legend>
+        {this.renderChildren()}
+      </fieldset>
     );
   }
 }
