@@ -7,7 +7,7 @@ import Checkbox from './Checkbox';
 
 describe('<Checkbox />', () => {
   describe('render()', () => {
-    test('render the CheckboxGroup component', () => {
+    test('render the CheckboxGroup', () => {
       const wrapper = shallow(
         <Checkbox
           label="Checkbox Test Label 1"
