@@ -1,3 +1,5 @@
-import Icon from './Icon';
+import ProductIcon from './ProductIcon';
+import SecondaryIcon from './SecondaryIcon';
+import SystemIcon from './SystemIcon';
 
-export default Icon;
+export { ProductIcon, SecondaryIcon, SystemIcon };

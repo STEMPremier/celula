@@ -1,1 +1,165 @@
+@import '../../styles/celula';
 
+@product-icon-small: 5rem;
+@product-icon-large: 7.5rem;
+@product-icon-jumbo: 10rem;
+@secondary-icon-small: 3rem;
+@secondary-icon-large: 3.6rem;
+@secondary-icon-jumbo: 5rem;
+@system-icon-size: @base-font-size;
+
+// Primary icons
+.ce-icon {
+  &.ce-icon__product {
+    align-items: center;
+    background: @gradient-cool;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+
+    &.ce-icon--small {
+      height: @product-icon-small;
+      width: @product-icon-small;
+
+      svg {
+        height: ~"calc(5rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        margin: 0 auto;
+        width: ~"calc(5rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+      }
+    }
+
+    &.ce-icon--large {
+      height: @product-icon-large;
+      width: @product-icon-large;
+
+      svg {
+        height: ~"calc(7.5rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        margin: 0 auto;
+        width: ~"calc(7.5rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+      }
+    }
+
+    &.ce-icon--jumbo {
+      height: @product-icon-jumbo;
+      width: @product-icon-jumbo;
+
+      svg {
+        height: ~"calc(10rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        margin: 0 auto;
+        width: ~"calc(10rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+      }
+    }
+
+    .ce-icon--white {
+      fill: @white;
+    }
+  }
+}
+
+// Secondary icons
+.ce-icon {
+  &.ce-icon__secondary {
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+
+    &.ce-icon--small {
+      height: @secondary-icon-small;
+      width: @secondary-icon-small;
+
+      svg {
+        height: ~"calc(3rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        width: ~"calc(3rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+      }
+
+      span {
+        color: white;
+        font-size: ~"calc(3rem - 90%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        font-weight: bold;
+      }
+    }
+
+    &.ce-icon--large {
+      height: @secondary-icon-large;
+      width: @secondary-icon-large;
+
+      svg {
+        height: ~"calc(3.6rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        width: ~"calc(3.6rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+      }
+
+      span {
+        color: white;
+        font-size: ~"calc(3.6rem - 90%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        font-weight: bold;
+      }
+    }
+
+    &.ce-icon--jumbo {
+      height: @secondary-icon-jumbo;
+      width: @secondary-icon-jumbo;
+
+      svg {
+        height: ~"calc(5rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        width: ~"calc(5rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+      }
+
+      span {
+        color: white;
+        font-size: ~"calc(5rem - 90%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        font-weight: bold;
+      }
+    }
+
+    &.ce-icon--primary {
+      background: @gradient-cool;
+    }
+
+    &.ce-icon--secondary {
+      background: @gradient-hot;
+    }
+
+    .ce-icon--white {
+      stroke: @white;
+    }
+  }
+}
+
+// System icons
+.ce-icon {
+  &.ce-icon__system {
+    svg {
+      height: @system-icon-size;
+      width: @system-icon-size;
+    }
+
+    .ce-icon--black {
+      stroke: @black;
+    }
+
+    .ce-icon--blue {
+      stroke: @blue;
+    }
+
+    .ce-icon--green {
+      stroke: @green;
+    }
+
+    .ce-icon--orange {
+      stroke: @orange;
+    }
+
+    .ce-icon--purple {
+      stroke: @purple;
+    }
+
+    .ce-icon--red {
+      stroke: @red;
+    }
+
+    .ce-icon--white {
+      stroke: @white;
+    }
+  }
+}

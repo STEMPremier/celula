@@ -1,0 +1,67 @@
+import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { select } from '@storybook/addon-knobs';
+
+import { ProductIcon } from '.';
+import { PRODUCT_ICONS } from './types';
+
+<Meta component={ProductIcon} title="Components/Molecules/Icons/ProductIcon" />
+
+# Icon
+<Description of={ProductIcon} />
+<Props of={ProductIcon} />
+
+<Story name="All ProductIcons" parameters={{ docs: { disable: true }}}>
+  <ProductIcon
+    name={select('name', PRODUCT_ICONS, 'college')}
+    size={select('size', ['small', 'large', 'jumbo'], 'small')}
+  />
+</Story>
+
+### Product Icons Small
+<Preview>
+  <Story name="ProductIcon Small">
+    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
+      {PRODUCT_ICONS.map((icon, idx) => {
+        return (
+          <div key={`${icon}_${idx}`} style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'75px',width:'75px'}}>
+            <ProductIcon name={icon} />
+            <span>{icon}</span>
+          </div>
+        );
+      })}
+    </div>
+  </Story>
+</Preview>
+
+
+### Product Icons Large
+<Preview>
+  <Story name="ProductIcon Large">
+    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
+      {PRODUCT_ICONS.map((icon, idx) => {
+        return (
+          <div key={`${icon}_${idx}_large`} style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'100px',width:'100px'}}>
+            <ProductIcon name={icon} size="large" />
+            <span>{icon}</span>
+          </div>
+        );
+      })}
+    </div>
+  </Story>
+</Preview>
+
+### Product Icons Jumbo
+<Preview>
+  <Story name="ProductIcon Jumbo">
+    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
+      {PRODUCT_ICONS.map((icon, idx) => {
+        return (
+          <div key={`${icon}_${idx}_jumbo`} style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'125px',width:'125px'}}>
+            <ProductIcon name={icon} size="jumbo" />
+            <span>{icon}</span>
+          </div>
+        );
+      })}
+    </div>
+  </Story>
+</Preview>

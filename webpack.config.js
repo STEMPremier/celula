@@ -61,6 +61,10 @@ function applyLoaders(config) {
           test: /\.less$/,
           use: [styleLoader, 'css-loader', 'less-loader'],
         },
+        {
+          test: /\.svg$/,
+          loader: 'svg-sprite-loader',
+        },
       ],
     },
   };
