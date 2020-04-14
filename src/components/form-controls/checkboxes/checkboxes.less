@@ -33,8 +33,8 @@
         left: -1rem;
         top: -0.1rem;
         border-radius: 0.3rem;
-        border: 0.1rem solid #b2b2b2;
-        background-color: #fbfbfb;
+        border: 0.1rem solid @default-dark-gray;
+        background-color: @default-light-gray;
         height: 2rem;
         width: 2rem;
         box-sizing: border-box;
@@ -63,7 +63,7 @@
         width: 0.8rem;
         height: 0.8rem;
         background-color: @navy;
-        border: 0.5rem solid #ffffff;
+        border: 0.5rem solid @white;
       }
     }
     // first set state defaults with size and position for the background div appearing on state changes
@@ -106,26 +106,26 @@
 
     // change background colors for unchecked boxes
     input:not(:checked):hover ~ .ce-checkbox--background {
-      background-color: #e5e5e5;
+      background-color: @hover-gray;
     }
 
     input:not(:checked):active ~ .ce-checkbox--background {
-      background-color: #b3b3b3;
+      background-color: @active-gray;
     }
     // checked state changes
     input:checked:hover ~ .ce-checkbox--background {
-      background-color: #e6f7ff;
+      background-color: @hover-blue;
     }
 
     input:checked:active ~ .ce-checkbox--background {
-      background-color: #b2e7ff;
+      background-color: @active-blue;
     }
 
     input:not(:checked):focus ~ .ce-checkbox--focus {
-      background-color: #ccefff;
+      background-color: @focus-blue;
     }
     input:checked:focus ~ .ce-checkbox--focus {
-      background-color: #ccefff;
+      background-color: @focus-blue;
     }
 
     .ce-checkbox--error-box-wrapper {
@@ -160,10 +160,10 @@
     // checked disabled coloring
     input:checked + label {
       &::before {
-        background-color: #aeaeae;
+        background-color: @disabled-gray;
       }
       &::after {
-        background-color: #aeaeae;
+        background-color: @disabled-gray;
         border: 0.5rem solid @white;
       }
     }
@@ -197,13 +197,13 @@
     }
     // checked state changes on error checked
     input:checked:hover ~ .ce-checkbox--background {
-      background-color: #ffe5ed;
+      background-color: @hover-red;
     }
     input:checked:focus ~ .ce-checkbox--background {
-      background-color: #ffccdc;
+      background-color: @focus-red;
     }
     input:checked:active ~ .ce-checkbox--background {
-      background-color: #ffb3cc;
+      background-color: @active-red;
     }
   }
   // this error text handles when I want it shown inside the radio--error

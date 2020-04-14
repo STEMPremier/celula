@@ -39,10 +39,10 @@
         left: -0.1rem;
         top: -0.1rem;
         border-radius: 50%;
-        border: 0.1rem solid #b2b2b2;
+        border: 0.1rem solid @default-dark-gray;
         width: 2.1rem;
         height: 2.1rem;
-        background-color: #fbfbfb;
+        background-color: @default-light-gray;
       }
 
       &:hover {
@@ -74,23 +74,22 @@
       // not checked and hover
       &:hover {
         &::before {
-          border: 0.5rem solid #e5e5e5;
+          border: 0.5rem solid @hover-gray;
         }
       }
 
       // not checked and focus (color change only)
       &:focus {
         &::before {
-          border: 0.5rem solid #cccccc;
-          background-color: #232020;
+          border: 0.5rem solid @focus-gray;
         }
       }
 
       // not checked and active (color change only)
       &:active {
         &::before {
-          background-color: #fbfbfb;
-          border: 0.5rem solid #b3b3b3;
+          background-color: @default-light-gray;
+          border: 0.5rem solid @active-gray;
         }
       }
     }
@@ -119,7 +118,7 @@
       // checked and hover (color change only)
       &:hover {
         &::before {
-          border: 0.5rem solid #e6f7ff;
+          border: 0.5rem solid @hover-blue;
         }
 
         &::after {
@@ -131,7 +130,7 @@
       //checked and focus (color change only)
       &:focus {
         &::before {
-          border: 0.5rem solid #ccefff;
+          border: 0.5rem solid @focus-blue;
         }
 
         &::after {
@@ -143,7 +142,7 @@
       //checked and active (color change only)
       &:active {
         &::before {
-          border: 0.5rem solid #b2e7ff;
+          border: 0.5rem solid @active-blue;
         }
 
         &::after {
@@ -155,12 +154,12 @@
   }
   &.ce-radio--disabled {
     pointer-events: none;
-    color: #aeaeae;
+    color: @disabled-gray;
 
     // checked and disabled (only need to alter checked because unchecked falls into default setting above)
     input:checked + label {
       &::before {
-        border: 0.1rem solid #aeaeae;
+        border: 0.1rem solid @disabled-gray;
       }
 
       &::after {
@@ -195,7 +194,7 @@
       // checked error and hover (color change only)
       &:hover {
         &::before {
-          border: 0.5rem solid #ffe5ed;
+          border: 0.5rem solid @hover-red;
         }
 
         &::after {
@@ -207,7 +206,7 @@
       //checked error and focus (color change only)
       &:focus {
         &::before {
-          border: 0.5rem solid #ffccdc;
+          border: 0.5rem solid @focus-red;
         }
 
         &::after {
@@ -219,7 +218,7 @@
       //checked error and active (color change only)
       &:active {
         &::before {
-          border: 0.5rem solid #ffb3cc;
+          border: 0.5rem solid @active-red;
         }
 
         &::after {
