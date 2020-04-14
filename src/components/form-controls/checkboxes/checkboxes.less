@@ -49,7 +49,7 @@
         left: -1rem;
         top: -0.1rem;
         border-radius: 0.3rem;
-        background-color: #192344;
+        background-color: @navy;
         height: 2rem;
         width: 2rem;
         box-sizing: border-box;
@@ -62,7 +62,7 @@
         border-radius: 0.3rem;
         width: 0.8rem;
         height: 0.8rem;
-        background-color: #192344;
+        background-color: @navy;
         border: 0.5rem solid #ffffff;
       }
     }
@@ -98,11 +98,9 @@
 
     // put default focus ce-checkbox-focus hidden div to transparent above below hover changes
     input:not(:checked):not(focus) ~ .ce-checkbox--focus {
-      // background-color: #cccccc;
       background-color: transparent;
     }
     input:checked:not(focus) ~ .ce-checkbox--focus {
-      // background-color: #ccefff;
       background-color: transparent;
     }
 
@@ -140,14 +138,13 @@
         border-left: 0.5rem solid transparent;
         border-right: 0.5rem solid transparent;
         position: center;
-        // border-bottom: 5px solid #cc0043;
-        border-bottom: 0.5rem solid #cc0043;
+        border-bottom: 0.5rem solid @error-box;
         margin-left: 48%;
       }
       .ce-checkbox--error-box {
         height: 5.6rem;
         width: 100%;
-        background-color: #cc0043;
+        background-color: @error-box;
         border-radius: 0.5rem;
         .ce-checkbox--error-box-text {
           color: white;
@@ -167,7 +164,7 @@
       }
       &::after {
         background-color: #aeaeae;
-        border: 0.5rem solid #ffffff;
+        border: 0.5rem solid @white;
       }
     }
   }
@@ -195,7 +192,7 @@
       }
       &::after {
         background-color: @error-text;
-        border: 0.5rem solid #ffffff;
+        border: 0.5rem solid @white;
       }
     }
     // checked state changes on error checked
