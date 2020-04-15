@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable no-console */
 
 import React from 'react';
@@ -20,7 +21,7 @@ class Select extends React.Component {
       options,
     } = this.props;
 
-    const id = `${name}_${value}`;
+    const id = `${name}`;
 
     const classes = cx(
       'ce-select',
@@ -36,9 +37,12 @@ class Select extends React.Component {
           {label}
         </label>
         <select name={name} id={id} form={form}>
-          <option value={value} handleChange={handleChange}>
-            {options}
-          </option>
+          <option>{value}</option>
+          {options.map(item => (
+            <option key={item.value} handleChange={handleChange}>
+              {item.name}
+            </option>
+          ))}
         </select>
         <span error={error} />
       </div>
