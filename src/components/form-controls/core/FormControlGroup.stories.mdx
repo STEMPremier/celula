@@ -6,6 +6,7 @@ import { Description,
 } from '@storybook/addon-docs/blocks';
 
 import FormControlGroup from '.';
+import { Checkbox } from '../checkboxes';
 import { Radio } from '../radios';
 
 <Meta component={FormControlGroup} title="Components/Molecules/Form Controls/FormControlGroup" />
@@ -14,8 +15,32 @@ import { Radio } from '../radios';
 <Description of={FormControlGroup} />
 <Props of={FormControlGroup} />
 
+## Grouping Checkboxes
 <Preview>
-  <Story name="Form Control Group">
+  <Story name="Form Control Group with Checkboxes">
+    <form>
+      <FormControlGroup
+        label="Test Group"
+        name="myGroup"
+        handleChange={val => console.log(`The value is ${val}`)}
+        selectedValues={['radioOne']}
+      >
+        <Checkbox
+          label="Checkbox 1"
+          value="checkboxOne"
+        />
+        <Checkbox
+          label="Checkbox 2"
+          value="CheckboxTwo"
+        />
+      </FormControlGroup>
+    </form>
+  </Story>
+</Preview>
+
+## Grouping Radios
+<Preview>
+  <Story name="Form Control Group with Radios">
     <form>
       <FormControlGroup
         label="Test Group"
