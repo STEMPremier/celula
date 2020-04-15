@@ -11,8 +11,7 @@ describe('<RadioGroup />', () => {
     test('render the RadioGroup component', () => {
       const wrapper = shallow(
         <RadioGroup
-          // eslint-disable-next-line prettier/prettier
-          handleChange={() => { }}
+          handleChange={() => {}}
           label="RadioGroup Test Label"
           name="RadioGroup Test Name"
         >
