@@ -70,7 +70,7 @@ RadioGroup.propTypes = {
   /**
    * A function to trigger when the state of the `<RadioGroup />` changes.
    */
-  handleChange: PropTypes.func.isRequired,
+  handleChange: PropTypes.func,
   /**
    * The `<RadioGroup />` legend.
    */
@@ -95,6 +95,7 @@ RadioGroup.defaultProps = {
   disabled: false,
   errorMsg: '',
   formId: '',
+  handleChange: () => {},
   selectedValue: '',
   // validators: [],
 };
