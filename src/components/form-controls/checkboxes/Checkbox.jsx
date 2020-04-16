@@ -12,14 +12,10 @@ class Checkbox extends Component {
   };
 
   componentDidMount() {
-    const { defaultGroupValue, value, checkedIndividualDefault } = this.props;
-    if (defaultGroupValue && defaultGroupValue.includes(value)) {
-      this.setState({
-        checked: true,
-      });
-    }
-    if (checkedIndividualDefault) {
-      this.setState({
+    const { checked } = this.props;
+
+    if (checked) {
+      this.setstate({
         checked: true,
       });
     }
@@ -42,45 +38,54 @@ class Checkbox extends Component {
   };
 
   render() {
-    const { className, disabled, error, name, label, value, form } = this.props;
-
+    const {
+      className,
+      disabled,
+      errorMsg,
+      formId,
+      name,
+      label,
+      value,
+    } = this.props;
     const { checked, showFocus } = this.state;
     const id = `${name}_${value}`;
     const classes = cx(
       'ce-checkbox',
       {
         'ce-checkbox--disabled': disabled,
-        'ce-checkbox--individual-checkbox-error': error,
+        'ce-checkbox--individual-checkbox-error': errorMsg,
       },
       className,
     );
 
     return (
-      <div className={classes}>
-        <div onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
-          <div className="ce-checkbox--box">
-            <input
-              type="checkbox"
-              value={value}
-              id={id}
-              checked={checked}
-              onChange={this.handleChange}
-              disabled={disabled}
-              name={name}
-              form={form}
-            />
-            <label htmlFor={id}>{label}</label>
-            <div className="ce-checkbox--background" />
-            {showFocus ? <div className="ce-checkbox--focus" /> : null}
-            {error && (
-              <div className="ce-checkbox--error-box-wrapper">
-                <div className="ce-checkbox--arrow" />
-                <div className="ce-checkbox--error-box">
-                  <div className="ce-checkbox--error-box-text">{error}</div>
-                </div>
+      <div
+        className={classes}
+        onMouseEnter={this.onMouseEnter}
+        onMouseLeave={this.onMouseLeave}
+      >
+        <div className="ce-checkbox--box">
+          <input
+            checked={checked}
+            disabled={disabled}
+            form={formId}
+            id={id}
+            name={name}
+            onChange={this.handleChange}
+            type="checkbox"
+            value={value}
+          />
+          <label htmlFor={id}>{label}</label>
+          <div className="ce-checkbox--background" />
+          {showFocus && <div className="ce-checkbox--focus" />}
+          {errorMsg && (
+            <div className="ce-checkbox--error-box-wrapper">
+              <div className="ce-checkbox--arrow" />
+              <div className="ce-checkbox--error-box">
+                <div className="ce-checkbox--error-box-text">{errorMsg}</div>
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </div>
     );
@@ -93,35 +98,36 @@ Checkbox.propTypes = {
    */
   className: PropTypes.string,
   /**
-   * The current checked state.
+   * Select the `<Checkbox />`.
    */
-  checkedIndividualDefault: PropTypes.bool,
+  checked: PropTypes.bool,
   /**
-   * Make the RadioGroup inactive.
+   * Make the `<Checkbox />` inactive.
    */
   disabled: PropTypes.bool,
   /**
-   * Error message on single `<Checkbox />'
+   * An error message to display for a `<Checkbox />'.
    */
-  error: PropTypes.string,
+  errorMsg: PropTypes.string,
+  /**
+   * This component is to be treated as a checkbox in `<FormControlGroup />`.
+   * @ignore
+   */
+  isA: PropTypes.string, // eslint-disable-line react/no-unused-prop-types
+  /**
+   * The id of the form the `<Checkbox />` belongs to. This value is overwritten by any value passed from an enclosing `<CheckboxGroup />`.
+   */
+  formId: PropTypes.string,
+  /**
+   * The `<Checkbox />` label.
+   */
+  label: PropTypes.string.isRequired,
   /**
    * Need to assign a matching name to each `<Checkbox />` if it is being used outside of the `<CheckboxGroup />`.  In  a `<CheckboxGroup />`, each individual `<Checkbox />` will have the same name, but that will come from the `<CheckboxGroup />`.
    */
   name: PropTypes.string,
   /**
-   * The form value is over-written by any form value passed into the `<CheckboxGroup />`.
-   */
-  form: PropTypes.string,
-  /**
-   * The label you assign is the text that shows up next to each individual `<Checkbox />` button.
-   */
-  label: PropTypes.string.isRequired,
-  /**
-   * The default array of values being passed down from the `<CheckboxGroup />`.  They are the pre-selected checkboxes from that outer `<CheckboxGroup />`.
-   */
-  defaultGroupValue: PropTypes.arrayOf(PropTypes.any),
-  /**
-   * The value is not visible to the user, but rather it is the unique value passed when selecting each individual `<Checkbox />` button.
+   * The value of the `<Checkbox />`.
    */
   value: PropTypes.oneOfType([
     PropTypes.string,
@@ -131,13 +137,13 @@ Checkbox.propTypes = {
 };
 
 Checkbox.defaultProps = {
+  checked: false,
   className: '',
-  form: '',
-  checkedIndividualDefault: false,
-  name: '',
   disabled: false,
-  error: '',
-  defaultGroupValue: [],
+  errorMsg: '',
+  formId: '',
+  isA: 'checkbox',
+  name: '',
 };
 
 export default Checkbox;
