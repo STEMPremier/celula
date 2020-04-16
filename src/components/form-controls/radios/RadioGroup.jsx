@@ -72,7 +72,7 @@ RadioGroup.propTypes = {
    */
   handleChange: PropTypes.func.isRequired,
   /**
-   * The `<RadioGroup />` legend..
+   * The `<RadioGroup />` legend.
    */
   label: PropTypes.string.isRequired,
   /**
