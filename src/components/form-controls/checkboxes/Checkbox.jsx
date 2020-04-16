@@ -22,9 +22,13 @@ class Checkbox extends Component {
   }
 
   handleChange = event => {
+    const { handleChange } = this.props;
+
     this.setState({
       checked: event.target.checked,
     });
+
+    handleChange(event.target.value);
   };
 
   onMouseEnter = () => {
@@ -110,6 +114,10 @@ Checkbox.propTypes = {
    */
   errorMsg: PropTypes.string,
   /**
+   * A function to trigger when the state of the `<Checkbox />` changes.
+   */
+  handleChange: PropTypes.func,
+  /**
    * This component is to be treated as a checkbox in `<FormControlGroup />`.
    * @ignore
    */
@@ -142,6 +150,7 @@ Checkbox.defaultProps = {
   disabled: false,
   errorMsg: '',
   formId: '',
+  handleChange: () => {},
   isA: 'checkbox',
   name: '',
 };
