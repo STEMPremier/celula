@@ -5,7 +5,7 @@ import cx from 'classnames';
 import './radios.less';
 
 const Radio = props => {
-  const { className, checked, label, value, disabled, name } = props;
+  const { checked, className, disabled, label, name, value } = props;
   const id = `${name}_${value}`;
   const classes = cx(
     'ce-radio',
@@ -19,12 +19,12 @@ const Radio = props => {
     <div className={classes}>
       <div className="ce-radio--button">
         <input
-          type="radio"
-          value={value}
-          name={name}
-          id={id}
           defaultChecked={checked}
           disabled={disabled}
+          id={id}
+          name={name}
+          type="radio"
+          value={value}
         />
         <label htmlFor={id}>{label}</label>
       </div>
@@ -38,11 +38,11 @@ Radio.propTypes = {
    */
   className: PropTypes.string,
   /**
-   * The current checked state.
+   * Selecte the `<Radio />`.
    */
   checked: PropTypes.bool,
   /**
-   * Make the `<RadioGroup />` inactive.
+   * Make the `<Radio />` inactive.
    */
   disabled: PropTypes.bool,
   /**
@@ -51,16 +51,16 @@ Radio.propTypes = {
    */
   isA: PropTypes.string, // eslint-disable-line react/no-unused-prop-types
   /**
-   * Need to assign a matching name to each `<Radio />` in the `<RadioGroup />`.
+   * The `<Radio />` label.
+   */
+  label: PropTypes.string.isRequired,
+  /**
+   * The name of the `<RadioGroup />` this `<Radio />` belongs to. This is created and provided by the `<RadioGroup .>`
    * @ignore
    */
   name: PropTypes.string,
   /**
-   * The label you assign is the text that shows up next to each individual `<Radio />` button.
-   */
-  label: PropTypes.string.isRequired,
-  /**
-   * The value is not visible to the user, but rather it is the unique value passed when selecting each individual `<Radio />` button.
+   * The value of the `<Radio />`.
    */
   value: PropTypes.oneOfType([
     PropTypes.string,
