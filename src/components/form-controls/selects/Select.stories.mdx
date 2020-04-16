@@ -36,12 +36,12 @@ import Select from './Select';
     ],)} />
 </Story>
 
-# Enabled Select 
+# Enabled Select Using a Label
 <Preview>
-  <Story name="Enabled Select">
+  <Story name="Enabled Select Using Label">
     <form>
       <Select 
-        value="This is my initial value"
+        label = "This guidance text goes in the label"
         options={[
           {
            name: 'option 1',
@@ -58,4 +58,55 @@ import Select from './Select';
     </form> 
   </Story>
 </Preview>
+
+# Enabled Select Using a Default Value
+<Preview>
+  <Story name="Enabled Select Using a Default Value">
+    <form>
+      <Select 
+        value="Preselected value option 3"
+        label="Label is always required for accessbility but this one will not be show to the user"
+        options={[
+          {
+           name: 'option 1',
+           value: 1,
+         },
+         {
+           name: 'option 2',
+           value: 2,
+          },
+       ]}
+        handleChange={action('changed')}
+        form="formName2"
+      />
+    </form> 
+  </Story>
+</Preview>
+
+# Disabled Select Using Label  confirm if disabled and error are actually going to exist on this component 
+<Preview>
+  <Story name="Disabled Select ">
+    <form>
+      <Select 
+        label = "Select from the below choices"
+        handleChange={action('changed')}
+        form="formName3"
+        options={[
+          {
+           name: 'option 1',
+           value: 1,
+         },
+         {
+           name: 'option 2',
+           value: 2,
+          },
+       ]}
+      />
+    </form> 
+  </Story>
+</Preview>
+
+
+
+
 
