@@ -48,7 +48,7 @@ const RadioGroup = props => {
 
 RadioGroup.propTypes = {
   /**
-   * The `<Radio />`s you want the `<RadioGroup />` to group together.
+   * The `<Radio />` components you want the `<RadioGroup />` to group together.
    */
   children: PropTypes.node.isRequired,
   /**

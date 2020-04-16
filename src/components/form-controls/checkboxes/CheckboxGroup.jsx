@@ -7,26 +7,31 @@ import './checkboxes.less';
 class CheckboxGroup extends Component {
   state = {
     // eslint-disable-next-line react/destructuring-assignment
-    checkedValues: [this.props.defaultGroupValue],
+    checkedValues: [this.props.selectedValues],
   };
 
-  handleChangeGroup = event => {
+  handleChange = event => {
+    const { handleChange } = this.props;
     const { checkedValues } = this.state;
     let values = checkedValues.flat();
+
     if (event.target.checked) {
       values.push(event.target.value);
     } else {
       values = values.filter(arrayValue => arrayValue !== event.target.value);
     }
+
     this.setState({ checkedValues: values });
+
+    handleChange(event.target.value);
   };
 
   renderChildren = () => {
-    const { children, name, defaultGroupValue } = this.props;
+    const { children, name, selectedValues } = this.props;
 
     return React.Children.map(children, child => {
       const props = {
-        defaultGroupValue,
+        selectedValues,
         name,
       };
       return React.cloneElement(child, { ...props });
@@ -37,8 +42,8 @@ class CheckboxGroup extends Component {
     const {
       className,
       disabled,
-      error,
-      form,
+      errorMsg,
+      formId,
       label,
       name,
       // validators
@@ -48,7 +53,7 @@ class CheckboxGroup extends Component {
       'ce-checkbox',
       {
         'ce-checkbox--disabled': disabled,
-        'ce-checkbox--error': error,
+        'ce-checkbox--error': errorMsg,
       },
       className,
     );
@@ -57,13 +62,15 @@ class CheckboxGroup extends Component {
       <fieldset
         className={classes}
         name={name}
-        form={form}
-        onChange={this.handleChangeGroup}
+        form={formId}
+        onChange={this.handleChange}
         disabled={disabled}
       >
         <legend>
           {label}
-          {error && <div className="ce-checkbox--error-text">{error}</div>}
+          {errorMsg && (
+            <div className="ce-checkbox--error-text">{errorMsg}</div>
+          )}
         </legend>
         {this.renderChildren()}
       </fieldset>
@@ -73,46 +80,55 @@ class CheckboxGroup extends Component {
 
 CheckboxGroup.propTypes = {
   /**
-   * This is the `<Checkbox />` for the `<CheckboxGroup />`;
+   * The `<Checkbox />` components you want the `<CheckboxGroup />` to group together.
    */
   children: PropTypes.node.isRequired,
   /**
-   * A class name added to the `<CheckboxGroup />`.
+   * A class name, or string of class names, to add to the `CheckboxGroup />`.
    */
   className: PropTypes.string,
   /**
-   * Makes the entire `<CheckboxGroup />` inactive.
+   * Disables the `<CheckboxGroup />` and all of its children.
    */
   disabled: PropTypes.bool,
   /**
-   * The error message on the `<CheckboxGroup />`.
+   * An error message to display in the `<CheckboxGroup />`.
    */
-  error: PropTypes.string,
+  errorMsg: PropTypes.string,
   /**
-   * The name of the form the `<CheckboxGroup />` belongs to.
+   * The id of the form the `<CheckboxGroup />` belongs to.
    */
-  form: PropTypes.string,
+  formId: PropTypes.string,
   /**
-   * The text that gets placed into the legend element.
+   * A function to trigger when the state of the `<CheckboxGroup />` changes.
+   */
+  handleChange: PropTypes.func,
+  /**
+   * The `<CheckboxGroup />` legend.
    */
   label: PropTypes.string.isRequired,
   /**
-   * The name is a unique name for the `<CheckboxGroup />` given to all the `<Checkbox />`s.
+   * The name given to all the children of the `<CheckboxGroup />`.
    */
   name: PropTypes.string.isRequired,
-  // validators: PropTypes.array,
   /**
-   * This optional value preassigns checked to certain checkboxes in the `<CheckboxGroup />`.  The string values will be pushed into the defaultGroupValue array.
+   * The values used to pre-select some children of the `<CheckboxGroup />`.
    */
-  defaultGroupValue: PropTypes.arrayOf(PropTypes.any),
+  selectedValues: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.bool,
+  ]),
+  // validators: PropTypes.array,
 };
 
 CheckboxGroup.defaultProps = {
   className: '',
   disabled: false,
-  error: '',
-  form: '',
-  defaultGroupValue: [],
+  errorMsg: '',
+  formId: '',
+  handleChange: () => {},
+  selectedValues: [],
   // validators: [],
 };
 
