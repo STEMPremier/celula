@@ -9,13 +9,14 @@
 // }
 
 .ce-select {
-  // background-color: yellow;
+  color: red;
   // appearance: none;
   // -webkit-appearance: none;
   // -o-appearance: none;
   // -moz-appearance: none;
   // -ms-appearance: none;
 
+  // should remove the default arrows from most browsers here but currentlty isn't touching
   select {
     display: none;
     appearance: none;
@@ -23,40 +24,42 @@
     -o-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
-    text-indent: 1px;
+    // text-indent: 1px;
     text-overflow: '';
   }
 
+  // removes the arrow from the IE
   select::ms-expand {
     display: none;
-    appearance: none;
-    -webkit-appearance: none;
-    -o-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    text-indent: 1px;
-    text-overflow: '';
   }
 
-  .ce-select--button {
-    appearance: none;
-    -webkit-appearance: none;
-    -o-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    text-indent: 1px;
-    text-overflow: '';
+  // the onclick right arrow has to be placed in an ::after or won't show with select || WAIT UNTIL AFTER CSS FILE HOOKED UP
+  .select-wrapper::after {
+    background-color: @gradient-cool;
+    width: 40px;
+    height: 40px;
+    // border-radius: '5px',
   }
 
-  .ce-select--outside-arrow {
-    width: 300px;
-    height: 300px;
-    font-size: 55px;
-    margin: 0;
-    color: @green;
-    // display: inline-block;
-    background-color: @navy;
-  }
+  // .ce-select--button {
+  //   appearance: none;
+  //   -webkit-appearance: none;
+  //   -o-appearance: none;
+  //   -moz-appearance: none;
+  //   -ms-appearance: none;
+  //   text-indent: 1px;
+  //   text-overflow: '';
+  // }
+
+  // .ce-select--outside-arrow {
+  //   width: 300px;
+  //   height: 300px;
+  //   font-size: 55px;
+  //   margin: 0;
+  //   color: @green;
+  //   display: inline-block;
+  //   background-color: @navy;
+  // }
 
   // .ce-select--arrow-down {
   //   position: absolute;

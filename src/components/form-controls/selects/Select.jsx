@@ -2,18 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
+import './select.less';
+
 class Select extends React.Component {
+  
   state = {
     showLabel: false,
     carrotDown: false,
+    selectedValue: selectedValue ? selectedValue : '',
   };
+
+  const {selectedValue} = this.props; 
+
+  selectValue = () => {};
 
   handleCarrot = () => {
     this.setState(prevState => ({
       carrotDown: !prevState.carrotDown,
     }));
     // eslint-disable-next-line react/destructuring-assignment
-    console.log('handleCarrot', this.state.carrotDown);
+    // console.log('handleCarrot', this.state.carrotDown);
   };
 
   render() {
@@ -31,9 +39,10 @@ class Select extends React.Component {
 
     const { showLabel, carrotDown } = this.state;
 
+    // eslint-disable-next-line no-console
     console.log(carrotDown);
 
-    const id = `${name}_${value}`;
+    const id = `${name}`;
 
     const classes = cx(
       'ce-select',
@@ -43,24 +52,23 @@ class Select extends React.Component {
       },
       className,
     );
+
     return (
       <div className={classes}>
         {showLabel && <label htmlFor={id}>{label}</label>}
         <select
-          className="ce-select--button"
           name={name}
-          id={id}
           form={form}
+          id={id}
           onClick={() => this.handleCarrot()}
           onChange={handleChange}
+          onBlur={() => this.selectValue()}
         >
           {value ? <option>{value}</option> : <option>{label}</option>}
           {options.map(item => (
             <option key={item.value}>{item.name}</option>
           ))}
-          <span>practice arrow down state change</span>
         </select>
-        <span className="ce-select--outside-arrow">span 1</span>
         <span error={error} />
       </div>
     );
@@ -81,17 +89,17 @@ Select.propTypes = {
    */
   label: PropTypes.string.isRequired,
   /**
-   * The value is the optional prelected default option to appear in the select.
+   * The value is the optional preselected default option to appear in the select.
    */
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  selectedValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /**
    * The form is what the select belongs to.  NOT SURE EXACTLY.  DOUBLE CHECK WITH IAN.
    */
   form: PropTypes.string,
   /**
-   * NOT SURE ABOUT THIS EITHER
+   * The name for the select is required for accessibilty purposes of attaching a unique id.
    */
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   /**
    * A function that is called when changing the `<Select />`.
    */
@@ -101,14 +109,13 @@ Select.propTypes = {
    */
   error: PropTypes.string,
   /**
-   * The options is the array of objects containing the name and value of each select row.
+   * The options is the array of objects containing the name, value, and selected status of each select row.
    */
-  // eslint-disable-next-line react/forbid-prop-types
-  options: PropTypes.array.isRequired,
+  options: PropTypes.arrayof(PropTypes.oneOfType([PropTypes.object]))
+    .isRequired,
 };
 
 Select.defaultProps = {
-  name: '',
   className: '',
   // disabled: false,
   form: '',
