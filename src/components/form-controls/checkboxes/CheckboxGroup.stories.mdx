@@ -1,0 +1,182 @@
+
+import { Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { boolean, select, text, array } from '@storybook/addon-knobs';
+
+import CheckboxGroup from './CheckboxGroup';
+import Checkbox from './Checkbox';
+
+<Meta component={CheckboxGroup} title="Components/Molecules/Form Controls/CheckboxGroup"/>
+
+# CheckboxGroup
+<Description of={CheckboxGroup}/>
+<Props of={CheckboxGroup}/>
+
+<Story name="All CheckboxGroups" parameters={{docs: {disable: true}}}>
+  <form id="formOne">
+    <CheckboxGroup
+      className={text('className', '')}
+      disabled={boolean('disabled', false)}
+      errorClass={text('errorClass', '')}
+      errorMsg={text('errorMsg', '')}
+      formId={text('formId', 'formOne')}
+      handleChange={val => console.log(`The value is ${val}`)}
+      label={text('label', 'Favorite Food')}
+      name={text('name', 'favoriteFood')}
+      selectedValues={array('selectedValues', ["pizza", "hamburger"])}
+    >
+      <Checkbox
+        label='Pizza'
+        value='pizza'
+      />
+      <Checkbox
+        label='Hotdog'
+        value='hotdog'
+      />
+      <Checkbox
+        label='Hamburger'
+        value='hamburger'
+      />
+      <Checkbox
+        label='Coleslaw'
+        value='coleslaw'
+      />
+    </CheckboxGroup>
+  </form>
+</Story>
+
+### Types
+<Preview>
+  <Story name="CheckboxGroup Types">
+    <form id="formTwo">
+      <CheckboxGroup
+        formId="formTwo"
+        handleChange={val => console.log(`The value is ${val}`)}
+        label="Favorite Text Editor"
+        name="favoriteTextEditor"
+      >
+        <Checkbox
+          label="Vim"
+          value="vim"
+        />
+        <Checkbox
+          label="Emacs"
+          value="emacs"
+        />
+        <Checkbox
+         label="VS Code"
+         value="vscode"
+        />
+        <Checkbox
+          label="Atom"
+          value="atom"
+        />
+      </CheckboxGroup>
+    </form>
+  </Story>
+</Preview>
+
+### States
+<Preview>
+  <Story name="CheckboxGroup States">
+    <form id="formThree">
+      <CheckboxGroup
+        formId="formThree"
+        handleChange={val => console.log(`The value is ${val}`)}
+        label="Favorite OS"
+        name="favoriteOS"
+      >
+        <Checkbox
+          label="macOS"
+          value="macos"
+        />
+        <Checkbox
+          label="Windows"
+          value="windows"
+        />
+        <Checkbox
+         label="Linux"
+         value="linux"
+        />
+      </CheckboxGroup>
+      <CheckboxGroup
+        disabled
+        formId="formThree"
+        handleChange={val => console.log(`The value is ${val}`)}
+        label="Favorite Beatle"
+        name="favoriteBeatle"
+      >
+        <Checkbox
+         label="John Lennon"
+         value="john"
+        />
+        <Checkbox
+          label="Paul Mccartney"
+          value="paul"
+        />
+        <Checkbox
+         label="George Harrison"
+         value="george"
+        />
+        <Checkbox
+          label="Ringo Starr"
+          value="ringo"
+        />
+      </CheckboxGroup>
+      <CheckboxGroup
+        formId="formThree"
+        handleChange={val => console.log(`The value is ${val}`)}
+        label="Favorite Beatle Two"
+        name="favoriteBeatle2"
+      >
+        <Checkbox
+         label="John Lennon"
+         value="john"
+        />
+        <Checkbox
+          label="Paul Mccartney"
+          value="paul"
+        />
+        <Checkbox
+         label="George Harrison"
+         value="george"
+        />
+        <Checkbox
+          label="Ringo Starr"
+          value="ringo"
+          disabled
+        />
+      </CheckboxGroup>
+      <CheckboxGroup
+        errorMsg="Unable to set Vuejs as favorite framework."
+        formId="formThree"
+        handleChange={val => console.log(`The value is ${val}`)}
+        label="Favorite UI Framework"
+        name="favoriteFramework"
+        selectedValues={["react", "vue"]}
+      >
+        <Checkbox
+         label="React"
+         value="react"
+        />
+        <Checkbox
+          label="AngularJS"
+          value="angularjs"
+        />
+        <Checkbox
+         label="Angular"
+         value="angular"
+        />
+        <Checkbox
+          label="Vue"
+          value="vue"
+        />
+      </CheckboxGroup>
+    </form>
+  </Story>
+</Preview>
