@@ -2,30 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
+import FormControlGroup from '../core';
+
 import './checkbox.less';
 
 class CheckboxGroup extends Component {
-  state = {
-    // eslint-disable-next-line react/destructuring-assignment
-    checkedValues: [this.props.selectedValues],
-  };
-
-  handleChange = event => {
-    const { handleChange } = this.props;
-    const { checkedValues } = this.state;
-    let values = checkedValues.flat();
-
-    if (event.target.checked) {
-      values.push(event.target.value);
-    } else {
-      values = values.filter(arrayValue => arrayValue !== event.target.value);
-    }
-
-    this.setState({ checkedValues: values });
-
-    handleChange(event.target.value);
-  };
-
   renderChildren = () => {
     const { children, name, selectedValues } = this.props;
 
@@ -40,12 +21,15 @@ class CheckboxGroup extends Component {
 
   render() {
     const {
+      children,
       className,
       disabled,
       errorMsg,
       formId,
+      handleChange,
       label,
       name,
+      selectedValues,
       // validators
     } = this.props;
 
@@ -59,21 +43,19 @@ class CheckboxGroup extends Component {
     );
 
     return (
-      <fieldset
+      <FormControlGroup
         className={classes}
-        name={name}
-        form={formId}
-        onChange={this.handleChange}
         disabled={disabled}
+        errorClass="ce-checkbox--error-text"
+        errorMsg={errorMsg}
+        formId={formId}
+        handleChange={handleChange}
+        label={label}
+        name={name}
+        selectedValues={selectedValues}
       >
-        <legend>
-          {label}
-          {errorMsg && (
-            <div className="ce-checkbox--error-text">{errorMsg}</div>
-          )}
-        </legend>
-        {this.renderChildren()}
-      </fieldset>
+        {children}
+      </FormControlGroup>
     );
   }
 }
