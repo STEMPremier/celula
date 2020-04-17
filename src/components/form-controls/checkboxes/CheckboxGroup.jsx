@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import './checkboxes.less';
+import './checkbox.less';
 
 class CheckboxGroup extends Component {
   state = {
