@@ -84,7 +84,7 @@ CheckboxGroup.propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
-   * A class name, or string of class names, to add to the `CheckboxGroup />`.
+   * A class name, or string of class names, to add to the `<CheckboxGroup />`.
    */
   className: PropTypes.string,
   /**
@@ -114,11 +114,9 @@ CheckboxGroup.propTypes = {
   /**
    * The values used to pre-select some children of the `<CheckboxGroup />`.
    */
-  selectedValues: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.bool,
-  ]),
+  selectedValues: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
+  ),
   // validators: PropTypes.array,
 };
 

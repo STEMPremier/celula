@@ -98,13 +98,13 @@ class Checkbox extends Component {
 
 Checkbox.propTypes = {
   /**
-   * A class name added to the `<CheckboxGroup />`.
-   */
-  className: PropTypes.string,
-  /**
    * Select the `<Checkbox />`.
    */
   checked: PropTypes.bool,
+  /**
+   * A class name added to the `<CheckboxGroup />`.
+   */
+  className: PropTypes.string,
   /**
    * Make the `<Checkbox />` inactive.
    */
@@ -114,6 +114,10 @@ Checkbox.propTypes = {
    */
   errorMsg: PropTypes.string,
   /**
+   * The id of the form the `<Checkbox />` belongs to. This value is overwritten by any value passed from an enclosing `<CheckboxGroup />`.
+   */
+  formId: PropTypes.string,
+  /**
    * A function to trigger when the state of the `<Checkbox />` changes.
    */
   handleChange: PropTypes.func,
@@ -122,10 +126,6 @@ Checkbox.propTypes = {
    * @ignore
    */
   isA: PropTypes.string, // eslint-disable-line react/no-unused-prop-types
-  /**
-   * The id of the form the `<Checkbox />` belongs to. This value is overwritten by any value passed from an enclosing `<CheckboxGroup />`.
-   */
-  formId: PropTypes.string,
   /**
    * The `<Checkbox />` label.
    */

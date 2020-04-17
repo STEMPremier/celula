@@ -118,7 +118,9 @@ FormControlGroup.propTypes = {
   /**
    * An array of values used to pre-select children of the `<FormControlGroup />`.
    */
-  selectedValues: PropTypes.arrayOf(PropTypes.any),
+  selectedValues: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
+  ),
 };
 
 FormControlGroup.defaultProps = {
