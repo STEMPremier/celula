@@ -43,7 +43,7 @@ class RadioGroup extends Component {
     } = this.props;
 
     const classes = cx(
-      'ce-radio',
+      'ce-radio-group',
       {
         'ce-radio--disabled': disabled,
         'ce-radio--error': error,
