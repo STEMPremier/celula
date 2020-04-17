@@ -6,7 +6,7 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { boolean, text, array } from '@storybook/addon-knobs';
+import { boolean, text, array, number } from '@storybook/addon-knobs';
 
 import Select from './Select';
 
@@ -23,6 +23,7 @@ import Select from './Select';
     className={text('className', '')}
     handleChange={action('click')}
     label={text('label', 'Default Fieldset Label')}
+    selectedValue={number('selectedValue', 2)}
     name={text('name', 'Default Name for Select')}
     form={text('form', '')}
     options={array('options', [
@@ -44,6 +45,7 @@ import Select from './Select';
     <form>
       <Select 
         label = "This guidance text goes in the label"
+        name="Enabled Select Using Label"
         options={[
           {
            name: 'option 1',
@@ -66,7 +68,8 @@ import Select from './Select';
   <Story name="Enabled Select Using a Default Value">
     <form>
       <Select 
-        value="option 3"
+        selectedValue={2}
+        name="Enabled Select Using a Default Value"
         label="Label is always required for accessbility but this one will not be show to the user"
         options={[
           {
@@ -93,6 +96,7 @@ import Select from './Select';
         label = "Select from the below choices"
         handleChange={action('changed')}
         form="formName3"
+        name="Disabled Select "
         options={[
           {
            name: 'option 1',
