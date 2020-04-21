@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-direct-mutation-state */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/no-unused-state */
@@ -5,6 +6,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+
+import SystemIcon from '../../icon';
+
+// {
+//   /* <SystemIcon name="navigate" /> */
+// }
 
 import './select.less';
 
@@ -16,8 +23,6 @@ class Select extends React.Component {
     selectedValue: this.props.selectedValue ? this.props.selectedValue : '',
     selectedOption: '',
   };
-
-  // const {selectedValue} = this.props;
 
   componentDidMount() {
     this.handleSelectedValue();
@@ -38,7 +43,7 @@ class Select extends React.Component {
       selectedOption: selectedObject,
     });
 
-    // console.log('this.props', this.props);
+    console.log('this.props', this.props);
     // console.log('this.state.selectedOption', this.state.selectedOption);
   };
 
@@ -63,9 +68,15 @@ class Select extends React.Component {
       options,
     } = this.props;
 
-    console.log('selectedOption', this.state.selectedOption);
+    // console.log('selectedOption', this.state.selectedOption);
     // eslint-disable-next-line no-unused-vars
     const { showLabel, carrotDown, selectedOption } = this.state;
+
+    const remainingOptions = options.filter(
+      item => item.name === selectedOption.name,
+    );
+
+    console.log('remainingOptionbs', remainingOptions);
 
     const id = `${name}`;
 
@@ -90,17 +101,18 @@ class Select extends React.Component {
           onClick={() => this.handleCarrot()}
           onChange={this.handleSelectedValue}
         >
-          {selectedOption ? (
+          {selectedOption && selectedOption.length ? (
             selectedOption.map(item => (
               <option key={item.value}>{item.name}</option>
             ))
           ) : (
             <option>{label}</option>
           )}
-          {options.map(item => (
+          {remainingOptions.map(item => (
             <option key={item.value}>{item.name}</option>
           ))}
         </select>
+
         <span error={error} />
       </div>
     );
