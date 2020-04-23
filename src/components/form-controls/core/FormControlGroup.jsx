@@ -72,7 +72,7 @@ class FormControlGroup extends Component {
       >
         <legend>{label}</legend>
         {this.renderChildren()}
-        {errorMsg && <div className={errorClass}>{errorMsg}</div>}
+        <span className={errorClass}>{errorMsg}</span>
       </fieldset>
     );
   }
