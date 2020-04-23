@@ -2,32 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import './radios.less';
+import './radio.less';
 
+/**
+ * I am a `<Radio />` description.
+ */
 const Radio = props => {
   const { checked, className, disabled, label, name, value } = props;
   const id = `${name}_${value}`;
-  const classes = cx(
-    'ce-radio',
-    {
-      'ce-radio--checked': checked,
-    },
-    className,
-  );
+  const classes = cx('ce-radio', className);
 
   return (
     <div className={classes}>
-      <div className="ce-radio--button">
-        <input
-          defaultChecked={checked}
-          disabled={disabled}
-          id={id}
-          name={name}
-          type="radio"
-          value={value}
-        />
-        <label htmlFor={id}>{label}</label>
-      </div>
+      <input
+        defaultChecked={checked}
+        disabled={disabled}
+        id={id}
+        name={name}
+        type="radio"
+        value={value}
+      />
+      <label htmlFor={id}>{label}</label>
     </div>
   );
 };
@@ -38,11 +33,13 @@ Radio.propTypes = {
    */
   className: PropTypes.string,
   /**
-   * Selecte the `<Radio />`.
+   * Select the `<Radio />`.
+   * @ignore
    */
   checked: PropTypes.bool,
   /**
    * Make the `<Radio />` inactive.
+   * @ignore
    */
   disabled: PropTypes.bool,
   /**

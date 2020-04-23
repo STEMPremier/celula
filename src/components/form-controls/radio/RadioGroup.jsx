@@ -4,8 +4,11 @@ import cx from 'classnames';
 
 import FormControlGroup from '../core';
 
-import './radios.less';
+import './radio-group.less';
 
+/**
+ * I am a `<RadioGroup />` description.
+ */
 const RadioGroup = props => {
   const {
     children,
@@ -23,8 +26,8 @@ const RadioGroup = props => {
   const classes = cx(
     'ce-radio-group',
     {
-      'ce-radio--disabled': disabled,
-      'ce-radio--error': errorMsg,
+      'ce-radio-group--disabled': disabled,
+      'ce-radio-group--error': errorMsg,
     },
     className,
   );
@@ -33,7 +36,6 @@ const RadioGroup = props => {
     <FormControlGroup
       className={classes}
       disabled={disabled}
-      errorClass="ce-radio-error--text"
       errorMsg={errorMsg}
       formId={formId}
       handleChange={handleChange}
