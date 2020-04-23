@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-indent */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable import/extensions */
@@ -24,27 +25,34 @@ class Select extends React.Component {
     carrotDown: true,
     // eslint-disable-next-line react/destructuring-assignment
     selectedValue: this.props.selectedValue ? this.props.selectedValue : '',
-    selectedOption: '',
+    // selectedOption: '',
   };
 
-  componentDidMount() {
-    this.handleSelectedValue();
-  }
+  // componentDidMount() {
+  //   if (this.props.selectedValue) {
+  //     const selectedObject = this.props.options.filter(
+  //       option => option.value === this.props.selectedValue,
+  //     );
+  //     this.setState({
+  //       selectedOption: selectedObject,
+  //     });
+  //   }
+  // }
 
-  handleSelectedValue = () => {
+  handleSelectedValue = event => {
     // eslint-disable-next-line react/destructuring-assignment
     // const assignSelectedValue = Number.isInteger(this.state.selectedValue);
+    // eslint-disable-next-line no-unused-expressions
+    event
+      ? console.log(event.target.value) &&
+        this.setState(
+          {
+            selectedValue: event.target.value,
+          },
+          () => console.log('state after event', this.state.selectedValue),
+        )
+      : console.log('no event', this.state);
 
-    // map the optoins looking for matching to option.value
-    // add in ramda to map and filter together or create let
-    const selectedObject = this.props.options.filter(
-      option => option.value === this.props.selectedValue,
-    );
-    this.setState({
-      selectedOption: selectedObject,
-    });
-
-    // console.log('this.props', this.props);
     // console.log('this.state.selectedOption', this.state.selectedOption);
   };
 
@@ -54,7 +62,7 @@ class Select extends React.Component {
       carrotDown: !prevState.carrotDown,
     }));
     // eslint-disable-next-line react/destructuring-assignment
-    console.log('handleCarrot', this.state.carrotDown);
+    // console.log('handleCarrot', this.state.carrotDown);
   };
 
   render() {
@@ -71,7 +79,7 @@ class Select extends React.Component {
     } = this.props;
 
     // eslint-disable-next-line no-unused-vars
-    const { showLabel, carrotDown, selectedOption } = this.state;
+    const { showLabel, carrotDown, selectedValue } = this.state;
 
     // console.log('this.props.options', this.props.options);
 
@@ -82,6 +90,15 @@ class Select extends React.Component {
     // );
 
     // console.log('remainingOptionbs', remainingOptions);
+
+    // if (this.props.selectedValue) {
+    const selectedOption = this.props.options.filter(
+      option => option.value === this.props.selectedValue,
+    );
+    // console.log('selectedOption in function', selectedOption);
+    // }
+
+    console.log('selectedOption in redner', selectedOption);
 
     const id = `${name}`;
 
@@ -104,19 +121,38 @@ class Select extends React.Component {
             name={name}
             form={form}
             id={id}
-            onClick={() => this.handleCarrot()}
+            // onClick={() => this.handleCarrot()}
             onChange={this.handleSelectedValue}
           >
-            {selectedOption && selectedOption.length ? (
+            {/* {selectedOption && selectedOption.length ? (
               selectedOption.map(item => (
-                <option key={item.value}>{item.name}</option>
+                <option key={item.value} value={item.value} hidden>
+                  {item.name}
+                </option>
               ))
             ) : (
               <option>{label}</option>
             )}
             ) :
             {options.map(item => (
-              <option key={item.value}>{item.name}</option>
+              <option key={item.value} value={item.value}>
+                {item.name}
+              </option>
+            ))} */}
+            {selectedOption.length ? (
+              selectedOption.map(item => (
+                <option key={item.value} value={item.value} hidden>
+                  {item.name}
+                </option>
+              ))
+            ) : (
+              <option>{label}</option>
+            )}
+
+            {options.map(item => (
+              <option key={item.value} value={item.value}>
+                {item.name}
+              </option>
             ))}
           </select>
           {/* <div className="ce-select--caret">
