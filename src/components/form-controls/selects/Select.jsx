@@ -39,21 +39,18 @@ class Select extends React.Component {
   //   }
   // }
 
+  // componentDidUpdate(prevState, prevProps) {
+  //   console.log('state after componentDidUpdate', this.state.selectedValue);
+  //   console.log('prevState', prevState);
+  // }
+
   handleSelectedValue = event => {
-    // eslint-disable-next-line react/destructuring-assignment
-    // const assignSelectedValue = Number.isInteger(this.state.selectedValue);
-    // eslint-disable-next-line no-unused-expressions
-    event
-      ? console.log(event.target.value) &&
-        this.setState(
-          {
-            selectedValue: [event.target.value],
-          },
-          () => console.log('state after event', this.state.selectedValue),
-        )
-      : console.log('no event', this.state);
-    console.log('state after if ', this.state.selectedValue);
-    // console.log('this.state.selectedOption', this.state.selectedOption);
+    this.setState(
+      {
+        selectedValue: event.target.value,
+      },
+      () => console.log('state after event', this.state.selectedValue),
+    );
   };
 
   handleCarrot = () => {
@@ -62,7 +59,7 @@ class Select extends React.Component {
       carrotDown: !prevState.carrotDown,
     }));
     // eslint-disable-next-line react/destructuring-assignment
-    // console.log('handleCarrot', this.state.carrotDown);
+    console.log('handleCarrot', this.state.carrotDown);
   };
 
   render() {
@@ -156,10 +153,9 @@ class Select extends React.Component {
               </option>
             ))}
           </select>
-          {/* <div className="ce-select--caret">
+          <div className="ce-select--caret">
             <SystemIcon name="down" color="black" className="ce-select--down" />
-          </div> */}
-
+          </div>
           <div className="ce-select--outside-arrow" onClick={rightArrowClick}>
             <SystemIcon
               name="navigate"
