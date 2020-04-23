@@ -12,78 +12,70 @@ import Radio from './Radio';
 
 <Meta component={RadioGroup} title="Components/Molecules/Form Controls/RadioGroup" />
 
-# RadioGroup
+# RadioGroup and Radio
+## RadioGroup
 <Description of={RadioGroup} />
 <Props of={RadioGroup} />
 
-<Story name="Radio Group" parameters={{ docs: {disable: true}}}>
-  <RadioGroup
-    className={text('className', '')}
-    handleChange={action('click')}
-    label={text('label', 'Default Fieldset Label')}
-    name={text('name', 'Default Name for Radio Group')}
-    form={text('form', '')}
-  >
-   <Radio
-      label='label 1'
-      value='value 1'
-    />
-    <Radio
-      label='label 2'
-      value='value 2'
-    />
-    <Radio
-      label='label 3'
-      value='value 3'
-    />
-  </RadioGroup>
-</Story>
-
-# Radio
+## Radio
 <Description of={Radio} />
 <Props of={Radio} />
 
-<Story name="Radio" parameters={{ docs: {disable: true}}}>
-  <form> 
-  <RadioGroup
-    handleChange={action('click')}
-    label='label for radio'
-    name='name for radio'
-  >
-    <Radio
-      label={text('label', 'Default Radio Label 1')}
-      value={text('value', 'value1')}
-    />
-  </RadioGroup>
+<Story name="All RadioGroups" parameters={{ docs: {disable: true}}}>
+  <form id="formOne">
+    <RadioGroup
+      className={text('className', '')}
+      disabled={boolean('disabled', false)}
+      errorClass={text('errorClass', '')}
+      errorMsg={text('errorMsg', '')}
+      formId={text('formId', 'formOne')}
+      handleChange={val => console.log(`The value is ${val}`)}
+      label={text('label', 'Choose your favorite OS:')}
+      name={text('name', 'favoriteOS')}
+      selectedValue={text('selectedValue', 'macos')}
+    >
+      <Radio
+        label='macOS'
+        value='macos'
+      />
+      <Radio
+        label='Linux'
+        value='linux'
+      />
+      <Radio
+        label='Windows'
+        value='windows'
+      />
+    </RadioGroup>
   </form>
 </Story>
 
+<Story name="All Radios" parameters={{ docs: {disable: true}}}>
+  <Radio
+    className={text('className', '')}
+    label={text('label', 'macOS')}
+    value={text('value', 'macos')}
+  />
+</Story>
 
-### Enabled Radio Buttons 
+### Types
 <Preview>
-  <Story name="Enabled Radio Group">
-    <form>
+  <Story name="RadioGroup Types">
+    <form id="formTwo">
       <RadioGroup
-        label="Label Goes Here"
-        name="radioGroupName1"
-        handleChange={action('changed')}
-        form="formName1"
+        formId="formTwo"
+        handleChange={val => console.log(`The value is ${val}`)}
+        label="Please make a choice:"
+        name="choice"
+        selectedValue="no"
       >
         <Radio
-          label="Option 1"
-          value="option1"
+          label="Yes"
+          value="yes"
         />
         <Radio
-          label="Option 2"
-          value="option2"
-        />
-           <Radio
-          label="Option 3"
-          value="option3"
-        />
-        <Radio
-          label="Option 4"
-          value="option4"
+          label="No"
+          value="no"
         />
       </RadioGroup>
     </form>
@@ -91,66 +83,58 @@ import Radio from './Radio';
 </Preview>
 
 
-### Disabled Radio Group 
+### States
 <Preview>
-  <Story name="Disabled Radio Group">
-    <form>
+  <Story name="RadioGroup States">
+    <form id="formThree">
       <RadioGroup
-        label="Label Goes Here"
-        name="radioGroupName2"
-        handleChange={action('changed')}
-        form="formName3"
-        value="option1"
+        formId="formThree"
+        handleChange={val => console.log(`The value is ${val}`)}
+        label="Standard RadioGroup:"
+        name="standardGroup"
+        selectedValue="thatOne"
+      >
+        <Radio
+          label="This one"
+          value="thisOne"
+        />
+        <Radio
+          label="That one"
+          value="thatOne"
+        />
+      </RadioGroup>
+      <RadioGroup
         disabled
+        formId="formThree"
+        handleChange={val => console.log(`The value is ${val}`)}
+        label="Disabled RadioGroup:"
+        name="disabledGroup"
+        selectedValue="notThatOne"
       >
         <Radio
-          label="Option 1"
-          value="option1"
+          label="Not this one"
+          value="notThisOne"
         />
         <Radio
-          label="Option 2"
-          value="option2"
-        />
-        <Radio
-          label="Option 3"
-          value="option3"
-        />
-        <Radio
-          label="Option 3"
-          value="option4"
+          label="Not that one"
+          value="notThatOne"
         />
       </RadioGroup>
-    </form>
-  </Story>
-</Preview>
-
-### Error Radio Group  
-<Preview>
-  <Story name="Error Radio Group">
-    <form>
       <RadioGroup
-        label="Label Goes Here"
-        name="radioGroupName3"
-        handleChange={action('changed')}
-        form="formName4"
-        error="Error message"
-        value="option1"
+        errorMsg="You did not choose wisely!"
+        formId="formThree"
+        handleChange={val => console.log(`The value is ${val}`)}
+        label="Error RadioGroup:"
+        name="errorGroup"
+        selectedValue="thatWrongOne"
       >
         <Radio
-          label="Option 1"
-          value="option1"
+          label="This wrong one"
+          value="thisWrongOne"
         />
         <Radio
-          label="Option 2"
-          value="option2"
-        />
-        <Radio
-          label="Option 3"
-          value="option3"
-        />
-        <Radio
-          label="Option 4"
-          value="option4"
+          label="That wrong one"
+          value="thatWrongOne"
         />
       </RadioGroup>
     </form>
