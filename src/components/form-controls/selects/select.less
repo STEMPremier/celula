@@ -1,8 +1,14 @@
 @import '../../../styles/celula';
 
 .ce-select {
-  color: red;
-
+  // color: red;
+  // width: 300px;
+  // // display: -webkit-flex;
+  // display: flex;
+  // justify-content: flex-start;
+  // // -webkit-flex-direction: row;
+  // flex-direction: row;
+  // flex-wrap: nowrap;
   // should remove the default arrows from most browsers here but currentlty isn't touching
   select {
     appearance: none;
@@ -13,13 +19,13 @@
     text-overflow: '';
     display: block;
     padding: 0.6em 1.4em 0.5em 0.8em;
-    width: 300px;
-    max-width: 100%;
+    width: 320px;
+    // max-width: 100%;
     box-sizing: border-box;
-    margin: 10px 0 0 10px;
-    border: 1px solid #aaa;
-    box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
-    border-radius: 0.5em;
+    // margin: 10px 0 0 10px;
+    // border: 1px solid #aaa;
+    // box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+    background-color: #fbfbfb;
     // PUT THE CARROT HERE
     background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
       linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
@@ -35,21 +41,43 @@
 
   // the onclick right arrow has to be placed in an ::after or won't show with select || WAIT UNTIL AFTER CSS FILE HOOKED UP
   // .select-wrapper::after {
-  //   background-color: @gradient-cool;
-  //   width: 40px;
-  //   height: 40px;
-  //   // border-radius: '5px',
-  // }
+  .ce-select--wrapper {
+    margin: 10px 0 0 10px;
+    border-radius: 5px;
+    background-color: @red;
+    // color: red;
+    width: 380px;
+    // display: -webkit-flex;
+    display: flex;
+    justify-content: flex-start;
+    // -webkit-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    // border-radius: '5px',
+    border: 1px solid #b2b2b2;
+  }
 
-  // .ce-select--outside-arrow {
-  //   width: 300px;
-  //   height: 300px;
-  //   font-size: 55px;
-  //   margin: 0;
-  //   color: @green;
-  //   display: inline-block;
-  //   background-color: @navy;
-  // }
+  .ce-select--outside-arrow {
+    width: 60px;
+    height: 40px;
+    font-size: 55px;
+    // margin-left: auto;
+    // color: @white;
+    // display: inline-block;
+    // stroke: @white;
+    // color: @white;
+    background-color: @navy;
+    svg {
+      margin: auto;
+      width: 50%;
+      padding: 14px;
+    }
+    .ce-select--arrow {
+      margin: auto;
+      width: 50%;
+      padding: 10px;
+    }
+  }
 
   // .ce-select--arrow-down {
   //   position: absolute;

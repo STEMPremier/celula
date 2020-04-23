@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable import/extensions */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-direct-mutation-state */
 /* eslint-disable react/destructuring-assignment */
@@ -7,7 +10,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import SystemIcon from '../../icon';
+import SystemIcon from '../../icon/SystemIcon.jsx';
 
 // {
 //   /* <SystemIcon name="navigate" /> */
@@ -18,7 +21,7 @@ import './select.less';
 class Select extends React.Component {
   state = {
     showLabel: false,
-    carrotDown: false,
+    carrotDown: true,
     // eslint-disable-next-line react/destructuring-assignment
     selectedValue: this.props.selectedValue ? this.props.selectedValue : '',
     selectedOption: '',
@@ -29,8 +32,6 @@ class Select extends React.Component {
   }
 
   handleSelectedValue = () => {
-    // eslint-disable-next-line react/destructuring-assignment
-    // console.log(item);
     // eslint-disable-next-line react/destructuring-assignment
     // const assignSelectedValue = Number.isInteger(this.state.selectedValue);
 
@@ -43,7 +44,7 @@ class Select extends React.Component {
       selectedOption: selectedObject,
     });
 
-    console.log('this.props', this.props);
+    // console.log('this.props', this.props);
     // console.log('this.state.selectedOption', this.state.selectedOption);
   };
 
@@ -53,7 +54,7 @@ class Select extends React.Component {
       carrotDown: !prevState.carrotDown,
     }));
     // eslint-disable-next-line react/destructuring-assignment
-    // console.log('handleCarrot', this.state.carrotDown);
+    console.log('handleCarrot', this.state.carrotDown);
   };
 
   render() {
@@ -66,21 +67,25 @@ class Select extends React.Component {
       // handleChange,
       label,
       options,
+      rightArrowClick,
     } = this.props;
 
-    // console.log('selectedOption', this.state.selectedOption);
     // eslint-disable-next-line no-unused-vars
     const { showLabel, carrotDown, selectedOption } = this.state;
 
-    const remainingOptions = options.filter(
-      item => item.name === selectedOption.name,
-    );
+    // console.log('this.props.options', this.props.options);
 
-    console.log('remainingOptionbs', remainingOptions);
+    // const selectedOptionName = selectedOption.map(option => option.name);
+    // console.log('selectedOptionName', selectedOptionName);
+    // const remainingOptions = options.filter(
+    //   item => item.name !== selectedOptionName,
+    // );
+
+    // console.log('remainingOptionbs', remainingOptions);
 
     const id = `${name}`;
 
-    console.log(selectedOption);
+    // console.log('carrot in render', carrotDown);
 
     const classes = cx(
       'ce-select',
@@ -94,25 +99,34 @@ class Select extends React.Component {
     return (
       <div className={classes}>
         {showLabel && <label htmlFor={id}>{label}</label>}
-        <select
-          name={name}
-          form={form}
-          id={id}
-          onClick={() => this.handleCarrot()}
-          onChange={this.handleSelectedValue}
-        >
-          {selectedOption && selectedOption.length ? (
-            selectedOption.map(item => (
+        <div className="ce-select--wrapper">
+          <select
+            name={name}
+            form={form}
+            id={id}
+            onClick={() => this.handleCarrot()}
+            onChange={this.handleSelectedValue}
+          >
+            {selectedOption && selectedOption.length ? (
+              selectedOption.map(item => (
+                <option key={item.value}>{item.name}</option>
+              ))
+            ) : (
+              <option>{label}</option>
+            )}
+            ) :
+            {options.map(item => (
               <option key={item.value}>{item.name}</option>
-            ))
-          ) : (
-            <option>{label}</option>
-          )}
-          {remainingOptions.map(item => (
-            <option key={item.value}>{item.name}</option>
-          ))}
-        </select>
-
+            ))}
+          </select>
+          <div className="ce-select--outside-arrow" onClick={rightArrowClick}>
+            <SystemIcon
+              name="navigate"
+              className="ce-select--arrow"
+              color="white"
+            />
+          </div>
+        </div>
         <span error={error} />
       </div>
     );
@@ -159,6 +173,10 @@ Select.propTypes = {
   options: PropTypes.array.isRequired,
   // options: PropTypes.arrayof(PropTypes.oneOfType([PropTypes.object]))
   // .isRequired,
+  /**
+   * This function is accesible to the user for clickable events on the right arrow in the gradient
+   */
+  rightArrowClick: PropTypes.func.isRequired,
 };
 
 Select.defaultProps = {

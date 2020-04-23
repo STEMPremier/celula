@@ -21,7 +21,8 @@ import Select from './Select';
   <form>
   <Select
     className={text('className', '')}
-    handleChange={action('click')}
+    handleChange={action('clicked handleChange in the select ')}
+    rightArrowClick={action('clicked rightArrowClick in the gradient')}
     label={text('label', 'Default Fieldset Label')}
     selectedValue={number('selectedValue', 2)}
     name={text('name', 'Default Name for Select')}
@@ -57,6 +58,7 @@ import Select from './Select';
           },
        ]}
         handleChange={action('changed')}
+        rightArrowClick={action('rightArrowClick')}
         form="formName1"
       />
     </form> 
@@ -69,6 +71,7 @@ import Select from './Select';
     <form>
       <Select 
         selectedValue={2}
+        rightArrowClick={action('rightArrowClick')}
         name="Enabled Select Using a Default Value"
         label="Label is always required for accessbility but this one will not be show to the user"
         options={[
@@ -95,6 +98,7 @@ import Select from './Select';
       <Select 
         label = "Select from the below choices"
         handleChange={action('changed')}
+        rightArrowClick={action('rightArrowClick')}
         form="formName3"
         name="Disabled Select "
         options={[
