@@ -47,12 +47,12 @@ class Select extends React.Component {
       ? console.log(event.target.value) &&
         this.setState(
           {
-            selectedValue: event.target.value,
+            selectedValue: [event.target.value],
           },
           () => console.log('state after event', this.state.selectedValue),
         )
       : console.log('no event', this.state);
-
+    console.log('state after if ', this.state.selectedValue);
     // console.log('this.state.selectedOption', this.state.selectedOption);
   };
 
@@ -98,7 +98,8 @@ class Select extends React.Component {
     // console.log('selectedOption in function', selectedOption);
     // }
 
-    console.log('selectedOption in redner', selectedOption);
+    // console.log('selectedOption in redner', selectedOption);
+    // console.log('this.state.selectedValue', this.state.selectedValue);
 
     const id = `${name}`;
 
