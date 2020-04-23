@@ -119,6 +119,10 @@ class Select extends React.Component {
               <option key={item.value}>{item.name}</option>
             ))}
           </select>
+          {/* <div className="ce-select--caret">
+            <SystemIcon name="down" color="black" className="ce-select--down" />
+          </div> */}
+
           <div className="ce-select--outside-arrow" onClick={rightArrowClick}>
             <SystemIcon
               name="navigate"
