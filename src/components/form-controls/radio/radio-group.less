@@ -1,0 +1,96 @@
+@import '../../../styles/celula';
+
+.ce-radio-group {
+  border: 0.3rem solid @white;
+  border-radius: 0.5rem;
+  clear: both;
+  margin-bottom: 0.7rem;
+
+  legend {
+    margin-bottom: 2.2rem;
+    margin-left: 2.2rem;
+    padding: 0 0.3rem;
+  }
+
+  span {
+    background-color: @white;
+    display: block;
+    float: right;
+    height: 1.6rem;
+    margin-bottom: -1rem;
+    margin-right: 2.2rem;
+    margin-top: 2.2rem;
+    padding: 0 0.3rem;
+  }
+
+  &.ce-radio-group--disabled {
+    pointer-events: none;
+
+    input {
+      + label {
+        // Unchecked
+        // The background
+        &::before {
+          background-color: @unchecked-disabled-gray;
+        }
+      }
+
+      &:checked + label {
+        // Checked
+        // The background
+        &::before {
+          background-color: @checked-disabled-gray;
+        }
+
+        // The dot
+        &::after {
+          background-color: @checked-disabled-gray;
+        }
+      }
+    }
+  }
+
+  &.ce-radio-group--error {
+    // error mode not checked
+    border: 0.3rem solid @error-text;
+    color: @error-text;
+
+    input:checked + label {
+      // Checked
+      // The background
+      &::before {
+        background-color: @checked-red;
+      }
+
+      // The dot
+      &::after {
+        background-color: @checked-red;
+        border: 0.5rem solid @white;
+      }
+
+      // Hover
+      &:hover {
+        // The background
+        &::before {
+          background-color: @hover-red;
+        }
+      }
+
+      // Active
+      // The background
+      &:active {
+        &::before {
+          background-color: @active-red;
+        }
+      }
+
+      // Focus
+      &:focus {
+        // The background
+        &::before {
+          background-color: @focus-red;
+        }
+      }
+    }
+  }
+}
