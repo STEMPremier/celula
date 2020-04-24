@@ -21,8 +21,16 @@ class Select extends React.Component {
     // eslint-disable-next-line react/destructuring-assignment
     selectedValue: this.props.selectedValue ? this.props.selectedValue : null,
     // selectedOption: null,
+    showArrow: false,
   };
 
+  componentDidMount() {
+    if (this.props.showArrow) {
+      this.setState({
+        showArrow: true,
+      });
+    }
+  }
   // componentDidMount() {
   //   if (this.props.selectedValue) {
   //     const selectedObject = this.props.options.filter(
@@ -63,6 +71,7 @@ class Select extends React.Component {
       // handleChange,
       label,
       options,
+      showArrow,
       rightArrowClick,
     } = this.props;
 
@@ -80,6 +89,7 @@ class Select extends React.Component {
       {
         // 'ce-select--disabled': disabled,
         // 'ce-select--error': error,
+        'ce-select--showArrow': showArrow,
       },
       className,
     );
@@ -94,21 +104,6 @@ class Select extends React.Component {
             id={id}
             onChange={this.handleSelectedValue}
           >
-            {/* {selectedOption && selectedOption.length ? (
-              selectedOption.map(item => (
-                <option key={item.value} value={item.value} hidden>
-                  {item.name}
-                </option>
-              ))
-            ) : (
-              <option>{label}</option>
-            )}
-            ) :
-            {options.map(item => (
-              <option key={item.value} value={item.value}>
-                {item.name}
-              </option>
-            ))} */}
             {defaultObject.length ? (
               defaultObject.map(item => (
                 <option key={item.value} value={item.value} hidden>
@@ -128,13 +123,15 @@ class Select extends React.Component {
           <div className="ce-select--caret">
             <SystemIcon name="down" color="black" className="ce-select--down" />
           </div>
-          <div className="ce-select--outside-arrow" onClick={rightArrowClick}>
-            <SystemIcon
-              name="navigate"
-              className="ce-select--arrow"
-              color="white"
-            />
-          </div>
+          {showArrow && (
+            <div className="ce-select--outside-arrow" onClick={rightArrowClick}>
+              <SystemIcon
+                name="navigate"
+                className="ce-select--arrow"
+                color="white"
+              />
+            </div>
+          )}
         </div>
         <span error={error} />
       </div>
@@ -151,6 +148,10 @@ Select.propTypes = {
    * Make the selected disabled
    */
   // disabled: PropTypes.bool,
+  /**
+   * The select will appear with the right arrow
+   */
+  showArrow: PropTypes.bool,
   /**
    * The label is required for accessibilty eventhough it will not show if you give it a default value instead.
    */
@@ -185,7 +186,7 @@ Select.propTypes = {
   /**
    * This function is accesible to the user for clickable events on the right arrow in the gradient
    */
-  rightArrowClick: PropTypes.func.isRequired,
+  rightArrowClick: PropTypes.func,
 };
 
 Select.defaultProps = {
@@ -194,6 +195,8 @@ Select.defaultProps = {
   form: '',
   error: '',
   selectedValue: '',
+  showArrow: false,
+  rightArrowClick: () => {},
 };
 
 export default Select;

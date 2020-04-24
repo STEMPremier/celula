@@ -25,6 +25,7 @@ import Select from './Select';
     rightArrowClick={action('clicked rightArrowClick in the gradient')}
     label={text('label', 'Default Fieldset Label')}
     selectedValue={number('selectedValue', 2)}
+    showArrow
     name={text('name', 'Default Name for Select')}
     form={text('form', '')}
     options={array('options', [
@@ -71,6 +72,7 @@ import Select from './Select';
     <form>
       <Select 
         selectedValue={2}
+       
         rightArrowClick={action('rightArrowClick')}
         name="Enabled Select Using a Default Value"
         label="Label is always required for accessbility but this one will not be show to the user"
@@ -86,12 +88,13 @@ import Select from './Select';
        ]}
         handleChange={action('changed')}
         form="formName2"
+         showArrow
       />
     </form> 
   </Story>
 </Preview>
 
-# Disabled Select Using Label  confirm if disabled and error are actually going to exist on this component 
+# Disabled Select Using Label  
 <Preview>
   <Story name="Disabled Select ">
     <form>
@@ -101,6 +104,7 @@ import Select from './Select';
         rightArrowClick={action('rightArrowClick')}
         form="formName3"
         name="Disabled Select "
+        showArrow
         options={[
           {
            name: 'option 1',
@@ -115,6 +119,32 @@ import Select from './Select';
     </form> 
   </Story>
 </Preview>
+
+# Select without right arrow 
+<Preview>
+  <Story name="Select without the right arrow">
+    <form>
+      <Select 
+        label = "Select from the below choices"
+        handleChange={action('changed')}
+        form="formName4"
+        name="Select Simple "
+        options={[
+          {
+           name: 'option 1',
+           value: 1,
+         },
+         {
+           name: 'option 2',
+           value: 2,
+          },
+       ]}
+      />
+    </form> 
+  </Story>
+</Preview>
+
+
 
 
 
