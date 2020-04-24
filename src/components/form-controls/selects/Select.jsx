@@ -13,19 +13,14 @@ import cx from 'classnames';
 
 import SystemIcon from '../../icon/SystemIcon.jsx';
 
-// {
-//   /* <SystemIcon name="navigate" /> */
-// }
-
 import './select.less';
 
 class Select extends React.Component {
   state = {
     showLabel: false,
-    carrotDown: true,
     // eslint-disable-next-line react/destructuring-assignment
-    selectedValue: this.props.selectedValue ? this.props.selectedValue : '',
-    // selectedOption: '',
+    selectedValue: this.props.selectedValue ? this.props.selectedValue : null,
+    // selectedOption: null,
   };
 
   // componentDidMount() {
@@ -33,33 +28,29 @@ class Select extends React.Component {
   //     const selectedObject = this.props.options.filter(
   //       option => option.value === this.props.selectedValue,
   //     );
+  //     console.log('selectedObject in componentDidMount', selectedObject);
   //     this.setState({
   //       selectedOption: selectedObject,
   //     });
   //   }
   // }
 
-  // componentDidUpdate(prevState, prevProps) {
-  //   console.log('state after componentDidUpdate', this.state.selectedValue);
-  //   console.log('prevState', prevState);
+  // componentDidUpdate() {
+  //   console.log('state', this.state);
   // }
 
   handleSelectedValue = event => {
     this.setState(
       {
         selectedValue: event.target.value,
+        // selectedOption: this.props.options.filter(
+        //   option =>
+        //     option.value === event.target.value &&
+        //     console.log('inside selecteOptoin', event.target.value),
+        // ),
       },
-      () => console.log('state after event', this.state.selectedValue),
+      () => console.log('state after event', this.state),
     );
-  };
-
-  handleCarrot = () => {
-    // console.log('handleCarrot props', this.props);
-    this.setState(prevState => ({
-      carrotDown: !prevState.carrotDown,
-    }));
-    // eslint-disable-next-line react/destructuring-assignment
-    console.log('handleCarrot', this.state.carrotDown);
   };
 
   render() {
@@ -76,31 +67,17 @@ class Select extends React.Component {
     } = this.props;
 
     // eslint-disable-next-line no-unused-vars
-    const { showLabel, carrotDown, selectedValue } = this.state;
-
-    // console.log('this.props.options', this.props.options);
-
-    // const selectedOptionName = selectedOption.map(option => option.name);
-    // console.log('selectedOptionName', selectedOptionName);
-    // const remainingOptions = options.filter(
-    //   item => item.name !== selectedOptionName,
-    // );
-
-    // console.log('remainingOptionbs', remainingOptions);
+    const { showLabel, selectedValue, selectedOption } = this.state;
 
     // if (this.props.selectedValue) {
-    const selectedOption = this.props.options.filter(
+    const defaultObject = this.props.options.filter(
       option => option.value === this.props.selectedValue,
     );
-    // console.log('selectedOption in function', selectedOption);
+    // console.log('selectedOption in render', selectedOption);
     // }
-
-    // console.log('selectedOption in redner', selectedOption);
-    // console.log('this.state.selectedValue', this.state.selectedValue);
+    // console.log('this.state.selectedValue in render', this.state.selectedValue);
 
     const id = `${name}`;
-
-    // console.log('carrot in render', carrotDown);
 
     const classes = cx(
       'ce-select',
@@ -119,7 +96,6 @@ class Select extends React.Component {
             name={name}
             form={form}
             id={id}
-            // onClick={() => this.handleCarrot()}
             onChange={this.handleSelectedValue}
           >
             {/* {selectedOption && selectedOption.length ? (
@@ -137,8 +113,8 @@ class Select extends React.Component {
                 {item.name}
               </option>
             ))} */}
-            {selectedOption.length ? (
-              selectedOption.map(item => (
+            {defaultObject.length ? (
+              defaultObject.map(item => (
                 <option key={item.value} value={item.value} hidden>
                   {item.name}
                 </option>
