@@ -1,14 +1,6 @@
 @import '../../../styles/celula';
 
 .ce-select {
-  // color: red;
-  // width: 300px;
-  // // display: -webkit-flex;
-  // display: flex;
-  // justify-content: flex-start;
-  // // -webkit-flex-direction: row;
-  // flex-direction: row;
-  // flex-wrap: nowrap;
   // should remove the default arrows from most browsers here but currentlty isn't touching
   select {
     appearance: none;
@@ -19,13 +11,14 @@
     // text-overflow: '';
     display: block;
     padding: 0.6em 1.4em 0.5em 0.8em;
-    width: 320px;
-    // max-width: 100%;
+    width: 32rem;
     box-sizing: border-box;
-    // margin: 10px 0 0 10px;
-    // border: 1px solid #aaa;
-    // box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
     background-color: #fbfbfb;
+    border: none;
+  }
+
+  select:focus {
+    outline: none;
   }
 
   // removes the arrow from the IE
@@ -36,71 +29,37 @@
   // the onclick right arrow has to be placed in an ::after or won't show with select || WAIT UNTIL AFTER CSS FILE HOOKED UP
   // .select-wrapper::after {
   .ce-select--wrapper {
-    margin: 10px 0 0 10px;
-    border-radius: 5px;
-    background-color: @red;
-    // color: red;
-    width: 380px;
-    height: 40px;
-    // display: -webkit-flex;
+    margin: 1rem 0 0 1rem;
+    border-radius: 0.5rem;
+    width: 38rem;
+    height: 4rem;
     display: flex;
     justify-content: flex-start;
-    // -webkit-flex-direction: row;
     flex-direction: row;
     flex-wrap: nowrap;
-    // border-radius: '5px',
-    border: 1px solid #b2b2b2;
+    border: 0.1rem solid #b2b2b2;
     .ce-select--caret {
-      // margin-top: 50%;
-      // top: 12px;
-      // left: 8px;
-      width: 40px;
-      height: 30px;
-      margin-top: 10px;
-      // padding: 10px;
-      background-color: @green;
-      // border-left: 8px solid transparent;
-      // border-right: 8px solid transparent;
-      // border-top: 10px solid @white;
-      // background-repeat: no-repeat, repeat;
-      // background-position: right 0.7em top 50%, 0 0;
-      // background-size: 0.65em auto, 100%;
-      // .ce-select--down {
-      //   padding: 10px;
-      // }
+      width: 4rem;
+      height: 3rem;
+      margin-top: 1.2rem;
     }
 
     .ce-select--outside-arrow {
-      width: 60px;
-      height: 40px;
-      font-size: 55px;
-      // margin-left: auto;
-      // color: @white;
-      // display: inline-block;
-      // stroke: @white;
-      // color: @white;
+      width: 6rem;
+      height: 4rem;
+      font-size: 5.5rem;
+      border-radius: 0 0.5rem 0.5rem 0;
       background: @gradient-cool;
       svg {
         margin: auto;
         width: 50%;
-        padding: 14px;
+        padding: 1.4rem;
       }
       .ce-select--arrow {
         margin: auto;
         width: 50%;
-        padding: 10px;
+        padding: 1rem;
       }
     }
   }
-
-  // .ce-select--arrow-up {
-  //   position: absolute;
-  //   top: 14px;
-  //   left: 8px;
-  //   width: 0;
-  //   height: 0;
-  //   border-left: 8px solid transparent;
-  //   border-right: 8px solid transparent;
-  //   border-bottom: 10px solid @white;
-  // }
 }

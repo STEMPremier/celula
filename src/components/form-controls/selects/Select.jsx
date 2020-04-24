@@ -69,13 +69,9 @@ class Select extends React.Component {
     // eslint-disable-next-line no-unused-vars
     const { showLabel, selectedValue, selectedOption } = this.state;
 
-    // if (this.props.selectedValue) {
     const defaultObject = this.props.options.filter(
       option => option.value === this.props.selectedValue,
     );
-    // console.log('selectedOption in render', selectedOption);
-    // }
-    // console.log('this.state.selectedValue in render', this.state.selectedValue);
 
     const id = `${name}`;
 
