@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import FormControlGroup from '../core';
 
-import './checkbox.less';
+import './checkbox-group.less';
 
 class CheckboxGroup extends Component {
   renderChildren = () => {
@@ -34,10 +34,10 @@ class CheckboxGroup extends Component {
     } = this.props;
 
     const classes = cx(
-      'ce-checkbox',
+      'ce-checkbox-group',
       {
-        'ce-checkbox--disabled': disabled,
-        'ce-checkbox--error': errorMsg,
+        'ce-checkbox-group--disabled': disabled,
+        'ce-checkbox-group--error': errorMsg,
       },
       className,
     );
@@ -46,7 +46,7 @@ class CheckboxGroup extends Component {
       <FormControlGroup
         className={classes}
         disabled={disabled}
-        errorClass="ce-checkbox--error-text"
+        errorClass="ce-checkbox-group--error-text"
         errorMsg={errorMsg}
         formId={formId}
         handleChange={handleChange}
