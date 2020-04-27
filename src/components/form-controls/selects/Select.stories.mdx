@@ -30,11 +30,11 @@ import Select from './Select';
     form={text('form', '')}
     options={array('options', [
       {
-        name: 'option 1',
+        name: 'Option 1',
         value: 1,
       },
       {
-        name: 'option 2',
+        name: 'Option 2',
         value: 2,
       },
     ],)} />
@@ -61,6 +61,7 @@ import Select from './Select';
         handleChange={action('changed')}
         rightArrowClick={action('rightArrowClick')}
         form="formName1"
+        showArrow
       />
     </form> 
   </Story>
@@ -88,7 +89,7 @@ import Select from './Select';
        ]}
         handleChange={action('changed')}
         form="formName2"
-         showArrow
+        showArrow
       />
     </form> 
   </Story>
