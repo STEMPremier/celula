@@ -8,7 +8,6 @@
     -o-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
-    // text-overflow: '';
     display: block;
     padding: 0.6em 1.4em 0.5em 0.8em;
     width: 32.4rem;
@@ -26,9 +25,6 @@
     display: none;
   }
 
-  // the onclick right arrow has to be placed in an ::after or won't show with select || WAIT UNTIL AFTER CSS FILE HOOKED UP
-  // .select-wrapper::after {
-
   .ce-select--wrapper {
     margin: 1rem 0 0 1rem;
     border-radius: 0.5rem;
@@ -43,7 +39,7 @@
     .ce-select--caret {
       width: 4rem;
       height: 3rem;
-      margin-top: 2rem;
+      margin-top: 2.4rem;
     }
 
     .ce-select--show-arrow {
@@ -52,10 +48,11 @@
 
     .ce-select--outside-arrow {
       width: 7.4rem;
-      // height: 4rem;
+      height: 6rem;
       font-size: 5.5rem;
       margin-left: 0.27rem;
-      padding-top: 0.7rem;
+      margin-top: 0.03px;
+      // padding-top: 0.7rem;
       border-radius: 0 0.5rem 0.5rem 0;
       background: @gradient-cool;
       svg {
