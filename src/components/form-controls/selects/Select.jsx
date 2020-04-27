@@ -89,7 +89,7 @@ class Select extends React.Component {
       {
         // 'ce-select--disabled': disabled,
         // 'ce-select--error': error,
-        'ce-select--showArrow': showArrow,
+        'ce-select--show-arrow': showArrow,
       },
       className,
     );
