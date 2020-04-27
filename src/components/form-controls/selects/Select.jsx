@@ -1,17 +1,8 @@
-/* eslint-disable react/jsx-indent */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable import/extensions */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/no-direct-mutation-state */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/no-unused-state */
-/* eslint-disable no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import SystemIcon from '../../icon/SystemIcon.jsx';
+import SystemIcon from '../../icon/SystemIcon';
 
 import './select.less';
 
@@ -25,6 +16,7 @@ class Select extends React.Component {
   };
 
   componentDidMount() {
+    // eslint-disable-next-line react/destructuring-assignment
     if (this.props.showArrow) {
       this.setState({
         showArrow: true,
@@ -41,10 +33,6 @@ class Select extends React.Component {
   //       selectedOption: selectedObject,
   //     });
   //   }
-  // }
-
-  // componentDidUpdate() {
-  //   console.log('state', this.state);
   // }
 
   handleSelectedValue = event => {
@@ -73,13 +61,14 @@ class Select extends React.Component {
       options,
       showArrow,
       rightArrowClick,
+      selectedValue,
     } = this.props;
 
     // eslint-disable-next-line no-unused-vars
-    const { showLabel, selectedValue, selectedOption } = this.state;
+    const { showLabel, selectedOption } = this.state;
 
-    const defaultObject = this.props.options.filter(
-      option => option.value === this.props.selectedValue,
+    const defaultObject = options.filter(
+      option => option.value === selectedValue,
     );
 
     const id = `${name}`;
@@ -124,13 +113,17 @@ class Select extends React.Component {
             <SystemIcon name="down" color="black" className="ce-select--down" />
           </div>
           {showArrow && (
-            <div className="ce-select--outside-arrow" onClick={rightArrowClick}>
+            <button
+              className="ce-select--outside-arrow"
+              onClick={rightArrowClick}
+              type="submit"
+            >
               <SystemIcon
                 name="navigate"
                 className="ce-select--arrow"
                 color="white"
               />
-            </div>
+            </button>
           )}
         </div>
         <span error={error} />
