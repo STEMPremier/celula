@@ -66,5 +66,14 @@
         padding: 1rem;
       }
     }
+
+    // state changes
+    .ce-select--disabled {
+      pointer-events: none;
+      color: @disabled-gray;
+      select {
+        border: 1px solid #b2b2b2;
+      }
+    }
   }
 }

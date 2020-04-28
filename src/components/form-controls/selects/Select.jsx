@@ -52,7 +52,7 @@ class Select extends React.Component {
   render() {
     const {
       className,
-      // disabled,
+      disabled,
       error,
       name,
       form,
@@ -76,7 +76,7 @@ class Select extends React.Component {
     const classes = cx(
       'ce-select',
       {
-        // 'ce-select--disabled': disabled,
+        'ce-select--disabled': disabled,
         // 'ce-select--error': error,
         'ce-select--show-arrow': showArrow,
       },
@@ -91,6 +91,7 @@ class Select extends React.Component {
             name={name}
             form={form}
             id={id}
+            disabled={disabled}
             onChange={this.handleSelectedValue}
           >
             {defaultObject.length ? (
@@ -122,6 +123,7 @@ class Select extends React.Component {
                 name="navigate"
                 className="ce-select--arrow"
                 color="white"
+                // color=`${disabled ? "grey"}`"white"
               />
             </button>
           )}
@@ -140,7 +142,7 @@ Select.propTypes = {
   /**
    * Make the selected disabled
    */
-  // disabled: PropTypes.bool,
+  disabled: PropTypes.bool,
   /**
    * The select will appear with the right arrow
    */
@@ -184,7 +186,7 @@ Select.propTypes = {
 
 Select.defaultProps = {
   className: '',
-  // disabled: false,
+  disabled: false,
   form: '',
   error: '',
   selectedValue: '',
