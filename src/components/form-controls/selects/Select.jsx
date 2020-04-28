@@ -86,6 +86,7 @@ class Select extends React.Component {
     return (
       <div className={classes}>
         {showLabel && <label htmlFor={id}>{label}</label>}
+
         <div className="ce-select--wrapper">
           <select
             name={name}
@@ -131,6 +132,7 @@ class Select extends React.Component {
             </button>
           )}
         </div>
+        <div className="ce-select--background-changes" />
         <span error={error} />
       </div>
     );
