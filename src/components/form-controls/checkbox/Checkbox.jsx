@@ -10,19 +10,23 @@ import './checkbox.less';
  */
 class Checkbox extends Component {
   state = {
-    checked: false,
+    checked: this.props.checked, // eslint-disable-line react/destructuring-assignment
   };
 
-  componentDidMount() {
+  // This changes the state when the `checked` prop changes, for non-grouped use
+  componentDidUpdate(prevProps) {
     const { checked } = this.props;
 
-    if (checked) {
+    if (prevProps.checked !== checked) {
+      /* eslint-disable react/no-did-update-set-state */
       this.setState({
-        checked: true,
+        checked,
       });
+      /* eslint-enable react/no-did-update-set-state */
     }
   }
 
+  // This changes the `checked` state for all use-cases
   handleChange = event => {
     const { handleChange } = this.props;
 
@@ -85,7 +89,7 @@ Checkbox.propTypes = {
   /**
    * Select the `<Checkbox />`.
    */
-  checked: PropTypes.bool,
+  checked: PropTypes.bool, // eslint-disable-line react/no-unused-prop-types
   /**
    * A class name added to the `<CheckboxGroup />`.
    */
