@@ -5,10 +5,12 @@ import cx from 'classnames';
 
 import './checkbox.less';
 
+/**
+ * I am a `<Checkbox />` description.
+ */
 class Checkbox extends Component {
   state = {
     checked: false,
-    showFocus: false,
   };
 
   componentDidMount() {
@@ -31,16 +33,6 @@ class Checkbox extends Component {
     handleChange(event.target.value);
   };
 
-  onMouseEnter = () => {
-    this.setState(() => ({
-      showFocus: true,
-    }));
-  };
-
-  onMouseLeave = () => {
-    this.setState(() => ({ showFocus: false }));
-  };
-
   render() {
     const {
       className,
@@ -51,46 +43,39 @@ class Checkbox extends Component {
       label,
       value,
     } = this.props;
-    const { checked, showFocus } = this.state;
+    const { checked } = this.state;
     const id = `${name}_${value}`;
     const classes = cx(
       'ce-checkbox',
       {
         'ce-checkbox--disabled': disabled,
-        'ce-checkbox--individual-checkbox-error': errorMsg,
+        'ce-checkbox--error': errorMsg,
       },
       className,
     );
 
     return (
-      <div
-        className={classes}
-        onMouseEnter={this.onMouseEnter}
-        onMouseLeave={this.onMouseLeave}
-      >
-        <div className="ce-checkbox--box">
-          <input
-            checked={checked}
-            disabled={disabled}
-            form={formId}
-            id={id}
-            name={name}
-            onChange={this.handleChange}
-            type="checkbox"
-            value={value}
-          />
-          <label htmlFor={id}>{label}</label>
-          <div className="ce-checkbox--background" />
-          {showFocus && <div className="ce-checkbox--focus" />}
-          {errorMsg && (
-            <div className="ce-checkbox--error-box-wrapper">
-              <div className="ce-checkbox--arrow" />
-              <div className="ce-checkbox--error-box">
-                <div className="ce-checkbox--error-box-text">{errorMsg}</div>
-              </div>
+      <div className={classes}>
+        <input
+          checked={checked}
+          disabled={disabled}
+          form={formId}
+          id={id}
+          name={name}
+          onChange={this.handleChange}
+          type="checkbox"
+          value={value}
+        />
+        <label htmlFor={id}>{label}</label>
+        <span className="ce-checkbox__center" />
+        {errorMsg && (
+          <div className="ce-checkbox--error__container">
+            <div className="ce-checkbox--error__arrow" />
+            <div className="ce-checkbox--error__message">
+              <span className="ce-checkbox--error__text">{errorMsg}</span>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     );
   }

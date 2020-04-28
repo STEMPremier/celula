@@ -29,14 +29,14 @@ const Radio = props => {
 
 Radio.propTypes = {
   /**
-   * A class name added to the `<RadioGroup />`.
-   */
-  className: PropTypes.string,
-  /**
    * Select the `<Radio />`.
    * @ignore
    */
   checked: PropTypes.bool,
+  /**
+   * A class name added to the `<RadioGroup />`.
+   */
+  className: PropTypes.string,
   /**
    * Make the `<Radio />` inactive.
    * @ignore
