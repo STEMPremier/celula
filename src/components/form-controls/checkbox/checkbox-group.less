@@ -31,7 +31,12 @@
         // Unchecked
         // The background
         &::before {
-          background-color: @unchecked-disabled-gray;
+          background-color: transparent;
+        }
+
+        // The background mask
+        + .ce-checkbox__center {
+          border: 1px solid @unchecked-disabled-gray;
         }
       }
 
@@ -39,7 +44,7 @@
         // Checked
         // The background
         &::before {
-          background-color: @checked-disabled-gray;
+          background-color: transparent;
         }
 
         // The dot
@@ -58,7 +63,7 @@
       // Checked
       // The background
       &::before {
-        background-color: @checked-red;
+        background-color: transparent;
       }
 
       // The dot
@@ -89,6 +94,11 @@
         &::before {
           background-color: @focus-red;
         }
+      }
+
+      // The background mask
+      + .ce-checkbox__center {
+        border: 1px solid @checked-red;
       }
     }
   }
