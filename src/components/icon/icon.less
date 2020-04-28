@@ -22,9 +22,9 @@
       width: @product-icon-small;
 
       svg {
-        height: ~"calc(5rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        height: ~'calc(5rem - 40%)'; // dropping into pure css for calc(), which doesn't understand less vars
         margin: 0 auto;
-        width: ~"calc(5rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        width: ~'calc(5rem - 40%)'; // dropping into pure css for calc(), which doesn't understand less vars
       }
     }
 
@@ -33,9 +33,9 @@
       width: @product-icon-large;
 
       svg {
-        height: ~"calc(7.5rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        height: ~'calc(7.5rem - 40%)'; // dropping into pure css for calc(), which doesn't understand less vars
         margin: 0 auto;
-        width: ~"calc(7.5rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        width: ~'calc(7.5rem - 40%)'; // dropping into pure css for calc(), which doesn't understand less vars
       }
     }
 
@@ -44,9 +44,9 @@
       width: @product-icon-jumbo;
 
       svg {
-        height: ~"calc(10rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        height: ~'calc(10rem - 40%)'; // dropping into pure css for calc(), which doesn't understand less vars
         margin: 0 auto;
-        width: ~"calc(10rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        width: ~'calc(10rem - 40%)'; // dropping into pure css for calc(), which doesn't understand less vars
       }
     }
 
@@ -69,13 +69,13 @@
       width: @secondary-icon-small;
 
       svg {
-        height: ~"calc(3rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
-        width: ~"calc(3rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        height: ~'calc(3rem - 40%)'; // dropping into pure css for calc(), which doesn't understand less vars
+        width: ~'calc(3rem - 40%)'; // dropping into pure css for calc(), which doesn't understand less vars
       }
 
       span {
         color: white;
-        font-size: ~"calc(3rem - 90%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        font-size: ~'calc(3rem - 90%)'; // dropping into pure css for calc(), which doesn't understand less vars
         font-weight: bold;
       }
     }
@@ -85,13 +85,13 @@
       width: @secondary-icon-large;
 
       svg {
-        height: ~"calc(3.6rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
-        width: ~"calc(3.6rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        height: ~'calc(3.6rem - 40%)'; // dropping into pure css for calc(), which doesn't understand less vars
+        width: ~'calc(3.6rem - 40%)'; // dropping into pure css for calc(), which doesn't understand less vars
       }
 
       span {
         color: white;
-        font-size: ~"calc(3.6rem - 90%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        font-size: ~'calc(3.6rem - 90%)'; // dropping into pure css for calc(), which doesn't understand less vars
         font-weight: bold;
       }
     }
@@ -101,13 +101,13 @@
       width: @secondary-icon-jumbo;
 
       svg {
-        height: ~"calc(5rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
-        width: ~"calc(5rem - 40%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        height: ~'calc(5rem - 40%)'; // dropping into pure css for calc(), which doesn't understand less vars
+        width: ~'calc(5rem - 40%)'; // dropping into pure css for calc(), which doesn't understand less vars
       }
 
       span {
         color: white;
-        font-size: ~"calc(5rem - 90%)"; // dropping into pure css for calc(), which doesn't understand less vars
+        font-size: ~'calc(5rem - 90%)'; // dropping into pure css for calc(), which doesn't understand less vars
         font-weight: bold;
       }
     }
@@ -160,6 +160,10 @@
 
     .ce-icon--white {
       stroke: @white;
+    }
+
+    .ce-icon--grey {
+      stroke: @disabled-gray;
     }
   }
 }

@@ -16,6 +16,7 @@ const COLORS = [
   'purple',
   'red',
   'white',
+  'grey',
 ];
 
 /**
