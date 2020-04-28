@@ -8,8 +8,7 @@ import { Description,
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text, array } from '@storybook/addon-knobs';
 
-import CheckboxGroup from './CheckboxGroup';
-import Checkbox from './Checkbox';
+import { Checkbox, CheckboxGroup } from '.';
 
 <Meta component={CheckboxGroup} title="Components/Molecules/Form Controls/CheckboxGroup"/>
 
@@ -88,8 +87,9 @@ import Checkbox from './Checkbox';
       <CheckboxGroup
         formId="formThree"
         handleChange={val => console.log(`The value is ${val}`)}
-        label="Favorite OS"
+        label="Favorite OS (Default Checkbox Group)"
         name="favoriteOS"
+        selectedValues={['macos', 'linux']}
       >
         <Checkbox
           label="macOS"
@@ -108,8 +108,9 @@ import Checkbox from './Checkbox';
         disabled
         formId="formThree"
         handleChange={val => console.log(`The value is ${val}`)}
-        label="Favorite Beatle"
+        label="Favorite Beatle (Disabled Checkbox Group)"
         name="favoriteBeatle"
+        selectedValues={['george']}
       >
         <Checkbox
          label="John Lennon"
@@ -131,7 +132,7 @@ import Checkbox from './Checkbox';
       <CheckboxGroup
         formId="formThree"
         handleChange={val => console.log(`The value is ${val}`)}
-        label="Favorite Beatle Two"
+        label="Favorite Beatle (Disabled Checkbox Individual)"
         name="favoriteBeatle2"
       >
         <Checkbox
@@ -147,7 +148,7 @@ import Checkbox from './Checkbox';
          value="george"
         />
         <Checkbox
-          label="Ringo Starr"
+          label="Ringo Starr (Disabled)"
           value="ringo"
           disabled
         />

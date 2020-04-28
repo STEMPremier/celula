@@ -7,7 +7,7 @@ import { Description,
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text, array } from '@storybook/addon-knobs';
 
-import Checkbox from './Checkbox';
+import { Checkbox } from '.';
 
 <Meta component={Checkbox} title="Components/Molecules/Form Controls/Checkbox"/>
 
@@ -36,10 +36,17 @@ import Checkbox from './Checkbox';
   <Story name="Checkbox Types">
     <form id="formTwo">
       <Checkbox
+        checked
         formId="formTwo"
-        label="Accept Terms & Conditions"
-        name="acceptTerms"
+        label="I am checked"
+        name="checked"
         value={true}
+      />
+      <Checkbox
+        formId="formTwo"
+        label="I am unchecked"
+        name="unchecked"
+        value={false}
       />
     </form>
   </Story>
