@@ -55,6 +55,7 @@
       // padding-top: 0.7rem;
       border-radius: 0 0.5rem 0.5rem 0;
       background: @gradient-cool;
+
       svg {
         margin: auto;
         width: 50%;
@@ -68,12 +69,12 @@
     }
 
     // state changes
-    .ce-select--disabled {
+  }
+
+  &.ce-select--disabled {
+    .ce-select--outside-arrow {
       pointer-events: none;
-      color: @disabled-gray;
-      select {
-        border: 1px solid #b2b2b2;
-      }
+      background: @disabled-gray;
     }
   }
 }

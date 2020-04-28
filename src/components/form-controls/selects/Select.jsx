@@ -111,7 +111,11 @@ class Select extends React.Component {
             ))}
           </select>
           <div className="ce-select--caret">
-            <SystemIcon name="down" color="black" className="ce-select--down" />
+            <SystemIcon
+              name="down"
+              color={disabled ? 'grey' : 'black'}
+              className="ce-select--down"
+            />
           </div>
           {showArrow && (
             <button
@@ -123,7 +127,6 @@ class Select extends React.Component {
                 name="navigate"
                 className="ce-select--arrow"
                 color="white"
-                // color=`${disabled ? "grey"}`"white"
               />
             </button>
           )}
