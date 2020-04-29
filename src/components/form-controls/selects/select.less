@@ -14,6 +14,17 @@
     box-sizing: border-box;
     background-color: #fbfbfb;
     border: none;
+    // &:hover ~ .ce-select--background-state {
+    //   border: 3px solid black;
+    // }
+    &:focus ~ .ce-select--background-state {
+      // border: 3px solid #ccefff;
+      border: 3px solid pink;
+    }
+    &:active ~ .ce-select--background-state {
+      // border: 3px solid #b2e7ff;
+      border: 3px solid @purple;
+    }
   }
 
   select:focus {
@@ -25,7 +36,13 @@
     display: none;
   }
 
-  .ce-select--wrapper {
+  // .ce-select--wrapper {
+  //   height: 125px;
+  //   width: 380px;
+  //   // background-color: @blue;
+  // }
+
+  .ce-select--box {
     margin: 1rem 0 0 1rem;
     border-radius: 0.5rem;
     width: 36rem;
@@ -35,6 +52,18 @@
     flex-direction: row;
     flex-wrap: nowrap;
     border: 0.1rem solid #b2b2b2;
+
+    &:hover ~ .ce-select--background-state {
+      border: 3px solid #e6f7ff;
+    }
+    &:focus ~ .ce-select--background-state {
+      // border: 3px solid #ccefff;
+      border: 3px solid pink;
+    }
+    &:active ~ .ce-select--background-state {
+      // border: 3px solid #b2e7ff;
+      border: 3px solid @purple;
+    }
 
     .ce-select--caret {
       width: 4rem;
@@ -69,17 +98,60 @@
     }
   }
 
-  // state changes
-  .ce-select--state-changes:hover {
-    // color: red;
-    // background-color: @navy;
-    border: 10px solid @active-blue;
+  .ce-select--box:active ~ .ce-select--background-state {
+    // border: 3px solid #b2e7ff;
+    border: 3px solid @purple;
+  }
+
+  // state changes - set up default sizing for hidden div appearing on hover, focus, and active
+  .ce-select--background-state {
+    border-radius: 8px;
+    width: 36.1rem;
+    height: 6.2rem;
+    margin-top: -65px;
+    margin-left: 7px;
   }
 
   &.ce-select--disabled {
     .ce-select--outside-arrow {
       pointer-events: none;
       background: @disabled-gray;
+    }
+  }
+
+  .ce-select--error {
+    .ce-select--box {
+      border: 5px solid @error-text;
+    }
+  }
+  .ce-select--error-box-wrapper {
+    width: 36.6rem;
+    // color: @error-text;
+    margin-left: 1rem;
+    // border: 0.1rem solid @error-text;
+    .ce-select--wrapper {
+      color: @error-text;
+      border: 0.1rem solid @error-text;
+    }
+    .ce-select--arrow {
+      width: 0;
+      height: 5;
+      border-left: 0.5rem solid transparent;
+      border-right: 0.5rem solid transparent;
+      position: center;
+      border-bottom: 0.5rem solid @error-box;
+      margin-left: 48%;
+    }
+    .ce-select--error-box {
+      height: 5.6rem;
+      width: 100%;
+      background-color: @error-box;
+      border-radius: 0.5rem;
+      .ce-select--error-box-text {
+        color: white;
+        text-align: center;
+        padding-top: 2rem;
+      }
     }
   }
 }
