@@ -3,8 +3,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import CheckboxGroup from './CheckboxGroup';
-import Checkbox from './Checkbox';
+import { CheckboxGroup, Checkbox } from '.';
 
 describe('<CheckboxGroup />', () => {
   describe('render()', () => {
@@ -25,7 +24,9 @@ describe('<CheckboxGroup />', () => {
           />
         </CheckboxGroup>,
       );
+
       expect(toJson(wrapper)).toMatchSnapshot();
     });
   });
 });
+/* eslint-enable react/jsx-filename-extension */

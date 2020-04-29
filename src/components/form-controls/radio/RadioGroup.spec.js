@@ -3,8 +3,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import RadioGroup from './RadioGroup';
-import Radio from './Radio';
+import { RadioGroup, Radio } from '.';
 
 describe('<RadioGroup />', () => {
   describe('render()', () => {
@@ -18,7 +17,9 @@ describe('<RadioGroup />', () => {
           <Radio label="Radio test label" value="Radio value here" />
         </RadioGroup>,
       );
+
       expect(toJson(wrapper)).toMatchSnapshot();
     });
   });
 });
+/* eslint-enable react/jsx-filename-extension */
