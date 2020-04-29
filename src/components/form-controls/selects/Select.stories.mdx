@@ -146,6 +146,57 @@ import Select from './Select';
   </Story>
 </Preview>
 
+# Select Error
+<Preview>
+  <Story name="Select Error">
+    <form>
+      <Select 
+        label = "Select from the below choices"
+        handleChange={action('changed')}
+        form="formName5"
+        name="Select Error no arrow"
+        error="Error Message"
+        options={[
+          {
+           name: 'option 1',
+           value: 1,
+         },
+         {
+           name: 'option 2',
+           value: 2,
+          },
+       ]}
+      />
+    </form> 
+  </Story>
+</Preview>
+
+# Select Error With Show Arrow
+<Preview>
+  <Story name="Select Error with right arrow">
+    <form>
+      <Select 
+        label = "Select from the below choices"
+        handleChange={action('changed')}
+        form="formName6"
+        name="Select Error with right arrow"
+        error="Error Message"
+        showArrow
+        options={[
+          {
+           name: 'option 1',
+           value: 1,
+         },
+         {
+           name: 'option 2',
+           value: 2,
+          },
+       ]}
+      />
+    </form> 
+  </Story>
+</Preview>
+
 
 
 

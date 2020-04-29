@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -77,7 +78,7 @@ class Select extends React.Component {
       'ce-select',
       {
         'ce-select--disabled': disabled,
-        // 'ce-select--error': error,
+        'ce-select--error': error,
         'ce-select--show-arrow': showArrow,
       },
       className,
@@ -86,14 +87,15 @@ class Select extends React.Component {
     return (
       <div className={classes}>
         {showLabel && <label htmlFor={id}>{label}</label>}
-
-        <div className="ce-select--wrapper">
+        {/* <div className="ce-select--wrapper"> */}
+        <div className="ce-select--box">
           <select
             name={name}
             form={form}
             id={id}
             disabled={disabled}
             onChange={this.handleSelectedValue}
+            // tabIndex="0"
           >
             {defaultObject.length ? (
               defaultObject.map(item => (
@@ -132,9 +134,18 @@ class Select extends React.Component {
             </button>
           )}
         </div>
-        <div className="ce-select--background-changes" />
+        <div className="ce-select--background-state" />
+        {error && (
+          <div className="ce-select--error-box-wrapper">
+            <div className="ce-select--arrow" />
+            <div className="ce-select--error-box">
+              <div className="ce-select--error-box-text">{error}</div>
+            </div>
+          </div>
+        )}
         <span error={error} />
       </div>
+      // </div>
     );
   }
 }
