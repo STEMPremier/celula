@@ -88,7 +88,7 @@ class Select extends React.Component {
       <div className={classes}>
         {showLabel && <label htmlFor={id}>{label}</label>}
         {/* <div className="ce-select--wrapper"> */}
-        <div className="ce-select--box">
+        <div className="ce-select--box" tabIndex="0">
           <select
             name={name}
             form={form}
