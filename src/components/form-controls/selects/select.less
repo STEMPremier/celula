@@ -131,10 +131,21 @@
     // .ce-select--box {
     .ce-select--background-state {
       // border: 3px solid #b2e7ff;
-      border: 3px solid @error-text;
+      border: 3px solid @error-box;
     }
+    .ce-select--box {
+      select {
+        color: @error-box;
+      }
+      color: @error-box;
+      .ce-select--outside-arrow {
+        background: @error-box;
+      }
+    }
+
     // }
   }
+
   .ce-select--error-box-wrapper {
     width: 36.6rem;
     // color: @error-text;
