@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -12,7 +13,7 @@ class Select extends React.Component {
     showLabel: false,
     // eslint-disable-next-line react/destructuring-assignment
     selectedValue: this.props.selectedValue ? this.props.selectedValue : null,
-    // selectedOption: null,
+    selectedOption: null,
     showArrow: false,
   };
 
@@ -40,11 +41,11 @@ class Select extends React.Component {
     this.setState(
       {
         selectedValue: event.target.value,
-        // selectedOption: this.props.options.filter(
-        //   option =>
-        //     option.value === event.target.value &&
-        //     console.log('inside selecteOptoin', event.target.value),
-        // ),
+        selectedOption: this.props.options.filter(
+          option =>
+            option.value === event.target.value &&
+            console.log('inside selecteOptoin', event.target.value),
+        ),
       },
       () => console.log('state after event', this.state),
     );
@@ -62,15 +63,32 @@ class Select extends React.Component {
       options,
       showArrow,
       rightArrowClick,
-      selectedValue,
     } = this.props;
 
     // eslint-disable-next-line no-unused-vars
-    const { showLabel, selectedOption } = this.state;
+    const { showLabel, selectedOption, selectedValue } = this.state;
 
+    if (options.filter(x => x.value === selectedValue).length > 0) {
+      options.filter(x => x.value === selectedValue)[0].isSelected = true;
+    }
+
+    // this.props.options.map(option => {
+    //   const selected = (selectedValue === option.value) ? ' selected' : '';
+    //   options.push(
+    //     <option value={option.value}{selected}>{option.label}</option>
+    //   )
+    // })
+
+    // options.filter(x=> )
     const defaultObject = options.filter(
       option => option.value === selectedValue,
     );
+
+    if (defaultObject.length) {
+      options.filter(item => defaultObject.value === item.value);
+    }
+    console.log('defaultObject', defaultObject);
+    console.log('options after filter', options);
 
     const id = `${name}`;
 
@@ -99,14 +117,13 @@ class Select extends React.Component {
           >
             {defaultObject.length ? (
               defaultObject.map(item => (
-                <option key={item.value} value={item.value} hidden>
+                <option key={item.value} value={item.value} hidden default>
                   {item.name}
                 </option>
               ))
             ) : (
               <option>{label}</option>
             )}
-
             {options.map(item => (
               <option key={item.value} value={item.value}>
                 {item.name}
