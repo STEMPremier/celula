@@ -1,8 +1,7 @@
 @import '../../../styles/celula';
 
 .ce-select {
-  // should remove the default arrows from most browsers here but currentlty isn't touching
-  select {
+  // remove the default arrows from most browsers 
     appearance: none;
     -webkit-appearance: none;
     -o-appearance: none;
@@ -97,10 +96,6 @@
     }
   }
 
-  // .ce-select--box:focus ~ .ce-select-background-state {
-  //   border: 10px solid @green;
-  // }
-
   .ce-select--box:active ~ .ce-select--background-state {
     border: 0.3rem solid @active-blue;
   }
@@ -126,6 +121,15 @@
       border: 0.3rem solid @error-box;
     }
     .ce-select--box {
+      &:hover ~ .ce-select--background-state {
+        border: 0.3rem solid @hover-red;
+      }
+      &:focus ~ .ce-select--background-state {
+        border: 0.3rem solid @focus-red;
+      }
+      &:active ~ .ce-select--background-state {
+        border: 0.3rem solid @active-red;
+      }
       select {
         color: @error-box;
       }
