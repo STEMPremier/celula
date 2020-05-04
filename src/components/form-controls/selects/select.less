@@ -12,7 +12,7 @@
     padding: 0.6em 1.4em 0.5em 0.8em;
     width: 32.4rem;
     box-sizing: border-box;
-    background-color: @default-light-gray;
+    background-color: @unchecked-background;
     border: none;
     &:hover ~ .ce-select--background-state {
       border: 0.3rem solid @hover-blue;
@@ -52,7 +52,7 @@
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: nowrap;
-    border: 0.1rem solid @default-dark-gray;
+    border: 0.1rem solid @unchecked-gray;
 
     &:hover ~ .ce-select--background-state {
       border: 0.3rem solid @hover-blue;
@@ -118,13 +118,13 @@
     }
     .ce-select--outside-arrow {
       pointer-events: none;
-      background: @disabled-gray;
+      background: @checked-disabled-gray;
     }
   }
 
   &.ce-select--error {
     .ce-select--background-state {
-      border: 0.3rem solid @error-box;
+      border: 0.3rem solid @error-box-background;
     }
     .ce-select--box {
       &:hover ~ .ce-select--background-state {
@@ -137,11 +137,11 @@
         border: 0.3rem solid @active-red;
       }
       select {
-        color: @error-box;
+        color: @error-box-background;
       }
-      color: @error-box;
+      color: @error-box-background;
       .ce-select--outside-arrow {
-        background: @error-box;
+        background: @error-box-background;
       }
     }
   }
@@ -155,14 +155,14 @@
       border-left: 0.5rem solid transparent;
       border-right: 0.5rem solid transparent;
       position: center;
-      border-bottom: 0.5rem solid @error-box;
+      border-bottom: 0.5rem solid @error-box-background;
       margin-left: 48%;
       margin-top: 0.5rem;
     }
     .ce-select--error-box {
       height: 5.6rem;
       width: 99%;
-      background-color: @error-box;
+      background-color: @error-box-background;
       border-radius: 0.5rem;
       .ce-select--error-box-text {
         color: white;

@@ -58,37 +58,37 @@ const Button = props => {
 
 Button.propTypes = {
   /**
-   * The text of the button.
+   * The `<Button />` label.
    */
   children: PropTypes.string.isRequired,
   /**
-   * A class name added to the button.
+   * A class name, or string of class names, to add to the `<Button />`.
    */
   className: PropTypes.string,
   /**
-   * The color of the button.
+   * The color of the `<Button />`.
    */
   color: PropTypes.oneOf(COLORS),
   /**
-   * Make the button inactive.
+   * Disables the `<Button />`.
    */
   disabled: PropTypes.bool,
   /**
-   * A function that is called when the button is clicked.
+   * A function to trigger when the `<Button />` is clicked.
    */
   handleClick: PropTypes.func.isRequired,
   /**
-   * The type of button. This should always be `button` unless you are making a SubmitButton.
+   * The type of `<Button />. This should always be `button` unless you are making a `<SubmitButton />`.
    *
    * @ignore
    */
   htmlType: PropTypes.oneOf(['button', 'submit']),
   /**
-   * The size of the button.
+   * The size of the `<Button />.
    */
   size: PropTypes.oneOf(SIZES),
   /**
-   * Which type of button to render.
+   * Which type of `<Button /> to render.
    */
   type: PropTypes.oneOf([...TYPES, 'default']),
 };

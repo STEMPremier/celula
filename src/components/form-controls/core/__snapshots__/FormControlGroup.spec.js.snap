@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormControlGroup render() render a FCG with Checkboxes 1`] = `
+<fieldset
+  className=""
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    FormControlGroup Test Label
+  </legend>
+  <Checkbox
+    checked={false}
+    className=""
+    disabled={false}
+    errorMsg=""
+    formId=""
+    handleChange={[Function]}
+    isA="checkbox"
+    key=".0"
+    label="Checkbox Test Label 1"
+    name="FormControlGroup Test Name"
+    value="Checkbox Value Here 1"
+  />
+  <Checkbox
+    checked={false}
+    className=""
+    disabled={false}
+    errorMsg=""
+    formId=""
+    handleChange={[Function]}
+    isA="checkbox"
+    key=".1"
+    label="Checkbox Test Label 2"
+    name="FormControlGroup Test Name"
+    value="Checkbox Value Here 2"
+  />
+  <span
+    className=""
+  />
+</fieldset>
+`;
+
+exports[`FormControlGroup render() render a FCG with Radios 1`] = `
+<fieldset
+  className=""
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    FormControlGroup Test Label
+  </legend>
+  <Radio
+    checked={false}
+    className=""
+    disabled={false}
+    isA="radio"
+    key=".0"
+    label="Radio Test Label 1"
+    name="FormControlGroup Test Name"
+    value="Radio Value Here 1"
+  />
+  <Radio
+    checked={false}
+    className=""
+    disabled={false}
+    isA="radio"
+    key=".1"
+    label="Radio Test Label 2"
+    name="FormControlGroup Test Name"
+    value="Radio Value Here 2"
+  />
+  <span
+    className=""
+  />
+</fieldset>
+`;

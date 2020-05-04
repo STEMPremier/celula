@@ -1,0 +1,142 @@
+import { Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { boolean, select, text } from '@storybook/addon-knobs';
+
+import RadioGroup from './RadioGroup';
+import Radio from './Radio';
+
+<Meta component={RadioGroup} title="Components/Molecules/Form Controls/RadioGroup" />
+
+# RadioGroup and Radio
+## RadioGroup
+<Description of={RadioGroup} />
+<Props of={RadioGroup} />
+
+## Radio
+<Description of={Radio} />
+<Props of={Radio} />
+
+<Story name="All RadioGroups" parameters={{ docs: {disable: true}}}>
+  <form id="formOne">
+    <RadioGroup
+      className={text('className', '')}
+      disabled={boolean('disabled', false)}
+      errorClass={text('errorClass', '')}
+      errorMsg={text('errorMsg', '')}
+      formId={text('formId', 'formOne')}
+      handleChange={val => console.log(`The value is ${val}`)}
+      label={text('label', 'Choose your favorite OS:')}
+      name={text('name', 'favoriteOS')}
+      selectedValue={text('selectedValue', 'macos')}
+    >
+      <Radio
+        label='macOS'
+        value='macos'
+      />
+      <Radio
+        label='Linux'
+        value='linux'
+      />
+      <Radio
+        label='Windows'
+        value='windows'
+      />
+    </RadioGroup>
+  </form>
+</Story>
+
+<Story name="All Radios" parameters={{ docs: {disable: true}}}>
+  <Radio
+    className={text('className', '')}
+    label={text('label', 'macOS')}
+    value={text('value', 'macos')}
+  />
+</Story>
+
+### Types
+<Preview>
+  <Story name="RadioGroup Types">
+    <form id="formTwo">
+      <RadioGroup
+        formId="formTwo"
+        handleChange={val => console.log(`The value is ${val}`)}
+        label="Please make a choice:"
+        name="choice"
+        selectedValue="no"
+      >
+        <Radio
+          label="Yes"
+          value="yes"
+        />
+        <Radio
+          label="No"
+          value="no"
+        />
+      </RadioGroup>
+    </form>
+  </Story>
+</Preview>
+
+
+### States
+<Preview>
+  <Story name="RadioGroup States">
+    <form id="formThree">
+      <RadioGroup
+        formId="formThree"
+        handleChange={val => console.log(`The value is ${val}`)}
+        label="Standard RadioGroup:"
+        name="standardGroup"
+        selectedValue="thatOne"
+      >
+        <Radio
+          label="This one"
+          value="thisOne"
+        />
+        <Radio
+          label="That one"
+          value="thatOne"
+        />
+      </RadioGroup>
+      <RadioGroup
+        disabled
+        formId="formThree"
+        handleChange={val => console.log(`The value is ${val}`)}
+        label="Disabled RadioGroup:"
+        name="disabledGroup"
+        selectedValue="notThatOne"
+      >
+        <Radio
+          label="Not this one"
+          value="notThisOne"
+        />
+        <Radio
+          label="Not that one"
+          value="notThatOne"
+        />
+      </RadioGroup>
+      <RadioGroup
+        errorMsg="You did not choose wisely!"
+        formId="formThree"
+        handleChange={val => console.log(`The value is ${val}`)}
+        label="Error RadioGroup:"
+        name="errorGroup"
+        selectedValue="thatWrongOne"
+      >
+        <Radio
+          label="This wrong one"
+          value="thisWrongOne"
+        />
+        <Radio
+          label="That wrong one"
+          value="thatWrongOne"
+        />
+      </RadioGroup>
+    </form>
+  </Story>
+</Preview>

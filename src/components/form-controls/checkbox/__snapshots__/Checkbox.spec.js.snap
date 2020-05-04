@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> render() render the Checkbox 1`] = `
+<div
+  className="ce-checkbox"
+>
+  <input
+    checked={false}
+    disabled={false}
+    form=""
+    id="_Checkbox Value Here 1"
+    name=""
+    onChange={[Function]}
+    type="checkbox"
+    value="Checkbox Value Here 1"
+  />
+  <label
+    htmlFor="_Checkbox Value Here 1"
+  >
+    Checkbox Test Label 1
+  </label>
+  <span
+    className="ce-checkbox__center"
+  />
+</div>
+`;

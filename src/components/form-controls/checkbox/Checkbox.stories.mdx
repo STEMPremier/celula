@@ -1,0 +1,82 @@
+import { Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { boolean, select, text, array } from '@storybook/addon-knobs';
+
+import { Checkbox } from '.';
+
+<Meta component={Checkbox} title="Components/Molecules/Form Controls/Checkbox"/>
+
+# Checkbox
+<Decription of={Checkbox} />
+<Props of={Checkbox}/>
+
+<Story name="All Checkboxes" parameters={{docs: {disable: true}}}>
+  <form id="formOne">
+    <Checkbox
+      checked={boolean('checked', false )}
+      className={text('className', '')}
+      disabled={boolean('disabled', false)}
+      errorMsg={text('errorMsg', '')}
+      formId={text('formId', 'formOne')}
+      handleChange={val => console.log(`The value is ${val}`)}
+      label={text('label', 'Accept Terms and Conditions')}
+      name={text('name', 'termsAndConditions')}
+      value={text('value', 'accepted')}
+    />
+  </form>
+</Story>
+
+### Types
+<Preview>
+  <Story name="Checkbox Types">
+    <form id="formTwo">
+      <Checkbox
+        checked
+        formId="formTwo"
+        label="I am checked"
+        name="checked"
+        value={true}
+      />
+      <Checkbox
+        formId="formTwo"
+        label="I am unchecked"
+        name="unchecked"
+        value={false}
+      />
+    </form>
+  </Story>
+</Preview>
+
+
+### States
+<Preview>
+  <Story name="Checkbox States">
+    <form id="formThree">
+      <Checkbox
+        formId="formThree"
+        label="Standard Checkbox"
+        name="standardCheckbox"
+        value="standard"
+      />
+      <Checkbox
+        disabled
+        formId="formThree"
+        label="Disabled Checkbox"
+        name="disabledCheckbox"
+        value="disabled"
+      />
+      <Checkbox
+        errorMsg="There is an error."
+        formId="formThree"
+        label="Error Checkbox"
+        name="errorCheckbox"
+        value="error"
+      />
+    </form>
+  </Story>
+</Preview>

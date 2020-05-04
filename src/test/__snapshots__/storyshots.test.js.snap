@@ -483,818 +483,887 @@ exports[`Storyshots Components/Atoms/Button Button Types 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Checkbox 1`] = `
-<div
-  className="ce-checkbox classNameExample"
+exports[`Storyshots Components/Molecules/Form Controls/Checkbox All Checkboxes 1`] = `
+<form
+  id="formOne"
 >
   <div
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
+    className="ce-checkbox"
   >
+    <input
+      checked={false}
+      disabled={false}
+      form="formOne"
+      id="termsAndConditions_accepted"
+      name="termsAndConditions"
+      onChange={[Function]}
+      type="checkbox"
+      value="accepted"
+    />
+    <label
+      htmlFor="termsAndConditions_accepted"
+    >
+      Accept Terms and Conditions
+    </label>
+    <span
+      className="ce-checkbox__center"
+    />
+    
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox States 1`] = `
+<form
+  id="formThree"
+>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form="formThree"
+      id="standardCheckbox_standard"
+      name="standardCheckbox"
+      onChange={[Function]}
+      type="checkbox"
+      value="standard"
+    />
+    <label
+      htmlFor="standardCheckbox_standard"
+    >
+      Standard Checkbox
+    </label>
+    <span
+      className="ce-checkbox__center"
+    />
+    
+  </div>
+  <div
+    className="ce-checkbox ce-checkbox--disabled"
+  >
+    <input
+      checked={false}
+      disabled={true}
+      form="formThree"
+      id="disabledCheckbox_disabled"
+      name="disabledCheckbox"
+      onChange={[Function]}
+      type="checkbox"
+      value="disabled"
+    />
+    <label
+      htmlFor="disabledCheckbox_disabled"
+    >
+      Disabled Checkbox
+    </label>
+    <span
+      className="ce-checkbox__center"
+    />
+    
+  </div>
+  <div
+    className="ce-checkbox ce-checkbox--error"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form="formThree"
+      id="errorCheckbox_error"
+      name="errorCheckbox"
+      onChange={[Function]}
+      type="checkbox"
+      value="error"
+    />
+    <label
+      htmlFor="errorCheckbox_error"
+    >
+      Error Checkbox
+    </label>
+    <span
+      className="ce-checkbox__center"
+    />
     <div
-      className="ce-checkbox--box"
+      className="ce-checkbox--error__container"
+    >
+      <div
+        className="ce-checkbox--error__arrow"
+      />
+      <div
+        className="ce-checkbox--error__message"
+      >
+        <span
+          className="ce-checkbox--error__text"
+        >
+          There is an error.
+        </span>
+      </div>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox Types 1`] = `
+<form
+  id="formTwo"
+>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={true}
+      disabled={false}
+      form="formTwo"
+      id="checked_true"
+      name="checked"
+      onChange={[Function]}
+      type="checkbox"
+      value={true}
+    />
+    <label
+      htmlFor="checked_true"
+    >
+      I am checked
+    </label>
+    <span
+      className="ce-checkbox__center"
+    />
+    
+  </div>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form="formTwo"
+      id="unchecked_false"
+      name="unchecked"
+      onChange={[Function]}
+      type="checkbox"
+      value={false}
+    />
+    <label
+      htmlFor="unchecked_false"
+    >
+      I am unchecked
+    </label>
+    <span
+      className="ce-checkbox__center"
+    />
+    
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup All CheckboxGroups 1`] = `
+<form
+  id="formOne"
+>
+  <fieldset
+    className="ce-checkbox-group"
+    disabled={false}
+    form="formOne"
+    onChange={[Function]}
+  >
+    <legend>
+      Favorite Food
+    </legend>
+    <div
+      className="ce-checkbox"
     >
       <input
         checked={true}
         disabled={false}
         form=""
-        id="checkbox name 1_value1"
-        name="checkbox name 1"
+        id="favoriteFood_pizza"
+        name="favoriteFood"
         onChange={[Function]}
         type="checkbox"
-        value="value1"
+        value="pizza"
       />
       <label
-        htmlFor="checkbox name 1_value1"
+        htmlFor="favoriteFood_pizza"
       >
-        Default Checkbox Label 1
+        Pizza
       </label>
-      <div
-        className="ce-checkbox--background"
+      <span
+        className="ce-checkbox__center"
       />
       
     </div>
-  </div>
-</div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteFood_hotdog"
+        name="favoriteFood"
+        onChange={[Function]}
+        type="checkbox"
+        value="hotdog"
+      />
+      <label
+        htmlFor="favoriteFood_hotdog"
+      >
+        Hotdog
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={true}
+        disabled={false}
+        form=""
+        id="favoriteFood_hamburger"
+        name="favoriteFood"
+        onChange={[Function]}
+        type="checkbox"
+        value="hamburger"
+      />
+      <label
+        htmlFor="favoriteFood_hamburger"
+      >
+        Hamburger
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteFood_coleslaw"
+        name="favoriteFood"
+        onChange={[Function]}
+        type="checkbox"
+        value="coleslaw"
+      />
+      <label
+        htmlFor="favoriteFood_coleslaw"
+      >
+        Coleslaw
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <span
+      className="ce-checkbox-group--error-text"
+    >
+      
+    </span>
+  </fieldset>
+</form>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Checkbox Group 1`] = `
-<fieldset
-  className="ce-checkbox"
-  disabled={false}
-  form="Form 1"
-  name="Default Name for Checkbox Group"
-  onChange={[Function]}
+exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGroup States 1`] = `
+<form
+  id="formThree"
 >
-  <legend>
-    Default Fieldset Label
-    
-  </legend>
-  <div
-    className="ce-checkbox"
-  >
-    <div
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-    >
-      <div
-        className="ce-checkbox--box"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          form=""
-          id="Default Name for Checkbox Group_value 1"
-          name="Default Name for Checkbox Group"
-          onChange={[Function]}
-          type="checkbox"
-          value="value 1"
-        />
-        <label
-          htmlFor="Default Name for Checkbox Group_value 1"
-        >
-          label 1
-        </label>
-        <div
-          className="ce-checkbox--background"
-        />
-        
-      </div>
-    </div>
-  </div>
-  <div
-    className="ce-checkbox"
-  >
-    <div
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-    >
-      <div
-        className="ce-checkbox--box"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          form=""
-          id="Default Name for Checkbox Group_value 2"
-          name="Default Name for Checkbox Group"
-          onChange={[Function]}
-          type="checkbox"
-          value="value 2"
-        />
-        <label
-          htmlFor="Default Name for Checkbox Group_value 2"
-        >
-          label 2
-        </label>
-        <div
-          className="ce-checkbox--background"
-        />
-        
-      </div>
-    </div>
-  </div>
-  <div
-    className="ce-checkbox"
-  >
-    <div
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-    >
-      <div
-        className="ce-checkbox--box"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          form=""
-          id="Default Name for Checkbox Group_value 3"
-          name="Default Name for Checkbox Group"
-          onChange={[Function]}
-          type="checkbox"
-          value="value 3"
-        />
-        <label
-          htmlFor="Default Name for Checkbox Group_value 3"
-        >
-          label 3
-        </label>
-        <div
-          className="ce-checkbox--background"
-        />
-        
-      </div>
-    </div>
-  </div>
-  <div
-    className="ce-checkbox"
-  >
-    <div
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-    >
-      <div
-        className="ce-checkbox--box"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          form=""
-          id="Default Name for Checkbox Group_value 4"
-          name="Default Name for Checkbox Group"
-          onChange={[Function]}
-          type="checkbox"
-          value="value 4"
-        />
-        <label
-          htmlFor="Default Name for Checkbox Group_value 4"
-        >
-          label 4
-        </label>
-        <div
-          className="ce-checkbox--background"
-        />
-        
-      </div>
-    </div>
-  </div>
-</fieldset>
-`;
-
-exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Disabled Checkbox 1`] = `
-<form>
   <fieldset
-    className="ce-checkbox"
+    className="ce-checkbox-group"
     disabled={false}
-    form="formName2"
-    name="checkboxGroupName2"
+    form="formThree"
     onChange={[Function]}
   >
     <legend>
-      Label Goes Here
-      
+      Favorite OS (Default Checkbox Group)
     </legend>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={true}
+        disabled={false}
+        form=""
+        id="favoriteOS_macos"
+        name="favoriteOS"
+        onChange={[Function]}
+        type="checkbox"
+        value="macos"
+      />
+      <label
+        htmlFor="favoriteOS_macos"
+      >
+        macOS
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteOS_windows"
+        name="favoriteOS"
+        onChange={[Function]}
+        type="checkbox"
+        value="windows"
+      />
+      <label
+        htmlFor="favoriteOS_windows"
+      >
+        Windows
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={true}
+        disabled={false}
+        form=""
+        id="favoriteOS_linux"
+        name="favoriteOS"
+        onChange={[Function]}
+        type="checkbox"
+        value="linux"
+      />
+      <label
+        htmlFor="favoriteOS_linux"
+      >
+        Linux
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <span
+      className="ce-checkbox-group--error-text"
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-checkbox-group ce-checkbox-group--disabled"
+    disabled={true}
+    form="formThree"
+    onChange={[Function]}
+  >
+    <legend>
+      Favorite Beatle (Disabled Checkbox Group)
+    </legend>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteBeatle_john"
+        name="favoriteBeatle"
+        onChange={[Function]}
+        type="checkbox"
+        value="john"
+      />
+      <label
+        htmlFor="favoriteBeatle_john"
+      >
+        John Lennon
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteBeatle_paul"
+        name="favoriteBeatle"
+        onChange={[Function]}
+        type="checkbox"
+        value="paul"
+      />
+      <label
+        htmlFor="favoriteBeatle_paul"
+      >
+        Paul Mccartney
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={true}
+        disabled={false}
+        form=""
+        id="favoriteBeatle_george"
+        name="favoriteBeatle"
+        onChange={[Function]}
+        type="checkbox"
+        value="george"
+      />
+      <label
+        htmlFor="favoriteBeatle_george"
+      >
+        George Harrison
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteBeatle_ringo"
+        name="favoriteBeatle"
+        onChange={[Function]}
+        type="checkbox"
+        value="ringo"
+      />
+      <label
+        htmlFor="favoriteBeatle_ringo"
+      >
+        Ringo Starr
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <span
+      className="ce-checkbox-group--error-text"
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-checkbox-group"
+    disabled={false}
+    form="formThree"
+    onChange={[Function]}
+  >
+    <legend>
+      Favorite Beatle (Disabled Checkbox Individual)
+    </legend>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteBeatle2_john"
+        name="favoriteBeatle2"
+        onChange={[Function]}
+        type="checkbox"
+        value="john"
+      />
+      <label
+        htmlFor="favoriteBeatle2_john"
+      >
+        John Lennon
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteBeatle2_paul"
+        name="favoriteBeatle2"
+        onChange={[Function]}
+        type="checkbox"
+        value="paul"
+      />
+      <label
+        htmlFor="favoriteBeatle2_paul"
+      >
+        Paul Mccartney
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteBeatle2_george"
+        name="favoriteBeatle2"
+        onChange={[Function]}
+        type="checkbox"
+        value="george"
+      />
+      <label
+        htmlFor="favoriteBeatle2_george"
+      >
+        George Harrison
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
     <div
       className="ce-checkbox ce-checkbox--disabled"
     >
-      <div
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <input
+        checked={false}
+        disabled={true}
+        form=""
+        id="favoriteBeatle2_ringo"
+        name="favoriteBeatle2"
+        onChange={[Function]}
+        type="checkbox"
+        value="ringo"
+      />
+      <label
+        htmlFor="favoriteBeatle2_ringo"
       >
-        <div
-          className="ce-checkbox--box"
-        >
-          <input
-            checked={true}
-            disabled={true}
-            form=""
-            id="checkboxGroupName2_option1"
-            name="checkboxGroupName2"
-            onChange={[Function]}
-            type="checkbox"
-            value="option1"
-          />
-          <label
-            htmlFor="checkboxGroupName2_option1"
-          >
-            Option 1
-          </label>
-          <div
-            className="ce-checkbox--background"
-          />
-          
-        </div>
-      </div>
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <div
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <div
-          className="ce-checkbox--box"
-        >
-          <input
-            checked={true}
-            disabled={false}
-            form=""
-            id="checkboxGroupName2_option2"
-            name="checkboxGroupName2"
-            onChange={[Function]}
-            type="checkbox"
-            value="option2"
-          />
-          <label
-            htmlFor="checkboxGroupName2_option2"
-          >
-            Option 2
-          </label>
-          <div
-            className="ce-checkbox--background"
-          />
-          
-        </div>
-      </div>
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <div
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <div
-          className="ce-checkbox--box"
-        >
-          <input
-            checked={false}
-            disabled={false}
-            form=""
-            id="checkboxGroupName2_option3"
-            name="checkboxGroupName2"
-            onChange={[Function]}
-            type="checkbox"
-            value="option3"
-          />
-          <label
-            htmlFor="checkboxGroupName2_option3"
-          >
-            Option 3
-          </label>
-          <div
-            className="ce-checkbox--background"
-          />
-          
-        </div>
-      </div>
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <div
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <div
-          className="ce-checkbox--box"
-        >
-          <input
-            checked={false}
-            disabled={false}
-            form=""
-            id="checkboxGroupName2_option4"
-            name="checkboxGroupName2"
-            onChange={[Function]}
-            type="checkbox"
-            value="option4"
-          />
-          <label
-            htmlFor="checkboxGroupName2_option4"
-          >
-            Option 4
-          </label>
-          <div
-            className="ce-checkbox--background"
-          />
-          
-        </div>
-      </div>
-    </div>
-  </fieldset>
-</form>
-`;
-
-exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Disabled Checkbox Group 1`] = `
-<form>
-  <fieldset
-    className="ce-checkbox ce-checkbox--disabled"
-    disabled={true}
-    form="formName3"
-    name="checkboxGroupName3"
-    onChange={[Function]}
-  >
-    <legend>
-      Label Goes Here
+        Ringo Starr (Disabled)
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
       
-    </legend>
-    <div
-      className="ce-checkbox"
-    >
-      <div
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <div
-          className="ce-checkbox--box"
-        >
-          <input
-            checked={true}
-            disabled={false}
-            form=""
-            id="checkboxGroupName3_option1"
-            name="checkboxGroupName3"
-            onChange={[Function]}
-            type="checkbox"
-            value="option1"
-          />
-          <label
-            htmlFor="checkboxGroupName3_option1"
-          >
-            Option 1
-          </label>
-          <div
-            className="ce-checkbox--background"
-          />
-          
-        </div>
-      </div>
     </div>
-    <div
-      className="ce-checkbox"
+    <span
+      className="ce-checkbox-group--error-text"
     >
-      <div
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <div
-          className="ce-checkbox--box"
-        >
-          <input
-            checked={true}
-            disabled={false}
-            form=""
-            id="checkboxGroupName3_option2"
-            name="checkboxGroupName3"
-            onChange={[Function]}
-            type="checkbox"
-            value="option2"
-          />
-          <label
-            htmlFor="checkboxGroupName3_option2"
-          >
-            Option 2
-          </label>
-          <div
-            className="ce-checkbox--background"
-          />
-          
-        </div>
-      </div>
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <div
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <div
-          className="ce-checkbox--box"
-        >
-          <input
-            checked={false}
-            disabled={false}
-            form=""
-            id="checkboxGroupName3_option3"
-            name="checkboxGroupName3"
-            onChange={[Function]}
-            type="checkbox"
-            value="option3"
-          />
-          <label
-            htmlFor="checkboxGroupName3_option3"
-          >
-            Option 3
-          </label>
-          <div
-            className="ce-checkbox--background"
-          />
-          
-        </div>
-      </div>
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <div
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <div
-          className="ce-checkbox--box"
-        >
-          <input
-            checked={false}
-            disabled={false}
-            form=""
-            id="checkboxGroupName3_option4"
-            name="checkboxGroupName3"
-            onChange={[Function]}
-            type="checkbox"
-            value="option4"
-          />
-          <label
-            htmlFor="checkboxGroupName3_option4"
-          >
-            Option 4
-          </label>
-          <div
-            className="ce-checkbox--background"
-          />
-          
-        </div>
-      </div>
-    </div>
-  </fieldset>
-</form>
-`;
-
-exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Enabled Checkbox Group 1`] = `
-<form>
-  <fieldset
-    className="ce-checkbox"
-    disabled={false}
-    form="formName1"
-    name="checkboxGroupName1"
-    onChange={[Function]}
-  >
-    <legend>
-      Label Goes Here
       
-    </legend>
-    <div
-      className="ce-checkbox"
-    >
-      <div
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <div
-          className="ce-checkbox--box"
-        >
-          <input
-            checked={true}
-            disabled={false}
-            form=""
-            id="checkboxGroupName1_option1"
-            name="checkboxGroupName1"
-            onChange={[Function]}
-            type="checkbox"
-            value="option1"
-          />
-          <label
-            htmlFor="checkboxGroupName1_option1"
-          >
-            Option 1
-          </label>
-          <div
-            className="ce-checkbox--background"
-          />
-          
-        </div>
-      </div>
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <div
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <div
-          className="ce-checkbox--box"
-        >
-          <input
-            checked={true}
-            disabled={false}
-            form=""
-            id="checkboxGroupName1_option2"
-            name="checkboxGroupName1"
-            onChange={[Function]}
-            type="checkbox"
-            value="option2"
-          />
-          <label
-            htmlFor="checkboxGroupName1_option2"
-          >
-            Option 2
-          </label>
-          <div
-            className="ce-checkbox--background"
-          />
-          
-        </div>
-      </div>
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <div
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <div
-          className="ce-checkbox--box"
-        >
-          <input
-            checked={false}
-            disabled={false}
-            form=""
-            id="checkboxGroupName1_option3"
-            name="checkboxGroupName1"
-            onChange={[Function]}
-            type="checkbox"
-            value="option3"
-          />
-          <label
-            htmlFor="checkboxGroupName1_option3"
-          >
-            Option 3
-          </label>
-          <div
-            className="ce-checkbox--background"
-          />
-          
-        </div>
-      </div>
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <div
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <div
-          className="ce-checkbox--box"
-        >
-          <input
-            checked={false}
-            disabled={false}
-            form=""
-            id="checkboxGroupName1_option4"
-            name="checkboxGroupName1"
-            onChange={[Function]}
-            type="checkbox"
-            value="option4"
-          />
-          <label
-            htmlFor="checkboxGroupName1_option4"
-          >
-            Option 4
-          </label>
-          <div
-            className="ce-checkbox--background"
-          />
-          
-        </div>
-      </div>
-    </div>
+    </span>
   </fieldset>
-</form>
-`;
-
-exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Error Checkbox Group 1`] = `
-<form>
   <fieldset
-    className="ce-checkbox ce-checkbox--error"
+    className="ce-checkbox-group ce-checkbox-group--error"
     disabled={false}
-    form="formName1"
-    name="checkboxGroupName1"
+    form="formThree"
     onChange={[Function]}
   >
     <legend>
-      Label Goes Here
-      <div
-        className="ce-checkbox--error-text"
-      >
-        Error message
-      </div>
+      Favorite UI Framework
     </legend>
     <div
       className="ce-checkbox"
-    >
-      <div
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <div
-          className="ce-checkbox--box"
-        >
-          <input
-            checked={true}
-            disabled={false}
-            form=""
-            id="checkboxGroupName1_option1"
-            name="checkboxGroupName1"
-            onChange={[Function]}
-            type="checkbox"
-            value="option1"
-          />
-          <label
-            htmlFor="checkboxGroupName1_option1"
-          >
-            Option 1
-          </label>
-          <div
-            className="ce-checkbox--background"
-          />
-          
-        </div>
-      </div>
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <div
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <div
-          className="ce-checkbox--box"
-        >
-          <input
-            checked={true}
-            disabled={false}
-            form=""
-            id="checkboxGroupName1_option2"
-            name="checkboxGroupName1"
-            onChange={[Function]}
-            type="checkbox"
-            value="option2"
-          />
-          <label
-            htmlFor="checkboxGroupName1_option2"
-          >
-            Option 2
-          </label>
-          <div
-            className="ce-checkbox--background"
-          />
-          
-        </div>
-      </div>
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <div
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <div
-          className="ce-checkbox--box"
-        >
-          <input
-            checked={false}
-            disabled={false}
-            form=""
-            id="checkboxGroupName1_option3"
-            name="checkboxGroupName1"
-            onChange={[Function]}
-            type="checkbox"
-            value="option3"
-          />
-          <label
-            htmlFor="checkboxGroupName1_option3"
-          >
-            Option 3
-          </label>
-          <div
-            className="ce-checkbox--background"
-          />
-          
-        </div>
-      </div>
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <div
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <div
-          className="ce-checkbox--box"
-        >
-          <input
-            checked={false}
-            disabled={false}
-            form=""
-            id="checkboxGroupName1_option4"
-            name="checkboxGroupName1"
-            onChange={[Function]}
-            type="checkbox"
-            value="option4"
-          />
-          <label
-            htmlFor="checkboxGroupName1_option4"
-          >
-            Option 4
-          </label>
-          <div
-            className="ce-checkbox--background"
-          />
-          
-        </div>
-      </div>
-    </div>
-  </fieldset>
-</form>
-`;
-
-exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Error Individual Checkbox 1`] = `
-<div
-  className="ce-checkbox ce-checkbox--individual-checkbox-error"
->
-  <div
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    <div
-      className="ce-checkbox--box"
     >
       <input
         checked={true}
         disabled={false}
         form=""
-        id="_option1"
-        name=""
+        id="favoriteFramework_react"
+        name="favoriteFramework"
         onChange={[Function]}
         type="checkbox"
-        value="option1"
+        value="react"
       />
       <label
-        htmlFor="_option1"
+        htmlFor="favoriteFramework_react"
       >
-        Option 1
+        React
       </label>
-      <div
-        className="ce-checkbox--background"
+      <span
+        className="ce-checkbox__center"
       />
-      <div
-        className="ce-checkbox--error-box-wrapper"
-      >
-        <div
-          className="ce-checkbox--arrow"
-        />
-        <div
-          className="ce-checkbox--error-box"
-        >
-          <div
-            className="ce-checkbox--error-box-text"
-          >
-            Error message
-          </div>
-        </div>
-      </div>
+      
     </div>
-  </div>
-</div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteFramework_angularjs"
+        name="favoriteFramework"
+        onChange={[Function]}
+        type="checkbox"
+        value="angularjs"
+      />
+      <label
+        htmlFor="favoriteFramework_angularjs"
+      >
+        AngularJS
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteFramework_angular"
+        name="favoriteFramework"
+        onChange={[Function]}
+        type="checkbox"
+        value="angular"
+      />
+      <label
+        htmlFor="favoriteFramework_angular"
+      >
+        Angular
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={true}
+        disabled={false}
+        form=""
+        id="favoriteFramework_vue"
+        name="favoriteFramework"
+        onChange={[Function]}
+        type="checkbox"
+        value="vue"
+      />
+      <label
+        htmlFor="favoriteFramework_vue"
+      >
+        Vue
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <span
+      className="ce-checkbox-group--error-text"
+    >
+      Unable to set Vuejs as favorite framework.
+    </span>
+  </fieldset>
+</form>
 `;
 
+exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGroup Types 1`] = `
+<form
+  id="formTwo"
+>
+  <fieldset
+    className="ce-checkbox-group"
+    disabled={false}
+    form="formTwo"
+    onChange={[Function]}
+  >
+    <legend>
+      Favorite Text Editor
+    </legend>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteTextEditor_vim"
+        name="favoriteTextEditor"
+        onChange={[Function]}
+        type="checkbox"
+        value="vim"
+      />
+      <label
+        htmlFor="favoriteTextEditor_vim"
+      >
+        Vim
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteTextEditor_emacs"
+        name="favoriteTextEditor"
+        onChange={[Function]}
+        type="checkbox"
+        value="emacs"
+      />
+      <label
+        htmlFor="favoriteTextEditor_emacs"
+      >
+        Emacs
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteTextEditor_vscode"
+        name="favoriteTextEditor"
+        onChange={[Function]}
+        type="checkbox"
+        value="vscode"
+      />
+      <label
+        htmlFor="favoriteTextEditor_vscode"
+      >
+        VS Code
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteTextEditor_atom"
+        name="favoriteTextEditor"
+        onChange={[Function]}
+        type="checkbox"
+        value="atom"
+      />
+      <label
+        htmlFor="favoriteTextEditor_atom"
+      >
+        Atom
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <span
+      className="ce-checkbox-group--error-text"
+    >
+      
+    </span>
+  </fieldset>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup Form Control Group with Checkboxes 1`] = `
+<form>
+  <fieldset
+    className=""
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      Test Group
+    </legend>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={true}
+        disabled={false}
+        form=""
+        id="myGroup_checkboxOne"
+        name="myGroup"
+        onChange={[Function]}
+        type="checkbox"
+        value="checkboxOne"
+      />
+      <label
+        htmlFor="myGroup_checkboxOne"
+      >
+        Checkbox 1
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="myGroup_checkboxTwo"
+        name="myGroup"
+        onChange={[Function]}
+        type="checkbox"
+        value="checkboxTwo"
+      />
+      <label
+        htmlFor="myGroup_checkboxTwo"
+      >
+        Checkbox 2
+      </label>
+      <span
+        className="ce-checkbox__center"
+      />
+      
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+</form>
+`;
+
+<<<<<<< HEAD
 exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup Form Control Group 1`] = `
 <form>
   <fieldset
@@ -1354,426 +1423,362 @@ exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup Form Con
 `;
 
 exports[`Storyshots Components/Molecules/Form Controls/RadioGroup Disabled Radio Group 1`] = `
+=======
+exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup Form Control Group with Radios 1`] = `
+>>>>>>> master
 <form>
   <fieldset
-    className="ce-radio-group ce-radio--disabled"
-    disabled={true}
-    form="formName3"
-    name="radioGroupName2"
-    onChange={[Function]}
-  >
-    <legend>
-      Label Goes Here
-      
-    </legend>
-    <div
-      className="ce-radio ce-radio--checked"
-    >
-      <div
-        className="ce-radio--button"
-      >
-        <input
-          checked={true}
-          disabled={false}
-          id="radioGroupName2_option1"
-          name="radioGroupName2"
-          type="radio"
-          value="option1"
-        />
-        <label
-          htmlFor="radioGroupName2_option1"
-        >
-          Option 1
-        </label>
-      </div>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <div
-        className="ce-radio--button"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          id="radioGroupName2_option2"
-          name="radioGroupName2"
-          type="radio"
-          value="option2"
-        />
-        <label
-          htmlFor="radioGroupName2_option2"
-        >
-          Option 2
-        </label>
-      </div>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <div
-        className="ce-radio--button"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          id="radioGroupName2_option3"
-          name="radioGroupName2"
-          type="radio"
-          value="option3"
-        />
-        <label
-          htmlFor="radioGroupName2_option3"
-        >
-          Option 3
-        </label>
-      </div>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <div
-        className="ce-radio--button"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          id="radioGroupName2_option4"
-          name="radioGroupName2"
-          type="radio"
-          value="option4"
-        />
-        <label
-          htmlFor="radioGroupName2_option4"
-        >
-          Option 3
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</form>
-`;
-
-exports[`Storyshots Components/Molecules/Form Controls/RadioGroup Enabled Radio Group 1`] = `
-<form>
-  <fieldset
-    className="ce-radio-group"
-    disabled={false}
-    form="formName1"
-    name="radioGroupName1"
-    onChange={[Function]}
-  >
-    <legend>
-      Label Goes Here
-      
-    </legend>
-    <div
-      className="ce-radio"
-    >
-      <div
-        className="ce-radio--button"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          id="radioGroupName1_option1"
-          name="radioGroupName1"
-          type="radio"
-          value="option1"
-        />
-        <label
-          htmlFor="radioGroupName1_option1"
-        >
-          Option 1
-        </label>
-      </div>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <div
-        className="ce-radio--button"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          id="radioGroupName1_option2"
-          name="radioGroupName1"
-          type="radio"
-          value="option2"
-        />
-        <label
-          htmlFor="radioGroupName1_option2"
-        >
-          Option 2
-        </label>
-      </div>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <div
-        className="ce-radio--button"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          id="radioGroupName1_option3"
-          name="radioGroupName1"
-          type="radio"
-          value="option3"
-        />
-        <label
-          htmlFor="radioGroupName1_option3"
-        >
-          Option 3
-        </label>
-      </div>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <div
-        className="ce-radio--button"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          id="radioGroupName1_option4"
-          name="radioGroupName1"
-          type="radio"
-          value="option4"
-        />
-        <label
-          htmlFor="radioGroupName1_option4"
-        >
-          Option 4
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</form>
-`;
-
-exports[`Storyshots Components/Molecules/Form Controls/RadioGroup Error Radio Group 1`] = `
-<form>
-  <fieldset
-    className="ce-radio-group ce-radio--error"
-    disabled={false}
-    form="formName4"
-    name="radioGroupName3"
-    onChange={[Function]}
-  >
-    <legend>
-      Label Goes Here
-      <div
-        className="ce-radio-error--text"
-      >
-        Error message
-      </div>
-    </legend>
-    <div
-      className="ce-radio ce-radio--checked"
-    >
-      <div
-        className="ce-radio--button"
-      >
-        <input
-          checked={true}
-          disabled={false}
-          id="radioGroupName3_option1"
-          name="radioGroupName3"
-          type="radio"
-          value="option1"
-        />
-        <label
-          htmlFor="radioGroupName3_option1"
-        >
-          Option 1
-        </label>
-      </div>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <div
-        className="ce-radio--button"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          id="radioGroupName3_option2"
-          name="radioGroupName3"
-          type="radio"
-          value="option2"
-        />
-        <label
-          htmlFor="radioGroupName3_option2"
-        >
-          Option 2
-        </label>
-      </div>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <div
-        className="ce-radio--button"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          id="radioGroupName3_option3"
-          name="radioGroupName3"
-          type="radio"
-          value="option3"
-        />
-        <label
-          htmlFor="radioGroupName3_option3"
-        >
-          Option 3
-        </label>
-      </div>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <div
-        className="ce-radio--button"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          id="radioGroupName3_option4"
-          name="radioGroupName3"
-          type="radio"
-          value="option4"
-        />
-        <label
-          htmlFor="radioGroupName3_option4"
-        >
-          Option 4
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</form>
-`;
-
-exports[`Storyshots Components/Molecules/Form Controls/RadioGroup Radio 1`] = `
-<form>
-  <fieldset
-    className="ce-radio-group"
+    className=""
     disabled={false}
     form=""
-    name="name for radio"
     onChange={[Function]}
   >
     <legend>
-      label for radio
-      
+      Test Group
     </legend>
     <div
       className="ce-radio"
     >
-      <div
-        className="ce-radio--button"
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="myGroup_radioOne"
+        name="myGroup"
+        type="radio"
+        value="radioOne"
+      />
+      <label
+        htmlFor="myGroup_radioOne"
       >
-        <input
-          checked={false}
-          disabled={false}
-          id="name for radio_value1"
-          name="name for radio"
-          type="radio"
-          value="value1"
-        />
-        <label
-          htmlFor="name for radio_value1"
-        >
-          Default Radio Label 1
-        </label>
-      </div>
+        Radio 1
+      </label>
     </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="myGroup_radioTwo"
+        name="myGroup"
+        type="radio"
+        value="radioTwo"
+      />
+      <label
+        htmlFor="myGroup_radioTwo"
+      >
+        Radio 2
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
   </fieldset>
 </form>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/RadioGroup Radio Group 1`] = `
-<fieldset
-  className="ce-radio-group"
-  disabled={false}
-  form=""
-  name="Default Name for Radio Group"
-  onChange={[Function]}
+exports[`Storyshots Components/Molecules/Form Controls/RadioGroup All RadioGroups 1`] = `
+<form
+  id="formOne"
 >
-  <legend>
-    Default Fieldset Label
-    
-  </legend>
-  <div
-    className="ce-radio"
+  <fieldset
+    className="ce-radio-group"
+    disabled={false}
+    form="formOne"
+    onChange={[Function]}
   >
+    <legend>
+      Choose your favorite OS:
+    </legend>
     <div
-      className="ce-radio--button"
+      className="ce-radio"
     >
       <input
-        checked={false}
+        defaultChecked={true}
         disabled={false}
-        id="Default Name for Radio Group_value 1"
-        name="Default Name for Radio Group"
+        id="favoriteOS_macos"
+        name="favoriteOS"
         type="radio"
-        value="value 1"
+        value="macos"
       />
       <label
-        htmlFor="Default Name for Radio Group_value 1"
+        htmlFor="favoriteOS_macos"
       >
-        label 1
+        macOS
       </label>
     </div>
-  </div>
-  <div
-    className="ce-radio"
-  >
     <div
-      className="ce-radio--button"
+      className="ce-radio"
     >
       <input
-        checked={false}
+        defaultChecked={false}
         disabled={false}
-        id="Default Name for Radio Group_value 2"
-        name="Default Name for Radio Group"
+        id="favoriteOS_linux"
+        name="favoriteOS"
         type="radio"
-        value="value 2"
+        value="linux"
       />
       <label
-        htmlFor="Default Name for Radio Group_value 2"
+        htmlFor="favoriteOS_linux"
       >
-        label 2
+        Linux
       </label>
     </div>
-  </div>
-  <div
-    className="ce-radio"
-  >
     <div
-      className="ce-radio--button"
+      className="ce-radio"
     >
       <input
-        checked={false}
+        defaultChecked={false}
         disabled={false}
-        id="Default Name for Radio Group_value 3"
-        name="Default Name for Radio Group"
+        id="favoriteOS_windows"
+        name="favoriteOS"
         type="radio"
-        value="value 3"
+        value="windows"
       />
       <label
-        htmlFor="Default Name for Radio Group_value 3"
+        htmlFor="favoriteOS_windows"
       >
-        label 3
+        Windows
       </label>
     </div>
-  </div>
-</fieldset>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/RadioGroup All Radios 1`] = `
+<div
+  className="ce-radio"
+>
+  <input
+    defaultChecked={false}
+    disabled={false}
+    id="undefined_macos"
+    type="radio"
+    value="macos"
+  />
+  <label
+    htmlFor="undefined_macos"
+  >
+    macOS
+  </label>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/RadioGroup RadioGroup States 1`] = `
+<form
+  id="formThree"
+>
+  <fieldset
+    className="ce-radio-group"
+    disabled={false}
+    form="formThree"
+    onChange={[Function]}
+  >
+    <legend>
+      Standard RadioGroup:
+    </legend>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="standardGroup_thisOne"
+        name="standardGroup"
+        type="radio"
+        value="thisOne"
+      />
+      <label
+        htmlFor="standardGroup_thisOne"
+      >
+        This one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="standardGroup_thatOne"
+        name="standardGroup"
+        type="radio"
+        value="thatOne"
+      />
+      <label
+        htmlFor="standardGroup_thatOne"
+      >
+        That one
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-radio-group ce-radio-group--disabled"
+    disabled={true}
+    form="formThree"
+    onChange={[Function]}
+  >
+    <legend>
+      Disabled RadioGroup:
+    </legend>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="disabledGroup_notThisOne"
+        name="disabledGroup"
+        type="radio"
+        value="notThisOne"
+      />
+      <label
+        htmlFor="disabledGroup_notThisOne"
+      >
+        Not this one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="disabledGroup_notThatOne"
+        name="disabledGroup"
+        type="radio"
+        value="notThatOne"
+      />
+      <label
+        htmlFor="disabledGroup_notThatOne"
+      >
+        Not that one
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-radio-group ce-radio-group--error"
+    disabled={false}
+    form="formThree"
+    onChange={[Function]}
+  >
+    <legend>
+      Error RadioGroup:
+    </legend>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="errorGroup_thisWrongOne"
+        name="errorGroup"
+        type="radio"
+        value="thisWrongOne"
+      />
+      <label
+        htmlFor="errorGroup_thisWrongOne"
+      >
+        This wrong one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="errorGroup_thatWrongOne"
+        name="errorGroup"
+        type="radio"
+        value="thatWrongOne"
+      />
+      <label
+        htmlFor="errorGroup_thatWrongOne"
+      >
+        That wrong one
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      You did not choose wisely!
+    </span>
+  </fieldset>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/RadioGroup RadioGroup Types 1`] = `
+<form
+  id="formTwo"
+>
+  <fieldset
+    className="ce-radio-group"
+    disabled={false}
+    form="formTwo"
+    onChange={[Function]}
+  >
+    <legend>
+      Please make a choice:
+    </legend>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="choice_yes"
+        name="choice"
+        type="radio"
+        value="yes"
+      />
+      <label
+        htmlFor="choice_yes"
+      >
+        Yes
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="choice_no"
+        name="choice"
+        type="radio"
+        value="no"
+      />
+      <label
+        htmlFor="choice_no"
+      >
+        No
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+</form>
 `;
 
 exports[`Storyshots Components/Molecules/Form Controls/Select Disabled Select  1`] = `

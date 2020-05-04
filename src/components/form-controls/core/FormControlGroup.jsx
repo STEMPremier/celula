@@ -72,7 +72,7 @@ class FormControlGroup extends Component {
       >
         <legend>{label}</legend>
         {this.renderChildren()}
-        {errorMsg && <div className={errorClass}>{errorMsg}</div>}
+        <span className={errorClass}>{errorMsg}</span>
       </fieldset>
     );
   }
@@ -118,7 +118,9 @@ FormControlGroup.propTypes = {
   /**
    * An array of values used to pre-select children of the `<FormControlGroup />`.
    */
-  selectedValues: PropTypes.arrayOf(PropTypes.any),
+  selectedValues: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
+  ),
 };
 
 FormControlGroup.defaultProps = {
