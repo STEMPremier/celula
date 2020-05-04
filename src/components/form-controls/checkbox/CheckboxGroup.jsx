@@ -46,7 +46,7 @@ class CheckboxGroup extends Component {
       <FormControlGroup
         className={classes}
         disabled={disabled}
-        errorClass="ce-checkbox-group--error-text"
+        errorClass="ce-checkbox-group--error__text"
         errorMsg={errorMsg}
         formId={formId}
         handleChange={handleChange}
