@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Select /> render() render the RadioGroup component 1`] = `
+<div
+  className="ce-select"
+>
+  <div
+    className="ce-select--box"
+  >
+    <select
+      disabled={false}
+      form=""
+      id="Select Test Name"
+      name="Select Test Name"
+      onChange={[Function]}
+      onClick={[Function]}
+    >
+      <option>
+        Select Test Label
+      </option>
+      <option />
+      <option />
+    </select>
+    <div
+      className="ce-select--caret"
+    >
+      <SystemIcon
+        className="ce-select--down"
+        color="black"
+        name="down"
+      />
+    </div>
+  </div>
+  <div
+    className="ce-select--background-state"
+  />
+  <span
+    error=""
+  />
+</div>
+`;

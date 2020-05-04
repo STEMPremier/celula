@@ -1295,6 +1295,64 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Group Error Indi
 </div>
 `;
 
+exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup Form Control Group 1`] = `
+<form>
+  <fieldset
+    className=""
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      Test Group
+    </legend>
+    <div
+      className="ce-radio ce-radio--checked"
+    >
+      <div
+        className="ce-radio--button"
+      >
+        <input
+          checked={true}
+          disabled={false}
+          id="myGroup_radioOne"
+          name="myGroup"
+          type="radio"
+          value="radioOne"
+        />
+        <label
+          htmlFor="myGroup_radioOne"
+        >
+          Radio 1
+        </label>
+      </div>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <div
+        className="ce-radio--button"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          id="myGroup_radioTwo"
+          name="myGroup"
+          type="radio"
+          value="radioTwo"
+        />
+        <label
+          htmlFor="myGroup_radioTwo"
+        >
+          Radio 2
+        </label>
+      </div>
+    </div>
+    
+  </fieldset>
+</form>
+`;
+
 exports[`Storyshots Components/Molecules/Form Controls/RadioGroup Disabled Radio Group 1`] = `
 <form>
   <fieldset
@@ -1716,6 +1774,528 @@ exports[`Storyshots Components/Molecules/Form Controls/RadioGroup Radio Group 1`
     </div>
   </div>
 </fieldset>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Select Disabled Select  1`] = `
+<form>
+  <div
+    className="ce-select ce-select--disabled ce-select--show-arrow"
+  >
+    <div
+      className="ce-select--box"
+    >
+      <select
+        disabled={true}
+        form="formName3"
+        id="Disabled Select "
+        name="Disabled Select "
+        onChange={[Function]}
+        onClick={[Function]}
+      >
+        <option>
+          Select from the below choices
+        </option>
+        <option
+          value={1}
+        >
+          option 1
+        </option>
+        <option
+          value={2}
+        >
+          option 2
+        </option>
+      </select>
+      <div
+        className="ce-select--caret"
+      >
+        <span
+          className="ce-icon ce-icon__system"
+        >
+          <svg
+            className="ce-icon--grey"
+          >
+            <use
+              xlinkHref="#icons_system-down"
+            />
+          </svg>
+        </span>
+      </div>
+      <button
+        className="ce-select--outside-arrow"
+        onClick={[Function]}
+        type="submit"
+      >
+        <span
+          className="ce-icon ce-icon__system"
+        >
+          <svg
+            className="ce-icon--white"
+          >
+            <use
+              xlinkHref="#icons_system-navigate"
+            />
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div
+      className="ce-select--background-state"
+    />
+    
+    <span
+      error=""
+    />
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Select Enabled Select Using Label 1`] = `
+<form>
+  <div
+    className="ce-select ce-select--show-arrow"
+  >
+    <div
+      className="ce-select--box"
+    >
+      <select
+        disabled={false}
+        form="formName1"
+        id="Enabled Select Using Label"
+        name="Enabled Select Using Label"
+        onChange={[Function]}
+        onClick={[Function]}
+      >
+        <option>
+          This guidance text goes in the label
+        </option>
+        <option
+          value={1}
+        >
+          option 1
+        </option>
+        <option
+          value={2}
+        >
+          option 2
+        </option>
+      </select>
+      <div
+        className="ce-select--caret"
+      >
+        <span
+          className="ce-icon ce-icon__system"
+        >
+          <svg
+            className="ce-icon--black"
+          >
+            <use
+              xlinkHref="#icons_system-down"
+            />
+          </svg>
+        </span>
+      </div>
+      <button
+        className="ce-select--outside-arrow"
+        onClick={[Function]}
+        type="submit"
+      >
+        <span
+          className="ce-icon ce-icon__system"
+        >
+          <svg
+            className="ce-icon--white"
+          >
+            <use
+              xlinkHref="#icons_system-navigate"
+            />
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div
+      className="ce-select--background-state"
+    />
+    
+    <span
+      error=""
+    />
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Select Enabled Select Using a Default Value 1`] = `
+<form>
+  <div
+    className="ce-select ce-select--show-arrow"
+  >
+    <div
+      className="ce-select--box"
+    >
+      <select
+        disabled={false}
+        form="formName2"
+        id="Enabled Select Using a Default Value"
+        name="Enabled Select Using a Default Value"
+        onChange={[Function]}
+        onClick={[Function]}
+      >
+        <option
+          default={true}
+          hidden={true}
+          value={2}
+        >
+          option 2
+        </option>
+        <option
+          value={1}
+        >
+          option 1
+        </option>
+        <option
+          value={2}
+        >
+          option 2
+        </option>
+      </select>
+      <div
+        className="ce-select--caret"
+      >
+        <span
+          className="ce-icon ce-icon__system"
+        >
+          <svg
+            className="ce-icon--black"
+          >
+            <use
+              xlinkHref="#icons_system-down"
+            />
+          </svg>
+        </span>
+      </div>
+      <button
+        className="ce-select--outside-arrow"
+        onClick={[Function]}
+        type="submit"
+      >
+        <span
+          className="ce-icon ce-icon__system"
+        >
+          <svg
+            className="ce-icon--white"
+          >
+            <use
+              xlinkHref="#icons_system-navigate"
+            />
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div
+      className="ce-select--background-state"
+    />
+    
+    <span
+      error=""
+    />
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Select Select 1`] = `
+<form>
+  <div
+    className="ce-select ce-select--show-arrow"
+  >
+    <div
+      className="ce-select--box"
+    >
+      <select
+        disabled={false}
+        form=""
+        id="Default Name for Select"
+        name="Default Name for Select"
+        onChange={[Function]}
+        onClick={[Function]}
+      >
+        <option
+          default={true}
+          hidden={true}
+          value={2}
+        >
+          Option 2
+        </option>
+        <option
+          value={1}
+        >
+          Option 1
+        </option>
+        <option
+          value={2}
+        >
+          Option 2
+        </option>
+      </select>
+      <div
+        className="ce-select--caret"
+      >
+        <span
+          className="ce-icon ce-icon__system"
+        >
+          <svg
+            className="ce-icon--black"
+          >
+            <use
+              xlinkHref="#icons_system-down"
+            />
+          </svg>
+        </span>
+      </div>
+      <button
+        className="ce-select--outside-arrow"
+        onClick={[Function]}
+        type="submit"
+      >
+        <span
+          className="ce-icon ce-icon__system"
+        >
+          <svg
+            className="ce-icon--white"
+          >
+            <use
+              xlinkHref="#icons_system-navigate"
+            />
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div
+      className="ce-select--background-state"
+    />
+    
+    <span
+      error=""
+    />
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Select Select Error 1`] = `
+<form>
+  <div
+    className="ce-select ce-select--error"
+  >
+    <div
+      className="ce-select--box"
+    >
+      <select
+        disabled={false}
+        form="formName5"
+        id="Select Error no arrow"
+        name="Select Error no arrow"
+        onChange={[Function]}
+        onClick={[Function]}
+      >
+        <option>
+          Select from the below choices
+        </option>
+        <option
+          value={1}
+        >
+          option 1
+        </option>
+        <option
+          value={2}
+        >
+          option 2
+        </option>
+      </select>
+      <div
+        className="ce-select--caret"
+      >
+        <span
+          className="ce-icon ce-icon__system"
+        >
+          <svg
+            className="ce-icon--black"
+          >
+            <use
+              xlinkHref="#icons_system-down"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div
+      className="ce-select--background-state"
+    />
+    <div
+      className="ce-select--error-box-wrapper"
+    >
+      <div
+        className="ce-select--arrow"
+      />
+      <div
+        className="ce-select--error-box"
+      >
+        <div
+          className="ce-select--error-box-text"
+        >
+          Error Message
+        </div>
+      </div>
+    </div>
+    <span
+      error="Error Message"
+    />
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Select Select Error with right arrow 1`] = `
+<form>
+  <div
+    className="ce-select ce-select--error ce-select--show-arrow"
+  >
+    <div
+      className="ce-select--box"
+    >
+      <select
+        disabled={false}
+        form="formName6"
+        id="Select Error with right arrow"
+        name="Select Error with right arrow"
+        onChange={[Function]}
+        onClick={[Function]}
+      >
+        <option>
+          Select from the below choices
+        </option>
+        <option
+          value={1}
+        >
+          option 1
+        </option>
+        <option
+          value={2}
+        >
+          option 2
+        </option>
+      </select>
+      <div
+        className="ce-select--caret"
+      >
+        <span
+          className="ce-icon ce-icon__system"
+        >
+          <svg
+            className="ce-icon--black"
+          >
+            <use
+              xlinkHref="#icons_system-down"
+            />
+          </svg>
+        </span>
+      </div>
+      <button
+        className="ce-select--outside-arrow"
+        onClick={[Function]}
+        type="submit"
+      >
+        <span
+          className="ce-icon ce-icon__system"
+        >
+          <svg
+            className="ce-icon--white"
+          >
+            <use
+              xlinkHref="#icons_system-navigate"
+            />
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div
+      className="ce-select--background-state"
+    />
+    <div
+      className="ce-select--error-box-wrapper"
+    >
+      <div
+        className="ce-select--arrow"
+      />
+      <div
+        className="ce-select--error-box"
+      >
+        <div
+          className="ce-select--error-box-text"
+        >
+          Error Message
+        </div>
+      </div>
+    </div>
+    <span
+      error="Error Message"
+    />
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Select Select without the right arrow 1`] = `
+<form>
+  <div
+    className="ce-select"
+  >
+    <div
+      className="ce-select--box"
+    >
+      <select
+        disabled={false}
+        form="formName4"
+        id="Select Simple "
+        name="Select Simple "
+        onChange={[Function]}
+        onClick={[Function]}
+      >
+        <option>
+          Select from the below choices
+        </option>
+        <option
+          value={1}
+        >
+          option 1
+        </option>
+        <option
+          value={2}
+        >
+          option 2
+        </option>
+      </select>
+      <div
+        className="ce-select--caret"
+      >
+        <span
+          className="ce-icon ce-icon__system"
+        >
+          <svg
+            className="ce-icon--black"
+          >
+            <use
+              xlinkHref="#icons_system-down"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div
+      className="ce-select--background-state"
+    />
+    
+    <span
+      error=""
+    />
+  </div>
+</form>
 `;
 
 exports[`Storyshots Components/Molecules/Form Controls/SubmitButton All SubmitButtons 1`] = `

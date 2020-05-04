@@ -56,7 +56,7 @@ class Select extends React.Component {
       error,
       name,
       form,
-      // handleChange,
+      handleChange,
       label,
       options,
       showArrow,
@@ -65,9 +65,9 @@ class Select extends React.Component {
 
     const { showLabel, selectedValue } = this.state;
 
-    if (options.filter(x => x.value === selectedValue).length > 0) {
-      options.filter(x => x.value === selectedValue)[0].isSelected = true;
-    }
+    // if (options.filter(x => x.value === selectedValue).length > 0) {
+    //   options.filter(x => x.value === selectedValue)[0].isSelected = true;
+    // }
 
     // this.props.options.map(option => {
     //   const selected = (selectedValue === option.value) ? ' selected' : '';
@@ -108,6 +108,7 @@ class Select extends React.Component {
             form={form}
             id={id}
             disabled={disabled}
+            onClick={handleChange}
             onChange={this.handleSelectedValue}
           >
             {defaultObject.length ? (
@@ -193,18 +194,19 @@ Select.propTypes = {
   /**
    * A function that is called when changing the `<Select />`.
    */
-  // handleChange: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
   /**
    * The error message.
    */
   error: PropTypes.string,
   /**
-   * The options is the array of objects containing the name, value, and selected status of each select row.
+   * The options is the array of objects containing the name and value of each select row.
    */
-  // eslint-disable-next-line react/forbid-prop-types
-  options: PropTypes.array.isRequired,
-  // options: PropTypes.arrayof(PropTypes.oneOfType([PropTypes.object]))
-  // .isRequired,
+
+  // options: PropTypes.array.isRequired,
+  options: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  ).isRequired,
   /**
    * This function is accesible to the user for clickable events on the right arrow in the gradient
    */

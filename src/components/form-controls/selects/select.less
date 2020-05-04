@@ -111,6 +111,11 @@
   }
 
   &.ce-select--disabled {
+    .ce-select--box {
+      &:hover ~ .ce-select--background-state {
+        border: none;
+      }
+    }
     .ce-select--outside-arrow {
       pointer-events: none;
       background: @disabled-gray;
