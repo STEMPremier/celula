@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CheckboxGroup /> render() render the CheckboxGroup component 1`] = `
+<FormControlGroup
+  className="ce-checkbox-group"
+  disabled={false}
+  errorClass="ce-checkbox-group--error-text"
+  errorMsg=""
+  formId=""
+  handleChange={[Function]}
+  label="CheckboxGroup Test Label"
+  name="CheckboxGroup Test Name"
+  selectedValues={Array []}
+>
+  <Checkbox
+    checked={false}
+    className=""
+    disabled={false}
+    errorMsg=""
+    formId=""
+    handleChange={[Function]}
+    isA="checkbox"
+    label="Checkbox Test Label 1"
+    name=""
+    value="Checkbox Value Here 1"
+  />
+  <Checkbox
+    checked={false}
+    className=""
+    disabled={false}
+    errorMsg=""
+    formId=""
+    handleChange={[Function]}
+    isA="checkbox"
+    label="Checkbox Test Label 2"
+    name=""
+    value="Checkbox Value Here 2"
+  />
+</FormControlGroup>
+`;
