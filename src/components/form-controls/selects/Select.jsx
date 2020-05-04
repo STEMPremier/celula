@@ -1,5 +1,3 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -13,7 +11,7 @@ class Select extends React.Component {
     showLabel: false,
     // eslint-disable-next-line react/destructuring-assignment
     selectedValue: this.props.selectedValue ? this.props.selectedValue : null,
-    selectedOption: null,
+    // selectedOption: null,
     showArrow: false,
   };
 
@@ -41,11 +39,11 @@ class Select extends React.Component {
     this.setState(
       {
         selectedValue: event.target.value,
-        selectedOption: this.props.options.filter(
-          option =>
-            option.value === event.target.value &&
-            console.log('inside selecteOptoin', event.target.value),
-        ),
+        // selectedOption: this.props.options.filter(
+        //   option =>
+        //     option.value === event.target.value &&
+        //     console.log('inside selecteOptoin', event.target.value),
+        // ),
       },
       () => console.log('state after event', this.state),
     );
@@ -65,8 +63,7 @@ class Select extends React.Component {
       rightArrowClick,
     } = this.props;
 
-    // eslint-disable-next-line no-unused-vars
-    const { showLabel, selectedOption, selectedValue } = this.state;
+    const { showLabel, selectedValue } = this.state;
 
     if (options.filter(x => x.value === selectedValue).length > 0) {
       options.filter(x => x.value === selectedValue)[0].isSelected = true;
@@ -105,15 +102,13 @@ class Select extends React.Component {
     return (
       <div className={classes}>
         {showLabel && <label htmlFor={id}>{label}</label>}
-        {/* <div className="ce-select--wrapper"> */}
-        <div className="ce-select--box" tabIndex="0">
+        <div className="ce-select--box">
           <select
             name={name}
             form={form}
             id={id}
             disabled={disabled}
             onChange={this.handleSelectedValue}
-            // tabIndex="0"
           >
             {defaultObject.length ? (
               defaultObject.map(item => (
@@ -162,7 +157,6 @@ class Select extends React.Component {
         )}
         <span error={error} />
       </div>
-      // </div>
     );
   }
 }
