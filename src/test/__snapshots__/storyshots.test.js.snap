@@ -763,7 +763,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup All Checkbo
       
     </div>
     <span
-      className="ce-checkbox-group--error-text"
+      className="ce-checkbox-group--error__text"
     >
       
     </span>
@@ -854,7 +854,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       
     </div>
     <span
-      className="ce-checkbox-group--error-text"
+      className="ce-checkbox-group--error__text"
     >
       
     </span>
@@ -961,7 +961,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       
     </div>
     <span
-      className="ce-checkbox-group--error-text"
+      className="ce-checkbox-group--error__text"
     >
       
     </span>
@@ -1068,7 +1068,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       
     </div>
     <span
-      className="ce-checkbox-group--error-text"
+      className="ce-checkbox-group--error__text"
     >
       
     </span>
@@ -1175,7 +1175,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       
     </div>
     <span
-      className="ce-checkbox-group--error-text"
+      className="ce-checkbox-group--error__text"
     >
       Unable to set Vuejs as favorite framework.
     </span>
@@ -1289,7 +1289,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       
     </div>
     <span
-      className="ce-checkbox-group--error-text"
+      className="ce-checkbox-group--error__text"
     >
       
     </span>
@@ -1363,69 +1363,7 @@ exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup Form Con
 </form>
 `;
 
-<<<<<<< HEAD
-exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup Form Control Group 1`] = `
-<form>
-  <fieldset
-    className=""
-    disabled={false}
-    form=""
-    onChange={[Function]}
-  >
-    <legend>
-      Test Group
-    </legend>
-    <div
-      className="ce-radio ce-radio--checked"
-    >
-      <div
-        className="ce-radio--button"
-      >
-        <input
-          checked={true}
-          disabled={false}
-          id="myGroup_radioOne"
-          name="myGroup"
-          type="radio"
-          value="radioOne"
-        />
-        <label
-          htmlFor="myGroup_radioOne"
-        >
-          Radio 1
-        </label>
-      </div>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <div
-        className="ce-radio--button"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          id="myGroup_radioTwo"
-          name="myGroup"
-          type="radio"
-          value="radioTwo"
-        />
-        <label
-          htmlFor="myGroup_radioTwo"
-        >
-          Radio 2
-        </label>
-      </div>
-    </div>
-    
-  </fieldset>
-</form>
-`;
-
-exports[`Storyshots Components/Molecules/Form Controls/RadioGroup Disabled Radio Group 1`] = `
-=======
 exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup Form Control Group with Radios 1`] = `
->>>>>>> master
 <form>
   <fieldset
     className=""
@@ -1796,6 +1734,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Disabled Select  1
         name="Disabled Select "
         onChange={[Function]}
         onClick={[Function]}
+        value=""
       >
         <option>
           Select from the below choices
@@ -1870,6 +1809,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Enabled Select Usi
         name="Enabled Select Using Label"
         onChange={[Function]}
         onClick={[Function]}
+        value=""
       >
         <option>
           This guidance text goes in the label
@@ -1944,13 +1884,10 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Enabled Select Usi
         name="Enabled Select Using a Default Value"
         onChange={[Function]}
         onClick={[Function]}
+        value={2}
       >
-        <option
-          default={true}
-          hidden={true}
-          value={2}
-        >
-          option 2
+        <option>
+          Label is always required for accessbility
         </option>
         <option
           value={1}
@@ -2022,13 +1959,10 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select 1`] = `
         name="Default Name for Select"
         onChange={[Function]}
         onClick={[Function]}
+        value="2"
       >
-        <option
-          default={true}
-          hidden={true}
-          value={2}
-        >
-          Option 2
+        <option>
+          Default Fieldset Label
         </option>
         <option
           value={1}
@@ -2100,6 +2034,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select Error 1`] =
         name="Select Error no arrow"
         onChange={[Function]}
         onClick={[Function]}
+        value=""
       >
         <option>
           Select from the below choices
@@ -2172,6 +2107,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select Error with 
         name="Select Error with right arrow"
         onChange={[Function]}
         onClick={[Function]}
+        value=""
       >
         <option>
           Select from the below choices
@@ -2261,6 +2197,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select without the
         name="Select Simple "
         onChange={[Function]}
         onClick={[Function]}
+        value=""
       >
         <option>
           Select from the below choices
@@ -5908,6 +5845,36 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcon Colors 1`] 
     </span>
     <span>
       red
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system"
+    >
+      <svg
+        className="ce-icon--grey"
+      >
+        <use
+          xlinkHref="#icons_system-edit"
+        />
+      </svg>
+    </span>
+    <span>
+      grey
     </span>
   </div>
 </div>

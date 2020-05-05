@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Select /> render() render the RadioGroup component 1`] = `
+exports[`<Select /> render() render the Select component 1`] = `
 <div
   className="ce-select"
 >
@@ -14,8 +14,11 @@ exports[`<Select /> render() render the RadioGroup component 1`] = `
       name="Select Test Name"
       onChange={[Function]}
       onClick={[Function]}
+      value=""
     >
-      <option>
+      <option
+        key="Select Test Label"
+      >
         Select Test Label
       </option>
       <option />
