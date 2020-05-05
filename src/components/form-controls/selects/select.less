@@ -38,6 +38,10 @@
     outline: none;
   }
 
+  .ce-select--outside-arrow:focus {
+    outline: none;
+  }
+
   // removes the arrow from the IE
   select::ms-expand {
     display: none;
@@ -59,7 +63,6 @@
     }
     &:focus ~ .ce-select--background-state {
       border: 0.3rem solid @focus-blue;
-      // nest a removal of the select focus state here
     }
     &:active ~ .ce-select--background-state {
       border: 0.3rem solid @active-blue;

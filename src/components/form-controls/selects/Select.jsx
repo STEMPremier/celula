@@ -13,25 +13,10 @@ class Select extends React.Component {
     showLabel: false,
     // eslint-disable-next-line react/destructuring-assignment
     selectedValue: this.props.selectedValue,
-    // showArrow: false,
   };
 
-  // componentDidMount() {
-  //   // eslint-disable-next-line react/destructuring-assignment
-  //   if (this.props.showArrow) {
-  //     this.setState({
-  //       showArrow: true,
-  //     });
-  //   }
-  // }
-
   handleSelectedValue = event => {
-    this.setState(
-      {
-        selectedValue: event.target.value,
-      },
-      () => console.log('cb'),
-    );
+    this.setState({ selectedValue: event.target.value });
   };
 
   render() {
