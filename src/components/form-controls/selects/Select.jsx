@@ -51,6 +51,7 @@ class Select extends React.Component {
         <div className="ce-select--box">
           <select
             name={name}
+            label={label}
             form={form}
             id={id}
             disabled={disabled}
