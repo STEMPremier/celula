@@ -142,7 +142,7 @@ Select.propTypes = {
    * The options is the array of objects containing the name and value of each select row.
    */
   options: PropTypes.arrayOf(
-    PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    PropTypes.oneOfType([PropTypes.object, PropTypes.string, PropTypes.bool]),
   ).isRequired,
   /**
    * This function is accesible to the user for clickable events on the right arrow in the gradient
