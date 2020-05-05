@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable array-callback-return */
+/* eslint-disable react/no-unused-state */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -14,43 +13,24 @@ class Select extends React.Component {
     showLabel: false,
     // eslint-disable-next-line react/destructuring-assignment
     selectedValue: this.props.selectedValue,
-    // selectedOption: '',
-    showArrow: false,
+    // showArrow: false,
   };
 
-  componentDidMount() {
-    // eslint-disable-next-line react/destructuring-assignment
-    if (this.props.showArrow) {
-      this.setState({
-        showArrow: true,
-      });
-    }
-    // eslint-disable-next-line react/destructuring-assignment
-    // if (this.props.selectedValue) {
-    //   // eslint-disable-next-line react/destructuring-assignment
-    //   const selectedObject = this.props.options.filter(
-    //     // eslint-disable-next-line react/destructuring-assignment
-    //     option => option.value === this.props.selectedValue,
-    //   );
-    //   console.log('selectedObject in componentDidMount', selectedObject);
-    //   this.setState({
-    //     selectedOption: selectedObject,
-    //   });
-    // }
-  }
+  // componentDidMount() {
+  //   // eslint-disable-next-line react/destructuring-assignment
+  //   if (this.props.showArrow) {
+  //     this.setState({
+  //       showArrow: true,
+  //     });
+  //   }
+  // }
 
   handleSelectedValue = event => {
     this.setState(
       {
         selectedValue: event.target.value,
-        // eslint-disable-next-line react/destructuring-assignment
-        selectedOption: this.props.options.filter(
-          option =>
-            option.value === event.target.value &&
-            console.log('inside selecteOptoin', event.target.value),
-        ),
       },
-      () => console.log('state after event', this.state),
+      () => console.log('cb'),
     );
   };
 
@@ -68,41 +48,7 @@ class Select extends React.Component {
       rightArrowClick,
     } = this.props;
 
-    const { showLabel, selectedValue, selectedOption } = this.state;
-
-    // if (options.filter(x => x.value === selectedValue).length > 0) {
-    //   options.filter(x => x.value === selectedValue)[0].isSelected = true;
-    // }
-
-    // assign it the selected value to the html select
-    // options.map(option => {
-    //   const selected = selectedValue === option.value ? 'selected' : '';
-    //   console.log('selected', selected);
-    // });
-
-    // options.map(option => {
-    //   <option value={option.value} selected={selectedValue === option.value}>
-    //     {option.label}
-    //   </option>;
-    // });
-
-    // const defaultObject = options.filter(
-    //   option => option.value === selectedValue,
-    // );
-
-    // if (defaultObject.length) {
-    //   options.filter(item => defaultObject.value === item.value);
-    // }
-
-    // (
-    //   defaultObject.map(item => (
-    //     <option key={item.value} value={item.value} default>
-    //       {item.name}
-    //     </option>
-    //   ))
-    // )
-    // console.log('defaultObject', defaultObject);
-    // console.log('options after filter', options);
+    const { showLabel, selectedValue } = this.state;
 
     const id = `${name}`;
 
@@ -186,7 +132,7 @@ Select.propTypes = {
    */
   showArrow: PropTypes.bool,
   /**
-   * The label is required for accessibilty eventhough it will not show if you give it a default value instead.
+   * The label is required for accessibilty even if you assign a default value.
    */
   label: PropTypes.string.isRequired,
   /**
@@ -194,7 +140,7 @@ Select.propTypes = {
    */
   selectedValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /**
-   * The form is what the select belongs to.  NOT SURE EXACTLY.  DOUBLE CHECK WITH IAN.
+   * The form the select belongs to.
    */
   form: PropTypes.string,
   /**
@@ -206,14 +152,12 @@ Select.propTypes = {
    */
   handleChange: PropTypes.func.isRequired,
   /**
-   * The error message.
+   * The error message in the error box.
    */
   error: PropTypes.string,
   /**
    * The options is the array of objects containing the name and value of each select row.
    */
-
-  // options: PropTypes.array.isRequired,
   options: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   ).isRequired,
