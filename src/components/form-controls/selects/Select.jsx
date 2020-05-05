@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable array-callback-return */
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -10,8 +13,8 @@ class Select extends React.Component {
   state = {
     showLabel: false,
     // eslint-disable-next-line react/destructuring-assignment
-    selectedValue: this.props.selectedValue ? this.props.selectedValue : null,
-    // selectedOption: null,
+    selectedValue: this.props.selectedValue,
+    // selectedOption: '',
     showArrow: false,
   };
 
@@ -22,28 +25,30 @@ class Select extends React.Component {
         showArrow: true,
       });
     }
+    // eslint-disable-next-line react/destructuring-assignment
+    // if (this.props.selectedValue) {
+    //   // eslint-disable-next-line react/destructuring-assignment
+    //   const selectedObject = this.props.options.filter(
+    //     // eslint-disable-next-line react/destructuring-assignment
+    //     option => option.value === this.props.selectedValue,
+    //   );
+    //   console.log('selectedObject in componentDidMount', selectedObject);
+    //   this.setState({
+    //     selectedOption: selectedObject,
+    //   });
+    // }
   }
-  // componentDidMount() {
-  //   if (this.props.selectedValue) {
-  //     const selectedObject = this.props.options.filter(
-  //       option => option.value === this.props.selectedValue,
-  //     );
-  //     console.log('selectedObject in componentDidMount', selectedObject);
-  //     this.setState({
-  //       selectedOption: selectedObject,
-  //     });
-  //   }
-  // }
 
   handleSelectedValue = event => {
     this.setState(
       {
         selectedValue: event.target.value,
-        // selectedOption: this.props.options.filter(
-        //   option =>
-        //     option.value === event.target.value &&
-        //     console.log('inside selecteOptoin', event.target.value),
-        // ),
+        // eslint-disable-next-line react/destructuring-assignment
+        selectedOption: this.props.options.filter(
+          option =>
+            option.value === event.target.value &&
+            console.log('inside selecteOptoin', event.target.value),
+        ),
       },
       () => console.log('state after event', this.state),
     );
@@ -63,29 +68,41 @@ class Select extends React.Component {
       rightArrowClick,
     } = this.props;
 
-    const { showLabel, selectedValue } = this.state;
+    const { showLabel, selectedValue, selectedOption } = this.state;
 
     // if (options.filter(x => x.value === selectedValue).length > 0) {
     //   options.filter(x => x.value === selectedValue)[0].isSelected = true;
     // }
 
-    // this.props.options.map(option => {
-    //   const selected = (selectedValue === option.value) ? ' selected' : '';
-    //   options.push(
-    //     <option value={option.value}{selected}>{option.label}</option>
-    //   )
-    // })
+    // assign it the selected value to the html select
+    // options.map(option => {
+    //   const selected = selectedValue === option.value ? 'selected' : '';
+    //   console.log('selected', selected);
+    // });
 
-    // options.filter(x=> )
-    const defaultObject = options.filter(
-      option => option.value === selectedValue,
-    );
+    // options.map(option => {
+    //   <option value={option.value} selected={selectedValue === option.value}>
+    //     {option.label}
+    //   </option>;
+    // });
 
-    if (defaultObject.length) {
-      options.filter(item => defaultObject.value === item.value);
-    }
-    console.log('defaultObject', defaultObject);
-    console.log('options after filter', options);
+    // const defaultObject = options.filter(
+    //   option => option.value === selectedValue,
+    // );
+
+    // if (defaultObject.length) {
+    //   options.filter(item => defaultObject.value === item.value);
+    // }
+
+    // (
+    //   defaultObject.map(item => (
+    //     <option key={item.value} value={item.value} default>
+    //       {item.name}
+    //     </option>
+    //   ))
+    // )
+    // console.log('defaultObject', defaultObject);
+    // console.log('options after filter', options);
 
     const id = `${name}`;
 
@@ -109,17 +126,10 @@ class Select extends React.Component {
             id={id}
             disabled={disabled}
             onClick={handleChange}
+            value={selectedValue}
             onChange={this.handleSelectedValue}
           >
-            {defaultObject.length ? (
-              defaultObject.map(item => (
-                <option key={item.value} value={item.value} hidden default>
-                  {item.name}
-                </option>
-              ))
-            ) : (
-              <option>{label}</option>
-            )}
+            <option key={label}>{label}</option>
             {options.map(item => (
               <option key={item.value} value={item.value}>
                 {item.name}
