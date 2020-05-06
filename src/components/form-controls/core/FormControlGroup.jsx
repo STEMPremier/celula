@@ -110,7 +110,7 @@ FormControlGroup.propTypes = {
   /**
    * The `<FormControlGroup />` legend.
    */
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   /**
    * The name given to all the children of the `<FormControlGroup />`.
    */
@@ -130,6 +130,7 @@ FormControlGroup.defaultProps = {
   errorClass: '',
   formId: '',
   handleChange: () => {},
+  label: '',
   selectedValues: [],
 };
 
