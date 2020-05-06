@@ -75,4 +75,14 @@ Input.propTypes = {
   label: PropTypes.string,
   required,
   size: PropTypes.string,
+  toolTip: PropTypes.string,
+  // validators:
+  value: PropTypes.any.required,
+};
+
+Input.defaultProps = {
+  className: '',
+  disabled: false,
+  error: '',
+  htmlType: 'text',
 };
