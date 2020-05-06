@@ -66,13 +66,13 @@ class Select extends React.Component {
               </option>
             ))}
           </select>
-          <div className="ce-select--caret">
-            <SystemIcon
+          {/* <div className="ce-select--caret"> */}
+          {/* <SystemIcon
               name="down"
               color={disabled ? 'grey' : 'black'}
               className="ce-select--down"
-            />
-          </div>
+            /> */}
+          {/* </div> */}
           {showArrow && (
             <button
               className="ce-select--outside-arrow"

@@ -14,6 +14,15 @@
     box-sizing: border-box;
     background-color: @unchecked-background;
     border: none;
+
+    // caret file brought into select as background-image and styled here
+    background-image: url('./down-arrow.png');
+    background-position: calc(100% - 2rem) calc(1em + 1.1rem),
+      calc(100% - 1.5rem) calc(1em + 0.2rem), calc(100% - 2.5rem) 0.5em;
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+
+    // state changes on select affecting background-state div
     &:hover ~ .ce-select--background-state {
       border: 0.3rem solid @hover-blue;
     }
@@ -145,7 +154,7 @@
       color: @error-box-background;
       .ce-select--outside-arrow {
         background: @error-box-background;
-        border: 1px solid @error-box-background;
+        border: 0.1rem solid @error-box-background;
       }
     }
   }
