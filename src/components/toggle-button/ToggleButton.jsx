@@ -5,7 +5,7 @@ import cx from 'classnames';
 import './toggle-button.less';
 
 /**
- * I am a `<ToggleButtonGroup />` description.
+ * I am a `<ToggleButton />` description.
  */
 const ToggleButton = props => {
   const { checked, className, disabled, label, name, value } = props;
@@ -29,16 +29,16 @@ const ToggleButton = props => {
 
 ToggleButton.propTypes = {
   /**
-   * Select the `<Radio />`.
+   * Select the `<ToggleButton />`.
    * @ignore
    */
   checked: PropTypes.bool,
   /**
-   * A class name added to the `<RadioGroup />`.
+   * A class name added to the `<ToggleButton />`.
    */
   className: PropTypes.string,
   /**
-   * Make the `<Radio />` inactive.
+   * Make the `<ToggleButton />` inactive.
    * @ignore
    */
   disabled: PropTypes.bool,
@@ -48,16 +48,16 @@ ToggleButton.propTypes = {
    */
   isA: PropTypes.string, // eslint-disable-line react/no-unused-prop-types
   /**
-   * The `<Radio />` label.
+   * The `<ToggleButton />` label.
    */
   label: PropTypes.string.isRequired,
   /**
-   * The name of the `<RadioGroup />` this `<Radio />` belongs to. This is created and provided by the `<RadioGroup .>`
+   * The name of the `<ToggleButtonGroup />` this `<ToggleButton />` belongs to. This is created and provided by the `<RadioGroup .>`
    * @ignore
    */
   name: PropTypes.string,
   /**
-   * The value of the `<Radio />`.
+   * The value of the `<ToggleButton />`.
    */
   value: PropTypes.oneOfType([
     PropTypes.string,

@@ -44,31 +44,31 @@ const ToggleButtonGroup = props => {
 
 ToggleButtonGroup.propTypes = {
   /**
-   * The `<Radio />` components you want the `<RadioGroup />` to group together.
+   * The `<ToggleButton />` components you want the `<ToggleButtonGroup />` to group together.
    */
   children: PropTypes.node.isRequired,
   /**
-   * A class name, or string of class names, to add to the `<RadioGroup />`.
+   * A class name, or string of class names, to add to the `<ToggleButtonGroup />`.
    */
   className: PropTypes.string,
   /**
-   * Disables the `<RadioGroup />` and all of its children.
+   * Disables the `<ToggleButtonGroup />` and all of its children.
    */
   disabled: PropTypes.bool,
   /**
-   * The id of the form the `<RadioGroup />` belongs to.
+   * The id of the form the `<ToggleButtonGroup />` belongs to.
    */
   formId: PropTypes.string,
   /**
-   * A function to trigger when the state of the `<RadioGroup />` changes.
+   * A function to trigger when the state of the `<ToggleButtonGroup />` changes.
    */
   handleChange: PropTypes.func,
   /**
-   * The name given to all the children of the `<RadioGroup />`.
+   * The name given to all the children of the `<ToggleButtonGroup />`.
    */
   name: PropTypes.string.isRequired,
   /**
-   * The value used to pre-select a child of the `<RadioGroup />`.
+   * The value used to pre-select a child of the `<ToggleButtonGroup />`.
    */
   selectedValue: PropTypes.oneOfType([
     PropTypes.string,
