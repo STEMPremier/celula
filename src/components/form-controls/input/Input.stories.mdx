@@ -12,14 +12,23 @@ import Input from '.';
 
 <Meta component={Input} title="Components/Molecules/Form Controls/Input" />
 
-#Inputs
-
+# Inputs
 <Description of={Input} />
 <Props of={Input} />
-<Story name="All Inputs" parameters={{docs: {disable: true}}}>
+
+<Story name="All Inputs" parameters={{ docs: { disable: true } }}>
   <form id="formOne">
     <Input
-  
-    >
-    </form>
-  </Story>
+      className={text('className', '')}
+      disabled={boolean('disabled', false)}
+      error={text('error', '')}
+      icon={text('icon', '')}
+      htmlType={text('id', '')}
+      label={text('label', 'Label')}
+      size={text('text', '')}
+      toolTip={text('toolTip', '')}
+      value={text('value', 'value')}
+      type={text('type', '')}
+    />
+  </form>
+</Story>
