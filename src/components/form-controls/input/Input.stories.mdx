@@ -1,0 +1,25 @@
+import {
+  Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { boolean, select, text } from '@storybook/addon-knobs';
+
+import Input from '.';
+
+<Meta component={Input} title="Components/Molecules/Form Controls/Input" />
+
+#Inputs
+
+<Description of={Input} />
+<Props of={Input} />
+<Story name="All Inputs" parameters={{docs: {disable: true}}}>
+  <form id="formOne">
+    <Input
+  
+    >
+    </form>
+  </Story>

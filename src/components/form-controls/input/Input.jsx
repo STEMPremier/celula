@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -22,9 +24,9 @@ const TYPES = [
 
 const ICON = ['get icons to plus in here?????'];
 
-const SIZE = ['small', 'large', 'jumbo'];
+const SIZES = ['small', 'large', 'jumbo'];
 
-class Input extends React.Component {
+class Input extends Component {
   state = {
     value: '',
   };
@@ -43,10 +45,22 @@ class Input extends React.Component {
       icon,
       label,
       size,
-      tooltip,
-      validators,
+      toolTip,
+      type,
+      // validators,
       value,
     } = this.props;
+
+    const classes = cx(
+      'ce-input',
+      {
+        [`ce-input--${type}`]: TYPES.includes(type.toString().toLowerCase()),
+        [`ce-input--${size}`]: SIZES.includes(size.toString().toLowerCase()),
+        [`ce-input--${icon}`]: ICON.includes(icon.toString().toLowerCase()),
+        'ce-input--disabled': disabled,
+      },
+      className,
+    );
 
     return (
       <div>
@@ -57,10 +71,12 @@ class Input extends React.Component {
           type={htmlType}
           value={value}
           toolTip={toolTip}
+          size={size}
           onChange={this.handleChange}
           icon={icon}
           disabled={disabled}
         />
+        <span error={error} />
       </div>
     );
   }
@@ -72,12 +88,16 @@ Input.propTypes = {
   error: PropTypes.string,
   htmlType: PropTypes.string,
   icon: PropTypes.string,
-  label: PropTypes.string,
-  required,
+  label: PropTypes.string.isRequired,
   size: PropTypes.string,
   toolTip: PropTypes.string,
   // validators:
-  value: PropTypes.any.required,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.bool,
+  ]).isRequired,
+  type: PropTypes.oneOf([...TYPES, 'default']),
 };
 
 Input.defaultProps = {
@@ -85,4 +105,10 @@ Input.defaultProps = {
   disabled: false,
   error: '',
   htmlType: 'text',
+  icon: null,
+  size: 'small',
+  toolTip: null,
+  type: 'text',
 };
+
+export default Input;
