@@ -1,11 +1,14 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/destructuring-assignment */
-/* eslint-disable jsx-a11y/label-has-associated-control */
+
 /* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import './input.less';
+
+import SystemIcon from '../../icon/SystemIcon';
 
 const TYPES = [
   'color',
@@ -49,6 +52,9 @@ class Input extends Component {
       size,
       toolTip,
       type,
+      name,
+      rightArrowClick,
+      showArrow,
       // validators,
       // value,
     } = this.props;
@@ -62,24 +68,52 @@ class Input extends Component {
         [`ce-input--${size}`]: SIZES.includes(size.toString().toLowerCase()),
         [`ce-input--${icon}`]: ICON.includes(icon.toString().toLowerCase()),
         'ce-input--disabled': disabled,
+        'ce-input--error': error,
+        'ce-input--show-arrow': showArrow,
       },
       className,
     );
 
     return (
-      <div>
-        <label label={label} />
+      <div className={classes}>
+        <label className="ce-input--label" htmlFor={name}>
+          {label}
+        </label>
+        <div className="ce-input--box">
+          <input
+            name={name}
+            type={htmlType}
+            value={value}
+            toolTip={toolTip}
+            size={size}
+            onChange={this.handleChange}
+            icon={icon}
+            disabled={disabled}
+          />
+          {showArrow && (
+            <button
+              className="ce-select--outside-arrow"
+              onClick={rightArrowClick}
+              type="submit"
+            >
+              <SystemIcon
+                name="navigate"
+                className="ce-select--arrow"
+                color="white"
+              />
+            </button>
+          )}
+        </div>
+        <div className="ce-input--background-state" />
+        {error && (
+          <div className="ce-input--error-box-wrapper">
+            <div className="ce-input--arrow" />
+            <div className="ce-input-error-box">
+              <div className="ce-input--error-box-text">{error}</div>
+            </div>
+          </div>
+        )}
 
-        <input
-          className={classes}
-          type={htmlType}
-          value={value}
-          toolTip={toolTip}
-          size={size}
-          onChange={this.handleChange}
-          icon={icon}
-          disabled={disabled}
-        />
         <span error={error} />
       </div>
     );
@@ -102,6 +136,15 @@ Input.propTypes = {
     PropTypes.bool,
   ]).isRequired,
   type: PropTypes.oneOf([...TYPES, 'default']),
+  name: PropTypes.string.isRequired,
+  /**
+   * This function is accesible to the user for clickable events on the right arrow in the gradient
+   */
+  rightArrowClick: PropTypes.func,
+  /**
+   * The input will appear with the right arrow
+   */
+  showArrow: PropTypes.bool,
 };
 
 Input.defaultProps = {
@@ -113,6 +156,8 @@ Input.defaultProps = {
   size: 'small',
   toolTip: null,
   type: 'text',
+  showArrow: false,
+  rightArrowClick: () => {},
 };
 
 export default Input;

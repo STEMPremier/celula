@@ -1,0 +1,177 @@
+@import '../../../styles/celula';
+
+.ce-input {
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: left;
+  background-color: @unchecked-background;
+  // border: none;
+
+  &:hover ~ .ce-input--background-state {
+    border: 0.3rem solid @hover-blue;
+  }
+  &:focus ~ .ce-input--background-state {
+    border: 0.3rem solid @focus-blue;
+  }
+  &:active ~ .ce-input--background-state {
+    border: 0.3rem solid @active-blue;
+  }
+
+  label {
+    // appearance: none;
+    // -webkit-appearance: none;
+    order: 0;
+    height: 22px;
+    font-size: 16px;
+    // color: green;
+  }
+  input[type='text'] {
+    // appearance: none;
+    // -webkit-appearance: none;
+
+    order: 1;
+    z-index: 2;
+    height: 60px;
+    width: 380px;
+    padding-left: 19px;
+    border-radius: 5px;
+    border: 0.1rem solid @unchecked-gray;
+    // color: blue;
+    background-color: green;
+    // state changes on input affecting background-state div
+    &:hover ~ .ce-input--background-state {
+      border: 0.3rem solid @hover-blue;
+    }
+    &:focus ~ .ce-input--background-state {
+      border: 0.3rem solid @focus-blue;
+    }
+    &:active ~ .ce-input--background-state {
+      border: 0.3rem solid @active-blue;
+    }
+  }
+
+  .ce-input--box {
+    background-color: purple;
+    margin: 1rem 0 0 1rem;
+    border-radius: 0.5rem;
+    width: 36rem;
+    height: 6rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border: 0.1rem solid @unchecked-gray;
+
+    &:hover ~ .ce-input--background-state {
+      border: 0.3rem solid @hover-blue;
+    }
+    &:focus ~ .ce-input--background-state {
+      border: 0.3rem solid @focus-blue;
+    }
+    &:active ~ .ce-input--background-state {
+      border: 0.3rem solid @active-blue;
+    }
+  }
+
+  .ce-input--box:active ~ .ce-input--background-state {
+    border: 0.3rem solid @active-blue;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  .ce-input--background-state:focus {
+    outline: none;
+  }
+
+  .ce-input--box:focus {
+    outline: none;
+  }
+
+  .ce-input--outside-arrow:focus {
+    outline: none;
+  }
+
+  // state changes - set up default sizing for hidden div appearing on hover, focus, and active
+  .ce-input--background-state {
+    position: absolute;
+    z-index: 0;
+    top: 31px;
+    left: 8px;
+    border-radius: 0.8rem;
+    width: 360px;
+    height: 63px;
+    background-color: yellow;
+    border: 3px solid pink;
+    margin-top: 10px;
+    margin-left: 10px;
+    // background-color: green;
+  }
+
+  &.ce-input--disabled {
+    .ce-input--box {
+      &:hover ~ .ce-input--background-state {
+        border: none;
+      }
+    }
+    .ce-input--outside-arrow {
+      pointer-events: none;
+      background: @checked-disabled-gray;
+    }
+  }
+
+  &.ce-input--error {
+    .ce-input--background-state {
+      border: 0.3rem solid @error-box-background;
+    }
+    .ce-input--box {
+      &:hover ~ .ce-input--background-state {
+        border: 0.3rem solid @hover-red;
+      }
+      &:focus ~ .ce-input--background-state {
+        border: 0.3rem solid @focus-red;
+      }
+      &:active ~ .ce-input--background-state {
+        border: 0.3rem solid @active-red;
+      }
+      input {
+        color: @error-box-background;
+      }
+      color: @error-box-background;
+      .ce-input--outside-arrow {
+        background: @error-box-background;
+        border: 0.1rem solid @error-box-background;
+      }
+    }
+  }
+
+  .ce-input--error-box-wrapper {
+    width: 36.6rem;
+    margin-left: 1rem;
+    .ce-input--arrow {
+      width: 0;
+      height: 5;
+      border-left: 0.5rem solid transparent;
+      border-right: 0.5rem solid transparent;
+      position: center;
+      border-bottom: 0.5rem solid @error-box-background;
+      margin-left: 48%;
+      margin-top: 0.5rem;
+    }
+    .ce-input--error-box {
+      height: 5.6rem;
+      width: 99%;
+      background-color: @error-box-background;
+      border-radius: 0.5rem;
+      .ce-input--error-box-text {
+        color: white;
+        text-align: center;
+        padding-top: 2rem;
+      }
+    }
+  }
+}
