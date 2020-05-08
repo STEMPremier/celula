@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
@@ -20,6 +21,7 @@ const TYPES = [
   'time',
   'url',
   'week',
+  'text',
 ];
 
 const ICON = ['get icons to plus in here?????'];
@@ -28,12 +30,12 @@ const SIZES = ['small', 'large', 'jumbo'];
 
 class Input extends Component {
   state = {
-    value: '',
+    value: this.props.value,
   };
 
   handleChange = event =>
     this.setState({
-      value: [event.target.value],
+      value: event.target.value,
     });
 
   render() {
@@ -48,8 +50,10 @@ class Input extends Component {
       toolTip,
       type,
       // validators,
-      value,
+      // value,
     } = this.props;
+
+    const { value } = this.state;
 
     const classes = cx(
       'ce-input',
@@ -105,7 +109,7 @@ Input.defaultProps = {
   disabled: false,
   error: '',
   htmlType: 'text',
-  icon: null,
+  icon: '',
   size: 'small',
   toolTip: null,
   type: 'text',
