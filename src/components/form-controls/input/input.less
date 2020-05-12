@@ -143,6 +143,12 @@
   }
 
   &.ce-input--disabled {
+    input {
+      color: @checked-disabled-gray;
+    }
+    label {
+      color: @checked-disabled-gray;
+    }
     .ce-input--box {
       &:hover ~ .ce-input--background-state {
         border: none;
