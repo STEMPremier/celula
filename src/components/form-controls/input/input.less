@@ -26,6 +26,7 @@
     order: 0;
     height: 22px;
     font-size: 16px;
+    margin-left: 10px;
     // color: green;
   }
   input[type='text'] {
@@ -73,6 +74,34 @@
     }
     &:active ~ .ce-input--background-state {
       border: 0.3rem solid @active-blue;
+    }
+
+    // showArrow
+    .ce-input--show-arrow {
+      width: 38rem;
+    }
+
+    .ce-input--outside-arrow {
+      order: 2;
+      width: 7.4rem;
+      height: 6.25rem;
+      font-size: 5.5rem;
+      margin-left: 0.27rem;
+      margin-top: -0.16rem;
+      margin-right: -0.1rem;
+      border-radius: 0 0.5rem 0.5rem 0;
+      background: @gradient-cool;
+
+      svg {
+        margin: auto;
+        width: 50%;
+        padding: 1.4rem;
+      }
+      .ce-input--arrow {
+        margin: auto;
+        width: 50%;
+        padding: 1rem;
+      }
     }
   }
 

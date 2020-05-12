@@ -92,13 +92,13 @@ class Input extends Component {
           />
           {showArrow && (
             <button
-              className="ce-select--outside-arrow"
+              className="ce-input--outside-arrow"
               onClick={rightArrowClick}
               type="submit"
             >
               <SystemIcon
                 name="navigate"
-                className="ce-select--arrow"
+                className="ce-input--arrow"
                 color="white"
               />
             </button>
