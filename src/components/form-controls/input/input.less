@@ -2,12 +2,12 @@
 
 .ce-input {
   padding: 10px;
-
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: left;
-  background-color: @unchecked-background;
+
+  // background-color: @unchecked-background;
   // border: none;
 
   &:hover ~ .ce-input--background-state {
@@ -31,7 +31,7 @@
   input[type='text'] {
     // appearance: none;
     // -webkit-appearance: none;
-
+    // outline: none;
     order: 1;
     z-index: 2;
     height: 60px;
@@ -39,8 +39,8 @@
     padding-left: 19px;
     border-radius: 5px;
     border: 0.1rem solid @unchecked-gray;
-    // color: blue;
-    background-color: green;
+    // background-color: green;
+
     // state changes on input affecting background-state div
     &:hover ~ .ce-input--background-state {
       border: 0.3rem solid @hover-blue;
@@ -54,8 +54,8 @@
   }
 
   .ce-input--box {
-    background-color: purple;
-    margin: 1rem 0 0 1rem;
+    // background-color: purple;
+    margin: 0rem 0 0 1rem;
     border-radius: 0.5rem;
     width: 36rem;
     height: 6rem;
@@ -63,7 +63,7 @@
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: nowrap;
-    border: 0.1rem solid @unchecked-gray;
+    // border: 0.1rem solid purple;
 
     &:hover ~ .ce-input--background-state {
       border: 0.3rem solid @hover-blue;
@@ -100,13 +100,13 @@
   .ce-input--background-state {
     position: absolute;
     z-index: 0;
-    top: 31px;
+    top: 20px;
     left: 8px;
     border-radius: 0.8rem;
-    width: 360px;
+    width: 359px;
     height: 63px;
-    background-color: yellow;
-    border: 3px solid pink;
+    // background-color: yellow;
+    // border: 3px solid pink;
     margin-top: 10px;
     margin-left: 10px;
     // background-color: green;
