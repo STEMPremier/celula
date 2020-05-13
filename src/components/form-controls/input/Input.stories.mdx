@@ -83,7 +83,16 @@ import Input from '.';
     <Input 
       label="Text input label (optional)"
       value="Error"
+      error="error message"
+      error
     />
+    <Input 
+      label="Text input label (optional)"
+      value="Error"
+      error="error message"
+      error
+      showArrow
+    /> 
    </form>
 </Story>
 </Preview>
@@ -96,6 +105,19 @@ import Input from '.';
       label="Text input label (optional)"
       value="showArrow"
       showArrow
+    />
+   </form>
+</Story>
+</Preview>
+
+
+<Preview>
+<Story name="Input Date Range">
+  <form id="formSix">
+     <Input 
+      label="When did you start and end?"
+      value=""
+      type="datetime-local"
     />
    </form>
 </Story>

@@ -46,7 +46,6 @@ class Input extends Component {
       className,
       disabled,
       error,
-      htmlType,
       icon,
       label,
       size,
@@ -82,7 +81,7 @@ class Input extends Component {
         <div className="ce-input--box">
           <input
             name={name}
-            type={htmlType}
+            type={type}
             value={value}
             toolTip={toolTip}
             size={size}
@@ -103,18 +102,19 @@ class Input extends Component {
               />
             </button>
           )}
+          <div className="ce-input--background-state" />
         </div>
-        <div className="ce-input--background-state" />
+
         {error && (
           <div className="ce-input--error-box-wrapper">
             <div className="ce-input--arrow" />
-            <div className="ce-input-error-box">
-              <div className="ce-input--error-box-text">{error}</div>
+            <div className="ce-input--error-box">
+              <span className="ce-input--error-box-text" error={error}>
+                {error}
+              </span>
             </div>
           </div>
         )}
-
-        <span error={error} />
       </div>
     );
   }
@@ -124,7 +124,6 @@ Input.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   error: PropTypes.string,
-  htmlType: PropTypes.string,
   icon: PropTypes.string,
   label: PropTypes.string.isRequired,
   size: PropTypes.string,
@@ -151,7 +150,6 @@ Input.defaultProps = {
   className: '',
   disabled: false,
   error: '',
-  htmlType: 'text',
   icon: '',
   size: 'small',
   toolTip: null,
