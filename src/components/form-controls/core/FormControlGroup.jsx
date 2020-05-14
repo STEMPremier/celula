@@ -47,13 +47,14 @@ class FormControlGroup extends Component {
   };
 
   renderChildren = () => {
-    const { children, name } = this.props;
+    const { childProps, children, name } = this.props;
     const { selectedValues } = this.state;
 
     return React.Children.map(children, child => {
       const props = {
         checked: selectedValues.includes(child.props.value),
         name,
+        ...childProps,
       };
 
       return React.cloneElement(child, { ...props });
@@ -79,6 +80,10 @@ class FormControlGroup extends Component {
 }
 
 FormControlGroup.propTypes = {
+  /**
+   * Props psees to all the children of the `<FormControlGroup />`.
+   */
+  childProps: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   /**
    * The components you want the `<FormControlGroup />` to group together.
    */
@@ -124,6 +129,7 @@ FormControlGroup.propTypes = {
 };
 
 FormControlGroup.defaultProps = {
+  childProps: {},
   className: '',
   disabled: false,
   errorMsg: '',
