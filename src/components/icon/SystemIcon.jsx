@@ -1,22 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import * as CONSTANTS from '../../utils/constants';
+
 import './icons/icons.svg';
 import './icon.less';
 
-import { SYSTEM_ICONS } from './types';
-
-const COLORS = [
-  'primary',
-  'secondary',
-  'black',
-  'blue',
-  'green',
-  'orange',
-  'purple',
-  'red',
-  'white',
-];
+const { COLORS, SYSTEM_ICONS } = CONSTANTS;
 
 /**
  * System icons are designed to be simple, modern and friendly.

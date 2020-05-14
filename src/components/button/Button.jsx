@@ -2,19 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
+import * as CONSTANTS from '../../utils/constants';
+
 import './button.less';
 
-const COLORS = [
-  'primary',
-  'secondary',
-  'blue',
-  'green',
-  'orange',
-  'purple',
-  'red',
-];
-const SIZES = ['small', 'large', 'jumbo'];
-const TYPES = ['text', 'outline'];
+const { COLORS, SIZES, BUTTON_TYPES } = CONSTANTS;
+const TYPES = BUTTON_TYPES;
 
 /**
  * `Buttons` allow users to take actions, and make choices, with a single tap. They are typically placed throughout your UI, in places like dialogs, modal windows, forms, cards, and toolbars.

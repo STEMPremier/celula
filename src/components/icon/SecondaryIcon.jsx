@@ -3,13 +3,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
+import * as CONSTANTS from '../../utils/constants';
+
 import './icons/icons.svg';
 import './icon.less';
 
-import { SECONDARY_ICONS } from './types';
-
-const COLORS = ['primary', 'secondary'];
-const SIZES = ['small', 'large', 'jumbo'];
+const { COLORS, SECONDARY_ICONS, SIZES } = CONSTANTS;
 
 /* eslint-disable prettier/prettier */
 // Our custom props validator. I am not in love with the name, but a descriptive name was absurdly long.
