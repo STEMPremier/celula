@@ -28,7 +28,7 @@ const SystemIcon = props => {
 
   return (
     <span className={classes}>
-      <svg className={`ce-icon--${color}`}>
+      <svg className={color && `ce-icon--${color}`}>
         <use xlinkHref={`#icons_system-${name}`} />
       </svg>
     </span>
@@ -39,7 +39,7 @@ SystemIcon.propTypes = {
   /*
    * The color of the `<SystemIcon />`
    */
-  color: PropTypes.oneOf(COLORS),
+  color: PropTypes.oneOf('', ...COLORS),
   /**
    * The `<SystemIcon />`.
    */
@@ -51,7 +51,7 @@ SystemIcon.propTypes = {
 };
 
 SystemIcon.defaultProps = {
-  color: 'black',
+  color: '',
   size: 'large',
 };
 
