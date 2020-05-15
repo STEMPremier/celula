@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import FormControlGroup from '../form-controls/core';
+import * as CONSTANTS from '../../utils/constants';
 
 import './toggle-button-group.less';
+
+const { COLORS, SIZES } = CONSTANTS;
 
 /**
  * I am a `<ToggleButtonGroup />` description.
@@ -13,16 +16,22 @@ const ToggleButtonGroup = props => {
   const {
     children,
     className,
+    color,
     disabled,
     formId,
     handleChange,
     name,
     selectedValue,
+    size,
   } = props;
 
   const classes = cx(
     'ce-toggle-button-group',
     {
+      /* eslint-disable prettier/prettier */
+      [`ce-toggle-button-group--${size}`]: SIZES.includes(size.toString().toLowerCase()),
+      [`ce-toggle-button-group--${color}`]: COLORS.includes(color.toString().toLowerCase()),
+      /* eslint-enable prettier/prettier */
       'ce-toggle-button-group--disabled': disabled,
     },
     className,
@@ -30,6 +39,7 @@ const ToggleButtonGroup = props => {
 
   return (
     <FormControlGroup
+      childProps={{ size, color }}
       className={classes}
       disabled={disabled}
       handleChange={handleChange}
@@ -51,6 +61,10 @@ ToggleButtonGroup.propTypes = {
    * A class name, or string of class names, to add to the `<ToggleButtonGroup />`.
    */
   className: PropTypes.string,
+  /**
+   * The color of the `<ToggleButtonGroup />`.\
+   */
+  color: PropTypes.string,
   /**
    * Disables the `<ToggleButtonGroup />` and all of its children.
    */
@@ -75,15 +89,21 @@ ToggleButtonGroup.propTypes = {
     PropTypes.number,
     PropTypes.bool,
   ]),
+  /**
+   * The size of the `<ToggleButtonGroup />.
+   */
+  size: PropTypes.oneOf(SIZES),
   // validators: PropTypes.array,
 };
 
 ToggleButtonGroup.defaultProps = {
   className: '',
+  color: 'primary',
   disabled: false,
   formId: '',
   handleChange: () => {},
   selectedValue: '',
+  size: 'small',
 };
 
 export default ToggleButtonGroup;
