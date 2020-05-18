@@ -88,7 +88,7 @@ Button.defaultProps = {
   color: 'primary',
   disabled: false,
   htmlType: 'button',
-  size: 'small',
+  size: 'large',
   type: 'default',
 };
 
