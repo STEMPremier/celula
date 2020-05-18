@@ -30,12 +30,6 @@
     // color: green;
   }
   input[type='datetime-local'] {
-    // -webkit-align-items: center;
-    // display: -webkit-inline-flex;
-    // font-family: monospace;
-    // overflow: hidden;
-    // padding: 0;
-    // -webkit-padding-start: 1px;
     order: 1;
     z-index: 2;
     height: 58px;
@@ -82,6 +76,10 @@
       display: none;
       background-color: pink;
     }
+  }
+
+  &.ce-input--month {
+    background-color: green;
   }
 
   input {
@@ -228,8 +226,9 @@
   }
 
   .ce-input--error-box-wrapper {
-    width: 38.1rem;
-    margin-left: 1rem;
+    // background-color: blue;
+    width: 365px;
+    margin-left: 9px;
     // label {
     //   color: @error-box-background;
     // }
@@ -249,9 +248,13 @@
       background-color: @error-box-background;
       border-radius: 0.5rem;
       .ce-input--error-box-text {
+        // span {
         color: white;
         text-align: center;
         padding-top: 2rem;
+        padding-left: 36%;
+        display: inline-block;
+        // }
       }
     }
   }

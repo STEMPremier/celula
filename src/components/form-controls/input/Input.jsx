@@ -38,6 +38,7 @@ class Input extends Component {
     endDate: '',
   };
 
+  // note that the datetime-local handleChange only works when you have filled in the time.  Need more instruction about how to handle time before moving forward with datetime-local.
   handleChange = event => {
     console.log('handleChange props', this.props);
     if (this.props.type === 'text') {
@@ -67,6 +68,7 @@ class Input extends Component {
       className,
       disabled,
       error,
+      errorMessage,
       icon,
       label,
       size,
@@ -100,7 +102,20 @@ class Input extends Component {
           {label}
         </label>
         <div className="ce-input--box">
-          {this.props.type === 'datetime-local' ? (
+          {this.props.type === 'text' && (
+            <input
+              name={name}
+              type={type}
+              value={value}
+              toolTip={toolTip}
+              size={size}
+              onClick={this.handleClick}
+              onChange={this.handleChange}
+              icon={icon}
+              disabled={disabled}
+            />
+          )}
+          {this.props.type === 'datetime-local' && (
             <input
               name={name}
               type={type}
@@ -115,7 +130,8 @@ class Input extends Component {
               // max="2018-06-14T00:00"
               // pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
             />
-          ) : (
+          )}
+          {this.props.type === 'month' && (
             <input
               name={name}
               type={type}
@@ -126,6 +142,7 @@ class Input extends Component {
               onChange={this.handleChange}
               icon={icon}
               disabled={disabled}
+              min="2018-03"
             />
           )}
           {showArrow && (
@@ -149,7 +166,7 @@ class Input extends Component {
             <div className="ce-input--arrow" />
             <div className="ce-input--error-box">
               <span className="ce-input--error-box-text" error={error}>
-                {error}
+                {errorMessage}
               </span>
             </div>
           </div>
@@ -167,6 +184,7 @@ Input.propTypes = {
   label: PropTypes.string.isRequired,
   size: PropTypes.string,
   toolTip: PropTypes.string,
+  errorMessage: PropTypes.string,
   // validators:
   value: PropTypes.oneOfType([
     PropTypes.string,
@@ -188,7 +206,8 @@ Input.propTypes = {
 Input.defaultProps = {
   className: '',
   disabled: false,
-  error: '',
+  error: false,
+  errorMessage: '',
   icon: '',
   size: 'small',
   toolTip: null,
