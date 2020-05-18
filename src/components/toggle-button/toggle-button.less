@@ -1,0 +1,43 @@
+@import '../../styles/celula';
+
+// This should move to a utils file
+.sr-only {
+  border: 0;
+  clip-path: circle(0);
+  height: 0px;
+  line-height: normal;
+  overflow: hidden;
+  position: absolute !important;
+  width: 0px;
+}
+
+.ce-toggle-button {
+  display: inline-block;
+  margin: 0.3rem;
+
+  input {
+    .sr-only;
+  }
+
+  &:first-of-type {
+    border-radius: 3.5rem 0 0 3.5rem;
+  }
+
+  &:last-of-type {
+    border-radius: 0 3.5rem 3.5rem 0;
+  }
+
+  &:not(:first-of-type) {
+    margin-left: 0;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px #b2e7ff;
+    outline: none;
+  }
+
+  .ce-toggle-button__label--hidden {
+    .sr-only;
+  }
+}
+
