@@ -34,12 +34,33 @@ const SIZES = ['small', 'large', 'jumbo'];
 class Input extends Component {
   state = {
     value: this.props.value,
+    startDate: '',
+    endDate: '',
   };
 
-  handleChange = event =>
-    this.setState({
-      value: event.target.value,
-    });
+  handleChange = event => {
+    console.log('handleChange props', this.props);
+    if (this.props.type === 'text') {
+      this.setState({
+        value: event.target.value,
+      });
+    }
+    if (this.props.type === 'datetime-local') {
+      console.log('inside datetime handleChange', event.target.value);
+    }
+  };
+
+  handleClick = event => {
+    console.log('clicked', event.target);
+    if (this.props.type === 'text') {
+      this.setState({
+        value: event.target.value,
+      });
+    }
+    if (this.props.type === 'datetime-local') {
+      console.log(event.target.value);
+    }
+  };
 
   render() {
     const {
@@ -58,7 +79,7 @@ class Input extends Component {
       // value,
     } = this.props;
 
-    const { value } = this.state;
+    const { value, startDate } = this.state;
 
     const classes = cx(
       'ce-input',
@@ -79,16 +100,34 @@ class Input extends Component {
           {label}
         </label>
         <div className="ce-input--box">
-          <input
-            name={name}
-            type={type}
-            value={value}
-            toolTip={toolTip}
-            size={size}
-            onChange={this.handleChange}
-            icon={icon}
-            disabled={disabled}
-          />
+          {this.props.type === 'datetime-local' ? (
+            <input
+              name={name}
+              type={type}
+              value={startDate}
+              toolTip={toolTip}
+              size={size}
+              onClick={this.handleClick}
+              onChange={this.handleChange}
+              icon={icon}
+              disabled={disabled}
+              // min="2018-06-07T00:00"
+              // max="2018-06-14T00:00"
+              // pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+            />
+          ) : (
+            <input
+              name={name}
+              type={type}
+              value={value}
+              toolTip={toolTip}
+              size={size}
+              onClick={this.handleClick}
+              onChange={this.handleChange}
+              icon={icon}
+              disabled={disabled}
+            />
+          )}
           {showArrow && (
             <button
               className="ce-input--outside-arrow"
