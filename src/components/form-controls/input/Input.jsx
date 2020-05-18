@@ -36,18 +36,27 @@ class Input extends Component {
     value: this.props.value,
     startDate: '',
     endDate: '',
+    valid: true,
+  };
+
+  checkValiditiy = () => {
+    if (this.props.type === 'email') {
+      console.log('props inside checkValidity email', this.props);
+      console.log('state inside checkValidity email', this.state);
+    }
   };
 
   // note that the datetime-local handleChange only works when you have filled in the time.  Need more instruction about how to handle time before moving forward with datetime-local.
   handleChange = event => {
-    console.log('handleChange props', this.props);
-    if (this.props.type === 'text') {
+    this.checkValiditiy();
+    // console.log('handleChange props', this.props);
+    if (this.props.type === 'text' || this.props.type === 'email') {
       this.setState({
         value: event.target.value,
       });
     }
     if (this.props.type === 'datetime-local') {
-      console.log('inside datetime handleChange', event.target.value);
+      // console.log('inside datetime handleChange', event.target.value);
     }
   };
 
@@ -75,6 +84,8 @@ class Input extends Component {
       toolTip,
       type,
       name,
+      min,
+      max,
       rightArrowClick,
       showArrow,
       // validators,
@@ -102,19 +113,20 @@ class Input extends Component {
           {label}
         </label>
         <div className="ce-input--box">
-          {this.props.type === 'text' && (
-            <input
-              name={name}
-              type={type}
-              value={value}
-              toolTip={toolTip}
-              size={size}
-              onClick={this.handleClick}
-              onChange={this.handleChange}
-              icon={icon}
-              disabled={disabled}
-            />
-          )}
+          {this.props.type === 'text' ||
+            ('email' && (
+              <input
+                name={name}
+                type={type}
+                value={value}
+                toolTip={toolTip}
+                size={size}
+                onClick={this.handleClick}
+                onChange={this.handleChange}
+                icon={icon}
+                disabled={disabled}
+              />
+            ))}
           {this.props.type === 'datetime-local' && (
             <input
               name={name}
@@ -126,6 +138,8 @@ class Input extends Component {
               onChange={this.handleChange}
               icon={icon}
               disabled={disabled}
+              min={min}
+              max={max}
               // min="2018-06-07T00:00"
               // max="2018-06-14T00:00"
               // pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
@@ -142,7 +156,8 @@ class Input extends Component {
               onChange={this.handleChange}
               icon={icon}
               disabled={disabled}
-              min="2018-03"
+              min={min}
+              max={max}
             />
           )}
           {showArrow && (
@@ -185,6 +200,8 @@ Input.propTypes = {
   size: PropTypes.string,
   toolTip: PropTypes.string,
   errorMessage: PropTypes.string,
+  min: PropTypes.string,
+  max: PropTypes.string,
   // validators:
   value: PropTypes.oneOfType([
     PropTypes.string,
@@ -213,6 +230,8 @@ Input.defaultProps = {
   toolTip: null,
   type: 'text',
   showArrow: false,
+  min: '',
+  max: '',
   rightArrowClick: () => {},
 };
 
