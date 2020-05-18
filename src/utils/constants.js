@@ -1,4 +1,4 @@
-const BUTTON_TYPES = ['text', 'outline'];
+const BUTTON_TYPES = ['default', 'outline', 'text'];
 const COLORS = [
   'primary',
   'secondary',
