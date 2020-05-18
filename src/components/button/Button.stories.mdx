@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
 
 import Button from '.';
+import { BUTTON_TYPES as TYPES, COLORS, SIZES } from '../../utils/constants';
 
 <Meta component={Button} title="Components/Atoms/Button" />
 
@@ -10,14 +11,14 @@ import Button from '.';
 <Description of={Button} />
 <Props of={Button} />
 
-<Story name="All Buttons" parameters={{ docs: { disable: true }}}>
+<Story name="Buttons with Knobs" parameters={{ docs: { disable: true }}}>
   <Button
     className={text('className', '')}
-    color={select('color', ['primary', 'secondary', 'blue', 'green', 'orange', 'purple', 'red'], 'primary')}
+    color={select('color', COLORS, 'primary')}
     disabled={boolean('disabled', false)}
     handleClick={action('clicked')}
-    size={select('size', ['small', 'large', 'jumbo'], 'small')}
-    type={select('type', ['default', 'text', 'outline'], 'default')}
+    size={select('size', SIZES, 'small')}
+    type={select('type', TYPES, 'default')}
   >
     {text('children', 'a button')}
   </Button>
@@ -27,9 +28,15 @@ import Button from '.';
 <Preview>
   <Story name="Button Types">
     <div>
-      <Button handleClick={action('clicked')}>standard button</Button>
-      <Button handleClick={action('clicked')} type="outline">outline button</Button>
-      <Button handleClick={action('clicked')} type="text">text button</Button>
+      {TYPES.map(type => (
+        <Button
+          handleClick={action('`Button Types` onClick event triggered.')}
+          key={type}
+          type={type}
+        >
+          {type} button
+        </Button>
+      ))}
     </div>
   </Story>
 </Preview>
@@ -38,71 +45,60 @@ import Button from '.';
 <Preview>
   <Story name="Button Sizes">
     <div>
-      <div>
-        <Button handleClick={action('clicked')} size="small">normal small</Button>
-        <Button handleClick={action('clicked')} size="large">normal large</Button>
-        <Button handleClick={action('clicked')} size="jumbo">normal jumbo</Button>
-      </div>
-      <br />
-      <div>
-        <Button handleClick={action('clicked')} size="small" type="outline">outline small</Button>
-        <Button handleClick={action('clicked')} size="large" type="outline">outline large</Button>
-        <Button handleClick={action('clicked')} size="jumbo" type="outline">outline jumbo</Button>
-      </div>
-      <br />
-      <div>
-        <Button handleClick={action('clicked')} size="small" type="text">text small</Button>
-        <Button handleClick={action('clicked')} size="large" type="text">text large</Button>
-        <Button handleClick={action('clicked')} size="jumbo" type="text">text jumbo</Button>
-      </div>
+      {TYPES.map(type => (
+        <div>
+          {SIZES.map(size => (
+            <Button
+              handleClick={action('`Button Sizes` onClick event triggered.')}
+              key={`${type}_${size}`}
+              size={size}
+              type={type}
+            >
+              {type} {size}
+            </Button>
+          ))}
+        </div>
+      ))}
     </div>
   </Story>
 </Preview>
 
-### Button States
+### States
 <Preview>
   <Story name="Button States">
     <div>
-      <Button handleClick={action('clicked')} disabled>small disabled</Button>
-      <Button handleClick={action('clicked')} type="outline" disabled>small outline disabled</Button>
-      <Button handleClick={action('clicked')} type="text" disabled>small text disabled</Button>
+      {TYPES.map(type => (
+        <Button
+          handleClick={action('`Button States` onClick event triggered.')}
+          key={type}
+          type={type}
+          disabled
+        >
+          {type} disabled
+        </Button>
+      ))}
     </div>
   </Story>
 </Preview>
 
-### Button Colors
+### Colors
 <Preview>
   <Story name="Button Colors">
     <div>
-      <div>
-        <Button color="primary" handleClick={action('clicked')}>primary</Button>
-        <Button color="secondary" handleClick={action('clicked')}>secondary</Button>
-        <Button color="blue" handleClick={action('clicked')}>blue</Button>
-        <Button color="green" handleClick={action('clicked')}>green</Button>
-        <Button color="orange" handleClick={action('clicked')}>orange</Button>
-        <Button color="purple" handleClick={action('clicked')}>purple</Button>
-        <Button color="red" handleClick={action('clicked')}>red</Button>
-      </div>
-      <br />
-      <div>
-        <Button color="primary" handleClick={action('clicked')} type="outline">primary</Button>
-        <Button color="secondary" handleClick={action('clicked')} type="outline">secondary</Button>
-        <Button color="blue" handleClick={action('clicked')} type="outline">blue</Button>
-        <Button color="green" handleClick={action('clicked')} type="outline">green</Button>
-        <Button color="orange" handleClick={action('clicked')} type="outline">orange</Button>
-        <Button color="purple" handleClick={action('clicked')} type="outline">purple</Button>
-        <Button color="red" handleClick={action('clicked')} type="outline">red</Button>
-      </div>
-      <br />
-      <div>
-        <Button color="primary" handleClick={action('clicked')} type="text">primary</Button>
-        <Button color="secondary" handleClick={action('clicked')} type="text">secondary</Button>
-        <Button color="blue" handleClick={action('clicked')} type="text">blue</Button>
-        <Button color="green" handleClick={action('clicked')} type="text">green</Button>
-        <Button color="orange" handleClick={action('clicked')} type="text">ornage</Button>
-        <Button color="purple" handleClick={action('clicked')} type="text">purple</Button>
-        <Button color="red" handleClick={action('clicked')} type="text">red</Button>
-      </div>
+      {TYPES.map(type => (
+        <div>
+          {COLORS.map(color => (
+            <Button
+              color={color}
+              handleClick={action('`Button Colors` onClick event triggered.')}
+              key={`${color}_${type}`}
+              type={type}
+            >
+              {color}
+            </Button>
+          ))}
+        </div>
+      ))}
     </div>
   </Story>
 </Preview>
