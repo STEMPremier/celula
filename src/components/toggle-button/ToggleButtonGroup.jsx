@@ -103,7 +103,7 @@ ToggleButtonGroup.defaultProps = {
   formId: '',
   handleChange: () => {},
   selectedValue: '',
-  size: 'small',
+  size: 'large',
 };
 
 export default ToggleButtonGroup;
