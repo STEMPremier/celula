@@ -36,19 +36,28 @@ class Input extends Component {
     value: this.props.value,
     startDate: '',
     endDate: '',
-    valid: true,
+    valid: this.props.error !== true,
   };
 
   checkValiditiy = () => {
     if (this.props.type === 'email') {
-      console.log('props inside checkValidity email', this.props);
-      console.log('state inside checkValidity email', this.state);
+      if (
+        // eslint-disable-next-line no-useless-escape
+        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.value)
+      ) {
+        // console.log('props inside checkValidity email', this.props);
+        // console.log('state inside checkValidity email', this.state);
+      } else {
+        console.log('this is NOT a valid email');
+        this.setState({
+          valid: false,
+        });
+      }
     }
   };
 
   // note that the datetime-local handleChange only works when you have filled in the time.  Need more instruction about how to handle time before moving forward with datetime-local.
   handleChange = event => {
-    this.checkValiditiy();
     // console.log('handleChange props', this.props);
     if (this.props.type === 'text' || this.props.type === 'email') {
       this.setState({
@@ -58,11 +67,12 @@ class Input extends Component {
     if (this.props.type === 'datetime-local') {
       // console.log('inside datetime handleChange', event.target.value);
     }
+    // this.checkValiditiy();
   };
 
   handleClick = event => {
-    console.log('clicked', event.target);
-    if (this.props.type === 'text') {
+    // console.log('clicked', event.target);
+    if (this.props.type === 'text' || this.props.type === 'email') {
       this.setState({
         value: event.target.value,
       });
@@ -92,7 +102,12 @@ class Input extends Component {
       // value,
     } = this.props;
 
-    const { value, startDate } = this.state;
+    const { value, startDate, valid } = this.state;
+
+    // if (valid === false) {
+    //   this.props.error = true;
+    //   console.log('this.props.error', this.props.error);
+    // }
 
     const classes = cx(
       'ce-input',
@@ -113,21 +128,22 @@ class Input extends Component {
           {label}
         </label>
         <div className="ce-input--box">
-          {this.props.type === 'text' ||
-            ('email' && (
-              <input
-                name={name}
-                type={type}
-                value={value}
-                toolTip={toolTip}
-                size={size}
-                onClick={this.handleClick}
-                onChange={this.handleChange}
-                icon={icon}
-                disabled={disabled}
-              />
-            ))}
-          {this.props.type === 'datetime-local' && (
+          {/* {this.props.type === 'text' ||
+            ('email' && ( */}
+          <input
+            name={name}
+            type={type}
+            value={value}
+            toolTip={toolTip}
+            size={size}
+            onClick={this.handleClick}
+            onChange={this.handleChange}
+            onBlur={this.checkValiditiy}
+            icon={icon}
+            disabled={disabled}
+          />
+          {/* ))} */}
+          {/* {this.props.type === 'datetime-local' && (
             <input
               name={name}
               type={type}
@@ -144,8 +160,8 @@ class Input extends Component {
               // max="2018-06-14T00:00"
               // pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
             />
-          )}
-          {this.props.type === 'month' && (
+          )} */}
+          {/* {this.props.type === 'month' && (
             <input
               name={name}
               type={type}
@@ -159,7 +175,7 @@ class Input extends Component {
               min={min}
               max={max}
             />
-          )}
+          )} */}
           {showArrow && (
             <button
               className="ce-input--outside-arrow"
@@ -176,7 +192,7 @@ class Input extends Component {
           <div className="ce-input--background-state" />
         </div>
 
-        {error && (
+        {valid === false && (
           <div className="ce-input--error-box-wrapper">
             <div className="ce-input--arrow" />
             <div className="ce-input--error-box">
