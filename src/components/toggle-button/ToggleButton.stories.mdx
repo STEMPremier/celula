@@ -1,0 +1,131 @@
+import { Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { boolean, select, text } from '@storybook/addon-knobs';
+
+import { ToggleButton, ToggleButtonGroup } from '.';
+import { COMPONENT_STATES as STATES, COLORS, SIZES, SYSTEM_ICONS } from '../../utils/constants';
+
+<Meta component={ToggleButton} title="Components/Atoms/ToggleButton" />
+
+# ToggleButtonGroup and ToggleButton
+## ToggleButtonGroup
+<Description of={ToggleButtonGroup} />
+<Props of={ToggleButtonGroup}/>
+
+## ToggleButton
+<Description of={ToggleButton} />
+<Props of={ToggleButton}/>
+
+<Story name="ToggleButtonGroup with Knobs" parameters={{ docs: { disable: true }}}>
+  <ToggleButtonGroup
+    className={text('className', '')}
+    color={select('color', COLORS, 'primary')}
+    disabled={boolean('disabled', false)}
+    formId={text('formId', 'formKnobs')}
+    handleChange={action('`ToggleButtonGroups with Knobs` onChange event triggered.')}
+    name={text('name', 'formKnobs')}
+    selectedValue={select('selectedValue', ['follow', 'message'], 'message')}
+    size={select('size', SIZES, 'large')}
+  >
+    <ToggleButton icon="export" value="export" />
+    <ToggleButton icon="follow" value="follow" />
+    <ToggleButton icon="message" value="message" />
+  </ToggleButtonGroup>
+</Story>
+
+<Story name="ToggleButton with Knobs" parameters={{ docs: {disable: true}}}>
+  <ToggleButtonGroup
+    handleChange={action('`ToggleButton with Knobs` onChange event triggered.')}
+    name="formKnobs2"
+    selectedValue={text('selectedValue', '')}
+  >
+    <ToggleButton
+      className={text('className', '')}
+      icon={select('icon', SYSTEM_ICONS,'export')}
+      value={text('value','export')}
+    />
+    <ToggleButton icon="follow" value="follow" />
+    <ToggleButton icon="message" value="message" />
+  </ToggleButtonGroup>
+</Story>
+
+### Types
+<Preview>
+  <Story name="ToggleButton Types">
+    <ToggleButtonGroup
+      handleChange={action('`ToggleButton Types` onChange event triggered.')}
+      name="formTypes"
+      selectedValue="follow"
+    >
+      <ToggleButton icon="export" value="export" />
+      <ToggleButton icon="follow" value="follow" />
+      <ToggleButton icon="message" value="message" />
+    </ToggleButtonGroup>
+  </Story>
+</Preview>
+
+### Sizes
+<Preview>
+  <Story name="ToggleButton Sizes">
+    <div>
+      {SIZES.map(size => (
+        <ToggleButtonGroup
+          handleChange={action('`ToggleButton Sizes` onChange event triggered.')}
+          key={`formSizes_${size}`}
+          name={`formSizes_${size}`}
+          selectedValue="no"
+          size={size}
+        >
+          <ToggleButton icon="export" value="export" />
+          <ToggleButton icon="follow" value="follow" />
+          <ToggleButton icon="message" value="message" />
+        </ToggleButtonGroup>
+      ))}
+    </div>
+  </Story>
+</Preview>
+
+### States
+<Preview>
+  <Story name="ToggleButton States">
+    {STATES.filter(state => state !== 'error').map(state => (
+      <ToggleButtonGroup
+        disabled={state === 'disabled'}
+        handleChange={action('`ToggleButton States` onChange event triggered.')}
+        key={`formStates_${state}`}
+        name={`formStates_${state}`}
+        selectedValue="follow"
+      >
+        <ToggleButton icon="export" value="export" />
+        <ToggleButton icon="follow" value="follow" />
+        <ToggleButton icon="message" value="message" />
+      </ToggleButtonGroup>
+    ))}
+  </Story>
+</Preview>
+
+### Colors
+<Preview>
+  <Story name="ToggleButton Colors">
+    <div>
+      {COLORS.map(color => (
+        <ToggleButtonGroup
+          color={color}
+          handleChange={action('`ToggleButton Colors` onChange event triggered.')}
+          key={`formColors_${color}`}
+          name={`formColor_${color}`}
+          selectedValue="yes"
+        >
+          <ToggleButton icon="export" value="export" />
+          <ToggleButton icon="follow" value="follow" />
+          <ToggleButton icon="message" value="message" />
+        </ToggleButtonGroup>
+      ))}
+    </div>
+  </Story>
+</Preview>
