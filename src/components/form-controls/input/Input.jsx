@@ -104,11 +104,6 @@ class Input extends Component {
 
     const { value, startDate, valid } = this.state;
 
-    // if (valid === false) {
-    //   this.props.error = true;
-    //   console.log('this.props.error', this.props.error);
-    // }
-
     const classes = cx(
       'ce-input',
       {
@@ -128,8 +123,6 @@ class Input extends Component {
           {label}
         </label>
         <div className="ce-input--box">
-          {/* {this.props.type === 'text' ||
-            ('email' && ( */}
           <input
             name={name}
             type={type}
@@ -161,21 +154,21 @@ class Input extends Component {
               // pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
             />
           )} */}
-          {/* {this.props.type === 'month' && (
-            <input
-              name={name}
-              type={type}
-              value={value}
-              toolTip={toolTip}
-              size={size}
-              onClick={this.handleClick}
-              onChange={this.handleChange}
-              icon={icon}
-              disabled={disabled}
-              min={min}
-              max={max}
-            />
-          )} */}
+          {/* {/* {this.props.type === 'month' && ( */}
+          {/* <input
+            name={name}
+            type={type}
+            value={value}
+            toolTip={toolTip}
+            size={size}
+            onClick={this.handleClick}
+            onChange={this.handleChange}
+            icon={icon}
+            disabled={disabled}
+            min={min}
+            max={max}
+          /> */}
+          {/* )} */}
           {showArrow && (
             <button
               className="ce-input--outside-arrow"
