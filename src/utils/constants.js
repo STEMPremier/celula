@@ -1,4 +1,5 @@
 const BUTTON_TYPES = ['default', 'outline', 'text'];
+const COMPONENT_STATES = ['default', 'disabled', 'error'];
 const COLORS = [
   'primary',
   'secondary',
@@ -71,6 +72,7 @@ const SYSTEM_ICONS = [
 
 export {
   BUTTON_TYPES,
+  COMPONENT_STATES,
   COLORS,
   PRODUCT_ICONS,
   SECONDARY_ICONS,
