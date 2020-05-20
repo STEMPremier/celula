@@ -12,57 +12,48 @@
   // Sizes
   &.ce-toggle-button-group--small {
     .ce-toggle-button {
-      padding: 0.9rem 1.33rem 0.5rem 1.33rem;
+      label {
+        padding: 0.9rem 1.33rem 0.5rem 1.33rem;
+      }
 
-      &:first-of-type {
+      &:first-of-type label {
         padding-left: 2.33rem;
       }
 
-      &:last-of-type {
+      &:last-of-type label {
         padding-right: 2.33rem;
-      }
-
-      label {
-        width: 1.2rem;
-        height: 1.2rem;
       }
     }
   }
 
   &.ce-toggle-button-group--large {
     .ce-toggle-button {
-      padding: 1.4rem 2rem 1.1rem 2rem;
+      label {
+        padding: 1.4rem 2rem 1.1rem 2rem;
+      }
 
-      &:first-of-type {
+      &:first-of-type label {
         padding-left: 3rem;
       }
 
-      &:last-of-type {
+      &:last-of-type label {
         padding-right: 3rem;
-      }
-
-      label {
-        width: 1.6rem;
-        height: 1.6rem;
       }
     }
   }
 
   &.ce-toggle-button-group--jumbo {
     .ce-toggle-button {
-      padding: 2.4rem 2rem 2.1rem 2rem;
+      label {
+        padding: 2.4rem 2rem 2.1rem 2rem;
+      }
 
-      &:first-of-type {
+      &:first-of-type label {
         padding-left: 3rem;
       }
 
-      &:last-of-type {
+      &:last-of-type label {
         padding-right: 3rem;
-      }
-
-      label {
-        width: 1.6rem;
-        height: 1.6rem;
       }
     }
   }
@@ -98,6 +89,14 @@
     &.ce-toggle-button--disabled {
       background: @focus-gray;
     }
+
+    &.ce-toggle-button--checked {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
   }
 }
 
@@ -130,6 +129,14 @@
 
     &.ce-toggle-button--disabled {
       background: @focus-gray;
+    }
+
+    &.ce-toggle-button--checked {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
     }
   }
 }
@@ -164,6 +171,14 @@
     &.ce-toggle-button--disabled {
       background: @focus-gray;
     }
+
+    &.ce-toggle-button--checked {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
   }
 }
 
@@ -196,6 +211,14 @@
 
     &.ce-toggle-button--disabled {
       background: @focus-gray;
+    }
+
+    &.ce-toggle-button--checked {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
     }
   }
 }
@@ -230,6 +253,14 @@
     &.ce-toggle-button--disabled {
       background: @focus-gray;
     }
+
+    &.ce-toggle-button--checked {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
   }
 }
 
@@ -263,6 +294,14 @@
     &.ce-toggle-button--disabled {
       background: @focus-gray;
     }
+
+    &.ce-toggle-button--checked {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
   }
 }
 
@@ -295,6 +334,14 @@
 
     &.ce-toggle-button--disabled {
       background: @focus-gray;
+    }
+
+    &.ce-toggle-button--checked {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
     }
   }
 }

@@ -15,7 +15,13 @@ const { SIZES } = CONSTANTS;
 const ToggleButton = props => {
   const { checked, className, disabled, icon, name, size, value } = props;
   const id = `${name}_${value}`;
-  const classes = cx('ce-toggle-button', className);
+  const classes = cx(
+    'ce-toggle-button',
+    {
+      'ce-toggle-button--checked': checked,
+    },
+    className,
+  );
 
   return (
     <div className={classes}>
