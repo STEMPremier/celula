@@ -44,18 +44,13 @@ class Input extends Component {
     if (this.props.type === 'email') {
       if (
         // eslint-disable-next-line no-useless-escape
-        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.value)
+        !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.value)
       ) {
-        // console.log('props inside checkValidity email', this.props);
-        // console.log('state inside checkValidity email', this.state);
-      } else {
-        console.log('this is NOT a valid email');
         this.setState({
           valid: false,
         });
       }
     }
-
     if (this.props.type === 'password') {
       const minLength = 8;
       const passwordLongEnough = password =>
