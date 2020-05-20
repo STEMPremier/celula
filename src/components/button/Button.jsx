@@ -68,19 +68,19 @@ Button.propTypes = {
    */
   handleClick: PropTypes.func.isRequired,
   /**
-   * The type of `<Button />. This should always be `button` unless you are making a `<SubmitButton />`.
+   * The type of `<Button />`. This should always be `button` unless you are making a `<SubmitButton />`.
    *
    * @ignore
    */
   htmlType: PropTypes.oneOf(['button', 'submit']),
   /**
-   * The size of the `<Button />.
+   * The size of the `<Button />`.
    */
   size: PropTypes.oneOf(SIZES),
   /**
-   * Which type of `<Button /> to render.
+   * Which type of `<Button />` to render.
    */
-  type: PropTypes.oneOf([...TYPES, 'default']),
+  type: PropTypes.oneOf(TYPES),
 };
 
 Button.defaultProps = {

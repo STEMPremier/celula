@@ -3,7 +3,12 @@ import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
 
 import Button from '.';
-import { BUTTON_TYPES as TYPES, COLORS, SIZES } from '../../utils/constants';
+import {
+  BUTTON_TYPES as TYPES,
+  COMPONENT_STATES as STATES,
+  COLORS,
+  SIZES
+} from '../../utils/constants';
 
 <Meta component={Button} title="Components/Atoms/Button" />
 
@@ -11,12 +16,12 @@ import { BUTTON_TYPES as TYPES, COLORS, SIZES } from '../../utils/constants';
 <Description of={Button} />
 <Props of={Button} />
 
-<Story name="Buttons with Knobs" parameters={{ docs: { disable: true }}}>
+<Story name="Button with Knobs" parameters={{ docs: { disable: true }}}>
   <Button
     className={text('className', '')}
     color={select('color', COLORS, 'primary')}
     disabled={boolean('disabled', false)}
-    handleClick={action('clicked')}
+    handleClick={action('`Button with Knobs` onClick event triggered.')}
     size={select('size', SIZES, 'small')}
     type={select('type', TYPES, 'default')}
   >
@@ -68,14 +73,18 @@ import { BUTTON_TYPES as TYPES, COLORS, SIZES } from '../../utils/constants';
   <Story name="Button States">
     <div>
       {TYPES.map(type => (
-        <Button
-          handleClick={action('`Button States` onClick event triggered.')}
-          key={type}
-          type={type}
-          disabled
-        >
-          {type} disabled
-        </Button>
+        <div>
+          {STATES.filter(state => state !== 'error').map(state => (
+            <Button
+              disabled={state === 'disabled'}
+              handleClick={action('`Button States` onClick event triggered.')}
+              key={`${state}_${type}`}
+              type={type}
+            >
+              {state} {type}
+            </Button>
+          ))}
+        </div>
       ))}
     </div>
   </Story>
@@ -91,7 +100,7 @@ import { BUTTON_TYPES as TYPES, COLORS, SIZES } from '../../utils/constants';
             <Button
               color={color}
               handleClick={action('`Button Colors` onClick event triggered.')}
-              key={`${color}_${type}`}
+              key={`${type}_${color}`}
               type={type}
             >
               {color}
