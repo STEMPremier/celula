@@ -36,9 +36,10 @@ class Input extends Component {
     value: this.props.value,
     startDate: '',
     endDate: '',
-    valid: this.props.error !== true,
+    valid: toString(this.props.error !== true),
   };
 
+  // make a switch statement eventually
   checkValiditiy = () => {
     if (this.props.type === 'email') {
       if (
@@ -54,17 +55,50 @@ class Input extends Component {
         });
       }
     }
+
+    if (this.props.type === 'password') {
+      const minLength = 8;
+      const passwordLongEnough = password =>
+        !!(password && password.length >= minLength);
+
+      const passwordHasUppercase = password =>
+        !!(password && /[A-Z]/g.test(password));
+
+      const passwordHasLowercase = password =>
+        !!(password && /[a-z]/g.test(password));
+
+      const passwordHasNumber = password =>
+        !!(password && /[0-9]/g.test(password));
+
+      const passwordHasSpecial = password =>
+        !!(password && /[^A-Za-z0-9]/g.test(password));
+
+      const passwordSatisfiesThree = password => {
+        let count = 0;
+        if (passwordHasUppercase(password)) count += 1;
+        if (passwordHasLowercase(password)) count += 1;
+        if (passwordHasNumber(password)) count += 1;
+        if (passwordHasSpecial(password)) count += 1;
+        if (count < 3) {
+          this.setState({
+            valid: false,
+          });
+        }
+      };
+      passwordSatisfiesThree(this.state.value);
+    }
   };
 
   // note that the datetime-local handleChange only works when you have filled in the time.  Need more instruction about how to handle time before moving forward with datetime-local.
   handleChange = event => {
     // console.log('handleChange props', this.props);
-    if (this.props.type === 'text' || this.props.type === 'email') {
+    const { type } = this.props;
+    if (type === 'text' || type === 'email' || type === 'password') {
       this.setState({
         value: event.target.value,
       });
     }
-    if (this.props.type === 'datetime-local') {
+    if (type === 'datetime-local') {
       // console.log('inside datetime handleChange', event.target.value);
     }
     // this.checkValiditiy();
