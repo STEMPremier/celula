@@ -30,7 +30,7 @@ const ToggleButtonGroup = props => {
     'ce-toggle-button-group',
     {
       [`ce-toggle-button-group--${size}`]: SIZES.includes(size.toString().toLowerCase()),
-      [`ce-toggle-button-group--${color}`]: COLORS.includes(color.toString().toLowerCase()),
+      [`ce-toggle-button-group--${color}`]: COLORS.includes(color.toString().toLowerCase()) && !disabled,
       'ce-toggle-button-group--disabled': disabled,
     },
     className,

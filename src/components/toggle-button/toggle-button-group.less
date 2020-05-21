@@ -86,10 +86,6 @@
       }
     }
 
-    &.ce-toggle-button--disabled {
-      background: @focus-gray;
-    }
-
     &.ce-toggle-button--checked {
       background: transparent;
 
@@ -125,10 +121,6 @@
       label .ce-icon {
         stroke: @white;
       }
-    }
-
-    &.ce-toggle-button--disabled {
-      background: @focus-gray;
     }
 
     &.ce-toggle-button--checked {
@@ -168,10 +160,6 @@
       }
     }
 
-    &.ce-toggle-button--disabled {
-      background: @focus-gray;
-    }
-
     &.ce-toggle-button--checked {
       background: transparent;
 
@@ -207,10 +195,6 @@
       label .ce-icon {
         stroke: @white;
       }
-    }
-
-    &.ce-toggle-button--disabled {
-      background: @focus-gray;
     }
 
     &.ce-toggle-button--checked {
@@ -250,10 +234,6 @@
       }
     }
 
-    &.ce-toggle-button--disabled {
-      background: @focus-gray;
-    }
-
     &.ce-toggle-button--checked {
       background: transparent;
 
@@ -289,10 +269,6 @@
       label .ce-icon {
         stroke: @white;
       }
-    }
-
-    &.ce-toggle-button--disabled {
-      background: @focus-gray;
     }
 
     &.ce-toggle-button--checked {
@@ -332,8 +308,42 @@
       }
     }
 
-    &.ce-toggle-button--disabled {
+    &.ce-toggle-button--checked {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+  }
+}
+
+.ce-toggle-button-group--disabled {
+  background: @focus-gray;
+  pointer-events: none;
+
+  .ce-toggle-button {
+    background: @white;
+
+    label .ce-icon {
+      stroke: @focus-gray;
+    }
+
+    // States
+    &:hover {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &:active {
       background: @focus-gray;
+
+      label .ce-icon {
+        stroke: @white;
+      }
     }
 
     &.ce-toggle-button--checked {
