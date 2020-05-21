@@ -111,20 +111,20 @@ class Input extends Component {
   handleChange = event => {
     // console.log('handleChange props', this.props);
     const { type } = this.props;
-    if (
-      type === 'text' ||
-      type === 'email' ||
-      type === 'password' ||
-      type === 'url' ||
-      type === 'search'
-    ) {
-      this.setState({
-        value: event.target.value,
-      });
-    }
-    if (type === 'datetime-local') {
-      // console.log('inside datetime handleChange', event.target.value);
-    }
+    // if (
+    //   type === 'text' ||
+    //   type === 'email' ||
+    //   type === 'password' ||
+    //   type === 'url' ||
+    //   type === 'search'
+    // ) {
+    this.setState({
+      value: event.target.value,
+    });
+    // }
+    // if (type === 'datetime-local' || type) {
+    // console.log('inside datetime handleChange', event.target.value);
+    // }
     // this.checkValiditiy();
   };
 
