@@ -6,7 +6,7 @@ import Button from '../../button';
 import { BUTTON_TYPES as TYPES, COLORS, SIZES } from '../../../utils/constants';
 
 /**
- * `Submit Buttons` allow users to submit forms with a single tap.. They are typically placed throughout your UI in every form.
+ * `Submit Buttons` allow users to submit forms with a single tap. They are typically placed throughout your UI in every form.
  */
 const SubmitButton = props => {
   const {
