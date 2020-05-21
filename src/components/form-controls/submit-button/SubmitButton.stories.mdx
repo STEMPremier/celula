@@ -3,6 +3,12 @@ import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
 
 import SubmitButton from '.';
+import {
+  BUTTON_TYPES as TYPES,
+  COMPONENT_STATES as STATES,
+  COLORS,
+  SIZES
+} from '../../../utils/constants';
 
 <Meta component={SubmitButton} title="Components/Molecules/Form Controls/SubmitButton" />
 
@@ -10,14 +16,14 @@ import SubmitButton from '.';
 <Description of={SubmitButton} />
 <Props of={SubmitButton} />
 
-<Story name="All SubmitButtons" parameters={{ docs: { disable: true }}}>
+<Story name="SubmitButton with Knobs" parameters={{ docs: { disable: true }}}>
   <SubmitButton
     className={text('className', '')}
-    color={select('color', ['primary', 'secondary', 'blue', 'green', 'orange', 'purple', 'red'], 'primary')}
+    color={select('color', COLORS, 'primary')}
     disabled={boolean('disabled', false)}
-    handleClick={action('clicked')}
-    size={select('size', ['small', 'large', 'jumbo'], 'small')}
-    type={select('type', ['default', 'text', 'outline'], 'default')}
+    handleClick={action('`SubmitButton with Knobs` onClick event triggered.')}
+    size={select('size', SIZES, 'small')}
+    type={select('type', TYPES, 'default')}
   >
     {text('children', 'a button')}
   </SubmitButton>
@@ -27,9 +33,15 @@ import SubmitButton from '.';
 <Preview>
   <Story name="SubmitButton Types">
     <div>
-      <SubmitButton handleClick={action('clicked')}>standard button</SubmitButton>
-      <SubmitButton handleClick={action('clicked')} type="outline">outline button</SubmitButton>
-      <SubmitButton handleClick={action('clicked')} type="text">text button</SubmitButton>
+      {TYPES.map(type => (
+        <SubmitButton
+          handleClick={action('`SubmitButton Types` onClick event triggered.')}
+          key={type}
+          type={type}
+        >
+          {`${type} button`}
+        </SubmitButton>
+      ))}
     </div>
   </Story>
 </Preview>
@@ -38,71 +50,64 @@ import SubmitButton from '.';
 <Preview>
   <Story name="SubmitButton Sizes">
     <div>
-      <div>
-        <SubmitButton handleClick={action('clicked')} size="small">normal small</SubmitButton>
-        <SubmitButton handleClick={action('clicked')} size="large">normal large</SubmitButton>
-        <SubmitButton handleClick={action('clicked')} size="jumbo">normal jumbo</SubmitButton>
-      </div>
-      <br />
-      <div>
-        <SubmitButton handleClick={action('clicked')} size="small" type="outline">outline small</SubmitButton>
-        <SubmitButton handleClick={action('clicked')} size="large" type="outline">outline large</SubmitButton>
-        <SubmitButton handleClick={action('clicked')} size="jumbo" type="outline">outline jumbo</SubmitButton>
-      </div>
-      <br />
-      <div>
-        <SubmitButton handleClick={action('clicked')} size="small" type="text">text small</SubmitButton>
-        <SubmitButton handleClick={action('clicked')} size="large" type="text">text large</SubmitButton>
-        <SubmitButton handleClick={action('clicked')} size="jumbo" type="text">text jumbo</SubmitButton>
-      </div>
+      {TYPES.map(type => (
+        <div key={`${type}_size`}>
+          {SIZES.map(size => (
+            <SubmitButton
+              handleClick={action('`SubmitButton Sizes` onClick event triggered.')}
+              key={`${type}_${size}`}
+              size={size}
+              type={type}
+            >
+              {`${type} ${size}`}
+            </SubmitButton>
+          ))}
+        </div>
+      ))}
     </div>
   </Story>
 </Preview>
 
-### SubmitButton States
+### States
 <Preview>
   <Story name="SubmitButton States">
     <div>
-      <SubmitButton handleClick={action('clicked')} disabled>small disabled</SubmitButton>
-      <SubmitButton handleClick={action('clicked')} type="outline" disabled>small outline disabled</SubmitButton>
-      <SubmitButton handleClick={action('clicked')} type="text" disabled>small text disabled</SubmitButton>
+      {TYPES.map(type => (
+        <div key={`${type}_state`}>
+          {STATES.filter(state => state !== 'error').map(state => (
+            <SubmitButton
+              disabled={state === 'disabled'}
+              handleClick={action('`SubmitButton States` onClick event triggered.')}
+              key={`${state}_${type}`}
+              type={type}
+            >
+              {`${state} ${type}`}
+            </SubmitButton>
+          ))}
+        </div>
+      ))}
     </div>
   </Story>
 </Preview>
 
-### SubmitButton Colors
+### Colors
 <Preview>
   <Story name="SubmitButton Colors">
     <div>
-      <div>
-        <SubmitButton color="primary" handleClick={action('clicked')}>primary</SubmitButton>
-        <SubmitButton color="secondary" handleClick={action('clicked')}>secondary</SubmitButton>
-        <SubmitButton color="blue" handleClick={action('clicked')}>blue</SubmitButton>
-        <SubmitButton color="green" handleClick={action('clicked')}>green</SubmitButton>
-        <SubmitButton color="orange" handleClick={action('clicked')}>orange</SubmitButton>
-        <SubmitButton color="purple" handleClick={action('clicked')}>purple</SubmitButton>
-        <SubmitButton color="red" handleClick={action('clicked')}>red</SubmitButton>
-      </div>
-      <br />
-      <div>
-        <SubmitButton color="primary" handleClick={action('clicked')} type="outline">primary</SubmitButton>
-        <SubmitButton color="secondary" handleClick={action('clicked')} type="outline">secondary</SubmitButton>
-        <SubmitButton color="blue" handleClick={action('clicked')} type="outline">blue</SubmitButton>
-        <SubmitButton color="green" handleClick={action('clicked')} type="outline">green</SubmitButton>
-        <SubmitButton color="orange" handleClick={action('clicked')} type="outline">orange</SubmitButton>
-        <SubmitButton color="purple" handleClick={action('clicked')} type="outline">purple</SubmitButton>
-        <SubmitButton color="red" handleClick={action('clicked')} type="outline">red</SubmitButton>
-      </div>
-      <br />
-      <div>
-        <SubmitButton color="primary" handleClick={action('clicked')} type="text">primary</SubmitButton>
-        <SubmitButton color="secondary" handleClick={action('clicked')} type="text">secondary</SubmitButton>
-        <SubmitButton color="blue" handleClick={action('clicked')} type="text">blue</SubmitButton>
-        <SubmitButton color="green" handleClick={action('clicked')} type="text">green</SubmitButton>
-        <SubmitButton color="orange" handleClick={action('clicked')} type="text">ornage</SubmitButton>
-        <SubmitButton color="purple" handleClick={action('clicked')} type="text">purple</SubmitButton>
-        <SubmitButton color="red" handleClick={action('clicked')} type="text">red</SubmitButton>
-      </div>
+      {TYPES.map(type => (
+        <div key={`${type}_color`}>
+          {COLORS.map(color => (
+            <SubmitButton
+              color={color}
+              handleClick={action('`SubmitButton Colors` onClick event triggered.')}
+              key={`${type}_${color}`}
+              type={type}
+            >
+              {color}
+            </SubmitButton>
+          ))}
+        </div>
+      ))}
     </div>
   </Story>
 </Preview>

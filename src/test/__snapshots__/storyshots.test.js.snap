@@ -3691,21 +3691,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Radio RadioGroup with Kno
 </form>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/SubmitButton All SubmitButtons 1`] = `
-<button
-  className="ce-button ce-button--default ce-button--small ce-button--primary"
-  disabled={false}
-  onClick={[Function]}
-  type="submit"
->
-  <span
-    className="ce-button__label"
-  >
-    a button
-  </span>
-</button>
-`;
-
 exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton Colors 1`] = `
 <div>
   <div>
@@ -3731,6 +3716,18 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
         className="ce-button__label"
       >
         secondary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--small ce-button--black"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        black
       </span>
     </button>
     <button
@@ -3794,7 +3791,6 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       </span>
     </button>
   </div>
-  <br />
   <div>
     <button
       className="ce-button ce-button--outline ce-button--small ce-button--primary"
@@ -3818,6 +3814,18 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
         className="ce-button__label"
       >
         secondary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--black"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        black
       </span>
     </button>
     <button
@@ -3881,7 +3889,6 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       </span>
     </button>
   </div>
-  <br />
   <div>
     <button
       className="ce-button ce-button--text ce-button--small ce-button--primary"
@@ -3905,6 +3912,18 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
         className="ce-button__label"
       >
         secondary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--black"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        black
       </span>
     </button>
     <button
@@ -3940,7 +3959,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       <span
         className="ce-button__label"
       >
-        ornage
+        orange
       </span>
     </button>
     <button
@@ -3983,7 +4002,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       <span
         className="ce-button__label"
       >
-        normal small
+        default small
       </span>
     </button>
     <button
@@ -3995,7 +4014,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       <span
         className="ce-button__label"
       >
-        normal large
+        default large
       </span>
     </button>
     <button
@@ -4007,11 +4026,10 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       <span
         className="ce-button__label"
       >
-        normal jumbo
+        default jumbo
       </span>
     </button>
   </div>
-  <br />
   <div>
     <button
       className="ce-button ce-button--outline ce-button--small ce-button--primary"
@@ -4050,7 +4068,6 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       </span>
     </button>
   </div>
-  <br />
   <div>
     <button
       className="ce-button ce-button--text ce-button--small ce-button--primary"
@@ -4094,42 +4111,84 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
 
 exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton States 1`] = `
 <div>
-  <button
-    className="ce-button ce-button--default ce-button--small ce-button--primary ce-button--disabled"
-    disabled={true}
-    onClick={[Function]}
-    type="submit"
-  >
-    <span
-      className="ce-button__label"
+  <div>
+    <button
+      className="ce-button ce-button--default ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
     >
-      small disabled
-    </span>
-  </button>
-  <button
-    className="ce-button ce-button--outline ce-button--small ce-button--primary ce-button--disabled"
-    disabled={true}
-    onClick={[Function]}
-    type="submit"
-  >
-    <span
-      className="ce-button__label"
+      <span
+        className="ce-button__label"
+      >
+        default default
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--small ce-button--primary ce-button--disabled"
+      disabled={true}
+      onClick={[Function]}
+      type="submit"
     >
-      small outline disabled
-    </span>
-  </button>
-  <button
-    className="ce-button ce-button--text ce-button--small ce-button--primary ce-button--disabled"
-    disabled={true}
-    onClick={[Function]}
-    type="submit"
-  >
-    <span
-      className="ce-button__label"
+      <span
+        className="ce-button__label"
+      >
+        disabled default
+      </span>
+    </button>
+  </div>
+  <div>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
     >
-      small text disabled
-    </span>
-  </button>
+      <span
+        className="ce-button__label"
+      >
+        default outline
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--primary ce-button--disabled"
+      disabled={true}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        disabled outline
+      </span>
+    </button>
+  </div>
+  <div>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        default text
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--primary ce-button--disabled"
+      disabled={true}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        disabled text
+      </span>
+    </button>
+  </div>
 </div>
 `;
 
@@ -4144,7 +4203,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
     <span
       className="ce-button__label"
     >
-      standard button
+      default button
     </span>
   </button>
   <button
@@ -4172,6 +4231,21 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
     </span>
   </button>
 </div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton with Knobs 1`] = `
+<button
+  className="ce-button ce-button--default ce-button--small ce-button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="submit"
+>
+  <span
+    className="ce-button__label"
+  >
+    a button
+  </span>
+</button>
 `;
 
 exports[`Storyshots Components/Molecules/Icons/ProductIcon All ProductIcons 1`] = `
