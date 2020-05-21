@@ -1,9 +1,4 @@
-import { Description,
-  Meta,
-  Preview,
-  Props,
-  Story,
-} from '@storybook/addon-docs/blocks';
+import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
 
@@ -27,9 +22,9 @@ import { COMPONENT_STATES as STATES, COLORS, SIZES, SYSTEM_ICONS } from '../../u
     color={select('color', COLORS, 'primary')}
     disabled={boolean('disabled', false)}
     formId={text('formId', 'formKnobs')}
-    handleChange={action('`ToggleButtonGroups with Knobs` onChange event triggered.')}
+    handleChange={action('`ToggleButtonGroup with Knobs` onChange event triggered.')}
     name={text('name', 'formKnobs')}
-    selectedValue={select('selectedValue', ['follow', 'message'], 'message')}
+    selectedValue={select('selectedValue', ['export','follow', 'message'], 'follow')}
     size={select('size', SIZES, 'large')}
   >
     <ToggleButton icon="export" value="export" />
@@ -42,7 +37,7 @@ import { COMPONENT_STATES as STATES, COLORS, SIZES, SYSTEM_ICONS } from '../../u
   <ToggleButtonGroup
     handleChange={action('`ToggleButton with Knobs` onChange event triggered.')}
     name="formKnobs2"
-    selectedValue={text('selectedValue', '')}
+    selectedValue={text('selectedValue', 'follow')}
   >
     <ToggleButton
       className={text('className', '')}
@@ -78,7 +73,7 @@ import { COMPONENT_STATES as STATES, COLORS, SIZES, SYSTEM_ICONS } from '../../u
           handleChange={action('`ToggleButton Sizes` onChange event triggered.')}
           key={`formSizes_${size}`}
           name={`formSizes_${size}`}
-          selectedValue="no"
+          selectedValue="follow"
           size={size}
         >
           <ToggleButton icon="export" value="export" />
@@ -119,7 +114,7 @@ import { COMPONENT_STATES as STATES, COLORS, SIZES, SYSTEM_ICONS } from '../../u
           handleChange={action('`ToggleButton Colors` onChange event triggered.')}
           key={`formColors_${color}`}
           name={`formColor_${color}`}
-          selectedValue="yes"
+          selectedValue="follow"
         >
           <ToggleButton icon="export" value="export" />
           <ToggleButton icon="follow" value="follow" />

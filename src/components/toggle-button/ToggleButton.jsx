@@ -3,11 +3,9 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import { SystemIcon } from '../icon';
-import * as CONSTANTS from '../../utils/constants';
+import { SIZES } from '../../utils/constants';
 
 import './toggle-button.less';
-
-const { SIZES } = CONSTANTS;
 
 /**
  * I am a `<ToggleButton />` description.
@@ -91,7 +89,7 @@ ToggleButton.defaultProps = {
   disabled: false,
   isA: 'radio',
   name: undefined,
-  size: '',
+  size: 'large',
 };
 
 export default ToggleButton;

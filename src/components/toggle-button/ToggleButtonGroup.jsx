@@ -10,7 +10,7 @@ import './toggle-button-group.less';
 const { COLORS, SIZES } = CONSTANTS;
 
 /**
- * I am a `<ToggleButtonGroup />` description.
+ * `ToggleButton` description and directions.
  */
 const ToggleButtonGroup = props => {
   const {
@@ -25,17 +25,17 @@ const ToggleButtonGroup = props => {
     size,
   } = props;
 
+  /* eslint-disable prettier/prettier */
   const classes = cx(
     'ce-toggle-button-group',
     {
-      /* eslint-disable prettier/prettier */
       [`ce-toggle-button-group--${size}`]: SIZES.includes(size.toString().toLowerCase()),
       [`ce-toggle-button-group--${color}`]: COLORS.includes(color.toString().toLowerCase()),
-      /* eslint-enable prettier/prettier */
       'ce-toggle-button-group--disabled': disabled,
     },
     className,
   );
+  /* eslint-enable prettier/prettier */
 
   return (
     <FormControlGroup
@@ -90,7 +90,7 @@ ToggleButtonGroup.propTypes = {
     PropTypes.bool,
   ]),
   /**
-   * The size of the `<ToggleButtonGroup />.
+   * The size of the `<ToggleButtonGroup />`.
    */
   size: PropTypes.oneOf(SIZES),
   // validators: PropTypes.array,
