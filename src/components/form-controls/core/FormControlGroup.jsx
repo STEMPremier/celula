@@ -2,6 +2,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ *  `FormControlGroup` is used for grouping arbitrary form-control-like componets that need to operate like checkboxes or a radio buttons.
+ *  It is the basis for the 'gouping' components found through out the ui kit.
+ *
+ * `FormControlGroup` has no specific styles beyone those it children componets bring with them.
+ */
 class FormControlGroup extends Component {
   state = {
     selectedValues: this.props.selectedValues, // eslint-disable-line react/destructuring-assignment
@@ -81,7 +87,7 @@ class FormControlGroup extends Component {
 
 FormControlGroup.propTypes = {
   /**
-   * Props psees to all the children of the `<FormControlGroup />`.
+   * Props passed to all the children of the `<FormControlGroup />`.
    */
   childProps: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   /**
