@@ -10,7 +10,7 @@ import { boolean, select, text } from '@storybook/addon-knobs';
 import { Radio, RadioGroup } from '.';
 import { COMPONENT_STATES as STATES } from '../../../utils/constants';
 
-<Meta component={RadioGroup} title="Components/Molecules/Form Controls/RadioGroup" />
+<Meta component={RadioGroup} title="Components/Molecules/Form Controls/Radio" />
 
 # RadioGroup and Radio
 ## RadioGroup
@@ -21,15 +21,14 @@ import { COMPONENT_STATES as STATES } from '../../../utils/constants';
 <Description of={Radio} />
 <Props of={Radio} />
 
-<Story name="RadioGroups with Knobs" parameters={{ docs: {disable: true}}}>
+<Story name="RadioGroup with Knobs" parameters={{ docs: {disable: true}}}>
   <form id="formKnobs">
     <RadioGroup
       className={text('className', '')}
       disabled={boolean('disabled', false)}
-      errorClass={text('errorClass', '')}
       errorMsg={text('errorMsg', '')}
       formId={text('formId', 'formKnobs')}
-      handleChange={action('`RadioGroups with Knobs` onChange event triggered.')}
+      handleChange={action('`RadioGroup with Knobs` onChange event triggered.')}
       label={text('label', 'Choose your favorite OS:')}
       name={text('name', 'favoriteOS')}
       selectedValue={text('selectedValue', 'macos')}
@@ -41,7 +40,7 @@ import { COMPONENT_STATES as STATES } from '../../../utils/constants';
   </form>
 </Story>
 
-<Story name="Radios with Knobs" parameters={{ docs: {disable: true}}}>
+<Story name="Radio with Knobs" parameters={{ docs: {disable: true}}}>
   <Radio
     className={text('className', '')}
     label={text('label', 'macOS')}
@@ -51,11 +50,11 @@ import { COMPONENT_STATES as STATES } from '../../../utils/constants';
 
 ### Types
 <Preview>
-  <Story name="RadioGroup Types">
+  <Story name="Radio Types">
     <form id="formTypes">
       <RadioGroup
         formId="formTypes"
-        handleChange={action('`RadioGroups Types` onChange event triggered.')}
+        handleChange={action('`Radio Types` onChange event triggered.')}
         handleChange={val => console.log(`The value is ${val}`)}
         label="Please make a choice:"
         name="choice"
@@ -71,20 +70,22 @@ import { COMPONENT_STATES as STATES } from '../../../utils/constants';
 
 ### States
 <Preview>
-  <Story name="RadioGroup States">
+  <Story name="Radio States">
     <form id="formStates">
       {STATES.map(state => (
         <RadioGroup
           disabled={state === 'disabled'}
           errorMsg={state === 'error' ? 'You did not choose wisely!' : ''}
           formId="formStates"
-          handleChange={action('`RadioGroups States` onChange event triggered.')}
-          label={`${state.charAt(0).toUpperCase() + state.slice(1)} RadioGroup:`}
+          handleChange={action('`Radio States` onChange event triggered.')}
+          label={`${state.charAt(0).toUpperCase()}${state.slice(1)} RadioGroup:`}
           name={`${state}Group`}
           selectedValue="thatOne"
         >
           <Radio label="This one" value="thisOne" />
           <Radio label="That one" value="thatOne" />
+          <Radio label="This other one" value="thisOtherOne" />
+          <Radio label="That other one" value="thatOtherOne" />
         </RadioGroup>
       ))}
     </form>
