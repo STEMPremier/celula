@@ -1788,7 +1788,7 @@ Array [
     </span>
   </fieldset>,
   <fieldset
-    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary ce-toggle-button-group--disabled"
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--disabled"
     disabled={true}
     form=""
     onChange={[Function]}

@@ -8,7 +8,7 @@ import { SIZES } from '../../utils/constants';
 import './toggle-button.less';
 
 /**
- * I am a `<ToggleButton />` description.
+ * `ToggleButton` description and directions.
  */
 const ToggleButton = props => {
   const { checked, className, disabled, icon, name, size, value } = props;
