@@ -264,6 +264,66 @@ button {
   }
 }
 
+// Black Base Colors
+.ce-button--black {
+  background: @black;
+  color: @white;
+
+  // States
+  &:hover {
+    background: #404040; // 50%-ish lighter
+  }
+
+  &:active {
+    background: #262626; // 30%-ish lighter
+  }
+
+  &.ce-button--disabled {
+    background: @focus-gray;
+  }
+
+  // Outline Colors
+  &.ce-button--outline {
+    color: @black;
+
+    // States
+    &:hover {
+      color: #404040; // 50%-ish lighter
+    }
+
+    &:active {
+      color: #262626; // 30%-ish lighter
+    }
+
+    &.ce-button--disabled {
+      color: @focus-gray;
+    }
+  }
+
+  // Text Colors
+  &.ce-button--text {
+    background: @white;
+    color: @black;
+
+    // States
+    &:hover {
+      color: #404040; // 50%-ish lighter
+    }
+
+    &:active {
+      color: #262626; // 30%-ish lighter
+    }
+
+    &:focus {
+      color: #262626; // 30%-ish lighter
+    }
+
+    &.ce-button--disabled {
+      color: @focus-gray;
+    }
+  }
+}
+
 // Blue Base Colors
 .ce-button--blue {
   background: @blue;

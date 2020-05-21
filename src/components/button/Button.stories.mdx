@@ -39,7 +39,7 @@ import {
           key={type}
           type={type}
         >
-          {type} button
+          {`${type} button`}
         </Button>
       ))}
     </div>
@@ -51,7 +51,7 @@ import {
   <Story name="Button Sizes">
     <div>
       {TYPES.map(type => (
-        <div>
+        <div key={`${type}_size`}>
           {SIZES.map(size => (
             <Button
               handleClick={action('`Button Sizes` onClick event triggered.')}
@@ -59,7 +59,7 @@ import {
               size={size}
               type={type}
             >
-              {type} {size}
+              {`${type} ${size}`}
             </Button>
           ))}
         </div>
@@ -73,7 +73,7 @@ import {
   <Story name="Button States">
     <div>
       {TYPES.map(type => (
-        <div>
+        <div key={`${type}_state`}>
           {STATES.filter(state => state !== 'error').map(state => (
             <Button
               disabled={state === 'disabled'}
@@ -81,7 +81,7 @@ import {
               key={`${state}_${type}`}
               type={type}
             >
-              {state} {type}
+              {`${state} ${type}`}
             </Button>
           ))}
         </div>
@@ -95,7 +95,7 @@ import {
   <Story name="Button Colors">
     <div>
       {TYPES.map(type => (
-        <div>
+        <div key={`${type}_color`}>
           {COLORS.map(color => (
             <Button
               color={color}
@@ -111,4 +111,3 @@ import {
     </div>
   </Story>
 </Preview>
-

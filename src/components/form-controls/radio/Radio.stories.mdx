@@ -78,6 +78,7 @@ import { COMPONENT_STATES as STATES } from '../../../utils/constants';
           errorMsg={state === 'error' ? 'You did not choose wisely!' : ''}
           formId="formStates"
           handleChange={action('`Radio States` onChange event triggered.')}
+          key={state}
           label={`${state.charAt(0).toUpperCase()}${state.slice(1)} RadioGroup:`}
           name={`${state}Group`}
           selectedValue="thatOne"

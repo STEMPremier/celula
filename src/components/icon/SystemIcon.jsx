@@ -2,12 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import * as CONSTANTS from '../../utils/constants';
+import { COLORS, SIZES, SYSTEM_ICONS } from '../../utils/constants';
 
 import './icons/icons.svg';
 import './icon.less';
-
-const { COLORS, SIZES, SYSTEM_ICONS } = CONSTANTS;
 
 /**
  * System icons are designed to be simple, modern and friendly.
@@ -39,7 +37,7 @@ SystemIcon.propTypes = {
   /*
    * The color of the `<SystemIcon />`
    */
-  color: PropTypes.oneOf('', ...COLORS),
+  color: PropTypes.oneOf(['', ...COLORS]),
   /**
    * The `<SystemIcon />`.
    */

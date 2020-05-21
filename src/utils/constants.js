@@ -3,6 +3,7 @@ const COMPONENT_STATES = ['default', 'disabled', 'error'];
 const COLORS = [
   'primary',
   'secondary',
+  'black',
   'blue',
   'green',
   'orange',

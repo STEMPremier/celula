@@ -28,6 +28,18 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
+      className="ce-button ce-button--default ce-button--large ce-button--black"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        black
+      </span>
+    </button>
+    <button
       className="ce-button ce-button--default ce-button--large ce-button--blue"
       disabled={false}
       onClick={[Function]}
@@ -111,6 +123,18 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
         className="ce-button__label"
       >
         secondary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--large ce-button--black"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        black
       </span>
     </button>
     <button
@@ -200,6 +224,18 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
+      className="ce-button ce-button--text ce-button--large ce-button--black"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        black
+      </span>
+    </button>
+    <button
       className="ce-button ce-button--text ce-button--large ce-button--blue"
       disabled={false}
       onClick={[Function]}
@@ -275,9 +311,7 @@ exports[`Storyshots Components/Atoms/Button Button Sizes 1`] = `
       <span
         className="ce-button__label"
       >
-        default
-         
-        small
+        default small
       </span>
     </button>
     <button
@@ -289,9 +323,7 @@ exports[`Storyshots Components/Atoms/Button Button Sizes 1`] = `
       <span
         className="ce-button__label"
       >
-        default
-         
-        large
+        default large
       </span>
     </button>
     <button
@@ -303,9 +335,7 @@ exports[`Storyshots Components/Atoms/Button Button Sizes 1`] = `
       <span
         className="ce-button__label"
       >
-        default
-         
-        jumbo
+        default jumbo
       </span>
     </button>
   </div>
@@ -319,9 +349,7 @@ exports[`Storyshots Components/Atoms/Button Button Sizes 1`] = `
       <span
         className="ce-button__label"
       >
-        outline
-         
-        small
+        outline small
       </span>
     </button>
     <button
@@ -333,9 +361,7 @@ exports[`Storyshots Components/Atoms/Button Button Sizes 1`] = `
       <span
         className="ce-button__label"
       >
-        outline
-         
-        large
+        outline large
       </span>
     </button>
     <button
@@ -347,9 +373,7 @@ exports[`Storyshots Components/Atoms/Button Button Sizes 1`] = `
       <span
         className="ce-button__label"
       >
-        outline
-         
-        jumbo
+        outline jumbo
       </span>
     </button>
   </div>
@@ -363,9 +387,7 @@ exports[`Storyshots Components/Atoms/Button Button Sizes 1`] = `
       <span
         className="ce-button__label"
       >
-        text
-         
-        small
+        text small
       </span>
     </button>
     <button
@@ -377,9 +399,7 @@ exports[`Storyshots Components/Atoms/Button Button Sizes 1`] = `
       <span
         className="ce-button__label"
       >
-        text
-         
-        large
+        text large
       </span>
     </button>
     <button
@@ -391,9 +411,7 @@ exports[`Storyshots Components/Atoms/Button Button Sizes 1`] = `
       <span
         className="ce-button__label"
       >
-        text
-         
-        jumbo
+        text jumbo
       </span>
     </button>
   </div>
@@ -412,9 +430,7 @@ exports[`Storyshots Components/Atoms/Button Button States 1`] = `
       <span
         className="ce-button__label"
       >
-        default
-         
-        default
+        default default
       </span>
     </button>
     <button
@@ -426,9 +442,7 @@ exports[`Storyshots Components/Atoms/Button Button States 1`] = `
       <span
         className="ce-button__label"
       >
-        disabled
-         
-        default
+        disabled default
       </span>
     </button>
   </div>
@@ -442,9 +456,7 @@ exports[`Storyshots Components/Atoms/Button Button States 1`] = `
       <span
         className="ce-button__label"
       >
-        default
-         
-        outline
+        default outline
       </span>
     </button>
     <button
@@ -456,9 +468,7 @@ exports[`Storyshots Components/Atoms/Button Button States 1`] = `
       <span
         className="ce-button__label"
       >
-        disabled
-         
-        outline
+        disabled outline
       </span>
     </button>
   </div>
@@ -472,9 +482,7 @@ exports[`Storyshots Components/Atoms/Button Button States 1`] = `
       <span
         className="ce-button__label"
       >
-        default
-         
-        text
+        default text
       </span>
     </button>
     <button
@@ -486,9 +494,7 @@ exports[`Storyshots Components/Atoms/Button Button States 1`] = `
       <span
         className="ce-button__label"
       >
-        disabled
-         
-        text
+        disabled text
       </span>
     </button>
   </div>
@@ -506,8 +512,7 @@ exports[`Storyshots Components/Atoms/Button Button Types 1`] = `
     <span
       className="ce-button__label"
     >
-      default
-       button
+      default button
     </span>
   </button>
   <button
@@ -519,8 +524,7 @@ exports[`Storyshots Components/Atoms/Button Button Types 1`] = `
     <span
       className="ce-button__label"
     >
-      outline
-       button
+      outline button
     </span>
   </button>
   <button
@@ -532,8 +536,7 @@ exports[`Storyshots Components/Atoms/Button Button Types 1`] = `
     <span
       className="ce-button__label"
     >
-      text
-       button
+      text button
     </span>
   </button>
 </div>
@@ -753,6 +756,117 @@ exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Colors 1`] = `
       />
       <label
         htmlFor="formColor_secondary_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--black"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_black_export"
+        name="formColor_black"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formColor_black_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formColor_black_follow"
+        name="formColor_black"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formColor_black_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_black_message"
+        name="formColor_black"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formColor_black_message"
       >
         <span
           className="ce-toggle-button__label--hidden"
@@ -2268,6 +2382,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox States 
     <span
       className="ce-checkbox__center"
     />
+    
   </div>
   <div
     className="ce-checkbox ce-checkbox--disabled"
@@ -2290,6 +2405,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox States 
     <span
       className="ce-checkbox__center"
     />
+    
   </div>
   <div
     className="ce-checkbox ce-checkbox--error"

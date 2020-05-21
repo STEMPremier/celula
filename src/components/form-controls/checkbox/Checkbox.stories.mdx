@@ -56,8 +56,9 @@ import { COMPONENT_STATES as STATES } from '../../../utils/constants';
       {STATES.map(state => (
         <Checkbox
           disabled={state === 'disabled'}
-          errorMsg={state === 'error' && "There is an error."}
+          errorMsg={state === 'error' ? "There is an error." : ''}
           formId="formStates"
+          key={state}
           label={`${state.charAt(0).toUpperCase()}${state.slice(1)} Checkbox`}
           name={`${state}_checkbox`}
           value={state}

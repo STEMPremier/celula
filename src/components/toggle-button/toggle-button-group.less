@@ -59,6 +59,7 @@
   }
 }
 
+// Colors
 .ce-toggle-button-group--primary {
   background: @gradient-cool;
 
@@ -117,6 +118,43 @@
 
     &:active {
       background: #80002a;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &.ce-toggle-button--checked {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+  }
+}
+
+.ce-toggle-button-group--black {
+  background: @black;
+
+  .ce-toggle-button {
+    background: @white;
+
+    label .ce-icon {
+      stroke: @black;
+    }
+
+    // States
+    &:hover {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &:active {
+      background: #262626;
 
       label .ce-icon {
         stroke: @white;
