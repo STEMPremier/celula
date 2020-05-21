@@ -41,15 +41,12 @@ class Input extends Component {
 
   // make a switch statement eventually
   checkValiditiy = () => {
+    let isValid = true;
     if (this.props.type === 'email') {
-      if (
-        // eslint-disable-next-line no-useless-escape
-        !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.value)
-      ) {
-        this.setState({
-          valid: false,
-        });
-      }
+      // eslint-disable-next-line no-useless-escape
+      isValid = !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+        this.state.value,
+      );
     }
     if (this.props.type === 'password') {
       const minLength = 8;
@@ -74,13 +71,39 @@ class Input extends Component {
         if (passwordHasLowercase(password)) count += 1;
         if (passwordHasNumber(password)) count += 1;
         if (passwordHasSpecial(password)) count += 1;
-        if (count < 3) {
-          this.setState({
-            valid: false,
-          });
+        const min8 = passwordLongEnough(password);
+        if (count > 2 && min8 === true) {
+          isValid = true;
+        } else {
+          isValid = false;
         }
       };
       passwordSatisfiesThree(this.state.value);
+    }
+    if (this.props.type === 'url') {
+      const pattern = new RegExp(
+        '^(https?:\\/\\/)?' + // protocol
+        '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+        '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+        '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+        '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+          '(\\#[-a-z\\d_]*)?$',
+        'i',
+      ); // fragment locator
+      // console.log('pattern', pattern);
+      isValid = pattern.test(this.state.value);
+      // console.log('isValidUrl', isValid);
+    }
+    // console.log('isValid', isValid);
+    // sets state for all types depending on the isValid boolean
+    if (isValid === false) {
+      this.setState({
+        valid: false,
+      });
+    } else {
+      this.setState({
+        valid: true,
+      });
     }
   };
 
@@ -88,7 +111,13 @@ class Input extends Component {
   handleChange = event => {
     // console.log('handleChange props', this.props);
     const { type } = this.props;
-    if (type === 'text' || type === 'email' || type === 'password') {
+    if (
+      type === 'text' ||
+      type === 'email' ||
+      type === 'password' ||
+      type === 'url' ||
+      type === 'search'
+    ) {
       this.setState({
         value: event.target.value,
       });
@@ -99,17 +128,17 @@ class Input extends Component {
     // this.checkValiditiy();
   };
 
-  handleClick = event => {
-    // console.log('clicked', event.target);
-    if (this.props.type === 'text' || this.props.type === 'email') {
-      this.setState({
-        value: event.target.value,
-      });
-    }
-    if (this.props.type === 'datetime-local') {
-      console.log(event.target.value);
-    }
-  };
+  // handleClick = event => {
+  //   // console.log('clicked', event.target);
+  //   if (this.props.type === 'text' || this.props.type === 'email') {
+  //     this.setState({
+  //       value: event.target.value,
+  //     });
+  //   }
+  //   if (this.props.type === 'datetime-local') {
+  //     console.log(event.target.value);
+  //   }
+  // };
 
   render() {
     const {
