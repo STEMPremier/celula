@@ -42,13 +42,13 @@ class Input extends Component {
   // make a switch statement eventually
   checkValiditiy = () => {
     let isValid = true;
-    if (this.props.type === 'email') {
+    if (this.props.htmlType === 'email') {
       // eslint-disable-next-line no-useless-escape
       isValid = !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
         this.state.value,
       );
     }
-    if (this.props.type === 'password') {
+    if (this.props.htmlType === 'password') {
       const minLength = 8;
       const passwordLongEnough = password =>
         !!(password && password.length >= minLength);
@@ -80,7 +80,7 @@ class Input extends Component {
       };
       passwordSatisfiesThree(this.state.value);
     }
-    if (this.props.type === 'url') {
+    if (this.props.htmlType === 'url') {
       const pattern = new RegExp(
         '^(https?:\\/\\/)?' + // protocol
         '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
@@ -110,19 +110,19 @@ class Input extends Component {
   // note that the datetime-local handleChange only works when you have filled in the time.  Need more instruction about how to handle time before moving forward with datetime-local.
   handleChange = event => {
     // console.log('handleChange props', this.props);
-    const { type } = this.props;
+    const { htmlType } = this.props;
     // if (
-    //   type === 'text' ||
-    //   type === 'email' ||
-    //   type === 'password' ||
-    //   type === 'url' ||
-    //   type === 'search'
+    //   htmlType === 'text' ||
+    //   htmlType === 'email' ||
+    //   htmlType === 'password' ||
+    //   htmlType === 'url' ||
+    //   htmlType === 'search'
     // ) {
     this.setState({
       value: event.target.value,
     });
     // }
-    // if (type === 'datetime-local' || type) {
+    // if (htmlType === 'datetime-local' || htmlType) {
     // console.log('inside datetime handleChange', event.target.value);
     // }
     // this.checkValiditiy();
@@ -130,12 +130,12 @@ class Input extends Component {
 
   // handleClick = event => {
   //   // console.log('clicked', event.target);
-  //   if (this.props.type === 'text' || this.props.type === 'email') {
+  //   if (this.props.htmlType === 'text' || this.props.htmlType === 'email') {
   //     this.setState({
   //       value: event.target.value,
   //     });
   //   }
-  //   if (this.props.type === 'datetime-local') {
+  //   if (this.props.htmlType === 'datetime-local') {
   //     console.log(event.target.value);
   //   }
   // };
@@ -150,7 +150,7 @@ class Input extends Component {
       label,
       size,
       toolTip,
-      type,
+      htmlType,
       name,
       min,
       max,
@@ -165,7 +165,9 @@ class Input extends Component {
     const classes = cx(
       'ce-input',
       {
-        [`ce-input--${type}`]: TYPES.includes(type.toString().toLowerCase()),
+        [`ce-input--${htmlType}`]: TYPES.includes(
+          htmlType.toString().toLowerCase(),
+        ),
         [`ce-input--${size}`]: SIZES.includes(size.toString().toLowerCase()),
         [`ce-input--${icon}`]: ICON.includes(icon.toString().toLowerCase()),
         'ce-input--disabled': disabled,
@@ -183,7 +185,7 @@ class Input extends Component {
         <div className="ce-input--box">
           <input
             name={name}
-            type={type}
+            type={htmlType}
             value={value}
             toolTip={toolTip}
             size={size}
@@ -275,7 +277,7 @@ Input.propTypes = {
     PropTypes.number,
     PropTypes.bool,
   ]).isRequired,
-  type: PropTypes.oneOf([...TYPES, 'default']),
+  htmlType: PropTypes.oneOf([...TYPES, 'default']),
   name: PropTypes.string.isRequired,
   /**
    * This function is accesible to the user for clickable events on the right arrow in the gradient
@@ -295,7 +297,7 @@ Input.defaultProps = {
   icon: '',
   size: 'small',
   toolTip: null,
-  type: 'text',
+  htmlType: 'text',
   showArrow: false,
   min: '',
   max: '',
