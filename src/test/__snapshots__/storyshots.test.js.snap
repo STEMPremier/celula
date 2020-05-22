@@ -1417,6 +1417,794 @@ exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup Form Con
 </form>
 `;
 
+exports[`Storyshots Components/Molecules/Form Controls/Input All Inputs 1`] = `
+<form
+  id="formOne"
+>
+  <div
+    className="ce-input"
+  >
+    <label
+      className="ce-input--label"
+    >
+      Label
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={false}
+        icon=""
+        max=""
+        min=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        size=""
+        toolTip=""
+        type=""
+        value="value"
+      />
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Input Color 1`] = `
+<form
+  id="formColor"
+>
+  <div
+    className="ce-input ce-input--color ce-input--small"
+  >
+    <label
+      className="ce-input--label"
+    >
+      Color
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={false}
+        icon=""
+        max=""
+        min=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="color"
+        value=""
+      />
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Input Datetime Local 1`] = `
+<form
+  id="formDateRange"
+>
+  <div
+    className="ce-input ce-input--datetime-local ce-input--small"
+  >
+    <label
+      className="ce-input--label"
+    >
+      When did you start and end?
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={false}
+        icon=""
+        max=""
+        min=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="datetime-local"
+        value=""
+      />
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Input Disabled 1`] = `
+<form
+  id="formDisabled"
+>
+  <div
+    className="ce-input ce-input--text ce-input--small ce-input--disabled"
+  >
+    <label
+      className="ce-input--label"
+    >
+      Text input label (optional)
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={true}
+        icon=""
+        max=""
+        min=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="text"
+        value="Disabled"
+      />
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+  </div>
+  <div
+    className="ce-input ce-input--text ce-input--small ce-input--disabled ce-input--show-arrow"
+  >
+    <label
+      className="ce-input--label"
+    >
+      Text input label (optional)
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={true}
+        icon=""
+        max=""
+        min=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="text"
+        value="Disabled with right arrow button"
+      />
+      <button
+        className="ce-input--outside-arrow"
+        onClick={[Function]}
+        type="submit"
+      >
+        <span
+          className="ce-icon ce-icon__system"
+        >
+          <svg
+            className="ce-icon--white"
+          >
+            <use
+              xlinkHref="#icons_system-navigate"
+            />
+          </svg>
+        </span>
+      </button>
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Input Email 1`] = `
+<form
+  id="formEmail"
+>
+  <div
+    className="ce-input ce-input--email ce-input--small"
+  >
+    <label
+      className="ce-input--label"
+    >
+      What is your email?
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={false}
+        icon=""
+        max=""
+        min=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="email"
+        value=""
+      />
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Input Error 1`] = `
+<form
+  id="formError"
+>
+  <div
+    className="ce-input ce-input--text ce-input--small ce-input--error"
+  >
+    <label
+      className="ce-input--label"
+    >
+      Text input label (optional)
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={false}
+        icon=""
+        max=""
+        min=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="text"
+        value="Error"
+      />
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+    <div
+      className="ce-input--error-box-wrapper"
+    >
+      <div
+        className="ce-input--arrow"
+      />
+      <div
+        className="ce-input--error-box"
+      >
+        <span
+          className="ce-input--error-box-text"
+          error={true}
+        >
+          error message
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="ce-input ce-input--text ce-input--small ce-input--error ce-input--show-arrow"
+  >
+    <label
+      className="ce-input--label"
+    >
+      Text input label (optional)
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={false}
+        icon=""
+        max=""
+        min=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="text"
+        value="Error"
+      />
+      <button
+        className="ce-input--outside-arrow"
+        onClick={[Function]}
+        type="submit"
+      >
+        <span
+          className="ce-icon ce-icon__system"
+        >
+          <svg
+            className="ce-icon--white"
+          >
+            <use
+              xlinkHref="#icons_system-navigate"
+            />
+          </svg>
+        </span>
+      </button>
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+    <div
+      className="ce-input--error-box-wrapper"
+    >
+      <div
+        className="ce-input--arrow"
+      />
+      <div
+        className="ce-input--error-box"
+      >
+        <span
+          className="ce-input--error-box-text"
+          error={true}
+        >
+          error message
+        </span>
+      </div>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Input File 1`] = `
+<form
+  id="formFile"
+>
+  <div
+    className="ce-input ce-input--file ce-input--small"
+  >
+    <label
+      className="ce-input--label"
+    >
+      File
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={false}
+        icon=""
+        max=""
+        min=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="file"
+        value=""
+      />
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Input Hidden 1`] = `
+<form
+  id="formHidden"
+>
+  <div
+    className="ce-input ce-input--hidden ce-input--small"
+  >
+    <label
+      className="ce-input--label"
+    >
+      Hidden
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={false}
+        icon=""
+        max=""
+        min=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="hidden"
+        value=""
+      />
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Input Month 1`] = `
+<form
+  id="formMonth"
+>
+  <div
+    className="ce-input ce-input--month ce-input--small"
+  >
+    <label
+      className="ce-input--label"
+    >
+      Month
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={false}
+        icon=""
+        max="2020-01"
+        min="2019-06"
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="month"
+        value="2019-06"
+      />
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Input Password 1`] = `
+<form
+  id="formPassword"
+>
+  <div
+    className="ce-input ce-input--password ce-input--small"
+  >
+    <label
+      className="ce-input--label"
+    >
+      Password
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={false}
+        icon=""
+        max=""
+        min=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="password"
+        value=""
+      />
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Input Search 1`] = `
+<form
+  id="formSearch"
+>
+  <div
+    className="ce-input ce-input--search ce-input--small ce-input--show-arrow"
+  >
+    <label
+      className="ce-input--label"
+    >
+      Search
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={false}
+        icon=""
+        max=""
+        min=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="search"
+        value=""
+      />
+      <button
+        className="ce-input--outside-arrow"
+        onClick={[Function]}
+        type="submit"
+      >
+        <span
+          className="ce-icon ce-icon__system"
+        >
+          <svg
+            className="ce-icon--white"
+          >
+            <use
+              xlinkHref="#icons_system-navigate"
+            />
+          </svg>
+        </span>
+      </button>
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Input Tel 1`] = `
+<form
+  id="formTel"
+>
+  <div
+    className="ce-input ce-input--tel ce-input--small"
+  >
+    <label
+      className="ce-input--label"
+    >
+      Tel
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={false}
+        icon=""
+        max=""
+        min=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="tel"
+        value=""
+      />
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Input Text States 1`] = `
+<form
+  id="formInputStates"
+>
+  <div
+    className="ce-input ce-input--text ce-input--small"
+  >
+    <label
+      className="ce-input--label"
+    >
+      Text input label (optional)
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={false}
+        icon=""
+        max=""
+        min=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="text"
+        value=""
+      />
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Input Time 1`] = `
+<form
+  id="formTime"
+>
+  <div
+    className="ce-input ce-input--time ce-input--small"
+  >
+    <label
+      className="ce-input--label"
+    >
+      Time
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={false}
+        icon=""
+        max=""
+        min=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="time"
+        value=""
+      />
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Input Url 1`] = `
+<form
+  id="formUrl"
+>
+  <div
+    className="ce-input ce-input--url ce-input--small"
+  >
+    <label
+      className="ce-input--label"
+    >
+      Url
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={false}
+        icon=""
+        max=""
+        min=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="url"
+        value=""
+      />
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Input Week 1`] = `
+<form
+  id="formWeek"
+>
+  <div
+    className="ce-input ce-input--week ce-input--small"
+  >
+    <label
+      className="ce-input--label"
+    >
+      Week
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={false}
+        icon=""
+        max="2020-W26"
+        min="2019-W18"
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="week"
+        value=""
+      />
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Input With Default Value 1`] = `
+<form
+  id="formDefaultValue"
+>
+  <div
+    className="ce-input ce-input--text ce-input--small"
+  >
+    <label
+      className="ce-input--label"
+    >
+      Would you like to complete this form?
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={false}
+        icon=""
+        max=""
+        min=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="text"
+        value="Text input label"
+      />
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Input with Right Arrow Button 1`] = `
+<form
+  id="formRightArrowButton"
+>
+  <div
+    className="ce-input ce-input--text ce-input--small ce-input--show-arrow"
+  >
+    <label
+      className="ce-input--label"
+    >
+      Text input label (optional)
+    </label>
+    <div
+      className="ce-input--box"
+    >
+      <input
+        disabled={false}
+        icon=""
+        max=""
+        min=""
+        onBlur={[Function]}
+        onChange={[Function]}
+        size="small"
+        toolTip={null}
+        type="text"
+        value="showArrow"
+      />
+      <button
+        className="ce-input--outside-arrow"
+        onClick={[Function]}
+        type="submit"
+      >
+        <span
+          className="ce-icon ce-icon__system"
+        >
+          <svg
+            className="ce-icon--white"
+          >
+            <use
+              xlinkHref="#icons_system-navigate"
+            />
+          </svg>
+        </span>
+      </button>
+      <div
+        className="ce-input--background-state"
+      />
+    </div>
+  </div>
+</form>
+`;
+
 exports[`Storyshots Components/Molecules/Form Controls/RadioGroup All RadioGroups 1`] = `
 <form
   id="formOne"

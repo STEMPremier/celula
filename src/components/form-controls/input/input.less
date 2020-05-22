@@ -7,9 +7,6 @@
   flex-wrap: nowrap;
   justify-content: left;
 
-  // background-color: @unchecked-background;
-  // border: none;
-
   &:hover ~ .ce-input--background-state {
     border: 0.3rem solid @hover-blue;
   }
@@ -21,46 +18,27 @@
   }
 
   label {
-    // appearance: none;
-    // -webkit-appearance: none;
     order: 0;
     height: 22px;
     font-size: 16px;
     margin-left: 10px;
-    // color: green;
   }
-  // input[type='datetime-local'] {
-  //   order: 1;
-  //   z-index: 2;
-  //   height: 58px;
-  //   width: 185px;
-  //   padding-left: 19px;
-  //   border-radius: 5px;
-  //   border: 3px solid purple;
-  // }
-  // input[type='datetime-local']::-webkit-inner-spin-button,
-  // input[type='datetime-local']::-webkit-calendar-picker-indicator {
-  //   display: none;
-  //   opacity: 0;
-  //   -webkit-appearance: none;
-  // }
+
   // input[type='text'],
   // input[type='email'] {
-  input[type='text'],
-  input[type='password'],
-  input[type='search'],
-  input[type='tel'],
-  input[type='url'],
-  input[type='week'],
-  input[type='file'],
-  input[type='time'],
-  input[type='month'],
-  input[type='email'],
-  input[type='color'],
-  input[type='datetime-local'] {
-    // appearance: none;
-    // -webkit-appearance: none;
-    // outline: none;
+  // input[type='text'],
+  // input[type='password'],
+  // input[type='search'],
+  // input[type='tel'],
+  // input[type='url'],
+  // input[type='week'],
+  // input[type='file'],
+  // input[type='time'],
+  // input[type='month'],
+  // input[type='email'],
+  // input[type='color'],
+  // input[type='datetime-local'] {
+  input {
     order: 1;
     z-index: 2;
     height: 58px;
@@ -68,18 +46,7 @@
     padding-left: 19px;
     border-radius: 5px;
     border: 0;
-    // border: 0.1rem solid @unchecked-gray;
-    // background-color: green;
   }
-
-  // input[type='hidden'] {
-  // &.ce-input--hidden ~ .ce-input--background-state {
-  //   height: 0;
-  //   width: 0;
-  //   background-color: green;
-  //   // border: none:
-  // }
-
   &.ce-input--hidden {
     .ce-input--box {
       height: 0;
@@ -90,10 +57,6 @@
       background-color: pink;
     }
   }
-
-  // &.ce-input--month {
-  //   background-color: green;
-  // }
 
   input {
     // state changes on input affecting background-state div
@@ -109,7 +72,6 @@
   }
 
   .ce-input--box {
-    // background-color: purple;
     margin: 0rem 0 0 1rem;
     border-radius: 0.5rem;
     width: 36rem;
@@ -119,22 +81,10 @@
     flex-direction: row;
     flex-wrap: nowrap;
     border: 0.1rem solid @unchecked-gray;
-
-    // &:hover ~ .ce-input--background-state {
-    //   border: 0.3rem solid @hover-blue;
-    // }
-    // &:focus ~ .ce-input--background-state {
-    //   border: 0.3rem solid @focus-blue;
-    // }
-    // &:active ~ .ce-input--background-state {
-    //   border: 0.3rem solid @active-blue;
-    // }
-
     // showArrow
     .ce-input--show-arrow {
       width: 38rem;
     }
-
     .ce-input--outside-arrow {
       order: 2;
       width: 7.4rem;
@@ -145,7 +95,6 @@
       margin-right: 0;
       border-radius: 0 0.5rem 0.5rem 0;
       background: @gradient-cool;
-
       svg {
         margin: auto;
         width: 50%;
@@ -188,11 +137,8 @@
     border-radius: 0.8rem;
     width: 362px;
     height: 62px;
-    // background-color: yellow;
-    // border: 3px solid pink;
     margin-top: 10px;
     margin-left: 9px;
-    // background-color: green;
   }
 
   &.ce-input--disabled {
@@ -268,13 +214,11 @@
       background-color: @error-box-background;
       border-radius: 0.5rem;
       .ce-input--error-box-text {
-        // span {
         color: white;
         text-align: center;
         padding-top: 2rem;
         padding-left: 36%;
         display: inline-block;
-        // }
       }
     }
   }
