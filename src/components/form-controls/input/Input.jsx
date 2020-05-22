@@ -36,7 +36,7 @@ class Input extends Component {
     value: this.props.value,
     startDate: '',
     endDate: '',
-    valid: toString(this.props.error !== true),
+    valid: this.props.error !== true,
   };
 
   // make a switch statement eventually
@@ -44,7 +44,7 @@ class Input extends Component {
     let isValid = true;
     if (this.props.htmlType === 'email') {
       // eslint-disable-next-line no-useless-escape
-      isValid = !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+      isValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
         this.state.value,
       );
     }
@@ -90,11 +90,9 @@ class Input extends Component {
           '(\\#[-a-z\\d_]*)?$',
         'i',
       ); // fragment locator
-      // console.log('pattern', pattern);
       isValid = pattern.test(this.state.value);
-      // console.log('isValidUrl', isValid);
     }
-    // console.log('isValid', isValid);
+
     // sets state for all types depending on the isValid boolean
     if (isValid === false) {
       this.setState({
@@ -161,6 +159,8 @@ class Input extends Component {
     } = this.props;
 
     const { value, startDate, valid } = this.state;
+
+    console.log('valid', valid);
 
     const classes = cx(
       'ce-input',
