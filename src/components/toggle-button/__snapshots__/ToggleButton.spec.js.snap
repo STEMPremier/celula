@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ToggleButton render() render the ToggleButtonGroup and Toggle components 1`] = `
+<FormControlGroup
+  childProps={
+    Object {
+      "color": "primary",
+      "size": "large",
+    }
+  }
+  className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
+  disabled={false}
+  errorClass=""
+  errorMsg=""
+  formId=""
+  handleChange={[Function]}
+  label=""
+  name="formTest"
+  selectedValues={
+    Array [
+      "follow",
+    ]
+  }
+>
+  <ToggleButton
+    checked={false}
+    className=""
+    disabled={false}
+    icon="export"
+    isA="radio"
+    size="large"
+    value="export"
+  />
+  <ToggleButton
+    checked={false}
+    className=""
+    disabled={false}
+    icon="follow"
+    isA="radio"
+    size="large"
+    value="follow"
+  />
+  <ToggleButton
+    checked={false}
+    className=""
+    disabled={false}
+    icon="message"
+    isA="radio"
+    size="large"
+    value="message"
+  />
+</FormControlGroup>
+`;
