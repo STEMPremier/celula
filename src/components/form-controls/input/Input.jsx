@@ -93,6 +93,8 @@ class Input extends Component {
       isValid = pattern.test(this.state.value);
     }
 
+    // keep the default valid state of false if coming from the boolean
+
     // sets state for all types depending on the isValid boolean
     if (isValid === false) {
       this.setState({
@@ -108,22 +110,29 @@ class Input extends Component {
   // note that the datetime-local handleChange only works when you have filled in the time.  Need more instruction about how to handle time before moving forward with datetime-local.
   handleChange = event => {
     // console.log('handleChange props', this.props);
+    // put min and max checks in the IF statements here when applicable
     const { htmlType } = this.props;
-    // if (
-    //   htmlType === 'text' ||
-    //   htmlType === 'email' ||
-    //   htmlType === 'password' ||
-    //   htmlType === 'url' ||
-    //   htmlType === 'search'
-    // ) {
-    this.setState({
-      value: event.target.value,
-    });
-    // }
-    // if (htmlType === 'datetime-local' || htmlType) {
-    // console.log('inside datetime handleChange', event.target.value);
-    // }
-    // this.checkValiditiy();
+    if (htmlType === 'month') {
+      console.log('event.target.value', event.target.value);
+      console.log('min', this.props.min);
+      console.log('max', this.props.max);
+    }
+    if (
+      htmlType === 'text' ||
+      htmlType === 'email' ||
+      htmlType === 'password' ||
+      htmlType === 'url' ||
+      htmlType === 'search'
+    ) {
+      this.setState({
+        value: event.target.value,
+      });
+      // }
+      // if (htmlType === 'datetime-local' || htmlType) {
+      // console.log('inside datetime handleChange', event.target.value);
+      // }
+      // this.checkValiditiy();
+    }
   };
 
   // handleClick = event => {
@@ -189,11 +198,13 @@ class Input extends Component {
             value={value}
             toolTip={toolTip}
             size={size}
-            onClick={this.handleClick}
+            // onClick={this.handleClick}
             onChange={this.handleChange}
             onBlur={this.checkValiditiy}
             icon={icon}
             disabled={disabled}
+            min={min}
+            max={max}
           />
           {showArrow && (
             <button
