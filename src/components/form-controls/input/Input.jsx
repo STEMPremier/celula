@@ -195,40 +195,6 @@ class Input extends Component {
             icon={icon}
             disabled={disabled}
           />
-          {/* ))} */}
-          {/* {this.props.type === 'datetime-local' && (
-            <input
-              name={name}
-              type={type}
-              value={startDate}
-              toolTip={toolTip}
-              size={size}
-              onClick={this.handleClick}
-              onChange={this.handleChange}
-              icon={icon}
-              disabled={disabled}
-              min={min}
-              max={max}
-              // min="2018-06-07T00:00"
-              // max="2018-06-14T00:00"
-              // pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
-            />
-          )} */}
-          {/* {/* {this.props.type === 'month' && ( */}
-          {/* <input
-            name={name}
-            type={type}
-            value={value}
-            toolTip={toolTip}
-            size={size}
-            onClick={this.handleClick}
-            onChange={this.handleChange}
-            icon={icon}
-            disabled={disabled}
-            min={min}
-            max={max}
-          /> */}
-          {/* )} */}
           {showArrow && (
             <button
               className="ce-input--outside-arrow"

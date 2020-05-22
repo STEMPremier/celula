@@ -119,15 +119,15 @@
     flex-wrap: nowrap;
     border: 0.1rem solid @unchecked-gray;
 
-    &:hover ~ .ce-input--background-state {
-      border: 0.3rem solid @hover-blue;
-    }
-    &:focus ~ .ce-input--background-state {
-      border: 0.3rem solid @focus-blue;
-    }
-    &:active ~ .ce-input--background-state {
-      border: 0.3rem solid @active-blue;
-    }
+    // &:hover ~ .ce-input--background-state {
+    //   border: 0.3rem solid @hover-blue;
+    // }
+    // &:focus ~ .ce-input--background-state {
+    //   border: 0.3rem solid @focus-blue;
+    // }
+    // &:active ~ .ce-input--background-state {
+    //   border: 0.3rem solid @active-blue;
+    // }
 
     // showArrow
     .ce-input--show-arrow {
@@ -213,21 +213,32 @@
   }
 
   &.ce-input--error {
-    .ce-input--background-state {
-      border: 0.3rem solid @error-box-background;
+    .ce-input--outside-arrow {
+      border-radius: 0;
     }
     .ce-input--box {
-      &:hover ~ .ce-input--background-state {
+      border: 0.3rem solid @error-box-background;
+      &:hover {
         border: 0.3rem solid @hover-red;
       }
-      &:focus ~ .ce-input--background-state {
+      &:focus {
         border: 0.3rem solid @focus-red;
       }
-      &:active ~ .ce-input--background-state {
+      &:active {
         border: 0.3rem solid @active-red;
       }
       input {
         color: @error-box-background;
+        // need to silence the triggers to the background-state changes usually happening on input when not in error state
+        &:hover ~ .ce-input--background-state {
+          border: none;
+        }
+        &:focus ~ .ce-input--background-state {
+          border: none;
+        }
+        &:active ~ .ce-input--background-state {
+          border: none;
+        }
       }
       color: @error-box-background;
       .ce-input--outside-arrow {
@@ -238,12 +249,8 @@
   }
 
   .ce-input--error-box-wrapper {
-    // background-color: blue;
     width: 365px;
     margin-left: 9px;
-    // label {
-    //   color: @error-box-background;
-    // }
     .ce-input--arrow {
       width: 0;
       height: 5;
