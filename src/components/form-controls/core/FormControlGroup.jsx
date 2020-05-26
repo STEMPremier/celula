@@ -2,6 +2,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ *  `FormControlGroup` is used for grouping arbitrary form-control-like componets that need to operate like checkboxes or a radio buttons.
+ *  It is the basis for the 'gouping' components found through out the ui kit.
+ *
+ * `FormControlGroup` has no specific styles beyone those it children componets bring with them.
+ */
 class FormControlGroup extends Component {
   state = {
     selectedValues: this.props.selectedValues, // eslint-disable-line react/destructuring-assignment
@@ -47,13 +53,14 @@ class FormControlGroup extends Component {
   };
 
   renderChildren = () => {
-    const { children, name } = this.props;
+    const { childProps, children, name } = this.props;
     const { selectedValues } = this.state;
 
     return React.Children.map(children, child => {
       const props = {
         checked: selectedValues.includes(child.props.value),
         name,
+        ...childProps,
       };
 
       return React.cloneElement(child, { ...props });
@@ -79,6 +86,10 @@ class FormControlGroup extends Component {
 }
 
 FormControlGroup.propTypes = {
+  /**
+   * Props passed to all the children of the `<FormControlGroup />`.
+   */
+  childProps: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   /**
    * The components you want the `<FormControlGroup />` to group together.
    */
@@ -110,7 +121,7 @@ FormControlGroup.propTypes = {
   /**
    * The `<FormControlGroup />` legend.
    */
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   /**
    * The name given to all the children of the `<FormControlGroup />`.
    */
@@ -124,12 +135,14 @@ FormControlGroup.propTypes = {
 };
 
 FormControlGroup.defaultProps = {
+  childProps: {},
   className: '',
   disabled: false,
   errorMsg: '',
   errorClass: '',
   formId: '',
   handleChange: () => {},
+  label: '',
   selectedValues: [],
 };
 

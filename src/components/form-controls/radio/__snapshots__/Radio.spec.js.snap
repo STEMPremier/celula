@@ -2,6 +2,7 @@
 
 exports[`<RadioGroup /> render() render the RadioGroup component 1`] = `
 <FormControlGroup
+  childProps={Object {}}
   className="ce-radio-group"
   disabled={false}
   errorClass=""

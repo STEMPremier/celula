@@ -1,0 +1,395 @@
+@import '../../styles/celula';
+
+.ce-toggle-button-group {
+  border-radius: 3.5rem;
+  border-width: 0;
+  display: inline-block;
+
+  legend {
+    display: none;
+  }
+
+  // Sizes
+  &.ce-toggle-button-group--small {
+    .ce-toggle-button {
+      label {
+        padding: 0.9rem 1.33rem 0.5rem 1.33rem;
+      }
+
+      &:first-of-type label {
+        padding-left: 2.33rem;
+      }
+
+      &:last-of-type label {
+        padding-right: 2.33rem;
+      }
+    }
+  }
+
+  &.ce-toggle-button-group--large {
+    .ce-toggle-button {
+      label {
+        padding: 1.4rem 2rem 1.1rem 2rem;
+      }
+
+      &:first-of-type label {
+        padding-left: 3rem;
+      }
+
+      &:last-of-type label {
+        padding-right: 3rem;
+      }
+    }
+  }
+
+  &.ce-toggle-button-group--jumbo {
+    .ce-toggle-button {
+      label {
+        padding: 2.4rem 2rem 2.1rem 2rem;
+      }
+
+      &:first-of-type label {
+        padding-left: 3rem;
+      }
+
+      &:last-of-type label {
+        padding-right: 3rem;
+      }
+    }
+  }
+}
+
+// Colors
+.ce-toggle-button-group--primary {
+  background: @gradient-cool;
+
+  .ce-toggle-button {
+    background: @white;
+
+    label .ce-icon {
+      stroke: @black;
+    }
+
+    // States
+    &:hover {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &:active {
+      background: #00577f;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &.ce-toggle-button--checked {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+  }
+}
+
+.ce-toggle-button-group--secondary {
+  background: @gradient-hot;
+
+  .ce-toggle-button {
+    background: @white;
+
+    label .ce-icon {
+      stroke: @black;
+    }
+
+    // States
+    &:hover {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &:active {
+      background: #80002a;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &.ce-toggle-button--checked {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+  }
+}
+
+.ce-toggle-button-group--black {
+  background: @black;
+
+  .ce-toggle-button {
+    background: @white;
+
+    label .ce-icon {
+      stroke: @black;
+    }
+
+    // States
+    &:hover {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &:active {
+      background: #262626;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &.ce-toggle-button--checked {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+  }
+}
+
+.ce-toggle-button-group--blue {
+  background: @blue;
+
+  .ce-toggle-button {
+    background: @white;
+
+    label .ce-icon {
+      stroke: @black;
+    }
+
+    // States
+    &:hover {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &:active {
+      background: #00577f;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &.ce-toggle-button--checked {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+  }
+}
+
+.ce-toggle-button-group--green {
+  background: @green;
+
+  .ce-toggle-button {
+    background: @white;
+
+    label .ce-icon {
+      stroke: @black;
+    }
+
+    // States
+    &:hover {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &:active {
+      background: #566c27;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &.ce-toggle-button--checked {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+  }
+}
+
+.ce-toggle-button-group--orange {
+  background: @orange;
+
+  .ce-toggle-button {
+    background: @white;
+
+    label .ce-icon {
+      stroke: @black;
+    }
+
+    // States
+    &:hover {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &:active {
+      background: #7d521a;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &.ce-toggle-button--checked {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+  }
+}
+
+.ce-toggle-button-group--purple {
+  background: @purple;
+
+  .ce-toggle-button {
+    background: @white;
+
+    label .ce-icon {
+      stroke: @black;
+    }
+
+    // States
+    &:hover {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &:active {
+      background: #3c1c54;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &.ce-toggle-button--checked {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+  }
+}
+
+.ce-toggle-button-group--red {
+  background: @red;
+
+  .ce-toggle-button {
+    background: @white;
+
+    label .ce-icon {
+      stroke: @black;
+    }
+
+    // States
+    &:hover {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &:active {
+      background: #80002a;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &.ce-toggle-button--checked {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+  }
+}
+
+.ce-toggle-button-group--disabled {
+  background: @focus-gray;
+  pointer-events: none;
+
+  .ce-toggle-button {
+    background: @white;
+
+    label .ce-icon {
+      stroke: @focus-gray;
+    }
+
+    // States
+    &:hover {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &:active {
+      background: @focus-gray;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+
+    &.ce-toggle-button--checked {
+      background: transparent;
+
+      label .ce-icon {
+        stroke: @white;
+      }
+    }
+  }
+}

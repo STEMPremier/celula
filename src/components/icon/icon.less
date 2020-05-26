@@ -6,7 +6,9 @@
 @secondary-icon-small: 3rem;
 @secondary-icon-large: 3.6rem;
 @secondary-icon-jumbo: 5rem;
-@system-icon-size: @base-font-size;
+@system-icon-small: 1.2rem;
+@system-icon-large: @base-font-size;
+@system-icon-jumbo: @base-font-size;
 
 // Primary icons
 .ce-icon {
@@ -129,9 +131,36 @@
 // System icons
 .ce-icon {
   &.ce-icon__system {
-    svg {
-      height: @system-icon-size;
-      width: @system-icon-size;
+    stroke: @gray;
+
+    &.ce-icon--small {
+      height: @system-icon-small;
+      width: @system-icon-small;
+
+      svg {
+        height: @system-icon-small;
+        width: @system-icon-small;
+      }
+    }
+
+    &.ce-icon--large {
+      height: @system-icon-large;
+      width: @system-icon-large;
+
+      svg {
+        height: @system-icon-large;
+        width: @system-icon-large;
+      }
+    }
+
+    &.ce-icon--jumbo {
+      height: @system-icon-jumbo;
+      width: @system-icon-jumbo;
+
+      svg {
+        height: @system-icon-jumbo;
+        width: @system-icon-jumbo;
+      }
     }
 
     .ce-icon--black {

@@ -2,9 +2,10 @@
 
 exports[`<CheckboxGroup /> render() render the CheckboxGroup component 1`] = `
 <FormControlGroup
+  childProps={Object {}}
   className="ce-checkbox-group"
   disabled={false}
-  errorClass="ce-checkbox-group--error-text"
+  errorClass="ce-checkbox-group--error__text"
   errorMsg=""
   formId=""
   handleChange={[Function]}
