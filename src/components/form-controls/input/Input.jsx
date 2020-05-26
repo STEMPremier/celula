@@ -29,14 +29,13 @@ const TYPES = [
 
 const ICON = ['get icons to plus in here?????'];
 
-const SIZES = ['small', 'large', 'jumbo'];
+// const SIZES = ['small', 'large', 'jumbo'];
 
 class Input extends Component {
   state = {
     value: this.props.value,
-    startDate: '',
-    endDate: '',
     valid: this.props.error !== true,
+    hasIcon: this.props.icon.length > 1,
   };
 
   // make a switch statement eventually
@@ -149,12 +148,9 @@ class Input extends Component {
       rightArrowClick,
       showArrow,
       // validators,
-      // value,
     } = this.props;
 
-    const { value, startDate, valid } = this.state;
-
-    // console.log('valid', valid);
+    const { value, valid, hasIcon } = this.state;
 
     const classes = cx(
       'ce-input',
@@ -162,8 +158,8 @@ class Input extends Component {
         [`ce-input--${htmlType}`]: TYPES.includes(
           htmlType.toString().toLowerCase(),
         ),
-        [`ce-input--${size}`]: SIZES.includes(size.toString().toLowerCase()),
-        [`ce-input--${icon}`]: ICON.includes(icon.toString().toLowerCase()),
+        // [`ce-input--${size}`]: SIZES.includes(size.toString().toLowerCase()),
+        // [`ce-input--${icon}`]: ICON.includes(icon.toString().toLowerCase()),
         'ce-input--disabled': disabled,
         'ce-input--error': error,
         'ce-input--show-arrow': showArrow,
@@ -177,9 +173,11 @@ class Input extends Component {
           {label}
         </label>
         <div className="ce-input--box">
-          <div className="ce-input--icon">
-            <SystemIcon name={icon} />
-          </div>
+          {hasIcon && (
+            <div className="ce-input--icon">
+              <SystemIcon name={icon} />
+            </div>
+          )}
           <input
             name={name}
             type={htmlType}
@@ -239,6 +237,14 @@ Input.propTypes = {
    */
   error: PropTypes.string,
   /**
+   * The error message that will appear in the error box below the input.
+   */
+  errorMessage: PropTypes.string,
+  /**
+   * The type of the `<Input />`.  Commonly used types include text, email, url, hidden, month, week, datetime-local, time, file, password, search, tel, and color.
+   */
+  htmlType: PropTypes.oneOf([...TYPES, 'default']),
+  /**
    * Make an icon appear in the `<Input />`.
    */
   icon: PropTypes.string,
@@ -247,23 +253,32 @@ Input.propTypes = {
    */
   label: PropTypes.string.isRequired,
   /**
-   * The size of the `<Input />`.  Options include 'small', 'large', and 'jumbo'.
+   *  The latest date to accept as a valid input.  Note that the date and time format will vary depending on the type of input and the max must match that format.
    */
-  size: PropTypes.string,
-  // toolTip: PropTypes.string,
-  /**
-   * The error message that will appear in the error box below the input.
-   */
-  errorMessage: PropTypes.string,
+  max: PropTypes.string,
   /**
    *  The earliest date to accept as a valid input.  Note that the date and time format will vary depending on the type of input and the min must match that format.
    */
   min: PropTypes.string,
   /**
-   *  The latest date to accept as a valid input.  Note that the date and time format will vary depending on the type of input and the max must match that format.
+   * The name of the `<Input />`.
    */
-  max: PropTypes.string,
+  name: PropTypes.string.isRequired,
   // validators:
+  /**
+   * This function is accesible to the user for clickable events on the right arrow in the gradient
+   */
+  rightArrowClick: PropTypes.func,
+  /**
+   * The size of the `<Input />`.  Options include 'small', 'large', and 'jumbo'.
+   */
+  size: PropTypes.string,
+  // toolTip: PropTypes.string,
+  /**
+   * This will make the right arrow button appear with the `<Input />`.
+   */
+  showArrow: PropTypes.bool,
+  toolTip: PropTypes.string,
   /**
    * The value of the `<Input />`.
    */
@@ -272,22 +287,6 @@ Input.propTypes = {
     PropTypes.number,
     PropTypes.bool,
   ]).isRequired,
-  /**
-   * The type of the `<Input />`.  Commonly used types include text, email, url, hidden, month, week, datetime-local, time, file, password, search, tel, and color.
-   */
-  htmlType: PropTypes.oneOf([...TYPES, 'default']),
-  /**
-   * The name of the `<Input />`.
-   */
-  name: PropTypes.string.isRequired,
-  /**
-   * This function is accesible to the user for clickable events on the right arrow in the gradient
-   */
-  rightArrowClick: PropTypes.func,
-  /**
-   * This will make the right arrow button appear with the `<Input />`.
-   */
-  showArrow: PropTypes.bool,
 };
 
 Input.defaultProps = {
