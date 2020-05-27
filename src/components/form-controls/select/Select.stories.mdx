@@ -8,7 +8,7 @@ import {
 import { action } from '@storybook/addon-actions';
 import { boolean, text, array, number } from '@storybook/addon-knobs';
 
-import Select from './Select';
+import Select from '.';
 
 <Meta component={Select} title="Components/Molecules/Form Controls/Select" />
 
@@ -22,12 +22,12 @@ import Select from './Select';
   <Select
     className={text('className', '')}
     handleChange={action('clicked handleChange in the select ')}
-    rightArrowClick={action('clicked rightArrowClick in the gradient')}
+    rightIconClick={action('clicked rightArrowClick in the gradient')}
     label={text('label', 'Default Fieldset Label')}
     selectedValue={text('selectedValue', '2')}
     showArrow
     name={text('name', 'Default Name for Select')}
-    form={text('form', '')}
+    formId={text('form', '')}
     options={array('options', [
       {
         name: 'Option 1',
@@ -59,8 +59,8 @@ import Select from './Select';
           },
        ]}
         handleChange={action('changed')}
-        rightArrowClick={action('rightArrowClick')}
-        form="formName1"
+        rightIconClick={action('rightArrowClick')}
+        formId="formName1"
         showArrow
       />
     </form> 
@@ -73,7 +73,7 @@ import Select from './Select';
     <form>
       <Select 
         selectedValue={2}
-        rightArrowClick={action('rightArrowClick')}
+        rightIconClick={action('rightArrowClick')}
         name="Enabled Select Using a Default Value"
         label="Label is always required for accessbility"
         options={[
@@ -87,8 +87,8 @@ import Select from './Select';
           },
        ]}
         handleChange={action('changed')}
-        form="formName2"
-        showArrow
+        formId="formName2"
+        showIcon
       />
     </form> 
   </Story>
@@ -101,10 +101,10 @@ import Select from './Select';
       <Select 
         label = "Select from the below choices"
         handleChange={action('changed')}
-        rightArrowClick={action('rightArrowClick')}
-        form="formName3"
+        rightIconClick={action('rightArrowClick')}
+        formId="formName3"
         name="Disabled Select "
-        showArrow
+        showIcon
         disabled
         options={[
           {
@@ -128,7 +128,7 @@ import Select from './Select';
       <Select 
         label = "Select from the below choices"
         handleChange={action('changed')}
-        form="formName4"
+        formId="formName4"
         name="Select Simple "
         options={[
           {
@@ -152,9 +152,9 @@ import Select from './Select';
       <Select 
         label="Select from the below choices"
         handleChange={action('changed')}
-        form="formName5"
+        formId="formName5"
         name="Select Error no arrow"
-        error="Error Message"
+        errorMsg="Error Message"
         options={[
           {
            name: 'option 1',
@@ -177,10 +177,10 @@ import Select from './Select';
       <Select 
         label = "Select from the below choices"
         handleChange={action('changed')}
-        form="formName6"
+        formId="formName6"
         name="Select Error with right arrow"
-        error="Error Message"
-        showArrow
+        errorMsg="Error Message"
+        showIcon
         options={[
           {
            name: 'option 1',

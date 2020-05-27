@@ -21,14 +21,14 @@ class Select extends Component {
     const {
       className,
       disabled,
-      error,
+      errorMsg,
       name,
-      form,
+      formId,
       handleChange,
       label,
       options,
-      showArrow,
-      rightArrowClick,
+      showIcon,
+      rightIconClick,
     } = this.props;
 
     const { showLabel, selectedValue } = this.state;
@@ -39,8 +39,8 @@ class Select extends Component {
       'ce-select',
       {
         'ce-select--disabled': disabled,
-        'ce-select--error': error,
-        'ce-select--show-arrow': showArrow,
+        'ce-select--error': errorMsg,
+        'ce-select--show-arrow': showIcon,
       },
       className,
     );
@@ -52,7 +52,7 @@ class Select extends Component {
           <select
             name={name}
             label={label}
-            form={form}
+            form={formId}
             id={id}
             disabled={disabled}
             onClick={handleChange}
@@ -66,10 +66,10 @@ class Select extends Component {
               </option>
             ))}
           </select>
-          {showArrow && (
+          {showIcon && (
             <button
               className="ce-select--outside-arrow"
-              onClick={rightArrowClick}
+              onClick={rightIconClick}
               type="button"
             >
               <SystemIcon
@@ -81,15 +81,14 @@ class Select extends Component {
           )}
         </div>
         <div className="ce-select--background-state" />
-        {error && (
+        {errorMsg && (
           <div className="ce-select--error-box-wrapper">
             <div className="ce-select--arrow" />
             <div className="ce-select--error-box">
-              <div className="ce-select--error-box-text">{error}</div>
+              <div className="ce-select--error-box-text">{errorMsg}</div>
             </div>
           </div>
         )}
-        <span error={error} />
       </div>
     );
   }
@@ -107,7 +106,7 @@ Select.propTypes = {
   /**
    * The select will appear with the right arrow
    */
-  showArrow: PropTypes.bool,
+  showIcon: PropTypes.bool,
   /**
    * The label is required for accessibilty even if you assign a default value.
    */
@@ -119,7 +118,7 @@ Select.propTypes = {
   /**
    * The form the select belongs to.
    */
-  form: PropTypes.string,
+  formId: PropTypes.string,
   /**
    * The name for the select is required for accessibilty purposes of attaching a unique id.
    */
@@ -131,7 +130,7 @@ Select.propTypes = {
   /**
    * The error message in the error box.
    */
-  error: PropTypes.string,
+  errorMsg: PropTypes.string,
   /**
    * The options is the array of objects containing the name and value of each select row.
    */
@@ -141,17 +140,17 @@ Select.propTypes = {
   /**
    * This function is accesible to the user for clickable events on the right arrow in the gradient
    */
-  rightArrowClick: PropTypes.func,
+  rightIconClick: PropTypes.func,
 };
 
 Select.defaultProps = {
   className: '',
   disabled: false,
-  form: '',
-  error: '',
+  formId: '',
+  errorMsg: '',
   selectedValue: '',
-  showArrow: false,
-  rightArrowClick: () => {},
+  showIcon: false,
+  rightIconClick: () => {},
 };
 
 export default Select;
