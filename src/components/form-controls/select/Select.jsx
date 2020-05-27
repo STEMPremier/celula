@@ -29,6 +29,7 @@ class Select extends Component {
       options,
       showIcon,
       rightIconClick,
+      icon,
     } = this.props;
 
     const { showLabel, selectedValue } = this.state;
@@ -40,7 +41,7 @@ class Select extends Component {
       {
         'ce-select--disabled': disabled,
         'ce-select--error': errorMsg,
-        'ce-select--show-arrow': showIcon,
+        'ce-select--show-icon': showIcon,
       },
       className,
     );
@@ -68,13 +69,13 @@ class Select extends Component {
           </select>
           {showIcon && (
             <button
-              className="ce-select--outside-arrow"
+              className="ce-select--right-icon"
               onClick={rightIconClick}
               type="button"
             >
               <SystemIcon
-                name="navigate"
-                className="ce-select--arrow"
+                name={icon}
+                className="ce-select--icon"
                 color="white"
               />
             </button>
@@ -83,7 +84,7 @@ class Select extends Component {
         <div className="ce-select--background-state" />
         {errorMsg && (
           <div className="ce-select--error-box-wrapper">
-            <div className="ce-select--arrow" />
+            <div className="ce-select--icon" />
             <div className="ce-select--error-box">
               <div className="ce-select--error-box-text">{errorMsg}</div>
             </div>
@@ -104,7 +105,7 @@ Select.propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * The select will appear with the right arrow
+   * The select will appear with the gradient box with icon to the right.
    */
   showIcon: PropTypes.bool,
   /**
@@ -128,6 +129,10 @@ Select.propTypes = {
    */
   handleChange: PropTypes.func.isRequired,
   /**
+   * Assign an icon to go in the gradient right hand square.  If you use the showIcon prop as true, this icon will default to "navigate".  See the <SystemIcon /> for more options on what to enter into this icon prop.
+   */
+  icon: PropTypes.string,
+  /**
    * The error message in the error box.
    */
   errorMsg: PropTypes.string,
@@ -138,7 +143,7 @@ Select.propTypes = {
     PropTypes.oneOfType([PropTypes.object, PropTypes.string, PropTypes.bool]),
   ).isRequired,
   /**
-   * This function is accesible to the user for clickable events on the right arrow in the gradient
+   * This function is accesible to the user for clickable events on the icon in the gradient to the right.
    */
   rightIconClick: PropTypes.func,
 };
@@ -150,6 +155,7 @@ Select.defaultProps = {
   errorMsg: '',
   selectedValue: '',
   showIcon: false,
+  icon: 'navigate',
   rightIconClick: () => {},
 };
 
