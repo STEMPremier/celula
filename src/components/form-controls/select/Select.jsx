@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
@@ -6,7 +6,7 @@ import SystemIcon from '../../icon/SystemIcon';
 
 import './select.less';
 
-class Select extends React.Component {
+class Select extends Component {
   state = {
     showLabel: false,
     // eslint-disable-next-line react/destructuring-assignment
@@ -66,18 +66,11 @@ class Select extends React.Component {
               </option>
             ))}
           </select>
-          {/* <div className="ce-select--caret"> */}
-          {/* <SystemIcon
-              name="down"
-              color={disabled ? 'grey' : 'black'}
-              className="ce-select--down"
-            /> */}
-          {/* </div> */}
           {showArrow && (
             <button
               className="ce-select--outside-arrow"
               onClick={rightArrowClick}
-              type="submit"
+              type="button"
             >
               <SystemIcon
                 name="navigate"
