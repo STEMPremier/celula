@@ -27,7 +27,7 @@ const TYPES = [
   'text',
 ];
 
-const ICON = ['get icons to plus in here?????'];
+// const ICON = ['get icons to plus in here?????'];
 
 // const SIZES = ['small', 'large', 'jumbo'];
 
@@ -161,7 +161,7 @@ class Input extends Component {
         // [`ce-input--${size}`]: SIZES.includes(size.toString().toLowerCase()),
         // [`ce-input--${icon}`]: ICON.includes(icon.toString().toLowerCase()),
         'ce-input--disabled': disabled,
-        'ce-input--error': error,
+        'ce-input--error': !valid,
         'ce-input--show-arrow': showArrow,
       },
       className,
