@@ -36,6 +36,16 @@ class Input extends Component {
     value: this.props.value,
     valid: this.props.error !== true,
     hasIcon: this.props.icon.length > 1,
+    isDate: false,
+  };
+
+  componentDidMount = () => {
+    if (this.props.htmlType === 'month') {
+      this.setState({
+        isDate: true,
+      });
+    }
+    console.log('setting isDate to true');
   };
 
   // make a switch statement eventually
@@ -150,7 +160,7 @@ class Input extends Component {
       // validators,
     } = this.props;
 
-    const { value, valid, hasIcon } = this.state;
+    const { value, valid, hasIcon, isDate } = this.state;
 
     const classes = cx(
       'ce-input',
@@ -191,7 +201,11 @@ class Input extends Component {
             min={min}
             max={max}
           />
-
+          {isDate && (
+            <div className="ce-input--date-icon">
+              <SystemIcon name="calendar" />
+            </div>
+          )}
           {showArrow && (
             <button
               className="ce-input--outside-arrow"

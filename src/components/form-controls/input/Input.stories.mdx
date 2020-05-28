@@ -266,16 +266,21 @@ import Input from '.';
 <Story name="Input with Icon">
   <form id="formIcon">
      <Input 
-      label="Icon"
-      value="Search"
-      htmlType="search"
-      icon="search"
+      label="Icon with Default Text"
+      value="Text input with user icon"
+      htmlType="text"
+      icon="user"
     />
     <Input 
-      label="Icon with default text"
+      label="Icon automatically on the right for dates"
       value="Start Date (mm/yyyy)"
       htmlType="month"
-      icon="calendar"
+    />
+    <Input 
+      label="Icon for Password"
+      htmlType="password"
+      icon="visibility"
+      errorMessage="Password Invalid"
     />
    </form>
 </Story>
