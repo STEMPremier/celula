@@ -66,6 +66,12 @@
     flex-direction: row;
     flex-wrap: nowrap;
     border: 0.1rem solid @unchecked-gray;
+    // Responsive Rules
+    @media screen {
+      @media (max-width: 768px) {
+        width: 94%;
+      }
+    }
 
     &:hover ~ .ce-select--background-state {
       border: 0.3rem solid @hover-blue;
@@ -134,6 +140,12 @@
   &.ce-select--error {
     .ce-select--background-state {
       border: 0.3rem solid @error-box-background;
+      // Responsive Rules
+      @media screen {
+        @media (max-width: 768px) {
+          width: 94%;
+        }
+      }
     }
     .ce-select--box {
       &:hover ~ .ce-select--background-state {
@@ -158,6 +170,12 @@
 
   .ce-select--error-box-wrapper {
     width: 36.6rem;
+    // Responsive Rules
+    @media screen {
+      @media (max-width: 768px) {
+        width: 96%;
+      }
+    }
     margin-left: 1rem;
     .ce-select--icon {
       width: 0;
@@ -174,6 +192,7 @@
       width: 99%;
       background-color: @error-box-background;
       border-radius: 0.5rem;
+
       .ce-select--error-box-text {
         color: white;
         text-align: center;
