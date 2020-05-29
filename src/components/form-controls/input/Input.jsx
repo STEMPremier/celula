@@ -201,11 +201,11 @@ class Input extends Component {
             min={min}
             max={max}
           />
-          {/* {isDate && (
+          {isDate && (
             <div className="ce-input--date-icon">
               <SystemIcon name="calendar" />
             </div>
-          )} */}
+          )}
           {showArrow && (
             <button
               className="ce-input--outside-arrow"
