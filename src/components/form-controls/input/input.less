@@ -38,7 +38,7 @@
     margin-left: 305px;
     margin-top: 20px;
     // padding-right: 20px;
-    background-color: yellow;
+    // background-color: yellow;
     margin-bottom: 20px;
     z-index: 0;
   }
@@ -56,8 +56,8 @@
   // input[type='url'],
   // input[type='week'],
   // input[type='file'],
-  input[type='time'],
-  input[type='month'],
+  // input[type='time'],
+  // input[type='month'],
   // input[type='email'],
   // input[type='color'],
   // input[type='datetime-local'] {
@@ -75,7 +75,7 @@
     padding-left: 1.9rem;
     border-radius: 0.5rem;
     border: 0;
-    background-color: purple;
+    // background-color: purple;
   }
   &.ce-input--hidden {
     .ce-input--box {
@@ -111,6 +111,16 @@
     flex-direction: row;
     flex-wrap: nowrap;
     border: 0.1rem solid @unchecked-gray;
+
+    &:hover ~ .ce-input--background-state {
+      border: 0.3rem solid @hover-blue;
+    }
+    &:focus ~ .ce-input--background-state {
+      border: 0.3rem solid @focus-blue;
+    }
+    &:active ~ .ce-input--background-state {
+      border: 0.3rem solid @active-blue;
+    }
     // showArrow
     .ce-input--show-arrow {
       width: 38rem;
