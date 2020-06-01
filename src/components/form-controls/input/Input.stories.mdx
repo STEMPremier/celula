@@ -21,13 +21,12 @@ import Input from '.';
     <Input
       className={text('className', '')}
       disabled={boolean('disabled', false)}
-      icon={text('icon', '')}
-      htmlType={text('id', '')}
-      label={text('label', 'Label')}
-      size={text('text', '')}
-      toolTip={text('toolTip', '')}
-      value={text('value', 'value')}
+      helperText={text('text', '')}
       htmlType={text('htmlType', '')}
+      icon={text('icon', '')}
+      label={text('label', 'Label')}
+      placeholderText={text('placeholderText', '')}
+      value={text('value', 'value')}
     />
   </form>
 </Story>
@@ -46,11 +45,34 @@ import Input from '.';
 </Preview>
 
 <Preview>
+<Story name="Input Text with Helper Text">
+  <form id="formHelperText">
+    <Input 
+      label="Text input label (optional)"
+      value="value"
+      helperText="This is where the helper text will appear by default.  An example would be 'This can be a high level summary like 'I serve foos to homeless people'.'"
+    />
+   </form>
+</Story>
+</Preview>
+
+<Preview>
 <Story name="Input With Default Value">
   <form id="formDefaultValue">
    <Input 
       label="Would you like to complete this form?"
-      value="Text input label"
+      value="This is a default value"
+    />
+   </form>
+</Story>
+</Preview>
+
+<Preview>
+<Story name="Input With Placeholder Text">
+  <form id="formPlaceholderText">
+   <Input 
+      label="What did you do?"
+      placeholderText="ex. I fed cats and dogs."
     />
    </form>
 </Story>

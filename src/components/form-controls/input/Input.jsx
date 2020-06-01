@@ -22,10 +22,10 @@ const TYPES = [
   'password',
   'search',
   'tel',
+  'text',
   'time',
   'url',
   'week',
-  'text',
 ];
 
 class Input extends Component {
@@ -49,7 +49,6 @@ class Input extends Component {
     }
   };
 
-  // make a switch statement eventually
   checkValiditiy = () => {
     let valid = true;
 
@@ -133,15 +132,16 @@ class Input extends Component {
       disabled,
       error,
       errorMsg,
+      gradientIconBoxClick,
+      helperText,
+      htmlType,
       icon,
       label,
-      size,
-      toolTip,
-      htmlType,
-      name,
-      min,
+      // toolTip,
       max,
-      gradientIconBoxClick,
+      min,
+      name,
+      placeholderText,
       showGradientIconBox,
       // validators,
     } = this.props;
@@ -166,6 +166,9 @@ class Input extends Component {
         <label className="ce-input--label" htmlFor={name}>
           {label}
         </label>
+        {helperText && (
+          <div className="ce-input--helper-text">{helperText}</div>
+        )}
         <div className="ce-input--box">
           {hasIcon && (
             <div className="ce-input--icon">
@@ -175,6 +178,7 @@ class Input extends Component {
           <input
             name={name}
             type={htmlType}
+            placeholder={placeholderText}
             value={value}
             onChange={this.handleChange}
             onBlur={this.checkValiditiy}
@@ -201,7 +205,7 @@ class Input extends Component {
               />
             </button>
           )}
-          <div className="ce-input--background-state" />
+          <span className="ce-input--background-state" />
         </div>
 
         {(isValid === false || errorMsg) && (
@@ -233,9 +237,17 @@ Input.propTypes = {
    */
   error: PropTypes.bool,
   /**
-   * The error message that will appear in the error box below the input.
+   * The error message that will appear in the error box below the input.  The presence of the error message automatically triggers error state on the component.
    */
   errorMsg: PropTypes.string,
+  /**
+   * This function is accesible to the user for clickable events on the right arrow in the gradient
+   */
+  gradientIconBoxClick: PropTypes.func,
+  /**
+   * The helper text is above the input but is seperate from the label.  An example would be "This can be a high level summary like 'I serve foos to homeless people'."
+   */
+  helperText: PropTypes.string,
   /**
    * The type of the `<Input />`.  Commonly used types include text, email, url, hidden, month, week, datetime-local, time, file, password, search, tel, and color.
    */
@@ -260,21 +272,17 @@ Input.propTypes = {
    * The name of the `<Input />`.
    */
   name: PropTypes.string.isRequired,
+  /**
+   * Placeholder text inside the `<Input />`.
+   */
+  placeholderText: PropTypes.string,
   // validators:
-  /**
-   * This function is accesible to the user for clickable events on the right arrow in the gradient
-   */
-  gradientIconBoxClick: PropTypes.func,
-  /**
-   * The size of the `<Input />`.  Options include 'small', 'large', and 'jumbo'.
-   */
-  size: PropTypes.string,
   // toolTip: PropTypes.string,
   /**
    * This will make the right arrow button appear with the `<Input />`.
    */
   showGradientIconBox: PropTypes.bool,
-  toolTip: PropTypes.string,
+  // toolTip: PropTypes.string,
   /**
    * The value of the `<Input />`.
    */
@@ -290,9 +298,10 @@ Input.defaultProps = {
   disabled: false,
   error: false,
   errorMsg: '',
+  helperText: '',
   icon: '',
-  size: 'small',
-  toolTip: null,
+  placeholderText: '',
+  // toolTip: null,
   htmlType: 'text',
   showGradientIconBox: false,
   min: '',

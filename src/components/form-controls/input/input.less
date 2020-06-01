@@ -7,21 +7,28 @@
   flex-wrap: nowrap;
   justify-content: left;
 
-  &:hover ~ .ce-input--background-state {
-    border: 0.3rem solid @hover-blue;
-  }
-  &:focus ~ .ce-input--background-state {
-    border: 0.3rem solid @focus-blue;
-  }
-  &:active ~ .ce-input--background-state {
-    border: 0.3rem solid @active-blue;
-  }
+  // &:hover ~ .ce-input--background-state {
+  //   border: 0.3rem solid @hover-blue;
+  // }
+  // &:focus ~ .ce-input--background-state {
+  //   border: 0.3rem solid @focus-blue;
+  // }
+  // &:active ~ .ce-input--background-state {
+  //   border: 0.3rem solid @active-blue;
+  // }
 
   label {
     order: 0;
     height: 2.2rem;
     font-size: 1.6re;
     margin-left: 1rem;
+  }
+
+  .ce-input--helper-text {
+    font-size: 12px;
+    margin: 5px 0px 10px 10px;
+    width: 36rem;
+    height: 100%;
   }
 
   input[type='month']::-webkit-calendar-picker-indicator {
@@ -102,15 +109,15 @@
     //   }
     // }
 
-    &:hover ~ .ce-input--background-state {
-      border: 0.3rem solid @hover-blue;
-    }
-    &:focus ~ .ce-input--background-state {
-      border: 0.3rem solid @focus-blue;
-    }
-    &:active ~ .ce-input--background-state {
-      border: 0.3rem solid @active-blue;
-    }
+    // &:hover ~ .ce-input--background-state {
+    //   border: 0.3rem solid @hover-blue;
+    // }
+    // &:focus ~ .ce-input--background-state {
+    //   border: 0.3rem solid @focus-blue;
+    // }
+    // &:active ~ .ce-input--background-state {
+    //   border: 0.3rem solid @active-blue;
+    // }
     input {
       // state changes on input affecting background-state div
       &:hover ~ .ce-input--background-state {
