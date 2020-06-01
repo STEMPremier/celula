@@ -5,9 +5,9 @@ import toJson from 'enzyme-to-json';
 
 import { RadioGroup, Radio } from '.';
 
-describe('<RadioGroup />', () => {
+describe('<Radio />', () => {
   describe('render()', () => {
-    test('render the RadioGroup component', () => {
+    test('render the RadioGroup and Radio components', () => {
       const wrapper = shallow(
         <RadioGroup
           handleChange={() => {}}

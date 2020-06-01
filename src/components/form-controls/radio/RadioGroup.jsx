@@ -7,7 +7,7 @@ import FormControlGroup from '../core';
 import './radio-group.less';
 
 /**
- * I am a `<RadioGroup />` description.
+ * `Radios` allow the user to select one option from a set. Use radio buttons when the user needs to see all available options.
  */
 const RadioGroup = props => {
   const {

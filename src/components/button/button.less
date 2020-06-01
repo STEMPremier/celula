@@ -36,7 +36,7 @@ button {
 
       @media screen {
         @media (max-width: 768px) {
-          width: ~'calc(100% - 8rem)'; // 100% - the total of the l/r padding
+          width: ~'calc(100% - .4rem)'; // 100% - the total of the l/r border
         }
       }
     }
@@ -52,7 +52,7 @@ button {
 
       @media screen {
         @media (max-width: 768px) {
-          width: ~'calc(100% - 12rem)'; // 100% - the total of the l/r padding
+          width: ~'calc(100% - .4rem)'; // 100% - the total l/r border
         }
       }
     }
@@ -68,7 +68,7 @@ button {
 
       @media screen {
         @media (max-width: 768px) {
-          width: ~'calc(100% - 12rem)'; // 100% - the total of the l/r padding
+          width: ~'calc(100% - .4rem)'; // 100% - the total of the l/r border
         }
       }
     }
@@ -256,6 +256,66 @@ button {
 
     &:focus {
       color: #900086;
+    }
+
+    &.ce-button--disabled {
+      color: @focus-gray;
+    }
+  }
+}
+
+// Black Base Colors
+.ce-button--black {
+  background: @black;
+  color: @white;
+
+  // States
+  &:hover {
+    background: #404040; // 50%-ish lighter
+  }
+
+  &:active {
+    background: #262626; // 30%-ish lighter
+  }
+
+  &.ce-button--disabled {
+    background: @focus-gray;
+  }
+
+  // Outline Colors
+  &.ce-button--outline {
+    color: @black;
+
+    // States
+    &:hover {
+      color: #404040; // 50%-ish lighter
+    }
+
+    &:active {
+      color: #262626; // 30%-ish lighter
+    }
+
+    &.ce-button--disabled {
+      color: @focus-gray;
+    }
+  }
+
+  // Text Colors
+  &.ce-button--text {
+    background: @white;
+    color: @black;
+
+    // States
+    &:hover {
+      color: #404040; // 50%-ish lighter
+    }
+
+    &:active {
+      color: #262626; // 30%-ish lighter
+    }
+
+    &:focus {
+      color: #262626; // 30%-ish lighter
     }
 
     &.ce-button--disabled {

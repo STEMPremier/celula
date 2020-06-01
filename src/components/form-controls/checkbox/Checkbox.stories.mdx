@@ -1,29 +1,25 @@
-import { Description,
-  Meta,
-  Preview,
-  Props,
-  Story,
-} from '@storybook/addon-docs/blocks';
+import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text, array } from '@storybook/addon-knobs';
 
 import { Checkbox } from '.';
+import { COMPONENT_STATES as STATES } from '../../../utils/constants';
 
 <Meta component={Checkbox} title="Components/Molecules/Form Controls/Checkbox"/>
 
 # Checkbox
-<Decription of={Checkbox} />
+<Description of={Checkbox} />
 <Props of={Checkbox}/>
 
-<Story name="All Checkboxes" parameters={{docs: {disable: true}}}>
-  <form id="formOne">
+<Story name="Checkbox with Knobs" parameters={{docs: {disable: true}}}>
+  <form id="formKnobs">
     <Checkbox
       checked={boolean('checked', false )}
       className={text('className', '')}
       disabled={boolean('disabled', false)}
       errorMsg={text('errorMsg', '')}
-      formId={text('formId', 'formOne')}
-      handleChange={val => console.log(`The value is ${val}`)}
+      formId={text('formId', 'formKnobs')}
+      handleClick={action('`Checkbox with Knobs` onClick event triggered.')}
       label={text('label', 'Accept Terms and Conditions')}
       name={text('name', 'termsAndConditions')}
       value={text('value', 'accepted')}
@@ -34,10 +30,10 @@ import { Checkbox } from '.';
 ### Types
 <Preview>
   <Story name="Checkbox Types">
-    <form id="formTwo">
+    <form id="formTypes">
       <Checkbox
         checked
-        formId="formTwo"
+        formId="formTypes"
         label="I am checked"
         name="checked"
         value={true}
@@ -56,27 +52,18 @@ import { Checkbox } from '.';
 ### States
 <Preview>
   <Story name="Checkbox States">
-    <form id="formThree">
-      <Checkbox
-        formId="formThree"
-        label="Standard Checkbox"
-        name="standardCheckbox"
-        value="standard"
-      />
-      <Checkbox
-        disabled
-        formId="formThree"
-        label="Disabled Checkbox"
-        name="disabledCheckbox"
-        value="disabled"
-      />
-      <Checkbox
-        errorMsg="There is an error."
-        formId="formThree"
-        label="Error Checkbox"
-        name="errorCheckbox"
-        value="error"
-      />
+    <form id="formStates">
+      {STATES.map(state => (
+        <Checkbox
+          disabled={state === 'disabled'}
+          errorMsg={state === 'error' ? "There is an error." : ''}
+          formId="formStates"
+          key={state}
+          label={`${state.charAt(0).toUpperCase()}${state.slice(1)} Checkbox`}
+          name={`${state}_checkbox`}
+          value={state}
+        />
+      ))}
     </form>
   </Story>
 </Preview>
