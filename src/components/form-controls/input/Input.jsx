@@ -138,8 +138,8 @@ class Input extends Component {
       name,
       min,
       max,
-      rightArrowClick,
-      showArrow,
+      gradientIconBoxClick,
+      showGradientIconBox,
       // validators,
     } = this.props;
 
@@ -155,7 +155,7 @@ class Input extends Component {
         // [`ce-input--${icon}`]: ICON.includes(icon.toString().toLowerCase()),
         'ce-input--disabled': disabled,
         'ce-input--error': !valid || errorMsg,
-        'ce-input--show-arrow': showArrow,
+        'ce-input--show-gradient-icon-box': showGradientIconBox,
       },
       className,
     );
@@ -187,15 +187,15 @@ class Input extends Component {
               <SystemIcon name="calendar" />
             </div>
           )}
-          {showArrow && (
+          {showGradientIconBox && (
             <button
-              className="ce-input--outside-arrow"
-              onClick={rightArrowClick}
+              className="ce-input--gradient-button"
+              onClick={gradientIconBoxClick}
               type="submit"
             >
               <SystemIcon
                 name="navigate"
-                className="ce-input--arrow"
+                className="ce-input--icon-in-box"
                 color="white"
               />
             </button>
@@ -262,7 +262,7 @@ Input.propTypes = {
   /**
    * This function is accesible to the user for clickable events on the right arrow in the gradient
    */
-  rightArrowClick: PropTypes.func,
+  gradientIconBoxClick: PropTypes.func,
   /**
    * The size of the `<Input />`.  Options include 'small', 'large', and 'jumbo'.
    */
@@ -271,7 +271,7 @@ Input.propTypes = {
   /**
    * This will make the right arrow button appear with the `<Input />`.
    */
-  showArrow: PropTypes.bool,
+  showGradientIconBox: PropTypes.bool,
   toolTip: PropTypes.string,
   /**
    * The value of the `<Input />`.
@@ -292,10 +292,10 @@ Input.defaultProps = {
   size: 'small',
   toolTip: null,
   htmlType: 'text',
-  showArrow: false,
+  showGradientIconBox: false,
   min: '',
   max: '',
-  rightArrowClick: () => {},
+  gradientIconBoxClick: () => {},
 };
 
 export default Input;

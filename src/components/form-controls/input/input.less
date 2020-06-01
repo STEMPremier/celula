@@ -123,11 +123,11 @@
         border: 0.3rem solid @active-blue;
       }
     }
-    // showArrow
-    .ce-input--show-arrow {
+    // showGradientIconBox
+    .ce-input--show-gradient-icon-box {
       width: 38rem;
     }
-    .ce-input--outside-arrow {
+    .ce-input--gradient-button {
       order: 2;
       width: 7.4rem;
       height: 6rem;
@@ -142,7 +142,7 @@
         width: 50%;
         padding: 1.4rem;
       }
-      .ce-input--arrow {
+      .ce-input--icon-in-box {
         margin: auto;
         width: 50%;
         padding: 1rem;
@@ -166,7 +166,7 @@
     outline: none;
   }
 
-  .ce-input--outside-arrow:focus {
+  .ce-input--gradient-button:focus {
     outline: none;
   }
 
@@ -195,14 +195,14 @@
         border: none;
       }
     }
-    .ce-input--outside-arrow {
+    .ce-input--gradient-button {
       pointer-events: none;
       background: @checked-disabled-gray;
     }
   }
 
   &.ce-input--error {
-    .ce-input--outside-arrow {
+    .ce-input--gradient-button {
       border-radius: 0;
     }
     .ce-input--box {
@@ -230,7 +230,7 @@
         }
       }
       color: @error-box-background;
-      .ce-input--outside-arrow {
+      .ce-input--gradient-button {
         background: @error-box-background;
         border: 0.1rem solid @error-box-background;
       }
@@ -240,7 +240,7 @@
   .ce-input--error-box-wrapper {
     width: 36.5rem;
     margin-left: 0.9rem;
-    .ce-input--arrow {
+    .ce-input--icon-in-box {
       width: 0;
       height: 5;
       border-left: 0.5rem solid transparent;
