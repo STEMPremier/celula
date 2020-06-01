@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/destructuring-assignment */
 
@@ -52,58 +53,61 @@ class Input extends Component {
   checkValiditiy = () => {
     let valid = true;
 
-    if (this.props.htmlType === 'email') {
-      // eslint-disable-next-line no-useless-escape
-      valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
-        this.state.value,
-      );
+    switch (this.props.htmlType) {
+      case 'email':
+        // eslint-disable-next-line no-useless-escape
+        valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+          this.state.value,
+        );
+        break;
+      case 'password':
+        const minLength = 8;
+        const passwordLongEnough = password =>
+          !!(password && password.length >= minLength);
+
+        const passwordHasUppercase = password =>
+          !!(password && /[A-Z]/g.test(password));
+
+        const passwordHasLowercase = password =>
+          !!(password && /[a-z]/g.test(password));
+
+        const passwordHasNumber = password =>
+          !!(password && /[0-9]/g.test(password));
+
+        const passwordHasSpecial = password =>
+          !!(password && /[^A-Za-z0-9]/g.test(password));
+
+        const passwordSatisfiesThree = password => {
+          let count = 0;
+          if (passwordHasUppercase(password)) count += 1;
+          if (passwordHasLowercase(password)) count += 1;
+          if (passwordHasNumber(password)) count += 1;
+          if (passwordHasSpecial(password)) count += 1;
+          const min8 = passwordLongEnough(password);
+          if (count > 2 && min8 === true) {
+            valid = true;
+          } else {
+            valid = false;
+          }
+        };
+        passwordSatisfiesThree(this.state.value);
+        break;
+      case 'url':
+        const pattern = new RegExp(
+          '^(https?:\\/\\/)?' + // protocol
+          '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+          '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+          '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+          '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+            '(\\#[-a-z\\d_]*)?$',
+          'i',
+        ); // fragment locator
+        valid = pattern.test(this.state.value);
+        break;
+      default:
+        valid = true;
     }
 
-    if (this.props.htmlType === 'password') {
-      const minLength = 8;
-      const passwordLongEnough = password =>
-        !!(password && password.length >= minLength);
-
-      const passwordHasUppercase = password =>
-        !!(password && /[A-Z]/g.test(password));
-
-      const passwordHasLowercase = password =>
-        !!(password && /[a-z]/g.test(password));
-
-      const passwordHasNumber = password =>
-        !!(password && /[0-9]/g.test(password));
-
-      const passwordHasSpecial = password =>
-        !!(password && /[^A-Za-z0-9]/g.test(password));
-
-      const passwordSatisfiesThree = password => {
-        let count = 0;
-        if (passwordHasUppercase(password)) count += 1;
-        if (passwordHasLowercase(password)) count += 1;
-        if (passwordHasNumber(password)) count += 1;
-        if (passwordHasSpecial(password)) count += 1;
-        const min8 = passwordLongEnough(password);
-        if (count > 2 && min8 === true) {
-          valid = true;
-        } else {
-          valid = false;
-        }
-      };
-      passwordSatisfiesThree(this.state.value);
-    }
-
-    if (this.props.htmlType === 'url') {
-      const pattern = new RegExp(
-        '^(https?:\\/\\/)?' + // protocol
-        '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
-        '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
-        '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
-        '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
-          '(\\#[-a-z\\d_]*)?$',
-        'i',
-      ); // fragment locator
-      valid = pattern.test(this.state.value);
-    }
     // sets state for all types depending on the isValid boolean
     if (valid === false) {
       this.setState({
@@ -143,7 +147,6 @@ class Input extends Component {
     } = this.props;
 
     const { value, isValid, hasIcon, isDate } = this.state;
-    console.log('isValid', isValid);
 
     const classes = cx(
       'ce-input',
