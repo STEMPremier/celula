@@ -27,20 +27,21 @@ const TYPES = [
   'text',
 ];
 
-// const ICON = ['get icons to plus in here?????'];
-
-// const SIZES = ['small', 'large', 'jumbo'];
-
 class Input extends Component {
   state = {
     value: this.props.value,
-    valid: this.props.error !== true,
-    hasIcon: this.props.icon.length > 1,
+    valid: true,
+    hasIcon: !!this.props.icon,
     isDate: false,
   };
 
   componentDidMount = () => {
-    if (this.props.htmlType === 'month') {
+    const { htmlType } = this.props;
+    if (
+      htmlType === 'month' ||
+      htmlType === 'datetime-local' ||
+      htmlType === 'week'
+    ) {
       this.setState({
         isDate: true,
       });
@@ -118,27 +119,9 @@ class Input extends Component {
 
   // note that the datetime-local handleChange only works when you have filled in the time.  Need more instruction about how to handle time before moving forward with datetime-local.
   handleChange = event => {
-    // const { htmlType } = this.props;
-    // if (htmlType === 'month') {
-    //   console.log('event.target.value', event.target.value);
-    //   console.log('min', this.props.min);
-    //   console.log('max', this.props.max);
-    // }
-    // if (
-    //   htmlType === 'text' ||
-    //   htmlType === 'email' ||
-    //   htmlType === 'password' ||
-    //   htmlType === 'url' ||
-    //   htmlType === 'search'
-    // ) {
     this.setState({
       value: event.target.value,
     });
-    // }
-    // if (htmlType === 'datetime-local' || htmlType) {
-    // console.log('inside datetime handleChange', event.target.value);
-    // }
-    // }
   };
 
   render() {
@@ -146,7 +129,7 @@ class Input extends Component {
       className,
       disabled,
       error,
-      errorMessage,
+      errorMsg,
       icon,
       label,
       size,
@@ -171,7 +154,7 @@ class Input extends Component {
         // [`ce-input--${size}`]: SIZES.includes(size.toString().toLowerCase()),
         // [`ce-input--${icon}`]: ICON.includes(icon.toString().toLowerCase()),
         'ce-input--disabled': disabled,
-        'ce-input--error': !valid,
+        'ce-input--error': !valid || errorMsg,
         'ce-input--show-arrow': showArrow,
       },
       className,
@@ -192,8 +175,6 @@ class Input extends Component {
             name={name}
             type={htmlType}
             value={value}
-            toolTip={toolTip}
-            size={size}
             onChange={this.handleChange}
             onBlur={this.checkValiditiy}
             icon={icon}
@@ -222,16 +203,15 @@ class Input extends Component {
           <div className="ce-input--background-state" />
         </div>
 
-        {valid === false && (
-          <div className="ce-input--error-box-wrapper">
-            <div className="ce-input--arrow" />
-            <div className="ce-input--error-box">
-              <span className="ce-input--error-box-text" error={error}>
-                {errorMessage}
-              </span>
+        {!valid ||
+          (errorMsg && (
+            <div className="ce-input--error-box-wrapper">
+              <div className="ce-input--arrow" />
+              <div className="ce-input--error-box">
+                <span className="ce-input--error-box-text">{errorMsg}</span>
+              </div>
             </div>
-          </div>
-        )}
+          ))}
       </div>
     );
   }
@@ -249,11 +229,11 @@ Input.propTypes = {
   /**
    * Make the `<Input />` display in error state.
    */
-  error: PropTypes.string,
+  error: PropTypes.bool,
   /**
    * The error message that will appear in the error box below the input.
    */
-  errorMessage: PropTypes.string,
+  errorMsg: PropTypes.string,
   /**
    * The type of the `<Input />`.  Commonly used types include text, email, url, hidden, month, week, datetime-local, time, file, password, search, tel, and color.
    */
@@ -307,7 +287,7 @@ Input.defaultProps = {
   className: '',
   disabled: false,
   error: false,
-  errorMessage: '',
+  errorMsg: '',
   icon: '',
   size: 'small',
   toolTip: null,

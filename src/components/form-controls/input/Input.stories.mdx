@@ -21,7 +21,6 @@ import Input from '.';
     <Input
       className={text('className', '')}
       disabled={boolean('disabled', false)}
-      error={text('error', '')}
       icon={text('icon', '')}
       htmlType={text('id', '')}
       label={text('label', 'Label')}
@@ -81,14 +80,12 @@ import Input from '.';
     <Input 
       label="Text input label (optional)"
       value="Error"
-      errorMessage="error message"
-      error
+      errorMsg="error message"
     />
     <Input 
       label="Text input label (optional)"
       value="Error"
-      errorMessage="error message"
-      error
+      errorMsg="error message"
       showArrow
     /> 
    </form>
@@ -114,7 +111,7 @@ import Input from '.';
       label="What is your email?"
       value=""
       htmlType="email"
-      errorMessage="Invalid Email"
+      errorMsg="Invalid Email"
     />
    </form>
 </Story>
@@ -142,7 +139,7 @@ import Input from '.';
       // these mins and maxs actually block the datepicker from showing dates before or after this range.  
       min="2019-06"
       max="2020-01"
-      errorMessage="Invalid Date"
+      errorMsg="Invalid Date"
     />
    </form>
 </Story>
@@ -166,7 +163,7 @@ import Input from '.';
 <Story name="Input Datetime Local">
   <form id="formDateRange">
      <Input 
-      label="When did you start and end?"
+      label="When did you start?"
       value=""
       htmlType="datetime-local"
     />
@@ -205,7 +202,7 @@ import Input from '.';
       label="Password"
       value=""
       htmlType="password"
-      errorMessage="Invalid Password"
+      errorMsg="Invalid Password"
     />
    </form>
 </Story>
@@ -231,7 +228,7 @@ import Input from '.';
       label="Tel"
       value=""
       htmlType="tel"
-      errorMessage="Invalid Number"
+      errorMsg="Invalid Number"
     />
    </form>
 </Story>
@@ -244,7 +241,7 @@ import Input from '.';
       label="Url"
       value=""
       htmlType="url"
-      errorMessage="Invalid Url"
+      errorMsg="Invalid Url"
     />
    </form>
 </Story>
@@ -279,8 +276,7 @@ import Input from '.';
     <Input 
       label="Icon for Password"
       htmlType="password"
-      icon="visibility"
-      errorMessage="Password Invalid"
+      icon="visibility"  
     />
    </form>
 </Story>
