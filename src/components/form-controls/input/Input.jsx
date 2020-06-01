@@ -30,7 +30,7 @@ const TYPES = [
 class Input extends Component {
   state = {
     value: this.props.value,
-    valid: true,
+    isValid: true,
     hasIcon: !!this.props.icon,
     isDate: false,
   };
@@ -46,16 +46,15 @@ class Input extends Component {
         isDate: true,
       });
     }
-    console.log('setting isDate to true');
   };
 
   // make a switch statement eventually
   checkValiditiy = () => {
-    let isValid = true;
+    let valid = true;
 
     if (this.props.htmlType === 'email') {
       // eslint-disable-next-line no-useless-escape
-      isValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+      valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
         this.state.value,
       );
     }
@@ -85,9 +84,9 @@ class Input extends Component {
         if (passwordHasSpecial(password)) count += 1;
         const min8 = passwordLongEnough(password);
         if (count > 2 && min8 === true) {
-          isValid = true;
+          valid = true;
         } else {
-          isValid = false;
+          valid = false;
         }
       };
       passwordSatisfiesThree(this.state.value);
@@ -103,16 +102,16 @@ class Input extends Component {
           '(\\#[-a-z\\d_]*)?$',
         'i',
       ); // fragment locator
-      isValid = pattern.test(this.state.value);
+      valid = pattern.test(this.state.value);
     }
     // sets state for all types depending on the isValid boolean
-    if (isValid === false) {
+    if (valid === false) {
       this.setState({
-        valid: false,
+        isValid: false,
       });
     } else {
       this.setState({
-        valid: true,
+        isValid: true,
       });
     }
   };
@@ -143,7 +142,8 @@ class Input extends Component {
       // validators,
     } = this.props;
 
-    const { value, valid, hasIcon, isDate } = this.state;
+    const { value, isValid, hasIcon, isDate } = this.state;
+    console.log('isValid', isValid);
 
     const classes = cx(
       'ce-input',
@@ -151,10 +151,8 @@ class Input extends Component {
         [`ce-input--${htmlType}`]: TYPES.includes(
           htmlType.toString().toLowerCase(),
         ),
-        // [`ce-input--${size}`]: SIZES.includes(size.toString().toLowerCase()),
-        // [`ce-input--${icon}`]: ICON.includes(icon.toString().toLowerCase()),
         'ce-input--disabled': disabled,
-        'ce-input--error': !valid || errorMsg,
+        'ce-input--error': !isValid || errorMsg,
         'ce-input--show-gradient-icon-box': showGradientIconBox,
       },
       className,
@@ -203,15 +201,16 @@ class Input extends Component {
           <div className="ce-input--background-state" />
         </div>
 
-        {!valid ||
-          (errorMsg && (
-            <div className="ce-input--error-box-wrapper">
-              <div className="ce-input--arrow" />
-              <div className="ce-input--error-box">
-                <span className="ce-input--error-box-text">{errorMsg}</span>
-              </div>
+        {(isValid === false || errorMsg) && (
+          <div className="ce-input--error-box-wrapper">
+            <div className="ce-input--icon-in-box" />
+            <div className="ce-input--error-box">
+              <span className="ce-input--error-box-text">
+                {errorMsg || 'Invalid Response'}
+              </span>
             </div>
-          ))}
+          </div>
+        )}
       </div>
     );
   }
