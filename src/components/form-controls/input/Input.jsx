@@ -55,7 +55,7 @@ class Input extends Component {
     switch (this.props.htmlType) {
       case 'email':
         // eslint-disable-next-line no-useless-escape
-        valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+        valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/.test(
           this.state.value,
         );
         break;
@@ -119,7 +119,6 @@ class Input extends Component {
     }
   };
 
-  // note that the datetime-local handleChange only works when you have filled in the time.  Need more instruction about how to handle time before moving forward with datetime-local.
   handleChange = event => {
     this.setState({
       value: event.target.value,
