@@ -7,16 +7,6 @@
   flex-wrap: nowrap;
   justify-content: left;
 
-  // &:hover ~ .ce-input--background-state {
-  //   border: 0.3rem solid @hover-blue;
-  // }
-  // &:focus ~ .ce-input--background-state {
-  //   border: 0.3rem solid @focus-blue;
-  // }
-  // &:active ~ .ce-input--background-state {
-  //   border: 0.3rem solid @active-blue;
-  // }
-
   label {
     order: 0;
     height: 2.2rem;
@@ -93,40 +83,31 @@
     flex-wrap: nowrap;
     border: 0.1rem solid @unchecked-gray;
 
-    // &:hover {
-    //   .ce-input--background-state {
-    //     border: 0.3rem solid @hover-blue;
-    //   }
-    // }
-    // &:focus {
-    //   .ce-input--background-state {
-    //     border: 0.3rem solid @focus-blue;
-    //   }
-    // }
-    // &:active {
-    //   .ce-input--background-state {
-    //     border: 0.3rem solid @active-blue;
-    //   }
-    // }
+    &::after {
+      position: absolute;
+      z-index: -1;
+      border-radius: 0.8rem;
+      width: 368px;
+      height: 66px;
+      margin-top: -3px;
+      margin-left: -4px;
+      // border: 0.3rem solid purple;
+      content: '';
+      box-sizing: border-box;
+    }
 
-    // &:hover ~ .ce-input--background-state {
-    //   border: 0.3rem solid @hover-blue;
-    // }
-    // &:focus ~ .ce-input--background-state {
-    //   border: 0.3rem solid @focus-blue;
-    // }
-    // &:active ~ .ce-input--background-state {
-    //   border: 0.3rem solid @active-blue;
-    // }
-    input {
-      // state changes on input affecting background-state div
-      &:hover ~ .ce-input--background-state {
+    &:hover {
+      &::after {
         border: 0.3rem solid @hover-blue;
       }
-      &:focus ~ .ce-input--background-state {
+    }
+    &:focus {
+      &::after {
         border: 0.3rem solid @focus-blue;
       }
-      &:active ~ .ce-input--background-state {
+    }
+    &:active {
+      &::after {
         border: 0.3rem solid @active-blue;
       }
     }
@@ -165,29 +146,12 @@
     outline: none;
   }
 
-  .ce-input--background-state:focus {
-    outline: none;
-  }
-
   .ce-input--box:focus {
     outline: none;
   }
 
   .ce-input--gradient-button:focus {
     outline: none;
-  }
-
-  // state changes - set up default sizing for hidden div appearing on hover, focus, and active
-  .ce-input--background-state {
-    position: absolute;
-    z-index: -1;
-    top: 1.9rem;
-    left: 0.8rem;
-    border-radius: 0.8rem;
-    width: 36.2rem;
-    height: 6.2rem;
-    margin-top: 1rem;
-    margin-left: 0.9rem;
   }
 
   &.ce-input--disabled {
@@ -198,8 +162,10 @@
       color: @checked-disabled-gray;
     }
     .ce-input--box {
-      &:hover ~ .ce-input--background-state {
-        border: none;
+      &:hover {
+        &::after {
+          border: none;
+        }
       }
     }
     .ce-input--gradient-button {
@@ -226,14 +192,20 @@
       input {
         color: @error-box-background;
         // need to silence the triggers to the background-state changes usually happening on input when not in error state
-        &:hover ~ .ce-input--background-state {
-          border: none;
+        &:hover {
+          &::after {
+            border: none;
+          }
         }
-        &:focus ~ .ce-input--background-state {
-          border: none;
+        &:focus {
+          &::after {
+            border: none;
+          }
         }
-        &:active ~ .ce-input--background-state {
-          border: none;
+        &:active {
+          &::after {
+            border: none;
+          }
         }
       }
       color: @error-box-background;

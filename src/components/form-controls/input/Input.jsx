@@ -204,7 +204,7 @@ class Input extends Component {
               />
             </button>
           )}
-          <span className="ce-input--background-state" />
+          {/* <span className="ce-input--background-state" /> */}
         </div>
 
         {(isValid === false || errorMsg) && (
