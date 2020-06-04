@@ -19,8 +19,5 @@ exports[`<Checkbox /> render() render the Checkbox 1`] = `
   >
     Checkbox Test Label 1
   </label>
-  <span
-    className="ce-checkbox__center"
-  />
 </div>
 `;
