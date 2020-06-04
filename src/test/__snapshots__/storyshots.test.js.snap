@@ -2422,17 +2422,19 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox States 
     <div
       className="ce-checkbox--error__container"
     >
-      <div
-        className="ce-checkbox--error__arrow"
-      />
-      <div
-        className="ce-checkbox--error__message"
-      >
-        <span
-          className="ce-checkbox--error__text"
+      <div>
+        <div
+          className="ce-checkbox--error__arrow"
+        />
+        <div
+          className="ce-checkbox--error__message"
         >
-          There is an error.
-        </span>
+          <span
+            className="ce-checkbox--error__text"
+          >
+            There is an error.
+          </span>
+        </div>
       </div>
     </div>
   </div>
