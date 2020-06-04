@@ -2379,9 +2379,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox States 
     >
       Default Checkbox
     </label>
-    <span
-      className="ce-checkbox__center"
-    />
     
   </div>
   <div
@@ -2402,9 +2399,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox States 
     >
       Disabled Checkbox
     </label>
-    <span
-      className="ce-checkbox__center"
-    />
     
   </div>
   <div
@@ -2425,9 +2419,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox States 
     >
       Error Checkbox
     </label>
-    <span
-      className="ce-checkbox__center"
-    />
     <div
       className="ce-checkbox--error__container"
     >
@@ -2470,9 +2461,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox Types 1
     >
       I am checked
     </label>
-    <span
-      className="ce-checkbox__center"
-    />
     
   </div>
   <div
@@ -2493,9 +2481,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox Types 1
     >
       I am unchecked
     </label>
-    <span
-      className="ce-checkbox__center"
-    />
     
   </div>
 </form>
@@ -2523,9 +2508,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox with Kn
     >
       Accept Terms and Conditions
     </label>
-    <span
-      className="ce-checkbox__center"
-    />
     
   </div>
 </form>
@@ -2562,9 +2544,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         macOS
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -2585,9 +2564,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Windows
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -2608,9 +2584,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Linux
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <span
@@ -2646,9 +2619,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         John Lennon
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -2669,9 +2639,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Paul Mccartney
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -2692,9 +2659,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         George Harrison
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -2715,9 +2679,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Ringo Starr
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <span
@@ -2753,9 +2714,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         John Lennon
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -2776,9 +2734,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Paul Mccartney
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -2799,9 +2754,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         George Harrison
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -2822,9 +2774,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Ringo Starr (Disabled)
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <span
@@ -2860,9 +2809,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         React
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -2883,9 +2829,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         AngularJS
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -2906,9 +2849,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Angular
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -2929,9 +2869,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Vue
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <span
@@ -2974,9 +2911,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Vim
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -2997,9 +2931,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Emacs
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -3020,9 +2951,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         VS Code
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -3043,9 +2971,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Atom
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <span
@@ -3088,9 +3013,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Pizza
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -3111,9 +3033,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Hotdog
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -3134,9 +3053,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Hamburger
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -3157,9 +3073,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Coleslaw
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <span
@@ -3251,9 +3164,6 @@ exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup FormCont
     >
       Checkbox 1
     </label>
-    <span
-      className="ce-checkbox__center"
-    />
     
   </div>
   <div
@@ -3274,9 +3184,6 @@ exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup FormCont
     >
       Checkbox 2
     </label>
-    <span
-      className="ce-checkbox__center"
-    />
     
   </div>
   <span

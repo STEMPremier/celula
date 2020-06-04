@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<RadioGroup /> render() render the RadioGroup component 1`] = `
+exports[`<Radio /> render() render the RadioGroup and Radio components 1`] = `
 <FormControlGroup
   childProps={Object {}}
   className="ce-radio-group"

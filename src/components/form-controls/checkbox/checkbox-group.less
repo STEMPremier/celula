@@ -33,11 +33,6 @@
         &::before {
           background-color: transparent;
         }
-
-        // The background mask
-        + .ce-checkbox__center {
-          border: 1px solid @unchecked-disabled-gray;
-        }
       }
 
       &:checked + label {
@@ -70,6 +65,10 @@
       &::after {
         background-color: @checked-red;
         border: 0.5rem solid @white;
+        box-shadow: -0.5px 0 @checked-red,
+          0.5px 0 @checked-red,
+          0 -0.5px @checked-red,
+          0 0.5px @checked-red;
       }
 
       // Hover
@@ -94,11 +93,6 @@
         &::before {
           background-color: @focus-red;
         }
-      }
-
-      // The background mask
-      + .ce-checkbox__center {
-        border: 1px solid @checked-red;
       }
     }
   }
