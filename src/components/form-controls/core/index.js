@@ -1,3 +1,3 @@
-import FormControlGroup from './FormControlGroup';
+import FormControlGroup from './form-control-group';
 
-export default FormControlGroup;
+export { FormControlGroup };
