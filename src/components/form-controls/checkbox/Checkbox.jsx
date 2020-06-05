@@ -71,12 +71,13 @@ class Checkbox extends Component {
           value={value}
         />
         <label htmlFor={id}>{label}</label>
-        <span className="ce-checkbox__center" />
         {errorMsg && (
           <div className="ce-checkbox--error__container">
-            <div className="ce-checkbox--error__arrow" />
-            <div className="ce-checkbox--error__message">
-              <span className="ce-checkbox--error__text">{errorMsg}</span>
+            <div>
+              <div className="ce-checkbox--error__arrow" />
+              <div className="ce-checkbox--error__message">
+                <span className="ce-checkbox--error__text">{errorMsg}</span>
+              </div>
             </div>
           </div>
         )}

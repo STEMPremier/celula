@@ -33,6 +33,10 @@
       &::after {
         background-color: @unchecked-background;
         border-radius: 0.3rem;
+        box-shadow: -0.5px 0 @unchecked-gray,
+          0.5px 0 @unchecked-gray,
+          0 -0.5px @unchecked-gray,
+          0 0.5px @unchecked-gray;
         box-sizing: border-box;
         content: '';
         height: 2rem;
@@ -49,6 +53,11 @@
           background-color: @hover-gray;
           border: 0;
         }
+
+        // The dot
+        &::after {
+          box-shadow: none;
+        }
       }
 
       // Active
@@ -57,6 +66,11 @@
         &::before {
           background-color: @active-gray;
           border: 0;
+        }
+
+        // The dot
+        &::after {
+          box-shadow: none;
         }
       }
 
@@ -67,21 +81,11 @@
           background-color: @focus-gray;
           border: 0;
         }
-      }
 
-      // The background mask
-      + .ce-checkbox__center {
-        border: 1px solid @unchecked-gray;
-        border-radius: 0.3rem;
-        box-sizing: border-box;
-        display: inline-block;
-        height: 2.1rem;
-        left: 0;
-        margin-left: 2.75rem;
-        margin-top: 0.75rem;
-        position: absolute;
-        width: 2.1rem;
-        z-index: -1;
+        // The dot
+        &::after {
+          box-shadow: none;
+        }
       }
     }
 
@@ -91,6 +95,10 @@
       &::after {
         background-color: @checked-blue;
         border: 0.5rem solid @white;
+        box-shadow: -0.5px 0 @checked-blue,
+          0.5px 0 @checked-blue,
+          0 -0.5px @checked-blue,
+          0 0.5px @checked-blue;
       }
 
       // Hover
@@ -98,6 +106,11 @@
         // The background
         &::before {
           background-color: @hover-blue;
+        }
+
+        // The dot
+        &::after {
+          box-shadow: none;
         }
       }
 
@@ -107,6 +120,11 @@
         &::before {
           background-color: @active-blue;
         }
+
+        // The dot
+        &::after {
+          box-shadow: none;
+        }
       }
 
       // Focus
@@ -115,11 +133,11 @@
         &::before {
           background-color: @focus-blue;
         }
-      }
 
-      // The background mask
-      + .ce-checkbox__center {
-        border: 1px solid @checked-blue;
+        // The dot
+        &::after {
+          box-shadow: none;
+        }
       }
     }
   }
@@ -128,14 +146,6 @@
     pointer-events: none;
 
     input {
-      + label {
-        // Unchecked
-        // The background mask
-        + .ce-checkbox__center {
-          border: 1px solid @unchecked-disabled-gray;
-        }
-      }
-
       &:checked + label {
         // Checked
         // The background
@@ -146,12 +156,11 @@
         // The dot
         &::after {
           background-color: @checked-disabled-gray;
+          box-shadow: -0.5px 0 @checked-disabled-gray,
+            0.5px 0 @checked-disabled-gray,
+            0 -0.5px @checked-disabled-gray,
+            0 0.5px @checked-disabled-gray;
         }
-      }
-
-      // The background mask
-      + .ce-checkbox__center {
-        border: 1px solid @checked-blue;
       }
     }
   }
@@ -160,12 +169,6 @@
     input {
       + label {
         color: @error-text;
-
-        // Unchecked
-        // The background mask
-        + .ce-checkbox__center {
-          border: 1px solid @checked-red;
-        }
       }
 
       &:checked + label {
@@ -173,6 +176,10 @@
         // The dot
         &::after {
           background-color: @checked-red;
+          box-shadow: -0.5px 0 @checked-red,
+            0.5px 0 @checked-red,
+            0 -0.5px @checked-red,
+            0 0.5px @checked-red;
         }
 
         // Hover
@@ -181,6 +188,11 @@
           &::before {
             background-color: @hover-red;
             border: 0;
+          }
+
+          // The dot
+          &::after {
+            box-shadow: none;
           }
         }
 
@@ -191,6 +203,11 @@
             background-color: @active-red;
             border: 0;
           }
+
+          // The dot
+          &::after {
+            box-shadow: none;
+          }
         }
 
         // Focus
@@ -200,13 +217,13 @@
             background-color: @focus-red;
             border: 0;
           }
+
+          // The dot
+          &::after {
+            box-shadow: none;
+          }
         }
 
-      }
-
-      // The background mask
-      + .ce-checkbox__center {
-        border: 1px solid @checked-red;
       }
     }
 
@@ -214,11 +231,15 @@
       background-color: @white;
       padding: 0 2.75rem;
 
+      & > div {
+        display: inline-block;
+      }
+
       .ce-checkbox--error__arrow {
         border-bottom: 0.5rem solid @error-box-background;
         border-left: 0.5rem solid transparent;
         border-right: 0.5rem solid transparent;
-        margin-left: 25%;
+        margin-left: 50%;
         width: 0;
       }
 
