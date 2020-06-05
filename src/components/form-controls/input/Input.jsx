@@ -130,6 +130,7 @@ class Input extends Component {
       className,
       disabled,
       error,
+      errorIcon,
       errorMsg,
       gradientIconBoxClick,
       helperText,
@@ -155,6 +156,7 @@ class Input extends Component {
         ),
         'ce-input--disabled': disabled,
         'ce-input--error': !isValid || errorMsg,
+        'ce-input--error-icon': errorIcon,
         'ce-input--show-gradient-icon-box': showGradientIconBox,
       },
       className,
@@ -204,12 +206,17 @@ class Input extends Component {
               />
             </button>
           )}
-          {/* <span className="ce-input--background-state" /> */}
+          {(!isValid || (errorMsg && errorIcon)) && (
+            <div className="ce-input--error-icon">
+              <SystemIcon name="warning" color="red" />
+              <span>{errorMsg}</span>
+            </div>
+          )}
         </div>
 
-        {(isValid === false || errorMsg) && (
+        {(isValid === false || (errorMsg && !errorIcon)) && (
           <div className="ce-input--error-box-wrapper">
-            <div className="ce-input--icon-in-box" />
+            <div className="ce-input--box-pointer" />
             <div className="ce-input--error-box">
               <span className="ce-input--error-box-text">
                 {errorMsg || 'Invalid Response'}
@@ -235,6 +242,10 @@ Input.propTypes = {
    * Make the `<Input />` display in error state.
    */
   error: PropTypes.bool,
+  /**
+   * The default error styling is the outlined input with the error message box.  This errorIcon styling selection replaces that default error styling.
+   */
+  errorIcon: PropTypes.bool,
   /**
    * The error message that will appear in the error box below the input.  The presence of the error message automatically triggers error state on the component.
    */
@@ -296,6 +307,7 @@ Input.defaultProps = {
   className: '',
   disabled: false,
   error: false,
+  errorIcon: '',
   errorMsg: '',
   helperText: '',
   icon: '',
