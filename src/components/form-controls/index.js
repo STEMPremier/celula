@@ -1,5 +1,5 @@
 import FormControlGroup from './core';
-import * as Radios from './radios';
+import * as Radio from './radio';
 import SubmitButton from './submit-button';
 
-export { FormControlGroup, Radios, SubmitButton };
+export { FormControlGroup, Radio, SubmitButton };
