@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './error-box.less';
+
 const ErrorBox = ({ errorMsg = '' }) => (
   <div className="ce-errorbox--error__container">
     <div>
