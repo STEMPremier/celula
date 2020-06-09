@@ -2420,17 +2420,17 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox States 
       Error Checkbox
     </label>
     <div
-      className="ce-checkbox--error__container"
+      className="ce-errorbox--error__container"
     >
       <div>
         <div
-          className="ce-checkbox--error__arrow"
+          className="ce-errorbox--error__arrow"
         />
         <div
-          className="ce-checkbox--error__message"
+          className="ce-errorbox--error__message"
         >
           <span
-            className="ce-checkbox--error__text"
+            className="ce-errorbox--error__text"
           >
             There is an error.
           </span>
@@ -3086,7 +3086,49 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
 </form>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup Form Control Group with Radios 1`] = `
+exports[`Storyshots Components/Molecules/Form Controls/Core/ErrorBox ErrorBox Types 1`] = `
+<div
+  className="ce-errorbox--error__container"
+>
+  <div>
+    <div
+      className="ce-errorbox--error__arrow"
+    />
+    <div
+      className="ce-errorbox--error__message"
+    >
+      <span
+        className="ce-errorbox--error__text"
+      >
+        My fancy error message.
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Core/ErrorBox ErrorBox with Knobs 1`] = `
+<div
+  className="ce-errorbox--error__container"
+>
+  <div>
+    <div
+      className="ce-errorbox--error__arrow"
+    />
+    <div
+      className="ce-errorbox--error__message"
+    >
+      <span
+        className="ce-errorbox--error__text"
+      >
+        This is an error message.
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Core/FormControlGroup Form Control Group with Radios 1`] = `
 <fieldset
   className=""
   disabled={false}
@@ -3138,7 +3180,7 @@ exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup Form Con
 </fieldset>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup FormControlGroup with Checkboxes 1`] = `
+exports[`Storyshots Components/Molecules/Form Controls/Core/FormControlGroup FormControlGroup with Checkboxes 1`] = `
 <fieldset
   className=""
   disabled={false}
