@@ -1,7 +1,6 @@
 /* eslint-disable no-case-declarations */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/destructuring-assignment */
-
 /* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
@@ -217,7 +216,7 @@ class Input extends Component {
           </div>
         </div>
 
-        {((isValid === false && !errorIcon) || (errorMsg && !errorIcon)) && (
+        {((!isValid && !errorIcon) || (errorMsg && !errorIcon)) && (
           <div className="ce-input--error-box-wrapper">
             <div className="ce-input--box-pointer" />
             <div className="ce-input--error-box">
