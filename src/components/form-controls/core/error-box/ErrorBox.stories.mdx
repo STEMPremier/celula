@@ -1,0 +1,21 @@
+import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { text } from '@storybook/addon-knobs';
+
+import ErrorBox from '.';
+
+<Meta component={ErrorBox} title="Components/Molecules/Form Controls/Core/ErrorBox" />
+
+# ErrorBox
+<Dscription of={ErrorBox} />
+<Props of={ErrorBox} />
+
+<Story name="ErrorBox with Knobs" parameters={{docs: {disable: true}}}>
+  <ErrorBox errorMsg={text('errorMsg', 'This is an error message.')} />
+</Story>
+
+### Types
+<Preview>
+  <Story name="ErrorBox Types">
+    <ErrorBox errorMsg="My fancy error message." />
+  </Story>
+</Preview>

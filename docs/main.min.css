@@ -6,6 +6,7 @@
 @import url(https://use.typekit.net/lyt2kus.css);
 @import url(https://use.typekit.net/lyt2kus.css);
 @import url(https://use.typekit.net/lyt2kus.css);
+@import url(https://use.typekit.net/lyt2kus.css);
 html,
 body,
 div,
@@ -680,6 +681,161 @@ body {
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
  */
+.ce-errorbox {
+  background-color: #fff;
+  padding: 0 2.75rem;
+}
+.ce-errorbox .ce-errorbox__container {
+  display: inline-block;
+}
+.ce-errorbox .ce-errorbox__arrow {
+  border-bottom: 0.5rem solid #cc0043;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  margin-left: 50%;
+  width: 0;
+}
+.ce-errorbox .ce-errorbox__message {
+  background-color: #cc0043;
+  border-radius: 0.5rem;
+  display: inline-block;
+  padding: 2rem 5rem;
+}
+.ce-errorbox .ce-errorbox__message .ce-errorbox__text {
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+}
+/* Grayscale
+ * #fff - #000 in [various]% steps
+ * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
+ */
 .ce-checkbox {
   user-select: none;
 }
@@ -799,30 +955,6 @@ body {
 }
 .ce-checkbox.ce-checkbox--error input:checked + label:focus::after {
   box-shadow: none;
-}
-.ce-checkbox.ce-checkbox--error .ce-checkbox--error__container {
-  background-color: #fff;
-  padding: 0 2.75rem;
-}
-.ce-checkbox.ce-checkbox--error .ce-checkbox--error__container > div {
-  display: inline-block;
-}
-.ce-checkbox.ce-checkbox--error .ce-checkbox--error__container .ce-checkbox--error__arrow {
-  border-bottom: 0.5rem solid #cc0043;
-  border-left: 0.5rem solid transparent;
-  border-right: 0.5rem solid transparent;
-  margin-left: 50%;
-  width: 0;
-}
-.ce-checkbox.ce-checkbox--error .ce-checkbox--error__container .ce-checkbox--error__message {
-  background-color: #cc0043;
-  border-radius: 0.5rem;
-  display: inline-block;
-  padding: 2rem 5rem;
-}
-.ce-checkbox.ce-checkbox--error .ce-checkbox--error__container .ce-checkbox--error__message .ce-checkbox--error__text {
-  color: #fff;
-  font-size: 1.6rem;
 }
 .ce-checkbox + .ce-checkbox {
   margin-top: 0.4rem;
