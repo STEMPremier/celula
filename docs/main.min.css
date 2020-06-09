@@ -681,27 +681,27 @@ body {
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
  */
-.ce-errorbox--error__container {
+.ce-errorbox {
   background-color: #fff;
   padding: 0 2.75rem;
 }
-.ce-errorbox--error__container > div {
+.ce-errorbox .ce-errorbox__container {
   display: inline-block;
 }
-.ce-errorbox--error__container .ce-errorbox--error__arrow {
+.ce-errorbox .ce-errorbox__arrow {
   border-bottom: 0.5rem solid #cc0043;
   border-left: 0.5rem solid transparent;
   border-right: 0.5rem solid transparent;
   margin-left: 50%;
   width: 0;
 }
-.ce-errorbox--error__container .ce-errorbox--error__message {
+.ce-errorbox .ce-errorbox__message {
   background-color: #cc0043;
   border-radius: 0.5rem;
   display: inline-block;
   padding: 2rem 5rem;
 }
-.ce-errorbox--error__container .ce-errorbox--error__message .ce-errorbox--error__text {
+.ce-errorbox .ce-errorbox__message .ce-errorbox__text {
   color: #fff;
   font-size: 1.6rem;
 }
