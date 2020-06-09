@@ -4,8 +4,8 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
 import FormControlGroup from '.';
-import { Radio } from '../radio';
-import { Checkbox } from '../checkbox';
+import { Radio } from '../../radio';
+import { Checkbox } from '../../checkbox';
 
 describe('FormControlGroup', () => {
   describe('render()', () => {
