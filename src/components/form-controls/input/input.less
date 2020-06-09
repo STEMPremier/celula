@@ -25,14 +25,14 @@
     color: transparent;
     background: none;
     width: 40%;
-    // z-index: 1;
+    z-index: 1;
     // background-color: green;
   }
   input[type='datetime-local']::-webkit-calendar-picker-indicator {
     color: transparent;
     background: none;
     width: 40%;
-    // z-index: 1;
+    z-index: 1;
     // background-color: green;
   }
   input[type='week']::-webkit-calendar-picker-indicator {
@@ -40,11 +40,15 @@
     background: none;
     width: 40%;
   }
+  // input[type='week'] + .ce-input--box {
+  //   background-color: black;
+  //   // height: 55px;
+  // }
 
   .ce-input--date-icon {
     position: absolute;
     margin-left: 305px;
-    margin-top: 20px;
+    margin-top: -39px;
     margin-bottom: 20px;
     z-index: 0;
   }
@@ -54,9 +58,9 @@
   }
 
   input {
-    order: 1;
+    // order: 1;
     height: 5.8rem;
-    width: 38rem;
+    width: 33.9rem;
     padding-left: 1.9rem;
     border-radius: 0.5rem;
     border: 0;
@@ -73,16 +77,16 @@
   }
 
   .ce-input--box {
-    background-color: green;
+    // background-color: blue;
     margin: 0rem 0 0 1rem;
-    border-radius: 0.5rem;
+    border-radius: 0.6rem;
     width: 36rem;
     height: 6rem;
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: nowrap;
-    border: 0.1rem solid @unchecked-gray;
+    border: 0.1rem solid @gray-border;
 
     &::after {
       position: absolute;
@@ -117,13 +121,15 @@
       width: 38rem;
     }
     .ce-input--gradient-button {
+      float: right;
       order: 2;
       width: 7.4rem;
       height: 6rem;
       font-size: 5.5rem;
       margin-left: -0.1rem;
-      margin-top: 0;
+      margin-top: -58px;
       margin-right: 0;
+      border: 1px;
       border-radius: 0 0.5rem 0.5rem 0;
       background: @gradient-cool;
       svg {
@@ -137,15 +143,22 @@
       //   padding: 1rem;
       // }
     }
+
+    .ce-input--error-icon ~ input {
+      // input {
+      background-color: red;
+      margin-left: -87px;
+      // }
+    }
     .ce-input--error-icon {
       // justify-content: right;
-      background-color: purple;
-      position: absolute;
-      // float: right;
-      margin-top: 50px;
-      // margin-right: 20px;
-      /* margin-right: 40px; */
-      // margin-left: 37%;
+      // background-color: purple;
+      background-color: @white;
+      float: right;
+      position: relative;
+      margin-top: -10px;
+      z-index: 2;
+      margin-right: 10px;
     }
   }
 
@@ -224,6 +237,10 @@
         background: @error-box-background;
         border: 0.1rem solid @error-box-background;
       }
+    }
+
+    .ce-input--wrapping-div-for-error {
+      z-index: ;
     }
     .ce-input--error-box-wrapper {
       width: 36.5rem;

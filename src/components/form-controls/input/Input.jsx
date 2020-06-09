@@ -171,50 +171,53 @@ class Input extends Component {
           <div className="ce-input--helper-text">{helperText}</div>
         )}
         <div className="ce-input--box">
-          {hasIcon && (
-            <div className="ce-input--icon">
-              <SystemIcon name={icon} />
-            </div>
-          )}
-          <input
-            name={name}
-            type={htmlType}
-            placeholder={placeholderText}
-            value={value}
-            onChange={this.handleChange}
-            onBlur={this.checkValiditiy}
-            icon={icon}
-            disabled={disabled}
-            min={min}
-            max={max}
-          />
-          {isDate && (
-            <div className="ce-input--date-icon">
-              <SystemIcon name="calendar" />
-            </div>
-          )}
-          {showGradientIconBox && (
-            <button
-              className="ce-input--gradient-button"
-              onClick={gradientIconBoxClick}
-              type="submit"
-            >
-              <SystemIcon
-                name="navigate"
-                className="ce-input--icon-in-box"
-                color="white"
-              />
-            </button>
-          )}
-          {(!isValid || (errorMsg && errorIcon)) && (
-            <div className="ce-input--error-icon">
-              <SystemIcon name="warning" color="red" />
-              <span>{errorMsg}</span>
-            </div>
-          )}
+          <div className="ce-input--wrapping-div-for-error">
+            {hasIcon && (
+              <div className="ce-input--icon">
+                <SystemIcon name={icon} />
+              </div>
+            )}
+            <input
+              name={name}
+              type={htmlType}
+              placeholder={placeholderText}
+              value={value}
+              onChange={this.handleChange}
+              onBlur={this.checkValiditiy}
+              icon={icon}
+              disabled={disabled}
+              min={min}
+              max={max}
+            />
+            {isDate && (
+              <div className="ce-input--date-icon">
+                <SystemIcon name="calendar" />
+              </div>
+            )}
+            {((!isValid && errorIcon) || (errorMsg && errorIcon)) && (
+              <span className="ce-input--error-icon">
+                <SystemIcon name="warning" color="red" />
+                <span>{errorMsg}</span>
+              </span>
+            )}
+
+            {showGradientIconBox && (
+              <button
+                className="ce-input--gradient-button"
+                onClick={gradientIconBoxClick}
+                type="submit"
+              >
+                <SystemIcon
+                  name="navigate"
+                  className="ce-input--icon-in-box"
+                  color="white"
+                />
+              </button>
+            )}
+          </div>
         </div>
 
-        {(isValid === false || (errorMsg && !errorIcon)) && (
+        {((isValid === false && !errorIcon) || (errorMsg && !errorIcon)) && (
           <div className="ce-input--error-box-wrapper">
             <div className="ce-input--box-pointer" />
             <div className="ce-input--error-box">
@@ -307,7 +310,7 @@ Input.defaultProps = {
   className: '',
   disabled: false,
   error: false,
-  errorIcon: '',
+  errorIcon: null,
   errorMsg: '',
   helperText: '',
   icon: '',
