@@ -18,10 +18,11 @@
 
     // caret file brought into select as background-image and styled here
     background-image: url('./down-arrow.png');
-    background-position: calc(100% - 2rem) calc(1em + 1.1rem),
+    background-position: calc(100% - 2rem) calc(1em + 0.9rem),
       calc(100% - 1.5rem) calc(1em + 0.2rem), calc(100% - 2.5rem) 0.5em;
     background-size: 1.5rem;
     background-repeat: no-repeat;
+    border-radius: 0.5rem;
 
     // state changes on select affecting background-state div
     &:hover ~ .ce-select--background-state {
@@ -91,11 +92,10 @@
 
     .ce-select--right-icon {
       width: 7.4rem;
-      height: 6.25rem;
+      height: 5.95rem;
       font-size: 5.5rem;
       margin-left: 0.27rem;
-      margin-top: -0.16rem;
-      margin-right: -0.1rem;
+      border: 1rem;
       border-radius: 0 0.5rem 0.5rem 0;
       background: @gradient-cool;
 
@@ -138,6 +138,7 @@
   }
 
   &.ce-select--error {
+    border: none;
     .ce-select--background-state {
       border: 0.3rem solid @error-box-background;
       // Responsive Rules
@@ -148,6 +149,7 @@
       }
     }
     .ce-select--box {
+      border: none;
       &:hover ~ .ce-select--background-state {
         border: 0.3rem solid @hover-red;
       }
@@ -162,6 +164,10 @@
       }
       color: @error-box-background;
       .ce-select--right-icon {
+        margin-top: -0.4rem;
+        margin-right: -0.2rem;
+        padding-top: 0.4rem;
+        height: 6.4rem;
         background: @error-box-background;
         border: 0.1rem solid @error-box-background;
       }
