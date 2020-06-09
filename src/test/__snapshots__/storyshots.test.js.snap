@@ -2420,17 +2420,19 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox States 
       Error Checkbox
     </label>
     <div
-      className="ce-errorbox--error__container"
+      className="ce-errorbox"
     >
-      <div>
+      <div
+        className="ce-errorbox__container"
+      >
         <div
-          className="ce-errorbox--error__arrow"
+          className="ce-errorbox__arrow"
         />
         <div
-          className="ce-errorbox--error__message"
+          className="ce-errorbox__message"
         >
           <span
-            className="ce-errorbox--error__text"
+            className="ce-errorbox__text"
           >
             There is an error.
           </span>
@@ -3088,17 +3090,19 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
 
 exports[`Storyshots Components/Molecules/Form Controls/Core/ErrorBox ErrorBox Types 1`] = `
 <div
-  className="ce-errorbox--error__container"
+  className="ce-errorbox"
 >
-  <div>
+  <div
+    className="ce-errorbox__container"
+  >
     <div
-      className="ce-errorbox--error__arrow"
+      className="ce-errorbox__arrow"
     />
     <div
-      className="ce-errorbox--error__message"
+      className="ce-errorbox__message"
     >
       <span
-        className="ce-errorbox--error__text"
+        className="ce-errorbox__text"
       >
         My fancy error message.
       </span>
@@ -3109,17 +3113,19 @@ exports[`Storyshots Components/Molecules/Form Controls/Core/ErrorBox ErrorBox Ty
 
 exports[`Storyshots Components/Molecules/Form Controls/Core/ErrorBox ErrorBox with Knobs 1`] = `
 <div
-  className="ce-errorbox--error__container"
+  className="ce-errorbox"
 >
-  <div>
+  <div
+    className="ce-errorbox__container"
+  >
     <div
-      className="ce-errorbox--error__arrow"
+      className="ce-errorbox__arrow"
     />
     <div
-      className="ce-errorbox--error__message"
+      className="ce-errorbox__message"
     >
       <span
-        className="ce-errorbox--error__text"
+        className="ce-errorbox__text"
       >
         This is an error message.
       </span>
