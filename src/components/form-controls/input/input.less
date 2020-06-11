@@ -47,21 +47,20 @@
     color: transparent;
     background: none;
     width: 40%;
-    z-index: 5;
+    // z-index: 7;
     background-color: green;
   }
   input[type='datetime-local']::-webkit-calendar-picker-indicator {
     color: transparent;
     background: none;
     width: 40%;
-    z-index: 5;
-    // background-color: green;
+    // z-index: 5;
   }
   input[type='week']::-webkit-calendar-picker-indicator {
     color: transparent;
     background: none;
     width: 40%;
-    z-index: 5;
+    // z-index: 5;
   }
 
   &.ce-input--hidden {
@@ -79,7 +78,7 @@
     position: absolute;
     margin-left: 305px;
     margin-top: 20px;
-    z-index: 0;
+    // z-index: 0;
   }
   // .ce-input--date-icon ~ input {
   //   // width: 46rem;
@@ -90,7 +89,7 @@
     outline: none;
   }
   .ce-input--box {
-    // z-index: -1;
+    // z-index: 1;
     margin: 0rem 0 0 1rem;
     border-radius: 0.6rem;
     display: flex;
@@ -98,13 +97,11 @@
 
     &::after {
       position: absolute;
-      // z-index: -1;
       border-radius: 0.8rem;
       width: 356px;
       height: 68px;
       margin-top: -4.5px;
       margin-left: -4px;
-      // border: 0.3rem solid purple;
       content: '';
       box-sizing: border-box;
     }
