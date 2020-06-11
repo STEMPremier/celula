@@ -1311,18 +1311,28 @@ body {
   margin-left: 2.8rem;
   position: absolute;
   width: 2rem;
+  box-shadow: -0.5px 0 #b2b2b2, 0.5px 0 #b2b2b2, 0 -0.5px #b2b2b2, 0 0.5px #b2b2b2;
 }
 .ce-radio input + label:hover::before {
   background-color: #e5e5e5;
   border: 0;
 }
+.ce-radio input + label:hover::after {
+  box-shadow: none;
+}
 .ce-radio input + label:active::before {
   background-color: #b3b3b3;
   border: 0;
 }
+.ce-radio input + label:active::after {
+  box-shadow: none;
+}
 .ce-radio input + label:focus::before {
   background-color: #ccc;
   border: 0;
+}
+.ce-radio input + label:focus::after {
+  box-shadow: none;
 }
 .ce-radio input:checked + label::before {
   background-color: #192344;
@@ -1517,15 +1527,25 @@ body {
 .ce-radio-group.ce-radio-group--error input:checked + label::after {
   background-color: #e5004b;
   border: 0.5rem solid #fff;
+  box-shadow: -0.5px 0 #e5004b, 0.5px 0 #e5004b, 0 -0.5px #e5004b, 0 0.5px #e5004b;
 }
 .ce-radio-group.ce-radio-group--error input:checked + label:hover::before {
   background-color: #ffe5ed;
 }
+.ce-radio-group.ce-radio-group--error input:checked + label:hover::after {
+  box-shadow: none;
+}
 .ce-radio-group.ce-radio-group--error input:checked + label:active::before {
   background-color: #ffb3cc;
 }
+.ce-radio-group.ce-radio-group--error input:checked + label:active::after {
+  box-shadow: none;
+}
 .ce-radio-group.ce-radio-group--error input:checked + label:focus::before {
   background-color: #ffccdc;
+}
+.ce-radio-group.ce-radio-group--error input:checked + label:focus::after {
+  box-shadow: none;
 }
 
 html,
