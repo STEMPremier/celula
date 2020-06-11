@@ -195,7 +195,7 @@ class Input extends Component {
             {((!isValid && errorIcon) || (errorMsg && errorIcon)) && (
               <span className="ce-input--error-icon">
                 <SystemIcon name="warning" color="red" />
-                <span>{errorMsg}</span>
+                <span className="ce-input--error-icon-text">{errorMsg}</span>
               </span>
             )}
 
