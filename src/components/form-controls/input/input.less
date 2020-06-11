@@ -38,8 +38,7 @@
 
   .ce-input--helper-text {
     font-size: 12px;
-    margin: 5px 0px 10px 10px;
-    // width: 36rem;
+    margin: 0.5rem 0 1rem 1rem;
     height: 100%;
   }
 
@@ -47,19 +46,16 @@
     color: transparent;
     background: none;
     width: 40%;
-    // z-index: 7;
   }
   input[type='datetime-local']::-webkit-calendar-picker-indicator {
     color: transparent;
     background: none;
     width: 40%;
-    // z-index: 5;
   }
   input[type='week']::-webkit-calendar-picker-indicator {
     color: transparent;
     background: none;
     width: 40%;
-    // z-index: 5;
   }
 
   &.ce-input--hidden {
@@ -75,20 +71,14 @@
 
   .ce-input--date-icon {
     position: absolute;
-    margin-left: 305px;
-    margin-top: 20px;
-    // z-index: 0;
+    margin-left: 30.5rem;
+    margin-top: 2rem;
   }
-  // .ce-input--date-icon ~ input {
-  //   width: 46rem;
-  //   margin-right: 0px;
-  // }
 
   .ce-input--box:focus {
     outline: none;
   }
   .ce-input--box {
-    // z-index: 1;
     margin: 0rem 0 0 1rem;
     border-radius: 0.6rem;
     display: flex;
@@ -97,10 +87,10 @@
     &::after {
       position: absolute;
       border-radius: 0.8rem;
-      width: 356px;
-      height: 68px;
-      margin-top: -4.5px;
-      margin-left: -4px;
+      width: 35.6rem;
+      height: 6.8rem;
+      margin-top: -0.45rem;
+      margin-left: -0.4rem;
       z-index: -4;
       content: '';
       box-sizing: border-box;
@@ -111,7 +101,7 @@
       flex-direction: row;
       width: 86%;
       height: 6rem;
-      padding-left: 4px;
+      padding-left: 0.4rem;
 
       .ce-input--icon {
         margin: 2rem 0 0 2rem;
@@ -137,8 +127,8 @@
         order: 3;
         width: 7.4rem;
         font-size: 5.5rem;
-        margin-right: -45px;
-        border: 1px;
+        margin-right: -4.5rem;
+        border: 0.1rem;
         border-radius: 0 0.5rem 0.5rem 0;
         background: @gradient-cool;
         svg {
@@ -153,20 +143,16 @@
         }
       }
 
-      .ce-input--error-icon ~ input {
-        margin-left: -87px;
-      }
-
       .ce-input--error-icon {
         background-color: @white;
-        padding: 2px;
+        padding: 0.2rem;
         z-index: 4;
         order: 3;
         margin-right: -10%;
-        height: 20px;
-        margin-top: 47px;
+        height: 2rem;
+        margin-top: 4.7rem;
         .ce-input--error-icon-text {
-          padding: 4px;
+          padding: 0.4rem;
         }
       }
     }
@@ -233,34 +219,5 @@
         border: 0.1rem solid @error-box-background;
       }
     }
-
-    // THE BELOW CODE FORMATS THE ERROR BOX TO THE INPUT BOX ABOVE
-    // I'M LEAVING IT HERE COMMENTED OUT WHILE WE FIND OUT FROM FERG HOW HE WANTS THE ERROR BOX STYLED
-    // .ce-input--error-box-wrapper {
-    //   margin-left: 0.9rem;
-
-    //   .ce-input--box-pointer {
-    //     width: 0;
-    //     height: 5;
-    //     border-left: 0.5rem solid transparent;
-    //     border-right: 0.5rem solid transparent;
-    //     position: center;
-    //     border-bottom: 0.5rem solid @error-box-background;
-    //     margin-left: 48%;
-    //     margin-top: 0.5rem;
-    //   }
-    //   .ce-input--error-box {
-    //     height: 6rem;
-    //     background-color: @error-box-background;
-    //     border-radius: 0.5rem;
-    //     .ce-input--error-box-text {
-    //       color: @white;
-    //       text-align: center;
-    //       padding-top: 2rem;
-    //       padding-left: 36%;
-    //       display: inline-block;
-    //     }
-    //   }
-    // }
   }
 }
