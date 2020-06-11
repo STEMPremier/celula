@@ -31,7 +31,7 @@ module.exports = {
     );
     rule.test = /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/;
 
-    if (configType === 'production') {
+    if (configType.toLowerCase() === 'production') {
       plugins.push(
         new MiniCssExtractPlugin({
           filename: '[name].min.css',

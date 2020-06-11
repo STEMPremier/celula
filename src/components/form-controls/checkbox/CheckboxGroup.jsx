@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import FormControlGroup from '../core';
+import { FormControlGroup } from '../core';
 
 import './checkbox-group.less';
 

@@ -1,0 +1,8246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
+<div>
+  <div>
+    <button
+      className="ce-button ce-button--default ce-button--large ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        primary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--large ce-button--secondary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        secondary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--large ce-button--black"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        black
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--large ce-button--blue"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        blue
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--large ce-button--green"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        green
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--large ce-button--orange"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        orange
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--large ce-button--purple"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        purple
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--large ce-button--red"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        red
+      </span>
+    </button>
+  </div>
+  <div>
+    <button
+      className="ce-button ce-button--outline ce-button--large ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        primary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--large ce-button--secondary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        secondary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--large ce-button--black"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        black
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--large ce-button--blue"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        blue
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--large ce-button--green"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        green
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--large ce-button--orange"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        orange
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--large ce-button--purple"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        purple
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--large ce-button--red"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        red
+      </span>
+    </button>
+  </div>
+  <div>
+    <button
+      className="ce-button ce-button--text ce-button--large ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        primary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--large ce-button--secondary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        secondary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--large ce-button--black"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        black
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--large ce-button--blue"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        blue
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--large ce-button--green"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        green
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--large ce-button--orange"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        orange
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--large ce-button--purple"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        purple
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--large ce-button--red"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        red
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/Button Button Sizes 1`] = `
+<div>
+  <div>
+    <button
+      className="ce-button ce-button--default ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        default small
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--large ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        default large
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--jumbo ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        default jumbo
+      </span>
+    </button>
+  </div>
+  <div>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        outline small
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--large ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        outline large
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--jumbo ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        outline jumbo
+      </span>
+    </button>
+  </div>
+  <div>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        text small
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--large ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        text large
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--jumbo ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        text jumbo
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/Button Button States 1`] = `
+<div>
+  <div>
+    <button
+      className="ce-button ce-button--default ce-button--large ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        default default
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--large ce-button--primary ce-button--disabled"
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        disabled default
+      </span>
+    </button>
+  </div>
+  <div>
+    <button
+      className="ce-button ce-button--outline ce-button--large ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        default outline
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--large ce-button--primary ce-button--disabled"
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        disabled outline
+      </span>
+    </button>
+  </div>
+  <div>
+    <button
+      className="ce-button ce-button--text ce-button--large ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        default text
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--large ce-button--primary ce-button--disabled"
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        disabled text
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/Button Button Types 1`] = `
+<div>
+  <button
+    className="ce-button ce-button--default ce-button--large ce-button--primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="ce-button__label"
+    >
+      default button
+    </span>
+  </button>
+  <button
+    className="ce-button ce-button--outline ce-button--large ce-button--primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="ce-button__label"
+    >
+      outline button
+    </span>
+  </button>
+  <button
+    className="ce-button ce-button--text ce-button--large ce-button--primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="ce-button__label"
+    >
+      text button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/Button Button with Knobs 1`] = `
+<button
+  className="ce-button ce-button--default ce-button--small ce-button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    a button
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Colors 1`] = `
+<div>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_primary_export"
+        name="formColor_primary"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formColor_primary_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formColor_primary_follow"
+        name="formColor_primary"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formColor_primary_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_primary_message"
+        name="formColor_primary"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formColor_primary_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--secondary"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_secondary_export"
+        name="formColor_secondary"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formColor_secondary_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formColor_secondary_follow"
+        name="formColor_secondary"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formColor_secondary_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_secondary_message"
+        name="formColor_secondary"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formColor_secondary_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--black"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_black_export"
+        name="formColor_black"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formColor_black_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formColor_black_follow"
+        name="formColor_black"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formColor_black_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_black_message"
+        name="formColor_black"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formColor_black_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--blue"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_blue_export"
+        name="formColor_blue"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formColor_blue_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formColor_blue_follow"
+        name="formColor_blue"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formColor_blue_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_blue_message"
+        name="formColor_blue"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formColor_blue_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--green"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_green_export"
+        name="formColor_green"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formColor_green_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formColor_green_follow"
+        name="formColor_green"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formColor_green_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_green_message"
+        name="formColor_green"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formColor_green_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--orange"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_orange_export"
+        name="formColor_orange"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formColor_orange_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formColor_orange_follow"
+        name="formColor_orange"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formColor_orange_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_orange_message"
+        name="formColor_orange"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formColor_orange_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--purple"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_purple_export"
+        name="formColor_purple"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formColor_purple_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formColor_purple_follow"
+        name="formColor_purple"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formColor_purple_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_purple_message"
+        name="formColor_purple"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formColor_purple_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--red"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_red_export"
+        name="formColor_red"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formColor_red_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formColor_red_follow"
+        name="formColor_red"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formColor_red_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_red_message"
+        name="formColor_red"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formColor_red_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Sizes 1`] = `
+<div>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--small ce-toggle-button-group--primary"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formSizes_small_export"
+        name="formSizes_small"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formSizes_small_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--small"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formSizes_small_follow"
+        name="formSizes_small"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formSizes_small_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--small"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formSizes_small_message"
+        name="formSizes_small"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formSizes_small_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--small"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formSizes_large_export"
+        name="formSizes_large"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formSizes_large_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formSizes_large_follow"
+        name="formSizes_large"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formSizes_large_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formSizes_large_message"
+        name="formSizes_large"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formSizes_large_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--jumbo ce-toggle-button-group--primary"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formSizes_jumbo_export"
+        name="formSizes_jumbo"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formSizes_jumbo_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--jumbo"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formSizes_jumbo_follow"
+        name="formSizes_jumbo"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formSizes_jumbo_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--jumbo"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formSizes_jumbo_message"
+        name="formSizes_jumbo"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formSizes_jumbo_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--jumbo"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton ToggleButton States 1`] = `
+Array [
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formStates_default_export"
+        name="formStates_default"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formStates_default_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formStates_default_follow"
+        name="formStates_default"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formStates_default_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formStates_default_message"
+        name="formStates_default"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formStates_default_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>,
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--disabled"
+    disabled={true}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formStates_disabled_export"
+        name="formStates_disabled"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formStates_disabled_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formStates_disabled_follow"
+        name="formStates_disabled"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formStates_disabled_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formStates_disabled_message"
+        name="formStates_disabled"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formStates_disabled_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>,
+]
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Types 1`] = `
+<fieldset
+  className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    
+  </legend>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formTypes_export"
+      name="formTypes"
+      type="radio"
+      value="export"
+    />
+    <label
+      htmlFor="formTypes_export"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        export
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-export"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button ce-toggle-button--checked"
+  >
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="formTypes_follow"
+      name="formTypes"
+      type="radio"
+      value="follow"
+    />
+    <label
+      htmlFor="formTypes_follow"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        follow
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-follow"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formTypes_message"
+      name="formTypes"
+      type="radio"
+      value="message"
+    />
+    <label
+      htmlFor="formTypes_message"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        message
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-message"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <span
+    className=""
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton ToggleButton with Knobs 1`] = `
+<fieldset
+  className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    
+  </legend>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formKnobs2_export"
+      name="formKnobs2"
+      type="radio"
+      value="export"
+    />
+    <label
+      htmlFor="formKnobs2_export"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        export
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-export"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button ce-toggle-button--checked"
+  >
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="formKnobs2_follow"
+      name="formKnobs2"
+      type="radio"
+      value="follow"
+    />
+    <label
+      htmlFor="formKnobs2_follow"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        follow
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-follow"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formKnobs2_message"
+      name="formKnobs2"
+      type="radio"
+      value="message"
+    />
+    <label
+      htmlFor="formKnobs2_message"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        message
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-message"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <span
+    className=""
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton ToggleButtonGroup with Knobs 1`] = `
+<fieldset
+  className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
+  disabled={false}
+  form="formKnobs"
+  onChange={[Function]}
+>
+  <legend>
+    
+  </legend>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formKnobs_export"
+      name="formKnobs"
+      type="radio"
+      value="export"
+    />
+    <label
+      htmlFor="formKnobs_export"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        export
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-export"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button ce-toggle-button--checked"
+  >
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="formKnobs_follow"
+      name="formKnobs"
+      type="radio"
+      value="follow"
+    />
+    <label
+      htmlFor="formKnobs_follow"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        follow
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-follow"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formKnobs_message"
+      name="formKnobs"
+      type="radio"
+      value="message"
+    />
+    <label
+      htmlFor="formKnobs_message"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        message
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-message"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <span
+    className=""
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox States 1`] = `
+<form
+  id="formStates"
+>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form="formStates"
+      id="default_checkbox_default"
+      name="default_checkbox"
+      onChange={[Function]}
+      type="checkbox"
+      value="default"
+    />
+    <label
+      htmlFor="default_checkbox_default"
+    >
+      Default Checkbox
+    </label>
+    
+  </div>
+  <div
+    className="ce-checkbox ce-checkbox--disabled"
+  >
+    <input
+      checked={false}
+      disabled={true}
+      form="formStates"
+      id="disabled_checkbox_disabled"
+      name="disabled_checkbox"
+      onChange={[Function]}
+      type="checkbox"
+      value="disabled"
+    />
+    <label
+      htmlFor="disabled_checkbox_disabled"
+    >
+      Disabled Checkbox
+    </label>
+    
+  </div>
+  <div
+    className="ce-checkbox ce-checkbox--error"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form="formStates"
+      id="error_checkbox_error"
+      name="error_checkbox"
+      onChange={[Function]}
+      type="checkbox"
+      value="error"
+    />
+    <label
+      htmlFor="error_checkbox_error"
+    >
+      Error Checkbox
+    </label>
+    <div
+      className="ce-errorbox"
+    >
+      <div
+        className="ce-errorbox__container"
+      >
+        <div
+          className="ce-errorbox__arrow"
+        />
+        <div
+          className="ce-errorbox__message"
+        >
+          <span
+            className="ce-errorbox__text"
+          >
+            There is an error.
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox Types 1`] = `
+<form
+  id="formTypes"
+>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={true}
+      disabled={false}
+      form="formTypes"
+      id="checked_true"
+      name="checked"
+      onChange={[Function]}
+      type="checkbox"
+      value={true}
+    />
+    <label
+      htmlFor="checked_true"
+    >
+      I am checked
+    </label>
+    
+  </div>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form="formTwo"
+      id="unchecked_false"
+      name="unchecked"
+      onChange={[Function]}
+      type="checkbox"
+      value={false}
+    />
+    <label
+      htmlFor="unchecked_false"
+    >
+      I am unchecked
+    </label>
+    
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox with Knobs 1`] = `
+<form
+  id="formKnobs"
+>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form="formKnobs"
+      id="termsAndConditions_accepted"
+      name="termsAndConditions"
+      onChange={[Function]}
+      type="checkbox"
+      value="accepted"
+    />
+    <label
+      htmlFor="termsAndConditions_accepted"
+    >
+      Accept Terms and Conditions
+    </label>
+    
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGroup States 1`] = `
+<form
+  id="formStates"
+>
+  <fieldset
+    className="ce-checkbox-group"
+    disabled={false}
+    form="formStates"
+    onChange={[Function]}
+  >
+    <legend>
+      Default Checkbox Group
+    </legend>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={true}
+        disabled={false}
+        form=""
+        id="favoriteOS_macos"
+        name="favoriteOS"
+        onChange={[Function]}
+        type="checkbox"
+        value="macos"
+      />
+      <label
+        htmlFor="favoriteOS_macos"
+      >
+        macOS
+      </label>
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteOS_windows"
+        name="favoriteOS"
+        onChange={[Function]}
+        type="checkbox"
+        value="windows"
+      />
+      <label
+        htmlFor="favoriteOS_windows"
+      >
+        Windows
+      </label>
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteOS_linux"
+        name="favoriteOS"
+        onChange={[Function]}
+        type="checkbox"
+        value="linux"
+      />
+      <label
+        htmlFor="favoriteOS_linux"
+      >
+        Linux
+      </label>
+      
+    </div>
+    <span
+      className="ce-checkbox-group--error__text"
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-checkbox-group ce-checkbox-group--disabled"
+    disabled={true}
+    form="formStates"
+    onChange={[Function]}
+  >
+    <legend>
+      Favorite Beatle (Disabled Checkbox Group)
+    </legend>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteBeatle_john"
+        name="favoriteBeatle"
+        onChange={[Function]}
+        type="checkbox"
+        value="john"
+      />
+      <label
+        htmlFor="favoriteBeatle_john"
+      >
+        John Lennon
+      </label>
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteBeatle_paul"
+        name="favoriteBeatle"
+        onChange={[Function]}
+        type="checkbox"
+        value="paul"
+      />
+      <label
+        htmlFor="favoriteBeatle_paul"
+      >
+        Paul Mccartney
+      </label>
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={true}
+        disabled={false}
+        form=""
+        id="favoriteBeatle_george"
+        name="favoriteBeatle"
+        onChange={[Function]}
+        type="checkbox"
+        value="george"
+      />
+      <label
+        htmlFor="favoriteBeatle_george"
+      >
+        George Harrison
+      </label>
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteBeatle_ringo"
+        name="favoriteBeatle"
+        onChange={[Function]}
+        type="checkbox"
+        value="ringo"
+      />
+      <label
+        htmlFor="favoriteBeatle_ringo"
+      >
+        Ringo Starr
+      </label>
+      
+    </div>
+    <span
+      className="ce-checkbox-group--error__text"
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-checkbox-group"
+    disabled={false}
+    form="formStates"
+    onChange={[Function]}
+  >
+    <legend>
+      Favorite Beatle (Disabled Checkbox Individual)
+    </legend>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteBeatle2_john"
+        name="favoriteBeatle2"
+        onChange={[Function]}
+        type="checkbox"
+        value="john"
+      />
+      <label
+        htmlFor="favoriteBeatle2_john"
+      >
+        John Lennon
+      </label>
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteBeatle2_paul"
+        name="favoriteBeatle2"
+        onChange={[Function]}
+        type="checkbox"
+        value="paul"
+      />
+      <label
+        htmlFor="favoriteBeatle2_paul"
+      >
+        Paul Mccartney
+      </label>
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteBeatle2_george"
+        name="favoriteBeatle2"
+        onChange={[Function]}
+        type="checkbox"
+        value="george"
+      />
+      <label
+        htmlFor="favoriteBeatle2_george"
+      >
+        George Harrison
+      </label>
+      
+    </div>
+    <div
+      className="ce-checkbox ce-checkbox--disabled"
+    >
+      <input
+        checked={false}
+        disabled={true}
+        form=""
+        id="favoriteBeatle2_ringo"
+        name="favoriteBeatle2"
+        onChange={[Function]}
+        type="checkbox"
+        value="ringo"
+      />
+      <label
+        htmlFor="favoriteBeatle2_ringo"
+      >
+        Ringo Starr (Disabled)
+      </label>
+      
+    </div>
+    <span
+      className="ce-checkbox-group--error__text"
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-checkbox-group ce-checkbox-group--error"
+    disabled={false}
+    form="formStates"
+    onChange={[Function]}
+  >
+    <legend>
+      Favorite UI Framework
+    </legend>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={true}
+        disabled={false}
+        form=""
+        id="favoriteFramework_react"
+        name="favoriteFramework"
+        onChange={[Function]}
+        type="checkbox"
+        value="react"
+      />
+      <label
+        htmlFor="favoriteFramework_react"
+      >
+        React
+      </label>
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteFramework_angularjs"
+        name="favoriteFramework"
+        onChange={[Function]}
+        type="checkbox"
+        value="angularjs"
+      />
+      <label
+        htmlFor="favoriteFramework_angularjs"
+      >
+        AngularJS
+      </label>
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteFramework_angular"
+        name="favoriteFramework"
+        onChange={[Function]}
+        type="checkbox"
+        value="angular"
+      />
+      <label
+        htmlFor="favoriteFramework_angular"
+      >
+        Angular
+      </label>
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={true}
+        disabled={false}
+        form=""
+        id="favoriteFramework_vue"
+        name="favoriteFramework"
+        onChange={[Function]}
+        type="checkbox"
+        value="vue"
+      />
+      <label
+        htmlFor="favoriteFramework_vue"
+      >
+        Vue
+      </label>
+      
+    </div>
+    <span
+      className="ce-checkbox-group--error__text"
+    >
+      Unable to set Vuejs as favorite framework.
+    </span>
+  </fieldset>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGroup Types 1`] = `
+<form
+  id="formTypes"
+>
+  <fieldset
+    className="ce-checkbox-group"
+    disabled={false}
+    form="formTypes"
+    onChange={[Function]}
+  >
+    <legend>
+      Favorite Text Editor
+    </legend>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={true}
+        disabled={false}
+        form=""
+        id="favoriteTextEditor_vim"
+        name="favoriteTextEditor"
+        onChange={[Function]}
+        type="checkbox"
+        value="vim"
+      />
+      <label
+        htmlFor="favoriteTextEditor_vim"
+      >
+        Vim
+      </label>
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteTextEditor_emacs"
+        name="favoriteTextEditor"
+        onChange={[Function]}
+        type="checkbox"
+        value="emacs"
+      />
+      <label
+        htmlFor="favoriteTextEditor_emacs"
+      >
+        Emacs
+      </label>
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteTextEditor_vscode"
+        name="favoriteTextEditor"
+        onChange={[Function]}
+        type="checkbox"
+        value="vscode"
+      />
+      <label
+        htmlFor="favoriteTextEditor_vscode"
+      >
+        VS Code
+      </label>
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteTextEditor_atom"
+        name="favoriteTextEditor"
+        onChange={[Function]}
+        type="checkbox"
+        value="atom"
+      />
+      <label
+        htmlFor="favoriteTextEditor_atom"
+      >
+        Atom
+      </label>
+      
+    </div>
+    <span
+      className="ce-checkbox-group--error__text"
+    >
+      
+    </span>
+  </fieldset>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGroup with Knobs 1`] = `
+<form
+  id="formKnobs"
+>
+  <fieldset
+    className="ce-checkbox-group"
+    disabled={false}
+    form="formKnobs"
+    onChange={[Function]}
+  >
+    <legend>
+      Favorite Food
+    </legend>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={true}
+        disabled={false}
+        form=""
+        id="favoriteFood_pizza"
+        name="favoriteFood"
+        onChange={[Function]}
+        type="checkbox"
+        value="pizza"
+      />
+      <label
+        htmlFor="favoriteFood_pizza"
+      >
+        Pizza
+      </label>
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteFood_hotdog"
+        name="favoriteFood"
+        onChange={[Function]}
+        type="checkbox"
+        value="hotdog"
+      />
+      <label
+        htmlFor="favoriteFood_hotdog"
+      >
+        Hotdog
+      </label>
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={true}
+        disabled={false}
+        form=""
+        id="favoriteFood_hamburger"
+        name="favoriteFood"
+        onChange={[Function]}
+        type="checkbox"
+        value="hamburger"
+      />
+      <label
+        htmlFor="favoriteFood_hamburger"
+      >
+        Hamburger
+      </label>
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteFood_coleslaw"
+        name="favoriteFood"
+        onChange={[Function]}
+        type="checkbox"
+        value="coleslaw"
+      />
+      <label
+        htmlFor="favoriteFood_coleslaw"
+      >
+        Coleslaw
+      </label>
+      
+    </div>
+    <span
+      className="ce-checkbox-group--error__text"
+    >
+      
+    </span>
+  </fieldset>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Core/ErrorBox ErrorBox Types 1`] = `
+<div
+  className="ce-errorbox"
+>
+  <div
+    className="ce-errorbox__container"
+  >
+    <div
+      className="ce-errorbox__arrow"
+    />
+    <div
+      className="ce-errorbox__message"
+    >
+      <span
+        className="ce-errorbox__text"
+      >
+        My fancy error message.
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Core/ErrorBox ErrorBox with Knobs 1`] = `
+<div
+  className="ce-errorbox"
+>
+  <div
+    className="ce-errorbox__container"
+  >
+    <div
+      className="ce-errorbox__arrow"
+    />
+    <div
+      className="ce-errorbox__message"
+    >
+      <span
+        className="ce-errorbox__text"
+      >
+        This is an error message.
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Core/FormControlGroup Form Control Group with Radios 1`] = `
+<fieldset
+  className=""
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    Test Group
+  </legend>
+  <div
+    className="ce-radio"
+  >
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="myGroup_radioOne"
+      name="myGroup"
+      type="radio"
+      value="radioOne"
+    />
+    <label
+      htmlFor="myGroup_radioOne"
+    >
+      Radio 1
+    </label>
+  </div>
+  <div
+    className="ce-radio"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="myGroup_radioTwo"
+      name="myGroup"
+      type="radio"
+      value="radioTwo"
+    />
+    <label
+      htmlFor="myGroup_radioTwo"
+    >
+      Radio 2
+    </label>
+  </div>
+  <span
+    className=""
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Core/FormControlGroup FormControlGroup with Checkboxes 1`] = `
+<fieldset
+  className=""
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    Test Group
+  </legend>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={true}
+      disabled={false}
+      form=""
+      id="myGroup_checkboxOne"
+      name="myGroup"
+      onChange={[Function]}
+      type="checkbox"
+      value="checkboxOne"
+    />
+    <label
+      htmlFor="myGroup_checkboxOne"
+    >
+      Checkbox 1
+    </label>
+    
+  </div>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form=""
+      id="myGroup_checkboxTwo"
+      name="myGroup"
+      onChange={[Function]}
+      type="checkbox"
+      value="checkboxTwo"
+    />
+    <label
+      htmlFor="myGroup_checkboxTwo"
+    >
+      Checkbox 2
+    </label>
+    
+  </div>
+  <span
+    className=""
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Radio Radio States 1`] = `
+<form
+  id="formStates"
+>
+  <fieldset
+    className="ce-radio-group"
+    disabled={false}
+    form="formStates"
+    onChange={[Function]}
+  >
+    <legend>
+      Default RadioGroup:
+    </legend>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="defaultGroup_thisOne"
+        name="defaultGroup"
+        type="radio"
+        value="thisOne"
+      />
+      <label
+        htmlFor="defaultGroup_thisOne"
+      >
+        This one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="defaultGroup_thatOne"
+        name="defaultGroup"
+        type="radio"
+        value="thatOne"
+      />
+      <label
+        htmlFor="defaultGroup_thatOne"
+      >
+        That one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="defaultGroup_thisOtherOne"
+        name="defaultGroup"
+        type="radio"
+        value="thisOtherOne"
+      />
+      <label
+        htmlFor="defaultGroup_thisOtherOne"
+      >
+        This other one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="defaultGroup_thatOtherOne"
+        name="defaultGroup"
+        type="radio"
+        value="thatOtherOne"
+      />
+      <label
+        htmlFor="defaultGroup_thatOtherOne"
+      >
+        That other one
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-radio-group ce-radio-group--disabled"
+    disabled={true}
+    form="formStates"
+    onChange={[Function]}
+  >
+    <legend>
+      Disabled RadioGroup:
+    </legend>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="disabledGroup_thisOne"
+        name="disabledGroup"
+        type="radio"
+        value="thisOne"
+      />
+      <label
+        htmlFor="disabledGroup_thisOne"
+      >
+        This one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="disabledGroup_thatOne"
+        name="disabledGroup"
+        type="radio"
+        value="thatOne"
+      />
+      <label
+        htmlFor="disabledGroup_thatOne"
+      >
+        That one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="disabledGroup_thisOtherOne"
+        name="disabledGroup"
+        type="radio"
+        value="thisOtherOne"
+      />
+      <label
+        htmlFor="disabledGroup_thisOtherOne"
+      >
+        This other one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="disabledGroup_thatOtherOne"
+        name="disabledGroup"
+        type="radio"
+        value="thatOtherOne"
+      />
+      <label
+        htmlFor="disabledGroup_thatOtherOne"
+      >
+        That other one
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-radio-group ce-radio-group--error"
+    disabled={false}
+    form="formStates"
+    onChange={[Function]}
+  >
+    <legend>
+      Error RadioGroup:
+    </legend>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="errorGroup_thisOne"
+        name="errorGroup"
+        type="radio"
+        value="thisOne"
+      />
+      <label
+        htmlFor="errorGroup_thisOne"
+      >
+        This one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="errorGroup_thatOne"
+        name="errorGroup"
+        type="radio"
+        value="thatOne"
+      />
+      <label
+        htmlFor="errorGroup_thatOne"
+      >
+        That one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="errorGroup_thisOtherOne"
+        name="errorGroup"
+        type="radio"
+        value="thisOtherOne"
+      />
+      <label
+        htmlFor="errorGroup_thisOtherOne"
+      >
+        This other one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="errorGroup_thatOtherOne"
+        name="errorGroup"
+        type="radio"
+        value="thatOtherOne"
+      />
+      <label
+        htmlFor="errorGroup_thatOtherOne"
+      >
+        That other one
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      You did not choose wisely!
+    </span>
+  </fieldset>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Radio Radio Types 1`] = `
+<form
+  id="formTypes"
+>
+  <fieldset
+    className="ce-radio-group"
+    disabled={false}
+    form="formTypes"
+    onChange={[Function]}
+  >
+    <legend>
+      Please make a choice:
+    </legend>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="choice_yes"
+        name="choice"
+        type="radio"
+        value="yes"
+      />
+      <label
+        htmlFor="choice_yes"
+      >
+        Yes
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="choice_no"
+        name="choice"
+        type="radio"
+        value="no"
+      />
+      <label
+        htmlFor="choice_no"
+      >
+        No
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Radio Radio with Knobs 1`] = `
+<div
+  className="ce-radio"
+>
+  <input
+    defaultChecked={false}
+    disabled={false}
+    id="undefined_macos"
+    type="radio"
+    value="macos"
+  />
+  <label
+    htmlFor="undefined_macos"
+  >
+    macOS
+  </label>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Radio RadioGroup with Knobs 1`] = `
+<form
+  id="formKnobs"
+>
+  <fieldset
+    className="ce-radio-group"
+    disabled={false}
+    form="formKnobs"
+    onChange={[Function]}
+  >
+    <legend>
+      Choose your favorite OS:
+    </legend>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="favoriteOS_macos"
+        name="favoriteOS"
+        type="radio"
+        value="macos"
+      />
+      <label
+        htmlFor="favoriteOS_macos"
+      >
+        macOS
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="favoriteOS_linux"
+        name="favoriteOS"
+        type="radio"
+        value="linux"
+      />
+      <label
+        htmlFor="favoriteOS_linux"
+      >
+        Linux
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="favoriteOS_windows"
+        name="favoriteOS"
+        type="radio"
+        value="windows"
+      />
+      <label
+        htmlFor="favoriteOS_windows"
+      >
+        Windows
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton Colors 1`] = `
+<div>
+  <div>
+    <button
+      className="ce-button ce-button--default ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        primary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--small ce-button--secondary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        secondary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--small ce-button--black"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        black
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--small ce-button--blue"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        blue
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--small ce-button--green"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        green
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--small ce-button--orange"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        orange
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--small ce-button--purple"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        purple
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--small ce-button--red"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        red
+      </span>
+    </button>
+  </div>
+  <div>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        primary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--secondary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        secondary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--black"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        black
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--blue"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        blue
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--green"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        green
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--orange"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        orange
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--purple"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        purple
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--red"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        red
+      </span>
+    </button>
+  </div>
+  <div>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        primary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--secondary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        secondary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--black"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        black
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--blue"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        blue
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--green"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        green
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--orange"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        orange
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--purple"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        purple
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--red"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        red
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton Sizes 1`] = `
+<div>
+  <div>
+    <button
+      className="ce-button ce-button--default ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        default small
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--large ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        default large
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--jumbo ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        default jumbo
+      </span>
+    </button>
+  </div>
+  <div>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        outline small
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--large ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        outline large
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--jumbo ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        outline jumbo
+      </span>
+    </button>
+  </div>
+  <div>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        text small
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--large ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        text large
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--jumbo ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        text jumbo
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton States 1`] = `
+<div>
+  <div>
+    <button
+      className="ce-button ce-button--default ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        default default
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--small ce-button--primary ce-button--disabled"
+      disabled={true}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        disabled default
+      </span>
+    </button>
+  </div>
+  <div>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        default outline
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--primary ce-button--disabled"
+      disabled={true}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        disabled outline
+      </span>
+    </button>
+  </div>
+  <div>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        default text
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--primary ce-button--disabled"
+      disabled={true}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        disabled text
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton Types 1`] = `
+<div>
+  <button
+    className="ce-button ce-button--default ce-button--small ce-button--primary"
+    disabled={false}
+    onClick={[Function]}
+    type="submit"
+  >
+    <span
+      className="ce-button__label"
+    >
+      default button
+    </span>
+  </button>
+  <button
+    className="ce-button ce-button--outline ce-button--small ce-button--primary"
+    disabled={false}
+    onClick={[Function]}
+    type="submit"
+  >
+    <span
+      className="ce-button__label"
+    >
+      outline button
+    </span>
+  </button>
+  <button
+    className="ce-button ce-button--text ce-button--small ce-button--primary"
+    disabled={false}
+    onClick={[Function]}
+    type="submit"
+  >
+    <span
+      className="ce-button__label"
+    >
+      text button
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton with Knobs 1`] = `
+<button
+  className="ce-button ce-button--default ce-button--small ce-button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="submit"
+>
+  <span
+    className="ce-button__label"
+  >
+    a button
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/ProductIcon All ProductIcons 1`] = `
+<span
+  className="ce-icon ce-icon__product ce-icon--small"
+>
+  <svg
+    className="ce-icon--white"
+  >
+    <use
+      xlinkHref="#icons_product-college"
+    />
+  </svg>
+</span>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/ProductIcon ProductIcon Jumbo 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-college"
+        />
+      </svg>
+    </span>
+    <span>
+      college
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-military"
+        />
+      </svg>
+    </span>
+    <span>
+      military
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-workforce"
+        />
+      </svg>
+    </span>
+    <span>
+      workforce
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-career-interests"
+        />
+      </svg>
+    </span>
+    <span>
+      career-interests
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-location"
+        />
+      </svg>
+    </span>
+    <span>
+      location
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-organizations-clubs"
+        />
+      </svg>
+    </span>
+    <span>
+      organizations-clubs
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-arts-crafts"
+        />
+      </svg>
+    </span>
+    <span>
+      arts-crafts
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-sports-exercise"
+        />
+      </svg>
+    </span>
+    <span>
+      sports-exercise
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-volunteer"
+        />
+      </svg>
+    </span>
+    <span>
+      volunteer
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-cooking-baking"
+        />
+      </svg>
+    </span>
+    <span>
+      cooking-baking
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-music"
+        />
+      </svg>
+    </span>
+    <span>
+      music
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-certification"
+        />
+      </svg>
+    </span>
+    <span>
+      certification
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-desk"
+        />
+      </svg>
+    </span>
+    <span>
+      desk
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-outdoor"
+        />
+      </svg>
+    </span>
+    <span>
+      outdoor
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-private-office"
+        />
+      </svg>
+    </span>
+    <span>
+      private-office
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-open-office"
+        />
+      </svg>
+    </span>
+    <span>
+      open-office
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-indoor"
+        />
+      </svg>
+    </span>
+    <span>
+      indoor
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-manufacturing"
+        />
+      </svg>
+    </span>
+    <span>
+      manufacturing
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-remote"
+        />
+      </svg>
+    </span>
+    <span>
+      remote
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-travel"
+        />
+      </svg>
+    </span>
+    <span>
+      travel
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-colleges"
+        />
+      </svg>
+    </span>
+    <span>
+      colleges
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-demographics"
+        />
+      </svg>
+    </span>
+    <span>
+      demographics
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-profile"
+        />
+      </svg>
+    </span>
+    <span>
+      profile
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "125px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "125px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--jumbo"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-career-interests"
+        />
+      </svg>
+    </span>
+    <span>
+      career-interests
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/ProductIcon ProductIcon Large 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-college"
+        />
+      </svg>
+    </span>
+    <span>
+      college
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-military"
+        />
+      </svg>
+    </span>
+    <span>
+      military
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-workforce"
+        />
+      </svg>
+    </span>
+    <span>
+      workforce
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-career-interests"
+        />
+      </svg>
+    </span>
+    <span>
+      career-interests
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-location"
+        />
+      </svg>
+    </span>
+    <span>
+      location
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-organizations-clubs"
+        />
+      </svg>
+    </span>
+    <span>
+      organizations-clubs
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-arts-crafts"
+        />
+      </svg>
+    </span>
+    <span>
+      arts-crafts
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-sports-exercise"
+        />
+      </svg>
+    </span>
+    <span>
+      sports-exercise
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-volunteer"
+        />
+      </svg>
+    </span>
+    <span>
+      volunteer
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-cooking-baking"
+        />
+      </svg>
+    </span>
+    <span>
+      cooking-baking
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-music"
+        />
+      </svg>
+    </span>
+    <span>
+      music
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-certification"
+        />
+      </svg>
+    </span>
+    <span>
+      certification
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-desk"
+        />
+      </svg>
+    </span>
+    <span>
+      desk
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-outdoor"
+        />
+      </svg>
+    </span>
+    <span>
+      outdoor
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-private-office"
+        />
+      </svg>
+    </span>
+    <span>
+      private-office
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-open-office"
+        />
+      </svg>
+    </span>
+    <span>
+      open-office
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-indoor"
+        />
+      </svg>
+    </span>
+    <span>
+      indoor
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-manufacturing"
+        />
+      </svg>
+    </span>
+    <span>
+      manufacturing
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-remote"
+        />
+      </svg>
+    </span>
+    <span>
+      remote
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-travel"
+        />
+      </svg>
+    </span>
+    <span>
+      travel
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-colleges"
+        />
+      </svg>
+    </span>
+    <span>
+      colleges
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-demographics"
+        />
+      </svg>
+    </span>
+    <span>
+      demographics
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-profile"
+        />
+      </svg>
+    </span>
+    <span>
+      profile
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "100px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "100px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--large"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-career-interests"
+        />
+      </svg>
+    </span>
+    <span>
+      career-interests
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/ProductIcon ProductIcon Small 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-college"
+        />
+      </svg>
+    </span>
+    <span>
+      college
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-military"
+        />
+      </svg>
+    </span>
+    <span>
+      military
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-workforce"
+        />
+      </svg>
+    </span>
+    <span>
+      workforce
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-career-interests"
+        />
+      </svg>
+    </span>
+    <span>
+      career-interests
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-location"
+        />
+      </svg>
+    </span>
+    <span>
+      location
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-organizations-clubs"
+        />
+      </svg>
+    </span>
+    <span>
+      organizations-clubs
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-arts-crafts"
+        />
+      </svg>
+    </span>
+    <span>
+      arts-crafts
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-sports-exercise"
+        />
+      </svg>
+    </span>
+    <span>
+      sports-exercise
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-volunteer"
+        />
+      </svg>
+    </span>
+    <span>
+      volunteer
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-cooking-baking"
+        />
+      </svg>
+    </span>
+    <span>
+      cooking-baking
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-music"
+        />
+      </svg>
+    </span>
+    <span>
+      music
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-certification"
+        />
+      </svg>
+    </span>
+    <span>
+      certification
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-desk"
+        />
+      </svg>
+    </span>
+    <span>
+      desk
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-outdoor"
+        />
+      </svg>
+    </span>
+    <span>
+      outdoor
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-private-office"
+        />
+      </svg>
+    </span>
+    <span>
+      private-office
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-open-office"
+        />
+      </svg>
+    </span>
+    <span>
+      open-office
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-indoor"
+        />
+      </svg>
+    </span>
+    <span>
+      indoor
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-manufacturing"
+        />
+      </svg>
+    </span>
+    <span>
+      manufacturing
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-remote"
+        />
+      </svg>
+    </span>
+    <span>
+      remote
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-travel"
+        />
+      </svg>
+    </span>
+    <span>
+      travel
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-colleges"
+        />
+      </svg>
+    </span>
+    <span>
+      colleges
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-demographics"
+        />
+      </svg>
+    </span>
+    <span>
+      demographics
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-profile"
+        />
+      </svg>
+    </span>
+    <span>
+      profile
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "75px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "75px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__product ce-icon--small"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_product-career-interests"
+        />
+      </svg>
+    </span>
+    <span>
+      career-interests
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/SecondaryIcon All SecondaryIcons 1`] = `
+<span
+  className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+>
+  <svg
+    className="ce-icon--white"
+  >
+    <use
+      xlinkHref="#icons_secondary-pdf"
+    />
+  </svg>
+</span>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/SecondaryIcon SecondaryIcon Jumbo 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "65px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "65px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--jumbo ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-pdf"
+        />
+      </svg>
+    </span>
+    <span>
+      pdf
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "65px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "65px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--jumbo ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-doc"
+        />
+      </svg>
+    </span>
+    <span>
+      doc
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "65px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "65px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--jumbo ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-video"
+        />
+      </svg>
+    </span>
+    <span>
+      video
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "65px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "65px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--jumbo ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-image"
+        />
+      </svg>
+    </span>
+    <span>
+      image
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "65px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "65px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--jumbo ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-play"
+        />
+      </svg>
+    </span>
+    <span>
+      play
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/SecondaryIcon SecondaryIcon Large 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <div
+    size="large"
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "50px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "50px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-pdf"
+        />
+      </svg>
+    </span>
+    <span>
+      pdf
+    </span>
+  </div>
+  <div
+    size="large"
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "50px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "50px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-doc"
+        />
+      </svg>
+    </span>
+    <span>
+      doc
+    </span>
+  </div>
+  <div
+    size="large"
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "50px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "50px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-video"
+        />
+      </svg>
+    </span>
+    <span>
+      video
+    </span>
+  </div>
+  <div
+    size="large"
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "50px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "50px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-image"
+        />
+      </svg>
+    </span>
+    <span>
+      image
+    </span>
+  </div>
+  <div
+    size="large"
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "50px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "50px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-play"
+        />
+      </svg>
+    </span>
+    <span>
+      play
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/SecondaryIcon SecondaryIcon Small 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "40px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "40px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-pdf"
+        />
+      </svg>
+    </span>
+    <span>
+      pdf
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "40px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "40px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-doc"
+        />
+      </svg>
+    </span>
+    <span>
+      doc
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "40px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "40px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-video"
+        />
+      </svg>
+    </span>
+    <span>
+      video
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "40px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "40px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-image"
+        />
+      </svg>
+    </span>
+    <span>
+      image
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 2px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "40px",
+        "margin": "5px",
+        "padding": "15px",
+        "width": "40px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+    >
+      <svg
+        className="ce-icon--white"
+      >
+        <use
+          xlinkHref="#icons_secondary-play"
+        />
+      </svg>
+    </span>
+    <span>
+      play
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/SecondaryIcon SecondaryIcon with Text 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexWrap": "wrap",
+        "justifyContent": "space-around",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "border": "solid black 2px",
+          "borderRadius": "5px",
+          "display": "flex",
+          "flexDirection": "column",
+          "margin": "5px",
+          "padding": "15px",
+        }
+      }
+    >
+      <span
+        className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+      >
+        <span
+          className="ce-icon--text"
+        >
+          A
+        </span>
+      </span>
+      <span>
+        w/text
+      </span>
+    </div>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "border": "solid black 2px",
+          "borderRadius": "5px",
+          "display": "flex",
+          "flexDirection": "column",
+          "margin": "5px",
+          "padding": "15px",
+        }
+      }
+    >
+      <span
+        className="ce-icon ce-icon__secondary ce-icon--small ce-icon--secondary"
+      >
+        <span
+          className="ce-icon--text"
+        >
+          +1
+        </span>
+      </span>
+      <span>
+        w/text
+      </span>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexWrap": "wrap",
+        "justifyContent": "space-around",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "border": "solid black 2px",
+          "borderRadius": "5px",
+          "display": "flex",
+          "flexDirection": "column",
+          "height": "50px",
+          "margin": "5px",
+          "padding": "15px",
+          "width": "50px",
+        }
+      }
+    >
+      <span
+        className="ce-icon ce-icon__secondary ce-icon--large ce-icon--primary"
+      >
+        <span
+          className="ce-icon--text"
+        >
+          A
+        </span>
+      </span>
+      <span>
+        w/text
+      </span>
+    </div>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "border": "solid black 2px",
+          "borderRadius": "5px",
+          "display": "flex",
+          "flexDirection": "column",
+          "height": "50px",
+          "margin": "5px",
+          "padding": "15px",
+          "width": "50px",
+        }
+      }
+    >
+      <span
+        className="ce-icon ce-icon__secondary ce-icon--large ce-icon--secondary"
+      >
+        <span
+          className="ce-icon--text"
+        >
+          +1
+        </span>
+      </span>
+      <span>
+        w/text
+      </span>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexWrap": "wrap",
+        "justifyContent": "space-around",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "border": "solid black 2px",
+          "borderRadius": "5px",
+          "display": "flex",
+          "flexDirection": "column",
+          "height": "65px",
+          "margin": "5px",
+          "padding": "15px",
+          "width": "65px",
+        }
+      }
+    >
+      <span
+        className="ce-icon ce-icon__secondary ce-icon--jumbo ce-icon--primary"
+      >
+        <span
+          className="ce-icon--text"
+        >
+          A
+        </span>
+      </span>
+      <span>
+        with text
+      </span>
+    </div>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "border": "solid black 2px",
+          "borderRadius": "5px",
+          "display": "flex",
+          "flexDirection": "column",
+          "height": "65px",
+          "margin": "5px",
+          "padding": "15px",
+          "width": "65px",
+        }
+      }
+    >
+      <span
+        className="ce-icon ce-icon__secondary ce-icon--jumbo ce-icon--secondary"
+      >
+        <span
+          className="ce-icon--text"
+        >
+          +1
+        </span>
+      </span>
+      <span>
+        with text
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/SystemIcon All SystemIcons 1`] = `
+<span
+  className="ce-icon ce-icon__system ce-icon--large"
+>
+  <svg
+    className="ce-icon--red"
+  >
+    <use
+      xlinkHref="#icons_system-share"
+    />
+  </svg>
+</span>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcon Colors 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className="ce-icon--black"
+      >
+        <use
+          xlinkHref="#icons_system-edit"
+        />
+      </svg>
+    </span>
+    <span>
+      black
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className="ce-icon--blue"
+      >
+        <use
+          xlinkHref="#icons_system-edit"
+        />
+      </svg>
+    </span>
+    <span>
+      blue
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className="ce-icon--green"
+      >
+        <use
+          xlinkHref="#icons_system-edit"
+        />
+      </svg>
+    </span>
+    <span>
+      green
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className="ce-icon--orange"
+      >
+        <use
+          xlinkHref="#icons_system-edit"
+        />
+      </svg>
+    </span>
+    <span>
+      orange
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className="ce-icon--purple"
+      >
+        <use
+          xlinkHref="#icons_system-edit"
+        />
+      </svg>
+    </span>
+    <span>
+      purple
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className="ce-icon--red"
+      >
+        <use
+          xlinkHref="#icons_system-edit"
+        />
+      </svg>
+    </span>
+    <span>
+      red
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-share"
+        />
+      </svg>
+    </span>
+    <span>
+      share
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-preview"
+        />
+      </svg>
+    </span>
+    <span>
+      preview
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-export"
+        />
+      </svg>
+    </span>
+    <span>
+      export
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-follow"
+        />
+      </svg>
+    </span>
+    <span>
+      follow
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-message"
+        />
+      </svg>
+    </span>
+    <span>
+      message
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-badges"
+        />
+      </svg>
+    </span>
+    <span>
+      badges
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-website"
+        />
+      </svg>
+    </span>
+    <span>
+      website
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-edit"
+        />
+      </svg>
+    </span>
+    <span>
+      edit
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-clear"
+        />
+      </svg>
+    </span>
+    <span>
+      clear
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-navigate"
+        />
+      </svg>
+    </span>
+    <span>
+      navigate
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-down"
+        />
+      </svg>
+    </span>
+    <span>
+      down
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-up"
+        />
+      </svg>
+    </span>
+    <span>
+      up
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-user"
+        />
+      </svg>
+    </span>
+    <span>
+      user
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-visibility"
+        />
+      </svg>
+    </span>
+    <span>
+      visibility
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-help"
+        />
+      </svg>
+    </span>
+    <span>
+      help
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-close"
+        />
+      </svg>
+    </span>
+    <span>
+      close
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-calendar"
+        />
+      </svg>
+    </span>
+    <span>
+      calendar
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-warning"
+        />
+      </svg>
+    </span>
+    <span>
+      warning
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-add"
+        />
+      </svg>
+    </span>
+    <span>
+      add
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-filter"
+        />
+      </svg>
+    </span>
+    <span>
+      filter
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-menu"
+        />
+      </svg>
+    </span>
+    <span>
+      menu
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-search"
+        />
+      </svg>
+    </span>
+    <span>
+      search
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-tutorial"
+        />
+      </svg>
+    </span>
+    <span>
+      tutorial
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-yes"
+        />
+      </svg>
+    </span>
+    <span>
+      yes
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-no"
+        />
+      </svg>
+    </span>
+    <span>
+      no
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-hobby"
+        />
+      </svg>
+    </span>
+    <span>
+      hobby
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-interest"
+        />
+      </svg>
+    </span>
+    <span>
+      interest
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-outdoor"
+        />
+      </svg>
+    </span>
+    <span>
+      outdoor
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-indoor"
+        />
+      </svg>
+    </span>
+    <span>
+      indoor
+    </span>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "border": "solid black 1px",
+        "borderRadius": "5px",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": "25px",
+        "margin": "5px",
+        "minWidth": "25px",
+        "padding": "15px",
+      }
+    }
+  >
+    <span
+      className="ce-icon ce-icon__system ce-icon--large"
+    >
+      <svg
+        className=""
+      >
+        <use
+          xlinkHref="#icons_system-popular"
+        />
+      </svg>
+    </span>
+    <span>
+      popular
+    </span>
+  </div>
+</div>
+`;

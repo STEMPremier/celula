@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import FormControlGroup from '../form-controls/core';
+import { FormControlGroup } from '../form-controls/core';
 import * as CONSTANTS from '../../utils/constants';
 
 import './toggle-button-group.less';

@@ -65,6 +65,10 @@
       &::after {
         background-color: @checked-red;
         border: 0.5rem solid @white;
+        box-shadow: -0.5px 0 @checked-red,
+          0.5px 0 @checked-red,
+          0 -0.5px @checked-red,
+          0 0.5px @checked-red;
       }
 
       // Hover
@@ -72,6 +76,10 @@
         // The background
         &::before {
           background-color: @hover-red;
+        }
+
+        &::after {
+          box-shadow: none;
         }
       }
 
@@ -81,6 +89,10 @@
         &::before {
           background-color: @active-red;
         }
+
+        &::after {
+          box-shadow: none;
+        }
       }
 
       // Focus
@@ -88,6 +100,10 @@
         // The background
         &::before {
           background-color: @focus-red;
+        }
+
+        &::after {
+          box-shadow: none;
         }
       }
     }
