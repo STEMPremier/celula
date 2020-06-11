@@ -1,12 +1,12 @@
 /* eslint-disable no-case-declarations */
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import './input.less';
+
+import { ErrorBox } from '../core';
 
 import SystemIcon from '../../icon/SystemIcon';
 
@@ -128,7 +128,6 @@ class Input extends Component {
     const {
       className,
       disabled,
-      error,
       errorIcon,
       errorMsg,
       gradientIconBoxClick,
@@ -216,14 +215,7 @@ class Input extends Component {
         </div>
 
         {((!isValid && !errorIcon) || (errorMsg && !errorIcon)) && (
-          <div className="ce-input--error-box-wrapper">
-            <div className="ce-input--box-pointer" />
-            <div className="ce-input--error-box">
-              <span className="ce-input--error-box-text">
-                {errorMsg || 'Invalid Response'}
-              </span>
-            </div>
-          </div>
+          <ErrorBox errorMsg={errorMsg || 'Invalid Response'} />
         )}
       </div>
     );
@@ -239,10 +231,6 @@ Input.propTypes = {
    * Make the `<Input />` inactive.
    */
   disabled: PropTypes.bool,
-  /**
-   * Make the `<Input />` display in error state.
-   */
-  error: PropTypes.bool,
   /**
    * The default error styling is the outlined input with the error message box.  This errorIcon styling selection replaces that default error styling.
    */
@@ -307,7 +295,6 @@ Input.propTypes = {
 Input.defaultProps = {
   className: '',
   disabled: false,
-  error: false,
   errorIcon: null,
   errorMsg: '',
   helperText: '',

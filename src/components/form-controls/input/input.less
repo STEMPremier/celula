@@ -48,7 +48,6 @@
     background: none;
     width: 40%;
     // z-index: 7;
-    background-color: green;
   }
   input[type='datetime-local']::-webkit-calendar-picker-indicator {
     color: transparent;
@@ -81,7 +80,7 @@
     // z-index: 0;
   }
   // .ce-input--date-icon ~ input {
-  //   // width: 46rem;
+  //   width: 46rem;
   //   margin-right: 0px;
   // }
 
@@ -102,12 +101,12 @@
       height: 68px;
       margin-top: -4.5px;
       margin-left: -4px;
+      z-index: -4;
       content: '';
       box-sizing: border-box;
     }
 
     .ce-input--wrapping-div {
-      // z-index: -4;
       display: flex;
       flex-direction: row;
       width: 86%;
@@ -120,8 +119,6 @@
       }
 
       input {
-        // z-index: 7;
-        // background-color: black;
         order: 2;
         height: 96%;
         padding-left: 1.9rem;
@@ -138,9 +135,7 @@
       }
       .ce-input--gradient-button {
         order: 3;
-        // z-index: 2;
         width: 7.4rem;
-        // height: 6.1rem;
         font-size: 5.5rem;
         margin-right: -45px;
         border: 1px;
@@ -159,7 +154,6 @@
       }
 
       .ce-input--error-icon ~ input {
-        // background-color: @error-text;
         margin-left: -87px;
       }
 
@@ -240,31 +234,33 @@
       }
     }
 
-    .ce-input--error-box-wrapper {
-      margin-left: 0.9rem;
+    // THE BELOW CODE FORMATS THE ERROR BOX TO THE INPUT BOX ABOVE
+    // I'M LEAVING IT HERE COMMENTED OUT WHILE WE FIND OUT FROM FERG HOW HE WANTS THE ERROR BOX STYLED
+    // .ce-input--error-box-wrapper {
+    //   margin-left: 0.9rem;
 
-      .ce-input--box-pointer {
-        width: 0;
-        height: 5;
-        border-left: 0.5rem solid transparent;
-        border-right: 0.5rem solid transparent;
-        position: center;
-        border-bottom: 0.5rem solid @error-box-background;
-        margin-left: 48%;
-        margin-top: 0.5rem;
-      }
-      .ce-input--error-box {
-        height: 6rem;
-        background-color: @error-box-background;
-        border-radius: 0.5rem;
-        .ce-input--error-box-text {
-          color: @white;
-          text-align: center;
-          padding-top: 2rem;
-          padding-left: 36%;
-          display: inline-block;
-        }
-      }
-    }
+    //   .ce-input--box-pointer {
+    //     width: 0;
+    //     height: 5;
+    //     border-left: 0.5rem solid transparent;
+    //     border-right: 0.5rem solid transparent;
+    //     position: center;
+    //     border-bottom: 0.5rem solid @error-box-background;
+    //     margin-left: 48%;
+    //     margin-top: 0.5rem;
+    //   }
+    //   .ce-input--error-box {
+    //     height: 6rem;
+    //     background-color: @error-box-background;
+    //     border-radius: 0.5rem;
+    //     .ce-input--error-box-text {
+    //       color: @white;
+    //       text-align: center;
+    //       padding-top: 2rem;
+    //       padding-left: 36%;
+    //       display: inline-block;
+    //     }
+    //   }
+    // }
   }
 }
