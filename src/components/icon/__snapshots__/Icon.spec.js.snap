@@ -42,10 +42,10 @@ exports[`<SecondaryIcon /> render renders the component with text 1`] = `
 
 exports[`<SystemIcon /> render renders the component 1`] = `
 <span
-  className="ce-icon ce-icon__system"
+  className="ce-icon ce-icon__system ce-icon--large"
 >
   <svg
-    className="ce-icon--black"
+    className=""
   >
     <use
       xlinkHref="#icons_system-share"

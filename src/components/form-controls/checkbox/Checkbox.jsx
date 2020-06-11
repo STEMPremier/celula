@@ -1,12 +1,13 @@
-/* eslint-disable no-console */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
+import { ErrorBox } from '../core';
+
 import './checkbox.less';
 
 /**
- * I am a `<Checkbox />` description.
+ * `Checkboxes` allow the user to select one or more items from a set. They can be used to turn an option on or off, select one or multiple items from a list, or present a list containing sub-selections.
  */
 class Checkbox extends Component {
   state = {
@@ -71,15 +72,7 @@ class Checkbox extends Component {
           value={value}
         />
         <label htmlFor={id}>{label}</label>
-        <span className="ce-checkbox__center" />
-        {errorMsg && (
-          <div className="ce-checkbox--error__container">
-            <div className="ce-checkbox--error__arrow" />
-            <div className="ce-checkbox--error__message">
-              <span className="ce-checkbox--error__text">{errorMsg}</span>
-            </div>
-          </div>
-        )}
+        {errorMsg && <ErrorBox errorMsg={errorMsg} />}
       </div>
     );
   }
@@ -91,19 +84,20 @@ Checkbox.propTypes = {
    */
   checked: PropTypes.bool, // eslint-disable-line react/no-unused-prop-types
   /**
-   * A class name added to the `<CheckboxGroup />`.
+   * A class name, or string of class names, to add to the `<Checkbox />`.
    */
   className: PropTypes.string,
   /**
-   * Make the `<Checkbox />` inactive.
+   * Disables the `<Checkbox />`.
    */
   disabled: PropTypes.bool,
   /**
-   * An error message to display for a `<Checkbox />'.
+   * An error message to display under the `<Checkbox />`.
    */
   errorMsg: PropTypes.string,
   /**
-   * The id of the form the `<Checkbox />` belongs to. This value is overwritten by any value passed from an enclosing `<CheckboxGroup />`.
+   * The id of the form the `<Checkbox />` belongs to.
+   * This value is set (and replaced) by the `formID` of an `<CheckboxGroup />` if present.
    */
   formId: PropTypes.string,
   /**
@@ -120,7 +114,8 @@ Checkbox.propTypes = {
    */
   label: PropTypes.string.isRequired,
   /**
-   * Need to assign a matching name to each `<Checkbox />` if it is being used outside of the `<CheckboxGroup />`.  In  a `<CheckboxGroup />`, each individual `<Checkbox />` will have the same name, but that will come from the `<CheckboxGroup />`.
+   * The name given to all the children of the `<Checkbox />`.
+   * This value is set (and replaced) by the `name` of an `<CheckboxGroup />` if present.
    */
   name: PropTypes.string,
   /**

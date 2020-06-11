@@ -12,6 +12,17 @@
     padding: 0 0.3rem;
   }
 
+  span {
+    background-color: @white;
+    float: right;
+    height: 1.6rem;
+    margin-bottom: -1rem;
+    margin-right: 2.2rem;
+    margin-top: 2.2rem;
+    padding: 0 0.3rem;
+    text-align: right;
+  }
+
   &.ce-checkbox-group--disabled {
     pointer-events: none;
 
@@ -21,11 +32,6 @@
         // The background
         &::before {
           background-color: transparent;
-        }
-
-        // The background mask
-        + .ce-checkbox__center {
-          border: 1px solid @unchecked-disabled-gray;
         }
       }
 
@@ -59,6 +65,10 @@
       &::after {
         background-color: @checked-red;
         border: 0.5rem solid @white;
+        box-shadow: -0.5px 0 @checked-red,
+          0.5px 0 @checked-red,
+          0 -0.5px @checked-red,
+          0 0.5px @checked-red;
       }
 
       // Hover
@@ -84,23 +94,6 @@
           background-color: @focus-red;
         }
       }
-
-      // The background mask
-      + .ce-checkbox__center {
-        border: 1px solid @checked-red;
-      }
-    }
-
-    .ce-checkbox-group--error__text {
-      background-color: @white;
-      display: inline-block;
-      float: right;
-      height: 1.6rem;
-      margin-bottom: -1rem;
-      margin-right: 2.2rem;
-      margin-top: 2.2rem;
-      padding: 0 0.3rem;
-      text-align: right;
     }
   }
 }

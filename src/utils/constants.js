@@ -1,3 +1,15 @@
+const BUTTON_TYPES = ['default', 'outline', 'text'];
+const COMPONENT_STATES = ['default', 'disabled', 'error'];
+const COLORS = [
+  'primary',
+  'secondary',
+  'black',
+  'blue',
+  'green',
+  'orange',
+  'purple',
+  'red',
+];
 const PRODUCT_ICONS = [
   'college',
   'military',
@@ -24,17 +36,8 @@ const PRODUCT_ICONS = [
   'profile',
   'career-interests',
 ];
-
-/* eslint-disable prettier/prettier */
-const SECONDARY_ICONS = [
-  'pdf',
-  'doc',
-  'video',
-  'image',
-  'play',
-];
-/* eslint-enable prettier/prettier */
-
+const SECONDARY_ICONS = ['pdf', 'doc', 'video', 'image', 'play'];
+const SIZES = ['small', 'large', 'jumbo'];
 const SYSTEM_ICONS = [
   'share',
   'preview',
@@ -68,4 +71,12 @@ const SYSTEM_ICONS = [
   'popular',
 ];
 
-export { PRODUCT_ICONS, SECONDARY_ICONS, SYSTEM_ICONS };
+export {
+  BUTTON_TYPES,
+  COMPONENT_STATES,
+  COLORS,
+  PRODUCT_ICONS,
+  SECONDARY_ICONS,
+  SIZES,
+  SYSTEM_ICONS,
+};

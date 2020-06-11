@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
+import * as CONSTANTS from '../../utils/constants';
+
 import './icons/icons.svg';
 import './icon.less';
 
-import { PRODUCT_ICONS } from './types';
-
-const SIZES = ['small', 'large', 'jumbo'];
+const { PRODUCT_ICONS, SIZES } = CONSTANTS;
 
 /** Bold icons are used with a gradient background circle.
  * These icons can be actionable or used as a static element.

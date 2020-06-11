@@ -1,0 +1,30 @@
+@import '../../../../styles/celula';
+
+.ce-errorbox {
+  background-color: @white;
+  padding: 0 2.75rem;
+
+  .ce-errorbox__container {
+    display: inline-block;
+  }
+
+  .ce-errorbox__arrow {
+    border-bottom: 0.5rem solid @error-box-background;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    margin-left: 50%;
+    width: 0;
+  }
+
+  .ce-errorbox__message {
+    background-color: @error-box-background;
+    border-radius: 0.5rem;
+    display: inline-block;
+    padding: 2rem 5rem;
+
+    .ce-errorbox__text {
+      color: @white;
+      font-size: @error-font-size;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorBox /> render() render the ErrorBox component 1`] = `
+<div
+  className="ce-errorbox"
+>
+  <div
+    className="ce-errorbox__container"
+  >
+    <div
+      className="ce-errorbox__arrow"
+    />
+    <div
+      className="ce-errorbox__message"
+    >
+      <span
+        className="ce-errorbox__text"
+      >
+        This is an error message.
+      </span>
+    </div>
+  </div>
+</div>
+`;

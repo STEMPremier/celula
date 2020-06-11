@@ -1,25 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Components/Atoms/Button All Buttons 1`] = `
-<button
-  className="ce-button ce-button--small ce-button--primary"
-  disabled={false}
-  onClick={[Function]}
-  type="button"
->
-  <span
-    className="ce-button__label"
-  >
-    a button
-  </span>
-</button>
-`;
-
 exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
 <div>
   <div>
     <button
-      className="ce-button ce-button--small ce-button--primary"
+      className="ce-button ce-button--default ce-button--large ce-button--primary"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -31,7 +16,7 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
-      className="ce-button ce-button--small ce-button--secondary"
+      className="ce-button ce-button--default ce-button--large ce-button--secondary"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -43,7 +28,19 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
-      className="ce-button ce-button--small ce-button--blue"
+      className="ce-button ce-button--default ce-button--large ce-button--black"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        black
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--large ce-button--blue"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -55,7 +52,7 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
-      className="ce-button ce-button--small ce-button--green"
+      className="ce-button ce-button--default ce-button--large ce-button--green"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -67,7 +64,7 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
-      className="ce-button ce-button--small ce-button--orange"
+      className="ce-button ce-button--default ce-button--large ce-button--orange"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -79,7 +76,7 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
-      className="ce-button ce-button--small ce-button--purple"
+      className="ce-button ce-button--default ce-button--large ce-button--purple"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -91,7 +88,7 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
-      className="ce-button ce-button--small ce-button--red"
+      className="ce-button ce-button--default ce-button--large ce-button--red"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -103,10 +100,9 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
   </div>
-  <br />
   <div>
     <button
-      className="ce-button ce-button--outline ce-button--small ce-button--primary"
+      className="ce-button ce-button--outline ce-button--large ce-button--primary"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -118,7 +114,7 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
-      className="ce-button ce-button--outline ce-button--small ce-button--secondary"
+      className="ce-button ce-button--outline ce-button--large ce-button--secondary"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -130,7 +126,19 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
-      className="ce-button ce-button--outline ce-button--small ce-button--blue"
+      className="ce-button ce-button--outline ce-button--large ce-button--black"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        black
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--large ce-button--blue"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -142,7 +150,7 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
-      className="ce-button ce-button--outline ce-button--small ce-button--green"
+      className="ce-button ce-button--outline ce-button--large ce-button--green"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -154,7 +162,7 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
-      className="ce-button ce-button--outline ce-button--small ce-button--orange"
+      className="ce-button ce-button--outline ce-button--large ce-button--orange"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -166,7 +174,7 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
-      className="ce-button ce-button--outline ce-button--small ce-button--purple"
+      className="ce-button ce-button--outline ce-button--large ce-button--purple"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -178,7 +186,7 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
-      className="ce-button ce-button--outline ce-button--small ce-button--red"
+      className="ce-button ce-button--outline ce-button--large ce-button--red"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -190,10 +198,9 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
   </div>
-  <br />
   <div>
     <button
-      className="ce-button ce-button--text ce-button--small ce-button--primary"
+      className="ce-button ce-button--text ce-button--large ce-button--primary"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -205,7 +212,7 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
-      className="ce-button ce-button--text ce-button--small ce-button--secondary"
+      className="ce-button ce-button--text ce-button--large ce-button--secondary"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -217,7 +224,19 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
-      className="ce-button ce-button--text ce-button--small ce-button--blue"
+      className="ce-button ce-button--text ce-button--large ce-button--black"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        black
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--large ce-button--blue"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -229,7 +248,7 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
-      className="ce-button ce-button--text ce-button--small ce-button--green"
+      className="ce-button ce-button--text ce-button--large ce-button--green"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -241,7 +260,7 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
-      className="ce-button ce-button--text ce-button--small ce-button--orange"
+      className="ce-button ce-button--text ce-button--large ce-button--orange"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -249,11 +268,11 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       <span
         className="ce-button__label"
       >
-        ornage
+        orange
       </span>
     </button>
     <button
-      className="ce-button ce-button--text ce-button--small ce-button--purple"
+      className="ce-button ce-button--text ce-button--large ce-button--purple"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -265,7 +284,7 @@ exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
       </span>
     </button>
     <button
-      className="ce-button ce-button--text ce-button--small ce-button--red"
+      className="ce-button ce-button--text ce-button--large ce-button--red"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -284,7 +303,7 @@ exports[`Storyshots Components/Atoms/Button Button Sizes 1`] = `
 <div>
   <div>
     <button
-      className="ce-button ce-button--small ce-button--primary"
+      className="ce-button ce-button--default ce-button--small ce-button--primary"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -292,11 +311,11 @@ exports[`Storyshots Components/Atoms/Button Button Sizes 1`] = `
       <span
         className="ce-button__label"
       >
-        normal small
+        default small
       </span>
     </button>
     <button
-      className="ce-button ce-button--large ce-button--primary"
+      className="ce-button ce-button--default ce-button--large ce-button--primary"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -304,11 +323,11 @@ exports[`Storyshots Components/Atoms/Button Button Sizes 1`] = `
       <span
         className="ce-button__label"
       >
-        normal large
+        default large
       </span>
     </button>
     <button
-      className="ce-button ce-button--jumbo ce-button--primary"
+      className="ce-button ce-button--default ce-button--jumbo ce-button--primary"
       disabled={false}
       onClick={[Function]}
       type="button"
@@ -316,11 +335,10 @@ exports[`Storyshots Components/Atoms/Button Button Sizes 1`] = `
       <span
         className="ce-button__label"
       >
-        normal jumbo
+        default jumbo
       </span>
     </button>
   </div>
-  <br />
   <div>
     <button
       className="ce-button ce-button--outline ce-button--small ce-button--primary"
@@ -359,7 +377,6 @@ exports[`Storyshots Components/Atoms/Button Button Sizes 1`] = `
       </span>
     </button>
   </div>
-  <br />
   <div>
     <button
       className="ce-button ce-button--text ce-button--small ce-button--primary"
@@ -403,49 +420,91 @@ exports[`Storyshots Components/Atoms/Button Button Sizes 1`] = `
 
 exports[`Storyshots Components/Atoms/Button Button States 1`] = `
 <div>
-  <button
-    className="ce-button ce-button--small ce-button--primary ce-button--disabled"
-    disabled={true}
-    onClick={[Function]}
-    type="button"
-  >
-    <span
-      className="ce-button__label"
+  <div>
+    <button
+      className="ce-button ce-button--default ce-button--large ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
     >
-      small disabled
-    </span>
-  </button>
-  <button
-    className="ce-button ce-button--outline ce-button--small ce-button--primary ce-button--disabled"
-    disabled={true}
-    onClick={[Function]}
-    type="button"
-  >
-    <span
-      className="ce-button__label"
+      <span
+        className="ce-button__label"
+      >
+        default default
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--large ce-button--primary ce-button--disabled"
+      disabled={true}
+      onClick={[Function]}
+      type="button"
     >
-      small outline disabled
-    </span>
-  </button>
-  <button
-    className="ce-button ce-button--text ce-button--small ce-button--primary ce-button--disabled"
-    disabled={true}
-    onClick={[Function]}
-    type="button"
-  >
-    <span
-      className="ce-button__label"
+      <span
+        className="ce-button__label"
+      >
+        disabled default
+      </span>
+    </button>
+  </div>
+  <div>
+    <button
+      className="ce-button ce-button--outline ce-button--large ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
     >
-      small text disabled
-    </span>
-  </button>
+      <span
+        className="ce-button__label"
+      >
+        default outline
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--large ce-button--primary ce-button--disabled"
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        disabled outline
+      </span>
+    </button>
+  </div>
+  <div>
+    <button
+      className="ce-button ce-button--text ce-button--large ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        default text
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--large ce-button--primary ce-button--disabled"
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-button__label"
+      >
+        disabled text
+      </span>
+    </button>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Components/Atoms/Button Button Types 1`] = `
 <div>
   <button
-    className="ce-button ce-button--small ce-button--primary"
+    className="ce-button ce-button--default ce-button--large ce-button--primary"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -453,11 +512,11 @@ exports[`Storyshots Components/Atoms/Button Button Types 1`] = `
     <span
       className="ce-button__label"
     >
-      standard button
+      default button
     </span>
   </button>
   <button
-    className="ce-button ce-button--outline ce-button--small ce-button--primary"
+    className="ce-button ce-button--outline ce-button--large ce-button--primary"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -469,7 +528,7 @@ exports[`Storyshots Components/Atoms/Button Button Types 1`] = `
     </span>
   </button>
   <button
-    className="ce-button ce-button--text ce-button--small ce-button--primary"
+    className="ce-button ce-button--text ce-button--large ce-button--primary"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -483,39 +542,1824 @@ exports[`Storyshots Components/Atoms/Button Button Types 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/Checkbox All Checkboxes 1`] = `
-<form
-  id="formOne"
+exports[`Storyshots Components/Atoms/Button Button with Knobs 1`] = `
+<button
+  className="ce-button ce-button--default ce-button--small ce-button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
 >
+  <span
+    className="ce-button__label"
+  >
+    a button
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Colors 1`] = `
+<div>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_primary_export"
+        name="formColor_primary"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formColor_primary_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formColor_primary_follow"
+        name="formColor_primary"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formColor_primary_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_primary_message"
+        name="formColor_primary"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formColor_primary_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--secondary"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_secondary_export"
+        name="formColor_secondary"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formColor_secondary_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formColor_secondary_follow"
+        name="formColor_secondary"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formColor_secondary_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_secondary_message"
+        name="formColor_secondary"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formColor_secondary_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--black"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_black_export"
+        name="formColor_black"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formColor_black_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formColor_black_follow"
+        name="formColor_black"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formColor_black_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_black_message"
+        name="formColor_black"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formColor_black_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--blue"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_blue_export"
+        name="formColor_blue"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formColor_blue_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formColor_blue_follow"
+        name="formColor_blue"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formColor_blue_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_blue_message"
+        name="formColor_blue"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formColor_blue_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--green"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_green_export"
+        name="formColor_green"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formColor_green_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formColor_green_follow"
+        name="formColor_green"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formColor_green_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_green_message"
+        name="formColor_green"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formColor_green_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--orange"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_orange_export"
+        name="formColor_orange"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formColor_orange_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formColor_orange_follow"
+        name="formColor_orange"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formColor_orange_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_orange_message"
+        name="formColor_orange"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formColor_orange_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--purple"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_purple_export"
+        name="formColor_purple"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formColor_purple_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formColor_purple_follow"
+        name="formColor_purple"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formColor_purple_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_purple_message"
+        name="formColor_purple"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formColor_purple_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--red"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_red_export"
+        name="formColor_red"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formColor_red_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formColor_red_follow"
+        name="formColor_red"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formColor_red_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formColor_red_message"
+        name="formColor_red"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formColor_red_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Sizes 1`] = `
+<div>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--small ce-toggle-button-group--primary"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formSizes_small_export"
+        name="formSizes_small"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formSizes_small_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--small"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formSizes_small_follow"
+        name="formSizes_small"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formSizes_small_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--small"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formSizes_small_message"
+        name="formSizes_small"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formSizes_small_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--small"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formSizes_large_export"
+        name="formSizes_large"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formSizes_large_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formSizes_large_follow"
+        name="formSizes_large"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formSizes_large_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formSizes_large_message"
+        name="formSizes_large"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formSizes_large_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--jumbo ce-toggle-button-group--primary"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formSizes_jumbo_export"
+        name="formSizes_jumbo"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formSizes_jumbo_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--jumbo"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formSizes_jumbo_follow"
+        name="formSizes_jumbo"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formSizes_jumbo_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--jumbo"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formSizes_jumbo_message"
+        name="formSizes_jumbo"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formSizes_jumbo_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--jumbo"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton ToggleButton States 1`] = `
+Array [
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formStates_default_export"
+        name="formStates_default"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formStates_default_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formStates_default_follow"
+        name="formStates_default"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formStates_default_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formStates_default_message"
+        name="formStates_default"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formStates_default_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>,
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--disabled"
+    disabled={true}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formStates_disabled_export"
+        name="formStates_disabled"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formStates_disabled_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formStates_disabled_follow"
+        name="formStates_disabled"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formStates_disabled_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formStates_disabled_message"
+        name="formStates_disabled"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formStates_disabled_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>,
+]
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Types 1`] = `
+<fieldset
+  className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    
+  </legend>
   <div
-    className="ce-checkbox"
+    className="ce-toggle-button"
   >
     <input
-      checked={false}
+      defaultChecked={false}
       disabled={false}
-      form="formOne"
-      id="termsAndConditions_accepted"
-      name="termsAndConditions"
-      onChange={[Function]}
-      type="checkbox"
-      value="accepted"
+      id="formTypes_export"
+      name="formTypes"
+      type="radio"
+      value="export"
     />
     <label
-      htmlFor="termsAndConditions_accepted"
+      htmlFor="formTypes_export"
     >
-      Accept Terms and Conditions
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        export
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-export"
+          />
+        </svg>
+      </span>
     </label>
-    <span
-      className="ce-checkbox__center"
-    />
-    
   </div>
-</form>
+  <div
+    className="ce-toggle-button ce-toggle-button--checked"
+  >
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="formTypes_follow"
+      name="formTypes"
+      type="radio"
+      value="follow"
+    />
+    <label
+      htmlFor="formTypes_follow"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        follow
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-follow"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formTypes_message"
+      name="formTypes"
+      type="radio"
+      value="message"
+    />
+    <label
+      htmlFor="formTypes_message"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        message
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-message"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <span
+    className=""
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton ToggleButton with Knobs 1`] = `
+<fieldset
+  className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    
+  </legend>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formKnobs2_export"
+      name="formKnobs2"
+      type="radio"
+      value="export"
+    />
+    <label
+      htmlFor="formKnobs2_export"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        export
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-export"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button ce-toggle-button--checked"
+  >
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="formKnobs2_follow"
+      name="formKnobs2"
+      type="radio"
+      value="follow"
+    />
+    <label
+      htmlFor="formKnobs2_follow"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        follow
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-follow"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formKnobs2_message"
+      name="formKnobs2"
+      type="radio"
+      value="message"
+    />
+    <label
+      htmlFor="formKnobs2_message"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        message
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-message"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <span
+    className=""
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton ToggleButtonGroup with Knobs 1`] = `
+<fieldset
+  className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
+  disabled={false}
+  form="formKnobs"
+  onChange={[Function]}
+>
+  <legend>
+    
+  </legend>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formKnobs_export"
+      name="formKnobs"
+      type="radio"
+      value="export"
+    />
+    <label
+      htmlFor="formKnobs_export"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        export
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-export"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button ce-toggle-button--checked"
+  >
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="formKnobs_follow"
+      name="formKnobs"
+      type="radio"
+      value="follow"
+    />
+    <label
+      htmlFor="formKnobs_follow"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        follow
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-follow"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formKnobs_message"
+      name="formKnobs"
+      type="radio"
+      value="message"
+    />
+    <label
+      htmlFor="formKnobs_message"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        message
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-message"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <span
+    className=""
+  >
+    
+  </span>
+</fieldset>
 `;
 
 exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox States 1`] = `
 <form
-  id="formThree"
+  id="formStates"
 >
   <div
     className="ce-checkbox"
@@ -523,21 +2367,18 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox States 
     <input
       checked={false}
       disabled={false}
-      form="formThree"
-      id="standardCheckbox_standard"
-      name="standardCheckbox"
+      form="formStates"
+      id="default_checkbox_default"
+      name="default_checkbox"
       onChange={[Function]}
       type="checkbox"
-      value="standard"
+      value="default"
     />
     <label
-      htmlFor="standardCheckbox_standard"
+      htmlFor="default_checkbox_default"
     >
-      Standard Checkbox
+      Default Checkbox
     </label>
-    <span
-      className="ce-checkbox__center"
-    />
     
   </div>
   <div
@@ -546,21 +2387,18 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox States 
     <input
       checked={false}
       disabled={true}
-      form="formThree"
-      id="disabledCheckbox_disabled"
-      name="disabledCheckbox"
+      form="formStates"
+      id="disabled_checkbox_disabled"
+      name="disabled_checkbox"
       onChange={[Function]}
       type="checkbox"
       value="disabled"
     />
     <label
-      htmlFor="disabledCheckbox_disabled"
+      htmlFor="disabled_checkbox_disabled"
     >
       Disabled Checkbox
     </label>
-    <span
-      className="ce-checkbox__center"
-    />
     
   </div>
   <div
@@ -569,35 +2407,36 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox States 
     <input
       checked={false}
       disabled={false}
-      form="formThree"
-      id="errorCheckbox_error"
-      name="errorCheckbox"
+      form="formStates"
+      id="error_checkbox_error"
+      name="error_checkbox"
       onChange={[Function]}
       type="checkbox"
       value="error"
     />
     <label
-      htmlFor="errorCheckbox_error"
+      htmlFor="error_checkbox_error"
     >
       Error Checkbox
     </label>
-    <span
-      className="ce-checkbox__center"
-    />
     <div
-      className="ce-checkbox--error__container"
+      className="ce-errorbox"
     >
       <div
-        className="ce-checkbox--error__arrow"
-      />
-      <div
-        className="ce-checkbox--error__message"
+        className="ce-errorbox__container"
       >
-        <span
-          className="ce-checkbox--error__text"
+        <div
+          className="ce-errorbox__arrow"
+        />
+        <div
+          className="ce-errorbox__message"
         >
-          There is an error.
-        </span>
+          <span
+            className="ce-errorbox__text"
+          >
+            There is an error.
+          </span>
+        </div>
       </div>
     </div>
   </div>
@@ -606,7 +2445,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox States 
 
 exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox Types 1`] = `
 <form
-  id="formTwo"
+  id="formTypes"
 >
   <div
     className="ce-checkbox"
@@ -614,7 +2453,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox Types 1
     <input
       checked={true}
       disabled={false}
-      form="formTwo"
+      form="formTypes"
       id="checked_true"
       name="checked"
       onChange={[Function]}
@@ -626,9 +2465,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox Types 1
     >
       I am checked
     </label>
-    <span
-      className="ce-checkbox__center"
-    />
     
   </div>
   <div
@@ -649,24 +2485,19 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox Types 1
     >
       I am unchecked
     </label>
-    <span
-      className="ce-checkbox__center"
-    />
     
   </div>
 </form>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup All CheckboxGroups 1`] = `
+exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox with Knobs 1`] = `
 <form
-  id="formOne"
+  id="formKnobs"
 >
-  <fieldset
-    className="ce-checkbox-group"
-    disabled={false}
-    form="formOne"
-    onChange={[Function]}
+  <div
+    className="ce-checkbox"
   >
+<<<<<<< HEAD
     <legend>
       Favorite Food
     </legend>
@@ -764,25 +2595,40 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup All Checkbo
     </div>
     <span
       className="ce-checkbox-group--error__text"
+=======
+    <input
+      checked={false}
+      disabled={false}
+      form="formKnobs"
+      id="termsAndConditions_accepted"
+      name="termsAndConditions"
+      onChange={[Function]}
+      type="checkbox"
+      value="accepted"
+    />
+    <label
+      htmlFor="termsAndConditions_accepted"
+>>>>>>> master
     >
-      
-    </span>
-  </fieldset>
+      Accept Terms and Conditions
+    </label>
+    
+  </div>
 </form>
 `;
 
 exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGroup States 1`] = `
 <form
-  id="formThree"
+  id="formStates"
 >
   <fieldset
     className="ce-checkbox-group"
     disabled={false}
-    form="formThree"
+    form="formStates"
     onChange={[Function]}
   >
     <legend>
-      Favorite OS (Default Checkbox Group)
+      Default Checkbox Group
     </legend>
     <div
       className="ce-checkbox"
@@ -802,9 +2648,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         macOS
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -825,16 +2668,13 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Windows
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
       className="ce-checkbox"
     >
       <input
-        checked={true}
+        checked={false}
         disabled={false}
         form=""
         id="favoriteOS_linux"
@@ -848,9 +2688,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Linux
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <span
@@ -862,7 +2699,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
   <fieldset
     className="ce-checkbox-group ce-checkbox-group--disabled"
     disabled={true}
-    form="formThree"
+    form="formStates"
     onChange={[Function]}
   >
     <legend>
@@ -886,9 +2723,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         John Lennon
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -909,9 +2743,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Paul Mccartney
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -932,9 +2763,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         George Harrison
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -955,9 +2783,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Ringo Starr
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <span
@@ -969,7 +2794,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
   <fieldset
     className="ce-checkbox-group"
     disabled={false}
-    form="formThree"
+    form="formStates"
     onChange={[Function]}
   >
     <legend>
@@ -993,9 +2818,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         John Lennon
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -1016,9 +2838,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Paul Mccartney
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -1039,9 +2858,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         George Harrison
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -1062,9 +2878,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Ringo Starr (Disabled)
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <span
@@ -1076,7 +2889,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
   <fieldset
     className="ce-checkbox-group ce-checkbox-group--error"
     disabled={false}
-    form="formThree"
+    form="formStates"
     onChange={[Function]}
   >
     <legend>
@@ -1100,9 +2913,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         React
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -1123,9 +2933,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         AngularJS
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -1146,9 +2953,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Angular
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -1169,9 +2973,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Vue
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <span
@@ -1185,12 +2986,12 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
 
 exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGroup Types 1`] = `
 <form
-  id="formTwo"
+  id="formTypes"
 >
   <fieldset
     className="ce-checkbox-group"
     disabled={false}
-    form="formTwo"
+    form="formTypes"
     onChange={[Function]}
   >
     <legend>
@@ -1200,7 +3001,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       className="ce-checkbox"
     >
       <input
-        checked={false}
+        checked={true}
         disabled={false}
         form=""
         id="favoriteTextEditor_vim"
@@ -1214,9 +3015,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Vim
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -1237,9 +3035,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Emacs
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -1260,9 +3055,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         VS Code
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -1283,9 +3075,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       >
         Atom
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <span
@@ -1297,16 +3086,18 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
 </form>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup Form Control Group with Checkboxes 1`] = `
-<form>
+exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGroup with Knobs 1`] = `
+<form
+  id="formKnobs"
+>
   <fieldset
-    className=""
+    className="ce-checkbox-group"
     disabled={false}
-    form=""
+    form="formKnobs"
     onChange={[Function]}
   >
     <legend>
-      Test Group
+      Favorite Food
     </legend>
     <div
       className="ce-checkbox"
@@ -1315,20 +3106,17 @@ exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup Form Con
         checked={true}
         disabled={false}
         form=""
-        id="myGroup_checkboxOne"
-        name="myGroup"
+        id="favoriteFood_pizza"
+        name="favoriteFood"
         onChange={[Function]}
         type="checkbox"
-        value="checkboxOne"
+        value="pizza"
       />
       <label
-        htmlFor="myGroup_checkboxOne"
+        htmlFor="favoriteFood_pizza"
       >
-        Checkbox 1
+        Pizza
       </label>
-      <span
-        className="ce-checkbox__center"
-      />
       
     </div>
     <div
@@ -1338,24 +3126,61 @@ exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup Form Con
         checked={false}
         disabled={false}
         form=""
-        id="myGroup_checkboxTwo"
-        name="myGroup"
+        id="favoriteFood_hotdog"
+        name="favoriteFood"
         onChange={[Function]}
         type="checkbox"
-        value="checkboxTwo"
+        value="hotdog"
       />
       <label
-        htmlFor="myGroup_checkboxTwo"
+        htmlFor="favoriteFood_hotdog"
       >
-        Checkbox 2
+        Hotdog
       </label>
-      <span
-        className="ce-checkbox__center"
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={true}
+        disabled={false}
+        form=""
+        id="favoriteFood_hamburger"
+        name="favoriteFood"
+        onChange={[Function]}
+        type="checkbox"
+        value="hamburger"
       />
+      <label
+        htmlFor="favoriteFood_hamburger"
+      >
+        Hamburger
+      </label>
+      
+    </div>
+    <div
+      className="ce-checkbox"
+    >
+      <input
+        checked={false}
+        disabled={false}
+        form=""
+        id="favoriteFood_coleslaw"
+        name="favoriteFood"
+        onChange={[Function]}
+        type="checkbox"
+        value="coleslaw"
+      />
+      <label
+        htmlFor="favoriteFood_coleslaw"
+      >
+        Coleslaw
+      </label>
       
     </div>
     <span
-      className=""
+      className="ce-checkbox-group--error__text"
     >
       
     </span>
@@ -1363,32 +3188,207 @@ exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup Form Con
 </form>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup Form Control Group with Radios 1`] = `
-<form>
-  <fieldset
+exports[`Storyshots Components/Molecules/Form Controls/Core/ErrorBox ErrorBox Types 1`] = `
+<div
+  className="ce-errorbox"
+>
+  <div
+    className="ce-errorbox__container"
+  >
+    <div
+      className="ce-errorbox__arrow"
+    />
+    <div
+      className="ce-errorbox__message"
+    >
+      <span
+        className="ce-errorbox__text"
+      >
+        My fancy error message.
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Core/ErrorBox ErrorBox with Knobs 1`] = `
+<div
+  className="ce-errorbox"
+>
+  <div
+    className="ce-errorbox__container"
+  >
+    <div
+      className="ce-errorbox__arrow"
+    />
+    <div
+      className="ce-errorbox__message"
+    >
+      <span
+        className="ce-errorbox__text"
+      >
+        This is an error message.
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Core/FormControlGroup Form Control Group with Radios 1`] = `
+<fieldset
+  className=""
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    Test Group
+  </legend>
+  <div
+    className="ce-radio"
+  >
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="myGroup_radioOne"
+      name="myGroup"
+      type="radio"
+      value="radioOne"
+    />
+    <label
+      htmlFor="myGroup_radioOne"
+    >
+      Radio 1
+    </label>
+  </div>
+  <div
+    className="ce-radio"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="myGroup_radioTwo"
+      name="myGroup"
+      type="radio"
+      value="radioTwo"
+    />
+    <label
+      htmlFor="myGroup_radioTwo"
+    >
+      Radio 2
+    </label>
+  </div>
+  <span
     className=""
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Core/FormControlGroup FormControlGroup with Checkboxes 1`] = `
+<fieldset
+  className=""
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    Test Group
+  </legend>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={true}
+      disabled={false}
+      form=""
+      id="myGroup_checkboxOne"
+      name="myGroup"
+      onChange={[Function]}
+      type="checkbox"
+      value="checkboxOne"
+    />
+    <label
+      htmlFor="myGroup_checkboxOne"
+    >
+      Checkbox 1
+    </label>
+    
+  </div>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form=""
+      id="myGroup_checkboxTwo"
+      name="myGroup"
+      onChange={[Function]}
+      type="checkbox"
+      value="checkboxTwo"
+    />
+    <label
+      htmlFor="myGroup_checkboxTwo"
+    >
+      Checkbox 2
+    </label>
+    
+  </div>
+  <span
+    className=""
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Radio Radio States 1`] = `
+<form
+  id="formStates"
+>
+  <fieldset
+    className="ce-radio-group"
     disabled={false}
-    form=""
+    form="formStates"
     onChange={[Function]}
   >
     <legend>
-      Test Group
+      Default RadioGroup:
     </legend>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="defaultGroup_thisOne"
+        name="defaultGroup"
+        type="radio"
+        value="thisOne"
+      />
+      <label
+        htmlFor="defaultGroup_thisOne"
+      >
+        This one
+      </label>
+    </div>
     <div
       className="ce-radio"
     >
       <input
         defaultChecked={true}
         disabled={false}
-        id="myGroup_radioOne"
-        name="myGroup"
+        id="defaultGroup_thatOne"
+        name="defaultGroup"
         type="radio"
-        value="radioOne"
+        value="thatOne"
       />
       <label
-        htmlFor="myGroup_radioOne"
+        htmlFor="defaultGroup_thatOne"
       >
-        Radio 1
+        That one
       </label>
     </div>
     <div
@@ -1397,15 +3397,254 @@ exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup Form Con
       <input
         defaultChecked={false}
         disabled={false}
-        id="myGroup_radioTwo"
-        name="myGroup"
+        id="defaultGroup_thisOtherOne"
+        name="defaultGroup"
         type="radio"
-        value="radioTwo"
+        value="thisOtherOne"
       />
       <label
-        htmlFor="myGroup_radioTwo"
+        htmlFor="defaultGroup_thisOtherOne"
       >
-        Radio 2
+        This other one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="defaultGroup_thatOtherOne"
+        name="defaultGroup"
+        type="radio"
+        value="thatOtherOne"
+      />
+      <label
+        htmlFor="defaultGroup_thatOtherOne"
+      >
+        That other one
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-radio-group ce-radio-group--disabled"
+    disabled={true}
+    form="formStates"
+    onChange={[Function]}
+  >
+    <legend>
+      Disabled RadioGroup:
+    </legend>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="disabledGroup_thisOne"
+        name="disabledGroup"
+        type="radio"
+        value="thisOne"
+      />
+      <label
+        htmlFor="disabledGroup_thisOne"
+      >
+        This one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="disabledGroup_thatOne"
+        name="disabledGroup"
+        type="radio"
+        value="thatOne"
+      />
+      <label
+        htmlFor="disabledGroup_thatOne"
+      >
+        That one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="disabledGroup_thisOtherOne"
+        name="disabledGroup"
+        type="radio"
+        value="thisOtherOne"
+      />
+      <label
+        htmlFor="disabledGroup_thisOtherOne"
+      >
+        This other one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="disabledGroup_thatOtherOne"
+        name="disabledGroup"
+        type="radio"
+        value="thatOtherOne"
+      />
+      <label
+        htmlFor="disabledGroup_thatOtherOne"
+      >
+        That other one
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+  <fieldset
+    className="ce-radio-group ce-radio-group--error"
+    disabled={false}
+    form="formStates"
+    onChange={[Function]}
+  >
+    <legend>
+      Error RadioGroup:
+    </legend>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="errorGroup_thisOne"
+        name="errorGroup"
+        type="radio"
+        value="thisOne"
+      />
+      <label
+        htmlFor="errorGroup_thisOne"
+      >
+        This one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="errorGroup_thatOne"
+        name="errorGroup"
+        type="radio"
+        value="thatOne"
+      />
+      <label
+        htmlFor="errorGroup_thatOne"
+      >
+        That one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="errorGroup_thisOtherOne"
+        name="errorGroup"
+        type="radio"
+        value="thisOtherOne"
+      />
+      <label
+        htmlFor="errorGroup_thisOtherOne"
+      >
+        This other one
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="errorGroup_thatOtherOne"
+        name="errorGroup"
+        type="radio"
+        value="thatOtherOne"
+      />
+      <label
+        htmlFor="errorGroup_thatOtherOne"
+      >
+        That other one
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      You did not choose wisely!
+    </span>
+  </fieldset>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Radio Radio Types 1`] = `
+<form
+  id="formTypes"
+>
+  <fieldset
+    className="ce-radio-group"
+    disabled={false}
+    form="formTypes"
+    onChange={[Function]}
+  >
+    <legend>
+      Please make a choice:
+    </legend>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="choice_yes"
+        name="choice"
+        type="radio"
+        value="yes"
+      />
+      <label
+        htmlFor="choice_yes"
+      >
+        Yes
+      </label>
+    </div>
+    <div
+      className="ce-radio"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="choice_no"
+        name="choice"
+        type="radio"
+        value="no"
+      />
+      <label
+        htmlFor="choice_no"
+      >
+        No
       </label>
     </div>
     <span
@@ -1417,14 +3656,33 @@ exports[`Storyshots Components/Molecules/Form Controls/FormControlGroup Form Con
 </form>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/RadioGroup All RadioGroups 1`] = `
+exports[`Storyshots Components/Molecules/Form Controls/Radio Radio with Knobs 1`] = `
+<div
+  className="ce-radio"
+>
+  <input
+    defaultChecked={false}
+    disabled={false}
+    id="undefined_macos"
+    type="radio"
+    value="macos"
+  />
+  <label
+    htmlFor="undefined_macos"
+  >
+    macOS
+  </label>
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Radio RadioGroup with Knobs 1`] = `
 <form
-  id="formOne"
+  id="formKnobs"
 >
   <fieldset
     className="ce-radio-group"
     disabled={false}
-    form="formOne"
+    form="formKnobs"
     onChange={[Function]}
   >
     <legend>
@@ -1490,235 +3748,7 @@ exports[`Storyshots Components/Molecules/Form Controls/RadioGroup All RadioGroup
 </form>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/RadioGroup All Radios 1`] = `
-<div
-  className="ce-radio"
->
-  <input
-    defaultChecked={false}
-    disabled={false}
-    id="undefined_macos"
-    type="radio"
-    value="macos"
-  />
-  <label
-    htmlFor="undefined_macos"
-  >
-    macOS
-  </label>
-</div>
-`;
-
-exports[`Storyshots Components/Molecules/Form Controls/RadioGroup RadioGroup States 1`] = `
-<form
-  id="formThree"
->
-  <fieldset
-    className="ce-radio-group"
-    disabled={false}
-    form="formThree"
-    onChange={[Function]}
-  >
-    <legend>
-      Standard RadioGroup:
-    </legend>
-    <div
-      className="ce-radio"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="standardGroup_thisOne"
-        name="standardGroup"
-        type="radio"
-        value="thisOne"
-      />
-      <label
-        htmlFor="standardGroup_thisOne"
-      >
-        This one
-      </label>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <input
-        defaultChecked={true}
-        disabled={false}
-        id="standardGroup_thatOne"
-        name="standardGroup"
-        type="radio"
-        value="thatOne"
-      />
-      <label
-        htmlFor="standardGroup_thatOne"
-      >
-        That one
-      </label>
-    </div>
-    <span
-      className=""
-    >
-      
-    </span>
-  </fieldset>
-  <fieldset
-    className="ce-radio-group ce-radio-group--disabled"
-    disabled={true}
-    form="formThree"
-    onChange={[Function]}
-  >
-    <legend>
-      Disabled RadioGroup:
-    </legend>
-    <div
-      className="ce-radio"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="disabledGroup_notThisOne"
-        name="disabledGroup"
-        type="radio"
-        value="notThisOne"
-      />
-      <label
-        htmlFor="disabledGroup_notThisOne"
-      >
-        Not this one
-      </label>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <input
-        defaultChecked={true}
-        disabled={false}
-        id="disabledGroup_notThatOne"
-        name="disabledGroup"
-        type="radio"
-        value="notThatOne"
-      />
-      <label
-        htmlFor="disabledGroup_notThatOne"
-      >
-        Not that one
-      </label>
-    </div>
-    <span
-      className=""
-    >
-      
-    </span>
-  </fieldset>
-  <fieldset
-    className="ce-radio-group ce-radio-group--error"
-    disabled={false}
-    form="formThree"
-    onChange={[Function]}
-  >
-    <legend>
-      Error RadioGroup:
-    </legend>
-    <div
-      className="ce-radio"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="errorGroup_thisWrongOne"
-        name="errorGroup"
-        type="radio"
-        value="thisWrongOne"
-      />
-      <label
-        htmlFor="errorGroup_thisWrongOne"
-      >
-        This wrong one
-      </label>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <input
-        defaultChecked={true}
-        disabled={false}
-        id="errorGroup_thatWrongOne"
-        name="errorGroup"
-        type="radio"
-        value="thatWrongOne"
-      />
-      <label
-        htmlFor="errorGroup_thatWrongOne"
-      >
-        That wrong one
-      </label>
-    </div>
-    <span
-      className=""
-    >
-      You did not choose wisely!
-    </span>
-  </fieldset>
-</form>
-`;
-
-exports[`Storyshots Components/Molecules/Form Controls/RadioGroup RadioGroup Types 1`] = `
-<form
-  id="formTwo"
->
-  <fieldset
-    className="ce-radio-group"
-    disabled={false}
-    form="formTwo"
-    onChange={[Function]}
-  >
-    <legend>
-      Please make a choice:
-    </legend>
-    <div
-      className="ce-radio"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="choice_yes"
-        name="choice"
-        type="radio"
-        value="yes"
-      />
-      <label
-        htmlFor="choice_yes"
-      >
-        Yes
-      </label>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <input
-        defaultChecked={true}
-        disabled={false}
-        id="choice_no"
-        name="choice"
-        type="radio"
-        value="no"
-      />
-      <label
-        htmlFor="choice_no"
-      >
-        No
-      </label>
-    </div>
-    <span
-      className=""
-    >
-      
-    </span>
-  </fieldset>
-</form>
-`;
-
+<<<<<<< HEAD
 exports[`Storyshots Components/Molecules/Form Controls/Select Disabled Select  1`] = `
 <form>
   <div
@@ -2255,11 +4285,13 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton All SubmitBu
 </button>
 `;
 
+=======
+>>>>>>> master
 exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton Colors 1`] = `
 <div>
   <div>
     <button
-      className="ce-button ce-button--small ce-button--primary"
+      className="ce-button ce-button--default ce-button--small ce-button--primary"
       disabled={false}
       onClick={[Function]}
       type="submit"
@@ -2271,7 +4303,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       </span>
     </button>
     <button
-      className="ce-button ce-button--small ce-button--secondary"
+      className="ce-button ce-button--default ce-button--small ce-button--secondary"
       disabled={false}
       onClick={[Function]}
       type="submit"
@@ -2283,7 +4315,19 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       </span>
     </button>
     <button
-      className="ce-button ce-button--small ce-button--blue"
+      className="ce-button ce-button--default ce-button--small ce-button--black"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        black
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--small ce-button--blue"
       disabled={false}
       onClick={[Function]}
       type="submit"
@@ -2295,7 +4339,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       </span>
     </button>
     <button
-      className="ce-button ce-button--small ce-button--green"
+      className="ce-button ce-button--default ce-button--small ce-button--green"
       disabled={false}
       onClick={[Function]}
       type="submit"
@@ -2307,7 +4351,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       </span>
     </button>
     <button
-      className="ce-button ce-button--small ce-button--orange"
+      className="ce-button ce-button--default ce-button--small ce-button--orange"
       disabled={false}
       onClick={[Function]}
       type="submit"
@@ -2319,7 +4363,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       </span>
     </button>
     <button
-      className="ce-button ce-button--small ce-button--purple"
+      className="ce-button ce-button--default ce-button--small ce-button--purple"
       disabled={false}
       onClick={[Function]}
       type="submit"
@@ -2331,7 +4375,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       </span>
     </button>
     <button
-      className="ce-button ce-button--small ce-button--red"
+      className="ce-button ce-button--default ce-button--small ce-button--red"
       disabled={false}
       onClick={[Function]}
       type="submit"
@@ -2343,7 +4387,6 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       </span>
     </button>
   </div>
-  <br />
   <div>
     <button
       className="ce-button ce-button--outline ce-button--small ce-button--primary"
@@ -2367,6 +4410,18 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
         className="ce-button__label"
       >
         secondary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--black"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        black
       </span>
     </button>
     <button
@@ -2430,7 +4485,6 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       </span>
     </button>
   </div>
-  <br />
   <div>
     <button
       className="ce-button ce-button--text ce-button--small ce-button--primary"
@@ -2454,6 +4508,18 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
         className="ce-button__label"
       >
         secondary
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--black"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        black
       </span>
     </button>
     <button
@@ -2489,7 +4555,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       <span
         className="ce-button__label"
       >
-        ornage
+        orange
       </span>
     </button>
     <button
@@ -2524,7 +4590,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
 <div>
   <div>
     <button
-      className="ce-button ce-button--small ce-button--primary"
+      className="ce-button ce-button--default ce-button--small ce-button--primary"
       disabled={false}
       onClick={[Function]}
       type="submit"
@@ -2532,11 +4598,11 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       <span
         className="ce-button__label"
       >
-        normal small
+        default small
       </span>
     </button>
     <button
-      className="ce-button ce-button--large ce-button--primary"
+      className="ce-button ce-button--default ce-button--large ce-button--primary"
       disabled={false}
       onClick={[Function]}
       type="submit"
@@ -2544,11 +4610,11 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       <span
         className="ce-button__label"
       >
-        normal large
+        default large
       </span>
     </button>
     <button
-      className="ce-button ce-button--jumbo ce-button--primary"
+      className="ce-button ce-button--default ce-button--jumbo ce-button--primary"
       disabled={false}
       onClick={[Function]}
       type="submit"
@@ -2556,11 +4622,10 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       <span
         className="ce-button__label"
       >
-        normal jumbo
+        default jumbo
       </span>
     </button>
   </div>
-  <br />
   <div>
     <button
       className="ce-button ce-button--outline ce-button--small ce-button--primary"
@@ -2599,7 +4664,6 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       </span>
     </button>
   </div>
-  <br />
   <div>
     <button
       className="ce-button ce-button--text ce-button--small ce-button--primary"
@@ -2643,49 +4707,91 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
 
 exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton States 1`] = `
 <div>
-  <button
-    className="ce-button ce-button--small ce-button--primary ce-button--disabled"
-    disabled={true}
-    onClick={[Function]}
-    type="submit"
-  >
-    <span
-      className="ce-button__label"
+  <div>
+    <button
+      className="ce-button ce-button--default ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
     >
-      small disabled
-    </span>
-  </button>
-  <button
-    className="ce-button ce-button--outline ce-button--small ce-button--primary ce-button--disabled"
-    disabled={true}
-    onClick={[Function]}
-    type="submit"
-  >
-    <span
-      className="ce-button__label"
+      <span
+        className="ce-button__label"
+      >
+        default default
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--default ce-button--small ce-button--primary ce-button--disabled"
+      disabled={true}
+      onClick={[Function]}
+      type="submit"
     >
-      small outline disabled
-    </span>
-  </button>
-  <button
-    className="ce-button ce-button--text ce-button--small ce-button--primary ce-button--disabled"
-    disabled={true}
-    onClick={[Function]}
-    type="submit"
-  >
-    <span
-      className="ce-button__label"
+      <span
+        className="ce-button__label"
+      >
+        disabled default
+      </span>
+    </button>
+  </div>
+  <div>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
     >
-      small text disabled
-    </span>
-  </button>
+      <span
+        className="ce-button__label"
+      >
+        default outline
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--outline ce-button--small ce-button--primary ce-button--disabled"
+      disabled={true}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        disabled outline
+      </span>
+    </button>
+  </div>
+  <div>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        default text
+      </span>
+    </button>
+    <button
+      className="ce-button ce-button--text ce-button--small ce-button--primary ce-button--disabled"
+      disabled={true}
+      onClick={[Function]}
+      type="submit"
+    >
+      <span
+        className="ce-button__label"
+      >
+        disabled text
+      </span>
+    </button>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton Types 1`] = `
 <div>
   <button
-    className="ce-button ce-button--small ce-button--primary"
+    className="ce-button ce-button--default ce-button--small ce-button--primary"
     disabled={false}
     onClick={[Function]}
     type="submit"
@@ -2693,7 +4799,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
     <span
       className="ce-button__label"
     >
-      standard button
+      default button
     </span>
   </button>
   <button
@@ -2721,6 +4827,21 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
     </span>
   </button>
 </div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton with Knobs 1`] = `
+<button
+  className="ce-button ce-button--default ce-button--small ce-button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="submit"
+>
+  <span
+    className="ce-button__label"
+  >
+    a button
+  </span>
+</button>
 `;
 
 exports[`Storyshots Components/Molecules/Icons/ProductIcon All ProductIcons 1`] = `
@@ -5645,7 +7766,7 @@ exports[`Storyshots Components/Molecules/Icons/SecondaryIcon SecondaryIcon with 
 
 exports[`Storyshots Components/Molecules/Icons/SystemIcon All SystemIcons 1`] = `
 <span
-  className="ce-icon ce-icon__system"
+  className="ce-icon ce-icon__system ce-icon--large"
 >
   <svg
     className="ce-icon--red"
@@ -5683,7 +7804,7 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcon Colors 1`] 
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
         className="ce-icon--black"
@@ -5713,7 +7834,7 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcon Colors 1`] 
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
         className="ce-icon--blue"
@@ -5743,7 +7864,7 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcon Colors 1`] 
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
         className="ce-icon--green"
@@ -5773,7 +7894,7 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcon Colors 1`] 
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
         className="ce-icon--orange"
@@ -5803,7 +7924,7 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcon Colors 1`] 
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
         className="ce-icon--purple"
@@ -5833,7 +7954,7 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcon Colors 1`] 
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
         className="ce-icon--red"
@@ -5906,10 +8027,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-share"
@@ -5936,10 +8057,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-preview"
@@ -5966,10 +8087,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-export"
@@ -5996,10 +8117,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-follow"
@@ -6026,10 +8147,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-message"
@@ -6056,10 +8177,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-badges"
@@ -6086,10 +8207,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-website"
@@ -6116,10 +8237,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-edit"
@@ -6146,10 +8267,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-clear"
@@ -6176,10 +8297,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-navigate"
@@ -6206,10 +8327,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-down"
@@ -6236,10 +8357,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-up"
@@ -6266,10 +8387,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-user"
@@ -6296,10 +8417,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-visibility"
@@ -6326,10 +8447,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-help"
@@ -6356,10 +8477,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-close"
@@ -6386,10 +8507,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-calendar"
@@ -6416,10 +8537,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-warning"
@@ -6446,10 +8567,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-add"
@@ -6476,10 +8597,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-filter"
@@ -6506,10 +8627,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-menu"
@@ -6536,10 +8657,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-search"
@@ -6566,10 +8687,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-tutorial"
@@ -6596,10 +8717,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-yes"
@@ -6626,10 +8747,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-no"
@@ -6656,10 +8777,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-hobby"
@@ -6686,10 +8807,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-interest"
@@ -6716,10 +8837,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-outdoor"
@@ -6746,10 +8867,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-indoor"
@@ -6776,10 +8897,10 @@ exports[`Storyshots Components/Molecules/Icons/SystemIcon SystemIcons 1`] = `
     }
   >
     <span
-      className="ce-icon ce-icon__system"
+      className="ce-icon ce-icon__system ce-icon--large"
     >
       <svg
-        className="ce-icon--black"
+        className=""
       >
         <use
           xlinkHref="#icons_system-popular"

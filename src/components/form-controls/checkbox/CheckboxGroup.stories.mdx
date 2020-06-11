@@ -1,10 +1,4 @@
-
-import { Description,
-  Meta,
-  Preview,
-  Props,
-  Story,
-} from '@storybook/addon-docs/blocks';
+import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text, array } from '@storybook/addon-knobs';
 
@@ -13,38 +7,25 @@ import { Checkbox, CheckboxGroup } from '.';
 <Meta component={CheckboxGroup} title="Components/Molecules/Form Controls/CheckboxGroup"/>
 
 # CheckboxGroup
-<Description of={CheckboxGroup}/>
-<Props of={CheckboxGroup}/>
+<Description of={CheckboxGroup} />
+<Props of={CheckboxGroup} />
 
-<Story name="All CheckboxGroups" parameters={{docs: {disable: true}}}>
-  <form id="formOne">
+<Story name="CheckboxGroup with Knobs" parameters={{docs: {disable: true}}}>
+  <form id="formKnobs">
     <CheckboxGroup
       className={text('className', '')}
       disabled={boolean('disabled', false)}
-      errorClass={text('errorClass', '')}
       errorMsg={text('errorMsg', '')}
-      formId={text('formId', 'formOne')}
-      handleChange={val => console.log(`The value is ${val}`)}
+      formId={text('formId', 'formKnobs')}
+      handleChange={action('`CheckboxGroup with Knobs` onChange event triggered.')}
       label={text('label', 'Favorite Food')}
       name={text('name', 'favoriteFood')}
       selectedValues={array('selectedValues', ["pizza", "hamburger"])}
     >
-      <Checkbox
-        label='Pizza'
-        value='pizza'
-      />
-      <Checkbox
-        label='Hotdog'
-        value='hotdog'
-      />
-      <Checkbox
-        label='Hamburger'
-        value='hamburger'
-      />
-      <Checkbox
-        label='Coleslaw'
-        value='coleslaw'
-      />
+      <Checkbox label='Pizza' value='pizza' />
+      <Checkbox label='Hotdog' value='hotdog' />
+      <Checkbox label='Hamburger' value='hamburger' />
+      <Checkbox label='Coleslaw' value='coleslaw' />
     </CheckboxGroup>
   </form>
 </Story>
@@ -52,29 +33,18 @@ import { Checkbox, CheckboxGroup } from '.';
 ### Types
 <Preview>
   <Story name="CheckboxGroup Types">
-    <form id="formTwo">
+    <form id="formTypes">
       <CheckboxGroup
-        formId="formTwo"
-        handleChange={val => console.log(`The value is ${val}`)}
+        formId="formTypes"
+        handleChange={action('`CheckboxGroup Types` onChange event triggered.')}
         label="Favorite Text Editor"
         name="favoriteTextEditor"
+        selectedValues={['vim']}
       >
-        <Checkbox
-          label="Vim"
-          value="vim"
-        />
-        <Checkbox
-          label="Emacs"
-          value="emacs"
-        />
-        <Checkbox
-         label="VS Code"
-         value="vscode"
-        />
-        <Checkbox
-          label="Atom"
-          value="atom"
-        />
+        <Checkbox label="Vim" value="vim" />
+        <Checkbox label="Emacs" value="emacs" />
+        <Checkbox label="VS Code" value="vscode" />
+        <Checkbox label="Atom" value="atom" />
       </CheckboxGroup>
     </form>
   </Story>
@@ -83,100 +53,54 @@ import { Checkbox, CheckboxGroup } from '.';
 ### States
 <Preview>
   <Story name="CheckboxGroup States">
-    <form id="formThree">
+    <form id="formStates">
       <CheckboxGroup
-        formId="formThree"
-        handleChange={val => console.log(`The value is ${val}`)}
-        label="Favorite OS (Default Checkbox Group)"
+        formId="formStates"
+        handleChange={action('`CheckboxGroup States` onChange event triggered.')}
+        label="Default Checkbox Group"
         name="favoriteOS"
-        selectedValues={['macos', 'linux']}
+        selectedValues={['macos']}
       >
-        <Checkbox
-          label="macOS"
-          value="macos"
-        />
-        <Checkbox
-          label="Windows"
-          value="windows"
-        />
-        <Checkbox
-         label="Linux"
-         value="linux"
-        />
+        <Checkbox label="macOS" value="macos" />
+        <Checkbox label="Windows" value="windows" />
+        <Checkbox label="Linux" value="linux" />
       </CheckboxGroup>
       <CheckboxGroup
         disabled
-        formId="formThree"
-        handleChange={val => console.log(`The value is ${val}`)}
+        formId="formStates"
+        handleChange={action('`CheckboxGroup States` onChange event triggered.')}
         label="Favorite Beatle (Disabled Checkbox Group)"
         name="favoriteBeatle"
         selectedValues={['george']}
       >
-        <Checkbox
-         label="John Lennon"
-         value="john"
-        />
-        <Checkbox
-          label="Paul Mccartney"
-          value="paul"
-        />
-        <Checkbox
-         label="George Harrison"
-         value="george"
-        />
-        <Checkbox
-          label="Ringo Starr"
-          value="ringo"
-        />
+        <Checkbox label="John Lennon" value="john" />
+        <Checkbox label="Paul Mccartney" value="paul" />
+        <Checkbox label="George Harrison" value="george" />
+        <Checkbox label="Ringo Starr" value="ringo" />
       </CheckboxGroup>
       <CheckboxGroup
-        formId="formThree"
-        handleChange={val => console.log(`The value is ${val}`)}
+        formId="formStates"
+        handleChange={action('`CheckboxGroup States` onChange event triggered.')}
         label="Favorite Beatle (Disabled Checkbox Individual)"
         name="favoriteBeatle2"
       >
-        <Checkbox
-         label="John Lennon"
-         value="john"
-        />
-        <Checkbox
-          label="Paul Mccartney"
-          value="paul"
-        />
-        <Checkbox
-         label="George Harrison"
-         value="george"
-        />
-        <Checkbox
-          label="Ringo Starr (Disabled)"
-          value="ringo"
-          disabled
-        />
+        <Checkbox label="John Lennon" value="john" />
+        <Checkbox label="Paul Mccartney" value="paul" />
+        <Checkbox label="George Harrison" value="george" />
+        <Checkbox label="Ringo Starr (Disabled)" value="ringo" disabled />
       </CheckboxGroup>
       <CheckboxGroup
         errorMsg="Unable to set Vuejs as favorite framework."
-        formId="formThree"
-        handleChange={val => console.log(`The value is ${val}`)}
+        formId="formStates"
+        handleChange={action('`CheckboxGroup States` onChange event triggered.')}
         label="Favorite UI Framework"
         name="favoriteFramework"
         selectedValues={["react", "vue"]}
       >
-        <Checkbox
-         label="React"
-         value="react"
-        />
-        <Checkbox
-          label="AngularJS"
-          value="angularjs"
-        />
-        <Checkbox
-         label="Angular"
-         value="angular"
-        />
-        <Checkbox
-          label="Vue"
-          value="vue"
-        />
+        <Checkbox label="React" value="react" />
+        <Checkbox label="AngularJS" value="angularjs" />
+        <Checkbox label="Angular" value="angular" />
+        <Checkbox label="Vue" value="vue" />
       </CheckboxGroup>
     </form>
   </Story>

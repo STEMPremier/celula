@@ -1,3 +1,4 @@
-import FormControlGroup from './FormControlGroup';
+import ErrorBox from './error-box';
+import FormControlGroup from './form-control-group';
 
-export default FormControlGroup;
+export { ErrorBox, FormControlGroup };
