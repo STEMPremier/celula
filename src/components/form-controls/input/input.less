@@ -6,18 +6,40 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: left;
+  width: 36rem;
+  &:hover {
+    .ce-input--box {
+      &::after {
+        border: 0.3rem solid @hover-blue;
+      }
+    }
+  }
+  &:focus {
+    .ce-input--box {
+      &::after {
+        border: 0.3rem solid @focus-blue;
+      }
+    }
+  }
+  &:active {
+    .ce-input--box {
+      &::after {
+        border: 0.3rem solid @active-blue;
+      }
+    }
+  }
 
   label {
     order: 0;
     height: 2.2rem;
-    font-size: 1.6re;
+    font-size: 1.6rem;
     margin-left: 1rem;
   }
 
   .ce-input--helper-text {
     font-size: 12px;
     margin: 5px 0px 10px 10px;
-    width: 36rem;
+    // width: 36rem;
     height: 100%;
   }
 
@@ -25,46 +47,23 @@
     color: transparent;
     background: none;
     width: 40%;
-    z-index: 1;
-    // background-color: green;
+    z-index: 5;
+    background-color: green;
   }
   input[type='datetime-local']::-webkit-calendar-picker-indicator {
     color: transparent;
     background: none;
     width: 40%;
-    z-index: 1;
+    z-index: 5;
     // background-color: green;
   }
   input[type='week']::-webkit-calendar-picker-indicator {
     color: transparent;
     background: none;
     width: 40%;
-  }
-  // input[type='week'] + .ce-input--box {
-  //   background-color: black;
-  //   // height: 55px;
-  // }
-
-  .ce-input--date-icon {
-    position: absolute;
-    margin-left: 305px;
-    margin-top: -39px;
-    margin-bottom: 20px;
-    z-index: 0;
-  }
-  .ce-input--date-icon ~ input {
-    width: 46rem;
-    margin-right: 0px;
+    z-index: 5;
   }
 
-  input {
-    // order: 1;
-    height: 5.8rem;
-    width: 33.9rem;
-    padding-left: 1.9rem;
-    border-radius: 0.5rem;
-    border: 0;
-  }
   &.ce-input--hidden {
     .ce-input--box {
       height: 0;
@@ -76,106 +75,107 @@
     }
   }
 
+  .ce-input--date-icon {
+    position: absolute;
+    margin-left: 305px;
+    margin-top: 20px;
+    z-index: 0;
+  }
+  // .ce-input--date-icon ~ input {
+  //   // width: 46rem;
+  //   margin-right: 0px;
+  // }
+
+  .ce-input--box:focus {
+    outline: none;
+  }
   .ce-input--box {
-    // background-color: blue;
+    // z-index: -1;
     margin: 0rem 0 0 1rem;
     border-radius: 0.6rem;
-    width: 36rem;
-    height: 6rem;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    flex-wrap: nowrap;
     border: 0.1rem solid @gray-border;
 
     &::after {
       position: absolute;
-      z-index: -1;
+      // z-index: -1;
       border-radius: 0.8rem;
-      width: 368px;
-      height: 66px;
-      margin-top: -3px;
+      width: 356px;
+      height: 68px;
+      margin-top: -4.5px;
       margin-left: -4px;
       // border: 0.3rem solid purple;
       content: '';
       box-sizing: border-box;
     }
 
-    &:hover {
-      &::after {
-        border: 0.3rem solid @hover-blue;
-      }
-    }
-    &:focus {
-      &::after {
-        border: 0.3rem solid @focus-blue;
-      }
-    }
-    &:active {
-      &::after {
-        border: 0.3rem solid @active-blue;
-      }
-    }
-    // showGradientIconBox
-    .ce-input--show-gradient-icon-box {
-      width: 38rem;
-    }
-    .ce-input--gradient-button {
-      float: right;
-      order: 2;
-      width: 7.4rem;
+    .ce-input--wrapping-div {
+      // z-index: -4;
+      display: flex;
+      flex-direction: row;
+      width: 86%;
       height: 6rem;
-      font-size: 5.5rem;
-      margin-left: -0.1rem;
-      margin-top: -58px;
-      margin-right: 0;
-      border: 1px;
-      border-radius: 0 0.5rem 0.5rem 0;
-      background: @gradient-cool;
-      svg {
-        margin: auto;
-        width: 50%;
-        padding: 1.4rem;
+      padding-left: 4px;
+
+      .ce-input--icon {
+        margin: 2rem 0 0 2rem;
+        order: 1;
       }
-      // .ce-input--icon-in-box {
-      //   margin: auto;
-      //   width: 50%;
-      //   padding: 1rem;
-      // }
+
+      input {
+        // z-index: 7;
+        // background-color: black;
+        order: 2;
+        height: 96%;
+        padding-left: 1.9rem;
+        border: 0;
+        flex-grow: 1;
+        margin-right: auto;
+      }
+      input:focus {
+        outline: none;
+      }
+
+      .ce-input--gradient-button:focus {
+        outline: none;
+      }
+      .ce-input--gradient-button {
+        order: 3;
+        // z-index: 2;
+        width: 7.4rem;
+        // height: 6.1rem;
+        font-size: 5.5rem;
+        margin-right: -45px;
+        border: 1px;
+        border-radius: 0 0.5rem 0.5rem 0;
+        background: @gradient-cool;
+        svg {
+          margin: auto;
+          width: 50%;
+          padding: 1.4rem;
+        }
+        .ce-input--icon-in-box {
+          margin: auto;
+          width: 50%;
+          padding: 1rem;
+        }
+      }
+
+      .ce-input--error-icon ~ input {
+        background-color: red;
+        margin-left: -87px;
+      }
+
+      .ce-input--error-icon {
+        background-color: @white;
+        float: right;
+        position: relative;
+        padding: 2px;
+        margin-top: -12px;
+        z-index: 2;
+        margin-right: 10px;
+      }
     }
-
-    .ce-input--error-icon ~ input {
-      // input {
-      background-color: red;
-      margin-left: -87px;
-      // }
-    }
-    .ce-input--error-icon {
-      // justify-content: right;
-      // background-color: purple;
-      background-color: @white;
-      float: right;
-      position: relative;
-      margin-top: -10px;
-      z-index: 2;
-      margin-right: 10px;
-    }
-  }
-
-  .ce-input--icon {
-    margin: 2rem;
-  }
-
-  input:focus {
-    outline: none;
-  }
-
-  .ce-input--box:focus {
-    outline: none;
-  }
-
-  .ce-input--gradient-button:focus {
-    outline: none;
   }
 
   &.ce-input--disabled {
@@ -192,58 +192,53 @@
         }
       }
     }
-    .ce-input--gradient-button {
-      pointer-events: none;
-      background: @checked-disabled-gray;
+    .ce-input--wrapping-div {
+      .ce-input--gradient-button {
+        pointer-events: none;
+        background: @checked-disabled-gray;
+      }
     }
   }
 
   &.ce-input--error {
-    .ce-input--gradient-button {
-      border-radius: 0;
+    &:hover {
+      .ce-input--box {
+        border: 0.3rem solid @hover-red;
+        &::after {
+          border: none;
+        }
+      }
+    }
+    &:focus {
+      .ce-input--box {
+        border: 0.3rem solid @focus-red;
+        &::after {
+          border: none;
+        }
+      }
+    }
+    &:active {
+      .ce-input--box {
+        border: 0.3rem solid @active-red;
+        &::after {
+          border: none;
+        }
+      }
     }
     .ce-input--box {
       border: 0.3rem solid @error-box-background;
-      &:hover {
-        border: 0.3rem solid @hover-red;
-      }
-      &:focus {
-        border: 0.3rem solid @focus-red;
-      }
-      &:active {
-        border: 0.3rem solid @active-red;
-      }
-      input {
-        color: @error-box-background;
-        // need to silence the triggers to the background-state changes usually happening on input when not in error state
-        &:hover {
-          &::after {
-            border: none;
-          }
-        }
-        &:focus {
-          &::after {
-            border: none;
-          }
-        }
-        &:active {
-          &::after {
-            border: none;
-          }
-        }
-      }
-      color: @error-box-background;
+    }
+
+    color: @error-box-background;
+
+    .ce-input--wrapping-div {
       .ce-input--gradient-button {
         background: @error-box-background;
         border: 0.1rem solid @error-box-background;
       }
     }
 
-    .ce-input--wrapping-div-for-error {
-      z-index: ;
-    }
     .ce-input--error-box-wrapper {
-      width: 36.5rem;
       margin-left: 0.9rem;
 
       .ce-input--box-pointer {
@@ -258,7 +253,7 @@
       }
       .ce-input--error-box {
         height: 6rem;
-        width: 36.5rem;
+        // width: 36.5rem;
         background-color: @error-box-background;
         border-radius: 0.5rem;
         .ce-input--error-box-text {

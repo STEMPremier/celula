@@ -156,7 +156,6 @@ class Input extends Component {
         'ce-input--disabled': disabled,
         'ce-input--error': !isValid || errorMsg,
         'ce-input--error-icon': errorIcon,
-        'ce-input--show-gradient-icon-box': showGradientIconBox,
       },
       className,
     );
@@ -170,7 +169,7 @@ class Input extends Component {
           <div className="ce-input--helper-text">{helperText}</div>
         )}
         <div className="ce-input--box">
-          <div className="ce-input--wrapping-div-for-error">
+          <div className="ce-input--wrapping-div">
             {hasIcon && (
               <div className="ce-input--icon">
                 <SystemIcon name={icon} />
