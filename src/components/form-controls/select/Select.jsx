@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
+import { ErrorBox } from '../core';
+
 import SystemIcon from '../../icon/SystemIcon';
 
 import './select.less';
@@ -82,14 +84,7 @@ class Select extends Component {
           )}
         </div>
         <div className="ce-select--background-state" />
-        {errorMsg && (
-          <div className="ce-select--error-box-wrapper">
-            <div className="ce-select--icon" />
-            <div className="ce-select--error-box">
-              <div className="ce-select--error-box-text">{errorMsg}</div>
-            </div>
-          </div>
-        )}
+        {errorMsg && <ErrorBox errorMsg={errorMsg} />}
       </div>
     );
   }
