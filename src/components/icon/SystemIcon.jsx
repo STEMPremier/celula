@@ -7,24 +7,6 @@ import { COLORS, SIZES, SYSTEM_ICONS } from '../../utils/constants';
 import './icons/icons.svg';
 import './icon.less';
 
-<<<<<<< HEAD
-import { SYSTEM_ICONS } from './types';
-
-const COLORS = [
-  'primary',
-  'secondary',
-  'black',
-  'blue',
-  'green',
-  'orange',
-  'purple',
-  'red',
-  'white',
-  'gray',
-];
-
-=======
->>>>>>> master
 /**
  * System icons are designed to be simple, modern and friendly.
  * Each icon is reduced to its minimal form, expressing essential characteristics within the interface.
