@@ -5,10 +5,12 @@ const COLORS = [
   'secondary',
   'black',
   'blue',
+  'gray',
   'green',
   'orange',
   'purple',
   'red',
+  'white',
 ];
 const PRODUCT_ICONS = [
   'college',
