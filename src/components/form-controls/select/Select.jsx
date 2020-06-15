@@ -43,7 +43,6 @@ class Select extends Component {
       {
         'ce-select--disabled': disabled,
         'ce-select--error': errorMsg,
-        'ce-select--show-icon': buttonShow,
       },
       className,
     );
