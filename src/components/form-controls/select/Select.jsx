@@ -21,17 +21,17 @@ class Select extends Component {
 
   render() {
     const {
+      buttonClick,
+      buttonIcon,
+      buttonShow,
       className,
       disabled,
       errorMsg,
-      name,
       formId,
       handleChange,
       label,
+      name,
       options,
-      showIcon,
-      rightIconClick,
-      icon,
     } = this.props;
 
     const { showLabel, selectedValue } = this.state;
@@ -43,7 +43,7 @@ class Select extends Component {
       {
         'ce-select--disabled': disabled,
         'ce-select--error': errorMsg,
-        'ce-select--show-icon': showIcon,
+        'ce-select--show-icon': buttonShow,
       },
       className,
     );
@@ -69,14 +69,14 @@ class Select extends Component {
               </option>
             ))}
           </select>
-          {showIcon && (
+          {buttonShow && (
             <button
               className="ce-select__button"
-              onClick={rightIconClick}
+              onClick={buttonClick}
               type="button"
             >
               <SystemIcon
-                name={icon}
+                name={buttonIcon}
                 className="ce-select__button__icon"
                 color="white"
               />
@@ -92,6 +92,18 @@ class Select extends Component {
 
 Select.propTypes = {
   /**
+   * This function is accesible to the user for clickable events on the icon in the gradient to the right.
+   */
+  buttonClick: PropTypes.func,
+  /**
+   * Assign an icon to go in the gradient right hand square.  If you use the buttonShow prop as true, this icon will default to "navigate".  See the <SystemIcon /> for more options on what to enter into this icon prop.
+   */
+  buttonIcon: PropTypes.string,
+  /**
+   * The select will appear with the gradient box with icon to the right.
+   */
+  buttonShow: PropTypes.bool,
+  /**
    * A class name added to the select.
    */
   className: PropTypes.string,
@@ -100,37 +112,25 @@ Select.propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * The select will appear with the gradient box with icon to the right.
+   * The error message in the error box.
    */
-  showIcon: PropTypes.bool,
-  /**
-   * The label is required for accessibilty even if you assign a default value.
-   */
-  label: PropTypes.string.isRequired,
-  /**
-   * The value is the optional preselected default option to appear in the select.
-   */
-  selectedValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  errorMsg: PropTypes.string,
   /**
    * The form the select belongs to.
    */
   formId: PropTypes.string,
   /**
-   * The name for the select is required for accessibilty purposes of attaching a unique id.
-   */
-  name: PropTypes.string.isRequired,
-  /**
    * A function that is called when changing the `<Select />`.
    */
   handleChange: PropTypes.func.isRequired,
   /**
-   * Assign an icon to go in the gradient right hand square.  If you use the showIcon prop as true, this icon will default to "navigate".  See the <SystemIcon /> for more options on what to enter into this icon prop.
+   * The label is required for accessibilty even if you assign a default value.
    */
-  icon: PropTypes.string,
+  label: PropTypes.string.isRequired,
   /**
-   * The error message in the error box.
+   * The name for the select is required for accessibilty purposes of attaching a unique id.
    */
-  errorMsg: PropTypes.string,
+  name: PropTypes.string.isRequired,
   /**
    * The options is the array of objects containing the name and value of each select row.
    */
@@ -138,20 +138,20 @@ Select.propTypes = {
     PropTypes.oneOfType([PropTypes.object, PropTypes.string, PropTypes.bool]),
   ).isRequired,
   /**
-   * This function is accesible to the user for clickable events on the icon in the gradient to the right.
+   * The value is the optional preselected default option to appear in the select.
    */
-  rightIconClick: PropTypes.func,
+  selectedValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Select.defaultProps = {
+  buttonClick: () => {},
+  buttonIcon: 'navigate',
+  buttonShow: false,
   className: '',
   disabled: false,
-  formId: '',
   errorMsg: '',
+  formId: '',
   selectedValue: '',
-  showIcon: false,
-  icon: 'navigate',
-  rightIconClick: () => {},
 };
 
 export default Select;

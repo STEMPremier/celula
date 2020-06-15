@@ -20,16 +20,17 @@ import Select from '.';
 <Story name="Select" parameters={{ docs: {disable: true}}}>
   <form>
   <Select
+    buttonClick={action('`Select with Knobs` button onClick event triggered.')}
+    buttonIcon={text('icon', 'navigate')}
+    buttonShow={boolean('buttonShow', true)}
     className={text('className', '')}
-    handleChange={action('clicked handleChange in the select ')}
-    rightIconClick={action('clicked rightArrowClick in the gradient')}
-    label={text('label', 'Default Fieldset Label')}
-    selectedValue={text('selectedValue', '2')}
-    icon={text('icon', 'navigate')}
-    showIcon
-    name={text('name', 'Default Name for Select')}
+    disabled={boolean('disabled', false)}
+    errorMsg={text('errorMsg', '')}
     formId={text('form', '')}
-    options={array('options', [
+    handleChange={action('`Select with Knobs` onChange event triggered.')}
+    label={text('label', 'Default Fieldset Label')}
+    name={text('name', 'selectWithKnobs')}
+    options={[
       {
         name: 'Option 1',
         value: 1,
@@ -37,8 +38,10 @@ import Select from '.';
       {
         name: 'Option 2',
         value: 2,
-      },
-    ],)} />
+      }
+    ]}
+    selectedValue={text('selectedValue', '2')}
+  />
     </form>
 </Story>
 
@@ -48,7 +51,7 @@ import Select from '.';
     <form>
       <Select 
         label = "This guidance text goes in the label"
-        name="Enabled Select Using Label"
+        name="enabledSelectUsingLabel"
         options={[
           {
            name: 'option 1',
@@ -60,9 +63,9 @@ import Select from '.';
           },
        ]}
         handleChange={action('changed')}
-        rightIconClick={action('rightArrowClick')}
+        buttonClick={action('rightArrowClick')}
         formId="formName1"
-        showArrow
+        buttonShow
       />
     </form> 
   </Story>
@@ -74,8 +77,8 @@ import Select from '.';
     <form>
       <Select 
         selectedValue={2}
-        rightIconClick={action('rightArrowClick')}
-        name="Enabled Select Using a Default Value"
+        buttonClick={action('rightArrowClick')}
+        name="enabledSelectUsingDefaultValue"
         label="Label is always required for accessbility"
         options={[
           {
@@ -89,7 +92,7 @@ import Select from '.';
        ]}
         handleChange={action('changed')}
         formId="formName2"
-        showIcon
+        buttonShow
       />
     </form> 
   </Story>
@@ -102,10 +105,10 @@ import Select from '.';
       <Select 
         label = "Select from the below choices"
         handleChange={action('changed')}
-        rightIconClick={action('rightArrowClick')}
+        buttonClick={action('rightArrowClick')}
         formId="formName3"
-        name="Disabled Select "
-        showIcon
+        name="disabledSelect"
+        buttonShow
         disabled
         options={[
           {
@@ -130,7 +133,7 @@ import Select from '.';
         label = "Select from the below choices"
         handleChange={action('changed')}
         formId="formName4"
-        name="Select Simple "
+        name="selectSimple"
         options={[
           {
            name: 'option 1',
@@ -179,9 +182,9 @@ import Select from '.';
         label = "Select from the below choices"
         handleChange={action('changed')}
         formId="formName6"
-        name="Select Error with right arrow"
+        name="selectErrorWithButton"
         errorMsg="Error Message"
-        showIcon
+        buttonShow
         options={[
           {
            name: 'option 1',
