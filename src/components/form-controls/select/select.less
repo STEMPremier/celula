@@ -25,13 +25,13 @@
     border-radius: 0.5rem;
 
     // state changes on select affecting background-state div
-    &:hover ~ .ce-select--background-state {
+    &:hover ~ .ce-select__background {
       border: 0.3rem solid @hover-blue;
     }
-    &:focus ~ .ce-select--background-state {
+    &:focus ~ .ce-select__background {
       border: 0.3rem solid @focus-blue;
     }
-    &:active ~ .ce-select--background-state {
+    &:active ~ .ce-select__background {
       border: 0.3rem solid @active-blue;
     }
   }
@@ -40,15 +40,15 @@
     outline: none;
   }
 
-  .ce-select--background-state:focus {
+  .ce-select__background:focus {
     outline: none;
   }
 
-  .ce-select--box:focus {
+  .ce-select__container:focus {
     outline: none;
   }
 
-  .ce-select--right-icon:focus {
+  .ce-select__button:focus {
     outline: none;
   }
 
@@ -57,7 +57,7 @@
     display: none;
   }
 
-  .ce-select--box {
+  .ce-select__container {
     margin: 1rem 0 0 1rem;
     border-radius: 0.5rem;
     width: 36rem;
@@ -74,13 +74,13 @@
       }
     }
 
-    &:hover ~ .ce-select--background-state {
+    &:hover ~ .ce-select__background {
       border: 0.3rem solid @hover-blue;
     }
-    &:focus ~ .ce-select--background-state {
+    &:focus ~ .ce-select__background {
       border: 0.3rem solid @focus-blue;
     }
-    &:active ~ .ce-select--background-state {
+    &:active ~ .ce-select__background {
       border: 0.3rem solid @active-blue;
     }
 
@@ -90,7 +90,7 @@
       margin-top: 2.4rem;
     }
 
-    .ce-select--right-icon {
+    .ce-select__button {
       width: 7.4rem;
       height: 5.95rem;
       font-size: 5.5rem;
@@ -104,7 +104,7 @@
         width: 50%;
         padding: 1.4rem;
       }
-      .ce-select--icon {
+      .ce-select__button__icon {
         margin: auto;
         width: 50%;
         padding: 1rem;
@@ -112,12 +112,12 @@
     }
   }
 
-  .ce-select--box:active ~ .ce-select--background-state {
+  .ce-select__container:active ~ .ce-select__background {
     border: 0.3rem solid @active-blue;
   }
 
   // state changes - set up default sizing for hidden div appearing on hover, focus, and active
-  .ce-select--background-state {
+  .ce-select__background {
     border-radius: 0.8rem;
     width: 36.2rem;
     height: 6.2rem;
@@ -126,12 +126,12 @@
   }
 
   &.ce-select--disabled {
-    .ce-select--box {
-      &:hover ~ .ce-select--background-state {
+    .ce-select__container {
+      &:hover ~ .ce-select__background {
         border: none;
       }
     }
-    .ce-select--right-icon {
+    .ce-select__button {
       pointer-events: none;
       background: @checked-disabled-gray;
     }
@@ -139,7 +139,7 @@
 
   &.ce-select--error {
     border: none;
-    .ce-select--background-state {
+    .ce-select__background {
       border: 0.3rem solid @error-box-background;
       // Responsive Rules
       @media screen {
@@ -148,22 +148,22 @@
         }
       }
     }
-    .ce-select--box {
+    .ce-select__container {
       border: none;
-      &:hover ~ .ce-select--background-state {
+      &:hover ~ .ce-select__background {
         border: 0.3rem solid @hover-red;
       }
-      &:focus ~ .ce-select--background-state {
+      &:focus ~ .ce-select__background {
         border: 0.3rem solid @focus-red;
       }
-      &:active ~ .ce-select--background-state {
+      &:active ~ .ce-select__background {
         border: 0.3rem solid @active-red;
       }
       select {
         color: @error-box-background;
       }
       color: @error-box-background;
-      .ce-select--right-icon {
+      .ce-select__button {
         margin-top: -0.4rem;
         margin-right: -0.2rem;
         padding-top: 0.4rem;
@@ -183,7 +183,7 @@
       }
     }
     margin-left: 1rem;
-    .ce-select--icon {
+    .ce-select__button__icon {
       width: 0;
       height: 5;
       border-left: 0.5rem solid transparent;

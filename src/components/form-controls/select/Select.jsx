@@ -51,7 +51,7 @@ class Select extends Component {
     return (
       <div className={classes}>
         {showLabel && <label htmlFor={id}>{label}</label>}
-        <div className="ce-select--box">
+        <div className="ce-select__container">
           <select
             name={name}
             label={label}
@@ -71,19 +71,19 @@ class Select extends Component {
           </select>
           {showIcon && (
             <button
-              className="ce-select--right-icon"
+              className="ce-select__button"
               onClick={rightIconClick}
               type="button"
             >
               <SystemIcon
                 name={icon}
-                className="ce-select--icon"
+                className="ce-select__button__icon"
                 color="white"
               />
             </button>
           )}
         </div>
-        <div className="ce-select--background-state" />
+        <div className="ce-select__background" />
         {errorMsg && <ErrorBox errorMsg={errorMsg} />}
       </div>
     );
