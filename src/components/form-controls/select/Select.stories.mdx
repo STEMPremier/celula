@@ -1,57 +1,51 @@
-import {
-  Description,
-  Meta,
-  Preview,
-  Props,
-  Story,
-} from '@storybook/addon-docs/blocks';
+import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { boolean, text, array, number } from '@storybook/addon-knobs';
+import { boolean, number, radios, text } from '@storybook/addon-knobs';
 
 import Select from '.';
 
 <Meta component={Select} title="Components/Molecules/Form Controls/Select" />
 
 # Select
-
 <Description of={Select} />
 <Props of={Select} />
 
-<Story name="Select" parameters={{ docs: {disable: true}}}>
+<Story name="Select with Knobs" parameters={{docs:{disable: true}}}>
   <form>
-  <Select
-    buttonClick={action('`Select with Knobs` button onClick event triggered.')}
-    buttonIcon={text('icon', 'navigate')}
-    buttonShow={boolean('buttonShow', true)}
-    className={text('className', '')}
-    disabled={boolean('disabled', false)}
-    errorMsg={text('errorMsg', '')}
-    formId={text('form', '')}
-    handleChange={action('`Select with Knobs` onChange event triggered.')}
-    label={text('label', 'Default Fieldset Label')}
-    name={text('name', 'selectWithKnobs')}
-    options={[
-      {
-        name: 'Option 1',
-        value: 1,
-      },
-      {
-        name: 'Option 2',
-        value: 2,
-      }
-    ]}
-    selectedValue={text('selectedValue', '2')}
-  />
-    </form>
+    <Select
+      buttonClick={action('`Select with Knobs` button onClick event triggered.')}
+      buttonIcon={text('icon', 'navigate')}
+      buttonShow={boolean('buttonShow', true)}
+      className={text('className', '')}
+      disabled={boolean('disabled', false)}
+      errorMsg={text('errorMsg', '')}
+      formId={text('formId', '')}
+      handleChange={action('`Select with Knobs` onChange event triggered.')}
+      label={text('label', 'Default Fieldset Label')}
+      name={text('name', 'selectWithKnobs')}
+      options={[
+        {
+          name: 'Option 1',
+          value: 1,
+        },
+        {
+          name: 'Option 2',
+          value: 2,
+        }
+      ]}
+      selectedValue={radios('selectedValue', ['None', 1, 2], 'none')}
+    />
+  </form>
 </Story>
 
-# Enabled Select Using a Label
+# Select Types
 <Preview>
-  <Story name="Enabled Select Using Label">
+  <Story name="Select Types">
     <form>
-      <Select 
-        label = "This guidance text goes in the label"
-        name="enabledSelectUsingLabel"
+      <Select
+        handleChange={action('`Select Types` Default Select onChange event triggered.')}
+        label="Default Select"
+        name="defaultSelect"
         options={[
           {
            name: 'option 1',
@@ -62,24 +56,14 @@ import Select from '.';
            value: 2,
           },
        ]}
-        handleChange={action('changed')}
-        buttonClick={action('rightArrowClick')}
-        formId="formName1"
-        buttonShow
       />
-    </form> 
-  </Story>
-</Preview>
-
-# Enabled Select Using a Default Value
-<Preview>
-  <Story name="Enabled Select Using a Default Value">
-    <form>
-      <Select 
-        selectedValue={2}
-        buttonClick={action('rightArrowClick')}
-        name="enabledSelectUsingDefaultValue"
-        label="Label is always required for accessbility"
+      <Select
+        buttonClick={action('`Select Types` Default Select with Button button onClick event triggered')}
+        buttonIcon="add"
+        buttonShow
+        handleChange={action('`Select Types` Default Select with Button onChange event triggered.')}
+        label="Default Select with Button"
+        name="defaultSelectWithButton"
         options={[
           {
            name: 'option 1',
@@ -90,26 +74,72 @@ import Select from '.';
            value: 2,
           },
        ]}
-        handleChange={action('changed')}
-        formId="formName2"
-        buttonShow
       />
-    </form> 
+    </form>
   </Story>
 </Preview>
 
-# Disabled Select Using Label  
+# Select States
 <Preview>
-  <Story name="Disabled Select ">
+  <Story name="Select States">
     <form>
-      <Select 
-        label = "Select from the below choices"
-        handleChange={action('changed')}
-        buttonClick={action('rightArrowClick')}
-        formId="formName3"
+      <Select
+        handleChange={action('`Select States` Default Select onChange event triggered.')}
+        label="Default Select"
+        name="defaultSelect2"
+        options={[
+          {
+           name: 'option 1',
+           value: 1,
+         },
+         {
+           name: 'option 2',
+           value: 2,
+          },
+       ]}
+      />
+      <Select
+        buttonClick={action('`Select States` Default Select with Button button onClick event triggered')}
+        buttonIcon="add"
+        buttonShow
+        handleChange={action('`Select States` Default Select with Button onChange event triggered.')}
+        label="Default Select with button"
+        name="defaultSelectWithButton"
+        options={[
+          {
+           name: 'option 1',
+           value: 1,
+         },
+         {
+           name: 'option 2',
+           value: 2,
+          },
+       ]}
+      />
+      <Select
+        disabled
+        handleChange={action('`Select States` Disabled Select onChange event triggered.')}
+        label="Disabled Select"
         name="disabledSelect"
+        options={[
+          {
+           name: 'option 1',
+           value: 1,
+         },
+         {
+           name: 'option 2',
+           value: 2,
+          },
+       ]}
+      />
+      <Select
+        buttonClick={action('`Select States` Disabled Select with Button button onClick event triggered')}
+        buttonIcon="add"
         buttonShow
         disabled
+        handleChange={action('`Select States` Disabled Select with Button onChange event triggered.')}
+        label="Disabled Select with Button"
+        name="disabledSelectWithButton"
         options={[
           {
            name: 'option 1',
@@ -121,19 +151,11 @@ import Select from '.';
           },
        ]}
       />
-    </form> 
-  </Story>
-</Preview>
-
-# Select without right arrow 
-<Preview>
-  <Story name="Select without the right arrow">
-    <form>
-      <Select 
-        label = "Select from the below choices"
-        handleChange={action('changed')}
-        formId="formName4"
-        name="selectSimple"
+      <Select
+        errorMsg="Error with Selection"
+        handleChange={action('`Select States` Error Select onChange event triggered.')}
+        label="Error Select"
+        name="errorSelect"
         options={[
           {
            name: 'option 1',
@@ -145,46 +167,14 @@ import Select from '.';
           },
        ]}
       />
-    </form> 
-  </Story>
-</Preview>
-
-# Select Error
-<Preview>
-  <Story name="Select Error">
-    <form>
-      <Select 
-        label="Select from the below choices"
-        handleChange={action('changed')}
-        formId="formName5"
-        name="Select Error no arrow"
-        errorMsg="Error Message"
-        options={[
-          {
-           name: 'option 1',
-           value: 1,
-         },
-         {
-           name: 'option 2',
-           value: 2,
-          },
-       ]}
-      />
-    </form> 
-  </Story>
-</Preview>
-
-# Select Error With Show Arrow
-<Preview>
-  <Story name="Select Error with right arrow">
-    <form>
-      <Select 
-        label = "Select from the below choices"
-        handleChange={action('changed')}
-        formId="formName6"
-        name="selectErrorWithButton"
-        errorMsg="Error Message"
+      <Select
+        buttonClick={action('`Select States` Error Select with Button button onClick event triggered')}
+        buttonIcon="add"
         buttonShow
+        errorMsg="Error with Selection"
+        handleChange={action('`Select States` Error Select onChange event triggered.')}
+        label="Error Select"
+        name="errorSelect"
         options={[
           {
            name: 'option 1',
@@ -196,13 +186,6 @@ import Select from '.';
           },
        ]}
       />
-    </form> 
+    </form>
   </Story>
 </Preview>
-
-
-
-
-
-
-
