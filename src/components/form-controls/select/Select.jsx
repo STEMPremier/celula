@@ -15,8 +15,13 @@ class Select extends Component {
     selectedValue: this.props.selectedValue,
   };
 
-  handleSelectedValue = event => {
-    this.setState({ selectedValue: event.target.value });
+  handleChange = event => {
+    const { handleChange } = this.props;
+    const { value } = event.target;
+
+    this.setState({ selectedValue: value });
+
+    handleChange(value);
   };
 
   render() {
@@ -28,7 +33,6 @@ class Select extends Component {
       disabled,
       errorMsg,
       formId,
-      handleChange,
       label,
       name,
       options,
@@ -57,9 +61,8 @@ class Select extends Component {
             form={formId}
             id={id}
             disabled={disabled}
-            onClick={handleChange}
             value={selectedValue}
-            onChange={this.handleSelectedValue}
+            onChange={this.handleChange}
           >
             <option key={label}>{label}</option>
             {options.map(item => (
