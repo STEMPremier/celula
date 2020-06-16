@@ -35,6 +35,7 @@ class Select extends Component {
       label,
       name,
       options,
+      placeholder,
     } = this.props;
 
     const { selectedValue } = this.state;
@@ -63,7 +64,7 @@ class Select extends Component {
             value={selectedValue}
             onChange={this.handleChange}
           >
-            <option key={label}>{label}</option>
+            <option value="">{placeholder}</option>
             {options.map(item => (
               <option key={item.value} value={item.value}>
                 {item.name}
@@ -139,6 +140,10 @@ Select.propTypes = {
     PropTypes.oneOfType([PropTypes.object, PropTypes.string, PropTypes.bool]),
   ).isRequired,
   /**
+   * Placeholder text for the `<Select />`/
+   */
+  placeholder: PropTypes.string,
+  /**
    * The value is the optional preselected default option to appear in the select.
    */
   selectedValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -152,6 +157,7 @@ Select.defaultProps = {
   disabled: false,
   errorMsg: '',
   formId: '',
+  placeholder: 'Select one',
   selectedValue: '',
 };
 
