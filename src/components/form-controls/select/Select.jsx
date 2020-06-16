@@ -24,10 +24,9 @@ class Select extends Component {
   };
 
   render() {
+    const { selectedValue } = this.state;
     const {
-      buttonClick,
-      buttonIcon,
-      buttonShow,
+      btnOptions,
       className,
       disabled,
       errorMsg,
@@ -38,10 +37,9 @@ class Select extends Component {
       placeholder,
     } = this.props;
 
-    const { selectedValue } = this.state;
+    const { btnClick, btnIcon } = btnOptions;
 
     const id = `${name}`;
-
     const classes = cx(
       'ce-select',
       {
@@ -71,14 +69,14 @@ class Select extends Component {
               </option>
             ))}
           </select>
-          {buttonShow && (
+          {btnIcon && (
             <button
               className="ce-select__button"
-              onClick={buttonClick}
+              onClick={btnClick}
               type="button"
             >
               <SystemIcon
-                name={buttonIcon}
+                name={btnIcon}
                 className="ce-select__button__icon"
                 color="white"
               />
@@ -95,16 +93,12 @@ class Select extends Component {
 Select.propTypes = {
   /**
    * This function is accesible to the user for clickable events on the icon in the gradient to the right.
-   */
-  buttonClick: PropTypes.func,
-  /**
    * Assign an icon to go in the gradient right hand square.  If you use the buttonShow prop as true, this icon will default to "navigate".  See the <SystemIcon /> for more options on what to enter into this icon prop.
    */
-  buttonIcon: PropTypes.string,
-  /**
-   * The select will appear with the gradient box with icon to the right.
-   */
-  buttonShow: PropTypes.bool,
+  btnOptions: PropTypes.shape({
+    btnClick: PropTypes.func,
+    btnIcon: PropTypes.string,
+  }),
   /**
    * A class name added to the select.
    */
@@ -150,9 +144,10 @@ Select.propTypes = {
 };
 
 Select.defaultProps = {
-  buttonClick: () => {},
-  buttonIcon: 'navigate',
-  buttonShow: false,
+  btnOptions: {
+    btnClick: () => {},
+    btnIcon: '',
+  },
   className: '',
   disabled: false,
   errorMsg: '',
