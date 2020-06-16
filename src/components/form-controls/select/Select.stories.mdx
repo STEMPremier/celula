@@ -13,27 +13,29 @@ import Select from '.';
 <Story name="Select with Knobs" parameters={{docs:{disable: true}}}>
   <form>
     <Select
-      buttonClick={action('`Select with Knobs` button onClick event triggered.')}
-      buttonIcon={text('icon', 'navigate')}
-      buttonShow={boolean('buttonShow', true)}
-      className={text('className', '')}
-      disabled={boolean('disabled', false)}
-      errorMsg={text('errorMsg', '')}
-      formId={text('formId', '')}
+      btnOptions={{
+        btnClick: action('`Select with Knobs` button onClick event triggered.'),
+        btnIcon: text('btnIcon', 'navigate', 'Button Options'),
+      }}
+      className={text('className', '', 'Select Options')}
+      disabled={boolean('disabled', false, 'Select Options')}
+      errorMsg={text('errorMsg', '', 'Select Options')}
+      formId={text('formId', '', 'Select Options')}
       handleChange={action('`Select with Knobs` onChange event triggered.')}
-      label={text('label', 'Default Fieldset Label')}
-      name={text('name', 'selectWithKnobs')}
+      label={text('label', 'Select with Knobs', 'Select Options')}
+      name={text('name', 'selectWithKnobs', 'Select Options')}
       options={[
         {
           name: 'Option 1',
-          value: 1,
+          value: '1',
         },
         {
           name: 'Option 2',
-          value: 2,
+          value: '2',
         }
       ]}
-      selectedValue={radios('selectedValue', ['None', 1, 2], 'none')}
+      placeholder={text('placeholder', 'Please make a choice', 'Select Options')}
+      selectedValue={radios('selectedValue', { None: 'none', One: '1', Two: '2' }, 'none', 'Select Options')}
     />
   </form>
 </Story>
@@ -58,9 +60,10 @@ import Select from '.';
        ]}
       />
       <Select
-        buttonClick={action('`Select Types` Default Select with Button button onClick event triggered')}
-        buttonIcon="add"
-        buttonShow
+        btnOptions={{
+          btnClick: action('`Select Types` Default Select with Button button onClick event triggered'),
+          btnIcon: "add",
+        }}
         handleChange={action('`Select Types` Default Select with Button onChange event triggered.')}
         label="Default Select with Button"
         name="defaultSelectWithButton"
@@ -99,9 +102,10 @@ import Select from '.';
        ]}
       />
       <Select
-        buttonClick={action('`Select States` Default Select with Button button onClick event triggered')}
-        buttonIcon="add"
-        buttonShow
+        btnOptions={{
+          btnClick: action('`Select States` Default Select with Button button onClick event triggered'),
+          btnIcon: "add",
+        }}
         handleChange={action('`Select States` Default Select with Button onChange event triggered.')}
         label="Default Select with button"
         name="defaultSelectWithButton"
@@ -133,9 +137,10 @@ import Select from '.';
        ]}
       />
       <Select
-        buttonClick={action('`Select States` Disabled Select with Button button onClick event triggered')}
-        buttonIcon="add"
-        buttonShow
+        btnOptions={{
+          btnClick: action('`Select States` Disabled Select with Button button onClick event triggered'),
+          btnIcon: "add",
+        }}
         disabled
         handleChange={action('`Select States` Disabled Select with Button onChange event triggered.')}
         label="Disabled Select with Button"
@@ -168,12 +173,13 @@ import Select from '.';
        ]}
       />
       <Select
-        buttonClick={action('`Select States` Error Select with Button button onClick event triggered')}
-        buttonIcon="add"
-        buttonShow
+        btnOptions={{
+          btnClick: action('`Select States` Error Select with Button button onClick event triggered'),
+          btnIcon: "add",
+        }}
         errorMsg="Error with Selection"
-        handleChange={action('`Select States` Error Select onChange event triggered.')}
-        label="Error Select"
+        handleChange={action('`Select States` Error Select with Button onChange event triggered.')}
+        label="Error Select with Button"
         name="errorSelect"
         options={[
           {
