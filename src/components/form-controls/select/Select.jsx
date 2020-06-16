@@ -10,7 +10,6 @@ import './select.less';
 
 class Select extends Component {
   state = {
-    showLabel: false,
     // eslint-disable-next-line react/destructuring-assignment
     selectedValue: this.props.selectedValue,
   };
@@ -38,7 +37,7 @@ class Select extends Component {
       options,
     } = this.props;
 
-    const { showLabel, selectedValue } = this.state;
+    const { selectedValue } = this.state;
 
     const id = `${name}`;
 
@@ -53,7 +52,7 @@ class Select extends Component {
 
     return (
       <div className={classes}>
-        {showLabel && <label htmlFor={id}>{label}</label>}
+        <label htmlFor={id}>{label}</label>
         <div className="ce-select__container">
           <select
             name={name}
