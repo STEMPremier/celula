@@ -44,30 +44,37 @@
 
 // Other Colors
 // Form Control States
-// Unchecked Radio, Checkbox
-@unchecked-background: #fbfbfb;
-@unchecked-gray:       #b2b2b2;
+// Unchecked Radio, Unchecked Checkbox, Select
+@default-gray:         #b2b2b2;
+@default-background:   #fbfbfb;
+@unchecked-background: @default-background;
+@unchecked-gray:       @default-gray;
 @hover-gray:           @90-gray;
 @active-gray:          @70-gray;
 @focus-gray:           @80-gray;
-@outline-gray:         @unchecked-gray;
+@outline-gray:         @default-gray;
 
-// Checked Radio, Checkbox
+// Checked Radio, Checked Checkbox, Select
 @checked-blue: @navy;
 @hover-blue:   #e6f7ff;
 @active-blue:  #b2e7ff;
 @focus-blue:   #ccefff;
 
-// Disabled Radio, Checkbox
+/* Checked/Unchecked Disabled Radio,
+ * Checked/Unchecked Disabled Checkbox,
+ * Disabled Select
+ */
+@default-disabled-gray:   #aeaeae;
 @unchecked-disabled-gray: #dbdbdb;
-@checked-disabled-gray:   #aeaeae;
+@checked-disabled-gray:   @default-disabled-gray;
 
-// Error Radio, Checkbox
+// Error Radio, Error Checkbox, Error Select, Error Box
 @error-box-background: #cc0043;
 @checked-red:          #e5004b;
 @hover-red:            #ffe5ed;
 @active-red:           #ffb3cc;
 @focus-red:            #ffccdc;
+@error-element-border: @checked-red;
 @error-text:           @checked-red;
 
 // Gradients

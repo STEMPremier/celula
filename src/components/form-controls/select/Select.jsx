@@ -75,15 +75,10 @@ class Select extends Component {
               onClick={btnClick}
               type="button"
             >
-              <SystemIcon
-                name={btnIcon}
-                className="ce-select__button__icon"
-                color="white"
-              />
+              <SystemIcon name={btnIcon} color="white" />
             </button>
           )}
         </div>
-        <div className="ce-select__background" />
         {errorMsg && <ErrorBox errorMsg={errorMsg} />}
       </div>
     );

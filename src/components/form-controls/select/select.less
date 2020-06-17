@@ -1,175 +1,132 @@
 @import '../../../styles/celula';
 
 .ce-select {
-  // should remove the default arrows from most browsers
-  select {
-    appearance: none;
-    -webkit-appearance: none;
-    -o-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    display: block;
-    padding: 0.6em 1.4em 0.5em 0.8em;
-    // width: 38.4rem;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: @unchecked-background;
-    border: none;
-
-    // caret file brought into select as background-image and styled here
-    background-image: url('./down-arrow.png');
-    background-position: calc(100% - 2rem) calc(1em + 0.9rem),
-      calc(100% - 1.5rem) calc(1em + 0.2rem), calc(100% - 2.5rem) 0.5em;
-    background-size: 1.5rem;
-    background-repeat: no-repeat;
-    border-radius: 0.5rem;
-
-    // state changes on select affecting background-state div
-    &:hover ~ .ce-select__background {
-      border: 0.3rem solid @hover-blue;
-    }
-    &:focus ~ .ce-select__background {
-      border: 0.3rem solid @focus-blue;
-    }
-    &:active ~ .ce-select__background {
-      border: 0.3rem solid @active-blue;
-    }
-  }
-
-  select:focus {
-    outline: none;
-  }
-
-  .ce-select__background:focus {
-    outline: none;
-  }
-
-  .ce-select__container:focus {
-    outline: none;
-  }
-
-  .ce-select__button:focus {
-    outline: none;
-  }
-
-  // removes the arrow from the IE
-  select::ms-expand {
-    display: none;
-  }
-
   .ce-select__container {
-    margin: 1rem 0 0 1rem;
+    background-color: @default-background;
+    border: 0.1rem solid @default-gray;
     border-radius: 0.5rem;
-    width: 36rem;
-    height: 6rem;
+    box-sizing: border-box;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    border: 0.1rem solid @unchecked-gray;
-    // Responsive Rules
-    @media screen {
-      @media (max-width: 768px) {
-        width: 94%;
+    height: 6rem;
+    justify-content: space-between;
+    margin: 0.3rem;
+    width: calc(100% - 0.6rem);
+
+    select {
+      // should remove the default arrows from most browsers
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      -o-appearance: none;
+      appearance: none;
+      background-color: transparent;
+      border: none;
+      flex-grow: 1;
+      box-sizing: border-box;
+      padding: 0.6em 1.4em 0.5em 0.8em;
+
+      // caret file brought into select as background-image and styled here
+      background-image: url('./down-arrow.png');
+      background-position: calc(100% - 2rem) calc(1em + 0.9rem),
+        calc(100% - 1.5rem) calc(1em + 0.2rem), calc(100% - 2.5rem) 0.5em;
+      background-repeat: no-repeat;
+      background-size: 1.5rem;
+
+      // removes the arrow from the IE
+      &::ms-expand {
+        display: none;
       }
-    }
-
-    &:hover ~ .ce-select__background {
-      border: 0.3rem solid @hover-blue;
-    }
-    &:focus ~ .ce-select__background {
-      border: 0.3rem solid @focus-blue;
-    }
-    &:active ~ .ce-select__background {
-      border: 0.3rem solid @active-blue;
-    }
-
-    .ce-select--caret {
-      width: 4rem;
-      height: 3rem;
-      margin-top: 2.4rem;
     }
 
     .ce-select__button {
-      width: 7.4rem;
-      height: 5.95rem;
-      font-size: 5.5rem;
-      margin-left: 0.27rem;
-      border: 1rem;
-      border-radius: 0 0.5rem 0.5rem 0;
       background: @gradient-cool;
+      border: none;
+      border-radius: 0 0.5rem 0.5rem 0;
+      height: 6rem;
+      margin-top: -0.1rem;
+      padding: 0 2.2rem;
 
-      svg {
-        margin: auto;
-        width: 50%;
-        padding: 1.4rem;
-      }
-      .ce-select__button__icon {
-        margin: auto;
-        width: 50%;
-        padding: 1rem;
+      span, svg {
+        display: inline-block;
+        height: 1.6rem;
+        width: 1.6rem;
       }
     }
-  }
 
-  .ce-select__container:active ~ .ce-select__background {
-    border: 0.3rem solid @active-blue;
-  }
+    &:focus {
+      box-shadow: -0.3rem 0 @focus-blue,
+        0.3rem 0 @focus-blue,
+        0 -0.3rem @focus-blue,
+        0 0.3rem @focus-blue;
+    }
 
-  // state changes - set up default sizing for hidden div appearing on hover, focus, and active
-  .ce-select__background {
-    border-radius: 0.8rem;
-    width: 36.2rem;
-    height: 6.2rem;
-    margin-top: -6.5rem;
-    margin-left: 0.7rem;
+    &:hover {
+      box-shadow: -0.3rem 0 @hover-blue,
+        0.3rem 0 @hover-blue,
+        0 -0.3rem @hover-blue,
+        0 0.3rem @hover-blue;
+    }
+
+    &:active {
+      box-shadow: -0.3rem 0 @active-blue,
+        0.3rem 0 @active-blue,
+        0 -0.3rem @active-blue,
+        0 0.3rem @active-blue;
+    }
   }
 
   &.ce-select--disabled {
     .ce-select__container {
-      &:hover ~ .ce-select__background {
-        border: none;
+      &:focus {
+        box-shadow: none;
       }
-    }
-    .ce-select__button {
-      pointer-events: none;
-      background: @checked-disabled-gray;
+
+      &:hover {
+        box-shadow: none;
+      }
+
+      &:active {
+        box-shadow: none;
+      }
+
+      .ce-select__button {
+        pointer-events: none;
+        background: @default-disabled-gray;
+      }
     }
   }
 
   &.ce-select--error {
-    border: none;
-    .ce-select__background {
-      border: 0.3rem solid @error-box-background;
-      // Responsive Rules
-      @media screen {
-        @media (max-width: 768px) {
-          width: 94%;
-        }
-      }
-    }
     .ce-select__container {
-      border: none;
-      &:hover ~ .ce-select__background {
-        border: 0.3rem solid @hover-red;
-      }
-      &:focus ~ .ce-select__background {
-        border: 0.3rem solid @focus-red;
-      }
-      &:active ~ .ce-select__background {
-        border: 0.3rem solid @active-red;
-      }
+      border-color: @error-element-border;
+
       select {
-        color: @error-box-background;
+        color: @error-text;
       }
-      color: @error-box-background;
+
       .ce-select__button {
-        margin-top: -0.4rem;
-        margin-right: -0.2rem;
-        padding-top: 0.4rem;
-        height: 6.4rem;
         background: @error-box-background;
-        border: 0.1rem solid @error-box-background;
+      }
+
+      &:focus {
+        box-shadow: -0.3rem 0 @focus-red,
+          0.3rem 0 @focus-red,
+          0 -0.3rem @focus-red,
+          0 0.3rem @focus-red;
+      }
+
+      &:hover {
+        box-shadow: -0.3rem 0 @hover-red,
+          0.3rem 0 @hover-red,
+          0 -0.3rem @hover-red,
+          0 0.3rem @hover-red;
+      }
+
+      &:active {
+        box-shadow: -0.3rem 0 @active-red,
+          0.3rem 0 @active-red,
+          0 -0.3rem @active-red,
+          0 0.3rem @active-red;
       }
     }
   }
