@@ -4,41 +4,31 @@ exports[`<Select /> render() render the Select component 1`] = `
 <div
   className="ce-select"
 >
+  <label
+    htmlFor="Select Test Name"
+  >
+    Select Test Label
+  </label>
   <div
-    className="ce-select--box"
+    className="ce-select__container"
   >
     <select
       disabled={false}
       form=""
       id="Select Test Name"
+      label="Select Test Label"
       name="Select Test Name"
       onChange={[Function]}
-      onClick={[Function]}
       value=""
     >
       <option
-        key="Select Test Label"
+        value=""
       >
-        Select Test Label
+        Select one
       </option>
       <option />
       <option />
     </select>
-    <div
-      className="ce-select--caret"
-    >
-      <SystemIcon
-        className="ce-select--down"
-        color="black"
-        name="down"
-      />
-    </div>
   </div>
-  <div
-    className="ce-select--background-state"
-  />
-  <span
-    error=""
-  />
 </div>
 `;

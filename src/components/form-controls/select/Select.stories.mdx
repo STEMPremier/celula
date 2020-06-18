@@ -11,7 +11,7 @@ import Select from '.';
 <Props of={Select} />
 
 <Story name="Select with Knobs" parameters={{docs:{disable: true}}}>
-  <form>
+  <form id="selectWithKnobsForm">
     <Select
       btnOptions={{
         btnClick: action('`Select with Knobs` button onClick event triggered.'),
@@ -20,8 +20,9 @@ import Select from '.';
       className={text('className', '', 'Select Options')}
       disabled={boolean('disabled', false, 'Select Options')}
       errorMsg={text('errorMsg', '', 'Select Options')}
-      formId={text('formId', '', 'Select Options')}
+      formId={text('formId', 'selectWithKnobForm', 'Select Options')}
       handleChange={action('`Select with Knobs` onChange event triggered.')}
+      helpText={text('helpText', 'This is useful or helpful information.', 'Select Options')}
       label={text('label', 'Select with Knobs', 'Select Options')}
       name={text('name', 'selectWithKnobs', 'Select Options')}
       options={[
@@ -35,7 +36,7 @@ import Select from '.';
         }
       ]}
       placeholder={text('placeholder', 'Please make a choice', 'Select Options')}
-      selectedValue={radios('selectedValue', { None: 'none', One: '1', Two: '2' }, 'none', 'Select Options')}
+      selectedValue={radios('selectedValue', { None: 'none', 'Option 1': '1', 'Option 2': '2' }, 'none', 'Select Options')}
     />
   </form>
 </Story>
@@ -78,6 +79,22 @@ import Select from '.';
           },
        ]}
       />
+      <Select
+        handleChange={action('`Select Types` Default Select with Help Text onChange event triggered.')}
+        helpText="This is useful or helpful information."
+        label="Default Select with Help Text"
+        name="defaultSelectWithHelpText"
+        options={[
+          {
+           name: 'option 1',
+           value: 1,
+         },
+         {
+           name: 'option 2',
+           value: 2,
+          },
+       ]}
+      />
     </form>
   </Story>
 </Preview>
@@ -108,7 +125,23 @@ import Select from '.';
         }}
         handleChange={action('`Select States` Default Select with Button onChange event triggered.')}
         label="Default Select with button"
-        name="defaultSelectWithButton"
+        name="defaultSelectWithButton2"
+        options={[
+          {
+           name: 'option 1',
+           value: 1,
+         },
+         {
+           name: 'option 2',
+           value: 2,
+          },
+       ]}
+      />
+      <Select
+        handleChange={action('`Select States` Default Select with Help Text onChange event triggered.')}
+        helpText="This is useful or helpful information."
+        label="Default Select with Help Text"
+        name="defaultSelectwithHelpText2"
         options={[
           {
            name: 'option 1',
@@ -157,6 +190,23 @@ import Select from '.';
        ]}
       />
       <Select
+        disabled
+        handleChange={action('`Select States` Disabled Select with Help Text onChange event triggered.')}
+        helpText="This is useful or helpful information."
+        label="Disabled Select with Help Text"
+        name="disabledSelectWithHelpText"
+        options={[
+          {
+           name: 'option 1',
+           value: 1,
+         },
+         {
+           name: 'option 2',
+           value: 2,
+          },
+       ]}
+      />
+      <Select
         errorMsg="Error with Selection"
         handleChange={action('`Select States` Error Select onChange event triggered.')}
         label="Error Select"
@@ -181,6 +231,23 @@ import Select from '.';
         handleChange={action('`Select States` Error Select with Button onChange event triggered.')}
         label="Error Select with Button"
         name="errorSelect"
+        options={[
+          {
+           name: 'option 1',
+           value: 1,
+         },
+         {
+           name: 'option 2',
+           value: 2,
+          },
+       ]}
+      />
+      <Select
+        errorMsg="Error with Selection"
+        handleChange={action('`Select States` Error Select with Help Text onChange event triggered.')}
+        helpText="This is useful or helpful information."
+        label="Error Select with Help Text"
+        name="errorSelectWithHelpText"
         options={[
           {
            name: 'option 1',

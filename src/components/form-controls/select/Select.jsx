@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import { ErrorBox } from '../core';
-
 import SystemIcon from '../../icon/SystemIcon';
+import { ErrorBox } from '../core';
 
 import { SYSTEM_ICONS as ICONS } from '../../../utils/constants';
 
@@ -33,6 +32,7 @@ class Select extends Component {
       disabled,
       errorMsg,
       formId,
+      helpText,
       label,
       name,
       options,
@@ -54,6 +54,7 @@ class Select extends Component {
     return (
       <div className={classes}>
         <label htmlFor={id}>{label}</label>
+        {helpText && <span className="ce-select__help-text">{helpText}</span>}
         <div className="ce-select__container">
           <select
             name={name}
@@ -116,6 +117,10 @@ Select.propTypes = {
    */
   handleChange: PropTypes.func.isRequired,
   /**
+   * Any text to assist the user with this `<Select />`.
+   */
+  helpText: PropTypes.string,
+  /**
    * The `<Select />` label.
    */
   label: PropTypes.string.isRequired,
@@ -148,6 +153,7 @@ Select.defaultProps = {
   disabled: false,
   errorMsg: '',
   formId: '',
+  helpText: '',
   placeholder: 'Select one',
   selectedValue: '',
 };
