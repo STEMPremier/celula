@@ -23,6 +23,7 @@ import Select from '.';
       formId={text('formId', 'selectWithKnobForm', 'Select Options')}
       handleChange={action('`Select with Knobs` onChange event triggered.')}
       helpText={text('helpText', 'This is useful or helpful information.', 'Select Options')}
+      icon={text('icon', '', 'Select Options')}
       label={text('label', 'Select with Knobs', 'Select Options')}
       name={text('name', 'selectWithKnobs', 'Select Options')}
       options={[
@@ -61,13 +62,10 @@ import Select from '.';
        ]}
       />
       <Select
-        btnOptions={{
-          btnClick: action('`Select Types` Default Select with Button button onClick event triggered'),
-          btnIcon: "add",
-        }}
-        handleChange={action('`Select Types` Default Select with Button onChange event triggered.')}
-        label="Default Select with Button"
-        name="defaultSelectWithButton"
+        handleChange={action('`Select Types` Default Select with Help Text onChange event triggered.')}
+        helpText="This is useful or helpful information."
+        label="Default Select with Help Text"
+        name="defaultSelectWithHelpText"
         options={[
           {
            name: 'option 1',
@@ -80,10 +78,29 @@ import Select from '.';
        ]}
       />
       <Select
-        handleChange={action('`Select Types` Default Select with Help Text onChange event triggered.')}
-        helpText="This is useful or helpful information."
-        label="Default Select with Help Text"
-        name="defaultSelectWithHelpText"
+        handleChange={action('`Select Types` with Icon onChange event triggered.')}
+        icon="edit"
+        label="Default Select with Icon"
+        name="defaultSelectWithIcon"
+        options={[
+          {
+           name: 'option 1',
+           value: 1,
+         },
+         {
+           name: 'option 2',
+           value: 2,
+          },
+       ]}
+      />
+      <Select
+        btnOptions={{
+          btnClick: action('`Select Types` Default Select with Button button onClick event triggered'),
+          btnIcon: "add",
+        }}
+        handleChange={action('`Select Types` Default Select with Button onChange event triggered.')}
+        label="Default Select with Button"
+        name="defaultSelectWithButton"
         options={[
           {
            name: 'option 1',
@@ -103,10 +120,43 @@ import Select from '.';
 <Preview>
   <Story name="Select States">
     <form>
+      <h2>Default</h2>
       <Select
         handleChange={action('`Select States` Default Select onChange event triggered.')}
         label="Default Select"
         name="defaultSelect2"
+        options={[
+          {
+           name: 'option 1',
+           value: 1,
+         },
+         {
+           name: 'option 2',
+           value: 2,
+          },
+       ]}
+      />
+      <Select
+        handleChange={action('`Select States` Default Select with Help Text onChange event triggered.')}
+        helpText="This is useful or helpful information."
+        label="Default Select with Help Text"
+        name="defaultSelectwithHelpText2"
+        options={[
+          {
+           name: 'option 1',
+           value: 1,
+         },
+         {
+           name: 'option 2',
+           value: 2,
+          },
+       ]}
+      />
+      <Select
+        handleChange={action('`Select States` Default Select with Icon onChange event triggered.')}
+        icon="calendar"
+        label="Default Select with Icon"
+        name="defaultSelectWithIcon2"
         options={[
           {
            name: 'option 1',
@@ -137,11 +187,12 @@ import Select from '.';
           },
        ]}
       />
+      <h2>Disabled</h2>
       <Select
-        handleChange={action('`Select States` Default Select with Help Text onChange event triggered.')}
-        helpText="This is useful or helpful information."
-        label="Default Select with Help Text"
-        name="defaultSelectwithHelpText2"
+        disabled
+        handleChange={action('`Select States` Disabled Select onChange event triggered.')}
+        label="Disabled Select"
+        name="disabledSelect"
         options={[
           {
            name: 'option 1',
@@ -155,9 +206,27 @@ import Select from '.';
       />
       <Select
         disabled
-        handleChange={action('`Select States` Disabled Select onChange event triggered.')}
-        label="Disabled Select"
-        name="disabledSelect"
+        handleChange={action('`Select States` Disabled Select with Help Text onChange event triggered.')}
+        helpText="This is useful or helpful information."
+        label="Disabled Select with Help Text"
+        name="disabledSelectWithHelpText"
+        options={[
+          {
+           name: 'option 1',
+           value: 1,
+         },
+         {
+           name: 'option 2',
+           value: 2,
+          },
+       ]}
+      />
+      <Select
+        disabled
+        handleChange={action('`Select States` Disabled Select with Icon onChange event triggered.')}
+        icon="calendar"
+        label="Disabled Select with Icon"
+        name="disabledSelectWithIcon"
         options={[
           {
            name: 'option 1',
@@ -189,12 +258,12 @@ import Select from '.';
           },
        ]}
       />
+      <h2>Error</h2>
       <Select
-        disabled
-        handleChange={action('`Select States` Disabled Select with Help Text onChange event triggered.')}
-        helpText="This is useful or helpful information."
-        label="Disabled Select with Help Text"
-        name="disabledSelectWithHelpText"
+        errorMsg="Error with Selection"
+        handleChange={action('`Select States` Error Select onChange event triggered.')}
+        label="Error Select"
+        name="errorSelect"
         options={[
           {
            name: 'option 1',
@@ -208,9 +277,27 @@ import Select from '.';
       />
       <Select
         errorMsg="Error with Selection"
-        handleChange={action('`Select States` Error Select onChange event triggered.')}
-        label="Error Select"
-        name="errorSelect"
+        handleChange={action('`Select States` Error Select with Help Text onChange event triggered.')}
+        helpText="This is usefule or helpful information."
+        label="Error Select with Help Text"
+        name="errorSelectWithHelpText"
+        options={[
+          {
+           name: 'option 1',
+           value: 1,
+         },
+         {
+           name: 'option 2',
+           value: 2,
+          },
+       ]}
+      />
+      <Select
+        errorMsg="Error with Selection"
+        handleChange={action('`Select States` Error Select with Icon onChange event triggered.')}
+        icon="calendar"
+        label="Error Select with Icon"
+        name="errorSelectWithIcon"
         options={[
           {
            name: 'option 1',
@@ -231,23 +318,6 @@ import Select from '.';
         handleChange={action('`Select States` Error Select with Button onChange event triggered.')}
         label="Error Select with Button"
         name="errorSelect"
-        options={[
-          {
-           name: 'option 1',
-           value: 1,
-         },
-         {
-           name: 'option 2',
-           value: 2,
-          },
-       ]}
-      />
-      <Select
-        errorMsg="Error with Selection"
-        handleChange={action('`Select States` Error Select with Help Text onChange event triggered.')}
-        helpText="This is useful or helpful information."
-        label="Error Select with Help Text"
-        name="errorSelectWithHelpText"
         options={[
           {
            name: 'option 1',

@@ -33,6 +33,7 @@ class Select extends Component {
       errorMsg,
       formId,
       helpText,
+      icon,
       label,
       name,
       options,
@@ -56,6 +57,11 @@ class Select extends Component {
         <label htmlFor={id}>{label}</label>
         {helpText && <span className="ce-select__help-text">{helpText}</span>}
         <div className="ce-select__container">
+          {icon && (
+            <div className="ce-select__icon">
+              <SystemIcon name={icon} />
+            </div>
+          )}
           <select
             name={name}
             label={label}
@@ -121,6 +127,10 @@ Select.propTypes = {
    */
   helpText: PropTypes.string,
   /**
+   * An icon to include on the left side of the `<Select />`.
+   */
+  icon: PropTypes.oneOf(ICONS),
+  /**
    * The `<Select />` label.
    */
   label: PropTypes.string.isRequired,
@@ -154,6 +164,7 @@ Select.defaultProps = {
   errorMsg: '',
   formId: '',
   helpText: '',
+  icon: '',
   placeholder: 'Select one',
   selectedValue: '',
 };

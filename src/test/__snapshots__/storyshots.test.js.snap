@@ -3944,6 +3944,9 @@ exports[`Storyshots Components/Molecules/Form Controls/Radio RadioGroup with Kno
 
 exports[`Storyshots Components/Molecules/Form Controls/Select Select States 1`] = `
 <form>
+  <h2>
+    Default
+  </h2>
   <div
     className="ce-select"
   >
@@ -3956,12 +3959,115 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select States 1`] 
     <div
       className="ce-select__container"
     >
+      
       <select
         disabled={false}
         form=""
         id="defaultSelect2"
         label="Default Select"
         name="defaultSelect2"
+        onChange={[Function]}
+        value=""
+      >
+        <option
+          value=""
+        >
+          Select one
+        </option>
+        <option
+          value={1}
+        >
+          option 1
+        </option>
+        <option
+          value={2}
+        >
+          option 2
+        </option>
+      </select>
+      
+    </div>
+    
+  </div>
+  <div
+    className="ce-select"
+  >
+    <label
+      htmlFor="defaultSelectwithHelpText2"
+    >
+      Default Select with Help Text
+    </label>
+    <span
+      className="ce-select__help-text"
+    >
+      This is useful or helpful information.
+    </span>
+    <div
+      className="ce-select__container"
+    >
+      
+      <select
+        disabled={false}
+        form=""
+        id="defaultSelectwithHelpText2"
+        label="Default Select with Help Text"
+        name="defaultSelectwithHelpText2"
+        onChange={[Function]}
+        value=""
+      >
+        <option
+          value=""
+        >
+          Select one
+        </option>
+        <option
+          value={1}
+        >
+          option 1
+        </option>
+        <option
+          value={2}
+        >
+          option 2
+        </option>
+      </select>
+      
+    </div>
+    
+  </div>
+  <div
+    className="ce-select"
+  >
+    <label
+      htmlFor="defaultSelectWithIcon2"
+    >
+      Default Select with Icon
+    </label>
+    
+    <div
+      className="ce-select__container"
+    >
+      <div
+        className="ce-select__icon"
+      >
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-calendar"
+            />
+          </svg>
+        </span>
+      </div>
+      <select
+        disabled={false}
+        form=""
+        id="defaultSelectWithIcon2"
+        label="Default Select with Icon"
+        name="defaultSelectWithIcon2"
         onChange={[Function]}
         value=""
       >
@@ -3997,6 +4103,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select States 1`] 
     <div
       className="ce-select__container"
     >
+      
       <select
         disabled={false}
         form=""
@@ -4042,28 +4149,28 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select States 1`] 
     </div>
     
   </div>
+  <h2>
+    Disabled
+  </h2>
   <div
-    className="ce-select"
+    className="ce-select ce-select--disabled"
   >
     <label
-      htmlFor="defaultSelectwithHelpText2"
+      htmlFor="disabledSelect"
     >
-      Default Select with Help Text
+      Disabled Select
     </label>
-    <span
-      className="ce-select__help-text"
-    >
-      This is useful or helpful information.
-    </span>
+    
     <div
       className="ce-select__container"
     >
+      
       <select
-        disabled={false}
+        disabled={true}
         form=""
-        id="defaultSelectwithHelpText2"
-        label="Default Select with Help Text"
-        name="defaultSelectwithHelpText2"
+        id="disabledSelect"
+        label="Disabled Select"
+        name="disabledSelect"
         onChange={[Function]}
         value=""
       >
@@ -4091,20 +4198,81 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select States 1`] 
     className="ce-select ce-select--disabled"
   >
     <label
-      htmlFor="disabledSelect"
+      htmlFor="disabledSelectWithHelpText"
     >
-      Disabled Select
+      Disabled Select with Help Text
+    </label>
+    <span
+      className="ce-select__help-text"
+    >
+      This is useful or helpful information.
+    </span>
+    <div
+      className="ce-select__container"
+    >
+      
+      <select
+        disabled={true}
+        form=""
+        id="disabledSelectWithHelpText"
+        label="Disabled Select with Help Text"
+        name="disabledSelectWithHelpText"
+        onChange={[Function]}
+        value=""
+      >
+        <option
+          value=""
+        >
+          Select one
+        </option>
+        <option
+          value={1}
+        >
+          option 1
+        </option>
+        <option
+          value={2}
+        >
+          option 2
+        </option>
+      </select>
+      
+    </div>
+    
+  </div>
+  <div
+    className="ce-select ce-select--disabled"
+  >
+    <label
+      htmlFor="disabledSelectWithIcon"
+    >
+      Disabled Select with Icon
     </label>
     
     <div
       className="ce-select__container"
     >
+      <div
+        className="ce-select__icon"
+      >
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-calendar"
+            />
+          </svg>
+        </span>
+      </div>
       <select
         disabled={true}
         form=""
-        id="disabledSelect"
-        label="Disabled Select"
-        name="disabledSelect"
+        id="disabledSelectWithIcon"
+        label="Disabled Select with Icon"
+        name="disabledSelectWithIcon"
         onChange={[Function]}
         value=""
       >
@@ -4140,6 +4308,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select States 1`] 
     <div
       className="ce-select__container"
     >
+      
       <select
         disabled={true}
         form=""
@@ -4185,28 +4354,28 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select States 1`] 
     </div>
     
   </div>
+  <h2>
+    Error
+  </h2>
   <div
-    className="ce-select ce-select--disabled"
+    className="ce-select ce-select--error"
   >
     <label
-      htmlFor="disabledSelectWithHelpText"
+      htmlFor="errorSelect"
     >
-      Disabled Select with Help Text
+      Error Select
     </label>
-    <span
-      className="ce-select__help-text"
-    >
-      This is useful or helpful information.
-    </span>
+    
     <div
       className="ce-select__container"
     >
+      
       <select
-        disabled={true}
+        disabled={false}
         form=""
-        id="disabledSelectWithHelpText"
-        label="Disabled Select with Help Text"
-        name="disabledSelectWithHelpText"
+        id="errorSelect"
+        label="Error Select"
+        name="errorSelect"
         onChange={[Function]}
         value=""
       >
@@ -4228,26 +4397,125 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select States 1`] 
       </select>
       
     </div>
-    
+    <div
+      className="ce-errorbox"
+    >
+      <div
+        className="ce-errorbox__container"
+      >
+        <div
+          className="ce-errorbox__arrow"
+        />
+        <div
+          className="ce-errorbox__message"
+        >
+          <span
+            className="ce-errorbox__text"
+          >
+            Error with Selection
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
   <div
     className="ce-select ce-select--error"
   >
     <label
-      htmlFor="errorSelect"
+      htmlFor="errorSelectWithHelpText"
     >
-      Error Select
+      Error Select with Help Text
+    </label>
+    <span
+      className="ce-select__help-text"
+    >
+      This is usefule or helpful information.
+    </span>
+    <div
+      className="ce-select__container"
+    >
+      
+      <select
+        disabled={false}
+        form=""
+        id="errorSelectWithHelpText"
+        label="Error Select with Help Text"
+        name="errorSelectWithHelpText"
+        onChange={[Function]}
+        value=""
+      >
+        <option
+          value=""
+        >
+          Select one
+        </option>
+        <option
+          value={1}
+        >
+          option 1
+        </option>
+        <option
+          value={2}
+        >
+          option 2
+        </option>
+      </select>
+      
+    </div>
+    <div
+      className="ce-errorbox"
+    >
+      <div
+        className="ce-errorbox__container"
+      >
+        <div
+          className="ce-errorbox__arrow"
+        />
+        <div
+          className="ce-errorbox__message"
+        >
+          <span
+            className="ce-errorbox__text"
+          >
+            Error with Selection
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="ce-select ce-select--error"
+  >
+    <label
+      htmlFor="errorSelectWithIcon"
+    >
+      Error Select with Icon
     </label>
     
     <div
       className="ce-select__container"
     >
+      <div
+        className="ce-select__icon"
+      >
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-calendar"
+            />
+          </svg>
+        </span>
+      </div>
       <select
         disabled={false}
         form=""
-        id="errorSelect"
-        label="Error Select"
-        name="errorSelect"
+        id="errorSelectWithIcon"
+        label="Error Select with Icon"
+        name="errorSelectWithIcon"
         onChange={[Function]}
         value=""
       >
@@ -4302,6 +4570,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select States 1`] 
     <div
       className="ce-select__container"
     >
+      
       <select
         disabled={false}
         form=""
@@ -4366,28 +4635,30 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select States 1`] 
       </div>
     </div>
   </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Select Select Types 1`] = `
+<form>
   <div
-    className="ce-select ce-select--error"
+    className="ce-select"
   >
     <label
-      htmlFor="errorSelectWithHelpText"
+      htmlFor="defaultSelect"
     >
-      Error Select with Help Text
+      Default Select
     </label>
-    <span
-      className="ce-select__help-text"
-    >
-      This is useful or helpful information.
-    </span>
+    
     <div
       className="ce-select__container"
     >
+      
       <select
         disabled={false}
         form=""
-        id="errorSelectWithHelpText"
-        label="Error Select with Help Text"
-        name="errorSelectWithHelpText"
+        id="defaultSelect"
+        label="Default Select"
+        name="defaultSelect"
         onChange={[Function]}
         value=""
       >
@@ -4409,50 +4680,87 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select States 1`] 
       </select>
       
     </div>
-    <div
-      className="ce-errorbox"
-    >
-      <div
-        className="ce-errorbox__container"
-      >
-        <div
-          className="ce-errorbox__arrow"
-        />
-        <div
-          className="ce-errorbox__message"
-        >
-          <span
-            className="ce-errorbox__text"
-          >
-            Error with Selection
-          </span>
-        </div>
-      </div>
-    </div>
+    
   </div>
-</form>
-`;
-
-exports[`Storyshots Components/Molecules/Form Controls/Select Select Types 1`] = `
-<form>
   <div
     className="ce-select"
   >
     <label
-      htmlFor="defaultSelect"
+      htmlFor="defaultSelectWithHelpText"
     >
-      Default Select
+      Default Select with Help Text
+    </label>
+    <span
+      className="ce-select__help-text"
+    >
+      This is useful or helpful information.
+    </span>
+    <div
+      className="ce-select__container"
+    >
+      
+      <select
+        disabled={false}
+        form=""
+        id="defaultSelectWithHelpText"
+        label="Default Select with Help Text"
+        name="defaultSelectWithHelpText"
+        onChange={[Function]}
+        value=""
+      >
+        <option
+          value=""
+        >
+          Select one
+        </option>
+        <option
+          value={1}
+        >
+          option 1
+        </option>
+        <option
+          value={2}
+        >
+          option 2
+        </option>
+      </select>
+      
+    </div>
+    
+  </div>
+  <div
+    className="ce-select"
+  >
+    <label
+      htmlFor="defaultSelectWithIcon"
+    >
+      Default Select with Icon
     </label>
     
     <div
       className="ce-select__container"
     >
+      <div
+        className="ce-select__icon"
+      >
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-edit"
+            />
+          </svg>
+        </span>
+      </div>
       <select
         disabled={false}
         form=""
-        id="defaultSelect"
-        label="Default Select"
-        name="defaultSelect"
+        id="defaultSelectWithIcon"
+        label="Default Select with Icon"
+        name="defaultSelectWithIcon"
         onChange={[Function]}
         value=""
       >
@@ -4488,6 +4796,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select Types 1`] =
     <div
       className="ce-select__container"
     >
+      
       <select
         disabled={false}
         form=""
@@ -4533,51 +4842,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select Types 1`] =
     </div>
     
   </div>
-  <div
-    className="ce-select"
-  >
-    <label
-      htmlFor="defaultSelectWithHelpText"
-    >
-      Default Select with Help Text
-    </label>
-    <span
-      className="ce-select__help-text"
-    >
-      This is useful or helpful information.
-    </span>
-    <div
-      className="ce-select__container"
-    >
-      <select
-        disabled={false}
-        form=""
-        id="defaultSelectWithHelpText"
-        label="Default Select with Help Text"
-        name="defaultSelectWithHelpText"
-        onChange={[Function]}
-        value=""
-      >
-        <option
-          value=""
-        >
-          Select one
-        </option>
-        <option
-          value={1}
-        >
-          option 1
-        </option>
-        <option
-          value={2}
-        >
-          option 2
-        </option>
-      </select>
-      
-    </div>
-    
-  </div>
 </form>
 `;
 
@@ -4601,6 +4865,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select with Knobs 
     <div
       className="ce-select__container"
     >
+      
       <select
         disabled={false}
         form="selectWithKnobForm"
