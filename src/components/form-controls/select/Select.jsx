@@ -6,6 +6,8 @@ import { ErrorBox } from '../core';
 
 import SystemIcon from '../../icon/SystemIcon';
 
+import { SYSTEM_ICONS as ICONS } from '../../../utils/constants';
+
 import './select.less';
 
 class Select extends Component {
@@ -87,39 +89,38 @@ class Select extends Component {
 
 Select.propTypes = {
   /**
-   * This function is accesible to the user for clickable events on the icon in the gradient to the right.
-   * Assign an icon to go in the gradient right hand square.  If you use the buttonShow prop as true, this icon will default to "navigate".  See the <SystemIcon /> for more options on what to enter into this icon prop.
+   * The options to configure the (optional) right-side button.
    */
   btnOptions: PropTypes.shape({
     btnClick: PropTypes.func,
-    btnIcon: PropTypes.string,
+    btnIcon: PropTypes.oneOf(ICONS),
   }),
   /**
-   * A class name added to the select.
+   * A class name, or string of class names, to add to the `<Select />`.
    */
   className: PropTypes.string,
   /**
-   * Make the selected disabled
+   * Disables the `<Select />`.
    */
   disabled: PropTypes.bool,
   /**
-   * The error message in the error box.
+   * An error message to display in the `<Select />`.
    */
   errorMsg: PropTypes.string,
   /**
-   * The form the select belongs to.
+   * The id of the form the `<Select />` belongs to.
    */
   formId: PropTypes.string,
   /**
-   * A function that is called when changing the `<Select />`.
+   * A function to trigger when the state of the `<Select />` changes.
    */
   handleChange: PropTypes.func.isRequired,
   /**
-   * The label is required for accessibilty even if you assign a default value.
+   * The `<Select />` label.
    */
   label: PropTypes.string.isRequired,
   /**
-   * The name for the select is required for accessibilty purposes of attaching a unique id.
+   * The name given to the `<Select />`. It connects the label to the `<Select />`.
    */
   name: PropTypes.string.isRequired,
   /**
@@ -133,7 +134,7 @@ Select.propTypes = {
    */
   placeholder: PropTypes.string,
   /**
-   * The value is the optional preselected default option to appear in the select.
+   * The value used to pre-select an option of the `<Select />`.
    */
   selectedValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
