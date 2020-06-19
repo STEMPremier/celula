@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Select /> render() render the Select component 1`] = `
+<div
+  className="ce-select"
+>
+  <label
+    htmlFor="Select Test Name"
+  >
+    Select Test Label
+  </label>
+  <div
+    className="ce-select__container"
+  >
+    <select
+      disabled={false}
+      form=""
+      id="Select Test Name"
+      label="Select Test Label"
+      name="Select Test Name"
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        key="Select one"
+        value=""
+      >
+        Select one
+      </option>
+      <option
+        key="1"
+        value={1}
+      >
+        testing options 1
+      </option>
+      <option
+        key="2"
+        value={2}
+      >
+        testing options 2
+      </option>
+    </select>
+  </div>
+</div>
+`;
