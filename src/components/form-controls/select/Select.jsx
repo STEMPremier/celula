@@ -99,6 +99,8 @@ class Select extends Component {
 Select.propTypes = {
   /**
    * The options to configure the (optional) right-side button.
+   * `btnClick` is a function to trigger when the `<Select />` button is clicked.
+   * `btnIcon` is the icon you would like as the `<Select />` button label.
    */
   btnOptions: PropTypes.shape({
     btnClick: PropTypes.func,
