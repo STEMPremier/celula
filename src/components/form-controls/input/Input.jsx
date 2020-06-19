@@ -2,27 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import './input.less';
-
+import SystemIcon from '../../icon/SystemIcon';
 import { ErrorBox } from '../core';
 
-import SystemIcon from '../../icon/SystemIcon';
+import { INPUT_TYPES as TYPES } from '../../../utils/constants';
 
-const TYPES = [
-  'color',
-  'datetime-local',
-  'email',
-  'file',
-  'hidden',
-  'month',
-  'number',
-  'password',
-  'search',
-  'tel',
-  'text',
-  'time',
-  'url',
-];
+import './input.less';
 
 class Input extends Component {
   /* eslint-disable react/destructuring-assignment */

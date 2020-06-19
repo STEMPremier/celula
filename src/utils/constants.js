@@ -12,6 +12,21 @@ const COLORS = [
   'red',
   'white',
 ];
+const INPUT_TYPES = [
+  'color',
+  'datetime-local',
+  'email',
+  'file',
+  'hidden',
+  'month',
+  'number',
+  'password',
+  'search',
+  'tel',
+  'text',
+  'time',
+  'url',
+];
 const PRODUCT_ICONS = [
   'college',
   'military',
@@ -77,6 +92,7 @@ export {
   BUTTON_TYPES,
   COMPONENT_STATES,
   COLORS,
+  INPUT_TYPES,
   PRODUCT_ICONS,
   SECONDARY_ICONS,
   SIZES,
