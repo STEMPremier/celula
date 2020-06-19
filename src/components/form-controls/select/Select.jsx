@@ -71,7 +71,9 @@ class Select extends Component {
             value={selectedValue}
             onChange={this.handleChange}
           >
-            <option value="">{placeholder}</option>
+            <option key={placeholder} value="">
+              {placeholder}
+            </option>
             {options.map(item => (
               <option key={item.value} value={item.value}>
                 {item.name}
@@ -100,7 +102,7 @@ Select.propTypes = {
    */
   btnOptions: PropTypes.shape({
     btnClick: PropTypes.func,
-    btnIcon: PropTypes.oneOf(ICONS),
+    btnIcon: PropTypes.oneOf([...ICONS, '']),
   }),
   /**
    * A class name, or string of class names, to add to the `<Select />`.
@@ -129,7 +131,7 @@ Select.propTypes = {
   /**
    * An icon to include on the left side of the `<Select />`.
    */
-  icon: PropTypes.oneOf(ICONS),
+  icon: PropTypes.oneOf([...ICONS, '']),
   /**
    * The `<Select />` label.
    */

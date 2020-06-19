@@ -22,12 +22,23 @@ exports[`<Select /> render() render the Select component 1`] = `
       value=""
     >
       <option
+        key="Select one"
         value=""
       >
         Select one
       </option>
-      <option />
-      <option />
+      <option
+        key="1"
+        value={1}
+      >
+        testing options 1
+      </option>
+      <option
+        key="2"
+        value={2}
+      >
+        testing options 2
+      </option>
     </select>
   </div>
 </div>

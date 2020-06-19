@@ -13,7 +13,16 @@ describe('<Select />', () => {
           handleChange={() => {}}
           label="Select Test Label"
           name="Select Test Name"
-          options={['testing options 1', 'testing options 2']}
+          options={[
+            {
+              name: 'testing options 1',
+              value: 1,
+            },
+            {
+              name: 'testing options 2',
+              value: 2,
+            },
+          ]}
         />,
       );
       expect(toJson(wrapper)).toMatchSnapshot();
