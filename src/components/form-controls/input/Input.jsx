@@ -110,9 +110,14 @@ class Input extends Component {
   };
 
   handleChange = event => {
+    const { handleChange } = this.props;
+    const { value } = event.target;
+
     this.setState({
-      value: event.target.value,
+      value,
     });
+
+    handleChange(value);
   };
 
   render() {
@@ -122,6 +127,7 @@ class Input extends Component {
       disabled,
       errorIcon,
       errorMsg,
+      formId,
       helperText,
       htmlType,
       icon,
@@ -129,7 +135,7 @@ class Input extends Component {
       max,
       min,
       name,
-      placeholderText,
+      placeholder,
     } = this.props;
 
     const { value, isValid, hasIcon, isDate } = this.state;
@@ -164,16 +170,17 @@ class Input extends Component {
               </div>
             )}
             <input
-              name={name}
-              type={htmlType}
-              placeholder={placeholderText}
-              value={value}
-              onChange={this.handleChange}
-              onBlur={this.checkValiditiy}
-              icon={icon}
               disabled={disabled}
-              min={min}
+              form={formId}
+              icon={icon}
               max={max}
+              min={min}
+              name={name}
+              onBlur={this.checkValiditiy}
+              onChange={this.handleChange}
+              placeholder={placeholder}
+              type={htmlType}
+              value={value}
             />
             {isDate && (
               <div className="ce-input--date-icon">
@@ -218,11 +225,11 @@ Input.propTypes = {
     btnIcon: PropTypes.oneOf([...ICONS, '']),
   }),
   /**
-   * A class name added to the `<Input />`.
+   * A class name, or string of class names, to add to the `<Input />`.
    */
   className: PropTypes.string,
   /**
-   * Make the `<Input />` inactive.
+   * Disables the `<Input />`.
    */
   disabled: PropTypes.bool,
   /**
@@ -230,19 +237,27 @@ Input.propTypes = {
    */
   errorIcon: PropTypes.bool,
   /**
-   * The error message that will appear in the error box below the input.  The presence of the error message automatically triggers error state on the component.
+   * An error message to display in the `<Input />`.
    */
   errorMsg: PropTypes.string,
   /**
-   * The helper text is above the input but is seperate from the label.  An example would be "This can be a high level summary like 'I serve foos to homeless people'."
+   * The id of the form the `<Input />` belongs to.
+   */
+  formId: PropTypes.string,
+  /**
+   * A function to trigger when the state of the `<Input />` changes.
+   */
+  handleChange: PropTypes.func,
+  /**
+   * Any text to assist the user with this `<Input />`.
    */
   helperText: PropTypes.string,
   /**
-   * The type of the `<Input />`.  Commonly used types include text, email, url, hidden, month, week, datetime-local, time, file, password, search, tel, and color.
+   * The html type of the `<Input />`.
    */
-  htmlType: PropTypes.oneOf([...TYPES, 'default']),
+  htmlType: PropTypes.oneOf(TYPES),
   /**
-   * Make an icon appear in the `<Input />`.
+   * An icon to include on the left side of the `<Input />`.
    */
   icon: PropTypes.string,
   /**
@@ -250,21 +265,23 @@ Input.propTypes = {
    */
   label: PropTypes.string.isRequired,
   /**
-   *  The latest date to accept as a valid input.  Note that the date and time format will vary depending on the type of input and the max must match that format.
+   *  The latest date, or largest number to accept as valid input.
+   *  Note that the date and time format will vary depending on the type of input and the max must match that format.
    */
   max: PropTypes.string,
   /**
-   *  The earliest date to accept as a valid input.  Note that the date and time format will vary depending on the type of input and the min must match that format.
+   *  The earliest date, or smallest number to accept as valid input.
+   *  Note that the date and time format will vary depending on the type of input and the min must match that format.
    */
   min: PropTypes.string,
   /**
-   * The name of the `<Input />`.
+   * The name given to the `<Input />`. It connects the label to the `<Select />`.
    */
   name: PropTypes.string.isRequired,
   /**
-   * Placeholder text inside the `<Input />`.
+   * Placeholder text for the `<Input />`/
    */
-  placeholderText: PropTypes.string,
+  placeholder: PropTypes.string,
   /**
    * The value of the `<Input />`.
    */
@@ -284,12 +301,14 @@ Input.defaultProps = {
   disabled: false,
   errorIcon: null,
   errorMsg: '',
+  formId: () => {},
+  handleChange: () => {},
   helperText: '',
-  icon: '',
-  placeholderText: '',
   htmlType: 'text',
-  min: '',
+  icon: '',
   max: '',
+  min: '',
+  placeholder: '',
 };
 
 export default Input;
