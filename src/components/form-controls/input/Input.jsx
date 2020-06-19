@@ -5,7 +5,10 @@ import cx from 'classnames';
 import SystemIcon from '../../icon/SystemIcon';
 import { ErrorBox } from '../core';
 
-import { INPUT_TYPES as TYPES } from '../../../utils/constants';
+import {
+  INPUT_TYPES as TYPES,
+  SYSTEM_ICONS as ICONS,
+} from '../../../utils/constants';
 
 import './input.less';
 
@@ -114,25 +117,23 @@ class Input extends Component {
 
   render() {
     const {
+      btnOptions,
       className,
       disabled,
       errorIcon,
       errorMsg,
-      gradientIconBoxClick,
       helperText,
       htmlType,
       icon,
       label,
-      // toolTip,
       max,
       min,
       name,
       placeholderText,
-      showGradientIconBox,
-      // validators,
     } = this.props;
 
     const { value, isValid, hasIcon, isDate } = this.state;
+    const { btnClick, btnIcon } = btnOptions;
 
     const classes = cx(
       'ce-input',
@@ -186,17 +187,13 @@ class Input extends Component {
               </span>
             )}
 
-            {showGradientIconBox && (
+            {btnIcon && (
               <button
                 className="ce-input--gradient-button"
-                onClick={gradientIconBoxClick}
-                type="submit"
+                onClick={btnClick}
+                type="button"
               >
-                <SystemIcon
-                  name="navigate"
-                  className="ce-input--icon-in-box"
-                  color="white"
-                />
+                <SystemIcon name={btnIcon} color="white" />
               </button>
             )}
           </div>
@@ -211,6 +208,15 @@ class Input extends Component {
 }
 
 Input.propTypes = {
+  /**
+   * The options to configure the (optional) right-side button.
+   * `btnClick` is a function to trigger when the `<Input />` button is clicked.
+   * `btnIcon` is the icon you would like as the `<Input />` button label.
+   */
+  btnOptions: PropTypes.shape({
+    btnClick: PropTypes.func,
+    btnIcon: PropTypes.oneOf([...ICONS, '']),
+  }),
   /**
    * A class name added to the `<Input />`.
    */
@@ -227,10 +233,6 @@ Input.propTypes = {
    * The error message that will appear in the error box below the input.  The presence of the error message automatically triggers error state on the component.
    */
   errorMsg: PropTypes.string,
-  /**
-   * This function is accesible to the user for clickable events on the right arrow in the gradient
-   */
-  gradientIconBoxClick: PropTypes.func,
   /**
    * The helper text is above the input but is seperate from the label.  An example would be "This can be a high level summary like 'I serve foos to homeless people'."
    */
@@ -263,13 +265,6 @@ Input.propTypes = {
    * Placeholder text inside the `<Input />`.
    */
   placeholderText: PropTypes.string,
-  // validators:
-  // toolTip: PropTypes.string,
-  /**
-   * This will make the right arrow button appear with the `<Input />`.
-   */
-  showGradientIconBox: PropTypes.bool,
-  // toolTip: PropTypes.string,
   /**
    * The value of the `<Input />`.
    */
@@ -281,6 +276,10 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
+  btnOptions: {
+    btnClick: () => {},
+    btnIcon: '',
+  },
   className: '',
   disabled: false,
   errorIcon: null,
@@ -288,12 +287,9 @@ Input.defaultProps = {
   helperText: '',
   icon: '',
   placeholderText: '',
-  // toolTip: null,
   htmlType: 'text',
-  showGradientIconBox: false,
   min: '',
   max: '',
-  gradientIconBoxClick: () => {},
 };
 
 export default Input;
