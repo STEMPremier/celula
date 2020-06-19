@@ -7,6 +7,7 @@
 @import url(https://use.typekit.net/lyt2kus.css);
 @import url(https://use.typekit.net/lyt2kus.css);
 @import url(https://use.typekit.net/lyt2kus.css);
+@import url(https://use.typekit.net/lyt2kus.css);
 html,
 body,
 div,
@@ -125,17 +126,23 @@ table {
   border-spacing: 0;
 }
 html {
+  color: #0f1422;
   font-family: proxima-nova, sans-serif;
   font-style: normal;
   font-weight: 100;
   font-size: 10px;
 }
 body {
+  color: #0f1422;
   font-size: 1.6rem;
 }
 /* Grayscale
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
+ */
+/* Checked/Unchecked Disabled Radio,
+ * Checked/Unchecked Disabled Checkbox,
+ * Disabled Select
  */
 button {
   margin: 0;
@@ -669,21 +676,26 @@ table {
   border-spacing: 0;
 }
 html {
+  color: #0f1422;
   font-family: proxima-nova, sans-serif;
   font-style: normal;
   font-weight: 100;
   font-size: 10px;
 }
 body {
+  color: #0f1422;
   font-size: 1.6rem;
 }
 /* Grayscale
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
  */
+/* Checked/Unchecked Disabled Radio,
+ * Checked/Unchecked Disabled Checkbox,
+ * Disabled Select
+ */
 .ce-errorbox {
   background-color: #fff;
-  padding: 0 2.75rem;
 }
 .ce-errorbox .ce-errorbox__container {
   display: inline-block;
@@ -824,17 +836,23 @@ table {
   border-spacing: 0;
 }
 html {
+  color: #0f1422;
   font-family: proxima-nova, sans-serif;
   font-style: normal;
   font-weight: 100;
   font-size: 10px;
 }
 body {
+  color: #0f1422;
   font-size: 1.6rem;
 }
 /* Grayscale
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
+ */
+/* Checked/Unchecked Disabled Radio,
+ * Checked/Unchecked Disabled Checkbox,
+ * Disabled Select
  */
 .ce-checkbox {
   user-select: none;
@@ -955,6 +973,10 @@ body {
 }
 .ce-checkbox.ce-checkbox--error input:checked + label:focus::after {
   box-shadow: none;
+}
+.ce-checkbox.ce-checkbox--error .ce-errorbox {
+  margin-left: 2.75rem;
+  max-width: calc(100% - 2.75rem);
 }
 .ce-checkbox + .ce-checkbox {
   margin-top: 0.4rem;
@@ -1078,17 +1100,23 @@ table {
   border-spacing: 0;
 }
 html {
+  color: #0f1422;
   font-family: proxima-nova, sans-serif;
   font-style: normal;
   font-weight: 100;
   font-size: 10px;
 }
 body {
+  color: #0f1422;
   font-size: 1.6rem;
 }
 /* Grayscale
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
+ */
+/* Checked/Unchecked Disabled Radio,
+ * Checked/Unchecked Disabled Checkbox,
+ * Disabled Select
  */
 .ce-checkbox-group {
   border: 0.3rem solid #fff;
@@ -1263,17 +1291,23 @@ table {
   border-spacing: 0;
 }
 html {
+  color: #0f1422;
   font-family: proxima-nova, sans-serif;
   font-style: normal;
   font-weight: 100;
   font-size: 10px;
 }
 body {
+  color: #0f1422;
   font-size: 1.6rem;
 }
 /* Grayscale
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
+ */
+/* Checked/Unchecked Disabled Radio,
+ * Checked/Unchecked Disabled Checkbox,
+ * Disabled Select
  */
 .ce-radio {
   user-select: none;
@@ -1472,17 +1506,23 @@ table {
   border-spacing: 0;
 }
 html {
+  color: #0f1422;
   font-family: proxima-nova, sans-serif;
   font-style: normal;
   font-weight: 100;
   font-size: 10px;
 }
 body {
+  color: #0f1422;
   font-size: 1.6rem;
 }
 /* Grayscale
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
+ */
+/* Checked/Unchecked Disabled Radio,
+ * Checked/Unchecked Disabled Checkbox,
+ * Disabled Select
  */
 .ce-radio-group {
   border: 0.3rem solid #fff;
@@ -1666,17 +1706,23 @@ table {
   border-spacing: 0;
 }
 html {
+  color: #0f1422;
   font-family: proxima-nova, sans-serif;
   font-style: normal;
   font-weight: 100;
   font-size: 10px;
 }
 body {
+  color: #0f1422;
   font-size: 1.6rem;
 }
 /* Grayscale
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
+ */
+/* Checked/Unchecked Disabled Radio,
+ * Checked/Unchecked Disabled Checkbox,
+ * Disabled Select
  */
 .ce-icon.ce-icon__product {
   align-items: center;
@@ -1936,17 +1982,293 @@ table {
   border-spacing: 0;
 }
 html {
+  color: #0f1422;
   font-family: proxima-nova, sans-serif;
   font-style: normal;
   font-weight: 100;
   font-size: 10px;
 }
 body {
+  color: #0f1422;
   font-size: 1.6rem;
 }
 /* Grayscale
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
+ */
+/* Checked/Unchecked Disabled Radio,
+ * Checked/Unchecked Disabled Checkbox,
+ * Disabled Select
+ */
+.ce-select label {
+  color: #0f1422;
+  display: block;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  margin: 0.3rem;
+}
+.ce-select .ce-select__help-text {
+  color: #0f1422;
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  margin: 0.3rem;
+}
+.ce-select .ce-select__container {
+  background-color: #fbfbfb;
+  border: 0.1rem solid #b2b2b2;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  height: 6rem;
+  justify-content: space-between;
+  margin: 0.3rem;
+  padding-left: 1rem;
+  width: calc(100% - 0.6rem);
+}
+.ce-select .ce-select__container .ce-select__icon {
+  align-self: center;
+  padding-left: 1rem;
+}
+.ce-select .ce-select__container .ce-select__icon span,
+.ce-select .ce-select__container .ce-select__icon svg {
+  display: inline-block;
+  height: 1.6rem;
+  width: 1.6rem;
+}
+.ce-select .ce-select__container .ce-select__icon svg {
+  stroke: #0f1422;
+}
+.ce-select .ce-select__container select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  flex-grow: 1;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  /* padding: 0.6em 1.4em 0.5em 0.8em; */
+  background-image: url(static/media/down-arrow.e3875599.png);
+  background-position: calc(100% - 2rem) calc(1em + 0.9rem), calc(100% - 1.5rem) calc(1em + 0.2rem), calc(100% - 2.5rem) 0.5em;
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+}
+.ce-select .ce-select__container select::ms-expand {
+  display: none;
+}
+.ce-select .ce-select__container .ce-select__button {
+  background: linear-gradient(317.58deg, #6645ad 0%, #2d71be 100%);
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  height: 6rem;
+  margin-top: -0.1rem;
+  padding: 0 2.2rem;
+}
+.ce-select .ce-select__container .ce-select__button span,
+.ce-select .ce-select__container .ce-select__button svg {
+  display: inline-block;
+  height: 1.6rem;
+  width: 1.6rem;
+}
+.ce-select .ce-select__container:focus {
+  box-shadow: -0.3rem 0 #ccefff, 0.3rem 0 #ccefff, 0 -0.3rem #ccefff, 0 0.3rem #ccefff;
+}
+.ce-select .ce-select__container:hover {
+  box-shadow: -0.3rem 0 #e6f7ff, 0.3rem 0 #e6f7ff, 0 -0.3rem #e6f7ff, 0 0.3rem #e6f7ff;
+}
+.ce-select .ce-select__container:active {
+  box-shadow: -0.3rem 0 #b2e7ff, 0.3rem 0 #b2e7ff, 0 -0.3rem #b2e7ff, 0 0.3rem #b2e7ff;
+}
+.ce-select.ce-select--disabled label {
+  color: #232020;
+}
+.ce-select.ce-select--disabled .ce-select__help-text {
+  color: #232020;
+}
+.ce-select.ce-select--disabled .ce-select__container .ce-select__icon svg {
+  stroke: #232020;
+}
+.ce-select.ce-select--disabled .ce-select__container select {
+  color: #232020;
+}
+.ce-select.ce-select--disabled .ce-select__container:focus {
+  box-shadow: none;
+}
+.ce-select.ce-select--disabled .ce-select__container:hover {
+  box-shadow: none;
+}
+.ce-select.ce-select--disabled .ce-select__container:active {
+  box-shadow: none;
+}
+.ce-select.ce-select--disabled .ce-select__container .ce-select__button {
+  pointer-events: none;
+  background: #aeaeae;
+}
+.ce-select.ce-select--error .ce-select__container {
+  border-color: #cc0043;
+}
+.ce-select.ce-select--error .ce-select__container .ce-select__icon svg {
+  stroke: #e5004b;
+}
+.ce-select.ce-select--error .ce-select__container select {
+  color: #e5004b;
+}
+.ce-select.ce-select--error .ce-select__container .ce-select__button {
+  background: #cc0043;
+}
+.ce-select.ce-select--error .ce-select__container:focus {
+  box-shadow: -0.3rem 0 #ffccdc, 0.3rem 0 #ffccdc, 0 -0.3rem #ffccdc, 0 0.3rem #ffccdc;
+}
+.ce-select.ce-select--error .ce-select__container:hover {
+  box-shadow: -0.3rem 0 #ffe5ed, 0.3rem 0 #ffe5ed, 0 -0.3rem #ffe5ed, 0 0.3rem #ffe5ed;
+}
+.ce-select.ce-select--error .ce-select__container:active {
+  box-shadow: -0.3rem 0 #ffb3cc, 0.3rem 0 #ffb3cc, 0 -0.3rem #ffb3cc, 0 0.3rem #ffb3cc;
+}
+.ce-select.ce-select--error .ce-errorbox {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  max-width: calc(100% - 0.6rem);
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  color: #0f1422;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+}
+body {
+  color: #0f1422;
+  font-size: 1.6rem;
+}
+/* Grayscale
+ * #fff - #000 in [various]% steps
+ * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
+ */
+/* Checked/Unchecked Disabled Radio,
+ * Checked/Unchecked Disabled Checkbox,
+ * Disabled Select
  */
 .sr-only {
   border: 0;
@@ -2114,17 +2436,23 @@ table {
   border-spacing: 0;
 }
 html {
+  color: #0f1422;
   font-family: proxima-nova, sans-serif;
   font-style: normal;
   font-weight: 100;
   font-size: 10px;
 }
 body {
+  color: #0f1422;
   font-size: 1.6rem;
 }
 /* Grayscale
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
+ */
+/* Checked/Unchecked Disabled Radio,
+ * Checked/Unchecked Disabled Checkbox,
+ * Disabled Select
  */
 .ce-toggle-button-group {
   border-radius: 3.5rem;
