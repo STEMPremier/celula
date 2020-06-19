@@ -1,5 +1,3 @@
-/* eslint-disable no-case-declarations */
-/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -24,16 +22,17 @@ const TYPES = [
   'text',
   'time',
   'url',
-  'week',
 ];
 
 class Input extends Component {
+  /* eslint-disable react/destructuring-assignment */
   state = {
     value: this.props.value,
     isValid: true,
     hasIcon: !!this.props.icon,
     isDate: false,
   };
+  /* eslint-enable react/destructuring-assignment */
 
   componentDidMount = () => {
     const { htmlType } = this.props;
@@ -49,16 +48,17 @@ class Input extends Component {
   };
 
   checkValiditiy = () => {
+    const { htmlType } = this.props;
+    const { value } = this.state;
     let valid = true;
 
-    switch (this.props.htmlType) {
-      case 'email':
+    switch (htmlType) {
+      case 'email': {
         // eslint-disable-next-line no-useless-escape
-        valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/.test(
-          this.state.value,
-        );
+        valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/.test(value);
         break;
-      case 'password':
+      }
+      case 'password': {
         const minLength = 8;
         const passwordLongEnough = password =>
           !!(password && password.length >= minLength);
@@ -88,9 +88,10 @@ class Input extends Component {
             valid = false;
           }
         };
-        passwordSatisfiesThree(this.state.value);
+        passwordSatisfiesThree(value);
         break;
-      case 'url':
+      }
+      case 'url': {
         const pattern = new RegExp(
           '^(https?:\\/\\/)?' + // protocol
           '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
@@ -100,10 +101,12 @@ class Input extends Component {
             '(\\#[-a-z\\d_]*)?$',
           'i',
         ); // fragment locator
-        valid = pattern.test(this.state.value);
+        valid = pattern.test(value);
         break;
-      default:
+      }
+      default: {
         valid = true;
+      }
     }
 
     // sets state for all types depending on the isValid boolean
