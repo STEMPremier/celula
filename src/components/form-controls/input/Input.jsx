@@ -159,12 +159,12 @@ class Input extends Component {
           {label}
         </label>
         {helperText && (
-          <div className="ce-input--helper-text">{helperText}</div>
+          <div className="ce-input__helper-text">{helperText}</div>
         )}
         <div className="ce-input--box">
           <div className="ce-input--wrapping-div">
             {icon && (
-              <div className="ce-input--icon">
+              <div className="ce-input__icon">
                 <SystemIcon name={icon} />
               </div>
             )}
