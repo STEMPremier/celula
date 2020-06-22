@@ -17,7 +17,6 @@ class Input extends Component {
   state = {
     value: this.props.value,
     isValid: true,
-    hasIcon: !!this.props.icon,
     isDate: false,
   };
   /* eslint-enable react/destructuring-assignment */
@@ -138,7 +137,7 @@ class Input extends Component {
       placeholder,
     } = this.props;
 
-    const { value, isValid, hasIcon, isDate } = this.state;
+    const { value, isValid, isDate } = this.state;
     const { btnClick, btnIcon } = btnOptions;
 
     const classes = cx(
@@ -164,7 +163,7 @@ class Input extends Component {
         )}
         <div className="ce-input--box">
           <div className="ce-input--wrapping-div">
-            {hasIcon && (
+            {icon && (
               <div className="ce-input--icon">
                 <SystemIcon name={icon} />
               </div>
