@@ -18,9 +18,9 @@ class Input extends Component {
     value: this.props.value,
     isValid: true,
     isDate:
-      this.state.htmlType === 'month' ||
-      this.state.htmlType === 'datetime-local' ||
-      this.state.htmlType === 'week',
+      this.props.htmlType === 'month' ||
+      this.props.htmlType === 'datetime-local' ||
+      this.props.htmlType === 'week',
   };
   /* eslint-enable react/destructuring-assignment */
 
