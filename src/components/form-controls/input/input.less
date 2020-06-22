@@ -1,210 +1,214 @@
 @import '../../../styles/celula';
 
 .ce-input {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: left;
-  width: 36rem;
-  &:hover {
-    .ce-input--box {
-      &::after {
-        border: 0.3rem solid @hover-blue;
-      }
-    }
-  }
-  &:focus {
-    .ce-input--box {
-      &::after {
-        border: 0.3rem solid @focus-blue;
-      }
-    }
-  }
-  &:active {
-    .ce-input--box {
-      &::after {
-        border: 0.3rem solid @active-blue;
-      }
-    }
-  }
-
   label {
-    order: 0;
-    height: 2.2rem;
+    color: @label-text;
+    display: block;
     font-size: 1.6rem;
-    margin-left: 1rem;
+    line-height: 2.2rem;
+    margin: 0.3rem;
   }
 
-  .ce-input__helper-text {
-    font-size: 12px;
-    margin: 0.5rem 0 1rem 1rem;
-    height: 100%;
+  .ce-input__help-text {
+    color: @label-text;
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin: 0.3rem;
   }
 
-  input[type='month']::-webkit-calendar-picker-indicator {
-    color: transparent;
-    background: none;
-    width: 40%;
-  }
-  input[type='datetime-local']::-webkit-calendar-picker-indicator {
-    color: transparent;
-    background: none;
-    width: 40%;
-  }
-  input[type='week']::-webkit-calendar-picker-indicator {
-    color: transparent;
-    background: none;
-    width: 40%;
+  .ce-input__container {
+    background-color: @default-background;
+    border: 0.1rem solid @default-gray;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    display: flex;
+    height: 6rem;
+    justify-content: space-between;
+    margin: 0.3rem;
+    padding-left: 1rem;
+    width: calc(100% - 0.6rem);
+
+    .ce-input__icon {
+      align-self: center;
+      padding-left: 1rem;
+
+      span, svg {
+        display: inline-block;
+        height: 1.6rem;
+        width: 1.6rem;
+      }
+
+      svg {
+        stroke: @base-text;
+      }
+    }
+
+    input {
+      background-color: transparent;
+      border: none;
+      box-sizing: border-box;
+      flex-grow: 1;
+      padding-left: 1rem;
+    }
+
+    input[type='month']::-webkit-calendar-picker-indicator {
+      color: transparent;
+      background: none;
+      width: 40%;
+    }
+
+    input[type='datetime-local']::-webkit-calendar-picker-indicator {
+      color: transparent;
+      background: none;
+      width: 40%;
+    }
+
+    input[type='week']::-webkit-calendar-picker-indicator {
+      color: transparent;
+      background: none;
+      width: 40%;
+    }
+
+    .ce-input__date-icon {
+      align-self: center;
+      padding-right: 2rem;
+      stroke: @base-text;
+    }
+
+    .ce-input__button {
+      background: @gradient-cool;
+      border: none;
+      border-radius: 0 0.5rem 0.5rem 0;
+      height: 6rem;
+      margin-top: -0.1rem;
+      padding: 0 2.2rem;
+
+      span, svg {
+        display: inline-block;
+        height: 1.6rem;
+        width: 1.6rem;
+      }
+    }
+
+    &:focus {
+      box-shadow: -0.3rem 0 @focus-blue,
+        0.3rem 0 @focus-blue,
+        0 -0.3rem @focus-blue,
+        0 0.3rem @focus-blue;
+    }
+
+    &:hover {
+      box-shadow: -0.3rem 0 @hover-blue,
+        0.3rem 0 @hover-blue,
+        0 -0.3rem @hover-blue,
+        0 0.3rem @hover-blue;
+    }
+
+    &:active {
+      box-shadow: -0.3rem 0 @active-blue,
+        0.3rem 0 @active-blue,
+        0 -0.3rem @active-blue,
+        0 0.3rem @active-blue;
+    }
   }
 
   &.ce-input--hidden {
-    .ce-input--box {
+    .ce-input--container {
+      border: none;
+      display: none;
       height: 0;
       width: 0;
-      border: none;
-      margin: 0;
-      display: none;
-      background-color: pink;
-    }
-  }
-
-  .ce-input--date-icon {
-    position: absolute;
-    margin-left: 30.5rem;
-    margin-top: 2rem;
-  }
-
-  .ce-input--box:focus {
-    outline: none;
-  }
-  .ce-input--box {
-    margin: 0rem 0 0 1rem;
-    border-radius: 0.6rem;
-    display: flex;
-    border: 0.1rem solid @gray-border;
-
-    &::after {
-      position: absolute;
-      border-radius: 0.8rem;
-      width: 35.6rem;
-      height: 6.8rem;
-      margin-top: -0.45rem;
-      margin-left: -0.4rem;
-      z-index: -4;
-      content: '';
-      box-sizing: border-box;
-    }
-
-    .ce-input--wrapping-div {
-      display: flex;
-      flex-direction: row;
-      width: 86%;
-      height: 6rem;
-      padding-left: 0.4rem;
-
-      .ce-input__icon {
-        margin: 2rem 0 0 2rem;
-        order: 1;
-      }
-
-      input {
-        order: 2;
-        height: 96%;
-        padding-left: 1.9rem;
-        border: 0;
-        flex-grow: 1;
-        margin-right: auto;
-      }
-      input:focus {
-        outline: none;
-      }
-
-      .ce-input--gradient-button:focus {
-        outline: none;
-      }
-      .ce-input--gradient-button {
-        order: 3;
-        width: 7.4rem;
-        font-size: 5.5rem;
-        margin-right: -4.5rem;
-        border: 0.1rem;
-        border-radius: 0 0.5rem 0.5rem 0;
-        background: @gradient-cool;
-        svg {
-          margin: auto;
-          width: 50%;
-          padding: 1.4rem;
-        }
-        .ce-input--icon-in-box {
-          margin: auto;
-          width: 50%;
-          padding: 1rem;
-        }
-      }
     }
   }
 
   &.ce-input--disabled {
-    input {
-      color: @checked-disabled-gray;
-    }
     label {
-      color: @checked-disabled-gray;
+      color: @disabled-text;
     }
-    .ce-input--box {
-      &:hover {
-        &::after {
-          border: none;
-        }
+
+    .ce-input__help-text {
+      color: @disabled-text;
+    }
+
+    .ce-input__container {
+      .ce-input__icon svg {
+        stroke: @disabled-text;
       }
-    }
-    .ce-input--wrapping-div {
-      .ce-input--gradient-button {
+
+      input {
+        color: @disabled-text;
+      }
+
+      .ce-input__date-icon svg {
+        stroke: @disabled-text;
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      &:hover {
+        box-shadow: none;
+      }
+
+      &:active {
+        box-shadow: none;
+      }
+
+      .ce-input__button {
         pointer-events: none;
-        background: @checked-disabled-gray;
+        background: @default-disabled-gray;
       }
     }
   }
 
   &.ce-input--error {
-    color: @error-text;
-    &:hover {
-      .ce-input--box {
-        border: 0.3rem solid @hover-red;
-        &::after {
-          border: none;
-        }
+    .ce-input__container {
+      border-color: @error-element-border;
+
+      .ce-input__icon svg {
+        stroke: @error-text;
       }
-    }
-    &:focus {
-      .ce-input--box {
-        border: 0.3rem solid @focus-red;
-        &::after {
-          border: none;
-        }
-      }
-    }
-    &:active {
-      .ce-input--box {
-        border: 0.3rem solid @active-red;
-        &::after {
-          border: none;
-        }
-      }
-    }
-    .ce-input--box {
-      border: 0.3rem solid @error-border;
+
       input {
         color: @error-text;
       }
+
+      .ce-input__date-icon svg {
+        stroke: @error-text;
+      }
+
+      .ce-input__button {
+        background: @error-red;
+      }
+
+      &:focus {
+        box-shadow: -0.3rem 0 @focus-red,
+          0.3rem 0 @focus-red,
+          0 -0.3rem @focus-red,
+          0 0.3rem @focus-red;
+      }
+
+      &:hover {
+        box-shadow: -0.3rem 0 @hover-red,
+          0.3rem 0 @hover-red,
+          0 -0.3rem @hover-red,
+          0 0.3rem @hover-red;
+      }
+
+      &:active {
+        box-shadow: -0.3rem 0 @active-red,
+          0.3rem 0 @active-red,
+          0 -0.3rem @active-red,
+          0 0.3rem @active-red;
+      }
     }
 
-    .ce-input--wrapping-div {
-      .ce-input--gradient-button {
-        background: @error-box-background;
-        border: 0.1rem solid @error-box-background;
-      }
+    .ce-errorbox {
+      margin-left: 0.3rem;
+      margin-right: 0.3rem;
+      max-width: calc(100% - 0.6rem);
     }
   }
 }
