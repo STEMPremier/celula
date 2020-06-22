@@ -16,21 +16,28 @@ import Input from '.';
 <Description of={Input} />
 <Props of={Input} />
 
-<Story name="All Inputs" parameters={{ docs: { disable: true } }}>
-  <form id="formOne">
+<Story name="Input wiht Knobs" parameters={{ docs: { disable: true } }}>
+  <form id="inputWithKnobForm">
     <Input
-      className={text('className', '')}
-      disabled={boolean('disabled', false)}
-      helperText={text('text', '')}
-      htmlType={text('htmlType', '')}
-      icon={text('icon', '')}
-      label={text('label', 'Label')}
-      placeholderText={text('placeholderText', '')}
-      value={text('value', 'value')}
+      btnOptions={{
+        btnClick: action('`Input with Knobs` button onClick event triggered.'),
+        btnIcon: text('btnIcon', 'navigate', 'Button Options'),
+      }}
+      className={text('className', '', 'Input Options')}
+      disabled={boolean('disabled', false, 'Input Options')}
+      errorMsg={text('errorMsg', '', 'Input Options')}
+      formId={text('formId', 'inputWithKnobsForm', 'Input Options')}
+      handleChange={action('`Input with Knobs` onChange event triggered.')}
+      helpText={text('helpText', 'This is useful or helpful information.', 'Input Options')}
+      htmlType={text('htmlType', 'month', 'Input Options')}
+      icon={text('icon', '', 'Input Options')}
+      label={text('label', 'Input with Knobs', 'Input Options')}
+      name={text('name', 'inputWithKnobs', 'Input Options')}
+      placeholder={text('placeholder', 'Please fill this in.', 'Input Options')}
+      value={text('value', '','Input Options')}
     />
   </form>
 </Story>
-
 
 ### Types
 <Preview>
