@@ -138,9 +138,7 @@ class Input extends Component {
 
     return (
       <div className={classes}>
-        <label className="ce-input--label" htmlFor={name}>
-          {label}
-        </label>
+        <label htmlFor={name}>{label}</label>
         {helperText && (
           <div className="ce-input__helper-text">{helperText}</div>
         )}
