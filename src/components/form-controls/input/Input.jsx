@@ -17,22 +17,12 @@ class Input extends Component {
   state = {
     value: this.props.value,
     isValid: true,
-    isDate: false,
+    isDate:
+      this.state.htmlType === 'month' ||
+      this.state.htmlType === 'datetime-local' ||
+      this.state.htmlType === 'week',
   };
   /* eslint-enable react/destructuring-assignment */
-
-  componentDidMount = () => {
-    const { htmlType } = this.props;
-    if (
-      htmlType === 'month' ||
-      htmlType === 'datetime-local' ||
-      htmlType === 'week'
-    ) {
-      this.setState({
-        isDate: true,
-      });
-    }
-  };
 
   checkValiditiy = () => {
     const { htmlType } = this.props;
