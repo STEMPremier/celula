@@ -86,16 +86,9 @@ class Input extends Component {
       }
     }
 
-    // sets state for all types depending on the isValid boolean
-    if (valid === false) {
-      this.setState({
-        isValid: false,
-      });
-    } else {
-      this.setState({
-        isValid: true,
-      });
-    }
+    this.setState({
+      isValid: valid,
+    });
   };
 
   handleChange = event => {
