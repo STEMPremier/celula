@@ -139,42 +139,40 @@ class Input extends Component {
       <div className={classes}>
         <label htmlFor={id}>{label}</label>
         {helpText && <div className="ce-input__help-text">{helpText}</div>}
-        <div className="ce-input--box">
-          <div className="ce-input--wrapping-div">
-            {icon && (
-              <div className="ce-input__icon">
-                <SystemIcon name={icon} />
-              </div>
-            )}
-            <input
-              disabled={disabled}
-              form={formId}
-              icon={icon}
-              id={id}
-              max={max}
-              min={min}
-              name={name}
-              onBlur={this.checkValiditiy}
-              onChange={this.handleChange}
-              placeholder={placeholder}
-              type={htmlType}
-              value={value}
-            />
-            {isDate && (
-              <div className="ce-input--date-icon">
-                <SystemIcon name="calendar" />
-              </div>
-            )}
-            {btnIcon && (
-              <button
-                className="ce-input--gradient-button"
-                onClick={btnClick}
-                type="button"
-              >
-                <SystemIcon name={btnIcon} color="white" />
-              </button>
-            )}
-          </div>
+        <div className="ce-input__container">
+          {icon && (
+            <div className="ce-input__icon">
+              <SystemIcon name={icon} />
+            </div>
+          )}
+          <input
+            disabled={disabled}
+            form={formId}
+            icon={icon}
+            id={id}
+            max={max}
+            min={min}
+            name={name}
+            onBlur={this.checkValiditiy}
+            onChange={this.handleChange}
+            placeholder={placeholder}
+            type={htmlType}
+            value={value}
+          />
+          {isDate && (
+            <div className="ce-input__date-icon">
+              <SystemIcon name="calendar" />
+            </div>
+          )}
+          {btnIcon && (
+            <button
+              className="ce-input__button"
+              onClick={btnClick}
+              type="button"
+            >
+              <SystemIcon name={btnIcon} color="white" />
+            </button>
+          )}
         </div>
         {(!isValid || errorMsg) && (
           <ErrorBox errorMsg={errorMsg || 'Invalid Response'} />
