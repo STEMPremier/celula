@@ -107,7 +107,6 @@ class Input extends Component {
       btnOptions,
       className,
       disabled,
-      errorIcon,
       errorMsg,
       formId,
       helpText,
@@ -132,7 +131,6 @@ class Input extends Component {
         ),
         'ce-input--disabled': disabled,
         'ce-input--error': !isValid || errorMsg,
-        'ce-input--error-icon': errorIcon,
       },
       className,
     );
@@ -167,13 +165,6 @@ class Input extends Component {
                 <SystemIcon name="calendar" />
               </div>
             )}
-            {((!isValid && errorIcon) || (errorMsg && errorIcon)) && (
-              <span className="ce-input--error-icon">
-                <SystemIcon name="warning" color="red" />
-                <span className="ce-input--error-icon-text">{errorMsg}</span>
-              </span>
-            )}
-
             {btnIcon && (
               <button
                 className="ce-input--gradient-button"
@@ -185,8 +176,7 @@ class Input extends Component {
             )}
           </div>
         </div>
-
-        {((!isValid && !errorIcon) || (errorMsg && !errorIcon)) && (
+        {(!isValid || errorMsg) && (
           <ErrorBox errorMsg={errorMsg || 'Invalid Response'} />
         )}
       </div>
@@ -212,10 +202,6 @@ Input.propTypes = {
    * Disables the `<Input />`.
    */
   disabled: PropTypes.bool,
-  /**
-   * The default error styling is the outlined input with the error message box.  This errorIcon styling selection replaces that default error styling.
-   */
-  errorIcon: PropTypes.bool,
   /**
    * An error message to display in the `<Input />`.
    */
@@ -255,7 +241,7 @@ Input.propTypes = {
    */
   min: PropTypes.string,
   /**
-   * The name given to the `<Input />`. It connects the label to the `<Select />`.
+   * The name given to the `<Input />`. It connects the label to the `<Input />`.
    */
   name: PropTypes.string.isRequired,
   /**
@@ -279,7 +265,6 @@ Input.defaultProps = {
   },
   className: '',
   disabled: false,
-  errorIcon: null,
   errorMsg: '',
   formId: () => {},
   handleChange: () => {},
