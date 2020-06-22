@@ -110,7 +110,7 @@ class Input extends Component {
       errorIcon,
       errorMsg,
       formId,
-      helperText,
+      helpText,
       htmlType,
       icon,
       label,
@@ -140,9 +140,7 @@ class Input extends Component {
     return (
       <div className={classes}>
         <label htmlFor={id}>{label}</label>
-        {helperText && (
-          <div className="ce-input__helper-text">{helperText}</div>
-        )}
+        {helpText && <div className="ce-input__help-text">{helpText}</div>}
         <div className="ce-input--box">
           <div className="ce-input--wrapping-div">
             {icon && (
@@ -233,7 +231,7 @@ Input.propTypes = {
   /**
    * Any text to assist the user with this `<Input />`.
    */
-  helperText: PropTypes.string,
+  helpText: PropTypes.string,
   /**
    * The html type of the `<Input />`.
    */
@@ -285,7 +283,7 @@ Input.defaultProps = {
   errorMsg: '',
   formId: () => {},
   handleChange: () => {},
-  helperText: '',
+  helpText: '',
   htmlType: 'text',
   icon: '',
   max: '',
