@@ -123,6 +123,7 @@ class Input extends Component {
     const { value, isValid, isDate } = this.state;
     const { btnClick, btnIcon } = btnOptions;
 
+    const id = `${name}`;
     const classes = cx(
       'ce-input',
       {
@@ -138,7 +139,7 @@ class Input extends Component {
 
     return (
       <div className={classes}>
-        <label htmlFor={name}>{label}</label>
+        <label htmlFor={id}>{label}</label>
         {helperText && (
           <div className="ce-input__helper-text">{helperText}</div>
         )}
@@ -153,6 +154,7 @@ class Input extends Component {
               disabled={disabled}
               form={formId}
               icon={icon}
+              id={id}
               max={max}
               min={min}
               name={name}
