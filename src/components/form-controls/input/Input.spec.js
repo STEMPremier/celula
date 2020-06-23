@@ -3,8 +3,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-// eslint-disable-next-line import/named
-import { Input } from '.';
+import Input from '.';
 
 describe('<Input />', () => {
   describe('render()', () => {
