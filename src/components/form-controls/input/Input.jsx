@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
@@ -12,175 +12,188 @@ import {
 
 import './input.less';
 
-class Input extends Component {
-  /* eslint-disable react/destructuring-assignment */
-  state = {
-    value: this.props.value,
-    isValid: true,
-    isDate:
-      this.props.htmlType === 'month' ||
-      this.props.htmlType === 'datetime-local' ||
-      this.props.htmlType === 'week',
-  };
-  /* eslint-enable react/destructuring-assignment */
+const Input = props => {
+  const {
+    btnOptions,
+    className,
+    disabled,
+    errorMsg,
+    formId,
+    handleChange,
+    helpText,
+    htmlType,
+    icon,
+    initialValue,
+    label,
+    max,
+    min,
+    name,
+    placeholder,
+  } = props;
+  const { btnClick, btnIcon } = btnOptions;
+  const id = `${name}`;
 
-  checkValiditiy = () => {
-    const { htmlType } = this.props;
-    const { value } = this.state;
-    let valid = true;
+  const [errMsg, setErrMsg] = useState(errorMsg);
+  const [fieldValue, setFieldValue] = useState(initialValue);
+  const [isDate, setIsDate] = useState(
+    htmlType === 'month' ||
+      htmlType === 'datetime-local' ||
+      htmlType === 'week',
+  );
 
-    switch (htmlType) {
-      case 'email': {
-        // eslint-disable-next-line no-useless-escape
-        valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/.test(value);
-        break;
-      }
-      case 'password': {
-        const minLength = 8;
-        const passwordLongEnough = password =>
-          !!(password && password.length >= minLength);
+  const classes = cx(
+    'ce-input',
+    {
+      [`ce-input--${htmlType}`]: TYPES.includes(htmlType.toLowerCase()),
+      'ce-input--disabled': disabled,
+      'ce-input--error': errMsg,
+    },
+    className,
+  );
 
-        const passwordHasUppercase = password =>
-          !!(password && /[A-Z]/g.test(password));
+  useEffect(() => {
+    setErrMsg(errorMsg);
+  }, [errorMsg]);
 
-        const passwordHasLowercase = password =>
-          !!(password && /[a-z]/g.test(password));
+  useEffect(() => {
+    setFieldValue(initialValue);
+  }, [initialValue]);
 
-        const passwordHasNumber = password =>
-          !!(password && /[0-9]/g.test(password));
+  useEffect(() => {
+    setIsDate(
+      htmlType === 'month' ||
+        htmlType === 'datetime-local' ||
+        htmlType === 'week',
+    );
+  }, [htmlType]);
 
-        const passwordHasSpecial = password =>
-          !!(password && /[^A-Za-z0-9]/g.test(password));
+  const checkValiditiy = () => {
+    let msg = '';
 
-        const passwordSatisfiesThree = password => {
-          let count = 0;
-          if (passwordHasUppercase(password)) count += 1;
-          if (passwordHasLowercase(password)) count += 1;
-          if (passwordHasNumber(password)) count += 1;
-          if (passwordHasSpecial(password)) count += 1;
-          const min8 = passwordLongEnough(password);
-          if (count > 2 && min8 === true) {
-            valid = true;
-          } else {
-            valid = false;
+    if (fieldValue) {
+      switch (htmlType) {
+        case 'email': {
+          const pattern = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
+
+          if (!pattern.test(fieldValue)) msg = 'Invalid email address.';
+
+          setErrMsg(msg);
+          break;
+        }
+        case 'password': {
+          const minLength = 8;
+
+          const passwordLongEnough = password =>
+            !!(password && password.length >= minLength);
+
+          const passwordHasUppercase = password =>
+            !!(password && /[A-Z]/g.test(password));
+
+          const passwordHasLowercase = password =>
+            !!(password && /[a-z]/g.test(password));
+
+          const passwordHasNumber = password =>
+            !!(password && /[0-9]/g.test(password));
+
+          const passwordHasSpecial = password =>
+            !!(password && /[^A-Za-z0-9]/g.test(password));
+
+          const passwordSatisfiesThree = password => {
+            let count = 0;
+
+            if (passwordHasUppercase(password)) count += 1;
+            if (passwordHasLowercase(password)) count += 1;
+            if (passwordHasNumber(password)) count += 1;
+            if (passwordHasSpecial(password)) count += 1;
+
+            return count >= 3;
+          };
+
+          const longEnough = passwordLongEnough(fieldValue);
+          const satisfies3 = passwordSatisfiesThree(fieldValue);
+
+          if (!longEnough) {
+            msg = 'Password must be at least 8 characters long.';
+          } else if (longEnough && !satisfies3) {
+            msg = 'Password must meet at least 3 of the criteria.';
           }
-        };
-        passwordSatisfiesThree(value);
-        break;
-      }
-      case 'url': {
-        const pattern = new RegExp(
-          '^(https?:\\/\\/)?' + // protocol
-          '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
-          '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
-          '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
-          '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
-            '(\\#[-a-z\\d_]*)?$',
-          'i',
-        ); // fragment locator
-        valid = pattern.test(value);
-        break;
-      }
-      default: {
-        valid = true;
-      }
-    }
 
-    this.setState({
-      isValid: valid,
-    });
+          setErrMsg(msg);
+
+          break;
+        }
+        case 'url': {
+          const pattern = new RegExp(
+            '^(https?:\\/\\/)?' + // protocol
+            '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+            '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+            '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+            '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+              '(\\#[-a-z\\d_]*)?$',
+            'i',
+          ); // fragment locator
+
+          if (!pattern.test(fieldValue)) msg = 'Invalid url.';
+
+          setErrMsg(msg);
+
+          break;
+        }
+        default: {
+          setErrMsg(errMsg);
+        }
+      }
+    } else {
+      setErrMsg(msg);
+    }
   };
 
-  handleChange = event => {
-    const { handleChange } = this.props;
+  const onChangeHandler = event => {
     const { value } = event.target;
 
-    this.setState({
-      value,
-    });
-
+    setFieldValue(value);
     handleChange(value);
   };
 
-  render() {
-    const {
-      btnOptions,
-      className,
-      disabled,
-      errorMsg,
-      formId,
-      helpText,
-      htmlType,
-      icon,
-      label,
-      max,
-      min,
-      name,
-      placeholder,
-    } = this.props;
-
-    const { value, isValid, isDate } = this.state;
-    const { btnClick, btnIcon } = btnOptions;
-
-    const id = `${name}`;
-    const classes = cx(
-      'ce-input',
-      {
-        [`ce-input--${htmlType}`]: TYPES.includes(
-          htmlType.toString().toLowerCase(),
-        ),
-        'ce-input--disabled': disabled,
-        'ce-input--error': !isValid || errorMsg,
-      },
-      className,
-    );
-
-    return (
-      <div className={classes}>
-        <label htmlFor={id}>{label}</label>
-        {helpText && <div className="ce-input__help-text">{helpText}</div>}
-        <div className="ce-input__container">
-          {icon && (
-            <div className="ce-input__icon">
-              <SystemIcon name={icon} />
-            </div>
-          )}
-          <input
-            disabled={disabled}
-            form={formId}
-            icon={icon}
-            id={id}
-            max={max}
-            min={min}
-            name={name}
-            onBlur={this.checkValiditiy}
-            onChange={this.handleChange}
-            placeholder={placeholder}
-            type={htmlType}
-            value={value}
-          />
-          {isDate && (
-            <div className="ce-input__date-icon">
-              <SystemIcon name="calendar" />
-            </div>
-          )}
-          {btnIcon && (
-            <button
-              className="ce-input__button"
-              onClick={btnClick}
-              type="button"
-            >
-              <SystemIcon name={btnIcon} color="white" />
-            </button>
-          )}
-        </div>
-        {(!isValid || errorMsg) && (
-          <ErrorBox errorMsg={errorMsg || 'Invalid Response'} />
+  return (
+    <div className={classes}>
+      <label htmlFor={id}>{label}</label>
+      {helpText && <div className="ce-input__help-text">{helpText}</div>}
+      <div className="ce-input__container">
+        {icon && (
+          <div className="ce-input__icon">
+            <SystemIcon name={icon} />
+          </div>
+        )}
+        <input
+          disabled={disabled}
+          form={formId}
+          icon={icon}
+          id={id}
+          max={max}
+          min={min}
+          name={name}
+          onBlur={checkValiditiy}
+          onChange={onChangeHandler}
+          placeholder={placeholder}
+          type={htmlType}
+          value={fieldValue}
+        />
+        {isDate && (
+          <div className="ce-input__date-icon">
+            <SystemIcon name="calendar" />
+          </div>
+        )}
+        {btnIcon && (
+          <button className="ce-input__button" onClick={btnClick} type="button">
+            <SystemIcon name={btnIcon} color="white" />
+          </button>
         )}
       </div>
-    );
-  }
-}
+      {errMsg && <ErrorBox errorMsg={errMsg} />}
+    </div>
+  );
+};
 
 Input.propTypes = {
   /**
@@ -225,6 +238,14 @@ Input.propTypes = {
    */
   icon: PropTypes.string,
   /**
+   * The initial value of the `<Input />`, if any.
+   */
+  initialValue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.bool,
+  ]),
+  /**
    * The `<Input />` label.
    */
   label: PropTypes.string.isRequired,
@@ -246,29 +267,19 @@ Input.propTypes = {
    * Placeholder text for the `<Input />`/
    */
   placeholder: PropTypes.string,
-  /**
-   * The value of the `<Input />`.
-   */
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.bool,
-  ]).isRequired,
 };
 
 Input.defaultProps = {
-  btnOptions: {
-    btnClick: () => {},
-    btnIcon: '',
-  },
+  btnOptions: { btnClick: () => {}, btnIcon: '' },
   className: '',
   disabled: false,
   errorMsg: '',
-  formId: () => {},
+  formId: '',
   handleChange: () => {},
   helpText: '',
   htmlType: 'text',
   icon: '',
+  initialValue: null,
   max: '',
   min: '',
   placeholder: '',
