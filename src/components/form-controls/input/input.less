@@ -1,6 +1,6 @@
 @import '../../../styles/celula';
 
-.ce-select {
+.ce-input {
   label {
     color: @label-text;
     display: block;
@@ -9,7 +9,7 @@
     margin: 0.3rem;
   }
 
-  .ce-select__help-text {
+  .ce-input__help-text {
     color: @label-text;
     display: block;
     font-size: 1.4rem;
@@ -17,7 +17,7 @@
     margin: 0.3rem;
   }
 
-  .ce-select__container {
+  .ce-input__container {
     background-color: @default-background;
     border: 0.1rem solid @default-gray;
     border-radius: 0.5rem;
@@ -26,10 +26,9 @@
     height: 6rem;
     justify-content: space-between;
     margin: 0.3rem;
-    padding-left: 1rem;
     width: calc(100% - 0.6rem);
 
-    .ce-select__icon {
+    .ce-input__icon {
       align-self: center;
       padding-left: 1rem;
 
@@ -44,33 +43,33 @@
       }
     }
 
-    select {
-      // should remove the default arrows from most browsers
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      -ms-appearance: none;
-      -o-appearance: none;
-      appearance: none;
+    input {
       background-color: transparent;
       border: none;
+      border-radius: 0.5rem;
       box-sizing: border-box;
+      height: 100%;
       flex-grow: 1;
-      padding-left: 1rem;
+      padding: 0 0 0 1rem;
 
-      // caret file brought into select as background-image and styled here
-      background-image: url('./down-arrow.png');
-      background-position: calc(100% - 2rem) calc(1em + 0.9rem),
-        calc(100% - 1.5rem) calc(1em + 0.2rem), calc(100% - 2.5rem) 0.5em;
-      background-repeat: no-repeat;
-      background-size: 1.5rem;
-
-      // removes the arrow from the IE
-      &::ms-expand {
-        display: none;
+      &:focus {
+        outline: none;
       }
     }
 
-    .ce-select__button {
+    input[type="month"], input[type="datetime-local"], input[type="time"] {
+      &::-webkit-calendar-picker-indicator {
+        background: none;
+      }
+    }
+
+    .ce-input__date-icon {
+      align-self: center;
+      padding-right: 2rem;
+      stroke: @base-text;
+    }
+
+    .ce-input__button {
       background: @gradient-cool;
       border: none;
       border-radius: 0 0.5rem 0.5rem 0;
@@ -90,6 +89,7 @@
         0.3rem 0 @focus-blue,
         0 -0.3rem @focus-blue,
         0 0.3rem @focus-blue;
+      outline: none;
     }
 
     &:hover {
@@ -107,22 +107,33 @@
     }
   }
 
-  &.ce-select--disabled {
+  &.ce-input--hidden {
+    border: none;
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  &.ce-input--disabled {
     label {
       color: @disabled-text;
     }
 
-    .ce-select__help-text {
+    .ce-input__help-text {
       color: @disabled-text;
     }
 
-    .ce-select__container {
-      .ce-select__icon svg {
+    .ce-input__container {
+      .ce-input__icon svg {
         stroke: @disabled-text;
       }
 
-      select {
+      input {
         color: @disabled-text;
+      }
+
+      .ce-input__date-icon svg {
+        stroke: @disabled-text;
       }
 
       &:focus {
@@ -137,26 +148,30 @@
         box-shadow: none;
       }
 
-      .ce-select__button {
+      .ce-input__button {
         pointer-events: none;
         background: @default-disabled-gray;
       }
     }
   }
 
-  &.ce-select--error {
-    .ce-select__container {
+  &.ce-input--error {
+    .ce-input__container {
       border-color: @error-element-border;
 
-      .ce-select__icon svg {
+      .ce-input__icon svg {
         stroke: @error-text;
       }
 
-      select {
+      input {
         color: @error-text;
       }
 
-      .ce-select__button {
+      .ce-input__date-icon svg {
+        stroke: @error-text;
+      }
+
+      .ce-input__button {
         background: @error-red;
       }
 

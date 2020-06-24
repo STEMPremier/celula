@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> render() render the Input component 1`] = `
+<div
+  className="ce-input ce-input--text"
+>
+  <label
+    htmlFor="test"
+  >
+    test label
+  </label>
+  <div
+    className="ce-input__container"
+  >
+    <input
+      disabled={false}
+      form=""
+      icon=""
+      id="test"
+      max=""
+      min=""
+      name="test"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder=""
+      type="text"
+      value={null}
+    />
+  </div>
+</div>
+`;
