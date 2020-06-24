@@ -154,16 +154,20 @@ button {
 .ce-button {
   border-radius: 3.5rem;
   border-width: 0;
-  display: inline-block;
+  display: flex;
   font-family: inherit;
   font-size: 1.6rem;
   font-weight: 900;
+  justify-content: center;
   text-transform: uppercase;
 }
 @media screen and (max-width: 768px) {
   .ce-button {
     width: 100%;
   }
+}
+.ce-button .ce-button__label {
+  flex-grow: 1;
 }
 .ce-button.ce-button--small .ce-button__label {
   border-radius: 3.5rem;
@@ -172,11 +176,6 @@ button {
   margin: 0.2rem;
   padding: 0.85rem 3.8rem;
 }
-@media screen and (max-width: 768px) {
-  .ce-button.ce-button--small .ce-button__label {
-    width: calc(100% - .4rem);
-  }
-}
 .ce-button.ce-button--large .ce-button__label {
   border-radius: 3.5rem;
   display: inline-block;
@@ -184,22 +183,12 @@ button {
   margin: 0.2rem;
   padding: 1.3rem 5.8rem;
 }
-@media screen and (max-width: 768px) {
-  .ce-button.ce-button--large .ce-button__label {
-    width: calc(100% - .4rem);
-  }
-}
 .ce-button.ce-button--jumbo .ce-button__label {
   border-radius: 3.5rem;
   display: inline-block;
   font-size: 1.6rem;
   margin: 0.2rem;
   padding: 2.3rem 5.8rem;
-}
-@media screen and (max-width: 768px) {
-  .ce-button.ce-button--jumbo .ce-button__label {
-    width: calc(100% - .4rem);
-  }
 }
 .ce-button:focus {
   box-shadow: 0 0 0 5px #b2e7ff;
