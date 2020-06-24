@@ -9,6 +9,7 @@ import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
 
 import Input from '.';
+import { INPUT_TYPES as TYPES } from '../../../utils/constants';
 
 <Meta component={Input} title="Components/Molecules/Form Controls/Input" />
 
@@ -29,300 +30,151 @@ import Input from '.';
       formId={text('formId', 'inputWithKnobsForm', 'Input Options')}
       handleChange={action('`Input with Knobs` onChange event triggered.')}
       helpText={text('helpText', 'This is useful or helpful information.', 'Input Options')}
-      htmlType={text('htmlType', 'month', 'Input Options')}
+      htmlType={text('htmlType', 'text', 'Input Options')}
       icon={text('icon', '', 'Input Options')}
+      initialValue={text('initialValue', '','Input Options')}
       label={text('label', 'Input with Knobs', 'Input Options')}
       name={text('name', 'inputWithKnobs', 'Input Options')}
       placeholder={text('placeholder', 'Please fill this in.', 'Input Options')}
-      value={text('value', '','Input Options')}
     />
   </form>
 </Story>
 
 ### Types
 <Preview>
-<Story name="Input Text States">
-  <form id="formInputStates">
-    <Input 
-      label="Text input label (optional)"
-      value=""
-    />
-   </form>
-</Story>
+  <Story name="Input Types">
+    <form id="inputTypesForm">
+      {TYPES.map(type => (
+        <div key={type}>
+          <Input
+            formId="inputTypesForm"
+            htmlType={type}
+            label={`Label for ${type}`}
+            name={`${type}InputStandard`}
+          />
+          <Input
+            formId="inputTypesForm"
+            helpText={`Help text for ${type}`}
+            htmlType={type}
+            label={`Label for ${type}`}
+            name={`${type}InputHelpText`}
+          />
+          <Input
+            formId="inputTypesForm"
+            htmlType={type}
+            icon="edit"
+            label={`Label for ${type}`}
+            name={`${type}InputIcon`}
+          />
+          <Input
+            btnOptions={{
+              btnClick: action(`'Input Types' of type ${type} button onClick event triggered.`),
+              btnIcon: 'navigate',
+            }}
+            formId="inputTypesForm"
+            htmlType={type}
+            label={`Label for ${type}`}
+            name={`${type}InputButton`}
+          />
+        </div>
+      ))}
+    </form>
+  </Story>
 </Preview>
 
+### Input States
 <Preview>
-<Story name="Input Text with Helper Text">
-  <form id="formHelperText">
-    <Input 
-      label="Text input label (optional)"
-      value="value"
-      helperText="This is where the helper text will appear by default.  An example would be 'This can be a high level summary like 'I serve foos to homeless people'.'"
-    />
-   </form>
-</Story>
+  <Story name="Input States">
+    <form id="inputStatesForm">
+      <h2>Default</h2>
+      <Input
+        formId="inputStatesForm"
+        label="Label for Standard"
+        name="defaultTextInput"
+      />
+      <Input
+        formId="inputStatesForm"
+        helpText="Help text for default"
+        label="Label for Disabled"
+        name="defaultTextInputWithHelpText"
+      />
+      <Input
+        formId="inputStatesForm"
+        icon="edit"
+        label="Label for Icon"
+        name="defaultTextInputWithIcon"
+      />
+      <Input
+        btnOptions={{
+          btnClick: action(`'Input Types' button onClick event triggered.`),
+          btnIcon: 'navigate',
+        }}
+        formId="inputStatesForm"
+        label="Label for Button"
+        name="defaultTextInputWithButton"
+      />
+      <h2>Disabled</h2>
+      <Input
+        disabled
+        formId="inputStatesForm"
+        label="Label for Standard"
+        name="disabledTextInput"
+      />
+      <Input
+        disabled
+        formId="inputStatesForm"
+        helpText="Help text for disabled"
+        label="Label for Disabled"
+        name="disabledTextInputWithHelpText"
+      />
+      <Input
+        disabled
+        formId="inputStatesForm"
+        icon="edit"
+        label="Label for Icon"
+        name="disabledTextInputWithIcon"
+      />
+      <Input
+        disabled
+        btnOptions={{
+          btnClick: action(`'Input Types' disabled button onClick event triggered.`),
+          btnIcon: 'navigate',
+        }}
+        formId="inputStatesForm"
+        label="Label for Button"
+        name="disabledTextInputWithButton"
+      />
+      <h2>Error</h2>
+      <Input
+        errorMsg="This is an error message."
+        formId="inputStatesForm"
+        label="Label for Standard"
+        name="errorTextInput"
+      />
+      <Input
+        errorMsg="This is an error message."
+        formId="inputStatesForm"
+        helpText="Help text for error"
+        label="Label for Disabled"
+        name="errorTextInputWithHelpText"
+      />
+      <Input
+        errorMsg="This is an error message."
+        formId="inputStatesForm"
+        icon="edit"
+        label="Label for Icon"
+        name="errorTextInputWithIcon"
+      />
+      <Input
+        btnOptions={{
+          btnClick: action(`'Input Types' error button onClick event triggered.`),
+          btnIcon: 'navigate',
+        }}
+        errorMsg="This is an error message."
+        formId="inputStatesForm"
+        label="Label for Button"
+        name="errorTextInputWithButton"
+      />
+    </form>
+  </Story>
 </Preview>
-
-<Preview>
-<Story name="Input With Default Value">
-  <form id="formDefaultValue">
-   <Input 
-      label="Would you like to complete this form?"
-      value="This is a default value"
-    />
-   </form>
-</Story>
-</Preview>
-
-<Preview>
-<Story name="Input With Placeholder Text">
-  <form id="formPlaceholderText">
-   <Input 
-      label="What did you do?"
-      placeholderText="ex. I fed cats and dogs."
-    />
-   </form>
-</Story>
-</Preview>
-
-<Preview>
-<Story name="Input Disabled">
-  <form id="formDisabled">
-   <Input 
-      label="Text input label (optional)"
-      value="Disabled"
-      disabled
-    />
-    <Input 
-      label="Text input label (optional)"
-      value="Disabled with gradient icon box"
-      disabled
-      showGradientIconBox
-    />
-   </form>
-</Story>
-</Preview>
-
-<Preview>
-<Story name="Input Error">
-  <form id="formError">
-    <Input 
-      label="Text input label (optional)"
-      value="Error"
-      errorMsg="Invalid Entry"
-    />
-    <Input 
-      label="Text input label (optional)"
-      value="Error"
-      errorMsg="Invalid Entry"
-      showGradientIconBox
-    /> 
-    <Input 
-      label="Error Icon State"
-      value="Error"
-      errorMsg="Invalid Entry"
-      errorIcon 
-    /> 
-   </form>
-</Story>
-</Preview>
-
-<Preview>
-<Story name="Input with Gradient Icon Box">
-  <form id="formGradientIconBox">
-     <Input 
-      label="Text input label (optional)"
-      value="showGradientIconBox"
-      showGradientIconBox
-    />
-   </form>
-</Story>
-</Preview>
-
-<Preview>
-<Story name="Input Email">
-  <form id="formEmail">
-     <Input 
-      label="What is your email?"
-      value=""
-      htmlType="email"
-    />
-   </form>
-</Story>
-</Preview>
-
-<Preview>
-<Story name="Input Hidden">
-  <form id="formHidden">
-     <Input 
-      label="Hidden"
-      value=""
-      htmlType="hidden"
-    />
-   </form>
-</Story>
-</Preview>
-
-<Preview>
-<Story name="Input Month">
-  <form id="formMonth">
-     <Input 
-      label="Month"
-      value="2019-06"
-      htmlType="month"
-      // these mins and maxs actually block the datepicker from showing dates before or after this range.  
-      min="2019-06"
-      max="2020-01"
-    />
-   </form>
-</Story>
-</Preview>
-
-<Preview>
-<Story name="Input Week">
-  <form id="formWeek">
-     <Input 
-      label="Week"
-      value=""
-      htmlType="week"
-      min="2019-W18"
-      max="2020-W26"
-    />
-   </form>
-</Story>
-</Preview>
-
-<Preview>
-<Story name="Input Datetime Local">
-  <form id="formDateRange">
-     <Input 
-      label="When did you start?"
-      value=""
-      htmlType="datetime-local"
-    />
-   </form>
-</Story>
-</Preview>
-
-<Preview>
-<Story name="Input Time">
-  <form id="formTime">
-     <Input 
-      label="Time"
-      value=""
-      htmlType="time"
-    />
-   </form>
-</Story>
-</Preview>
-
-<Preview>
-<Story name="Input File">
-  <form id="formFile">
-     <Input 
-      label="File"
-      value=""
-      htmlType="file"
-    />
-   </form>
-</Story>
-</Preview>
-
-<Preview>
-<Story name="Input Password">
-  <form id="formPassword">
-     <Input 
-      label="Password"
-      value=""
-      htmlType="password"
-    />
-   </form>
-</Story>
-</Preview>
-
-<Preview>
-<Story name="Input Search">
-  <form id="formSearch">
-     <Input 
-      label="Search"
-      value=""
-      htmlType="search"
-      showGradientIconBox
-    />
-   </form>
-</Story>
-</Preview>
-
-<Preview>
-<Story name="Input Tel">
-  <form id="formTel">
-     <Input 
-      label="Tel"
-      value=""
-      htmlType="tel"
-    />
-   </form>
-</Story>
-</Preview>
-
-<Preview>
-<Story name="Input Url">
-  <form id="formUrl">
-     <Input 
-      label="Url"
-      value=""
-      htmlType="url"
-    />
-   </form>
-</Story>
-</Preview>
-
-<Preview>
-<Story name="Input Color">
-  <form id="formColor">
-     <Input 
-      label="Color"
-      value=""
-      htmlType="color"
-    />
-   </form>
-</Story>
-</Preview>
-
-<Preview>
-<Story name="Input with Icon">
-  <form id="formIcon">
-     <Input 
-      label="Icon with Default Text"
-      value="Text input with user icon"
-      htmlType="text"
-      icon="user"
-    />
-    <Input 
-      label="Icon automatically on the right for dates"
-      value="Start Date (mm/yyyy)"
-      htmlType="month"
-    />
-    <Input 
-      label="Icon for Password"
-      htmlType="password"
-      icon="visibility"  
-    />
-   </form>
-</Story>
-</Preview>
-
-<Preview>
-<Story name="Input Number">
-  <form id="formNumber">
-     <Input 
-      label="Number"
-      value=""
-      htmlType="number"
-    />
-   </form>
-</Story>
-</Preview>
-
-
-
