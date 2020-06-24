@@ -26,7 +26,6 @@
     height: 6rem;
     justify-content: space-between;
     margin: 0.3rem;
-    padding-left: 1rem;
     width: calc(100% - 0.6rem);
 
     .ce-input__icon {
@@ -47,27 +46,21 @@
     input {
       background-color: transparent;
       border: none;
+      border-radius: 0.5rem;
       box-sizing: border-box;
+      height: 100%;
       flex-grow: 1;
-      padding-left: 1rem;
+      padding: 0 0 0 1rem;
+
+      &:focus {
+        outline: none;
+      }
     }
 
-    input[type='month']::-webkit-calendar-picker-indicator {
-      color: transparent;
-      background: none;
-      width: 40%;
-    }
-
-    input[type='datetime-local']::-webkit-calendar-picker-indicator {
-      color: transparent;
-      background: none;
-      width: 40%;
-    }
-
-    input[type='week']::-webkit-calendar-picker-indicator {
-      color: transparent;
-      background: none;
-      width: 40%;
+    input[type="month"], input[type="datetime-local"], input[type="time"] {
+      &::-webkit-calendar-picker-indicator {
+        background: none;
+      }
     }
 
     .ce-input__date-icon {
@@ -96,6 +89,7 @@
         0.3rem 0 @focus-blue,
         0 -0.3rem @focus-blue,
         0 0.3rem @focus-blue;
+      outline: none;
     }
 
     &:hover {
@@ -114,12 +108,10 @@
   }
 
   &.ce-input--hidden {
-    .ce-input--container {
-      border: none;
-      display: none;
-      height: 0;
-      width: 0;
-    }
+    border: none;
+    display: none;
+    height: 0;
+    width: 0;
   }
 
   &.ce-input--disabled {
