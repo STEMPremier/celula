@@ -14,7 +14,7 @@ exports[`<Input /> render() render the Input component 1`] = `
   >
     <input
       disabled={false}
-      form={[Function]}
+      form=""
       icon=""
       id="test"
       max=""
@@ -24,6 +24,7 @@ exports[`<Input /> render() render the Input component 1`] = `
       onChange={[Function]}
       placeholder=""
       type="text"
+      value={null}
     />
   </div>
 </div>
