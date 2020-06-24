@@ -12,10 +12,11 @@ button {
 .ce-button {
   border-radius: 3.5rem;
   border-width: 0;
-  display: inline-block;
+  display: flex;
   font-family: inherit;
   font-size: 1.6rem;
   font-weight: 900;
+  justify-content: center;
   text-transform: uppercase;
 
   // Responsive Rules
@@ -23,6 +24,10 @@ button {
     @media (max-width: 768px) {
       width: 100%;
     }
+  }
+
+  .ce-button__label {
+    flex-grow: 1;
   }
 
   // Sizes
@@ -33,12 +38,6 @@ button {
       font-size: 1.2rem;
       margin: 0.2rem;
       padding: 0.85rem 3.8rem;
-
-      @media screen {
-        @media (max-width: 768px) {
-          width: ~'calc(100% - .4rem)'; // 100% - the total of the l/r border
-        }
-      }
     }
   }
 
@@ -49,12 +48,6 @@ button {
       font-size: 1.6rem;
       margin: 0.2rem;
       padding: 1.3rem 5.8rem;
-
-      @media screen {
-        @media (max-width: 768px) {
-          width: ~'calc(100% - .4rem)'; // 100% - the total l/r border
-        }
-      }
     }
   }
 
@@ -65,12 +58,6 @@ button {
       font-size: 1.6rem;
       margin: 0.2rem;
       padding: 2.3rem 5.8rem;
-
-      @media screen {
-        @media (max-width: 768px) {
-          width: ~'calc(100% - .4rem)'; // 100% - the total of the l/r border
-        }
-      }
     }
   }
 
