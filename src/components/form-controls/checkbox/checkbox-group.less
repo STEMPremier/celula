@@ -45,6 +45,11 @@
         // The dot
         &::after {
           background-color: @checked-disabled-gray;
+          border: 0.5rem solid @white;
+          box-shadow: -1px 0 @checked-disabled-gray,
+            1px 0 @checked-disabled-gray,
+            0 -1px @checked-disabled-gray,
+            0 1px @checked-disabled-gray;
         }
       }
     }
@@ -65,10 +70,10 @@
       &::after {
         background-color: @checked-red;
         border: 0.5rem solid @white;
-        box-shadow: -0.5px 0 @checked-red,
-          0.5px 0 @checked-red,
-          0 -0.5px @checked-red,
-          0 0.5px @checked-red;
+        box-shadow: -1px 0 @checked-red,
+          1px 0 @checked-red,
+          0 -1px @checked-red,
+          0 1px @checked-red;
       }
 
       // Hover
