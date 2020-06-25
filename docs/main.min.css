@@ -879,7 +879,7 @@ body {
 .ce-checkbox input + label::after {
   background-color: #fbfbfb;
   border-radius: 0.3rem;
-  box-shadow: -0.5px 0 #b2b2b2, 0.5px 0 #b2b2b2, 0 -0.5px #b2b2b2, 0 0.5px #b2b2b2;
+  box-shadow: -1px 0 #b2b2b2, 1px 0 #b2b2b2, 0 -1px #b2b2b2, 0 1px #b2b2b2;
   box-sizing: border-box;
   content: '';
   height: 2rem;
@@ -912,7 +912,7 @@ body {
 .ce-checkbox input:checked + label::after {
   background-color: #192344;
   border: 0.5rem solid #fff;
-  box-shadow: -0.5px 0 #192344, 0.5px 0 #192344, 0 -0.5px #192344, 0 0.5px #192344;
+  box-shadow: -1px 0 #192344, 1px 0 #192344, 0 -1px #192344, 0 1px #192344;
 }
 .ce-checkbox input:checked + label:hover::before {
   background-color: #e6f7ff;
@@ -940,14 +940,14 @@ body {
 }
 .ce-checkbox.ce-checkbox--disabled input:checked + label::after {
   background-color: #aeaeae;
-  box-shadow: -0.5px 0 #aeaeae, 0.5px 0 #aeaeae, 0 -0.5px #aeaeae, 0 0.5px #aeaeae;
+  box-shadow: -1px 0 #aeaeae, 1px 0 #aeaeae, 0 -1px #aeaeae, 0 1px #aeaeae;
 }
 .ce-checkbox.ce-checkbox--error input + label {
   color: #e5004b;
 }
 .ce-checkbox.ce-checkbox--error input:checked + label::after {
   background-color: #e5004b;
-  box-shadow: -0.5px 0 #e5004b, 0.5px 0 #e5004b, 0 -0.5px #e5004b, 0 0.5px #e5004b;
+  box-shadow: -1px 0 #e5004b, 1px 0 #e5004b, 0 -1px #e5004b, 0 1px #e5004b;
 }
 .ce-checkbox.ce-checkbox--error input:checked + label:hover::before {
   background-color: #ffe5ed;
@@ -1148,6 +1148,8 @@ body {
 }
 .ce-checkbox-group.ce-checkbox-group--disabled input:checked + label::after {
   background-color: #aeaeae;
+  border: 0.5rem solid #fff;
+  box-shadow: -1px 0 #aeaeae, 1px 0 #aeaeae, 0 -1px #aeaeae, 0 1px #aeaeae;
 }
 .ce-checkbox-group.ce-checkbox-group--error {
   border: 0.3rem solid #e5004b;
@@ -1159,7 +1161,7 @@ body {
 .ce-checkbox-group.ce-checkbox-group--error input:checked + label::after {
   background-color: #e5004b;
   border: 0.5rem solid #fff;
-  box-shadow: -0.5px 0 #e5004b, 0.5px 0 #e5004b, 0 -0.5px #e5004b, 0 0.5px #e5004b;
+  box-shadow: -1px 0 #e5004b, 1px 0 #e5004b, 0 -1px #e5004b, 0 1px #e5004b;
 }
 .ce-checkbox-group.ce-checkbox-group--error input:checked + label:hover::before {
   background-color: #ffe5ed;
