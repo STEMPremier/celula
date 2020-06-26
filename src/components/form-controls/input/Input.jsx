@@ -19,7 +19,6 @@ const Input = props => {
     disabled,
     errorMsg,
     formId,
-    handleChange,
     helpText,
     htmlType,
     icon,
@@ -33,8 +32,8 @@ const Input = props => {
   const { btnClick, btnIcon } = btnOptions;
   const id = `${name}`;
 
-  const [errMsg, setErrMsg] = useState(errorMsg);
   const [fieldValue, setFieldValue] = useState(initialValue);
+  const [errMsg, setErrMsg] = useState(errorMsg);
   const [isDate, setIsDate] = useState(
     htmlType === 'month' ||
       htmlType === 'datetime-local' ||
@@ -52,10 +51,6 @@ const Input = props => {
   );
 
   useEffect(() => {
-    setErrMsg(errorMsg);
-  }, [errorMsg]);
-
-  useEffect(() => {
     setFieldValue(initialValue);
   }, [initialValue]);
 
@@ -67,6 +62,10 @@ const Input = props => {
     );
   }, [htmlType]);
 
+  useEffect(() => {
+    setErrMsg(errorMsg);
+  }, [errorMsg]);
+
   const checkValiditiy = () => {
     let msg = '';
 
@@ -77,7 +76,6 @@ const Input = props => {
 
           if (!pattern.test(fieldValue)) msg = 'Invalid email address.';
 
-          setErrMsg(msg);
           break;
         }
         case 'password': {
@@ -118,8 +116,6 @@ const Input = props => {
             msg = 'Password must meet at least 3 of the criteria.';
           }
 
-          setErrMsg(msg);
-
           break;
         }
         case 'url': {
@@ -135,20 +131,19 @@ const Input = props => {
 
           if (!pattern.test(fieldValue)) msg = 'Invalid url.';
 
-          setErrMsg(msg);
-
           break;
         }
         default: {
-          setErrMsg(errMsg);
+          break;
         }
       }
-    } else {
-      setErrMsg(msg);
     }
+
+    setErrMsg(msg);
   };
 
-  const onChangeHandler = event => {
+  const handleChange = event => {
+    const { handleChange } = props; // eslint-disable-line no-shadow
     const { value } = event.target;
 
     setFieldValue(value);
@@ -174,7 +169,7 @@ const Input = props => {
           min={min}
           name={name}
           onBlur={checkValiditiy}
-          onChange={onChangeHandler}
+          onChange={handleChange}
           placeholder={placeholder}
           type={htmlType}
           value={fieldValue}

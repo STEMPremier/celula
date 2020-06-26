@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
@@ -9,74 +9,61 @@ import './checkbox.less';
 /**
  * `Checkboxes` allow the user to select one or more items from a set. They can be used to turn an option on or off, select one or multiple items from a list, or present a list containing sub-selections.
  */
-class Checkbox extends Component {
-  state = {
-    checked: this.props.checked, // eslint-disable-line react/destructuring-assignment
+const Checkbox = props => {
+  const {
+    checked,
+    className,
+    disabled,
+    errorMsg,
+    formId,
+    name,
+    label,
+    value,
+  } = props;
+  const id = `${name}_${value}`;
+
+  const [isChecked, setIsChecked] = useState(checked);
+
+  const classes = cx(
+    'ce-checkbox',
+    {
+      'ce-checkbox--disabled': disabled,
+      'ce-checkbox--error': errorMsg,
+    },
+    className,
+  );
+
+  useEffect(() => {
+    setIsChecked(checked);
+  }, [checked]);
+
+  const handleChange = event => {
+    /* eslint-disable no-shadow */
+    const { handleChange } = props;
+    const { checked, value } = event.target;
+    /* eslint-enable no-shadow */
+
+    setIsChecked(checked);
+    handleChange(value);
   };
 
-  // This changes the state when the `checked` prop changes, for non-grouped use
-  componentDidUpdate(prevProps) {
-    const { checked } = this.props;
-
-    if (prevProps.checked !== checked) {
-      /* eslint-disable react/no-did-update-set-state */
-      this.setState({
-        checked,
-      });
-      /* eslint-enable react/no-did-update-set-state */
-    }
-  }
-
-  // This changes the `checked` state for all use-cases
-  handleChange = event => {
-    const { handleChange } = this.props;
-
-    this.setState({
-      checked: event.target.checked,
-    });
-
-    handleChange(event.target.value);
-  };
-
-  render() {
-    const {
-      className,
-      disabled,
-      errorMsg,
-      formId,
-      name,
-      label,
-      value,
-    } = this.props;
-    const { checked } = this.state;
-    const id = `${name}_${value}`;
-    const classes = cx(
-      'ce-checkbox',
-      {
-        'ce-checkbox--disabled': disabled,
-        'ce-checkbox--error': errorMsg,
-      },
-      className,
-    );
-
-    return (
-      <div className={classes}>
-        <input
-          checked={checked}
-          disabled={disabled}
-          form={formId}
-          id={id}
-          name={name}
-          onChange={this.handleChange}
-          type="checkbox"
-          value={value}
-        />
-        <label htmlFor={id}>{label}</label>
-        {errorMsg && <ErrorBox errorMsg={errorMsg} />}
-      </div>
-    );
-  }
-}
+  return (
+    <div className={classes}>
+      <input
+        checked={isChecked}
+        disabled={disabled}
+        form={formId}
+        id={id}
+        name={name}
+        onChange={handleChange}
+        type="checkbox"
+        value={value}
+      />
+      <label htmlFor={id}>{label}</label>
+      {errorMsg && <ErrorBox errorMsg={errorMsg} />}
+    </div>
+  );
+};
 
 Checkbox.propTypes = {
   /**
