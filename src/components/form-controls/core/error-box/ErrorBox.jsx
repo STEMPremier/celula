@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './error-box.less';
 
-const ErrorBox = ({ errorMsg = '' }) => (
+const ErrorBox = ({ errorMsg }) => (
   <div className="ce-errorbox">
     <div className="ce-errorbox__container">
       <div className="ce-errorbox__arrow" />
