@@ -8,27 +8,30 @@ import PropTypes from 'prop-types';
  *
  * `FormControlGroup` has no specific styles beyone those it children componets bring with them.
  */
-const FormControlGroup = props => {
-  const {
+const FormControlGroup = (
+  {
+    children,
     className,
     disabled,
     errorClass,
     errorMsg,
     formId,
+    handleChange: handler,
     label,
     name,
     selectedValues,
-  } = props;
-  const [values, setValues] = useState(selectedValues);
+  },
+  ...props
+) => {
+  const [fieldValues, setFieldValues] = useState(selectedValues);
 
   useEffect(() => {
-    setValues(values);
+    setFieldValues(selectedValues);
   }, [selectedValues]);
 
   const handleCheckboxChange = event => {
-    const { handleChange } = props;
     const { checked, value } = event.target;
-    let selectedVals = [...values];
+    let selectedVals = [...fieldValues];
 
     if (checked) {
       selectedVals.push(value);
@@ -36,25 +39,22 @@ const FormControlGroup = props => {
       selectedVals = selectedVals.filter(val => val !== value);
     }
 
-    handleChange(value);
-    setValues(values);
+    handler(value);
+    setFieldValues(selectedVals);
   };
 
   const handleRadioChange = event => {
-    const { handleChange } = props;
     const { value } = event.target;
 
-    handleChange(value);
-    setValues([values]);
+    handler(value);
+    setFieldValues([value]);
   };
 
   const handleChange = event => {
-    let { children } = props;
+    const childs = React.Children.toArray(children);
     let childType;
 
-    children = React.Children.toArray(children);
-
-    for ( const child of children ) { // eslint-disable-line no-restricted-syntax
+    for ( const child of childs ) { // eslint-disable-line no-restricted-syntax
       childType = child.props.isA;
       break;
     }
@@ -65,11 +65,11 @@ const FormControlGroup = props => {
   };
 
   const renderChildren = () => {
-    const { children, childProps } = props;
+    const { childProps } = props;
 
     return React.Children.map(children, child => {
       const newProps = {
-        checked: values.includes(child.props.value),
+        checked: fieldValues.includes(child.props.value),
         name,
         ...childProps,
       };
