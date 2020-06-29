@@ -12,18 +12,10 @@ const { PRODUCT_ICONS, SIZES } = CONSTANTS;
 /** Bold icons are used with a gradient background circle.
  * These icons can be actionable or used as a static element.
  */
-const ProductIcon = props => {
-  const { name, size } = props;
-
-  /* eslint-disable prettier/prettier */
-  const classes = cx(
-    'ce-icon',
-    'ce-icon__product',
-    {
-      [`ce-icon--${size}`]: SIZES.includes(size.toString().toLowerCase()),
-    },
-  );
-  /* eslint-enable prettier/prettier */
+const ProductIcon = ({ name, size }) => {
+  const classes = cx('ce-icon', 'ce-icon__product', {
+    [`ce-icon--${size}`]: SIZES.includes(size.toString().toLowerCase()),
+  });
 
   return (
     <span className={classes}>

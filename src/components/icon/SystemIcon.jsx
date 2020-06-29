@@ -11,18 +11,10 @@ import './icon.less';
  * System icons are designed to be simple, modern and friendly.
  * Each icon is reduced to its minimal form, expressing essential characteristics within the interface.
  */
-const SystemIcon = props => {
-  const { color, name, size } = props;
-
-  /* eslint-disable prettier/prettier */
-  const classes = cx(
-    'ce-icon',
-    'ce-icon__system',
-    {
-      [`ce-icon--${size}`]: SIZES.includes(size.toString().toLowerCase()),
-    },
-  );
-  /* eslint-enable prettier/prettier */
+const SystemIcon = ({ color, name, size }) => {
+  const classes = cx('ce-icon', 'ce-icon__system', {
+    [`ce-icon--${size}`]: SIZES.includes(size.toString().toLowerCase()),
+  });
 
   return (
     <span className={classes}>
