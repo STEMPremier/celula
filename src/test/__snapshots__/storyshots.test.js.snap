@@ -1775,7 +1775,7 @@ exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Sizes 1`] = `
           export
         </span>
         <span
-          className="ce-icon ce-icon__system ce-icon--small"
+          className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
             className=""
@@ -1807,7 +1807,7 @@ exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Sizes 1`] = `
           follow
         </span>
         <span
-          className="ce-icon ce-icon__system ce-icon--small"
+          className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
             className=""
@@ -1839,7 +1839,7 @@ exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Sizes 1`] = `
           message
         </span>
         <span
-          className="ce-icon ce-icon__system ce-icon--small"
+          className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
             className=""
@@ -1997,7 +1997,7 @@ exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Sizes 1`] = `
           export
         </span>
         <span
-          className="ce-icon ce-icon__system ce-icon--jumbo"
+          className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
             className=""
@@ -2029,7 +2029,7 @@ exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Sizes 1`] = `
           follow
         </span>
         <span
-          className="ce-icon ce-icon__system ce-icon--jumbo"
+          className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
             className=""
@@ -2061,7 +2061,7 @@ exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Sizes 1`] = `
           message
         </span>
         <span
-          className="ce-icon ce-icon__system ce-icon--jumbo"
+          className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
             className=""

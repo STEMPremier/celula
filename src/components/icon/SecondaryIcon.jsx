@@ -10,7 +10,6 @@ import './icon.less';
 
 const { COLORS, SECONDARY_ICONS, SIZES } = CONSTANTS;
 
-/* eslint-disable prettier/prettier */
 // Our custom props validator. I am not in love with the name, but a descriptive name was absurdly long.
 function nameOrText(props, propName, componentName = 'SecondaryIcon') {
   const types = ['name', 'text'];
@@ -20,35 +19,40 @@ function nameOrText(props, propName, componentName = 'SecondaryIcon') {
 
   // First make sure we have at least one of them.
   if (!props[propName] && !props[otherProp]) {
-    error = new Error(`${propName} and ${otherProp} are blank. You must provide one or the other.`);
+    error = new Error(
+      `${propName} and ${otherProp} are blank. You must provide one or the other.`,
+    );
   }
 
   // If we have a name, we need to make sure it is in the list.
   if (props.name && !SECONDARY_ICONS.includes(props.name)) {
-    error = new Error(`Invalid prop: name. Prop must be one of ${SECONDARY_ICONS.join(', ')}.`);
+    error = new Error(
+      `Invalid prop: name. Prop must be one of ${SECONDARY_ICONS.join(', ')}.`,
+    );
   }
 
   // If we have text, it can't be longer than 2 characters.
   if (props.text && props.text.length > 2) {
-    error = new Error(`Invalid prop: text. Prop cannot be longer than 2 characters.`);
+    error = new Error(
+      `Invalid prop: text. Prop cannot be longer than 2 characters.`,
+    );
   }
 
   // And lastly, you can have one OR the other, not both.
   if (props[propName] && props[otherProp]) {
-    error = new Error(`${propName} and ${otherProp} both have values. You must provide one or the other, but not both`);
+    error = new Error(
+      `${propName} and ${otherProp} both have values. You must provide one or the other, but not both`,
+    );
   }
 
   return error;
 }
-/* eslint-enable prettier/prettier */
 
 /**
  * These light icons are mostly used as an actionable element.
  * Alternatively, they can be used as avatars or indicators with two varying gradient options.
  */
-const SecondaryIcon = props => {
-  const { color, name, size, text } = props;
-
+const SecondaryIcon = ({ color, name, size, text }) => {
   /* eslint-disable prettier/prettier */
   const classes = cx(
     'ce-icon',

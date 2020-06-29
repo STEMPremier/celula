@@ -8,31 +8,27 @@ import { BUTTON_TYPES as TYPES, COLORS, SIZES } from '../../../utils/constants';
 /**
  * `Submit Buttons` allow users to submit forms with a single tap. They are typically placed throughout your UI in every form.
  */
-const SubmitButton = props => {
-  const {
-    children,
-    className,
-    color,
-    disabled,
-    handleClick,
-    size,
-    type,
-  } = props;
-
-  return (
-    <Button
-      className={className}
-      color={color}
-      disabled={disabled}
-      handleClick={handleClick}
-      htmlType="submit"
-      size={size}
-      type={type}
-    >
-      {children}
-    </Button>
-  );
-};
+const SubmitButton = ({
+  children,
+  className,
+  color,
+  disabled,
+  handleClick,
+  size,
+  type,
+}) => (
+  <Button
+    className={className}
+    color={color}
+    disabled={disabled}
+    handleClick={handleClick}
+    htmlType="submit"
+    size={size}
+    type={type}
+  >
+    {children}
+  </Button>
+);
 
 export default SubmitButton;
 

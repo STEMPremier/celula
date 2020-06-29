@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 /**
@@ -8,82 +8,89 @@ import PropTypes from 'prop-types';
  *
  * `FormControlGroup` has no specific styles beyone those it children componets bring with them.
  */
-class FormControlGroup extends Component {
-  state = {
-    selectedValues: this.props.selectedValues, // eslint-disable-line react/destructuring-assignment
-  };
+const FormControlGroup = (
+  {
+    children,
+    className,
+    disabled,
+    errorClass,
+    errorMsg,
+    formId,
+    handleChange: handler,
+    label,
+    name,
+    selectedValues,
+  },
+  ...props
+) => {
+  const [fieldValues, setFieldValues] = useState(selectedValues);
 
-  handleCheckboxChange = event => {
-    const { handleChange } = this.props;
-    let { selectedValues } = this.state;
+  useEffect(() => {
+    setFieldValues(selectedValues);
+  }, [selectedValues]);
 
-    if (event.target.checked) {
-      selectedValues.push(event.target.value);
+  const handleCheckboxChange = event => {
+    const { checked, value } = event.target;
+    let selectedVals = [...fieldValues];
+
+    if (checked) {
+      selectedVals.push(value);
     } else {
-      selectedValues = selectedValues.filter(val => val !== event.target.value);
+      selectedVals = selectedVals.filter(val => val !== value);
     }
 
-    handleChange(event.target.value);
-
-    this.setState({ selectedValues });
+    handler(value);
+    setFieldValues(selectedVals);
   };
 
-  handleRadioChange = event => {
-    const { handleChange } = this.props;
+  const handleRadioChange = event => {
+    const { value } = event.target;
 
-    handleChange(event.target.value);
-
-    this.setState({ selectedValues: [event.target.value] });
+    handler(value);
+    setFieldValues([value]);
   };
 
-  handleChange = event => {
-    let { children } = this.props;
+  const handleChange = event => {
+    const childs = React.Children.toArray(children);
     let childType;
 
-    children = React.Children.toArray(children);
-
-    for ( const child of children ) { // eslint-disable-line no-restricted-syntax
+    for ( const child of childs ) { // eslint-disable-line no-restricted-syntax
       childType = child.props.isA;
       break;
     }
 
     // there are only 2 types of children, ever
-    if (childType === 'radio') this.handleRadioChange(event);
-    if (childType === 'checkbox') this.handleCheckboxChange(event);
+    if (childType === 'radio') handleRadioChange(event);
+    if (childType === 'checkbox') handleCheckboxChange(event);
   };
 
-  renderChildren = () => {
-    const { childProps, children, name } = this.props;
-    const { selectedValues } = this.state;
+  const renderChildren = () => {
+    const { childProps } = props;
 
     return React.Children.map(children, child => {
-      const props = {
-        checked: selectedValues.includes(child.props.value),
+      const newProps = {
+        checked: fieldValues.includes(child.props.value),
         name,
         ...childProps,
       };
 
-      return React.cloneElement(child, { ...props });
+      return React.cloneElement(child, { ...newProps });
     });
   };
 
-  render() {
-    const { className, disabled, errorClass, errorMsg, formId, label } = this.props;
-
-    return (
-      <fieldset
-        className={className}
-        disabled={disabled}
-        form={formId}
-        onChange={this.handleChange}
-      >
-        <legend>{label}</legend>
-        {this.renderChildren()}
-        <span className={errorClass}>{errorMsg}</span>
-      </fieldset>
-    );
-  }
-}
+  return (
+    <fieldset
+      className={className}
+      disabled={disabled}
+      form={formId}
+      onChange={handleChange}
+    >
+      <legend>{label}</legend>
+      {renderChildren()}
+      <span className={errorClass}>{errorMsg}</span>
+    </fieldset>
+  );
+};
 
 FormControlGroup.propTypes = {
   /**

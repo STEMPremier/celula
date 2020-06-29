@@ -12,48 +12,43 @@ import {
 
 import './input.less';
 
-const Input = props => {
-  const {
-    btnOptions,
-    className,
-    disabled,
-    errorMsg,
-    formId,
-    handleChange,
-    helpText,
-    htmlType,
-    icon,
-    initialValue,
-    label,
-    max,
-    min,
-    name,
-    placeholder,
-  } = props;
-  const { btnClick, btnIcon } = btnOptions;
-  const id = `${name}`;
-
-  const [errMsg, setErrMsg] = useState(errorMsg);
+const Input = ({
+  btnOptions: { btnClick, btnIcon },
+  className,
+  disabled,
+  errorMsg,
+  formId,
+  handleChange: handler,
+  helpText,
+  htmlType,
+  icon,
+  initialValue,
+  label,
+  max,
+  min,
+  name,
+  placeholder,
+}) => {
   const [fieldValue, setFieldValue] = useState(initialValue);
+  const [errMsg, setErrMsg] = useState(errorMsg);
   const [isDate, setIsDate] = useState(
     htmlType === 'month' ||
       htmlType === 'datetime-local' ||
       htmlType === 'week',
   );
 
+  const id = `${name}`;
   const classes = cx(
     'ce-input',
     {
-      [`ce-input--${htmlType}`]: TYPES.includes(htmlType.toLowerCase()),
+      [`ce-input--${htmlType}`]: TYPES.includes(
+        htmlType.toString().toLowerCase(),
+      ),
       'ce-input--disabled': disabled,
       'ce-input--error': errMsg,
     },
     className,
   );
-
-  useEffect(() => {
-    setErrMsg(errorMsg);
-  }, [errorMsg]);
 
   useEffect(() => {
     setFieldValue(initialValue);
@@ -67,6 +62,10 @@ const Input = props => {
     );
   }, [htmlType]);
 
+  useEffect(() => {
+    setErrMsg(errorMsg);
+  }, [errorMsg]);
+
   const checkValiditiy = () => {
     let msg = '';
 
@@ -77,7 +76,6 @@ const Input = props => {
 
           if (!pattern.test(fieldValue)) msg = 'Invalid email address.';
 
-          setErrMsg(msg);
           break;
         }
         case 'password': {
@@ -118,8 +116,6 @@ const Input = props => {
             msg = 'Password must meet at least 3 of the criteria.';
           }
 
-          setErrMsg(msg);
-
           break;
         }
         case 'url': {
@@ -135,24 +131,22 @@ const Input = props => {
 
           if (!pattern.test(fieldValue)) msg = 'Invalid url.';
 
-          setErrMsg(msg);
-
           break;
         }
         default: {
-          setErrMsg(errMsg);
+          break;
         }
       }
-    } else {
-      setErrMsg(msg);
     }
+
+    setErrMsg(msg);
   };
 
-  const onChangeHandler = event => {
+  const handleChange = event => {
     const { value } = event.target;
 
     setFieldValue(value);
-    handleChange(value);
+    handler(value);
   };
 
   return (
@@ -174,7 +168,7 @@ const Input = props => {
           min={min}
           name={name}
           onBlur={checkValiditiy}
-          onChange={onChangeHandler}
+          onChange={handleChange}
           placeholder={placeholder}
           type={htmlType}
           value={fieldValue}

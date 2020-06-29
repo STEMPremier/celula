@@ -10,8 +10,15 @@ import './toggle-button.less';
 /**
  * `ToggleButton` description and directions.
  */
-const ToggleButton = props => {
-  const { checked, className, disabled, icon, name, size, value } = props;
+const ToggleButton = ({
+  checked,
+  className,
+  disabled,
+  icon,
+  name,
+  size,
+  value,
+}) => {
   const id = `${name}_${value}`;
   const classes = cx(
     'ce-toggle-button',

@@ -7,8 +7,7 @@ import './radio.less';
 /**
  * `Radios` allow the user to select one option from a set. Use radio buttons when the user needs to see all available options.
  */
-const Radio = props => {
-  const { checked, className, disabled, label, name, value } = props;
+const Radio = ({ checked, className, disabled, label, name, value }) => {
   const id = `${name}_${value}`;
   const classes = cx('ce-radio', className);
 

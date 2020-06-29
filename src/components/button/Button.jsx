@@ -9,18 +9,16 @@ import './button.less';
 /**
  * `Buttons` allow users to take actions, and make choices, with a single tap. They are typically placed throughout your UI, in places like dialogs, modal windows, forms, cards, and toolbars.
  */
-const Button = props => {
-  const {
-    children,
-    className,
-    color,
-    handleClick,
-    htmlType,
-    size,
-    type,
-    disabled,
-  } = props;
-
+const Button = ({
+  children,
+  className,
+  color,
+  handleClick,
+  htmlType,
+  size,
+  type,
+  disabled,
+}) => {
   const classes = cx(
     'ce-button',
     {

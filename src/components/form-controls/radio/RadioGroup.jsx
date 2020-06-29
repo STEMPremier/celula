@@ -9,20 +9,18 @@ import './radio-group.less';
 /**
  * `Radios` allow the user to select one option from a set. Use radio buttons when the user needs to see all available options.
  */
-const RadioGroup = props => {
-  const {
-    children,
-    className,
-    disabled,
-    errorMsg,
-    formId,
-    handleChange,
-    label,
-    name,
-    selectedValue,
-    // validators,
-  } = props;
-
+const RadioGroup = ({
+  children,
+  className,
+  disabled,
+  errorMsg,
+  formId,
+  handleChange,
+  label,
+  name,
+  selectedValue,
+  // validators,
+}) => {
   const classes = cx(
     'ce-radio-group',
     {
