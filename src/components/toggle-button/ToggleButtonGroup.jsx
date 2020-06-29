@@ -12,30 +12,29 @@ const { COLORS, SIZES } = CONSTANTS;
 /**
  * `ToggleButton` description and directions.
  */
-const ToggleButtonGroup = props => {
-  const {
-    children,
-    className,
-    color,
-    disabled,
-    formId,
-    handleChange,
-    name,
-    selectedValue,
-    size,
-  } = props;
-
-  /* eslint-disable prettier/prettier */
+const ToggleButtonGroup = ({
+  children,
+  className,
+  color,
+  disabled,
+  formId,
+  handleChange,
+  name,
+  selectedValue,
+  size,
+}) => {
   const classes = cx(
     'ce-toggle-button-group',
     {
-      [`ce-toggle-button-group--${size}`]: SIZES.includes(size.toString().toLowerCase()),
-      [`ce-toggle-button-group--${color}`]: COLORS.includes(color.toString().toLowerCase()) && !disabled,
+      [`ce-toggle-button-group--${size}`]: SIZES.includes(
+        size.toString().toLowerCase(),
+      ),
+      [`ce-toggle-button-group--${color}`]:
+        COLORS.includes(color.toString().toLowerCase()) && !disabled,
       'ce-toggle-button-group--disabled': disabled,
     },
     className,
   );
-  /* eslint-enable prettier/prettier */
 
   return (
     <FormControlGroup
