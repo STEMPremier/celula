@@ -9,20 +9,20 @@ import './checkbox.less';
 /**
  * `Checkboxes` allow the user to select one or more items from a set. They can be used to turn an option on or off, select one or multiple items from a list, or present a list containing sub-selections.
  */
-const Checkbox = props => {
-  const {
-    checked,
-    className,
-    disabled,
-    errorMsg,
-    formId,
-    name,
-    label,
-    value,
-  } = props;
-  const id = `${name}_${value}`;
-
+const Checkbox = ({
+  checked,
+  className,
+  disabled,
+  errorMsg,
+  formId,
+  handleChange: handler,
+  name,
+  label,
+  value,
+}) => {
   const [isChecked, setIsChecked] = useState(checked);
+
+  const id = `${name}_${value}`;
 
   const classes = cx(
     'ce-checkbox',
@@ -38,13 +38,10 @@ const Checkbox = props => {
   }, [checked]);
 
   const handleChange = event => {
-    /* eslint-disable no-shadow */
-    const { handleChange } = props;
-    const { checked, value } = event.target;
-    /* eslint-enable no-shadow */
+    const { checked: targetChecked, value: targetValue } = event.target;
 
-    setIsChecked(checked);
-    handleChange(value);
+    setIsChecked(targetChecked);
+    handler(targetValue);
   };
 
   return (
