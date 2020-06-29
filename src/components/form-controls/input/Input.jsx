@@ -12,26 +12,23 @@ import {
 
 import './input.less';
 
-const Input = props => {
-  const {
-    btnOptions,
-    className,
-    disabled,
-    errorMsg,
-    formId,
-    helpText,
-    htmlType,
-    icon,
-    initialValue,
-    label,
-    max,
-    min,
-    name,
-    placeholder,
-  } = props;
-  const { btnClick, btnIcon } = btnOptions;
-  const id = `${name}`;
-
+const Input = ({
+  btnOptions: { btnClick, btnIcon },
+  className,
+  disabled,
+  errorMsg,
+  formId,
+  handleChange: handler,
+  helpText,
+  htmlType,
+  icon,
+  initialValue,
+  label,
+  max,
+  min,
+  name,
+  placeholder,
+}) => {
   const [fieldValue, setFieldValue] = useState(initialValue);
   const [errMsg, setErrMsg] = useState(errorMsg);
   const [isDate, setIsDate] = useState(
@@ -40,10 +37,13 @@ const Input = props => {
       htmlType === 'week',
   );
 
+  const id = `${name}`;
   const classes = cx(
     'ce-input',
     {
-      [`ce-input--${htmlType}`]: TYPES.includes(htmlType.toLowerCase()),
+      [`ce-input--${htmlType}`]: TYPES.includes(
+        htmlType.toString().toLowerCase(),
+      ),
       'ce-input--disabled': disabled,
       'ce-input--error': errMsg,
     },
@@ -143,11 +143,10 @@ const Input = props => {
   };
 
   const handleChange = event => {
-    const { handleChange } = props; // eslint-disable-line no-shadow
     const { value } = event.target;
 
     setFieldValue(value);
-    handleChange(value);
+    handler(value);
   };
 
   return (
