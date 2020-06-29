@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
@@ -9,92 +9,94 @@ import { SYSTEM_ICONS as ICONS } from '../../../utils/constants';
 
 import './select.less';
 
-class Select extends Component {
-  state = {
-    // eslint-disable-next-line react/destructuring-assignment
-    selectedValue: this.props.selectedValue,
-  };
+const Select = (
+  {
+    btnOptions: { btnClick, btnIcon },
+    className,
+    disabled,
+    errorMsg,
+    formId,
+    helpText,
+    icon,
+    label,
+    name,
+    options,
+    placeholder,
+    selectedValue,
+  },
+  ...props
+) => {
+  const [fieldValue, setFieldValue] = useState(selectedValue);
+  const [errMsg, setErrMsg] = useState(errorMsg);
 
-  handleChange = event => {
-    const { handleChange } = this.props;
+  const id = `${name}`;
+  const classes = cx(
+    'ce-select',
+    {
+      'ce-select--disabled': disabled,
+      'ce-select--error': errorMsg,
+    },
+    className,
+  );
+
+  useEffect(() => {
+    setFieldValue(selectedValue);
+  }, [selectedValue]);
+
+  useEffect(() => {
+    setErrMsg(errorMsg);
+  }, [errorMsg]);
+
+  const handleChange = event => {
+    const { handleChange } = props; // eslint-disable-line no-shadow
     const { value } = event.target;
 
-    this.setState({ selectedValue: value });
-
+    setFieldValue(value);
     handleChange(value);
   };
 
-  render() {
-    const { selectedValue } = this.state;
-    const {
-      btnOptions,
-      className,
-      disabled,
-      errorMsg,
-      formId,
-      helpText,
-      icon,
-      label,
-      name,
-      options,
-      placeholder,
-    } = this.props;
-
-    const { btnClick, btnIcon } = btnOptions;
-
-    const id = `${name}`;
-    const classes = cx(
-      'ce-select',
-      {
-        'ce-select--disabled': disabled,
-        'ce-select--error': errorMsg,
-      },
-      className,
-    );
-
-    return (
-      <div className={classes}>
-        <label htmlFor={id}>{label}</label>
-        {helpText && <span className="ce-select__help-text">{helpText}</span>}
-        <div className="ce-select__container">
-          {icon && (
-            <div className="ce-select__icon">
-              <SystemIcon name={icon} />
-            </div>
-          )}
-          <select
-            name={name}
-            label={label}
-            form={formId}
-            id={id}
-            disabled={disabled}
-            value={selectedValue}
-            onChange={this.handleChange}
-          >
-            <option key={placeholder} value="">
-              {placeholder}
+  return (
+    <div className={classes}>
+      <label htmlFor={id}>{label}</label>
+      {helpText && <span className="ce-select__help-text">{helpText}</span>}
+      <div className="ce-select__container">
+        {icon && (
+          <div className="ce-select__icon">
+            <SystemIcon name={icon} />
+          </div>
+        )}
+        <select
+          name={name}
+          label={label}
+          form={formId}
+          id={id}
+          disabled={disabled}
+          value={fieldValue}
+          onChange={handleChange}
+        >
+          <option key={placeholder} value="">
+            {placeholder}
+          </option>
+          {options.map(item => (
+            <option key={item.value} value={item.value}>
+              {item.name}
             </option>
-            {options.map(item => (
-              <option key={item.value} value={item.value}>
-                {item.name}
-              </option>
-            ))}
-          </select>
-          {btnIcon && (
-            <button
-              className="ce-select__button"
-              onClick={btnClick}
-              type="button"
-            >
-              <SystemIcon name={btnIcon} color="white" />
-            </button>
-          )}
-        </div>
-        {errorMsg && <ErrorBox errorMsg={errorMsg} />}
+          ))}
+        </select>
+        {btnIcon && (
+          <button
+            className="ce-select__button"
+            onClick={btnClick}
+            type="button"
+          >
+            <SystemIcon name={btnIcon} color="white" />
+          </button>
+        )}
       </div>
-    );
-  }
-}
+      {errMsg && <ErrorBox errorMsg={errMsg} />}
+    </div>
+  );
+};
 
 Select.propTypes = {
   /**
