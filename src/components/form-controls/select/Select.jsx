@@ -9,23 +9,21 @@ import { SYSTEM_ICONS as ICONS } from '../../../utils/constants';
 
 import './select.less';
 
-const Select = (
-  {
-    btnOptions: { btnClick, btnIcon },
-    className,
-    disabled,
-    errorMsg,
-    formId,
-    helpText,
-    icon,
-    label,
-    name,
-    options,
-    placeholder,
-    selectedValue,
-  },
-  ...props
-) => {
+const Select = ({
+  btnOptions: { btnClick, btnIcon },
+  className,
+  disabled,
+  errorMsg,
+  formId,
+  handleChange: handler,
+  helpText,
+  icon,
+  label,
+  name,
+  options,
+  placeholder,
+  selectedValue,
+}) => {
   const [fieldValue, setFieldValue] = useState(selectedValue);
   const [errMsg, setErrMsg] = useState(errorMsg);
 
@@ -48,11 +46,10 @@ const Select = (
   }, [errorMsg]);
 
   const handleChange = event => {
-    const { handleChange } = props; // eslint-disable-line no-shadow
     const { value } = event.target;
 
     setFieldValue(value);
-    handleChange(value);
+    handler(value);
   };
 
   return (
