@@ -1,0 +1,27 @@
+import {
+  Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { boolean, select, text } from '@storybook/addon-knobs';
+
+import Link from '.';
+import { LINK_TEXT_STYLES as TYPES } from '../../utils/constants';
+
+<Meta component={Link} title="Components/Atoms/Link"/>
+
+# Links 
+<Description of={Link}/>
+<Props of={Link}/>
+
+<Story name="Link with Knobs" parameters={{ docs: { disable: true}}}>
+  <Link 
+  className={text('className', '', 'Link Options')}
+  textStyle={text('textStyle', '' )}
+  address={text('address','https://app.tallo.com/register' )}
+  color={text('color', '')}
+  />
+</Story>

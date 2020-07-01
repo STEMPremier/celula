@@ -87,6 +87,7 @@ const SYSTEM_ICONS = [
   'indoor',
   'popular',
 ];
+const LINK_TEXT_STYLES = ['lowercase', 'uppercase'];
 
 export {
   BUTTON_TYPES,
@@ -97,4 +98,5 @@ export {
   SECONDARY_ICONS,
   SIZES,
   SYSTEM_ICONS,
+  LINK_TEXT_STYLES,
 };
