@@ -1,0 +1,81 @@
+@import '../../styles/celula';
+
+.ce-link {
+  padding: 10px;
+  width: 100%;
+  text-decoration: none;
+
+  &.ce-link--uppercase {
+    text-transform: uppercase;
+  }
+
+  &.ce-link--blue {
+    background: @white;
+    color: @blue;
+
+    // States
+    &:hover {
+      color: #007ab2; // 30% darker
+    }
+
+    &:active {
+      color: #00577f; // 50% darker
+    }
+
+    &:focus {
+      color: #00577f; // 50% darker
+    }
+
+    &.ce-button--disabled {
+      color: @focus-gray;
+    }
+  }
+
+  &.ce-link--red {
+    color: @red;
+
+    // States
+    &:hover {
+      color: #b3003a; // 30% darker
+    }
+
+    &:active {
+      color: #80002a; // 50% darker
+    }
+
+    &:focus {
+      color: #80002a; // 50% darker
+    }
+
+    &.ce-button--disabled {
+      color: @focus-gray;
+    }
+  }
+
+  &.ce-link--black {
+    background: @white;
+    color: @black;
+
+    // States
+    &:hover {
+      color: #404040; // 50%-ish lighter
+    }
+
+    &:active {
+      color: #262626; // 30%-ish lighter
+    }
+
+    &:focus {
+      color: #262626; // 30%-ish lighter
+    }
+
+    &.ce-button--disabled {
+      color: @focus-gray;
+    }
+  }
+
+  &.ce-link--white {
+    color: @white;
+    background-color: @black;
+  }
+}
