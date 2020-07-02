@@ -4,7 +4,10 @@ import cx from 'classnames';
 
 import './link.less';
 
-import { COLORS, LINK_TEXT_STYLES as TYPES } from '../../utils/constants';
+import {
+  LINK_COLORS as COLORS,
+  LINK_TEXT_STYLES as TYPES,
+} from '../../utils/constants';
 
 const Link = ({ className, textStyle, color, address, text }) => {
   const classes = cx(
@@ -36,7 +39,7 @@ Link.propTypes = {
 Link.defaultProps = {
   className: '',
   textStyle: 'uppercase',
-  color: '',
+  color: 'blue',
   address: '',
   text: 'hyperlink',
 };
