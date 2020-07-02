@@ -29,10 +29,25 @@ const Link = ({ className, textStyle, color, address, text }) => {
 };
 
 Link.propTypes = {
+  /**
+   * A class name, or string of class names, to add to the `<Link />`.
+   */
   className: PropTypes.string,
+  /**
+   * The color of the `<Link />`.
+   */
   color: PropTypes.oneOf(COLORS),
+  /**
+   * The http address the `<Link />` points to.
+   */
   address: PropTypes.string,
+  /**
+   * String entry of either "lowercase" or "uppercase", that will determine the link text type to be applied.
+   */
   textStyle: PropTypes.oneOf(TYPES),
+  /**
+   * The text visual to the user signifying the link itself.
+   */
   text: PropTypes.string,
 };
 
