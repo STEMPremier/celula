@@ -20,9 +20,9 @@ import { LINK_TEXT_STYLES as TYPES, LINK_COLORS as COLORS } from '../../utils/co
 <Story name="Link with Knobs" parameters={{ docs: { disable: true}}}>
   <Link 
   className={text('className', '', 'Link Options')}
-  textStyle={text('textStyle', '' )}
+  textStyle={text('textStyle', 'uppercase' )}
   address={text('address','https://app.tallo.com/register' )}
-  color={text('color', '')}
+  color={text('color', 'blue')}
   />
 </Story>
 
@@ -31,6 +31,7 @@ import { LINK_TEXT_STYLES as TYPES, LINK_COLORS as COLORS } from '../../utils/co
   <Story name="Link Types">
     {TYPES.map(type => (
         <Link 
+          key={type}
           text={type}
           textStyle={type}
         />
@@ -43,6 +44,7 @@ import { LINK_TEXT_STYLES as TYPES, LINK_COLORS as COLORS } from '../../utils/co
   <Story name="Link Colors">
     {COLORS.map(color => (
         <Link 
+          key={color}
           text={color}
           color={color}
         />
