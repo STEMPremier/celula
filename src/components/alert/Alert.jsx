@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import SecondaryIcon from '../../icon/SecondaryIcon';
+// eslint-disable-next-line no-unused-vars
+import SecondaryIcon from '../icon/SecondaryIcon';
 
 import {
   // ALERT_COLORS as COLORS,
@@ -18,6 +20,7 @@ const Alert = ({
   iconLeft,
   dismissible,
   linkOptions: { name, address },
+  text,
 }) => {
   const classes = cx('ce-alert', {
     [`ce-alert-${type}`]: TYPES.includes(type.toString().toLowerCase()),
@@ -32,7 +35,7 @@ const Alert = ({
         name={name}
         address={address}
       >
-        This is an alert box
+        {text}
       </span>
     </div>
   );
@@ -41,6 +44,7 @@ const Alert = ({
 Alert.propTypes = {
   className: PropTypes.string,
   type: PropTypes.oneOf(TYPES),
+  text: PropTypes.string,
   iconLeft: PropTypes.oneOf(ICONS),
   dismissible: PropTypes.bool,
   linkOptions: PropTypes.shape({
@@ -53,6 +57,9 @@ Alert.defaultProps = {
   className: '',
   type: 'info',
   iconLeft: '',
+  text: 'alert text',
   dismissible: false,
   linkOptions: { name: '', address: '' },
 };
+
+export default Alert;

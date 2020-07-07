@@ -1,0 +1,48 @@
+import {
+  Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { boolean, select, text } from '@storybook/addon-knobs';
+
+import Alert from '.';
+import { ALERT_TYPES as TYPES } from '../../utils/constants';
+
+<Meta component={Alert} title="Components/Molecules/Alerts" />
+
+# Alerts
+
+<Description of={Alert} />
+<Props of={Alert} />
+
+<Story name="Alert with Knobs" parameters={{docs: {disable: true}}}>
+  <Alert
+    className={text('className', '', 'Alert Options')}
+    type={text('type', 'info', 'Alert options')}
+    iconLeft={text('iconLeft', '', 'Secondary Icon Options')}
+    dismissible={boolean('dismissible', false, 'Alert Options')}
+    linkOptions={{
+      name: text('name','Alert link text', 'Link Options'),
+      address:text('address', 'http address', 'Link Options'),
+    }}
+    text={text('text', 'alert text', 'Alert Optionss')}
+  ></Alert>
+  </Story>
+
+  ### Types 
+  <Preview>
+  <Story name="Alert Types">
+    {TYPES.map(type => (
+      <div key={type}>
+        <Alert 
+          type={type}
+          text={type}
+       >
+       </Alert>
+      </div>
+  ))}
+  </Story>
+  </Preview>
