@@ -27,6 +27,10 @@ const Link = ({ className, textStyle, color, address, text }) => {
 
 Link.propTypes = {
   /**
+   * The http address the `<Link />` points to.
+   */
+  address: PropTypes.string.isRequired,
+  /**
    * A class name, or string of class names, to add to the `<Link />`.
    */
   className: PropTypes.string,
@@ -35,25 +39,19 @@ Link.propTypes = {
    */
   color: PropTypes.oneOf(COLORS),
   /**
-   * The http address the `<Link />` points to.
-   */
-  address: PropTypes.string,
-  /**
-   * String entry of either "lowercase" or "uppercase", that will determine the link text type to be applied.
-   */
-  textStyle: PropTypes.oneOf(TYPES),
-  /**
-   * The text visual to the user signifying the link itself.
+   * The text the `<Link />` displays.
    */
   text: PropTypes.string.isRequired,
+  /**
+   * The `<Link />` text type.
+   */
+  textStyle: PropTypes.oneOf(TYPES),
 };
 
 Link.defaultProps = {
   className: '',
-  textStyle: 'uppercase',
   color: 'primary',
-  address: '',
-  text: 'hyperlink',
+  textStyle: 'uppercase',
 };
 
 export default Link;
