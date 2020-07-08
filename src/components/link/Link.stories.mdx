@@ -44,11 +44,13 @@ import { COLORS, LINK_TEXT_STYLES as TYPES } from '../../utils/constants';
 <Preview>
   <Story name="Link Colors">
     {COLORS.map(color => (
-      <Link
-        key={color}
-        text={color}
-        color={color}
-      />
+      <span style={color === 'inverted' ? {backgroundColor:'black'} : {}}>
+        <Link
+          key={color}
+          text={color}
+          color={color}
+        />
+      </span>
     ))}
   </Story>
 </Preview>
