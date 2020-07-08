@@ -23,20 +23,25 @@ const Alert = ({
   text,
 }) => {
   const classes = cx('ce-alert', {
-    [`ce-alert-${type}`]: TYPES.includes(type.toString().toLowerCase()),
+    [`ce-alert--${type}`]: TYPES.includes(type.toString().toLowerCase()),
   });
 
   return (
     <div className={classes}>
-      <span
-        type={type}
-        iconLeft={iconLeft}
-        dismissible={dismissible}
-        name={name}
-        address={address}
-      >
-        {text}
-      </span>
+      <div className="ce-alert--leftIcon" iconLeft={iconLeft} />
+      <div className="ce-alert--text">
+        <span
+          type={type}
+          dismissible={dismissible}
+          name={name}
+          address={address}
+        >
+          {text}
+        </span>
+      </div>
+      <div className="ce-alert--link">
+        <div className="ce-alert--link-text">LINK</div>
+      </div>
     </div>
   );
 };

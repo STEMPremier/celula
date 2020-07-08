@@ -9,7 +9,7 @@ import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
 
 import Alert from '.';
-import { ALERT_TYPES as TYPES } from '../../utils/constants';
+import { ALERT_TYPES as TYPES, SECONDARY_ICONS as ICONS } from '../../utils/constants';
 
 <Meta component={Alert} title="Components/Molecules/Alerts" />
 
@@ -40,6 +40,21 @@ import { ALERT_TYPES as TYPES } from '../../utils/constants';
         <Alert 
           type={type}
           text={type}
+       >
+       </Alert>
+      </div>
+  ))}
+  </Story>
+  </Preview>
+
+### Left Icons 
+  <Preview>
+  <Story name="Alert Icons">
+    {ICONS.map(icon => (
+      <div key={icon}>
+        <Alert 
+          text={icon}
+          iconLeft={icon}
        >
        </Alert>
       </div>
