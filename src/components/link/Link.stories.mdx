@@ -6,35 +6,36 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { boolean, select, text } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 
 import Link from '.';
 import { COLORS, LINK_TEXT_STYLES as TYPES } from '../../utils/constants';
 
 <Meta component={Link} title="Components/Atoms/Link"/>
 
-# Links 
+# Links
 <Description of={Link}/>
 <Props of={Link}/>
 
 <Story name="Link with Knobs" parameters={{ docs: { disable: true}}}>
-  <Link 
-  className={text('className', '', 'Link Options')}
-  textStyle={text('textStyle', 'uppercase' )}
-  address={text('address','https://app.tallo.com/register' )}
-  color={text('color', 'blue')}
+  <Link
+    address={text('address','https://app.tallo.com/register' )}
+    className={text('className', '')}
+    color={text('color', 'primary')}
+    text={text('text', 'Tallo')}
+    textStyle={text('textStyle', 'uppercase' )}
   />
 </Story>
 
-### Types 
+### Types
 <Preview>
   <Story name="Link Types">
     {TYPES.map(type => (
-        <Link 
-          key={type}
-          text={type}
-          textStyle={type}
-        />
+      <Link
+        key={type}
+        text={type}
+        textStyle={type}
+      />
     ))}
   </Story>
 </Preview>
@@ -43,11 +44,11 @@ import { COLORS, LINK_TEXT_STYLES as TYPES } from '../../utils/constants';
 <Preview>
   <Story name="Link Colors">
     {COLORS.map(color => (
-        <Link 
-          key={color}
-          text={color}
-          color={color}
-        />
+      <Link
+        key={color}
+        text={color}
+        color={color}
+      />
     ))}
   </Story>
 </Preview>
