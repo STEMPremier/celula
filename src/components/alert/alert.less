@@ -7,28 +7,35 @@
   border-radius: 5px;
   margin: 1rem;
   display: flex;
+  justify-content: flex-start;
 
   ////////////////////////////////
   //   3 FLEXBOX DIVS IN A ROW  //
   ////////////////////////////////
   .ce-alert__leftIcon {
+    flex-grow: 1;
     padding: 10px;
     border: 5px solid blue;
-    width: 5%;
     color: black;
   }
   .ce-alert__text {
+    flex-grow: 8;
     padding: 10px;
     border: 5px solid purple;
-    width: 75%;
   }
   .ce-alert__link {
+    flex-grow: 3;
     padding: 10px;
     border: 5px solid green;
-    width: 20%;
     .ce-alert__link-text {
       float: right;
     }
+  }
+  .ce-alert__close {
+    flex-grow: 1;
+    padding: 10px;
+    border: 5px solid green;
+    float: right;
   }
   ///////////////////////////////
   //           TYPES           //

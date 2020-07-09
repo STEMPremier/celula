@@ -32,8 +32,8 @@ import { ALERT_TYPES as TYPES, SYSTEM_ICONS as ICONS } from '../../utils/constan
   ></Alert>
   </Story>
 
-  ### Types 
-  <Preview>
+### Types 
+<Preview>
   <Story name="Alert Types">
     {TYPES.map(type => (
       <div key={type}>
@@ -48,7 +48,7 @@ import { ALERT_TYPES as TYPES, SYSTEM_ICONS as ICONS } from '../../utils/constan
   </Preview>
 
 ### Left Icons 
-  <Preview>
+<Preview>
   <Story name="Alert Icons">
     {ICONS.map(icon => (
       <div key={icon}>
@@ -61,3 +61,71 @@ import { ALERT_TYPES as TYPES, SYSTEM_ICONS as ICONS } from '../../utils/constan
   ))}
   </Story>
   </Preview>
+
+### Links 
+
+
+### Dismissible Alerts
+<Preview>
+   <Story name="Dismissible Alerts by Types">
+    {TYPES.map(type => (
+      <div key={type}>
+        <Alert 
+          type={type}
+          text={type}
+          dismissible={true}
+       >
+       </Alert>
+      </div>
+    ))} 
+    </Story>
+  </Preview>
+
+
+### Dismissible Alert with Icons and Links
+<Preview>
+    <Story name="Dismissible Alerts with Icons and Links">
+    {ICONS.map(icon => (
+      <div key={icon}>
+        <Alert 
+          text={icon}
+          iconLeft={icon}
+          dismissible={true}
+       >
+       </Alert>
+      </div>
+    ))}
+    </Story>
+  </Preview>
+
+
+### Dismissible Alert with Icons only
+<Preview>
+    <Story name="Dismissible Alerts with Icons only">
+    {ICONS.map(icon => (
+      <div key={icon}>
+        <Alert 
+          text={icon}
+          iconLeft={icon}
+          dismissible={true}
+       >
+       </Alert>
+      </div>
+    ))}
+    </Story>
+  </Preview>
+
+
+### Dismissible Alert with Links only
+<Preview>
+  <Story name="Dismissible Alerts with Links only">
+    <Alert 
+      text="Dismissible Alert with Link only"
+      dismissible={true}
+    >
+    </Alert>
+  </Story>
+</Preview>
+
+
+

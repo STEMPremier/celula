@@ -23,33 +23,50 @@ const Alert = ({
   text,
 }) => {
   const hasLeftIcon = iconLeft !== '';
-  console.log('hasLeftIcon', hasLeftIcon);
-  // const [hasIcon, setHasIcon] = useState(leftIcon)
+
+  const [isVisible, setIsVisible] = useState(true);
+
+  const handleClose = () => {
+    setIsVisible(false);
+  };
 
   const classes = cx('ce-alert', {
     [`ce-alert--${type}`]: TYPES.includes(type.toString().toLowerCase()),
   });
 
   return (
-    <div className={classes}>
-      {hasLeftIcon && (
-        <div className="ce-alert__leftIcon" iconLeft={iconLeft}>
-          <SystemIcon name={iconLeft} />
+    <div>
+      {isVisible && (
+        <div className={classes}>
+          {hasLeftIcon && (
+            <div className="ce-alert__leftIcon" iconLeft={iconLeft}>
+              <SystemIcon name={iconLeft} />
+            </div>
+          )}
+          <div className="ce-alert__text">
+            <span
+              type={type}
+              dismissible={dismissible}
+              name={name}
+              address={address}
+            >
+              {text}
+            </span>
+          </div>
+          <div className="ce-alert__link">
+            <div className="ce-alert__link-text">LINK</div>
+          </div>
+          {dismissible && (
+            <button
+              type="button"
+              className="ce-alert__close"
+              onClick={handleClose}
+            >
+              <SystemIcon name="close" />
+            </button>
+          )}
         </div>
       )}
-      <div className="ce-alert__text">
-        <span
-          type={type}
-          dismissible={dismissible}
-          name={name}
-          address={address}
-        >
-          {text}
-        </span>
-      </div>
-      <div className="ce-alert__link">
-        <div className="ce-alert__link-text">LINK</div>
-      </div>
     </div>
   );
 };
