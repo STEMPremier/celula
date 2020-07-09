@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
@@ -22,15 +22,21 @@ const Alert = ({
   linkOptions: { name, address },
   text,
 }) => {
+  const hasLeftIcon = iconLeft !== '';
+  console.log('hasLeftIcon', hasLeftIcon);
+  // const [hasIcon, setHasIcon] = useState(leftIcon)
+
   const classes = cx('ce-alert', {
     [`ce-alert--${type}`]: TYPES.includes(type.toString().toLowerCase()),
   });
 
   return (
     <div className={classes}>
-      <div className="ce-alert__leftIcon" iconLeft={iconLeft}>
-        <SystemIcon name={iconLeft} />
-      </div>
+      {hasLeftIcon && (
+        <div className="ce-alert__leftIcon" iconLeft={iconLeft}>
+          <SystemIcon name={iconLeft} />
+        </div>
+      )}
       <div className="ce-alert__text">
         <span
           type={type}
