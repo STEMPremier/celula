@@ -83,11 +83,32 @@ const Alert = ({
 };
 
 Alert.propTypes = {
+  /**
+   * A class name, or string of class names, to add to the `<Alert />`.
+   */
   className: PropTypes.string,
+  /**
+   * The `<Alert />` has 4 type options to choose from: info, warning, error, and success.  Each is represented as a string in the TYPES array.  The selection of the type determines the color of the alert.
+   */
   type: PropTypes.oneOf(TYPES),
+  /**
+   * The text is the message that will display in the alert.
+   */
   text: PropTypes.string,
+  /**
+   * You can choose any of the System Icons to display on the left hand side of the `<Alert />` box.  See the icons sections for a full list of System Icons.
+   */
   iconLeft: PropTypes.oneOf(ICONS),
+  /**
+   * Adding the dismissible prop will activate the boolean to display the close "X" on the right hand side.  The onclick of the close "X" will hide the `<Alert />`.
+   */
   dismissible: PropTypes.bool,
+  /**
+   * These options configure the link on the right hand side.
+   * Without setting the address and the name, the `<Link />` will not appear.
+   * `name` is the text that will appear as the `<Link /> itself.
+   * `address` is the http address where the link will direct the user.
+   */
   linkOptions: PropTypes.shape({
     name: PropTypes.string,
     address: PropTypes.string,
