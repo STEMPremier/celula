@@ -12,7 +12,7 @@ import { SYSTEM_ICONS, COLORS } from '../../utils/constants';
 
 <Story name="All SystemIcons" parameters={{ docs: { disable: true }}}>
   <SystemIcon
-    color={select('color', ['black', 'blue', 'green', 'orange', 'purple', 'red', 'white'], 'red')}
+    color={select('color', COLORS, 'primary')}
     name={select('name', SYSTEM_ICONS,'share')}
   />
 </Story>
