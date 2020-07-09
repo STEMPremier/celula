@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 // eslint-disable-next-line no-unused-vars
-import SecondaryIcon from '../icon/SecondaryIcon';
+import SystemIcon from '../icon/SystemIcon';
 
 import {
   // ALERT_COLORS as COLORS,
   ALERT_TYPES as TYPES,
-  SECONDARY_ICONS as ICONS,
+  SYSTEM_ICONS as ICONS,
 } from '../../utils/constants';
 
 import './alert.less';
@@ -29,7 +29,7 @@ const Alert = ({
   return (
     <div className={classes}>
       <div className="ce-alert__leftIcon" iconLeft={iconLeft}>
-        <SecondaryIcon name={iconLeft} />
+        <SystemIcon name={iconLeft} />
       </div>
       <div className="ce-alert__text">
         <span
