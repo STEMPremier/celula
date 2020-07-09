@@ -1,0 +1,15 @@
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react';
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
+
+import Alert from '.';
+
+describe('<Input />', () => {
+  describe('render()', () => {
+    test('render the Input component', () => {
+      const wrapper = shallow(<Alert type="info" text="alert text" />);
+      expect(toJson(wrapper)).toMatchSnapshot();
+    });
+  });
+});

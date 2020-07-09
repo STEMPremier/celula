@@ -94,7 +94,7 @@ Alert.propTypes = {
   /**
    * The text is the message that will display in the alert.
    */
-  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
   /**
    * You can choose any of the System Icons to display on the left hand side of the `<Alert />` box.  See the icons sections for a full list of System Icons.
    */
@@ -119,7 +119,6 @@ Alert.defaultProps = {
   className: '',
   type: 'info',
   iconLeft: '',
-  text: 'alert text',
   dismissible: false,
   linkOptions: { name: '', address: '' },
 };
