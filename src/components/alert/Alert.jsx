@@ -28,8 +28,10 @@ const Alert = ({
 
   return (
     <div className={classes}>
-      <div className="ce-alert--leftIcon" iconLeft={iconLeft} />
-      <div className="ce-alert--text">
+      <div className="ce-alert__leftIcon" iconLeft={iconLeft}>
+        <SecondaryIcon name={iconLeft} />
+      </div>
+      <div className="ce-alert__text">
         <span
           type={type}
           dismissible={dismissible}
@@ -39,8 +41,8 @@ const Alert = ({
           {text}
         </span>
       </div>
-      <div className="ce-alert--link">
-        <div className="ce-alert--link-text">LINK</div>
+      <div className="ce-alert__link">
+        <div className="ce-alert__link-text">LINK</div>
       </div>
     </div>
   );

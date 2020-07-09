@@ -7,27 +7,26 @@
   border-radius: 5px;
   margin: 1rem;
   display: flex;
-  background-color: grey;
 
   ////////////////////////////////
   //   3 FLEXBOX DIVS IN A ROW  //
   ////////////////////////////////
-  .ce-alert--leftIcon {
-    padding: 10px;
+  .ce-alert__leftIcon {
+    padding: 5px 10px;
     border: 5px solid blue;
-    width: 10%;
+    width: 5%;
     color: black;
   }
-  .ce-alert--text {
+  .ce-alert__text {
     padding: 10px;
     border: 5px solid purple;
-    width: 70%;
+    width: 75%;
   }
-  .ce-alert--link {
+  .ce-alert__link {
     padding: 10px;
     border: 5px solid green;
     width: 20%;
-    .ce-alert--link-text {
+    .ce-alert__link-text {
       float: right;
     }
   }
@@ -35,15 +34,15 @@
   //           TYPES           //
   ///////////////////////////////
   &.ce-alert--info {
-    background-color: #4dc7ff;
+    background-color: @info;
   }
   &.ce-alert--warning {
-    background-color: #fca635;
+    background-color: @warning;
   }
   &.ce-alert--error {
-    background-color: #cc0043;
+    background-color: @error;
   }
   &.ce-alert--success {
-    background-color: #acd84f;
+    background-color: @success;
   }
 }
