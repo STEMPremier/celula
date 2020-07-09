@@ -13,44 +13,62 @@
   //   3 FLEXBOX DIVS IN A ROW  //
   ////////////////////////////////
   .ce-alert__leftIcon {
-    flex-grow: 1;
-    padding: 10px;
-    border: 5px solid blue;
+    flex-grow: 0;
+    padding: 15px;
+    // border: 5px solid blue;
     color: black;
   }
   .ce-alert__text {
     flex-grow: 8;
-    padding: 10px;
-    border: 5px solid purple;
+    padding: 15px;
+    // border: 5px solid purple;
   }
   .ce-alert__link {
     flex-grow: 3;
-    padding: 10px;
-    border: 5px solid green;
+    padding: 15px;
+    // border: 5px solid green;
     .ce-alert__link-text {
       float: right;
     }
   }
   .ce-alert__close {
-    flex-grow: 1;
-    padding: 10px;
-    border: 5px solid green;
+    flex-grow: 0.2;
+    padding: 15px;
+    // border: 5px solid green;
     float: right;
+    // color: @black;
+    // remove default button settings
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
   }
   ///////////////////////////////
   //           TYPES           //
   ///////////////////////////////
   &.ce-alert--info {
     background-color: @info;
+    .ce-alert__close {
+      background-color: @info;
+    }
   }
   &.ce-alert--warning {
     background-color: @warning;
+    .ce-alert__close {
+      background-color: @warning;
+    }
   }
   &.ce-alert--error {
     color: @white;
     background-color: @error;
+    .ce-alert__close {
+      background-color: @error;
+      // color: @white !important;
+    }
   }
   &.ce-alert--success {
     background-color: @success;
+    .ce-alert__close {
+      background-color: @success;
+    }
   }
 }

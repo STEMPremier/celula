@@ -63,7 +63,21 @@ import { ALERT_TYPES as TYPES, SYSTEM_ICONS as ICONS } from '../../utils/constan
   </Preview>
 
 ### Links 
-
+<Preview>
+   <Story name="Links by Types">
+    {TYPES.map(type => (
+      <div key={type}>
+        <Alert 
+          type={type}
+          text={type}
+          name='Link Name Here'
+          address='https://app.tallo.com'
+       >
+       </Alert>
+      </div>
+    ))} 
+    </Story>
+  </Preview>
 
 ### Dismissible Alerts
 <Preview>

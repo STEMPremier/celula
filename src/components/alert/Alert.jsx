@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
@@ -23,6 +25,9 @@ const Alert = ({
   text,
 }) => {
   const hasLeftIcon = iconLeft !== '';
+  const showLink = name !== '' || address !== '';
+
+  console.log('showLink', showLink);
 
   const [isVisible, setIsVisible] = useState(true);
 
@@ -53,16 +58,21 @@ const Alert = ({
               {text}
             </span>
           </div>
-          <div className="ce-alert__link">
-            <div className="ce-alert__link-text">LINK</div>
-          </div>
+          {showLink && (
+            <div className="ce-alert__link">
+              <div className="ce-alert__link-text">LINK</div>
+            </div>
+          )}
           {dismissible && (
             <button
               type="button"
               className="ce-alert__close"
               onClick={handleClose}
             >
-              <SystemIcon name="close" />
+              <SystemIcon
+                name="close"
+                color={type === 'error' ? 'white' : 'black'}
+              />
             </button>
           )}
         </div>
