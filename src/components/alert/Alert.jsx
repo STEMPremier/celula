@@ -27,8 +27,6 @@ const Alert = ({
   const hasLeftIcon = iconLeft !== '';
   const showLink = name !== '' || address !== '';
 
-  console.log('showLink', showLink);
-
   const [isVisible, setIsVisible] = useState(true);
 
   const handleClose = () => {
@@ -45,7 +43,10 @@ const Alert = ({
         <div className={classes}>
           {hasLeftIcon && (
             <div className="ce-alert__leftIcon" iconLeft={iconLeft}>
-              <SystemIcon name={iconLeft} />
+              <SystemIcon
+                name={iconLeft}
+                color={type === 'error' ? 'white' : 'black'}
+              />
             </div>
           )}
           <div className="ce-alert__text">
