@@ -109,17 +109,21 @@ import { COMPONENT_STATES as STATES, COLORS, SIZES, SYSTEM_ICONS } from '../../u
   <Story name="ToggleButton Colors">
     <div>
       {COLORS.map(color => (
-        <ToggleButtonGroup
-          color={color}
-          handleChange={action('`ToggleButton Colors` onChange event triggered.')}
+        <span
+          style={color === 'inverted' ? {backgroundColor:'black',display:'inline-block'} : {}}
           key={`formColors_${color}`}
-          name={`formColor_${color}`}
-          selectedValue="follow"
         >
-          <ToggleButton icon="export" value="export" />
-          <ToggleButton icon="follow" value="follow" />
-          <ToggleButton icon="message" value="message" />
-        </ToggleButtonGroup>
+          <ToggleButtonGroup
+            color={color}
+            handleChange={action('`ToggleButton Colors` onChange event triggered.')}
+            name={`formColor_${color}`}
+            selectedValue="follow"
+          >
+            <ToggleButton icon="export" value="export" />
+            <ToggleButton icon="follow" value="follow" />
+            <ToggleButton icon="message" value="message" />
+          </ToggleButtonGroup>
+        </span>
       ))}
     </div>
   </Story>
