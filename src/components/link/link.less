@@ -1,0 +1,58 @@
+@import '../../styles/celula';
+
+.ce-link {
+  text-decoration: none;
+
+  &.ce-link--uppercase {
+    text-transform: uppercase;
+  }
+
+  &.ce-link--primary {
+    color: @blue;
+
+    // States
+    &:hover {
+      color: @primary-hover; // 30% darker
+    }
+    &:focus {
+      color: @primary-focus; // 50% darker
+    }
+    &:active {
+      color: @primary-active; // 50% darker
+    }
+  }
+
+  &.ce-link--secondary {
+    color: @red;
+
+    // States
+    &:hover {
+      color: @secondary-hover; // 30% darker
+    }
+    &:focus {
+      color: @secondary-focus; // 50% darker
+    }
+    &:active {
+      color: @secondary-active; // 50% darker
+    }
+  }
+
+  &.ce-link--black {
+    color: @black;
+
+    // States
+    &:hover {
+      color: @black-hover; // 50%-ish lighter
+    }
+    &:focus {
+      color: @black-focus; // 30%-ish lighter
+    }
+    &:active {
+      color: @black-active; // 30%-ish lighter
+    }
+  }
+
+  &.ce-link--inverted {
+    color: @white;
+  }
+}

@@ -629,6 +629,67 @@ exports[`Storyshots Components/Atoms/Button Button with Knobs 1`] = `
 </button>
 `;
 
+exports[`Storyshots Components/Atoms/Link Link Colors 1`] = `
+Array [
+  <a
+    className="ce-link ce-link--uppercase ce-link--black"
+    href=""
+  >
+    black
+  </a>,
+  <a
+    className="ce-link ce-link--uppercase ce-link--blue"
+    href=""
+  >
+    blue
+  </a>,
+  <a
+    className="ce-link ce-link--uppercase ce-link--gray"
+    href=""
+  >
+    gray
+  </a>,
+  <a
+    className="ce-link ce-link--uppercase ce-link--red"
+    href=""
+  >
+    red
+  </a>,
+  <a
+    className="ce-link ce-link--uppercase ce-link--white"
+    href=""
+  >
+    white
+  </a>,
+]
+`;
+
+exports[`Storyshots Components/Atoms/Link Link Types 1`] = `
+Array [
+  <a
+    className="ce-link ce-link--lowercase ce-link--blue"
+    href=""
+  >
+    lowercase
+  </a>,
+  <a
+    className="ce-link ce-link--uppercase ce-link--blue"
+    href=""
+  >
+    uppercase
+  </a>,
+]
+`;
+
+exports[`Storyshots Components/Atoms/Link Link with Knobs 1`] = `
+<a
+  className="ce-link ce-link--uppercase ce-link--blue"
+  href="https://app.tallo.com/register"
+>
+  hyperlink
+</a>
+`;
+
 exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Colors 1`] = `
 <div>
   <fieldset

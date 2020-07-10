@@ -174,15 +174,15 @@ button {
 
     // States
     &:hover {
-      color: #008dd2;
+      color: @primary-hover;
     }
 
     &:active {
-      color: #006999;
+      color: @primary-active;
     }
 
     &:focus {
-      color: #006999;
+      color: @primary-focus;
     }
 
     &.ce-button--disabled {
@@ -230,19 +230,19 @@ button {
   // Text Colors
   &.ce-button--text {
     background: @white;
-    color: #982d7c;
+    color: @royal-heath;
 
     // States
     &:hover {
-      color: #bc178f;
+      color: @secondary-hover;
     }
 
     &:active {
-      color: #900086;
+      color: @secondary-active;
     }
 
     &:focus {
-      color: #900086;
+      color: @secondary-focus;
     }
 
     &.ce-button--disabled {
@@ -294,15 +294,15 @@ button {
 
     // States
     &:hover {
-      color: #404040; // 50%-ish lighter
+      color: @black-hover; // 50%-ish lighter
     }
 
     &:active {
-      color: #262626; // 30%-ish lighter
+      color: @black-active; // 30%-ish lighter
     }
 
     &:focus {
-      color: #262626; // 30%-ish lighter
+      color: @black-focus; // 30%-ish lighter
     }
 
     &.ce-button--disabled {
@@ -311,18 +311,18 @@ button {
   }
 }
 
-// Blue Base Colors
-.ce-button--blue {
-  background: @blue;
-  color: @white;
+// Inverted Base Colors
+.ce-button--inverted {
+  background: @white;
+  color: @black;
 
   // States
   &:hover {
-    background: #007ab2; // 30% darker
+    color: #404040; // 50%-ish lighter
   }
 
   &:active {
-    background: #00577f; // 50% darker
+    color: #262626; // 30%-ish lighter
   }
 
   &.ce-button--disabled {
@@ -331,15 +331,24 @@ button {
 
   // Outline Colors
   &.ce-button--outline {
-    color: @black;
+    background: @white;
+    color: @white;
+
+    .ce-button__label {
+      background: @gradient-cool;
+    }
 
     // States
     &:hover {
-      color: #007ab2; // 30% darker
+      .ce-button__label {
+        background: #4a4396; // 15%-ish lighter
+      }
     }
 
     &:active {
-      color: #00577f; // 50% darker
+      .ce-button__label {
+        background: #3e3e85; // 25%-ish lighter
+      }
     }
 
     &.ce-button--disabled {
@@ -348,261 +357,24 @@ button {
   }
 
   // Text Colors
+  // This is a little wonky, and will need to be revisited at some point.
+  // But for now, we are moving forward as there really wont be to many
+  // uses of the inverted text button, I dont think.
   &.ce-button--text {
-    background: @white;
-    color: @blue;
+    color: @white;
+    background: transparent;
 
     // States
     &:hover {
-      color: #007ab2; // 30% darker
+      background: @black-hover; // 50%-ish lighter
     }
 
     &:active {
-      color: #00577f; // 50% darker
+      background: @black-active; // 30%-ish lighter
     }
 
     &:focus {
-      color: #00577f; // 50% darker
-    }
-
-    &.ce-button--disabled {
-      color: @focus-gray;
-    }
-  }
-}
-
-// Green Base Colors
-.ce-button--green {
-  background: @green;
-  color: @white;
-
-  // States
-  &:hover {
-    background: #789737; // 30% darker
-  }
-
-  &:active {
-    background: #566c27; // 50% darker
-  }
-
-  &.ce-button--disabled {
-    background: @focus-gray;
-  }
-
-  // Outline Colors
-  &.ce-button--outline {
-    color: @black;
-
-    // States
-    &:hover {
-      color: #789737; // 30% darker
-    }
-
-    &:active {
-      color: #566c27; // 50% darker
-    }
-
-    &.ce-button--disabled {
-      color: @focus-gray;
-    }
-  }
-
-  // Text Colors
-  &.ce-button--text {
-    background: @white;
-    color: @green;
-
-    // States
-    &:hover {
-      color: #789737; // 30% darker
-    }
-
-    &:active {
-      color: #566c27; // 50% darker
-    }
-
-    &:focus {
-      color: #566c27; // 50% darker
-    }
-
-    &.ce-button--disabled {
-      color: @focus-gray;
-    }
-  }
-}
-
-// Orange Base Colors
-.ce-button--orange {
-  background: @orange;
-  color: @white;
-
-  // States
-  &:hover {
-    background: #b07425; // 30% darker
-  }
-
-  &:active {
-    background: #7d521a; // 50% darker
-  }
-
-  &.ce-button--disabled {
-    background: @focus-gray;
-  }
-
-  // Outline Colors
-  &.ce-button--outline {
-    color: @black;
-
-    // States
-    &:hover {
-      color: #b07425; // 30% darker
-    }
-
-    &:active {
-      color: #7d521a; // 50% darker
-    }
-
-    &.ce-button--disabled {
-      color: @focus-gray;
-    }
-  }
-
-  // Text Colors
-  &.ce-button--text {
-    background: @white;
-    color: @orange;
-
-    // States
-    &:hover {
-      color: #b07425; // 30% darker
-    }
-
-    &:active {
-      color: #7d521a; // 50% darker
-    }
-
-    &:focus {
-      color: #7d521a; // 50% darker
-    }
-
-    &.ce-button--disabled {
-      color: @focus-gray;
-    }
-  }
-}
-
-// Purple Base Colors
-.ce-button--purple {
-  background: @purple;
-  color: @white;
-
-  // States
-  &:hover {
-    background: #542775; // 30% darker
-  }
-
-  &:active {
-    background: #3c1c54; // 50% darker
-  }
-
-  &.ce-button--disabled {
-    background: @focus-gray;
-  }
-
-  // Outline Colors
-  &.ce-button--outline {
-    color: @black;
-
-    // States
-    &:hover {
-      color: #542775; // 30% darker
-    }
-
-    &:active {
-      color: #3c1c54; // 50% darker
-    }
-
-    &.ce-button--disabled {
-      color: @focus-gray;
-    }
-  }
-
-  // Text Colors
-  &.ce-button--text {
-    background: @white;
-    color: @purple;
-
-    // States
-    &:hover {
-      color: #542775; // 30% darker
-    }
-
-    &:active {
-      color: #3c1c54; // 50% darker
-    }
-
-    &:focus {
-      color: #3c1c54; // 50% darker
-    }
-
-    &.ce-button--disabled {
-      color: @focus-gray;
-    }
-  }
-}
-
-// Red Base Colors
-.ce-button--red {
-  background: @red;
-  color: @white;
-
-  // States
-  &:hover {
-    background: #b3003a; // 30% darker
-  }
-
-  &:active {
-    background: #80002a; // 50% darker
-  }
-
-  &.ce-button--disabled {
-    background: @focus-gray;
-  }
-
-  // Outline Colors
-  &.ce-button--outline {
-    color: @black;
-
-    // States
-    &:hover {
-      color: #b3003a; // 30% darker
-    }
-
-    &:active {
-      color: #80002a; // 50% darker
-    }
-
-    &.ce-button--disabled {
-      color: @focus-gray;
-    }
-  }
-
-  // Text Colors
-  &.ce-button--text {
-    background: @white;
-    color: @red;
-
-    // States
-    &:hover {
-      color: #b3003a; // 30% darker
-    }
-
-    &:active {
-      color: #80002a; // 50% darker
-    }
-
-    &:focus {
-      color: #80002a; // 50% darker
+      background: @black-focus; // 30%-ish lighter
     }
 
     &.ce-button--disabled {

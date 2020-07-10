@@ -1,0 +1,56 @@
+import {
+  Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { text } from '@storybook/addon-knobs';
+
+import Link from '.';
+import { COLORS, LINK_TEXT_STYLES as TYPES } from '../../utils/constants';
+
+<Meta component={Link} title="Components/Atoms/Link"/>
+
+# Links
+<Description of={Link}/>
+<Props of={Link}/>
+
+<Story name="Link with Knobs" parameters={{ docs: { disable: true}}}>
+  <Link
+    address={text('address','https://app.tallo.com/register' )}
+    className={text('className', '')}
+    color={text('color', 'primary')}
+    text={text('text', 'Tallo')}
+    textStyle={text('textStyle', 'uppercase' )}
+  />
+</Story>
+
+### Types
+<Preview>
+  <Story name="Link Types">
+    {TYPES.map(type => (
+      <Link
+        key={type}
+        text={type}
+        textStyle={type}
+      />
+    ))}
+  </Story>
+</Preview>
+
+### Colors
+<Preview>
+  <Story name="Link Colors">
+    {COLORS.map(color => (
+      <span style={color === 'inverted' ? {backgroundColor:'black'} : {}}>
+        <Link
+          key={color}
+          text={color}
+          color={color}
+        />
+      </span>
+    ))}
+  </Story>
+</Preview>

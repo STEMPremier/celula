@@ -9,6 +9,7 @@
 @import url(https://use.typekit.net/lyt2kus.css);
 @import url(https://use.typekit.net/lyt2kus.css);
 @import url(https://use.typekit.net/lyt2kus.css);
+@import url(https://use.typekit.net/lyt2kus.css);
 html,
 body,
 div,
@@ -344,209 +345,49 @@ button {
 .ce-button--black.ce-button--text.ce-button--disabled {
   color: #ccc;
 }
-.ce-button--blue {
-  background: #00b0ff;
-  color: #fff;
-}
-.ce-button--blue:hover {
-  background: #007ab2;
-}
-.ce-button--blue:active {
-  background: #00577f;
-}
-.ce-button--blue.ce-button--disabled {
-  background: #ccc;
-}
-.ce-button--blue.ce-button--outline {
+.ce-button--inverted {
+  background: #fff;
   color: #000;
 }
-.ce-button--blue.ce-button--outline:hover {
-  color: #007ab2;
+.ce-button--inverted:hover {
+  color: #404040;
 }
-.ce-button--blue.ce-button--outline:active {
-  color: #00577f;
+.ce-button--inverted:active {
+  color: #262626;
 }
-.ce-button--blue.ce-button--outline.ce-button--disabled {
-  color: #ccc;
-}
-.ce-button--blue.ce-button--text {
-  background: #fff;
-  color: #00b0ff;
-}
-.ce-button--blue.ce-button--text:hover {
-  color: #007ab2;
-}
-.ce-button--blue.ce-button--text:active {
-  color: #00577f;
-}
-.ce-button--blue.ce-button--text:focus {
-  color: #00577f;
-}
-.ce-button--blue.ce-button--text.ce-button--disabled {
-  color: #ccc;
-}
-.ce-button--green {
-  background: #acd84f;
-  color: #fff;
-}
-.ce-button--green:hover {
-  background: #789737;
-}
-.ce-button--green:active {
-  background: #566c27;
-}
-.ce-button--green.ce-button--disabled {
+.ce-button--inverted.ce-button--disabled {
   background: #ccc;
 }
-.ce-button--green.ce-button--outline {
-  color: #000;
-}
-.ce-button--green.ce-button--outline:hover {
-  color: #789737;
-}
-.ce-button--green.ce-button--outline:active {
-  color: #566c27;
-}
-.ce-button--green.ce-button--outline.ce-button--disabled {
-  color: #ccc;
-}
-.ce-button--green.ce-button--text {
+.ce-button--inverted.ce-button--outline {
   background: #fff;
-  color: #acd84f;
-}
-.ce-button--green.ce-button--text:hover {
-  color: #789737;
-}
-.ce-button--green.ce-button--text:active {
-  color: #566c27;
-}
-.ce-button--green.ce-button--text:focus {
-  color: #566c27;
-}
-.ce-button--green.ce-button--text.ce-button--disabled {
-  color: #ccc;
-}
-.ce-button--orange {
-  background: #fca635;
   color: #fff;
 }
-.ce-button--orange:hover {
-  background: #b07425;
+.ce-button--inverted.ce-button--outline .ce-button__label {
+  background: linear-gradient(317.58deg, #6645ad 0%, #2d71be 100%);
 }
-.ce-button--orange:active {
-  background: #7d521a;
+.ce-button--inverted.ce-button--outline:hover .ce-button__label {
+  background: #4a4396;
 }
-.ce-button--orange.ce-button--disabled {
-  background: #ccc;
+.ce-button--inverted.ce-button--outline:active .ce-button__label {
+  background: #3e3e85;
 }
-.ce-button--orange.ce-button--outline {
-  color: #000;
-}
-.ce-button--orange.ce-button--outline:hover {
-  color: #b07425;
-}
-.ce-button--orange.ce-button--outline:active {
-  color: #7d521a;
-}
-.ce-button--orange.ce-button--outline.ce-button--disabled {
+.ce-button--inverted.ce-button--outline.ce-button--disabled {
   color: #ccc;
 }
-.ce-button--orange.ce-button--text {
-  background: #fff;
-  color: #fca635;
-}
-.ce-button--orange.ce-button--text:hover {
-  color: #b07425;
-}
-.ce-button--orange.ce-button--text:active {
-  color: #7d521a;
-}
-.ce-button--orange.ce-button--text:focus {
-  color: #7d521a;
-}
-.ce-button--orange.ce-button--text.ce-button--disabled {
-  color: #ccc;
-}
-.ce-button--purple {
-  background: #7838a8;
+.ce-button--inverted.ce-button--text {
   color: #fff;
+  background: transparent;
 }
-.ce-button--purple:hover {
-  background: #542775;
+.ce-button--inverted.ce-button--text:hover {
+  background: #404040;
 }
-.ce-button--purple:active {
-  background: #3c1c54;
+.ce-button--inverted.ce-button--text:active {
+  background: #262626;
 }
-.ce-button--purple.ce-button--disabled {
-  background: #ccc;
+.ce-button--inverted.ce-button--text:focus {
+  background: #262626;
 }
-.ce-button--purple.ce-button--outline {
-  color: #000;
-}
-.ce-button--purple.ce-button--outline:hover {
-  color: #542775;
-}
-.ce-button--purple.ce-button--outline:active {
-  color: #3c1c54;
-}
-.ce-button--purple.ce-button--outline.ce-button--disabled {
-  color: #ccc;
-}
-.ce-button--purple.ce-button--text {
-  background: #fff;
-  color: #7838a8;
-}
-.ce-button--purple.ce-button--text:hover {
-  color: #542775;
-}
-.ce-button--purple.ce-button--text:active {
-  color: #3c1c54;
-}
-.ce-button--purple.ce-button--text:focus {
-  color: #3c1c54;
-}
-.ce-button--purple.ce-button--text.ce-button--disabled {
-  color: #ccc;
-}
-.ce-button--red {
-  background: #ff0054;
-  color: #fff;
-}
-.ce-button--red:hover {
-  background: #b3003a;
-}
-.ce-button--red:active {
-  background: #80002a;
-}
-.ce-button--red.ce-button--disabled {
-  background: #ccc;
-}
-.ce-button--red.ce-button--outline {
-  color: #000;
-}
-.ce-button--red.ce-button--outline:hover {
-  color: #b3003a;
-}
-.ce-button--red.ce-button--outline:active {
-  color: #80002a;
-}
-.ce-button--red.ce-button--outline.ce-button--disabled {
-  color: #ccc;
-}
-.ce-button--red.ce-button--text {
-  background: #fff;
-  color: #ff0054;
-}
-.ce-button--red.ce-button--text:hover {
-  color: #b3003a;
-}
-.ce-button--red.ce-button--text:active {
-  color: #80002a;
-}
-.ce-button--red.ce-button--text:focus {
-  color: #80002a;
-}
-.ce-button--red.ce-button--text.ce-button--disabled {
+.ce-button--inverted.ce-button--text.ce-button--disabled {
   color: #ccc;
 }
 
@@ -1848,25 +1689,16 @@ body {
   height: 1.6rem;
   width: 1.6rem;
 }
+.ce-icon.ce-icon__system .ce-icon--primary {
+  stroke: #00b0ff;
+}
+.ce-icon.ce-icon__system .ce-icon--secondary {
+  stroke: #982d7c;
+}
 .ce-icon.ce-icon__system .ce-icon--black {
   stroke: #000;
 }
-.ce-icon.ce-icon__system .ce-icon--blue {
-  stroke: #00b0ff;
-}
-.ce-icon.ce-icon__system .ce-icon--green {
-  stroke: #acd84f;
-}
-.ce-icon.ce-icon__system .ce-icon--orange {
-  stroke: #fca635;
-}
-.ce-icon.ce-icon__system .ce-icon--purple {
-  stroke: #7838a8;
-}
-.ce-icon.ce-icon__system .ce-icon--red {
-  stroke: #ff0054;
-}
-.ce-icon.ce-icon__system .ce-icon--white {
+.ce-icon.ce-icon__system .ce-icon--inverted {
   stroke: #fff;
 }
 
@@ -2565,6 +2397,190 @@ body {
  * Disabled Select
  */
 /* eslint-enable prettier/prettier */
+.ce-link {
+  text-decoration: none;
+}
+.ce-link.ce-link--uppercase {
+  text-transform: uppercase;
+}
+.ce-link.ce-link--primary {
+  color: #00b0ff;
+}
+.ce-link.ce-link--primary:hover {
+  color: #008dd2;
+}
+.ce-link.ce-link--primary:focus {
+  color: #006999;
+}
+.ce-link.ce-link--primary:active {
+  color: #006999;
+}
+.ce-link.ce-link--secondary {
+  color: #ff0054;
+}
+.ce-link.ce-link--secondary:hover {
+  color: #bc178f;
+}
+.ce-link.ce-link--secondary:focus {
+  color: #900086;
+}
+.ce-link.ce-link--secondary:active {
+  color: #900086;
+}
+.ce-link.ce-link--black {
+  color: #000;
+}
+.ce-link.ce-link--black:hover {
+  color: #404040;
+}
+.ce-link.ce-link--black:focus {
+  color: #262626;
+}
+.ce-link.ce-link--black:active {
+  color: #262626;
+}
+.ce-link.ce-link--inverted {
+  color: #fff;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  color: #0f1422;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 10px;
+}
+body {
+  color: #0f1422;
+  font-size: 1.6rem;
+}
+/* eslint-disable prettier/prettier */
+/* Grayscale
+ * #fff - #000 in [various]% steps
+ * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
+ */
+/* Checked/Unchecked Disabled Radio,
+ * Checked/Unchecked Disabled Checkbox,
+ * Disabled Select
+ */
+/* eslint-enable prettier/prettier */
 .sr-only {
   border: 0;
   clip-path: circle(0);
@@ -2867,140 +2883,32 @@ body {
 .ce-toggle-button-group--black .ce-toggle-button.ce-toggle-button--checked label .ce-icon {
   stroke: #fff;
 }
-.ce-toggle-button-group--blue {
-  background: #00b0ff;
-}
-.ce-toggle-button-group--blue .ce-toggle-button {
+.ce-toggle-button-group--inverted {
   background: #fff;
 }
-.ce-toggle-button-group--blue .ce-toggle-button label .ce-icon {
-  stroke: #000;
+.ce-toggle-button-group--inverted .ce-toggle-button {
+  background: linear-gradient(317.58deg, #6645ad 0%, #2d71be 100%);
 }
-.ce-toggle-button-group--blue .ce-toggle-button:hover {
-  background: transparent;
-}
-.ce-toggle-button-group--blue .ce-toggle-button:hover label .ce-icon {
+.ce-toggle-button-group--inverted .ce-toggle-button label .ce-icon {
   stroke: #fff;
 }
-.ce-toggle-button-group--blue .ce-toggle-button:active {
-  background: #00577f;
+.ce-toggle-button-group--inverted .ce-toggle-button:hover {
+  background: #4a4396;
 }
-.ce-toggle-button-group--blue .ce-toggle-button:active label .ce-icon {
+.ce-toggle-button-group--inverted .ce-toggle-button:hover label .ce-icon {
   stroke: #fff;
 }
-.ce-toggle-button-group--blue .ce-toggle-button.ce-toggle-button--checked {
-  background: transparent;
+.ce-toggle-button-group--inverted .ce-toggle-button:active {
+  background: #3e3e85;
 }
-.ce-toggle-button-group--blue .ce-toggle-button.ce-toggle-button--checked label .ce-icon {
+.ce-toggle-button-group--inverted .ce-toggle-button:active label .ce-icon {
   stroke: #fff;
 }
-.ce-toggle-button-group--green {
-  background: #acd84f;
-}
-.ce-toggle-button-group--green .ce-toggle-button {
+.ce-toggle-button-group--inverted .ce-toggle-button.ce-toggle-button--checked {
   background: #fff;
 }
-.ce-toggle-button-group--green .ce-toggle-button label .ce-icon {
+.ce-toggle-button-group--inverted .ce-toggle-button.ce-toggle-button--checked label .ce-icon {
   stroke: #000;
-}
-.ce-toggle-button-group--green .ce-toggle-button:hover {
-  background: transparent;
-}
-.ce-toggle-button-group--green .ce-toggle-button:hover label .ce-icon {
-  stroke: #fff;
-}
-.ce-toggle-button-group--green .ce-toggle-button:active {
-  background: #566c27;
-}
-.ce-toggle-button-group--green .ce-toggle-button:active label .ce-icon {
-  stroke: #fff;
-}
-.ce-toggle-button-group--green .ce-toggle-button.ce-toggle-button--checked {
-  background: transparent;
-}
-.ce-toggle-button-group--green .ce-toggle-button.ce-toggle-button--checked label .ce-icon {
-  stroke: #fff;
-}
-.ce-toggle-button-group--orange {
-  background: #fca635;
-}
-.ce-toggle-button-group--orange .ce-toggle-button {
-  background: #fff;
-}
-.ce-toggle-button-group--orange .ce-toggle-button label .ce-icon {
-  stroke: #000;
-}
-.ce-toggle-button-group--orange .ce-toggle-button:hover {
-  background: transparent;
-}
-.ce-toggle-button-group--orange .ce-toggle-button:hover label .ce-icon {
-  stroke: #fff;
-}
-.ce-toggle-button-group--orange .ce-toggle-button:active {
-  background: #7d521a;
-}
-.ce-toggle-button-group--orange .ce-toggle-button:active label .ce-icon {
-  stroke: #fff;
-}
-.ce-toggle-button-group--orange .ce-toggle-button.ce-toggle-button--checked {
-  background: transparent;
-}
-.ce-toggle-button-group--orange .ce-toggle-button.ce-toggle-button--checked label .ce-icon {
-  stroke: #fff;
-}
-.ce-toggle-button-group--purple {
-  background: #7838a8;
-}
-.ce-toggle-button-group--purple .ce-toggle-button {
-  background: #fff;
-}
-.ce-toggle-button-group--purple .ce-toggle-button label .ce-icon {
-  stroke: #000;
-}
-.ce-toggle-button-group--purple .ce-toggle-button:hover {
-  background: transparent;
-}
-.ce-toggle-button-group--purple .ce-toggle-button:hover label .ce-icon {
-  stroke: #fff;
-}
-.ce-toggle-button-group--purple .ce-toggle-button:active {
-  background: #3c1c54;
-}
-.ce-toggle-button-group--purple .ce-toggle-button:active label .ce-icon {
-  stroke: #fff;
-}
-.ce-toggle-button-group--purple .ce-toggle-button.ce-toggle-button--checked {
-  background: transparent;
-}
-.ce-toggle-button-group--purple .ce-toggle-button.ce-toggle-button--checked label .ce-icon {
-  stroke: #fff;
-}
-.ce-toggle-button-group--red {
-  background: #ff0054;
-}
-.ce-toggle-button-group--red .ce-toggle-button {
-  background: #fff;
-}
-.ce-toggle-button-group--red .ce-toggle-button label .ce-icon {
-  stroke: #000;
-}
-.ce-toggle-button-group--red .ce-toggle-button:hover {
-  background: transparent;
-}
-.ce-toggle-button-group--red .ce-toggle-button:hover label .ce-icon {
-  stroke: #fff;
-}
-.ce-toggle-button-group--red .ce-toggle-button:active {
-  background: #80002a;
-}
-.ce-toggle-button-group--red .ce-toggle-button:active label .ce-icon {
-  stroke: #fff;
-}
-.ce-toggle-button-group--red .ce-toggle-button.ce-toggle-button--checked {
-  background: transparent;
-}
-.ce-toggle-button-group--red .ce-toggle-button.ce-toggle-button--checked label .ce-icon {
-  stroke: #fff;
 }
 .ce-toggle-button-group--disabled {
   background: #ccc;
