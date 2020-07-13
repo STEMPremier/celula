@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> render() renders the component 1`] = `
+<a
+  className="ce-link ce-link--lowercase ce-link--blue"
+  href="https://app.tallo.com/register"
+>
+  hyperlink
+</a>
+`;

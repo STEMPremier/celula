@@ -1,15 +1,12 @@
-/* eslint-disable jsx-a11y/interactive-supports-focus */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable no-unused-vars */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-// eslint-disable-next-line no-unused-vars
 import SystemIcon from '../icon/SystemIcon';
+import Link from '../link';
 
 import {
-  // ALERT_COLORS as COLORS,
   ALERT_TYPES as TYPES,
   SYSTEM_ICONS as ICONS,
 } from '../../utils/constants';
@@ -21,11 +18,12 @@ const Alert = ({
   type,
   iconLeft,
   dismissible,
-  linkOptions: { name, address },
   text,
+  linkName,
+  address,
 }) => {
   const hasLeftIcon = iconLeft !== '';
-  const showLink = name !== '' || address !== '';
+  const showLink = linkName !== '' || address !== '';
 
   const [isVisible, setIsVisible] = useState(true);
 
@@ -33,9 +31,13 @@ const Alert = ({
     setIsVisible(false);
   };
 
-  const classes = cx('ce-alert', {
-    [`ce-alert--${type}`]: TYPES.includes(type.toString().toLowerCase()),
-  });
+  const classes = cx(
+    'ce-alert',
+    {
+      [`ce-alert--${type}`]: TYPES.includes(type.toString().toLowerCase()),
+    },
+    className,
+  );
 
   return (
     <div>
@@ -50,18 +52,18 @@ const Alert = ({
             </div>
           )}
           <div className="ce-alert__text">
-            <span
-              type={type}
-              dismissible={dismissible}
-              name={name}
-              address={address}
-            >
+            <span type={type} dismissible={dismissible}>
               {text}
             </span>
           </div>
           {showLink && (
             <div className="ce-alert__link">
-              <div className="ce-alert__link-text">LINK</div>
+              <Link
+                address={address}
+                text={linkName}
+                color={type === 'error' ? 'inverted' : 'black'}
+                className="ce-alert__link-text"
+              />
             </div>
           )}
           {dismissible && (
@@ -72,7 +74,7 @@ const Alert = ({
             >
               <SystemIcon
                 name="close"
-                color={type === 'error' ? 'white' : 'black'}
+                color={type === 'error' ? 'inverted' : 'black'}
               />
             </button>
           )}
@@ -104,15 +106,13 @@ Alert.propTypes = {
    */
   dismissible: PropTypes.bool,
   /**
-   * These options configure the link on the right hand side.
-   * Without setting the address and the name, the `<Link />` will not appear.
-   * `name` is the text that will appear as the `<Link /> itself.
-   * `address` is the http address where the link will direct the user.
+   * The linkName is the text for the link that will appear to the user on the right hand side of the alert.  Without setting both the address and the name, the `<Link />` will not appear.
    */
-  linkOptions: PropTypes.shape({
-    name: PropTypes.string,
-    address: PropTypes.string,
-  }),
+  linkName: PropTypes.string,
+  /**
+   * The `address` is the http address where the link will direct the user.   Without setting both the address and the name, the `<Link />` will not appear.
+   */
+  address: PropTypes.string,
 };
 
 Alert.defaultProps = {
@@ -120,7 +120,8 @@ Alert.defaultProps = {
   type: 'info',
   iconLeft: '',
   dismissible: false,
-  linkOptions: { name: '', address: '' },
+  linkName: '',
+  address: '',
 };
 
 export default Alert;

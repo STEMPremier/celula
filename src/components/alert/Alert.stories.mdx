@@ -25,7 +25,7 @@ import { ALERT_TYPES as TYPES, SYSTEM_ICONS as ICONS } from '../../utils/constan
     iconLeft={text('iconLeft', '', 'Secondary Icon Options')}
     dismissible={boolean('dismissible', false, 'Alert Options')}
     linkOptions={{
-      name: text('name','Alert link text', 'Link Options'),
+      linkName: text('name','Alert link text', 'Link Options'),
       address:text('address', 'http address', 'Link Options'),
     }}
     text={text('text', 'alert text', 'Alert Optionss')}
@@ -70,7 +70,7 @@ import { ALERT_TYPES as TYPES, SYSTEM_ICONS as ICONS } from '../../utils/constan
         <Alert 
           type={type}
           text={type}
-          name='Link Name Here'
+          linkName='Link Name Here'
           address='https://app.tallo.com'
        >
        </Alert>

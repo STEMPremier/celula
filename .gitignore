@@ -5,7 +5,7 @@
 /coverage
 
 # production
-/dist
+# /dist # commenting out temporarily while I test the lib in another app without publising it via npm
 
 # Logs
 logs

@@ -171,19 +171,19 @@
   }
 }
 
-.ce-toggle-button-group--blue {
-  background: @blue;
+.ce-toggle-button-group--inverted {
+  background: @white;
 
   .ce-toggle-button {
-    background: @white;
+    background: @gradient-cool;
 
     label .ce-icon {
-      stroke: @black;
+      stroke: @white;
     }
 
     // States
     &:hover {
-      background: transparent;
+      background: #4a4396;
 
       label .ce-icon {
         stroke: @white;
@@ -191,7 +191,7 @@
     }
 
     &:active {
-      background: #00577f;
+      background: #3e3e85;
 
       label .ce-icon {
         stroke: @white;
@@ -199,158 +199,10 @@
     }
 
     &.ce-toggle-button--checked {
-      background: transparent;
+      background: @white;
 
       label .ce-icon {
-        stroke: @white;
-      }
-    }
-  }
-}
-
-.ce-toggle-button-group--green {
-  background: @green;
-
-  .ce-toggle-button {
-    background: @white;
-
-    label .ce-icon {
-      stroke: @black;
-    }
-
-    // States
-    &:hover {
-      background: transparent;
-
-      label .ce-icon {
-        stroke: @white;
-      }
-    }
-
-    &:active {
-      background: #566c27;
-
-      label .ce-icon {
-        stroke: @white;
-      }
-    }
-
-    &.ce-toggle-button--checked {
-      background: transparent;
-
-      label .ce-icon {
-        stroke: @white;
-      }
-    }
-  }
-}
-
-.ce-toggle-button-group--orange {
-  background: @orange;
-
-  .ce-toggle-button {
-    background: @white;
-
-    label .ce-icon {
-      stroke: @black;
-    }
-
-    // States
-    &:hover {
-      background: transparent;
-
-      label .ce-icon {
-        stroke: @white;
-      }
-    }
-
-    &:active {
-      background: #7d521a;
-
-      label .ce-icon {
-        stroke: @white;
-      }
-    }
-
-    &.ce-toggle-button--checked {
-      background: transparent;
-
-      label .ce-icon {
-        stroke: @white;
-      }
-    }
-  }
-}
-
-.ce-toggle-button-group--purple {
-  background: @purple;
-
-  .ce-toggle-button {
-    background: @white;
-
-    label .ce-icon {
-      stroke: @black;
-    }
-
-    // States
-    &:hover {
-      background: transparent;
-
-      label .ce-icon {
-        stroke: @white;
-      }
-    }
-
-    &:active {
-      background: #3c1c54;
-
-      label .ce-icon {
-        stroke: @white;
-      }
-    }
-
-    &.ce-toggle-button--checked {
-      background: transparent;
-
-      label .ce-icon {
-        stroke: @white;
-      }
-    }
-  }
-}
-
-.ce-toggle-button-group--red {
-  background: @red;
-
-  .ce-toggle-button {
-    background: @white;
-
-    label .ce-icon {
-      stroke: @black;
-    }
-
-    // States
-    &:hover {
-      background: transparent;
-
-      label .ce-icon {
-        stroke: @white;
-      }
-    }
-
-    &:active {
-      background: #80002a;
-
-      label .ce-icon {
-        stroke: @white;
-      }
-    }
-
-    &.ce-toggle-button--checked {
-      background: transparent;
-
-      label .ce-icon {
-        stroke: @white;
+        stroke: @black;
       }
     }
   }

@@ -2,7 +2,7 @@ import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/
 import { select } from '@storybook/addon-knobs';
 
 import { SystemIcon } from '.';
-import { SYSTEM_ICONS } from '../../utils/constants';
+import { SYSTEM_ICONS, COLORS } from '../../utils/constants';
 
 <Meta component={SystemIcon} title="Components/Molecules/Icons/SystemIcon" />
 
@@ -12,7 +12,7 @@ import { SYSTEM_ICONS } from '../../utils/constants';
 
 <Story name="All SystemIcons" parameters={{ docs: { disable: true }}}>
   <SystemIcon
-    color={select('color', ['black', 'blue', 'green', 'orange', 'purple', 'red', 'white'], 'red')}
+    color={select('color', COLORS, 'primary')}
     name={select('name', SYSTEM_ICONS,'share')}
   />
 </Story>
@@ -37,10 +37,14 @@ import { SYSTEM_ICONS } from '../../utils/constants';
 <Preview>
   <Story name="SystemIcon Colors">
     <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
-      {['black', 'blue', 'green', 'orange', 'purple', 'red', 'gray'].map((color, idx) => {
+      {COLORS.map((color, idx) => {
         return (
           <div key={`${color}_${idx}`} style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 1px',borderRadius:'5px',height:'25px',minWidth:'25px'}}>
-            <SystemIcon name="edit" color={color} />
+            <span
+              style={color === 'inverted' ? {backgroundColor:'black'} : {}}
+            >
+              <SystemIcon name="edit" color={color} />
+            </span>
             <span>{color}</span>
           </div>
         );

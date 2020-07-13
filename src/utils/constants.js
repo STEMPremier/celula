@@ -1,18 +1,7 @@
 const ALERT_TYPES = ['info', 'warning', 'error', 'success'];
 const BUTTON_TYPES = ['default', 'outline', 'text'];
 const COMPONENT_STATES = ['default', 'disabled', 'error'];
-const COLORS = [
-  'primary',
-  'secondary',
-  'black',
-  'blue',
-  'gray',
-  'green',
-  'orange',
-  'purple',
-  'red',
-  'white',
-];
+const COLORS = ['primary', 'secondary', 'black', 'inverted'];
 const INPUT_TYPES = [
   'color',
   'datetime-local',
@@ -88,6 +77,7 @@ const SYSTEM_ICONS = [
   'indoor',
   'popular',
 ];
+const LINK_TEXT_STYLES = ['lowercase', 'uppercase'];
 
 export {
   ALERT_TYPES,
@@ -99,4 +89,5 @@ export {
   SECONDARY_ICONS,
   SIZES,
   SYSTEM_ICONS,
+  LINK_TEXT_STYLES,
 };

@@ -97,14 +97,18 @@ import {
       {TYPES.map(type => (
         <div key={`${type}_color`}>
           {COLORS.map(color => (
-            <SubmitButton
-              color={color}
-              handleClick={action('`SubmitButton Colors` onClick event triggered.')}
+            <span
+              style={color === 'inverted' ? {backgroundColor:'black',display:'inline-block'} : {}}
               key={`${type}_${color}`}
-              type={type}
             >
-              {color}
-            </SubmitButton>
+              <SubmitButton
+                color={color}
+                handleClick={action('`SubmitButton Colors` onClick event triggered.')}
+                type={type}
+              >
+                {color}
+              </SubmitButton>
+            </span>
           ))}
         </div>
       ))}
