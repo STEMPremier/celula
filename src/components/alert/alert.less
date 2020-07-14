@@ -1,39 +1,35 @@
 @import '../../styles/celula';
 
 .ce-alert {
-  height: 5rem;
+  ////////////////////////////////
+  //     FLEXBOX CONTAINER      //
+  ////////////////////////////////
+  padding: 1.4rem 2rem;
   width: 100%;
   border-radius: 0.5rem;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 
   ////////////////////////////////
   //   4 FLEXBOX DIVS IN A ROW  //
   ////////////////////////////////
   .ce-alert__leftIcon {
-    flex-grow: 0;
-    padding: 1.5rem;
+    margin-right: 1rem;
   }
   .ce-alert__text {
-    flex-grow: 8;
-    padding: 1.5rem;
+    flex-grow: 1;
   }
   .ce-alert__link {
-    flex-grow: 3;
-    padding: 1.5rem;
     .ce-alert__link-text {
       float: right;
-      padding: 0.3rem 1rem;
       font-size: 12px;
-      font: Proxima Nova Bold;
       font-weight: bold;
     }
   }
   .ce-alert__close {
-    flex-grow: 0.2;
-    padding: 1.5rem;
-    float: right;
     border-radius: 0.5rem;
+    margin-left: 1rem;
     // remove default button settings
     -webkit-appearance: none;
     -moz-appearance: none;

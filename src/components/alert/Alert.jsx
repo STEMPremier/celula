@@ -22,7 +22,7 @@ const Alert = ({
   linkOptions: { linkName, address },
 }) => {
   const hasLeftIcon = iconLeft !== '';
-  const showLink = linkName !== '' || address !== '';
+  const showLink = linkName !== '' && address !== '';
 
   const [isVisible, setIsVisible] = useState(true);
 
