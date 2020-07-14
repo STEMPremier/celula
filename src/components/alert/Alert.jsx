@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
@@ -12,6 +13,20 @@ import {
 } from '../../utils/constants';
 
 import './alert.less';
+
+function allLinkOptions(props, propName, componentName = 'Alert') {
+  const linkOptions = props[propName];
+
+  let error;
+
+  if (!linkOptions.linkName || !linkOptions.address) {
+    error = new Error(
+      `Invalid prop linkOptions.  You must supply both linkName and address inside the object.`,
+    );
+  }
+
+  return error;
+}
 
 const Alert = ({
   className,
@@ -109,18 +124,7 @@ Alert.propTypes = {
    * `linkName` is the text that will appear as the `<Link />` itself.
    * `address` is the http address where the user will be redirected.
    */
-  linkOptions: PropTypes.shape({
-    linkName: PropTypes.string,
-    address: PropTypes.string,
-  }),
-  // /**
-  //  * The linkName is the text for the link that will appear to the user on the right hand side of the alert.  Without setting both the address and the name, the `<Link />` will not appear.
-  //  */
-  // linkName: PropTypes.string,
-  // /**
-  //  * The `address` is the http address where the link will direct the user.   Without setting both the address and the name, the `<Link />` will not appear.
-  //  */
-  // address: PropTypes.string,
+  linkOptions: allLinkOptions,
 };
 
 Alert.defaultProps = {
