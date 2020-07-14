@@ -19,8 +19,7 @@ const Alert = ({
   iconLeft,
   dismissible,
   text,
-  linkName,
-  address,
+  linkOptions: { linkName, address },
 }) => {
   const hasLeftIcon = iconLeft !== '';
   const showLink = linkName !== '' || address !== '';
@@ -106,13 +105,22 @@ Alert.propTypes = {
    */
   dismissible: PropTypes.bool,
   /**
-   * The linkName is the text for the link that will appear to the user on the right hand side of the alert.  Without setting both the address and the name, the `<Link />` will not appear.
+   * The linkOptions configures the optional `<Link />` component to the right of the `<Alert />`.  Both `linkName` and `address` are required for the `<Link />` component to appear.
+   * `linkName` is the text that will appear as the `<Link />` itself.
+   * `address` is the http address where the user will be redirected.
    */
-  linkName: PropTypes.string,
-  /**
-   * The `address` is the http address where the link will direct the user.   Without setting both the address and the name, the `<Link />` will not appear.
-   */
-  address: PropTypes.string,
+  linkOptions: PropTypes.shape({
+    linkName: PropTypes.string,
+    address: PropTypes.string,
+  }),
+  // /**
+  //  * The linkName is the text for the link that will appear to the user on the right hand side of the alert.  Without setting both the address and the name, the `<Link />` will not appear.
+  //  */
+  // linkName: PropTypes.string,
+  // /**
+  //  * The `address` is the http address where the link will direct the user.   Without setting both the address and the name, the `<Link />` will not appear.
+  //  */
+  // address: PropTypes.string,
 };
 
 Alert.defaultProps = {
@@ -120,8 +128,7 @@ Alert.defaultProps = {
   type: 'info',
   iconLeft: '',
   dismissible: false,
-  linkName: '',
-  address: '',
+  linkOptions: { linkName: '', address: '' },
 };
 
 export default Alert;

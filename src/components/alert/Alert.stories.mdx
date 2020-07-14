@@ -21,12 +21,14 @@ import { ALERT_TYPES as TYPES, SYSTEM_ICONS as ICONS } from '../../utils/constan
 <Story name="Alert with Knobs" parameters={{docs: {disable: true}}}>
   <Alert
     className={text('className', '', 'Alert Options')}
-    type={text('type', 'info', 'Alert options')}
-    iconLeft={text('iconLeft', '', 'Secondary Icon Options')}
+    type={text('type', 'info', 'Alert Options')}
+    iconLeft={text('iconLeft', '', 'Alert Options')}
     dismissible={boolean('dismissible', false, 'Alert Options')}
-    linkName={text('name','Alert link text', 'Link Options')}
-    address={text('address', 'http address', 'https://app.tallo.com')}
-    text={text('text', 'alert text', 'Alert Optionss')}
+    linkOptions={{
+      linkName:text('name','Alert link text', 'Link Options'),
+      address:text('address', 'https://app.tallo.com', 'Link Options')
+    }}
+    text={text('text', 'alert text', 'Alert Options')}
   ></Alert>
   </Story>
 
@@ -68,8 +70,10 @@ import { ALERT_TYPES as TYPES, SYSTEM_ICONS as ICONS } from '../../utils/constan
         <Alert 
           type={type}
           text={type}
-          linkName='Link Name Here'
-          address='https://app.tallo.com'
+          linkOptions={{
+            linkName:'Link Name Here',
+            address:'https://app.tallo.com'
+          }}
        >
        </Alert>
       </div>
@@ -133,6 +137,10 @@ import { ALERT_TYPES as TYPES, SYSTEM_ICONS as ICONS } from '../../utils/constan
   <Story name="Dismissible Alerts with Links only">
     <Alert 
       text="Dismissible Alert with Link only"
+      linkOptions={{
+        linkName:'Link Name Here',
+        address:'https://app.tallo.com'
+     }}
       dismissible
     >
     </Alert>
