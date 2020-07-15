@@ -31,12 +31,12 @@ function allLinkOptions(props, propName, componentName = 'Alert') {
 const Alert = ({
   className,
   type,
-  iconLeft,
+  icon,
   dismissible,
   text,
   linkOptions: { linkName, address },
 }) => {
-  const hasLeftIcon = iconLeft !== '';
+  const hasIcon = icon !== '';
   const showLink = linkName !== '' && address !== '';
 
   const [isVisible, setIsVisible] = useState(true);
@@ -57,10 +57,10 @@ const Alert = ({
     <div>
       {isVisible && (
         <div className={classes}>
-          {hasLeftIcon && (
-            <div className="ce-alert__leftIcon" iconLeft={iconLeft}>
+          {hasIcon && (
+            <div className="ce-alert__icon" icon={icon}>
               <SystemIcon
-                name={iconLeft}
+                name={icon}
                 color={type === 'error' ? 'white' : 'black'}
               />
             </div>
@@ -114,7 +114,7 @@ Alert.propTypes = {
   /**
    * You can choose any of the System Icons to display on the left hand side of the `<Alert />` box.  See the icons sections for a full list of System Icons.
    */
-  iconLeft: PropTypes.oneOf(ICONS),
+  icon: PropTypes.oneOf(ICONS),
   /**
    * Adding the dismissible prop will activate the boolean to display the close "X" on the right hand side.  The onclick of the close "X" will hide the `<Alert />`.
    */
@@ -130,7 +130,7 @@ Alert.propTypes = {
 Alert.defaultProps = {
   className: '',
   type: 'info',
-  iconLeft: '',
+  icon: '',
   dismissible: false,
   linkOptions: { linkName: '', address: '' },
 };
