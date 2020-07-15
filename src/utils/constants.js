@@ -1,3 +1,4 @@
+const ALERT_TYPES = ['info', 'warning', 'error', 'success'];
 const BUTTON_TYPES = ['default', 'outline', 'text'];
 const COMPONENT_STATES = ['default', 'disabled', 'error'];
 const COLORS = ['primary', 'secondary', 'black', 'inverted'];
@@ -79,6 +80,7 @@ const SYSTEM_ICONS = [
 const LINK_TEXT_STYLES = ['lowercase', 'uppercase'];
 
 export {
+  ALERT_TYPES,
   BUTTON_TYPES,
   COMPONENT_STATES,
   COLORS,

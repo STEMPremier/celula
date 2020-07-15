@@ -1,0 +1,65 @@
+@import '../../styles/celula';
+
+.ce-alert {
+  ////////////////////////////////
+  //     FLEXBOX CONTAINER      //
+  ////////////////////////////////
+  padding: 1.4rem 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  ////////////////////////////////
+  //   4 FLEXBOX DIVS IN A ROW  //
+  ////////////////////////////////
+  .ce-alert__icon {
+    margin-right: 1rem;
+  }
+  .ce-alert__text {
+    flex-grow: 1;
+  }
+  .ce-alert__link {
+    .ce-alert__link-text {
+      float: right;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+  .ce-alert__close {
+    border-radius: 0.5rem;
+    margin-left: 1rem;
+    // remove default button settings
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+  }
+  ///////////////////////////////
+  //           TYPES           //
+  ///////////////////////////////
+  &.ce-alert--info {
+    background-color: @info;
+    .ce-alert__close {
+      background-color: @info;
+    }
+  }
+  &.ce-alert--warning {
+    background-color: @warning;
+    .ce-alert__close {
+      background-color: @warning;
+    }
+  }
+  &.ce-alert--error {
+    color: @white;
+    background-color: @error;
+    .ce-alert__close {
+      background-color: @error;
+    }
+  }
+  &.ce-alert--success {
+    background-color: @success;
+    .ce-alert__close {
+      background-color: @success;
+    }
+  }
+}
