@@ -1,5 +1,44 @@
 @import './celula';
 
+/*
+ * Font Guide: To get [Font Name] use the corresponding rules.
+ *
+ * Proxima Nova Black
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 900;
+ * font-style: normal;
+ *
+ * Proxima Nova Extrabold
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 800;
+ * font-style: normal;
+ *
+ * Proxima Nova Regular
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 400;
+ * font-style: normal;
+ *
+ * Proxima Nova Italic
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 400;
+ * font-style: italic;
+ *
+ * Proxima Nova Light
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 300;
+ * font-style: normal;
+ *
+ * Proxima Nova Light Italic
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 300;
+ * font-style: italic;
+ *
+ * Proxima Nova Medium Italic
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 500;
+ * font-style: italic;
+ */
+
 @base-font-size: 1.6rem;
 
 @error-font-size: @base-font-size;
@@ -8,7 +47,7 @@ html {
   color: @base-text;
   font-family: proxima-nova, sans-serif;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 400;
   font-size: 10px;
 }
 
@@ -16,3 +55,154 @@ body {
   color: @body-text;
   font-size: @base-font-size;
 };
+
+h1 {
+  font-family: proxima-nova, sans-serif;
+  font-size: 9rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 9rem;
+}
+
+h2 {
+  font-family: proxima-nova, sans-serif;
+  font-size: 6.7rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 6.2rem;
+}
+
+h3 {
+  font-family: proxima-nova, sans-serif;
+  font-size: 5.1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 5.1rem;
+}
+
+h4 {
+  font-family: proxima-nova, sans-serif;
+  font-size: 3.9rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 3.9rem;
+}
+
+h5 {
+  font-family: proxima-nova, sans-serif;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 2.8rem;
+}
+
+h6 {
+  font-family: proxima-nova, sans-serif;
+  font-size: 2.1rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 2.1rem;
+}
+
+p, span { // p2 is the default
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+
+  &.small {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+
+  &.large {
+    font-size: 1.9rem;
+    line-height: 2.6rem;
+  }
+}
+
+blockquote {
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+
+ul, ol {
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+
+.subheading { // s1 is the default
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 800;
+
+  &.small {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+}
+
+.hero { // hero2 is the default
+  font-family: proxima-nova, sans-serif;
+  font-size: 12rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 10rem;
+
+  &.large {
+    font-size: 15rem;
+    line-height: 12rem;
+  }
+}
+
+.pull-quote {
+  font-family: proxima-nova, sans-serif;
+  font-size: 2.8rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 4rem;
+}
+
+.caption {
+  font-family: proxima-nova, sans-serif;
+  font-size: 2.1rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 2.2rem;
+
+  &.small {
+    font-size: 1.6rem;
+  }
+}
+
+.primary-text {
+  opacity: 0.87;
+
+  &.inverted {
+    opacity: 1;
+  }
+}
+
+.secondary-text {
+  opacity: 0.60;
+
+  &.inverted {
+    opacity: 0.70;
+  }
+}
+
+.help-text {
+  opacity: 0.38;
+
+  &.inverted {
+    opacity: 0.50;
+  }
+}
