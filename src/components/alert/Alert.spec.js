@@ -5,7 +5,7 @@ import toJson from 'enzyme-to-json';
 
 import Alert from '.';
 
-describe('<Input />', () => {
+describe('<Alert />', () => {
   describe('render()', () => {
     test('render the Input component', () => {
       const wrapper = shallow(<Alert type="info" text="alert text" />);

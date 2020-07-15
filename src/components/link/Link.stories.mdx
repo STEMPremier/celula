@@ -32,6 +32,7 @@ import { COLORS, LINK_TEXT_STYLES as TYPES } from '../../utils/constants';
   <Story name="Link Types">
     {TYPES.map(type => (
       <Link
+        address='https://www.tallo.com'
         key={type}
         text={type}
         textStyle={type}
@@ -44,9 +45,9 @@ import { COLORS, LINK_TEXT_STYLES as TYPES } from '../../utils/constants';
 <Preview>
   <Story name="Link Colors">
     {COLORS.map(color => (
-      <span style={color === 'inverted' ? {backgroundColor:'black'} : {}}>
+      <span style={color === 'inverted' ? {backgroundColor:'black'} : {}} key={color}>
         <Link
-          key={color}
+          address='https://www.tallo.com'
           text={color}
           color={color}
         />

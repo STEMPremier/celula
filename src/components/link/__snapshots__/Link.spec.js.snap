@@ -2,7 +2,7 @@
 
 exports[`<Link /> render() renders the component 1`] = `
 <a
-  className="ce-link ce-link--lowercase ce-link--blue"
+  className="ce-link ce-link--lowercase"
   href="https://app.tallo.com/register"
 >
   hyperlink
