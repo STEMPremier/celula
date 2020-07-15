@@ -6,7 +6,7 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { boolean, select, text } from '@storybook/addon-knobs';
+import { boolean, text } from '@storybook/addon-knobs';
 
 import Alert from '.';
 import { ALERT_TYPES as TYPES, SYSTEM_ICONS as ICONS } from '../../utils/constants';
@@ -21,129 +21,101 @@ import { ALERT_TYPES as TYPES, SYSTEM_ICONS as ICONS } from '../../utils/constan
 <Story name="Alert with Knobs" parameters={{docs: {disable: true}}}>
   <Alert
     className={text('className', '', 'Alert Options')}
-    type={text('type', 'info', 'Alert Options')}
-    iconLeft={text('iconLeft', '', 'Alert Options')}
     dismissible={boolean('dismissible', false, 'Alert Options')}
-    linkOptions={{
-      linkName:text('name','Alert link text', 'Link Options'),
-      address:text('address', 'https://app.tallo.com', 'Link Options')
-    }}
+    icon={text('icon', '', 'Alert Options')}
     text={text('text', 'alert text', 'Alert Options')}
-  ></Alert>
-  </Story>
+    type={text('type', 'info', 'Alert Options')}
+    linkOptions={{
+      address: text('address', 'https://app.tallo.com', 'Link Options'),
+      linkName: text('name','Alert link text', 'Link Options'),
+    }}
+  />
+</Story>
 
-### Types 
+### Types
 <Preview>
   <Story name="Alert Types">
     {TYPES.map(type => (
       <div key={type}>
-        <Alert 
+        <Alert
           type={type}
           text={type}
-       >
-       </Alert>
+        />
       </div>
-  ))}
+    ))}
   </Story>
 </Preview>
 
-### Left Icons 
+### Icons
 <Preview>
-  <Story name="Alert Icons">
+  <Story name="Alerts with Icons">
     {ICONS.map(icon => (
       <div key={icon}>
-        <Alert 
+        <Alert
           text={icon}
-          iconLeft={icon}
-       >
-       </Alert>
+          icon={icon}
+        />
       </div>
-  ))}
+    ))}
   </Story>
 </Preview>
 
-### Links 
+### Links
 <Preview>
-   <Story name="Links by Types">
+  <Story name="Alerts with Links by Types">
     {TYPES.map(type => (
       <div key={type}>
-        <Alert 
+        <Alert
           type={type}
           text={type}
           linkOptions={{
-            linkName:'Link Name Here',
-            address:'https://app.tallo.com'
+            linkName: 'Link Name Here',
+            address: 'https://app.tallo.com',
           }}
-       >
-       </Alert>
+        />
       </div>
-    ))} 
-    </Story>
-  </Preview>
+    ))}
+  </Story>
+</Preview>
 
 ### Dismissible Alerts
 <Preview>
   <Story name="Dismissible Alerts by Types">
     {TYPES.map(type => (
       <div key={type}>
-        <Alert 
+        <Alert
           type={type}
           text={type}
           dismissible
-       >
-       </Alert>
-      </div>
-    ))} 
-  </Story>
-</Preview>
-
-
-### Dismissible Alert with Icons and Links
-<Preview>
-  <Story name="Dismissible Alerts with Icons and Links">
-    {ICONS.map(icon => (
-      <div key={icon}>
-        <Alert 
-          text={icon}
-          iconLeft={icon}
-          linkOptions={{
-            linkName:'Link Name Here',
-            address:'https://app.tallo.com'
-          }}
-          dismissible
-       >
-       </Alert>
+        />
       </div>
     ))}
   </Story>
 </Preview>
 
-
-### Dismissible Alert with Icons only
+### Dismissible Alert with Icons
 <Preview>
-  <Story name="Dismissible Alerts with Icons only">
+  <Story name="Dismissible Alerts with Icons">
     {ICONS.map(icon => (
       <div key={icon}>
-        <Alert 
+        <Alert
           text={icon}
-          iconLeft={icon}
+          icon={icon}
           dismissible
-       >
-       </Alert>
+        />
       </div>
     ))}
   </Story>
 </Preview>
 
-
-### Dismissible Alert with Links only
+### Dismissible Alert with Links
 <Preview>
-  <Story name="Dismissible Alerts with Links only">
-    <Alert 
-      text="Dismissible Alert with Link only"
+  <Story name="Dismissible Alerts with Links">
+    <Alert
+      text="Dismissible Alert with Link"
       linkOptions={{
-        linkName:'Link Name Here',
-        address:'https://app.tallo.com'
+        linkName: 'Link Name Here',
+        address: 'https://app.tallo.com',
      }}
       dismissible
     >
@@ -151,6 +123,21 @@ import { ALERT_TYPES as TYPES, SYSTEM_ICONS as ICONS } from '../../utils/constan
   </Story>
 </Preview>
 
-
-
-
+### Dismissible Alert with Icons and Links
+<Preview>
+  <Story name="Dismissible Alerts with Icons and Links">
+    {ICONS.map(icon => (
+      <div key={icon}>
+        <Alert
+          text={icon}
+          icon={icon}
+          linkOptions={{
+            linkName: 'Link Name Here',
+            address: 'https://app.tallo.com',
+          }}
+          dismissible
+        />
+      </div>
+    ))}
+  </Story>
+</Preview>
