@@ -21,7 +21,7 @@ function allLinkOptions(props, propName, componentName = 'Alert') {
 
   if (!linkOptions.linkName || !linkOptions.address) {
     error = new Error(
-      `Invalid prop linkOptions.  You must supply both linkName and address inside the object.`,
+      `Invalid prop linkOptions. You must supply both linkName and address inside the object.`,
     );
   }
 
@@ -61,7 +61,7 @@ const Alert = ({
             <div className="ce-alert__icon" icon={icon}>
               <SystemIcon
                 name={icon}
-                color={type === 'error' ? 'white' : 'black'}
+                color={type === 'error' ? 'inverted' : 'black'}
               />
             </div>
           )}
@@ -104,35 +104,35 @@ Alert.propTypes = {
    */
   className: PropTypes.string,
   /**
-   * The `<Alert />` has 4 type options to choose from: info, warning, error, and success.  Each is represented as a string in the TYPES array.  The selection of the type determines the color of the alert.
+   * Adding the dismissible prop will activate the boolean to display the close "X" on the right hand side.  The onclick of the close "X" will hide the `<Alert />`.
    */
-  type: PropTypes.oneOf(TYPES),
-  /**
-   * The text is the message that will display in the alert.
-   */
-  text: PropTypes.string.isRequired,
+  dismissible: PropTypes.bool,
   /**
    * You can choose any of the System Icons to display on the left hand side of the `<Alert />` box.  See the icons sections for a full list of System Icons.
    */
   icon: PropTypes.oneOf(ICONS),
-  /**
-   * Adding the dismissible prop will activate the boolean to display the close "X" on the right hand side.  The onclick of the close "X" will hide the `<Alert />`.
-   */
-  dismissible: PropTypes.bool,
   /**
    * The linkOptions configures the optional `<Link />` component to the right of the `<Alert />`.  Both `linkName` and `address` are required for the `<Link />` component to appear.
    * `linkName` is the text that will appear as the `<Link />` itself.
    * `address` is the http address where the user will be redirected.
    */
   linkOptions: allLinkOptions,
+  /**
+   * The text is the message that will display in the alert.
+   */
+  text: PropTypes.string.isRequired,
+  /**
+   * The `<Alert />` has 4 type options to choose from: info, warning, error, and success.  Each is represented as a string in the TYPES array.  The selection of the type determines the color of the alert.
+   */
+  type: PropTypes.oneOf(TYPES),
 };
 
 Alert.defaultProps = {
   className: '',
-  type: 'info',
-  icon: '',
   dismissible: false,
+  icon: '',
   linkOptions: { linkName: '', address: '' },
+  type: 'info',
 };
 
 export default Alert;
