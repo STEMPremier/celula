@@ -65,6 +65,13 @@ function applyLoaders(config) {
           test: /\.svg$/,
           loader: 'svg-sprite-loader',
         },
+        {
+          test: /\.png$/,
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+          },
+        },
       ],
     },
   };
