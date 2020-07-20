@@ -44,10 +44,15 @@
 @black: @0-gray;
 
 // Other Colors
-@base-text:  #0f1422;
-@body-text:  @base-text;
-@label-text: @base-text;
-@help-text:  @base-text;
+@primary-text:   rgba(0, 0, 0, 0.87);
+@secondary-text: rgba(0, 0, 0, 0.60);
+@help-text:      rgba(0, 0, 0, 0.38);
+@dividers:       rgba(0, 0, 0, 0.12);
+
+@inverted-primary-text:   rgba(255, 255, 255, 1);
+@inverted-secondary-text: rgba(255, 255, 255, 0.70);
+@inverted-help-text:      rgba(255, 255, 255, 0.50);
+@inverted-dividers:       rgba(255, 255, 255, 0.12);
 
 // Form Control States
 // Unchecked Radio, Unchecked Checkbox, Select
@@ -96,11 +101,6 @@
 @error-element-border: @error-red;
 @error-text:           @checked-red;
 
-// Gradients
-@gradient-cool: linear-gradient(317.58deg, #6645ad 0%, #2d71be 100%);
-@gradient-warm: linear-gradient(317.58deg, #fba635 0%, #acd74e 100%);
-@gradient-hot:  linear-gradient(317.58deg, #62248d 0%, #c4356e 100%);
-
 //Inputs
 @gray-border:  @unchecked-gray;
 @error-text:   @checked-red;
@@ -111,3 +111,8 @@
 @warning: #fca635;
 @error:   @error-red;
 @success: #acd84f;
+
+// Gradients
+@gradient-cool: linear-gradient(317.58deg, #6645ad 0%, #2d71be 100%);
+@gradient-warm: linear-gradient(317.58deg, #fba635 0%, #acd74e 100%);
+@gradient-hot:  linear-gradient(317.58deg, #62248d 0%, #c4356e 100%);

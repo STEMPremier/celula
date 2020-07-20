@@ -44,7 +44,7 @@
 @error-font-size: @base-font-size;
 
 html {
-  color: @base-text;
+  color: @primary-text;
   font-family: proxima-nova, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -52,7 +52,7 @@ html {
 }
 
 body {
-  color: @body-text;
+  color: @primary-text;
   font-size: @base-font-size;
 };
 
@@ -184,25 +184,25 @@ ul, ol {
 }
 
 .primary-text {
-  opacity: 0.87;
+  color: @primary-text;
 
   &.inverted {
-    opacity: 1;
+    color: @inverted-primary-text;
   }
 }
 
 .secondary-text {
-  opacity: 0.60;
+  color: @secondary-text;
 
   &.inverted {
-    opacity: 0.70;
+    color: @inverted-secondary-text;
   }
 }
 
 .help-text {
-  opacity: 0.38;
+  color: @help-text;
 
   &.inverted {
-    opacity: 0.50;
+    color: @inverted-help-text;
   }
 }
