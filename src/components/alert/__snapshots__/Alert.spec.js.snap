@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Alert /> render() render the Input component 1`] = `
+exports[`<Alert /> render() render the Alert component 1`] = `
 <div>
   <div
     className="ce-alert ce-alert--info"
@@ -9,7 +9,7 @@ exports[`<Alert /> render() render the Input component 1`] = `
       className="ce-alert__text"
     >
       <span
-        dismissible={false}
+        dismissible={0}
         type="info"
       >
         alert text

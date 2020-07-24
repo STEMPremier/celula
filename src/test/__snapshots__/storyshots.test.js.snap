@@ -1939,7 +1939,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             info
@@ -1957,7 +1957,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="warning"
           >
             warning
@@ -1975,7 +1975,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="error"
           >
             error
@@ -1993,7 +1993,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="success"
           >
             success
@@ -2014,7 +2014,7 @@ exports[`Storyshots Components/Molecules/Alerts Alert with Knobs 1`] = `
       className="ce-alert__text"
     >
       <span
-        dismissible={false}
+        dismissible={0}
         type="info"
       >
         alert text
@@ -2061,7 +2061,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             share
@@ -2095,7 +2095,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             preview
@@ -2129,7 +2129,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             export
@@ -2163,7 +2163,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             follow
@@ -2197,7 +2197,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             message
@@ -2231,7 +2231,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             badges
@@ -2265,7 +2265,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             website
@@ -2299,7 +2299,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             edit
@@ -2333,7 +2333,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             clear
@@ -2367,7 +2367,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             navigate
@@ -2401,7 +2401,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             down
@@ -2435,7 +2435,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             up
@@ -2469,7 +2469,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             user
@@ -2503,7 +2503,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             visibility
@@ -2537,7 +2537,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             help
@@ -2571,7 +2571,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             close
@@ -2605,7 +2605,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             calendar
@@ -2639,7 +2639,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             warning
@@ -2673,7 +2673,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             add
@@ -2707,7 +2707,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             filter
@@ -2741,7 +2741,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             menu
@@ -2775,7 +2775,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             search
@@ -2809,7 +2809,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             tutorial
@@ -2843,7 +2843,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             yes
@@ -2877,7 +2877,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             no
@@ -2911,7 +2911,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             hobby
@@ -2945,7 +2945,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             interest
@@ -2979,7 +2979,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             outdoor
@@ -3013,7 +3013,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             indoor
@@ -3047,7 +3047,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             popular
@@ -3070,7 +3070,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="info"
           >
             info
@@ -3098,7 +3098,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="warning"
           >
             warning
@@ -3126,7 +3126,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="error"
           >
             error
@@ -3154,7 +3154,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={false}
+            dismissible={0}
             type="success"
           >
             success
@@ -3187,7 +3187,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             info
@@ -3222,7 +3222,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="warning"
           >
             warning
@@ -3257,7 +3257,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="error"
           >
             error
@@ -3292,7 +3292,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="success"
           >
             success
@@ -3348,7 +3348,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             share
@@ -3399,7 +3399,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             preview
@@ -3450,7 +3450,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             export
@@ -3501,7 +3501,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             follow
@@ -3552,7 +3552,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             message
@@ -3603,7 +3603,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             badges
@@ -3654,7 +3654,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             website
@@ -3705,7 +3705,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             edit
@@ -3756,7 +3756,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             clear
@@ -3807,7 +3807,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             navigate
@@ -3858,7 +3858,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             down
@@ -3909,7 +3909,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             up
@@ -3960,7 +3960,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             user
@@ -4011,7 +4011,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             visibility
@@ -4062,7 +4062,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             help
@@ -4113,7 +4113,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             close
@@ -4164,7 +4164,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             calendar
@@ -4215,7 +4215,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             warning
@@ -4266,7 +4266,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             add
@@ -4317,7 +4317,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             filter
@@ -4368,7 +4368,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             menu
@@ -4419,7 +4419,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             search
@@ -4470,7 +4470,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             tutorial
@@ -4521,7 +4521,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             yes
@@ -4572,7 +4572,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             no
@@ -4623,7 +4623,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             hobby
@@ -4674,7 +4674,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             interest
@@ -4725,7 +4725,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             outdoor
@@ -4776,7 +4776,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             indoor
@@ -4827,7 +4827,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             popular
@@ -4883,7 +4883,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             share
@@ -4944,7 +4944,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             preview
@@ -5005,7 +5005,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             export
@@ -5066,7 +5066,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             follow
@@ -5127,7 +5127,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             message
@@ -5188,7 +5188,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             badges
@@ -5249,7 +5249,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             website
@@ -5310,7 +5310,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             edit
@@ -5371,7 +5371,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             clear
@@ -5432,7 +5432,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             navigate
@@ -5493,7 +5493,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             down
@@ -5554,7 +5554,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             up
@@ -5615,7 +5615,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             user
@@ -5676,7 +5676,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             visibility
@@ -5737,7 +5737,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             help
@@ -5798,7 +5798,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             close
@@ -5859,7 +5859,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             calendar
@@ -5920,7 +5920,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             warning
@@ -5981,7 +5981,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             add
@@ -6042,7 +6042,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             filter
@@ -6103,7 +6103,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             menu
@@ -6164,7 +6164,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             search
@@ -6225,7 +6225,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             tutorial
@@ -6286,7 +6286,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             yes
@@ -6347,7 +6347,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             no
@@ -6408,7 +6408,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             hobby
@@ -6469,7 +6469,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             interest
@@ -6530,7 +6530,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             outdoor
@@ -6591,7 +6591,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             indoor
@@ -6652,7 +6652,7 @@ Array [
           className="ce-alert__text"
         >
           <span
-            dismissible={true}
+            dismissible={1}
             type="info"
           >
             popular
@@ -6700,7 +6700,7 @@ exports[`Storyshots Components/Molecules/Alerts Dismissible Alerts with Links 1`
       className="ce-alert__text"
     >
       <span
-        dismissible={true}
+        dismissible={1}
         type="info"
       >
         Dismissible Alert with Link

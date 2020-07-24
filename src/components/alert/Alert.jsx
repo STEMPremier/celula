@@ -19,7 +19,15 @@ function allLinkOptions(props, propName, componentName = 'Alert') {
 
   let error;
 
-  if (!linkOptions.linkName || !linkOptions.address) {
+  // We have linkName but not address
+  if (linkOptions.linkName && !linkOptions.address) {
+    error = new Error(
+      `Invalid prop linkOptions. You must supply both linkName and address inside the object.`,
+    );
+  }
+
+  // We have address, but not link name
+  if (!linkOptions.linkName && linkOptions.address) {
     error = new Error(
       `Invalid prop linkOptions. You must supply both linkName and address inside the object.`,
     );
@@ -66,7 +74,8 @@ const Alert = ({
             </div>
           )}
           <div className="ce-alert__text">
-            <span type={type} dismissible={dismissible}>
+            {/* I don't know wtf is wrong with just using true/false for this boolean prop, but here we are. */}
+            <span type={type} dismissible={dismissible ? 1 : 0}>
               {text}
             </span>
           </div>
@@ -110,7 +119,7 @@ Alert.propTypes = {
   /**
    * You can choose any of the System Icons to display on the left hand side of the `<Alert />` box.  See the icons sections for a full list of System Icons.
    */
-  icon: PropTypes.oneOf(ICONS),
+  icon: PropTypes.oneOf(['', ...ICONS]),
   /**
    * The linkOptions configures the optional `<Link />` component to the right of the `<Alert />`.  Both `linkName` and `address` are required for the `<Link />` component to appear.
    * `linkName` is the text that will appear as the `<Link />` itself.
@@ -129,7 +138,7 @@ Alert.propTypes = {
 
 Alert.defaultProps = {
   className: '',
-  dismissible: false,
+  dismissible: undefined,
   icon: '',
   linkOptions: { linkName: '', address: '' },
   type: 'info',

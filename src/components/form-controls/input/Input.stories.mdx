@@ -6,7 +6,7 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { boolean, select, text } from '@storybook/addon-knobs';
+import { boolean, text } from '@storybook/addon-knobs';
 
 import Input from '.';
 import { INPUT_TYPES as TYPES } from '../../../utils/constants';
@@ -17,7 +17,7 @@ import { INPUT_TYPES as TYPES } from '../../../utils/constants';
 <Description of={Input} />
 <Props of={Input} />
 
-<Story name="Input wiht Knobs" parameters={{ docs: { disable: true } }}>
+<Story name="Input with Knobs" parameters={{ docs: { disable: true } }}>
   <form id="inputWithKnobForm">
     <Input
       btnOptions={{
@@ -82,7 +82,7 @@ import { INPUT_TYPES as TYPES } from '../../../utils/constants';
   </Story>
 </Preview>
 
-### Input States
+### States
 <Preview>
   <Story name="Input States">
     <form id="inputStatesForm">
