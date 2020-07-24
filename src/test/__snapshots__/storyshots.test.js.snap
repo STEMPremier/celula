@@ -10397,7 +10397,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
 </form>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/Input Input wiht Knobs 1`] = `
+exports[`Storyshots Components/Molecules/Form Controls/Input Input with Knobs 1`] = `
 <form
   id="inputWithKnobForm"
 >
@@ -12305,6 +12305,129 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
     a button
   </span>
 </button>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Textarea Textarea States 1`] = `
+<form
+  id="textareaStatesForm"
+>
+  <div
+    className="ce-textarea"
+  >
+    <label
+      htmlFor="defaultTextarea"
+    >
+      Label for Default
+    </label>
+    <div
+      className="ce-textarea__help-text"
+    >
+      This is useful or helpful information.
+    </div>
+    <textarea
+      disabled={false}
+      form="textareaStatesForm"
+      name="defaultTextarea"
+      onChange={[Function]}
+      placeholder="Please fill this in."
+    />
+    
+  </div>
+  <div
+    className="ce-textarea ce-textarea--disabled"
+  >
+    <label
+      htmlFor="disabledTextarea"
+    >
+      Label for Disabled
+    </label>
+    <div
+      className="ce-textarea__help-text"
+    >
+      This is useful or helpful information.
+    </div>
+    <textarea
+      disabled={true}
+      form="textareaStatesForm"
+      name="disabledTextarea"
+      onChange={[Function]}
+      placeholder="Fill this in, I dare you."
+    />
+    
+  </div>
+  <div
+    className="ce-textarea ce-textarea--error"
+  >
+    <label
+      htmlFor="errorTextarea"
+    >
+      Label for Error
+    </label>
+    <div
+      className="ce-textarea__help-text"
+    >
+      This is useful or helpful information.
+    </div>
+    <textarea
+      disabled={false}
+      form="textareaStatesForm"
+      name="errorTextarea"
+      onChange={[Function]}
+      placeholder="Please fill this in."
+    />
+    <div
+      className="ce-errorbox"
+    >
+      <div
+        className="ce-errorbox__container"
+      >
+        <div
+          className="ce-errorbox__arrow"
+        />
+        <div
+          className="ce-errorbox__message"
+        >
+          <span
+            className="ce-errorbox__text"
+          >
+            Seriously, fill this in!
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Textarea Textarea with Knobs 1`] = `
+<form
+  id="textareaWithKnobsForm"
+>
+  <div
+    className="ce-textarea"
+  >
+    <label
+      htmlFor="textareaWithKnobs"
+    >
+      Textarea with Knobs
+    </label>
+    <div
+      className="ce-textarea__help-text"
+    >
+      This is useful or helpful information.
+    </div>
+    <textarea
+      disabled={false}
+      form="textareaWithKnobsForm"
+      name="textareaWithKnobs"
+      onChange={[Function]}
+      placeholder="Please fill this in."
+    >
+      
+    </textarea>
+    
+  </div>
+</form>
 `;
 
 exports[`Storyshots Components/Molecules/Icons/ProductIcon All ProductIcons 1`] = `

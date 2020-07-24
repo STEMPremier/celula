@@ -1,0 +1,65 @@
+import {
+  Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { boolean, text } from '@storybook/addon-knobs';
+
+import Textarea from '.';
+
+<Meta component={Textarea} title="Components/Molecules/Form Controls/Textarea" />
+
+# Textarea
+<Description of={Textarea} />
+<Props of={Textarea} />
+
+<Story name="Textarea with Knobs" parameters={{ docs: { disable: true } }}>
+  <form id="textareaWithKnobsForm">
+    <Textarea
+      className={text('className', '')}
+      disabled={boolean('disabled', false)}
+      errorMsg={text('errorMsg', '')}
+      formId={text('formId', 'textareaWithKnobsForm')}
+      handleChange={action('`Textarea with Knobs` onChange event triggered.')}
+      helpText={text('helpText', 'This is useful or helpful information.')}
+      initialValue={text('initialValue', '')}
+      label={text('label', 'Textarea with Knobs')}
+      name={text('name', 'textareaWithKnobs')}
+      placeholder={text('placeholder', 'Please fill this in.')}
+    />
+  </form>
+</Story>
+
+### Textarea States
+<Preview>
+  <Story name="Textarea States">
+    <form id="textareaStatesForm">
+      <Textarea
+        formId="textareaStatesForm"
+        helpText="This is useful or helpful information."
+        label="Label for Default"
+        name="defaultTextarea"
+        placeholder="Please fill this in."
+      />
+      <Textarea
+        disabled
+        formId="textareaStatesForm"
+        helpText="This is useful or helpful information."
+        label="Label for Disabled"
+        name="disabledTextarea"
+        placeholder="Fill this in, I dare you."
+      />
+      <Textarea
+        errorMsg="Seriously, fill this in!"
+        formId="textareaStatesForm"
+        helpText="This is useful or helpful information."
+        label="Label for Error"
+        name="errorTextarea"
+        placeholder="Please fill this in."
+      />
+    </form>
+  </Story>
+</Preview>

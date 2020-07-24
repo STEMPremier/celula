@@ -1,0 +1,104 @@
+@import '../../../styles/celula';
+
+.ce-textarea {
+  label {
+    color: @label-text;
+    display: block;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin: 0.3rem;
+  }
+
+  .ce-textarea__help-text {
+    color: @help-text;
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin: 0.3rem;
+  }
+
+  textarea {
+    background-color: @default-background;
+    border: 0.1rem solid @default-gray;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+
+    &:focus {
+      box-shadow: -0.3rem 0 @focus-blue,
+        0.3rem 0 @focus-blue,
+        0 -0.3rem @focus-blue,
+        0 0.3rem @focus-blue;
+      outline: none;
+    }
+
+    &:hover {
+      box-shadow: -0.3rem 0 @hover-blue,
+        0.3rem 0 @hover-blue,
+        0 -0.3rem @hover-blue,
+        0 0.3rem @hover-blue;
+    }
+
+    &:active {
+      box-shadow: -0.3rem 0 @active-blue,
+        0.3rem 0 @active-blue,
+        0 -0.3rem @active-blue,
+        0 0.3rem @active-blue;
+    }
+  }
+
+  &.ce-textarea--disabled {
+    label {
+      color: @disabled-text;
+    }
+
+    .ce-textarea__help-text {
+      color: @disabled-text;
+    }
+
+    textarea {
+      border-color: @gray-border;
+      color: @disabled-text;
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      &:hover {
+        box-shadow: none;
+      }
+
+      &:active {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &.ce-textarea--error {
+    textarea {
+      border-color: @error-element-border;
+      color: @error-text;
+
+      &:focus {
+        box-shadow: -0.3rem 0 @focus-red,
+          0.3rem 0 @focus-red,
+          0 -0.3rem @focus-red,
+          0 0.3rem @focus-red;
+      }
+
+      &:hover {
+        box-shadow: -0.3rem 0 @hover-red,
+          0.3rem 0 @hover-red,
+          0 -0.3rem @hover-red,
+          0 0.3rem @hover-red;
+      }
+
+      &:active {
+        box-shadow: -0.3rem 0 @active-red,
+          0.3rem 0 @active-red,
+          0 -0.3rem @active-red,
+          0 0.3rem @active-red;
+      }
+    }
+  }
+}
