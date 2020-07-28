@@ -1,0 +1,40 @@
+import {
+  Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { boolean, text } from '@storybook/addon-knobs';
+
+import FileUploader from '.';
+
+<Meta component={FileUplaoder} title="Components/Molecules/Alerts" />
+
+# FileUplaoder
+
+<Description of={FileUploader} />
+<Props of={FileUploader} />
+<Story name="FileUplaoder with Knobs" parameters={{ docs: { disable: true } }}>
+  <form id="fileUploaderWithKnobForm">
+    <FileUplaoder
+      className={text('className', '', 'FileUploader Options')}
+      disabled={boolean('disabled', false, 'FileUploader Options')}
+      errorMsg={text('errorMsg', '', 'FileUploader Options')}
+      formId={text('formId', 'fileUploaderWithKnobForm', 'FileUploader Options')}
+      handleClick={action('`FileUploader with Knobs` onChange event triggered.')}
+      helpText={text(
+        'helpText',
+        'This is useful or helpful information.',
+        'FileUploader Options',
+      )}
+      
+      initialValue={text('initialValue', '', 'FileUploader Options')}
+      label={text('label', 'FileUploader with Knobs', 'FileUploader Options')}
+      name={text('name', 'fileUploaderWithKnobs', 'FileUploader Options')}
+      size={text('size', 'large', 'FileUploader Options')}
+      styleType={text('styleType', '', 'FileUploader Options')}
+    />
+  </form>
+</Story>

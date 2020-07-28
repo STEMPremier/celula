@@ -2,6 +2,7 @@ const ALERT_TYPES = ['info', 'warning', 'error', 'success'];
 const BUTTON_TYPES = ['default', 'outline', 'text'];
 const COMPONENT_STATES = ['default', 'disabled', 'error'];
 const COLORS = ['primary', 'secondary', 'black', 'inverted'];
+const FILEUPLOADER_TYPES = ['default', 'outline'];
 const INPUT_TYPES = [
   'color',
   'datetime-local',
@@ -84,6 +85,7 @@ export {
   BUTTON_TYPES,
   COMPONENT_STATES,
   COLORS,
+  FILEUPLOADER_TYPES,
   INPUT_TYPES,
   PRODUCT_ICONS,
   SECONDARY_ICONS,
