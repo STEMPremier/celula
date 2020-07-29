@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -17,11 +18,11 @@ const FileUploader = ({
   // capture,
   color,
   disabled,
-  errorMsg,
+  // errorMsg,
   formId,
-  handleClick: handler,
+  // handleClick: handler,
   helpText,
-  initialValue,
+  // initialValue,
   label,
   // multiple,
   size,
@@ -29,8 +30,8 @@ const FileUploader = ({
 
   name,
 }) => {
-  const [fieldValue, setFieldValue] = useState(initialValue);
-  const [errMsg, setErrMsg] = useState(errorMsg);
+  // const [fieldValue, setFieldValue] = useState(initialValue);
+  // const [errMsg, setErrMsg] = useState(errorMsg);
 
   const classes = cx(
     'ce-fileuploader',
@@ -45,26 +46,26 @@ const FileUploader = ({
         size.toString().toLowerCase(),
       ),
       'ce-fileuploader--disabled': disabled,
-      'ce-fileuploader--error': errMsg,
+      // 'ce-fileuploader--error': errMsg,
     },
     className,
   );
 
   const id = `${name}`;
 
-  useEffect(() => {
-    setFieldValue(initialValue);
-  }, [initialValue]);
+  // useEffect(() => {
+  //   setFieldValue(initialValue);
+  // }, [initialValue]);
 
-  useEffect(() => {
-    setErrMsg(errorMsg);
-  }, [errorMsg]);
+  // useEffect(() => {
+  //   setErrMsg(errorMsg);
+  // }, [errorMsg]);
 
-  const handleClick = event => {
-    const { value } = event.target;
-    setFieldValue(value);
-    handler(value);
-  };
+  // const handleClick = event => {
+  //   const { value } = event.target;
+  //   setFieldValue(value);
+  //   handler(value);
+  // };
 
   return (
     <div className={classes}>
@@ -80,8 +81,8 @@ const FileUploader = ({
         color={color}
         styleType={styleType}
         // onBlur={checkValiditiy}
-        onChange={handleClick}
-        value={fieldValue}
+        // onChange={handleClick}
+        // value={fieldValue}
       />
     </div>
   );
@@ -101,7 +102,7 @@ FileUploader.propTypes = {
   /**
    * An error message to display in the `<Input />`.
    */
-  errorMsg: PropTypes.string,
+  // errorMsg: PropTypes.string,
   /**
    * The id of the form the `<Input />` belongs to.
    */
@@ -109,7 +110,7 @@ FileUploader.propTypes = {
   /**
    * A function to trigger when the state of the `<Input />` changes.
    */
-  handleClick: PropTypes.func,
+  // handleClick: PropTypes.func,
   /**
    * Any text to assist the user with this `<Input />`.
    */
@@ -117,11 +118,11 @@ FileUploader.propTypes = {
   /**
    * The initial value of the `<Input />`, if any.
    */
-  initialValue: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.bool,
-  ]),
+  // initialValue: PropTypes.oneOfType([
+  //   PropTypes.string,
+  //   PropTypes.number,
+  //   PropTypes.bool,
+  // ]),
   /**
    * The `<Input />` label.
    */
@@ -138,11 +139,11 @@ FileUploader.defaultProps = {
   className: '',
   color: 'primary',
   disabled: false,
-  errorMsg: '',
+  // errorMsg: '',
   formId: '',
-  handleClick: () => {},
+  // handleClick: () => {},
   helpText: '',
-  initialValue: null,
+  // initialValue: null,
   size: 'large',
   styleType: 'default',
 };
