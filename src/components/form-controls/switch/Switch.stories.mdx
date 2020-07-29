@@ -1,0 +1,58 @@
+import {
+  Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { boolean, select, text, array } from '@storybook/addon-knobs';
+
+import  { Switch } from '.';
+//import { COMPONENT_STATES as STATES } from '../../../utils/constants';
+
+<Meta component={Switch} title="Components/Molecules/Form Controls/Switch" />
+
+# Switch
+
+<Description of={Switch} />
+<Props of={Switch} />
+<Story name="Switch with Knobs" parameters={{ docs: { disable: true } }}>
+   <form id="formSwitch">
+    <Switch
+      checked={boolean('checked', false)}
+      className={text('className', '')}
+      disabled={boolean('disabled', false)}
+      errorMsg={text('errorMsg', '')}
+      formId={text('formId', 'formSwitch')}
+      handleClick={action('`Checkbox with Knobs` onClick event triggered.')}
+      handleChange={action('`Switch with Knobs` onClick event triggered.')}
+      label={text('label', 'Accept Terms and Conditions')}
+      name={text('name', 'termsAndConditions')}
+      value={text('value', 'accepted')}
+    >
+  </Switch>
+    </form>
+</Story>
+
+### Switch Types
+<Preview>
+  <Story name="Switch Types">
+    <form id="formTypes">
+      <Switch
+        checked
+        formId="formTypes"
+        label="I am checked"
+        name="checked"
+        value={true}
+      />
+      <Switch
+        formId="formTwo"
+        label="I am unchecked"
+        name="unchecked"
+        value={false}
+      />
+    </form>
+  </Story>
+</Preview>
+
