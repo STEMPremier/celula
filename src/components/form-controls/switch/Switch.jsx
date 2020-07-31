@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -36,27 +37,31 @@ const Switch = ({
 
   const handleChange = event => {
     const { checked: targetChecked, value: targetValue } = event.target;
-
     setIsChecked(targetChecked);
     handler(targetValue);
   };
 
-  const print = event => console.log(event.target.value);
-
   return (
     <div className={classes}>
-      <label htmlFor={id}>{label}</label>
-      <input
-        type="checkbox"
-        checked={isChecked}
-        value={value}
-        name={name}
-        onClick={print}
-        onChange={handleChange}
-        form={formId}
-        id={id}
-      />
-      {errorMsg && <ErrorBox errorMsg={errorMsg} />}
+      <div className="ce-switch__container">
+        {/* <label className="ce-switch__label" htmlFor={id}>
+          {label}
+        </label> */}
+        <input
+          type="checkbox"
+          className="ce-switch__checkbox"
+          checked={isChecked}
+          value={value}
+          name={name}
+          onChange={handleChange}
+          form={formId}
+          id={id}
+        />
+        <label className="ce-switch__slider" htmlFor={id}>
+          {label}
+        </label>
+        {errorMsg && <ErrorBox errorMsg={errorMsg} />}
+      </div>
     </div>
   );
 };

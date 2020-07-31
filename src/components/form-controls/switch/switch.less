@@ -1,0 +1,57 @@
+// The important switch stuff starts here.
+.ce-switch__container {
+  display: flex;
+  flex-direction: row;
+  // background
+  .ce-switch__slider {
+    cursor: pointer;
+    display: block;
+    height: 3rem;
+    position: relative;
+    margin: 15px;
+    padding: 8px 50px;
+  }
+  // hide the checkbox
+  input {
+    left: -9999px;
+    position: absolute;
+  }
+
+  // channel
+  .ce-switch__slider::before {
+    background-color: #7f7f7f;
+    border-radius: 0.75rem;
+    box-sizing: border-box;
+    content: '';
+    height: 1.2rem;
+    left: 0.75rem;
+    margin: -18px;
+    position: absolute;
+    top: 2.85rem;
+    transition: 250ms ease-in-out;
+    width: 4.1rem;
+  }
+  // switch
+  .ce-switch__slider::after {
+    flex: 1;
+    background-color: #fbfbfb;
+    border: 1px solid #b2b2b2;
+    border-radius: 50%;
+    content: '';
+    height: 1.8rem;
+    left: -10px;
+    position: absolute;
+    transition: 250ms ease-in-out;
+    width: 1.8rem;
+  }
+  input:checked + .ce-switch__slider::before {
+    box-shadow: 0 0 0 0 #007ab2 inset, 0 0 0 0 #007ab2,
+      // the chosen blue 30% darker than Dodger Blue
+        4.1rem 0 0 0 #007ab2 inset;
+  }
+  input:checked + .ce-switch__slider::after {
+    background-color: #002333;
+    border: 1px solid #002333;
+    left: 15px;
+  }
+}
