@@ -1,57 +1,155 @@
-// The important switch stuff starts here.
-.ce-switch__container {
+@import '../../../styles/celula';
+
+.ce-switch {
   display: flex;
   flex-direction: row;
   // background
-  .ce-switch__slider {
-    cursor: pointer;
-    display: block;
-    height: 3rem;
-    position: relative;
-    margin: 15px;
-    padding: 8px 50px;
-  }
-  // hide the checkbox
+
   input {
+    // hide the built-in checkbox
     left: -9999px;
     position: absolute;
+
+    + .ce-switch__slider {
+      cursor: pointer;
+      display: block;
+      height: 3rem;
+      position: relative;
+      margin: 15px 30px;
+      padding: 8px 50px;
+      // DEFAULT CUSTOM SLIDER STYLING IS UNCHECKED
+      // channel
+      &::before {
+        background-color: #7f7f7f;
+        border-radius: 0.75rem;
+        box-sizing: border-box;
+        content: '';
+        height: 1.2rem;
+        left: 0.75rem;
+        margin: -18px;
+        position: absolute;
+        top: 2.85rem;
+        transition: 250ms ease-in-out;
+        width: 4.1rem;
+      }
+      //dot
+      &::after {
+        flex: 1;
+        background-color: #fbfbfb;
+        border: 1px solid #b2b2b2;
+        border-radius: 50%;
+        content: '';
+        height: 1.8rem;
+        left: -10px;
+        position: absolute;
+        transition: 250ms ease-in-out;
+        width: 1.8rem;
+      }
+      // STATE CHANGES SHOULD ONLY TOUCH THE AFTER IN BOTH CHECKED & UNCHECKED
+      &:hover {
+        &::after {
+          left: -20px;
+          top: -1px;
+          border: 10px solid rgba(229, 229, 229, 0.5);
+        }
+      }
+
+      &:focus {
+        &::after {
+          left: -20px;
+          top: -1px;
+          border: 10px solid rgba(229, 229, 229, 0.5);
+        }
+        // NOT SURE WHY CAN'T CONVERT CCCCCC TO RGBA
+        // &::after {
+        //   border: 10px solid #cccccc;
+        // }
+      }
+      &:active {
+        // &::after {
+        //   border: 10px solid #b2b2b2;
+        // }
+        &::after {
+          left: -20px;
+          top: -1px;
+          border: 10px solid rgba(178, 178, 178, 0.5);
+        }
+      }
+    }
+
+    // switch checked and state changes
+    &:checked + .ce-switch__slider {
+      &::before {
+        box-shadow: 0 0 0 0 #007ab2 inset, 0 0 0 0 #007ab2,
+          // the chosen blue 30% darker than Dodger Blue
+            4.1rem 0 0 0 #007ab2 inset;
+      }
+      &::after {
+        background-color: #002333;
+        border: 1px solid #002333;
+        left: 15px;
+      }
+
+      &:hover {
+        // &::before {
+        //   // margin: 100px;
+        // }
+        &::after {
+          // border: 10px solid #e6f7ff;
+          border: 10px solid rgba(230, 247, 255, 0.5);
+          top: -1px;
+          left: 10px;
+        }
+      }
+      &:focus {
+        &::after {
+          border: 10px solid #ccefff;
+        }
+      }
+      &::active {
+        &::after {
+          border: 10px solid #b2e7ff;
+        }
+      }
+    }
   }
 
-  // channel
-  .ce-switch__slider::before {
-    background-color: #7f7f7f;
-    border-radius: 0.75rem;
-    box-sizing: border-box;
-    content: '';
-    height: 1.2rem;
-    left: 0.75rem;
-    margin: -18px;
-    position: absolute;
-    top: 2.85rem;
-    transition: 250ms ease-in-out;
-    width: 4.1rem;
-  }
-  // switch
-  .ce-switch__slider::after {
-    flex: 1;
-    background-color: #fbfbfb;
-    border: 1px solid #b2b2b2;
-    border-radius: 50%;
-    content: '';
-    height: 1.8rem;
-    left: -10px;
-    position: absolute;
-    transition: 250ms ease-in-out;
-    width: 1.8rem;
-  }
-  input:checked + .ce-switch__slider::before {
-    box-shadow: 0 0 0 0 #007ab2 inset, 0 0 0 0 #007ab2,
-      // the chosen blue 30% darker than Dodger Blue
-        4.1rem 0 0 0 #007ab2 inset;
-  }
-  input:checked + .ce-switch__slider::after {
-    background-color: #002333;
-    border: 1px solid #002333;
-    left: 15px;
+  // default hidden background-div
+
+  // .ce-switch__background-div {
+  //   height: 30px;
+  //   width: 30px;
+  //   border-radius: 50%;
+  //   left: -20px;
+  //   margin-top: 20px;
+  //   // top: 20px;
+  //   opacity: 0.2;
+  //   box-shadow: 0 1 1 1 purple inset;
+  //   //  0 0 0 0 #e6f7ff,
+  //   //   4.1rem 0 0 0 #e6f7ff inset;
+  // }
+
+  // movinh outsidre of input for now
+  &.ce-switch--disabled {
+    pointer-events: none;
+    // color: @checked-disabled-gray;
+    .ce-switch__slider {
+      &::before {
+        background-color: #e5e5e5;
+      }
+      &::after {
+        background-color: #fbfbfb;
+        border: 1px solid #dbdbdb;
+      }
+    }
+
+    input:checked + .ce-switch__slider::before {
+      background-color: #ccefff;
+      box-shadow: none;
+    }
+    input:checked + .ce-switch__slider::after {
+      background-color: #99dfff;
+      border: 1px solid #99dfff;
+    }
   }
 }

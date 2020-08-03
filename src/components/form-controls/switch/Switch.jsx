@@ -43,25 +43,25 @@ const Switch = ({
 
   return (
     <div className={classes}>
-      <div className="ce-switch__container">
-        {/* <label className="ce-switch__label" htmlFor={id}>
+      {/* <label className="ce-switch__label" htmlFor={id}>
           {label}
         </label> */}
-        <input
-          type="checkbox"
-          className="ce-switch__checkbox"
-          checked={isChecked}
-          value={value}
-          name={name}
-          onChange={handleChange}
-          form={formId}
-          id={id}
-        />
-        <label className="ce-switch__slider" htmlFor={id}>
-          {label}
-        </label>
-        {errorMsg && <ErrorBox errorMsg={errorMsg} />}
-      </div>
+
+      <input
+        type="checkbox"
+        className="ce-switch__checkbox"
+        checked={isChecked}
+        value={value}
+        name={name}
+        onChange={handleChange}
+        form={formId}
+        id={id}
+      />
+      <label className="ce-switch__slider" htmlFor={id}>
+        {label}
+      </label>
+      <div className="ce-switch__background-div" />
+      {errorMsg && <ErrorBox errorMsg={errorMsg} />}
     </div>
   );
 };
