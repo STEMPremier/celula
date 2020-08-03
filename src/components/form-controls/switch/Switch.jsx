@@ -46,7 +46,6 @@ const Switch = ({
       {/* <label className="ce-switch__label" htmlFor={id}>
           {label}
         </label> */}
-
       <input
         type="checkbox"
         className="ce-switch__checkbox"

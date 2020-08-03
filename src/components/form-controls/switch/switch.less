@@ -2,7 +2,7 @@
 
 .ce-switch {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   // background
 
   input {
@@ -51,6 +51,7 @@
           left: -20px;
           top: -1px;
           border: 10px solid rgba(229, 229, 229, 0.5);
+          transition: none;
         }
       }
 
@@ -150,6 +151,36 @@
     input:checked + .ce-switch__slider::after {
       background-color: #99dfff;
       border: 1px solid #99dfff;
+    }
+  }
+
+  &.ce-switch--error {
+    .ce-switch__slider {
+      &::before {
+        background-color: #cc0043;
+        z-index: 3;
+      }
+      &::after {
+        border: 1px solid #ff3376;
+        background-color: @white;
+        z-index: 1;
+      }
+    }
+    // if I do this format, I need to silence all the other hover actions on the input and slider
+    .ce-switch__background-div {
+      height: 30px;
+      width: 30px;
+      background-color: #ffb3cc;
+      top: 36px;
+      left: 18px;
+      position: absolute;
+      z-index: 2;
+      opacity: 0.5;
+      border-radius: 50%;
+    }
+    .ce-errorbox {
+      margin-left: 2.75rem;
+      max-width: calc(100% - 2.75rem);
     }
   }
 }
