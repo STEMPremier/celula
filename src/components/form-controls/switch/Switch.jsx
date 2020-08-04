@@ -59,7 +59,7 @@ const Switch = ({
       <label className="ce-switch__slider" htmlFor={id}>
         {label}
       </label>
-      <div className="ce-switch__background-div" />
+      {/* <div className="ce-switch__background-div" /> */}
       {errorMsg && <ErrorBox errorMsg={errorMsg} />}
     </div>
   );
