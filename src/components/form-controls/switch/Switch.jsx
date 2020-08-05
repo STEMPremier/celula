@@ -15,7 +15,7 @@ const Switch = ({
   className,
   disabled,
   errorMsg,
-  formId,
+  // formId,
   handleChange: handler,
   label,
   name,
@@ -50,7 +50,7 @@ const Switch = ({
         className="ce-switch__checkbox"
         checked={isChecked}
         disabled={disabled}
-        form={formId}
+        // form={formId}
         id={id}
         name={name}
         onChange={handleChange}
@@ -66,15 +66,40 @@ const Switch = ({
 };
 
 Switch.propTypes = {
+  /**
+   * Select the `<Switch /> to start checked`.
+   */
   checked: PropTypes.bool,
+  /**
+   * A class name, or string of class names, to add to the `<Switch />`.
+   */
   className: PropTypes.string,
+  /**
+   * Disables the `<Switch />`.
+   */
   disabled: PropTypes.bool,
+  /**
+   * An error message to display under the `<Switch  />`.
+   */
   errorMsg: PropTypes.string,
-  formId: PropTypes.string,
+  // formId: PropTypes.string,
   handleChange: PropTypes.func,
+  /**
+   * This component is to be treated as a switch in `<FormControlGroup />`.
+   * @ignore
+   */
   // isA: PropTypes.string.isRequired,
+  /**
+   * The `<Switch />` label.
+   */
   label: PropTypes.string.isRequired,
+  /**
+   * The name given to all the children of the `<Switch />`.
+   */
   name: PropTypes.string,
+  /**
+   * The value of the `<Switch />`.
+   */
   value: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
@@ -87,7 +112,7 @@ Switch.defaultProps = {
   className: '',
   disabled: false,
   errorMsg: '',
-  formId: '',
+  // formId: '',
   handleChange: () => {},
   // isA: 'switch',
   name: 'name',

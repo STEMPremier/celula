@@ -12368,6 +12368,170 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
 </button>
 `;
 
+exports[`Storyshots Components/Molecules/Form Controls/Switch Switch Checked 1`] = `
+<form
+  id="formTypes"
+>
+  <div
+    className="ce-switch"
+  >
+    <input
+      checked={true}
+      className="ce-switch__checkbox"
+      disabled={false}
+      form="formTypes"
+      id="checkSlider_sliderChecked"
+      name="checkSlider"
+      onChange={[Function]}
+      type="checkbox"
+      value="sliderChecked"
+    />
+    <label
+      className="ce-switch__slider"
+      htmlFor="checkSlider_sliderChecked"
+    >
+      Uncheck this slider
+    </label>
+    
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Switch Switch Error 1`] = `
+<form
+  id="formError"
+>
+  <div
+    className="ce-switch ce-switch--error"
+  >
+    <input
+      checked={false}
+      className="ce-switch__checkbox"
+      disabled={false}
+      form="formError"
+      id="checkSlider_sliderChecked"
+      name="checkSlider"
+      onChange={[Function]}
+      type="checkbox"
+      value="sliderChecked"
+    />
+    <label
+      className="ce-switch__slider"
+      htmlFor="checkSlider_sliderChecked"
+    >
+      This slider is in an error state
+    </label>
+    <div
+      className="ce-errorbox"
+    >
+      <div
+        className="ce-errorbox__container"
+      >
+        <div
+          className="ce-errorbox__arrow"
+        />
+        <div
+          className="ce-errorbox__message"
+        >
+          <span
+            className="ce-errorbox__text"
+          >
+            This is the wrong choice
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Switch Switch Unchecked 1`] = `
+<form
+  id="formSwitchUnchecked"
+>
+  <div
+    className="ce-switch"
+  >
+    <input
+      checked={false}
+      className="ce-switch__checkbox"
+      disabled={false}
+      form="formSwitchUnchecked"
+      id="checkSlider_sliderChecked"
+      name="checkSlider"
+      onChange={[Function]}
+      type="checkbox"
+      value="sliderChecked"
+    />
+    <label
+      className="ce-switch__slider"
+      htmlFor="checkSlider_sliderChecked"
+    >
+      Check this slider
+    </label>
+    
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Switch Switches Disabled Checked 1`] = `
+<form
+  id="formDisabledChecked"
+>
+  <div
+    className="ce-switch ce-switch--disabled"
+  >
+    <input
+      checked={true}
+      className="ce-switch__checkbox"
+      disabled={true}
+      form="formDisabledChecked"
+      id="checkSlider_sliderChecked"
+      name="checkSlider"
+      onChange={[Function]}
+      type="checkbox"
+      value="sliderChecked"
+    />
+    <label
+      className="ce-switch__slider"
+      htmlFor="checkSlider_sliderChecked"
+    >
+      This slider is disabled and checked
+    </label>
+    
+  </div>
+</form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Switch Switches Disabled Unchecked 1`] = `
+<form
+  id="formDisabledUnchecked"
+>
+  <div
+    className="ce-switch ce-switch--disabled"
+  >
+    <input
+      checked={false}
+      className="ce-switch__checkbox"
+      disabled={true}
+      form="formDisabledUnchecked"
+      id="checkSlider_sliderChecked"
+      name="checkSlider"
+      onChange={[Function]}
+      type="checkbox"
+      value="sliderChecked"
+    />
+    <label
+      className="ce-switch__slider"
+      htmlFor="checkSlider_sliderChecked"
+    >
+      This slider is disabled and unchecked
+    </label>
+    
+  </div>
+</form>
+`;
+
 exports[`Storyshots Components/Molecules/Form Controls/Textarea Textarea States 1`] = `
 <form
   id="textareaStatesForm"
