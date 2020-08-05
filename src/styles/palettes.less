@@ -1,121 +1,133 @@
 // Color Definitions
 // Primary
-@dodger-blue:   #00b0ff;
-@torch-red:     #ff0054;
-@royal-purple:  #7838a8;
-@royal-heath:   #982d7c;
+@dodger-blue: #00b0ff;
+@torch-red: #ff0054;
+@royal-purple: #7838a8;
+@royal-heath: #982d7c;
 @sea-buckthorn: #fca635;
-@conifer:       #acd84f;
+@conifer: #acd84f;
 
 //Secondary
 @catskill-white: #f1f6f9;
-@hit-gray:       #a6b0b6;
-@slate-gray:     #72828d;
-@big-stone:      #192344;
-@ebony:          #0f1422;
+@hit-gray: #a6b0b6;
+@slate-gray: #72828d;
+@big-stone: #192344;
+@ebony: #0f1422;
 
 /* Grayscale
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
  */
 @100-gray: #fff;
-@90-gray:  #e5e5e5;
-@80-gray:  #ccc;
-@70-gray:  #b3b3b3;
-@0-gray:   #000;
+@90-gray: #e5e5e5;
+@80-gray: #ccc;
+@70-gray: #b3b3b3;
+@0-gray: #000;
 
 // Sensible Aliases
 // Primary
-@black:  @0-gray;
-@blue:   @dodger-blue;
-@green:  @conifer;
+@black: @0-gray;
+@blue: @dodger-blue;
+@green: @conifer;
 @orange: @sea-buckthorn;
 @purple: @royal-purple;
-@red:    @torch-red;
-@white:  @100-gray;
-
+@red: @torch-red;
+@white: @100-gray;
 
 // Secondary
 @extra-light-gray: @catskill-white;
-@light-gray:       @hit-gray;
-@gray:             @slate-gray;
-@navy:             @big-stone;
+@light-gray: @hit-gray;
+@gray: @slate-gray;
+@navy: @big-stone;
 // @ebony:            @ebony;
 
 // Text Colors
-@primary-text:   rgba(0, 0, 0, 0.87);
-@legend-text:    @primary-text;
-@secondary-text: rgba(0, 0, 0, 0.60);
-@label-text:     @secondary-text;
-@help-text:      rgba(0, 0, 0, 0.38);
-@disabled-text:  @help-text;
-@dividers:       rgba(0, 0, 0, 0.12);
+@primary-text: rgba(0, 0, 0, 0.87);
+@legend-text: @primary-text;
+@secondary-text: rgba(0, 0, 0, 0.6);
+@label-text: @secondary-text;
+@help-text: rgba(0, 0, 0, 0.38);
+@disabled-text: @help-text;
+@dividers: rgba(0, 0, 0, 0.12);
 
-@inverted-primary-text:   rgba(255, 255, 255, 1);
-@inverted-secondary-text: rgba(255, 255, 255, 0.70);
-@inverted-help-text:      rgba(255, 255, 255, 0.50);
-@inverted-dividers:       rgba(255, 255, 255, 0.12);
+@inverted-primary-text: rgba(255, 255, 255, 1);
+@inverted-secondary-text: rgba(255, 255, 255, 0.7);
+@inverted-help-text: rgba(255, 255, 255, 0.5);
+@inverted-dividers: rgba(255, 255, 255, 0.12);
 
 @default-border: #dcdcdc;
 
 // Form Control States
 // Unchecked Radio, Unchecked Checkbox, Select
-@default-gray:         #b2b2b2;
-@default-background:   #fbfbfb;
+@default-gray: #b2b2b2;
+@default-background: #fbfbfb;
 @unchecked-background: @default-background;
-@unchecked-gray:       @default-gray;
-@hover-gray:           @90-gray;
-@active-gray:          @70-gray;
-@focus-gray:           @80-gray;
-@outline-gray:         @default-gray;
+@unchecked-gray: @default-gray;
+@hover-gray: @90-gray;
+@active-gray: @70-gray;
+@focus-gray: @80-gray;
+@outline-gray: @default-gray;
 
 // Checked Radio, Checked Checkbox, Select
 @checked-blue: @navy;
-@hover-blue:   #e6f7ff;
-@active-blue:  #b2e7ff;
-@focus-blue:   #ccefff;
+@hover-blue: #e6f7ff;
+@active-blue: #b2e7ff;
+@focus-blue: #ccefff;
 
 /* Checked/Unchecked Disabled Radio,
  * Checked/Unchecked Disabled Checkbox,
  * Disabled Select
  */
-@default-disabled-gray:   #aeaeae;
+@default-disabled-gray: #aeaeae;
 @unchecked-disabled-gray: #dbdbdb;
-@checked-disabled-gray:   @default-disabled-gray;
+@checked-disabled-gray: @default-disabled-gray;
 
 // Button, Link
-@primary-hover:    #008dd2;
-@primary-focus:    #006999;
-@primary-active:   #006999;
-@secondary-hover:  #bc178f;
-@secondary-focus:  #900086;
+@primary-hover: #008dd2;
+@primary-focus: #006999;
+@primary-active: #006999;
+@secondary-hover: #bc178f;
+@secondary-focus: #900086;
 @secondary-active: #900086;
-@black-hover:      #404040; // This is a terrible name, I am open to suggestions
-@black-focus:      #262626; // This is a terrible name, I am open to suggestions
-@black-active:     #262626; // This is a terrible name, I am open to suggestions
+@black-hover: #404040; // This is a terrible name, I am open to suggestions
+@black-focus: #262626; // This is a terrible name, I am open to suggestions
+@black-active: #262626; // This is a terrible name, I am open to suggestions
 
 // Error Radio, Error Checkbox, Error Select, Error Box
-@error-red:            #cc0043;
+@error-red: #cc0043;
 @error-box-background: @error-red;
-@checked-red:          #e5004b;
-@hover-red:            #ffe5ed;
-@active-red:           #ffb3cc;
-@focus-red:            #ffccdc;
+@checked-red: #e5004b;
+@hover-red: #ffe5ed;
+@active-red: #ffb3cc;
+@focus-red: #ffccdc;
 @error-element-border: @error-red;
-@error-text:           @checked-red;
+@error-text: @checked-red;
 
 //Inputs
-@gray-border:  @unchecked-gray;
-@error-text:   @checked-red;
+@gray-border: @unchecked-gray;
+@error-text: @checked-red;
 @error-border: #ff3376;
 
 //Alerts
-@info:    #4dc7ff;
+@info: #4dc7ff;
 @warning: #fca635;
-@error:   @error-red;
+@error: @error-red;
 @success: #acd84f;
 
 // Gradients
 @gradient-cool: linear-gradient(317.58deg, #6645ad 0%, #2d71be 100%);
 @gradient-warm: linear-gradient(317.58deg, #fba635 0%, #acd74e 100%);
-@gradient-hot:  linear-gradient(317.58deg, #62248d 0%, #c4356e 100%);
+@gradient-hot: linear-gradient(317.58deg, #62248d 0%, #c4356e 100%);
+
+//Switches
+@before-background: #7f7f7f;
+@after-background: @default-background;
+@after-border: @default-gray;
+// @after-hover-box-shadow:
+@checked-before: #007ab2;
+@checked-after-background: #002333;
+@disabled-unchecked-before: @90-gray;
+@disabled-unchecked-after-background: @default-background;
+@disabled-unchecked-after-border: @unchecked-disabled-gray;
+@disabled-checked-before: @focus-blue;
+@disabled-checked-after: #99dfff;

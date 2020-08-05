@@ -3,7 +3,6 @@
 .ce-switch {
   display: flex;
   flex-direction: column;
-  // background
 
   input {
     // hide the built-in checkbox
@@ -15,18 +14,18 @@
       display: block;
       height: 3rem;
       position: relative;
-      margin: 15px 30px;
-      padding: 8px 50px;
+      margin: 1.5rem 3rem;
+      padding: 0.8rem 5rem;
       // DEFAULT CUSTOM SLIDER STYLING IS UNCHECKED
       // channel
       &::before {
-        background-color: #7f7f7f;
+        background-color: @before-background;
         border-radius: 0.75rem;
         box-sizing: border-box;
         content: '';
         height: 1.2rem;
         left: 0.75rem;
-        margin: -18px;
+        margin: -1.8rem;
         position: absolute;
         top: 2.85rem;
         transition: 250ms ease-in-out;
@@ -35,14 +34,14 @@
       //dot
       &::after {
         flex: 1;
-        background-color: #fbfbfb;
-        border: 1px solid #b2b2b2;
+        background-color: @after-background;
+        border: 1px solid @after-border;
         // box-shadow: -1px 0 #b2b2b2, 1px 0 #b2b2b2, 0 -1px #b2b2b2,
         //   0 1px #b2b2b2b2;
         border-radius: 50%;
         content: '';
         height: 1.8rem;
-        left: -10px;
+        left: -1rem;
         position: absolute;
         transition: 250ms ease-in-out;
         width: 1.8rem;
@@ -50,40 +49,30 @@
       // STATE CHANGES SHOULD ONLY TOUCH THE AFTER IN BOTH CHECKED & UNCHECKED
       &:hover {
         &::after {
-          // left: -20px;
-          // top: -1px;
-          // border: 10px solid rgba(229, 229, 229, 0.1);
-          // transition: none;
-          box-shadow: -3px 0 2px 7px rgba(229, 229, 229, 0.3),
-            -1px 0 2px 7px rgba(229, 229, 229, 0.3),
+          box-shadow: -2px 0 2px 7px rgba(229, 229, 229, 0.3),
+            2px 0 2px 7px rgba(229, 229, 229, 0.3),
             0 -2px 2px 7px rgba(229, 229, 229, 0.3),
             0 -2px 2px 7px rgba(229, 229, 229, 0.3);
         }
       }
 
       &:focus {
+        // THE FOCUS IS NOT BEING TRIGGERED AT ALL!!!
         &::after {
-          // left: -20px;
-          // top: -1px;
-          // border: 10px solid rgba(229, 229, 229, 0.5);
-          box-shadow: -3px 0 2px 7px rgba(204, 204, 204, 0.3),
-            -1px 0 2px 7px rgba(204, 204, 204, 0.3),
-            0 -2px 2px 7px rgba(204, 204, 204, 0.3),
-            0 -2px 2px 7px rgba(204, 204, 204, 0.3);
+          border: 1rem solid purple;
+          // box-shadow: -2px 0 2px 7px rgba(204, 204, 204, 0.3),
+          //   2px 0 2px 7px rgba(204, 204, 204, 0.3),
+          //   0 -2px 2px 7px rgba(204, 204, 204, 0.3),
+          //   0 -2px 2px 7px rgba(204, 204, 204, 0.3);
         }
       }
       &:active {
-        // &::after {
-        //   border: 10px solid #b2b2b2;
-        // }
         &::after {
-          // left: -20px;
-          // top: -1px;
-          // border: 10px solid rgba(178, 178, 178, 0.5);
-          box-shadow: -3px 0 2px 7px rgba(178, 231, 255, 0.3),
-            -1px 0 2px 7px rgba(178, 231, 255, 0.3),
-            0 -2px 2px 7px rgba(178, 231, 255, 0.3),
-            0 -2px 2px 7px rgba(178, 231, 255, 0.3);
+          // border: 10px solid green;
+          box-shadow: -2px 0 2px 7px rgba(179, 179, 179, 0.3),
+            2px 0 2px 7px rgba(179, 179, 179, 0.3),
+            0 -2px 2px 7px rgba(179, 179, 179, 0.3),
+            0 -2px 2px 7px rgba(179, 179, 179, 0.3);
         }
       }
     }
@@ -91,35 +80,30 @@
     // switch checked and state changes
     &:checked + .ce-switch__slider {
       &::before {
-        box-shadow: 0 0 0 0 #007ab2 inset, 0 0 0 0 #007ab2,
+        box-shadow: 0 0 0 0 @checked-before inset, 0 0 0 0 @checked-before,
           // the chosen blue 30% darker than Dodger Blue
-            4.1rem 0 0 0 #007ab2 inset;
+            4.1rem 0 0 0 @checked-before inset;
       }
       &::after {
-        background-color: #002333;
-        border: 1px solid #002333;
-        left: 15px;
+        background-color: @checked-after-background;
+        border: 0.1rem solid @checked-after-background;
+        left: 1.5rem;
       }
 
       &:hover {
-        // &::before {
-        //   // margin: 100px;
-        // }
         &::after {
           // border: 10px solid #e6f7ff;
           // border: 10px solid rgba(230, 247, 255, 0.5);
-          box-shadow: -3px 0 2px 7px rgba(230, 247, 255, 0.9),
-            -1px 0 2px 7px rgba(230, 247, 255, 0.9),
+          box-shadow: -2px 0 2px 7px rgba(230, 247, 255, 0.9),
+            2px 0 2px 7px rgba(230, 247, 255, 0.9),
             0 -2px 2px 7px rgba(230, 247, 255, 0.9),
             0 -2px 2px 7px rgba(230, 247, 255, 0.9);
-          // top: -1px;
-          // left: 10px;
         }
       }
       &:focus {
         &::after {
-          box-shadow: -3px 0 2px 7px rgba(230, 247, 255, 0.9),
-            -1px 0 2px 7px rgba(230, 247, 255, 0.9),
+          box-shadow: -2px 0 2px 7px rgba(230, 247, 255, 0.9),
+            2px 0 2px 7px rgba(230, 247, 255, 0.9),
             0 -2px 2px 7px rgba(230, 247, 255, 0.9),
             0 -2px 2px 7px rgba(230, 247, 255, 0.9);
           // border: 10px solid #ccefff;
@@ -127,8 +111,8 @@
       }
       &::active {
         &::after {
-          box-shadow: -3px 0 2px 7px rgba(178, 231, 255, 0.9),
-            -1px 0 2px 7px rgba(178, 231, 255, 0.9),
+          box-shadow: -2px 0 2px 7px rgba(178, 231, 255, 0.9),
+            2px 0 2px 7px rgba(178, 231, 255, 0.9),
             0 -2px 2px 7px rgba(178, 231, 255, 0.9),
             0 -2px 2px 7px rgba(178, 231, 255, 0.9);
           // border: 10px solid #b2e7ff;
@@ -142,57 +126,72 @@
 
     .ce-switch__slider {
       &::before {
-        background-color: #e5e5e5;
+        background-color: @disabled-unchecked-before;
       }
       &::after {
-        background-color: #fbfbfb;
-        border: 1px solid #dbdbdb;
+        background-color: @disabled-unchecked-after-background;
+        border: 0.1rem solid @disabled-unchecked-after-border;
+        @media screen {
+          @media (max-width: 768px) {
+            margin-top: -1.7rem;
+          }
+        }
       }
     }
 
     input:checked + .ce-switch__slider::before {
-      background-color: #ccefff;
+      background-color: @disabled-checked-before;
       box-shadow: none;
     }
     input:checked + .ce-switch__slider::after {
-      background-color: #99dfff;
-      border: 1px solid #99dfff;
+      background-color: @disabled-checked-after;
+      border: 0.1rem solid @disabled-checked-after;
+      @media screen {
+        @media (max-width: 768px) {
+          margin-top: -1.7rem;
+        }
+      }
     }
   }
 
   &.ce-switch--error {
-    color: #e5004b;
+    color: @checked-red;
     input {
       + .ce-switch__slider {
         &::before {
-          background-color: #cc0043;
+          background-color: @error-red;
           box-shadow: none;
         }
         &::after {
-          border: 1px solid #ff3376;
+          border: 0.1rem solid @error-border;
           background-color: @white;
+          @media screen {
+            @media (max-width: 768px) {
+              margin-top: -1.7rem;
+            }
+          }
         }
 
         &:hover {
           &::after {
-            box-shadow: -3px 0 2px 7px rgba(255, 229, 237, 0.9),
-              -1px 0 2px 7px rgba(255, 229, 237, 0.9),
+            box-shadow: -2px 0 2px 7px rgba(255, 229, 237, 0.9),
+              2px 0 2px 7px rgba(255, 229, 237, 0.9),
               0 -2px 2px 7px rgba(255, 229, 237, 0.9),
               0 -2px 2px 7px rgba(255, 229, 237, 0.9);
           }
         }
         &:focus {
           &::after {
-            box-shadow: -3px 0 2px 7px rgba(255, 204, 220, 0.9),
-              -1px 0 2px 7px rgba(255, 204, 220, 0.9),
+            box-shadow: -2px 0 2px 7px rgba(255, 204, 220, 0.9),
+              2px 0 2px 7px rgba(255, 204, 220, 0.9),
               0 -2px 2px 7px rgba(255, 204, 220, 0.9),
               0 -2px 2px 7px rgba(255, 204, 220, 0.9);
           }
         }
         &:active {
           &::after {
-            box-shadow: -3px 0 2px 7px rgba(255, 179, 204, 0.9),
-              -1px 0 2px 7px rgba(255, 179, 204, 0.9),
+            box-shadow: -2px 0 2px 7px rgba(255, 179, 204, 0.9),
+              2px 0 2px 7px rgba(255, 179, 204, 0.9),
               0 -2px 2px 7px rgba(255, 179, 204, 0.9),
               0 -2px 2px 7px rgba(255, 179, 204, 0.9);
           }
@@ -204,33 +203,33 @@
             box-shadow: none;
           }
           &::after {
-            border: 1px solid #ff3376;
+            border: 0.1rem solid @error-border;
             background-color: @white;
-            box-shadow: -3px 0 2px 7px rgba(255, 229, 237, 0.9),
-              -1px 0 2px 7px rgba(255, 229, 237, 0.9),
+            box-shadow: -2px 0 2px 7px rgba(255, 229, 237, 0.9),
+              2px 0 2px 7px rgba(255, 229, 237, 0.9),
               0 -2px 2px 7px rgba(255, 229, 237, 0.9),
               0 -2px 2px 7px rgba(255, 229, 237, 0.9);
           }
           &:hover {
             &::after {
-              box-shadow: -3px 0 2px 7px rgba(255, 229, 237, 0.9),
-                -1px 0 2px 7px rgba(255, 229, 237, 0.9),
+              box-shadow: -2px 0 2px 7px rgba(255, 229, 237, 0.9),
+                2px 0 2px 7px rgba(255, 229, 237, 0.9),
                 0 -2px 2px 7px rgba(255, 229, 237, 0.9),
                 0 -2px 2px 7px rgba(255, 229, 237, 0.9);
             }
           }
           &:focus {
             &::after {
-              box-shadow: -3px 0 2px 7px rgba(255, 204, 220, 0.9),
-                -1px 0 2px 7px rgba(255, 204, 220, 0.9),
+              box-shadow: -2px 0 2px 7px rgba(255, 204, 220, 0.9),
+                2px 0 2px 7px rgba(255, 204, 220, 0.9),
                 0 -2px 2px 7px rgba(255, 204, 220, 0.9),
                 0 -2px 2px 7px rgba(255, 204, 220, 0.9);
             }
           }
           &:active {
             &::after {
-              box-shadow: -3px 0 2px 7px rgba(255, 179, 204, 0.9),
-                -1px 0 2px 7px rgba(255, 179, 204, 0.9),
+              box-shadow: -2px 0 2px 7px rgba(255, 179, 204, 0.9),
+                2px 0 2px 7px rgba(255, 179, 204, 0.9),
                 0 -2px 2px 7px rgba(255, 179, 204, 0.9),
                 0 -2px 2px 7px rgba(255, 179, 204, 0.9);
             }
