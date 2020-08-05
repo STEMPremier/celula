@@ -1,4 +1,7 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-expressions */
 /* eslint-disable jsx-a11y/label-has-associated-control */
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -43,23 +46,20 @@ const Switch = ({
 
   return (
     <div className={classes}>
-      {/* <label className="ce-switch__label" htmlFor={id}>
-          {label}
-        </label> */}
       <input
-        type="checkbox"
         className="ce-switch__checkbox"
         checked={isChecked}
-        value={value}
-        name={name}
-        onChange={handleChange}
+        disabled={disabled}
         form={formId}
         id={id}
+        name={name}
+        onChange={handleChange}
+        type="checkbox"
+        value={value}
       />
       <label className="ce-switch__slider" htmlFor={id}>
         {label}
       </label>
-      {/* <div className="ce-switch__background-div" /> */}
       {errorMsg && <ErrorBox errorMsg={errorMsg} />}
     </div>
   );
