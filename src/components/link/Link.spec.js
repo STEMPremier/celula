@@ -14,7 +14,7 @@ describe('<Link />', () => {
           address="https://app.tallo.com/register"
           text="hyperlink"
           textStyle="lowercase"
-          color="blue"
+          color="primary"
         />,
       );
       expect(toJson(wrapper)).toMatchSnapshot();
