@@ -1,0 +1,23 @@
+@import '../../styles/celula';
+
+.ce-container {
+  box-sizing: border-box;
+
+  &.ce-container__border {
+    border: 0.1rem solid @default-border;
+    border-radius: 0.5rem;
+  }
+
+  &.ce-container__margin {
+    margin: 4rem;
+  }
+
+  &.ce-container__padding {
+    padding: 4rem;
+  }
+
+  &.ce-container__none { // No margin or padding
+    margin: 0;
+    padding: 0;
+  }
+}

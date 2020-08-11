@@ -1,22 +1,19 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import Link from '.';
+import Container from '.';
 
-describe('<Link />', () => {
+describe('<Container />', () => {
   describe('render()', () => {
-    test('renders the component', () => {
+    test('render the Container component', () => {
       const wrapper = shallow(
-        <Link
-          address="https://app.tallo.com/register"
-          text="hyperlink"
-          textStyle="lowercase"
-          color="primary"
-        />,
+        <Container>
+          <span>This is stuff in a container.</span>
+        </Container>,
       );
+
       expect(toJson(wrapper)).toMatchSnapshot();
     });
   });

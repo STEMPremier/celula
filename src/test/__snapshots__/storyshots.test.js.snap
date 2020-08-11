@@ -476,6 +476,67 @@ exports[`Storyshots Components/Atoms/Button Button with Knobs 1`] = `
 </button>
 `;
 
+exports[`Storyshots Components/Atoms/Container Container Border 1`] = `
+Array [
+  <div
+    className="ce-container ce-container__margin"
+  >
+    <span>
+      This is stuff in a container.
+    </span>
+  </div>,
+  <div
+    className="ce-container ce-container__border ce-container__margin"
+  >
+    <span>
+      This is stuff in a container.
+    </span>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Atoms/Container Container Spacing 1`] = `
+Array [
+  <div
+    className="ce-container ce-container__border ce-container__margin"
+  >
+    <span>
+      This is stuff in a container with 
+      margin
+      .
+    </span>
+  </div>,
+  <div
+    className="ce-container ce-container__border ce-container__padding"
+  >
+    <span>
+      This is stuff in a container with 
+      padding
+      .
+    </span>
+  </div>,
+  <div
+    className="ce-container ce-container__border"
+  >
+    <span>
+      This is stuff in a container with 
+      none
+      .
+    </span>
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Atoms/Container Container with Knobs 1`] = `
+<div
+  className="ce-container ce-container__margin"
+>
+  <span>
+    This is stuff in a container.
+  </span>
+</div>
+`;
+
 exports[`Storyshots Components/Atoms/Link Link Colors 1`] = `
 Array [
   <span
@@ -7778,7 +7839,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input States 1`] = 
           className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
-            className="ce-icon--white"
+            className="ce-icon--inverted"
           >
             <use
               xlinkHref="#icons_system-navigate"
@@ -7939,7 +8000,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input States 1`] = 
           className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
-            className="ce-icon--white"
+            className="ce-icon--inverted"
           >
             <use
               xlinkHref="#icons_system-navigate"
@@ -8157,7 +8218,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input States 1`] = 
           className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
-            className="ce-icon--white"
+            className="ce-icon--inverted"
           >
             <use
               xlinkHref="#icons_system-navigate"
@@ -8342,7 +8403,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
             className="ce-icon ce-icon__system ce-icon--large"
           >
             <svg
-              className="ce-icon--white"
+              className="ce-icon--inverted"
             >
               <use
                 xlinkHref="#icons_system-navigate"
@@ -8562,7 +8623,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
             className="ce-icon ce-icon__system ce-icon--large"
           >
             <svg
-              className="ce-icon--white"
+              className="ce-icon--inverted"
             >
               <use
                 xlinkHref="#icons_system-navigate"
@@ -8722,7 +8783,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
             className="ce-icon ce-icon__system ce-icon--large"
           >
             <svg
-              className="ce-icon--white"
+              className="ce-icon--inverted"
             >
               <use
                 xlinkHref="#icons_system-navigate"
@@ -8882,7 +8943,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
             className="ce-icon ce-icon__system ce-icon--large"
           >
             <svg
-              className="ce-icon--white"
+              className="ce-icon--inverted"
             >
               <use
                 xlinkHref="#icons_system-navigate"
@@ -9042,7 +9103,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
             className="ce-icon ce-icon__system ce-icon--large"
           >
             <svg
-              className="ce-icon--white"
+              className="ce-icon--inverted"
             >
               <use
                 xlinkHref="#icons_system-navigate"
@@ -9262,7 +9323,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
             className="ce-icon ce-icon__system ce-icon--large"
           >
             <svg
-              className="ce-icon--white"
+              className="ce-icon--inverted"
             >
               <use
                 xlinkHref="#icons_system-navigate"
@@ -9422,7 +9483,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
             className="ce-icon ce-icon__system ce-icon--large"
           >
             <svg
-              className="ce-icon--white"
+              className="ce-icon--inverted"
             >
               <use
                 xlinkHref="#icons_system-navigate"
@@ -9582,7 +9643,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
             className="ce-icon ce-icon__system ce-icon--large"
           >
             <svg
-              className="ce-icon--white"
+              className="ce-icon--inverted"
             >
               <use
                 xlinkHref="#icons_system-navigate"
@@ -9742,7 +9803,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
             className="ce-icon ce-icon__system ce-icon--large"
           >
             <svg
-              className="ce-icon--white"
+              className="ce-icon--inverted"
             >
               <use
                 xlinkHref="#icons_system-navigate"
@@ -9902,7 +9963,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
             className="ce-icon ce-icon__system ce-icon--large"
           >
             <svg
-              className="ce-icon--white"
+              className="ce-icon--inverted"
             >
               <use
                 xlinkHref="#icons_system-navigate"
@@ -10062,7 +10123,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
             className="ce-icon ce-icon__system ce-icon--large"
           >
             <svg
-              className="ce-icon--white"
+              className="ce-icon--inverted"
             >
               <use
                 xlinkHref="#icons_system-navigate"
@@ -10222,7 +10283,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
             className="ce-icon ce-icon__system ce-icon--large"
           >
             <svg
-              className="ce-icon--white"
+              className="ce-icon--inverted"
             >
               <use
                 xlinkHref="#icons_system-navigate"
@@ -10382,7 +10443,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
             className="ce-icon ce-icon__system ce-icon--large"
           >
             <svg
-              className="ce-icon--white"
+              className="ce-icon--inverted"
             >
               <use
                 xlinkHref="#icons_system-navigate"
@@ -10441,7 +10502,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input with Knobs 1`
           className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
-            className="ce-icon--white"
+            className="ce-icon--inverted"
           >
             <use
               xlinkHref="#icons_system-navigate"
@@ -11055,7 +11116,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select States 1`] 
           className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
-            className="ce-icon--white"
+            className="ce-icon--inverted"
           >
             <use
               xlinkHref="#icons_system-add"
@@ -11260,7 +11321,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select States 1`] 
           className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
-            className="ce-icon--white"
+            className="ce-icon--inverted"
           >
             <use
               xlinkHref="#icons_system-add"
@@ -11522,7 +11583,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select States 1`] 
           className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
-            className="ce-icon--white"
+            className="ce-icon--inverted"
           >
             <use
               xlinkHref="#icons_system-add"
@@ -11748,7 +11809,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select Types 1`] =
           className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
-            className="ce-icon--white"
+            className="ce-icon--inverted"
           >
             <use
               xlinkHref="#icons_system-add"
@@ -11817,7 +11878,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select with Knobs 
           className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
-            className="ce-icon--white"
+            className="ce-icon--inverted"
           >
             <use
               xlinkHref="#icons_system-navigate"

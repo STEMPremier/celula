@@ -1,0 +1,48 @@
+import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { boolean, select } from '@storybook/addon-knobs';
+
+import Container from '.';
+
+<Meta component={Container} title="Components/Atoms/Container" />
+
+# Container
+<Description of={Container} />
+<Props of={Container} />
+
+<Story name="Container with Knobs" parameters={{ docs: { disable: true } }}>
+  <Container
+    border={boolean('border', false)}
+    gap={select('gap', ['margin', 'padding', 'none'], 'margin')}
+  >
+    <span>This is stuff in a container.</span>
+  </Container>
+</Story>
+
+### Types of Spacing
+<Preview>
+  <Story name="Container Spacing">
+    {['margin', 'padding', 'none'].map(spacer => (
+      <Container
+        border={true}
+        gap={spacer}
+        key={spacer}
+      >
+        <span>This is stuff in a container with {spacer}.</span>
+      </Container>
+    ))}
+  </Story>
+</Preview>
+
+### Border
+<Preview>
+  <Story name="Container Border">
+    {[false, true].map(border => (
+      <Container
+        border={border}
+        key={`${border}`}
+      >
+        <span>This is stuff in a container.</span>
+      </Container>
+    ))}
+  </Story>
+</Preview>
