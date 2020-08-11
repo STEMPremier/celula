@@ -86,7 +86,7 @@ const Select = ({
             onClick={btnClick}
             type="button"
           >
-            <SystemIcon name={btnIcon} color="white" />
+            <SystemIcon name={btnIcon} color="inverted" />
           </button>
         )}
       </div>

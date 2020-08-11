@@ -11116,7 +11116,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select States 1`] 
           className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
-            className="ce-icon--white"
+            className="ce-icon--inverted"
           >
             <use
               xlinkHref="#icons_system-add"
@@ -11321,7 +11321,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select States 1`] 
           className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
-            className="ce-icon--white"
+            className="ce-icon--inverted"
           >
             <use
               xlinkHref="#icons_system-add"
@@ -11583,7 +11583,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select States 1`] 
           className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
-            className="ce-icon--white"
+            className="ce-icon--inverted"
           >
             <use
               xlinkHref="#icons_system-add"
@@ -11809,7 +11809,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select Types 1`] =
           className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
-            className="ce-icon--white"
+            className="ce-icon--inverted"
           >
             <use
               xlinkHref="#icons_system-add"
@@ -11878,7 +11878,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Select Select with Knobs 
           className="ce-icon ce-icon__system ce-icon--large"
         >
           <svg
-            className="ce-icon--white"
+            className="ce-icon--inverted"
           >
             <use
               xlinkHref="#icons_system-navigate"
