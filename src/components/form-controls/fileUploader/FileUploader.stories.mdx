@@ -8,9 +8,14 @@ import {
 import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
 
+import {
+  COLORS,
+  SIZES
+} from '../../../utils/constants';
+
 import FileUploader from '.';
 
-<Meta component={FileUplaoder} title="Components/Molecules/Form Controls/FileUploader" />
+<Meta component={FileUploader} title="Components/Molecules/Form Controls/FileUploader" />
 
 # FileUplaoder
 <Description of={FileUploader} />
@@ -18,7 +23,7 @@ import FileUploader from '.';
 
 <Story name="FileUplaoder with Knobs" parameters={{ docs: { disable: true } }}>
   <form id="fileUploaderWithKnobForm">
-    <FileUplaoder
+    <FileUploader
       className={text('className', '', 'FileUploader Options')}
       disabled={boolean('disabled', false, 'FileUploader Options')}
       errorMsg={text('errorMsg', '', 'FileUploader Options')}
@@ -29,10 +34,71 @@ import FileUploader from '.';
         'This is useful or helpful information.',
         'FileUploader Options',
       )}
-      initialValue={text('initialValue', '', 'FileUploader Options')}
+      multiple={boolean('multiple', false, 'FileUploader Options')}
       name={text('name', 'fileUploaderWithKnobs', 'FileUploader Options')}
       size={text('size', 'large', 'FileUploader Options')}
       styleType={text('styleType', '', 'FileUploader Options')}
-    >{text('children', 'a file upload')}</FileUplaoder>
+      value={text('value', '', 'FileUploader Options')}
+    >{text('children', 'CHILDREN TEXT - NOT SURE WHAY TO DO WITH THIS IN THE INDIVIDUASL STORIES')}</FileUploader>
   </form>
 </Story>
+
+### Style Type
+<Preview>
+  <Story name="FileUploader Types">
+    <form id="FileUploader Types">
+      <FileUploader 
+        label="This is a label of default type"
+        name="This is a name" 
+      />
+      <FileUploader 
+        label="This is a label of default type"
+        name="This is a name"
+        type="outline"
+      />
+      </form>
+    </Story>
+  </Preview>
+
+### Colors
+<Preview>
+  <Story name="FileUploader Colors">
+    {COLORS.map(color => (
+      <form id="FileUploader Colors">
+      <FileUploader 
+        label="This is a label of default color"
+        name="This is a name"
+
+      />
+      <FileUploader 
+        label="This are the other colors"
+        name="This is a name"
+        color={color}
+      />
+      </form>
+    ))}
+    </Story>
+  </Preview>
+
+### Sizes 
+<Preview>
+  <Story name="FileUploader Sizes">
+    {SIZES.map(size => (
+      <form id="FileUploader Colors">
+      <FileUploader 
+        label="This is a label of default size"
+        name="This is a name"
+      />
+      <FileUploader 
+        label="This are the other sizes"
+        name="This is a name"
+        size={size}
+      />
+      </form>
+    ))}
+    </Story>
+  </Preview>
+
+### Accept, Capture, Multiple Functionality 
+
+### Disabled 
