@@ -1,7 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable jsx-a11y/label-has-associated-control */
-// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -47,7 +43,6 @@ const Switch = ({
   return (
     <div className={classes}>
       <input
-        className="ce-switch__checkbox"
         checked={isChecked}
         disabled={disabled}
         // form={formId}
