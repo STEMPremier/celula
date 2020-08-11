@@ -45,7 +45,6 @@ const Switch = ({
       <input
         checked={isChecked}
         disabled={disabled}
-        // form={formId}
         id={id}
         name={name}
         onChange={handleChange}
@@ -77,13 +76,8 @@ Switch.propTypes = {
    * An error message to display under the `<Switch  />`.
    */
   errorMsg: PropTypes.string,
-  // formId: PropTypes.string,
+
   handleChange: PropTypes.func,
-  /**
-   * This component is to be treated as a switch in `<FormControlGroup />`.
-   * @ignore
-   */
-  // isA: PropTypes.string.isRequired,
   /**
    * The `<Switch />` label.
    */
@@ -107,9 +101,7 @@ Switch.defaultProps = {
   className: '',
   disabled: false,
   errorMsg: '',
-  // formId: '',
   handleChange: () => {},
-  // isA: 'switch',
   name: 'name',
 };
 
