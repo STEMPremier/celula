@@ -6,7 +6,7 @@
 
   input {
     // hide the built-in checkbox
-    left: -9999px;
+    left: -999.9rem;
     position: absolute;
 
     + .ce-switch__slider {
@@ -47,23 +47,24 @@
       // STATE CHANGES SHOULD ONLY TOUCH THE AFTER IN BOTH CHECKED & UNCHECKED
       &:hover {
         &::after {
-          box-shadow: -2px 0 0px 7px @90-gray, 2px 0 0px 7px @90-gray,
-            0 -2px 0px 7px @90-gray, 0 -2px 0px 7px @90-gray;
+          box-shadow: -0.2rem 0 0 0.7rem @90-gray, 0.2rem 0 0 0.7rem @90-gray,
+            0 -0.2rem 0 0.7rem @90-gray, 0 -0.2rem 0 0.7rem @90-gray;
         }
       }
 
       &:active {
         &::after {
-          box-shadow: -2px 0 0px 7px @70-gray, 2px 0 0px 7px @70-gray,
-            0 -2px 0px 7px @70-gray, 0 -2px 0px 7px @70-gray;
+          box-shadow: -0.2rem 0 0 0.7rem @70-gray, 0.2rem 0 0 0.7rem @70-gray,
+            0 -0.2rem 0 0.7rem @70-gray, 0 -0.2rem 0 0.7rem @70-gray;
         }
       }
       &:focus {
         &::after {
-          box-shadow: -2px 0 0px 7px @unchecked-focus-gray,
-            2px 0 0px 7px @unchecked-focus-gray,
-            0 -2px 0px 7px @unchecked-focus-gray,
-            0 -2px 0px 7px @unchecked-focus-gray;
+          border: 20px solid yellow;
+          box-shadow: -0.2rem 0 0 0.7rem @unchecked-focus-gray,
+            0.2rem 0 0 0.7rem @unchecked-focus-gray,
+            0 -0.2rem 0 0.7rem @unchecked-focus-gray,
+            0 -0.2rem 0 0.7rem @unchecked-focus-gray;
         }
       }
     }
@@ -81,23 +82,26 @@
 
       &:hover {
         &::after {
-          // background-color: red;
-          box-shadow: -2px 0 0px 7px @hover-blue, 2px 0 0px 7px @hover-blue,
-            0 -2px 0px 7px @hover-blue, 0 -2px 0px 7px @hover-blue;
+          box-shadow: -0.2rem 0 0 0.7rem @hover-blue,
+            0.2rem 0 0 0.7rem @hover-blue, 0 -0.2rem 0 0.7rem @hover-blue,
+            0 -0.2rem 0 0.7rem @hover-blue;
         }
       }
-      &::active {
+
+      &:active {
         &::after {
-          background-color: black;
-          box-shadow: -2px 0 0px 7px @active-blue, 2px 0 0px 7px @active-blue,
-            0 -2px 0px 7px @active-blue, 0 -2px 0px 7px @active-blue;
+          box-shadow: -0.2rem 0 0 0.7rem @active-blue,
+            0.2rem 0 0 0.7rem @active-blue, 0 -0.2rem 0 0.7rem @active-blue,
+            0 -0.2rem 0 0.7rem @active-blue;
         }
       }
       &:focus {
+        background-color: yellow;
         &::after {
           background-color: purple;
-          box-shadow: -2px 0 0 7px @focus-blue, 2px 0 0 7px @focus-blue,
-            0 -2px 0 7px @focus-blue, 0 -2px 0 7px @focus-blue;
+          border: 10px solid green;
+          // box-shadow: -.2rem 0 0 .7rem @focus-blue, .2rem 0 0 .7rem @focus-blue,
+          //   0 -.2rem 0 .7rem @focus-blue, 0 -.2rem 0 .7rem @focus-blue;
         }
       }
     }
@@ -151,20 +155,23 @@
 
         &:hover {
           &::after {
-            box-shadow: -2px 0 0 7px @hover-red, 2px 0 0 7px @hover-red,
-              0 -2px 0 7px @hover-red, 0 -2px 0 7px @hover-red;
+            box-shadow: -0.2rem 0 0 0.7rem @hover-red,
+              0.2rem 0 0 0.7rem @hover-red, 0 -0.2rem 0 0.7rem @hover-red,
+              0 -0.2rem 0 0.7rem @hover-red;
           }
         }
         &:active {
           &::after {
-            box-shadow: -2px 0 0 7px @active-red, 2px 0 0 7px @active-red,
-              0 -2px 0 7px @active-red, 0 -2px 0 7px @active-red;
+            box-shadow: -0.2rem 0 0 0.7rem @active-red,
+              0.2rem 0 0 0.7rem @active-red, 0 -0.2rem 0 0.7rem @active-red,
+              0 -0.2rem 0 0.7rem @active-red;
           }
         }
         &:focus {
           &::after {
-            box-shadow: -2px 0 0 7px @focus-red, 2px 0 0 7px @focus-red,
-              0 -2px 0 7px @focus-red, 0 -2px 0 7px @focus-red;
+            box-shadow: -0.2rem 0 0 0.7rem @focus-red,
+              0.2rem 0 0 0.7rem @focus-red, 0 -0.2rem 0 0.7rem @focus-red,
+              0 -0.2rem 0 0.7rem @focus-red;
           }
         }
       }
