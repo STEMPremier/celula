@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Container /> render() render the Container component 1`] = `
+<div
+  className="ce-container ce-container__margin"
+>
+  <span>
+    This is stuff in a container.
+  </span>
+</div>
+`;
