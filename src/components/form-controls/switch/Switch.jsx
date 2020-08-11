@@ -11,7 +11,6 @@ const Switch = ({
   className,
   disabled,
   errorMsg,
-  // formId,
   handleChange: handler,
   label,
   name,
@@ -76,7 +75,9 @@ Switch.propTypes = {
    * An error message to display under the `<Switch  />`.
    */
   errorMsg: PropTypes.string,
-
+  /**
+   * A function to trigger when the state of the `<Switch />` changes.
+   */
   handleChange: PropTypes.func,
   /**
    * The `<Switch />` label.

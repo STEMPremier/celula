@@ -9,7 +9,6 @@ import { action } from '@storybook/addon-actions';
 import { boolean, select, text, array } from '@storybook/addon-knobs';
 
 import  { Switch } from '.';
-//import { COMPONENT_STATES as STATES } from '../../../utils/constants';
 
 <Meta component={Switch} title="Components/Molecules/Form Controls/Switch" />
 
@@ -18,13 +17,11 @@ import  { Switch } from '.';
 <Description of={Switch} />
 <Props of={Switch} />
 <Story name="Switch with Knobs" parameters={{ docs: { disable: true } }}>
-   <form id="formSwitch">
     <Switch
       checked={boolean('checked', false)}
       className={text('className', '')}
       disabled={boolean('disabled', false)}
       errorMsg={text('errorMsg', '')}
-      formId={text('formId', 'formSwitch')}
       handleClick={action('`Checkbox with Knobs` onClick event triggered.')}
       handleChange={action('`Switch with Knobs` onClick event triggered.')}
       label={text('label', 'Accept Terms and Conditions')}
@@ -32,50 +29,40 @@ import  { Switch } from '.';
       value={text('value', 'accepted')}
     >
   </Switch>
-    </form>
 </Story>
 
 ### Switch Unchecked
 <Preview>
   <Story name="Switch Unchecked">
-    <form id="formSwitchUnchecked">
       <Switch
-        formId="formSwitchUnchecked"
         label="Check this slider"
         name="checkSlider"
         value="sliderChecked"
       />
-    </form>
   </Story>
 </Preview>
 
 ### Switch Checked
 <Preview>
   <Story name="Switch Checked">
-    <form id="formTypes">
       <Switch
         checked
-        formId="formTypes"
         label="Uncheck this slider"
         name="checkSlider"
         value="sliderChecked"
       />
-    </form>
   </Story>
 </Preview>
 
 ### Switch Disabled Unchecked
 <Preview>
-  <Story name="Switches Disabled Unchecked">
-    <form id="formDisabledUnchecked">
+  <Story name="Switch Disabled Unchecked">
       <Switch
-        formId="formDisabledUnchecked"
         label="This slider is disabled and unchecked"
         name="checkSlider"
         value="sliderChecked"
         disabled
       />
-    </form>
   </Story>
 </Preview>
 
@@ -83,31 +70,25 @@ import  { Switch } from '.';
 ### Switch Disabled Checked
 <Preview>
   <Story name="Switches Disabled Checked">
-    <form id="formDisabledChecked">
       <Switch
-        formId="formDisabledChecked"
         label="This slider is disabled and checked"
         name="checkSlider"
         value="sliderChecked"
         checked
         disabled
       />
-    </form>
   </Story>
 </Preview>
 
 ### Switch Error
 <Preview>
   <Story name="Switch Error">
-    <form id="formError">
       <Switch
-        formId="formError"
         label="This slider is in an error state"
         name="checkSlider"
         value="sliderChecked"
         errorMsg="This is the wrong choice"
       />
-    </form>
   </Story>
 </Preview>
 
