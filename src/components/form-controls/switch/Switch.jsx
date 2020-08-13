@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import './switch.less';
-
 import { ErrorBox } from '../core';
+
+import './switch.less';
 
 const Switch = ({
   checked,
@@ -50,8 +50,8 @@ const Switch = ({
         type="checkbox"
         value={value}
       />
-      <label className="ce-switch__slider" htmlFor={id}>
-        {label}
+      <label htmlFor={id}>
+        <span>{label}</span>
       </label>
       {errorMsg && <ErrorBox errorMsg={errorMsg} />}
     </div>
@@ -60,7 +60,7 @@ const Switch = ({
 
 Switch.propTypes = {
   /**
-   * Select the `<Switch /> to start checked`.
+   * Set the `<Switch /> to on be default`.
    */
   checked: PropTypes.bool,
   /**
