@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Switch /> render() render the Switch component 1`] = `
+<div
+  className="ce-switch"
+>
+  <input
+    checked={false}
+    disabled={false}
+    id="Switch Test Name_switch value"
+    name="Switch Test Name"
+    onChange={[Function]}
+    type="checkbox"
+    value="switch value"
+  />
+  <label
+    htmlFor="Switch Test Name_switch value"
+  >
+    <span>
+      Switch Test Label
+    </span>
+  </label>
+</div>
+`;

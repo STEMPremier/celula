@@ -9,6 +9,7 @@ import {
   RadioGroup,
   Select,
   SubmitButton,
+  Switch,
 } from './components/form-controls';
 import { ProductIcon, SecondaryIcon, SystemIcon } from './components/icon';
 import { ToggleButton, ToggleButtonGroup } from './components/toggle-button';
@@ -26,6 +27,7 @@ export {
   RadioGroup,
   Select,
   SubmitButton,
+  Switch,
   ProductIcon,
   SecondaryIcon,
   SystemIcon,

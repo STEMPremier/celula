@@ -1,0 +1,69 @@
+import {
+  Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { boolean, text } from '@storybook/addon-knobs';
+
+import Switch from '.';
+
+<Meta component={Switch} title="Components/Molecules/Form Controls/Switch" />
+
+# Switch
+<Description of={Switch} />
+<Props of={Switch} />
+
+<Story name="Switch with Knobs" parameters={{ docs: { disable: true } }}>
+    <Switch
+      checked={boolean('checked', false)}
+      className={text('className', '')}
+      disabled={boolean('disabled', false)}
+      errorMsg={text('errorMsg', '')}
+      handleChange={action('`Switch with Knobs` onChange event triggered.')}
+      label={text('label', 'Accept Terms and Conditions')}
+      name={text('name', 'termsAndConditions')}
+      value={text('value', 'accepted')}
+    >
+  </Switch>
+</Story>
+
+### Switch States
+<Preview>
+  <Story name="Switch States">
+    <div>
+      <Switch
+        label="Check this slider"
+        name="checkSlider"
+        value="sliderChecked"
+      />
+      <Switch
+        checked
+        label="Uncheck this slider"
+        name="checkSlider"
+        value="sliderChecked"
+      />
+      <Switch
+        label="This slider is disabled and unchecked"
+        name="checkSlider"
+        value="sliderChecked"
+        disabled
+      />
+      <Switch
+        label="This slider is disabled and checked"
+        name="checkSlider"
+        value="sliderChecked"
+        checked
+        disabled
+      />
+      <Switch
+        label="This slider is in an error state"
+        name="checkSlider"
+        value="sliderChecked"
+        errorMsg="This is the wrong choice"
+      />
+    </div>
+  </Story>
+</Preview>

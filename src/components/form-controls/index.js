@@ -4,6 +4,7 @@ import Input from './input';
 import { Radio, RadioGroup } from './radio';
 import Select from './select';
 import SubmitButton from './submit-button';
+import Switch from './switch';
 
 export {
   Checkbox,
@@ -15,4 +16,5 @@ export {
   RadioGroup,
   Select,
   SubmitButton,
+  Switch,
 };

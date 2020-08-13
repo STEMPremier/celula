@@ -34,7 +34,6 @@
 @red:    @torch-red;
 @white:  @100-gray;
 
-
 // Secondary
 @extra-light-gray: @catskill-white;
 @light-gray:       @hit-gray;
@@ -45,21 +44,21 @@
 // Text Colors
 @primary-text:   rgba(0, 0, 0, 0.87);
 @legend-text:    @primary-text;
-@secondary-text: rgba(0, 0, 0, 0.60);
+@secondary-text: rgba(0, 0, 0, 0.6);
 @label-text:     @secondary-text;
 @help-text:      rgba(0, 0, 0, 0.38);
 @disabled-text:  @help-text;
 @dividers:       rgba(0, 0, 0, 0.12);
 
 @inverted-primary-text:   rgba(255, 255, 255, 1);
-@inverted-secondary-text: rgba(255, 255, 255, 0.70);
-@inverted-help-text:      rgba(255, 255, 255, 0.50);
+@inverted-secondary-text: rgba(255, 255, 255, 0.7);
+@inverted-help-text:      rgba(255, 255, 255, 0.5);
 @inverted-dividers:       rgba(255, 255, 255, 0.12);
 
 @default-border: #dcdcdc;
 
 // Form Control States
-// Unchecked Radio, Unchecked Checkbox, Select
+// Unchecked Radio, Unchecked Checkbox, Select, Switch
 @default-gray:         #b2b2b2;
 @default-background:   #fbfbfb;
 @unchecked-background: @default-background;
@@ -68,20 +67,27 @@
 @active-gray:          @70-gray;
 @focus-gray:           @80-gray;
 @outline-gray:         @default-gray;
+@default-channel:      #7f7f7f;
 
-// Checked Radio, Checked Checkbox, Select
-@checked-blue: @navy;
-@hover-blue:   #e6f7ff;
-@active-blue:  #b2e7ff;
-@focus-blue:   #ccefff;
+// Checked Radio, Checked Checkbox, Select, Switch
+@checked-blue:   @navy;
+@hover-blue:     #e6f7ff;
+@active-blue:    #b2e7ff;
+@focus-blue:     #ccefff;
+@channel-blue:   #007ab2;
+@switch-checked: #002333;
 
 /* Checked/Unchecked Disabled Radio,
  * Checked/Unchecked Disabled Checkbox,
- * Disabled Select
+ * Disabled Select,
+ * Checked/Unchecked Disabled Switch
  */
-@default-disabled-gray:   #aeaeae;
-@unchecked-disabled-gray: #dbdbdb;
-@checked-disabled-gray:   @default-disabled-gray;
+@default-disabled-gray:    #aeaeae;
+@unchecked-disabled-gray:  #dbdbdb;
+@checked-disabled-gray:    @default-disabled-gray;
+@disabled-channel:         @90-gray;
+@checked-disabled-channel: @focus-blue;
+@checked-disabled-dot:     #99dfff;
 
 // Button, Link
 @primary-hover:    #008dd2;
