@@ -6,9 +6,7 @@ exports[`<Switch /> render() render the Switch component 1`] = `
 >
   <input
     checked={false}
-    className="ce-switch__checkbox"
     disabled={false}
-    form=""
     id="Switch Test Name_switch value"
     name="Switch Test Name"
     onChange={[Function]}
@@ -16,10 +14,11 @@ exports[`<Switch /> render() render the Switch component 1`] = `
     value="switch value"
   />
   <label
-    className="ce-switch__slider"
     htmlFor="Switch Test Name_switch value"
   >
-    Switch Test Label
+    <span>
+      Switch Test Label
+    </span>
   </label>
 </div>
 `;

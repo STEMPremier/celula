@@ -6,24 +6,23 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { boolean, select, text, array } from '@storybook/addon-knobs';
+import { boolean, text } from '@storybook/addon-knobs';
 
-import  { Switch } from '.';
+import Switch from '.';
 
 <Meta component={Switch} title="Components/Molecules/Form Controls/Switch" />
 
 # Switch
-
 <Description of={Switch} />
 <Props of={Switch} />
+
 <Story name="Switch with Knobs" parameters={{ docs: { disable: true } }}>
     <Switch
       checked={boolean('checked', false)}
       className={text('className', '')}
       disabled={boolean('disabled', false)}
       errorMsg={text('errorMsg', '')}
-      handleClick={action('`Checkbox with Knobs` onClick event triggered.')}
-      handleChange={action('`Switch with Knobs` onClick event triggered.')}
+      handleChange={action('`Switch with Knobs` onChange event triggered.')}
       label={text('label', 'Accept Terms and Conditions')}
       name={text('name', 'termsAndConditions')}
       value={text('value', 'accepted')}
@@ -31,45 +30,27 @@ import  { Switch } from '.';
   </Switch>
 </Story>
 
-### Switch Unchecked
+### Switch States
 <Preview>
-  <Story name="Switch Unchecked">
+  <Story name="Switch States">
+    <div>
       <Switch
         label="Check this slider"
         name="checkSlider"
         value="sliderChecked"
       />
-  </Story>
-</Preview>
-
-### Switch Checked
-<Preview>
-  <Story name="Switch Checked">
       <Switch
         checked
         label="Uncheck this slider"
         name="checkSlider"
         value="sliderChecked"
       />
-  </Story>
-</Preview>
-
-### Switch Disabled Unchecked
-<Preview>
-  <Story name="Switch Disabled Unchecked">
       <Switch
         label="This slider is disabled and unchecked"
         name="checkSlider"
         value="sliderChecked"
         disabled
       />
-  </Story>
-</Preview>
-
-
-### Switch Disabled Checked
-<Preview>
-  <Story name="Switches Disabled Checked">
       <Switch
         label="This slider is disabled and checked"
         name="checkSlider"
@@ -77,21 +58,12 @@ import  { Switch } from '.';
         checked
         disabled
       />
-  </Story>
-</Preview>
-
-### Switch Error
-<Preview>
-  <Story name="Switch Error">
       <Switch
         label="This slider is in an error state"
         name="checkSlider"
         value="sliderChecked"
         errorMsg="This is the wrong choice"
       />
+    </div>
   </Story>
 </Preview>
-
-
-
-
