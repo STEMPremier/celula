@@ -1,4 +1,5 @@
 import Button from './components/button';
+import Container from './components/container';
 import {
   Checkbox,
   CheckboxGroup,
@@ -18,6 +19,7 @@ import './styles/celula.less';
 
 export {
   Button,
+  Container,
   Checkbox,
   CheckboxGroup,
   ErrorBox,
