@@ -49,14 +49,12 @@ import FileUploader from '.';
     {COLORS.map(color => (
       <form id="FileUploader Colors">
       <FileUploader 
-        label="This is a label of default color"
-        name="This is a name"
-      />
-      <FileUploader 
         label="This are the other colors"
         name="This is a name"
         color={color}
-      />
+      >
+        {`${color} File Uploader`}
+      </FileUploader>
       </form>
     ))}
     </Story>
@@ -66,16 +64,14 @@ import FileUploader from '.';
 <Preview>
   <Story name="FileUploader Sizes">
     {SIZES.map(size => (
-      <form id="FileUploader Colors">
-      <FileUploader 
-        label="This is a label of default size"
-        name="This is a name"
-      />
+      <form id="FileUploader Sizes">
       <FileUploader 
         label="This are the other sizes"
         name="This is a name"
         size={size}
-      />
+      >
+      {`${size} button`}
+      </FileUploader>
       </form>
     ))}
     </Story>

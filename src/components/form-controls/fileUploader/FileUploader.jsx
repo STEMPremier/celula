@@ -38,11 +38,14 @@ const FileUploader = ({
   const classes = cx(
     'ce-fileuploader',
     {
-      [`ce-fileuploader__label--${color}`]: COLORS.includes(
+      [`ce-fileuploader--${color}`]: COLORS.includes(
         color.toString().toLowerCase(),
       ),
       [`ce-fileuploader--${size}`]: SIZES.includes(
         size.toString().toLowerCase(),
+      ),
+      [`ce-fileuploader--${styleType}`]: TYPES.includes(
+        styleType.toString().toLowerCase(),
       ),
       'ce-fileuploader--disabled': disabled,
       'ce-fileuploader--error': errMsg,
@@ -50,8 +53,8 @@ const FileUploader = ({
     className,
   );
 
-  console.log('colors', COLORS);
-  console.log('color', color);
+  console.log('TYPES', TYPES);
+  console.log('styleType', styleType);
 
   const id = `${name}`;
 
