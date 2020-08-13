@@ -1,5 +1,158 @@
-input {
-  // background-color: green;
-  // height: 300px;
-  // width: 300px;
+@import '../../../styles/celula';
+
+.ce-fileuploader {
+  // margin: 10px;
+  display: inline-flex;
+  font-family: inherit;
+  justify-content: center;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 15px;
+  margin: 15px;
+  // .ce-fileuploader__help-text {
+  //   background-color: green;
+  // }
+
+  input {
+    // hide the default input
+    left: -999.9rem;
+    position: absolute;
+
+    + .ce-fileuploader__label {
+      // flex-grow: 1;
+      background-color: yellow;
+      width: 100%;
+      .ce-fileUploader__label-text {
+        // background-color: red;
+        content: '';
+        box-sizing: border-box;
+        height: 30px;
+        font-size: 1.2rem;
+        // left: 10px;
+        padding: 7px;
+        // top: 31px;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+      }
+      // customized fileuploader for input type="file"
+      &::before {
+        // background-color: @hover-blue;
+        box-sizing: border-box;
+        content: '';
+        height: 40px;
+        left: 7.5px;
+        margin: -1.8px;
+        position: absolute;
+        // top: 28px;
+        width: 100%;
+        border-radius: 35px;
+        border-width: 0;
+        //default size large
+      }
+    }
+  }
+
+  //////////////////////////
+  //        COLORS        //
+  //////////////////////////
+  // PRIMARY
+  &.ce-fileuploader__label--primary {
+    .ce-fileuploader__label {
+      color: @white;
+      &::before {
+        background: @gradient-cool;
+      }
+    }
+    // States
+    &:hover {
+      .ce-fileuploader__label {
+        &::before {
+          background: #007ab2;
+        }
+      }
+    }
+
+    &:active {
+      .ce-fileuploader__label {
+        &::before {
+          background: #00577f;
+        }
+      }
+    }
+
+    // &.ce-fileuploader--disabled {
+    //   background: @focus-gray;
+    // }
+  }
+  // SECONDARY
+  &.ce-fileuploader__label--secondary {
+    .ce-fileuploader__label {
+      color: @white;
+      &::before {
+        background: @gradient-hot;
+      }
+    }
+    // States
+    &:hover {
+      .ce-fileuploader__label {
+        &::before {
+          background: #b3003a;
+        }
+      }
+    }
+    &:active {
+      .ce-fileuploader__label {
+        &::before {
+          background: #80002a;
+        }
+      }
+    }
+    &.ce-button--disabled {
+      background: @focus-gray;
+    }
+  }
+  // BLACK
+  &.ce-fileuploader__label--black {
+    .ce-fileuploader__label {
+      color: @white;
+      &::before {
+        background: @black;
+      }
+    }
+    // States
+    &:hover {
+      .ce-fileuploader__label {
+        &::before {
+          background: #404040; // 50%-ish lighter
+        }
+      }
+    }
+    &:active {
+      .ce-fileuploader__label {
+        &::before {
+          background: #262626; // 30%-ish lighter
+        }
+      }
+    }
+  }
+  // INVERTED -- DOUBLE CHECK AFTER THE CHILDREN TEXT IS WORKING!!!!
+  &.ce-fileuploader__label--inverted {
+    .ce-fileuploader__label {
+      color: @black;
+      &::before {
+        background: @white;
+      }
+    }
+    &:hover {
+      .ce-fileuploader__label {
+        color: #404040; // 50%-ish lighter
+      }
+    }
+    &:active {
+      .ce-fileuploader__label {
+        color: #262626; // 30%-ish lighter
+      }
+    }
+  }
 }

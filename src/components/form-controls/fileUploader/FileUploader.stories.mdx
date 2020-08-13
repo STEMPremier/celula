@@ -39,26 +39,9 @@ import FileUploader from '.';
       size={text('size', 'large', 'FileUploader Options')}
       styleType={text('styleType', '', 'FileUploader Options')}
       value={text('value', '', 'FileUploader Options')}
-    >{text('children', 'CHILDREN TEXT - NOT SURE WHAY TO DO WITH THIS IN THE INDIVIDUASL STORIES')}</FileUploader>
+    >{text('children', 'CHILDREN LABEL')}</FileUploader>
   </form>
 </Story>
-
-### Style Type
-<Preview>
-  <Story name="FileUploader Types">
-    <form id="FileUploader Types">
-      <FileUploader 
-        label="This is a label of default type"
-        name="This is a name" 
-      />
-      <FileUploader 
-        label="This is a label of default type"
-        name="This is a name"
-        type="outline"
-      />
-      </form>
-    </Story>
-  </Preview>
 
 ### Colors
 <Preview>
@@ -68,7 +51,6 @@ import FileUploader from '.';
       <FileUploader 
         label="This is a label of default color"
         name="This is a name"
-
       />
       <FileUploader 
         label="This are the other colors"

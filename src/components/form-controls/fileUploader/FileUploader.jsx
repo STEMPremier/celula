@@ -38,10 +38,7 @@ const FileUploader = ({
   const classes = cx(
     'ce-fileuploader',
     {
-      [`ce-fileuploader--${styleType}`]: TYPES.includes(
-        styleType.toString().toLowerCase(),
-      ),
-      [`ce-fileuploader--${color}`]: COLORS.includes(
+      [`ce-fileuploader__label--${color}`]: COLORS.includes(
         color.toString().toLowerCase(),
       ),
       [`ce-fileuploader--${size}`]: SIZES.includes(
@@ -52,6 +49,9 @@ const FileUploader = ({
     },
     className,
   );
+
+  console.log('colors', COLORS);
+  console.log('color', color);
 
   const id = `${name}`;
 
@@ -67,13 +67,11 @@ const FileUploader = ({
 
   return (
     <div className={classes}>
-      <label htmlFor={id}>{children}</label>
-      {helpText && <div className="ce-fileuploader__help-text">{helpText}</div>}
+      {/* {helpText && <div className="ce-fileuploader__help-text">{helpText}</div>} */}
       <input
         accept={accept}
         capture={capture}
         className={styleType}
-        color={color}
         disabled={disabled}
         form={formId}
         id={id}
@@ -85,6 +83,11 @@ const FileUploader = ({
         type="file"
         value={fieldValue}
       />
+
+      <label htmlFor={id} className="ce-fileuploader__label">
+        <span className="ce-fileUploader__label-text">{children}</span>
+      </label>
+
       {errorMsg && <ErrorBox errorMsg={errorMsg} />}
     </div>
   );
