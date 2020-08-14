@@ -17,17 +17,16 @@ import Switch from '.';
 <Props of={Switch} />
 
 <Story name="Switch with Knobs" parameters={{ docs: { disable: true } }}>
-    <Switch
-      checked={boolean('checked', false)}
-      className={text('className', '')}
-      disabled={boolean('disabled', false)}
-      errorMsg={text('errorMsg', '')}
-      handleChange={action('`Switch with Knobs` onChange event triggered.')}
-      label={text('label', 'Accept Terms and Conditions')}
-      name={text('name', 'termsAndConditions')}
-      value={text('value', 'accepted')}
-    >
-  </Switch>
+  <Switch
+    checked={boolean('checked', false)}
+    className={text('className', '')}
+    disabled={boolean('disabled', false)}
+    errorMsg={text('errorMsg', '')}
+    handleChange={action('`Switch with Knobs` onChange event triggered.')}
+    label={text('label', 'Accept Terms and Conditions')}
+    name={text('name', 'termsAndConditions')}
+    value={text('value', 'accepted')}
+  />
 </Story>
 
 ### Switch States
