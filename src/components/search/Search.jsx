@@ -5,6 +5,8 @@ import cx from 'classnames';
 import SystemIcon from '../icon/SystemIcon';
 import { ErrorBox } from '../form-controls/core';
 
+import './search.less';
+
 const Search = ({
   className,
   disabled,
@@ -19,7 +21,14 @@ const Search = ({
   const [fieldValue, setFieldValue] = useState('');
   const [errMsg, setErrMsg] = useState(errorMsg);
   const id = `${name}`;
-  const classes = cx('ce-search', className);
+  const classes = cx(
+    'ce-search',
+    {
+      'ce-search--disabled': disabled,
+      'ce-search--error': errMsg,
+    },
+    className,
+  );
 
   useEffect(() => {
     setErrMsg(errorMsg);

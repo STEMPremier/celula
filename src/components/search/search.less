@@ -1,0 +1,171 @@
+@import '../../styles/celula';
+
+.ce-search {
+  label {
+    color: @label-text;
+    display: block;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin: 0.3rem;
+  }
+
+  .ce-search__help-text {
+    color: @help-text;
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin: 0.3rem;
+  }
+
+  .ce-search__container {
+    background-color: @default-background;
+    border: 0.1rem solid @default-gray;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    display: flex;
+    height: 6rem;
+    justify-content: space-between;
+    margin: 0.3rem;
+    width: calc(100% - 0.6rem);
+
+    input {
+      background-color: transparent;
+      border: none;
+      border-radius: 0.5rem;
+      box-sizing: border-box;
+      height: 100%;
+      flex-grow: 1;
+      padding: 0 0 0 1rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .ce-search__search-icon {
+      align-self: center;
+      padding-right: 2rem;
+      stroke: @primary-text;
+    }
+
+    .ce-search__button {
+      background: @gradient-cool;
+      border: none;
+      border-radius: 0 0.5rem 0.5rem 0;
+      height: 6rem;
+      margin-top: -0.1rem;
+      padding: 0 2.2rem;
+
+      span, svg {
+        stroke: @inverted-primary-text;
+        display: inline-block;
+        height: 1.6rem;
+        width: 1.6rem;
+      }
+    }
+
+    &:focus {
+      box-shadow: -0.3rem 0 @focus-blue,
+        0.3rem 0 @focus-blue,
+        0 -0.3rem @focus-blue,
+        0 0.3rem @focus-blue;
+      outline: none;
+    }
+
+    &:hover {
+      box-shadow: -0.3rem 0 @hover-blue,
+        0.3rem 0 @hover-blue,
+        0 -0.3rem @hover-blue,
+        0 0.3rem @hover-blue;
+    }
+
+    &:active {
+      box-shadow: -0.3rem 0 @active-blue,
+        0.3rem 0 @active-blue,
+        0 -0.3rem @active-blue,
+        0 0.3rem @active-blue;
+    }
+  }
+
+  &.ce-search--disabled {
+    label {
+      color: @disabled-text;
+    }
+
+    .ce-search__help-text {
+      color: @disabled-text;
+    }
+
+    .ce-search__container {
+      input {
+        color: @disabled-text;
+      }
+
+      .ce-searct__search-icon svg {
+        stroke: @disabled-text;
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      &:hover {
+        box-shadow: none;
+      }
+
+      &:active {
+        box-shadow: none;
+      }
+
+      .ce-search__button {
+        pointer-events: none;
+        background: @default-disabled-gray;
+      }
+    }
+  }
+
+  &.ce-search--error {
+    .ce-search__container {
+      border-color: @error-element-border;
+
+      input {
+        color: @error-text;
+      }
+
+      .ce-search__search-icon svg {
+        stroke: @error-text;
+      }
+
+      .ce-search__button {
+        background: @error-red;
+      }
+
+      &:focus {
+        box-shadow: -0.3rem 0 @focus-red,
+          0.3rem 0 @focus-red,
+          0 -0.3rem @focus-red,
+          0 0.3rem @focus-red;
+      }
+
+      &:hover {
+        box-shadow: -0.3rem 0 @hover-red,
+          0.3rem 0 @hover-red,
+          0 -0.3rem @hover-red,
+          0 0.3rem @hover-red;
+      }
+
+      &:active {
+        box-shadow: -0.3rem 0 @active-red,
+          0.3rem 0 @active-red,
+          0 -0.3rem @active-red,
+          0 0.3rem @active-red;
+      }
+    }
+
+    .ce-errorbox {
+      margin-left: 0.3rem;
+      margin-right: 0.3rem;
+      max-width: calc(100% - 0.6rem);
+    }
+  }
+}
