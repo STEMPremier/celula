@@ -11,11 +11,11 @@ import {
   RadioGroup,
   Select,
   SubmitButton,
-  Switch,
   Textarea,
 } from './components/form-controls';
 import { ProductIcon, SecondaryIcon, SystemIcon } from './components/icon';
 import Link from './components/link';
+import Switch from './components/switch';
 import { ToggleButton, ToggleButtonGroup } from './components/toggle-button';
 
 import './styles/celula.less';

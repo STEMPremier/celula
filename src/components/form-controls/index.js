@@ -4,7 +4,6 @@ import Input from './input';
 import { Radio, RadioGroup } from './radio';
 import Select from './select';
 import SubmitButton from './submit-button';
-import Switch from './switch';
 import Textarea from './textarea';
 
 export {
@@ -17,6 +16,5 @@ export {
   RadioGroup,
   Select,
   SubmitButton,
-  Switch,
   Textarea,
 };
