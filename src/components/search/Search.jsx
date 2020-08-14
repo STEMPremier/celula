@@ -5,8 +5,6 @@ import cx from 'classnames';
 import SystemIcon from '../icon/SystemIcon';
 import { ErrorBox } from '../form-controls/core';
 
-// prop to switch between search on type and search on click, default search on click
-// make errorMsg, helpText, label, placeholder pass through props
 const Search = ({
   className,
   disabled,
@@ -27,8 +25,6 @@ const Search = ({
     setErrMsg(errorMsg);
   }, [errorMsg]);
 
-  // this function needs to update the fieldValue ALWAYS,
-  // and search on if instantSearch is true
   const handleChange = event => {
     const { value } = event.target;
 
@@ -39,7 +35,6 @@ const Search = ({
     }
   };
 
-  // this function is triggered on button click with the current fieldValue
   const search = () => {
     handleSearch(fieldValue);
   };
