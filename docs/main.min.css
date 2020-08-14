@@ -5224,114 +5224,68 @@ ol {
  * Disabled Select,
  * Checked/Unchecked Disabled Switch
  */
-.ce-switch {
-  height: 3.8rem;
+.ce-textarea label {
+  color: rgba(0, 0, 0, 0.6);
+  display: block;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  margin: 0.3rem;
 }
-.ce-switch input {
-  opacity: 0;
-  position: absolute;
+.ce-textarea .ce-textarea__help-text {
+  color: rgba(0, 0, 0, 0.38);
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  margin: 0.3rem;
 }
-.ce-switch input + label {
-  cursor: pointer;
-  display: inline-block;
-  height: 2.9rem;
-  margin-left: 5.8rem;
-  padding-top: 0.9rem;
-  position: relative;
-}
-.ce-switch input + label span {
-  display: inline-block;
-  margin-left: 0.9rem;
-  margin-top: -0.2rem;
-}
-.ce-switch input + label::before {
-  background-color: #7f7f7f;
-  border-radius: 0.75rem;
-  content: '';
-  height: 1.2rem;
-  left: -4.8rem;
-  position: absolute;
-  top: 1.2rem;
-  transition: 250ms ease-in-out;
-  width: 4.1rem;
-}
-.ce-switch input + label::after {
+.ce-textarea textarea {
   background-color: #fbfbfb;
   border: 0.1rem solid #b2b2b2;
-  border-radius: 50%;
+  border-radius: 0.5rem;
   box-sizing: border-box;
-  content: '';
-  height: 1.8rem;
-  left: -4.8rem;
-  position: absolute;
-  transition: 250ms ease-in-out;
-  width: 1.8rem;
+  width: 100%;
 }
-.ce-switch input + label:hover::after {
-  box-shadow: -0.1rem 0 0 0.9rem #e5e5e5, 0.1rem 0 0 0.9rem #e5e5e5, 0 -0.1rem 0 0.9rem #e5e5e5, 0 0.1rem 0 0.9rem #e5e5e5;
+.ce-textarea textarea:focus {
+  box-shadow: -0.3rem 0 #ccefff, 0.3rem 0 #ccefff, 0 -0.3rem #ccefff, 0 0.3rem #ccefff;
+  outline: none;
 }
-.ce-switch input + label:active::after {
-  box-shadow: -0.1rem 0 0 0.9rem #b3b3b3, 0.1rem 0 0 0.9rem #b3b3b3, 0 -0.1rem 0 0.9rem #b3b3b3, 0 0.1rem 0 0.9rem #b3b3b3;
+.ce-textarea textarea:hover {
+  box-shadow: -0.3rem 0 #e6f7ff, 0.3rem 0 #e6f7ff, 0 -0.3rem #e6f7ff, 0 0.3rem #e6f7ff;
 }
-.ce-switch input + label:focus::after {
-  box-shadow: -0.1rem 0 0 0.9rem #ccc, 0.1rem 0 0 0.9rem #ccc, 0 -0.1rem 0 0.9rem #ccc, 0 0.1rem 0 0.9rem #ccc;
+.ce-textarea textarea:active {
+  box-shadow: -0.3rem 0 #b2e7ff, 0.3rem 0 #b2e7ff, 0 -0.3rem #b2e7ff, 0 0.3rem #b2e7ff;
 }
-.ce-switch input:checked + label::before {
-  background-color: #007ab2;
+.ce-textarea.ce-textarea--disabled label {
+  color: rgba(0, 0, 0, 0.38);
 }
-.ce-switch input:checked + label::after {
-  background-color: #002333;
-  border-color: #002333;
-  left: -2.5rem;
+.ce-textarea.ce-textarea--disabled .ce-textarea__help-text {
+  color: rgba(0, 0, 0, 0.38);
 }
-.ce-switch input:checked + label:hover::after {
-  box-shadow: -0.1rem 0 0 0.9rem #e6f7ff, 0.1rem 0 0 0.9rem #e6f7ff, 0 -0.1rem 0 0.9rem #e6f7ff, 0 0.1rem 0 0.9rem #e6f7ff;
+.ce-textarea.ce-textarea--disabled textarea {
+  border-color: #b2b2b2;
+  color: rgba(0, 0, 0, 0.38);
 }
-.ce-switch input:checked + label:active::after {
-  box-shadow: -0.1rem 0 0 0.9rem #b2e7ff, 0.1rem 0 0 0.9rem #b2e7ff, 0 -0.1rem 0 0.9rem #b2e7ff, 0 0.1rem 0 0.9rem #b2e7ff;
+.ce-textarea.ce-textarea--disabled textarea:focus {
+  box-shadow: none;
 }
-.ce-switch input:checked + label:focus::after {
-  box-shadow: -0.1rem 0 0 0.9rem #ccefff, 0.1rem 0 0 0.9rem #ccefff, 0 -0.1rem 0 0.9rem #ccefff, 0 0.1rem 0 0.9rem #ccefff;
+.ce-textarea.ce-textarea--disabled textarea:hover {
+  box-shadow: none;
 }
-.ce-switch.ce-switch--disabled {
-  pointer-events: none;
+.ce-textarea.ce-textarea--disabled textarea:active {
+  box-shadow: none;
 }
-.ce-switch.ce-switch--disabled input + label::before {
-  background-color: #e5e5e5;
-}
-.ce-switch.ce-switch--disabled input + label::after {
-  background-color: #fbfbfb;
-  border-color: #dbdbdb;
-}
-.ce-switch.ce-switch--disabled input:checked + label::before {
-  background-color: #ccefff;
-}
-.ce-switch.ce-switch--disabled input:checked + label::after {
-  background-color: #99dfff;
-  border-color: #99dfff;
-}
-.ce-switch.ce-switch--error input + label span {
+.ce-textarea.ce-textarea--error textarea {
+  border-color: #cc0043;
   color: #e5004b;
 }
-.ce-switch.ce-switch--error input + label::before {
-  background-color: #cc0043;
+.ce-textarea.ce-textarea--error textarea:focus {
+  box-shadow: -0.3rem 0 #ffccdc, 0.3rem 0 #ffccdc, 0 -0.3rem #ffccdc, 0 0.3rem #ffccdc;
 }
-.ce-switch.ce-switch--error input + label::after {
-  border: 0.1rem solid #ff3376;
-  background-color: #fff;
+.ce-textarea.ce-textarea--error textarea:hover {
+  box-shadow: -0.3rem 0 #ffe5ed, 0.3rem 0 #ffe5ed, 0 -0.3rem #ffe5ed, 0 0.3rem #ffe5ed;
 }
-.ce-switch.ce-switch--error input + label:hover::after {
-  box-shadow: -0.1rem 0 0 0.9rem #ffe5ed, 0.1rem 0 0 0.9rem #ffe5ed, 0 -0.1rem 0 0.9rem #ffe5ed, 0 0.1rem 0 0.9rem #ffe5ed;
-}
-.ce-switch.ce-switch--error input + label:active::after {
-  box-shadow: -0.1rem 0 0 0.9rem #ffb3cc, 0.1rem 0 0 0.9rem #ffb3cc, 0 -0.1rem 0 0.9rem #ffb3cc, 0 0.1rem 0 0.9rem #ffb3cc;
-}
-.ce-switch.ce-switch--error input + label:focus::after {
-  box-shadow: -0.1rem 0 0 0.9rem #ffccdc, 0.1rem 0 0 0.9rem #ffccdc, 0 -0.1rem 0 0.9rem #ffccdc, 0 0.1rem 0 0.9rem #ffccdc;
-}
-.ce-switch.ce-switch--error input:checked + label::after {
-  background-color: #cc0043;
-  border-color: #cc0043;
+.ce-textarea.ce-textarea--error textarea:active {
+  box-shadow: -0.3rem 0 #ffb3cc, 0.3rem 0 #ffb3cc, 0 -0.3rem #ffb3cc, 0 0.3rem #ffb3cc;
 }
 
 html,
@@ -5648,68 +5602,114 @@ ol {
  * Disabled Select,
  * Checked/Unchecked Disabled Switch
  */
-.ce-textarea label {
-  color: rgba(0, 0, 0, 0.6);
-  display: block;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
-  margin: 0.3rem;
+.ce-switch {
+  height: 3.8rem;
 }
-.ce-textarea .ce-textarea__help-text {
-  color: rgba(0, 0, 0, 0.38);
-  display: block;
-  font-size: 1.4rem;
-  line-height: 1.6rem;
-  margin: 0.3rem;
+.ce-switch input {
+  opacity: 0;
+  position: absolute;
 }
-.ce-textarea textarea {
+.ce-switch input + label {
+  cursor: pointer;
+  display: inline-block;
+  height: 2.9rem;
+  margin-left: 5.8rem;
+  padding-top: 0.9rem;
+  position: relative;
+}
+.ce-switch input + label span {
+  display: inline-block;
+  margin-left: 0.9rem;
+  margin-top: -0.2rem;
+}
+.ce-switch input + label::before {
+  background-color: #7f7f7f;
+  border-radius: 0.75rem;
+  content: '';
+  height: 1.2rem;
+  left: -4.8rem;
+  position: absolute;
+  top: 1.2rem;
+  transition: 250ms ease-in-out;
+  width: 4.1rem;
+}
+.ce-switch input + label::after {
   background-color: #fbfbfb;
   border: 0.1rem solid #b2b2b2;
-  border-radius: 0.5rem;
+  border-radius: 50%;
   box-sizing: border-box;
-  width: 100%;
+  content: '';
+  height: 1.8rem;
+  left: -4.8rem;
+  position: absolute;
+  transition: 250ms ease-in-out;
+  width: 1.8rem;
 }
-.ce-textarea textarea:focus {
-  box-shadow: -0.3rem 0 #ccefff, 0.3rem 0 #ccefff, 0 -0.3rem #ccefff, 0 0.3rem #ccefff;
-  outline: none;
+.ce-switch input + label:hover::after {
+  box-shadow: -0.1rem 0 0 0.9rem #e5e5e5, 0.1rem 0 0 0.9rem #e5e5e5, 0 -0.1rem 0 0.9rem #e5e5e5, 0 0.1rem 0 0.9rem #e5e5e5;
 }
-.ce-textarea textarea:hover {
-  box-shadow: -0.3rem 0 #e6f7ff, 0.3rem 0 #e6f7ff, 0 -0.3rem #e6f7ff, 0 0.3rem #e6f7ff;
+.ce-switch input + label:active::after {
+  box-shadow: -0.1rem 0 0 0.9rem #b3b3b3, 0.1rem 0 0 0.9rem #b3b3b3, 0 -0.1rem 0 0.9rem #b3b3b3, 0 0.1rem 0 0.9rem #b3b3b3;
 }
-.ce-textarea textarea:active {
-  box-shadow: -0.3rem 0 #b2e7ff, 0.3rem 0 #b2e7ff, 0 -0.3rem #b2e7ff, 0 0.3rem #b2e7ff;
+.ce-switch input + label:focus::after {
+  box-shadow: -0.1rem 0 0 0.9rem #ccc, 0.1rem 0 0 0.9rem #ccc, 0 -0.1rem 0 0.9rem #ccc, 0 0.1rem 0 0.9rem #ccc;
 }
-.ce-textarea.ce-textarea--disabled label {
-  color: rgba(0, 0, 0, 0.38);
+.ce-switch input:checked + label::before {
+  background-color: #007ab2;
 }
-.ce-textarea.ce-textarea--disabled .ce-textarea__help-text {
-  color: rgba(0, 0, 0, 0.38);
+.ce-switch input:checked + label::after {
+  background-color: #002333;
+  border-color: #002333;
+  left: -2.5rem;
 }
-.ce-textarea.ce-textarea--disabled textarea {
-  border-color: #b2b2b2;
-  color: rgba(0, 0, 0, 0.38);
+.ce-switch input:checked + label:hover::after {
+  box-shadow: -0.1rem 0 0 0.9rem #e6f7ff, 0.1rem 0 0 0.9rem #e6f7ff, 0 -0.1rem 0 0.9rem #e6f7ff, 0 0.1rem 0 0.9rem #e6f7ff;
 }
-.ce-textarea.ce-textarea--disabled textarea:focus {
-  box-shadow: none;
+.ce-switch input:checked + label:active::after {
+  box-shadow: -0.1rem 0 0 0.9rem #b2e7ff, 0.1rem 0 0 0.9rem #b2e7ff, 0 -0.1rem 0 0.9rem #b2e7ff, 0 0.1rem 0 0.9rem #b2e7ff;
 }
-.ce-textarea.ce-textarea--disabled textarea:hover {
-  box-shadow: none;
+.ce-switch input:checked + label:focus::after {
+  box-shadow: -0.1rem 0 0 0.9rem #ccefff, 0.1rem 0 0 0.9rem #ccefff, 0 -0.1rem 0 0.9rem #ccefff, 0 0.1rem 0 0.9rem #ccefff;
 }
-.ce-textarea.ce-textarea--disabled textarea:active {
-  box-shadow: none;
+.ce-switch.ce-switch--disabled {
+  pointer-events: none;
 }
-.ce-textarea.ce-textarea--error textarea {
-  border-color: #cc0043;
+.ce-switch.ce-switch--disabled input + label::before {
+  background-color: #e5e5e5;
+}
+.ce-switch.ce-switch--disabled input + label::after {
+  background-color: #fbfbfb;
+  border-color: #dbdbdb;
+}
+.ce-switch.ce-switch--disabled input:checked + label::before {
+  background-color: #ccefff;
+}
+.ce-switch.ce-switch--disabled input:checked + label::after {
+  background-color: #99dfff;
+  border-color: #99dfff;
+}
+.ce-switch.ce-switch--error input + label span {
   color: #e5004b;
 }
-.ce-textarea.ce-textarea--error textarea:focus {
-  box-shadow: -0.3rem 0 #ffccdc, 0.3rem 0 #ffccdc, 0 -0.3rem #ffccdc, 0 0.3rem #ffccdc;
+.ce-switch.ce-switch--error input + label::before {
+  background-color: #cc0043;
 }
-.ce-textarea.ce-textarea--error textarea:hover {
-  box-shadow: -0.3rem 0 #ffe5ed, 0.3rem 0 #ffe5ed, 0 -0.3rem #ffe5ed, 0 0.3rem #ffe5ed;
+.ce-switch.ce-switch--error input + label::after {
+  border: 0.1rem solid #ff3376;
+  background-color: #fff;
 }
-.ce-textarea.ce-textarea--error textarea:active {
-  box-shadow: -0.3rem 0 #ffb3cc, 0.3rem 0 #ffb3cc, 0 -0.3rem #ffb3cc, 0 0.3rem #ffb3cc;
+.ce-switch.ce-switch--error input + label:hover::after {
+  box-shadow: -0.1rem 0 0 0.9rem #ffe5ed, 0.1rem 0 0 0.9rem #ffe5ed, 0 -0.1rem 0 0.9rem #ffe5ed, 0 0.1rem 0 0.9rem #ffe5ed;
+}
+.ce-switch.ce-switch--error input + label:active::after {
+  box-shadow: -0.1rem 0 0 0.9rem #ffb3cc, 0.1rem 0 0 0.9rem #ffb3cc, 0 -0.1rem 0 0.9rem #ffb3cc, 0 0.1rem 0 0.9rem #ffb3cc;
+}
+.ce-switch.ce-switch--error input + label:focus::after {
+  box-shadow: -0.1rem 0 0 0.9rem #ffccdc, 0.1rem 0 0 0.9rem #ffccdc, 0 -0.1rem 0 0.9rem #ffccdc, 0 0.1rem 0 0.9rem #ffccdc;
+}
+.ce-switch.ce-switch--error input:checked + label::after {
+  background-color: #cc0043;
+  border-color: #cc0043;
 }
 
 html,
