@@ -1,7 +1,7 @@
 @import '../../../styles/celula';
 
 .ce-fileuploader {
-  // margin: 10px;
+  margin: 30px 10px;
   display: inline-flex;
   font-family: inherit;
   justify-content: center;
@@ -12,6 +12,9 @@
   // .ce-fileuploader__help-text {
   //   background-color: green;
   // }
+  &:focus {
+    outline: none;
+  }
 
   input {
     // hide the default input
@@ -19,21 +22,14 @@
     position: absolute;
 
     + .ce-fileuploader__label {
-      flex-grow: 1;
-      // background-color: yellow;
-      // width: 100%;
+      // flex-grow: 1;
 
       // customized fileuploader for input type="file"
       &::before {
-        // background-color: @hover-blue;
         box-sizing: border-box;
         content: '';
-        // height: 40px;
-        // left: 7.5px;
         margin: -1.8px;
         position: absolute;
-        // top: 28px;
-        // width: 100%;
         border-radius: 35px;
         border-width: 0;
         font-size: 1.6rem;
@@ -66,25 +62,27 @@
   //////////////////////////
   // PRIMARY
   &.ce-fileuploader--primary {
-    .ce-fileuploader__label {
-      color: @white;
-      &::before {
-        background: @gradient-cool;
-      }
-    }
-    // States
-    &:hover {
+    &.ce-fileuploader--default {
       .ce-fileuploader__label {
+        color: @white;
         &::before {
-          background: #007ab2;
+          background: @gradient-cool;
         }
       }
-    }
+      // States
+      &:hover {
+        .ce-fileuploader__label {
+          &::before {
+            background: #007ab2;
+          }
+        }
+      }
 
-    &:active {
-      .ce-fileuploader__label {
-        &::before {
-          background: #00577f;
+      &:active {
+        .ce-fileuploader__label {
+          &::before {
+            background: #00577f;
+          }
         }
       }
     }
@@ -190,4 +188,40 @@
   //////////////////////////
   //     OUTLINE TYPE     //
   //////////////////////////
+  &.ce-fileuploader--outline {
+    .ce-fileuploader__label {
+      color: @black;
+      &::before {
+        background-color: @white;
+        // border: 2px solid @gradient-cool;
+        ///// ASK IAN FOR HELP AS TO WHY THE @GRADIENT-COOL IS NOT WORKING
+        // box-shadow: 0 0 0 2px @purple;
+        border: 2px solid @purple;
+      }
+    }
+    &:hover {
+      .ce-fileuploader__label {
+        &::before {
+          // box-shadow: 0 0 0 2px #007ab2;
+          border: 2px solid #007ab2;
+        }
+      }
+    }
+    &:active {
+      .ce-fileuploader__label {
+        &::before {
+          border: 2px solid #00577f;
+          // box-shadow: 0 0 0 2px #00577f;
+        }
+      }
+    }
+    &:focus {
+      .ce-fileuploader__label {
+        &::before {
+          border: 2px solid #005883;
+          box-shadow: 0 0 0 3px #b2e7ff;
+        }
+      }
+    }
+  }
 }

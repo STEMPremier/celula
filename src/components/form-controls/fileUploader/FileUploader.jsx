@@ -81,16 +81,13 @@ const FileUploader = ({
         multiple={multiple}
         name={name}
         onChange={handleClick}
-        size={size}
         // onBlur={checkValiditiy}
         type="file"
         value={fieldValue}
       />
-
       <label htmlFor={id} className="ce-fileuploader__label">
         <span className="ce-fileUploader__label-text">{children}</span>
       </label>
-
       {errorMsg && <ErrorBox errorMsg={errorMsg} />}
     </div>
   );
@@ -162,7 +159,7 @@ FileUploader.propTypes = {
    */
   size: PropTypes.string,
   /**
-   *
+   *  The default is the filled in button style and the other option available is 'outline'.
    */
   styleType: PropTypes.string,
 };
@@ -180,7 +177,7 @@ FileUploader.defaultProps = {
   initialValue: null,
   multiple: false,
   size: 'large',
-  styleType: 'default',
+  styleType: '',
 };
 
 export default FileUploader;

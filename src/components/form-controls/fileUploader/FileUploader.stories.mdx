@@ -10,7 +10,8 @@ import { boolean, text } from '@storybook/addon-knobs';
 
 import {
   COLORS,
-  SIZES
+  SIZES,
+  FILEUPLOADER_TYPES as TYPES,
 } from '../../../utils/constants';
 
 import FileUploader from '.';
@@ -70,10 +71,26 @@ import FileUploader from '.';
         name="This is a name"
         size={size}
       >
-      {`${size} button`}
+      {`${size} File Uploader`}
       </FileUploader>
       </form>
     ))}
+    </Story>
+  </Preview>
+
+### Types 
+<Preview>
+  <Story name="FileUploader Types">
+     <form id="FileUploader Types">
+    {TYPES.map(type => (
+      <FileUploader 
+        label="These are the other types"
+        name="This is a name"
+        styleType={type}
+      >
+      {`${type} File Uploader`}
+      </FileUploader>
+    ))} </form>
     </Story>
   </Preview>
 
