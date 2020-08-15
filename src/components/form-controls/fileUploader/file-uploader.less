@@ -1,14 +1,14 @@
 @import '../../../styles/celula';
+@import '../../../styles/palettes.less';
 
 .ce-fileuploader {
-  margin: 30px 10px;
+  margin: 10px;
   display: inline-flex;
   font-family: inherit;
   justify-content: center;
   text-transform: uppercase;
-  // width: 100%;
   padding: 15px;
-  margin: 15px;
+
   // .ce-fileuploader__help-text {
   //   background-color: green;
   // }
@@ -25,7 +25,11 @@
       // flex-grow: 1;
 
       // customized fileuploader for input type="file"
+
       &::before {
+        width: 100%;
+        left: 0px;
+        text-align: center;
         box-sizing: border-box;
         content: '';
         margin: -1.8px;
@@ -36,19 +40,22 @@
         font-weight: 900;
         display: inline-flex;
         font-family: inherit;
-        justify-content: center;
+
         //default size large
       }
       // text only
       .ce-fileUploader__label-text {
         flex-grow: 1;
+        width: 100%;
+        left: 0px;
+        text-align: center;
         // color: red;
         // content: '';
         // box-sizing: border-box;
         // height: 30px;
         // font-size: 1.2rem;
         // left: 10px;
-        padding: 7px 15px;
+        padding: 10px 0px;
         // top: 31px;
         position: absolute;
         // width: 100%;
@@ -221,6 +228,99 @@
           border: 2px solid #005883;
           box-shadow: 0 0 0 3px #b2e7ff;
         }
+      }
+    }
+    // SECONDARY
+    &.ce-fileuploader--secondary {
+      .ce-fileuploader__label {
+        &::before {
+          background: @white;
+          // border: 2px solid @gradient-hot; SAME ISSUE HERE!!!!
+          border: 2px solid green;
+        }
+      }
+      // States
+      &:hover {
+        .ce-fileuploader__label {
+          &::before {
+            background: @white;
+            border: 2px solid #b3003a;
+          }
+        }
+      }
+      &:active {
+        .ce-fileuploader__label {
+          &::before {
+            border: 2px solid #80002a;
+          }
+        }
+      }
+      &:focus {
+        .ce-fileuploader__label {
+          &::before {
+            border: 2px solid #900068;
+            // INVESTIGATE WHY NO CONSISTANT FOCUS SHADOW IN THE DESIGNS FOR OUTLINE FOCUS STATES - NONE ON BUTTON EITHER
+            // box-shadow: 0 0 0 3px
+          }
+        }
+      }
+      // &.ce-fileuploader--disabled {
+      //   background: @focus-gray;
+      // }
+    }
+    &.ce-fileuploader--black {
+      .ce-fileuploader__label {
+        &::before {
+          background: @white;
+          // border: 2px solid @gradient-hot; SAME ISSUE HERE!!!!
+          border: 2px solid @black;
+        }
+      }
+      &:hover {
+        .ce-fileuploader__label {
+          &::before {
+            // background: @white;
+            border: 2px solid #404040; // 50%-ish lighter
+          }
+        }
+      }
+      &:active {
+        .ce-fileuploader__label {
+          &::before {
+            border: 2px solid #262626; // 30%-ish lighter
+          }
+        }
+      }
+      &:focus {
+        // SAME NOTHING IN DESIGN oR BUTTONS
+      }
+    }
+    &.ce-fileuploader--inverted {
+      // background-color: @gradient-cool;
+      // background: black;
+      .ce-fileuploader__label {
+        color: @white;
+        &::before {
+          background: @gradient-cool;
+          border: 2px solid white;
+        }
+      }
+      &:hover {
+        .ce-fileuploader__label {
+          &::before {
+            background: #4a4396; // 15%-ish lighter;
+          }
+        }
+      }
+      &:active {
+        .ce-fileuploader__label {
+          &::before {
+            background: #3e3e85; // 25%-ish lighter
+          }
+        }
+      }
+      &:focus {
+        // SAME ISSUE
       }
     }
   }

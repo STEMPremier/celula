@@ -47,17 +47,24 @@ import FileUploader from '.';
 ### Colors
 <Preview>
   <Story name="FileUploader Colors">
-    {COLORS.map(color => (
-      <form id="FileUploader Colors">
-      <FileUploader 
-        label="This are the other colors"
-        name="This is a name"
-        color={color}
-      >
-        {`${color} File Uploader`}
-      </FileUploader>
-      </form>
-    ))}
+    <div>
+      {TYPES.map(type => (
+        <div key={`${type}_color`}>
+          {COLORS.map(color => (
+            <form id="FileUploader Colors">
+              <FileUploader 
+                label="This are the other colors"
+                name="This is a name"
+                color={color}
+                styleType={type}
+              >
+               {`${color} ${type}`}
+             </FileUploader>
+           </form>
+           ))}
+        </div>
+      ))}
+    </div>
     </Story>
   </Preview>
 
