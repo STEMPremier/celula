@@ -48,6 +48,10 @@ const Search = ({
     handleSearch(fieldValue);
   };
 
+  const clear = () => {
+    setFieldValue('');
+  };
+
   return (
     <div className={classes}>
       <label htmlFor={id}>{label}</label>
@@ -62,6 +66,11 @@ const Search = ({
           type="text"
           value={fieldValue}
         />
+        {fieldValue && (
+          <button className="ce-search__clear" onClick={clear} type="button">
+            <SystemIcon name="clear" />
+          </button>
+        )}
         {instantSearch ? (
           <div className="ce-search__search-icon">
             <SystemIcon name="search" />
