@@ -106,7 +106,7 @@ FileUploader.propTypes = {
    */
   className: PropTypes.string,
   /**
-   *
+   *  The color of the input.  The choices are primary, secondar, black, and inverted. If not selected it will default to primary.
    */
   color: PropTypes.string,
   /**

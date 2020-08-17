@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FileUploader /> render() render the FileUploader component 1`] = `
+<div
+  className="ce-fileuploader"
+>
+  <input
+    accept=""
+    capture=""
+    className="default"
+    disabled={false}
+    form=""
+    id="test"
+    multiple={false}
+    name="test"
+    onChange={[Function]}
+    type="file"
+    value=""
+  />
+  <label
+    className="ce-fileuploader__label ce-fileuploader--primary ce-fileuploader--large ce-fileuploader--default"
+    htmlFor="test"
+  >
+    <span
+      className="ce-fileuploader__label-text"
+    >
+      Children
+    </span>
+  </label>
+</div>
+`;
