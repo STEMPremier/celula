@@ -90,9 +90,8 @@
         background: @gradient-cool;
         // States
         &:hover {
-          background: #007ab2;
+          background: @primary-hover;
         }
-
         &:active {
           background: #00577f;
         }
@@ -105,14 +104,14 @@
         ///// ASK IAN FOR HELP AS TO WHY THE @GRADIENT-COOL IS NOT WORKING
         border: 0.2rem solid @purple;
         &:hover {
-          border: 0.2rem solid #007ab2;
+          border: 0.2rem solid @primary-hover;
         }
         &:active {
-          border: 0.2rem solid #00577f;
+          border: 0.2rem solid @primary-active;
         }
         &:focus {
-          border: 0.2rem solid #005883;
-          box-shadow: 0 0 0 0.3rem #b2e7ff;
+          border: 0.2rem solid @primary-focus;
+          box-shadow: 0 0 0 0.3rem @primary-focus-shadow;
         }
       }
     }
@@ -123,30 +122,30 @@
         background: @gradient-hot;
         // States
         &:hover {
-          background: #b3003a;
+          background: @secondary-hover;
         }
         &:active {
-          background: #80002a;
+          background: @secondary-active;
         }
       }
       &.ce-fileuploader--outline {
         background: @white;
-        // border: 2px solid @gradient-hot; SAME ISSUE HERE!!!!
-        border: 0.2rem solid green;
+        border: 2px solid @gradient-hot;
+        //SAME ISSUE HERE!!!!
+        // border: 0.2rem solid green;
 
         // States
         &:hover {
           background: @white;
-          border: 0.2rem solid #b3003a;
+          border: 0.2rem solid @secondary-hover;
         }
         &:active {
-          border: 0.2rem solid #80002a;
+          border: 0.2rem solid @secondary-active;
         }
         &:focus {
           .ce-fileuploader__label {
-            border: 0.2rem solid #900068;
+            border: 0.2rem solid @secondary-focus;
             // INVESTIGATE WHY NO CONSISTANT FOCUS SHADOW IN THE DESIGNS FOR OUTLINE FOCUS STATES - NONE ON BUTTON EITHER
-            // box-shadow: 0 0 0 3px
           }
         }
       }
@@ -159,10 +158,10 @@
         background: @black;
         // States
         &:hover {
-          background: #404040; // 50%-ish lighter
+          background: @black-hover; // 50%-ish lighter
         }
         &:active {
-          background: #262626; // 30%-ish lighter
+          background: @black-background; // 30%-ish lighter
         }
         // FOCUS ??????
       }
@@ -188,21 +187,23 @@
       &.ce-fileuploader--default {
         background-color: @white;
         &:hover {
-          color: #404040; // 50%-ish lighter
+          color: @black-hover; // 50%-ish lighter
         }
         &:active {
-          color: #262626; // 30%-ish lighter
+          color: @black-background; // 30%-ish lighter
         }
       }
       &.ce-fileuploader--outline {
         color: @white;
         background: @gradient-cool;
-        border: 0.2rem solid white;
+        border: 0.2rem solid @white;
         &:hover {
-          background: #4a4396; // 15%-ish lighter;
+          background: @inverted-hover; // 15%-ish lighter;
         }
         &:active {
-          background: #3e3e85; // 25%-ish lighter
+          // Not sure why the below variable of @inverted-active does not work
+          // background: @inverted-active; // 25%-ish lighter
+          background: #3e3e85;
         }
         &:focus {
           // SAME ISSUE
