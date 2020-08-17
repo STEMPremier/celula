@@ -24,7 +24,7 @@
   .ce-fileuploader__label {
     // customized fileuploader for input type="file"
     // box-sizing: border-box;
-    border-radius: 35px;
+    border-radius: 3.5rem;
     // setting up the basic font rules for default
     display: inline-flex;
     font-family: inherit;
@@ -36,7 +36,7 @@
 
     // Responsive Rules
     @media screen {
-      @media (max-width: 768px) {
+      @media (max-width: 76.8rem) {
         width: 100%;
       }
     }
@@ -103,16 +103,16 @@
         }
         // border: 2px solid @gradient-cool;
         ///// ASK IAN FOR HELP AS TO WHY THE @GRADIENT-COOL IS NOT WORKING
-        border: 2px solid @purple;
+        border: 0.2rem solid @purple;
         &:hover {
-          border: 2px solid #007ab2;
+          border: 0.2rem solid #007ab2;
         }
         &:active {
-          border: 2px solid #00577f;
+          border: 0.2rem solid #00577f;
         }
         &:focus {
-          border: 2px solid #005883;
-          box-shadow: 0 0 0 3px #b2e7ff;
+          border: 0.2rem solid #005883;
+          box-shadow: 0 0 0 0.3rem #b2e7ff;
         }
       }
     }
@@ -132,19 +132,19 @@
       &.ce-fileuploader--outline {
         background: @white;
         // border: 2px solid @gradient-hot; SAME ISSUE HERE!!!!
-        border: 2px solid green;
+        border: 0.2rem solid green;
 
         // States
         &:hover {
           background: @white;
-          border: 2px solid #b3003a;
+          border: 0.2rem solid #b3003a;
         }
         &:active {
-          border: 2px solid #80002a;
+          border: 0.2rem solid #80002a;
         }
         &:focus {
           .ce-fileuploader__label {
-            border: 2px solid #900068;
+            border: 0.2rem solid #900068;
             // INVESTIGATE WHY NO CONSISTANT FOCUS SHADOW IN THE DESIGNS FOR OUTLINE FOCUS STATES - NONE ON BUTTON EITHER
             // box-shadow: 0 0 0 3px
           }
@@ -169,13 +169,13 @@
       &.ce-fileuploader--outline {
         background: @white;
         // border: 2px solid @gradient-hot; SAME ISSUE HERE!!!!
-        border: 2px solid @black;
+        border: 0.2rem solid @black;
         &:hover {
           // background: @white;
-          border: 2px solid #404040; // 50%-ish lighter
+          border: 0.2rem solid #404040; // 50%-ish lighter
         }
         &:active {
-          border: 2px solid #262626; // 30%-ish lighter
+          border: 0.2rem solid #262626; // 30%-ish lighter
         }
         &:focus {
           // SAME NOTHING IN DESIGN oR BUTTONS
@@ -197,7 +197,7 @@
       &.ce-fileuploader--outline {
         color: @white;
         background: @gradient-cool;
-        border: 2px solid white;
+        border: 0.2rem solid white;
         &:hover {
           background: #4a4396; // 15%-ish lighter;
         }
@@ -218,7 +218,7 @@
         background: @focus-gray;
       }
       &.ce-fileuploader--outline {
-        border: 2px solid @focus-gray;
+        border: 0.2rem solid @focus-gray;
         color: @focus-gray;
       }
     }

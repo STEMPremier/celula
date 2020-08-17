@@ -53,9 +53,6 @@ const FileUploader = ({
     className,
   );
 
-  console.log('TYPES', TYPES);
-  console.log('styleType', styleType);
-
   const id = `${name}`;
 
   useEffect(() => {
