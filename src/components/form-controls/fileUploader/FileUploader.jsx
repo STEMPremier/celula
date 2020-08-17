@@ -36,7 +36,7 @@ const FileUploader = ({
   const [errMsg, setErrMsg] = useState(errorMsg);
 
   const classes = cx(
-    'ce-fileuploader',
+    'ce-fileuploader__label',
     {
       [`ce-fileuploader--${color}`]: COLORS.includes(
         color.toString().toLowerCase(),
@@ -69,8 +69,7 @@ const FileUploader = ({
   };
 
   return (
-    <div className={classes}>
-      {/* {helpText && <div className="ce-fileuploader__help-text">{helpText}</div>} */}
+    <div className="ce-fileuploader">
       <input
         accept={accept}
         capture={capture}
@@ -81,12 +80,11 @@ const FileUploader = ({
         multiple={multiple}
         name={name}
         onChange={handleClick}
-        // onBlur={checkValiditiy}
         type="file"
         value={fieldValue}
       />
-      <label htmlFor={id} className="ce-fileuploader__label">
-        <span className="ce-fileUploader__label-text">{children}</span>
+      <label htmlFor={id} className={classes}>
+        <span className="ce-fileuploader__label-text">{children}</span>
       </label>
       {errorMsg && <ErrorBox errorMsg={errorMsg} />}
     </div>
@@ -177,7 +175,7 @@ FileUploader.defaultProps = {
   initialValue: null,
   multiple: false,
   size: 'large',
-  styleType: '',
+  styleType: 'default',
 };
 
 export default FileUploader;

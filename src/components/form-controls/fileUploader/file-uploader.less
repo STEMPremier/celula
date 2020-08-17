@@ -2,229 +2,115 @@
 @import '../../../styles/palettes.less';
 
 .ce-fileuploader {
-  margin: 10px;
-  display: inline-flex;
-  font-family: inherit;
-  justify-content: center;
-  text-transform: uppercase;
-  padding: 15px;
+  display: inline-block;
 
-  // .ce-fileuploader__help-text {
-  //   background-color: green;
-  // }
   &:focus {
     outline: none;
   }
-
   input {
     // hide the default input
     left: -999.9rem;
     position: absolute;
+    height: 0px;
+    width: 0px;
+  }
 
-    + .ce-fileuploader__label {
-      // flex-grow: 1;
+  // Responsive Rules
+  @media screen {
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  .ce-fileuploader__label {
+    // customized fileuploader for input type="file"
+    // box-sizing: border-box;
+    border-radius: 35px;
+    // setting up the basic font rules for default
+    display: inline-flex;
+    font-family: inherit;
+    justify-content: center;
+    text-transform: uppercase;
+    border-width: 0;
+    font-size: 1.6rem;
+    font-weight: 900;
 
-      // customized fileuploader for input type="file"
-
-      &::before {
+    // Responsive Rules
+    @media screen {
+      @media (max-width: 768px) {
         width: 100%;
-        left: 0px;
-        text-align: center;
-        box-sizing: border-box;
-        content: '';
-        margin: -1.8px;
-        position: absolute;
-        border-radius: 35px;
-        border-width: 0;
-        font-size: 1.6rem;
-        font-weight: 900;
-        display: inline-flex;
-        font-family: inherit;
-
-        //default size large
-      }
-      // text only
-      .ce-fileUploader__label-text {
-        flex-grow: 1;
-        width: 100%;
-        left: 0px;
-        text-align: center;
-        // color: red;
-        // content: '';
-        // box-sizing: border-box;
-        // height: 30px;
-        // font-size: 1.2rem;
-        // left: 10px;
-        padding: 10px 0px;
-        // top: 31px;
-        position: absolute;
-        // width: 100%;
-        // text-align: center;
-      }
-    }
-  }
-
-  //////////////////////////
-  //        COLORS        //
-  //////////////////////////
-  // PRIMARY
-  &.ce-fileuploader--primary {
-    &.ce-fileuploader--default {
-      .ce-fileuploader__label {
-        color: @white;
-        &::before {
-          background: @gradient-cool;
-        }
-      }
-      // States
-      &:hover {
-        .ce-fileuploader__label {
-          &::before {
-            background: #007ab2;
-          }
-        }
-      }
-
-      &:active {
-        .ce-fileuploader__label {
-          &::before {
-            background: #00577f;
-          }
-        }
       }
     }
 
-    // &.ce-fileuploader--disabled {
-    //   background: @focus-gray;
-    // }
-  }
-  // SECONDARY
-  &.ce-fileuploader--secondary {
-    .ce-fileuploader__label {
-      color: @white;
-      &::before {
-        background: @gradient-hot;
-      }
+    // text only in label
+    .ce-fileUploader__label-text {
+      flex-grow: 1;
     }
-    // States
-    &:hover {
-      .ce-fileuploader__label {
-        &::before {
-          background: #b3003a;
-        }
-      }
-    }
-    &:active {
-      .ce-fileuploader__label {
-        &::before {
-          background: #80002a;
-        }
-      }
-    }
-    &.ce-button--disabled {
-      background: @focus-gray;
-    }
-  }
-  // BLACK
-  &.ce-fileuploader--black {
-    .ce-fileuploader__label {
-      color: @white;
-      &::before {
-        background: @black;
-      }
-    }
-    // States
-    &:hover {
-      .ce-fileuploader__label {
-        &::before {
-          background: #404040; // 50%-ish lighter
-        }
-      }
-    }
-    &:active {
-      .ce-fileuploader__label {
-        &::before {
-          background: #262626; // 30%-ish lighter
-        }
-      }
-    }
-  }
-  // INVERTED
-  &.ce-fileuploader--inverted {
-    .ce-fileuploader__label {
-      color: @black;
-      &::before {
-        background: @white;
-      }
-    }
-    &:hover {
-      .ce-fileuploader__label {
-        color: #404040; // 50%-ish lighter
-      }
-    }
-    &:active {
-      .ce-fileuploader__label {
-        color: #262626; // 30%-ish lighter
-      }
-    }
-  }
 
-  //////////////////////////
-  //        SIZES         //
-  //////////////////////////
-  // DEFAULT LARGE
-  &.ce-fileuploader--large {
-    .ce-fileuploader__label {
-      // font-size: 1.6rem;
-      // margin: 0.2rem;
-      // padding: 1.3rem 5.8rem;
-      &::before {
-        font-size: 1.6rem;
-        // margin: 0.2rem;
-        padding: 2.3rem 10.8rem;
-      }
+    //////////////////////////
+    //        SIZES         //
+    //////////////////////////
+    // DEFAULT LARGE
+    &.ce-fileuploader--large {
       .ce-fileuploader__label-text {
-        // color: @red;
-        // font-size: 1.6rem;
-        // margin: 0.2rem;
-        // padding: 1.3rem 5.8rem;
+        font-size: 1.6rem;
+        margin: 0.2rem;
+        padding: 1.3rem 5.8rem;
+        border-radius: 3.5rem;
+        display: inline-block;
       }
     }
-  }
+    // SMALL
+    &.ce-fileuploader--small {
+      .ce-fileuploader__label-text {
+        border-radius: 3.5rem;
+        display: inline-block;
+        font-size: 1.2rem;
+        margin: 0.2rem;
+        padding: 0.85rem 3.8rem;
+      }
+    }
+    // JUMBO
+    &.ce-fileuploader--jumbo {
+      .ce-fileuploader__label-text {
+        border-radius: 3.5rem;
+        display: inline-block;
+        font-size: 1.6rem;
+        margin: 0.2rem;
+        padding: 2.3rem 5.8rem;
+      }
+    }
 
-  //////////////////////////
-  //     OUTLINE TYPE     //
-  //////////////////////////
-  &.ce-fileuploader--outline {
-    .ce-fileuploader__label {
-      color: @black;
-      &::before {
-        background-color: @white;
+    //////////////////////////
+    // COLORS FOR BOTH TYPES //
+    //////////////////////////
+    // PRIMARY
+    &.ce-fileuploader--primary {
+      &.ce-fileuploader--default {
+        color: @white;
+        background: @gradient-cool;
+        // States
+        &:hover {
+          background: #007ab2;
+        }
+
+        &:active {
+          background: #00577f;
+        }
+      }
+      &.ce-fileuploader--outline {
+        .ce-fileuploader__label {
+          background-color: @white;
+        }
         // border: 2px solid @gradient-cool;
         ///// ASK IAN FOR HELP AS TO WHY THE @GRADIENT-COOL IS NOT WORKING
-        // box-shadow: 0 0 0 2px @purple;
         border: 2px solid @purple;
-      }
-    }
-    &:hover {
-      .ce-fileuploader__label {
-        &::before {
-          // box-shadow: 0 0 0 2px #007ab2;
+        &:hover {
           border: 2px solid #007ab2;
         }
-      }
-    }
-    &:active {
-      .ce-fileuploader__label {
-        &::before {
+        &:active {
           border: 2px solid #00577f;
-          // box-shadow: 0 0 0 2px #00577f;
         }
-      }
-    }
-    &:focus {
-      .ce-fileuploader__label {
-        &::before {
+        &:focus {
           border: 2px solid #005883;
           box-shadow: 0 0 0 3px #b2e7ff;
         }
@@ -232,96 +118,112 @@
     }
     // SECONDARY
     &.ce-fileuploader--secondary {
-      .ce-fileuploader__label {
-        &::before {
+      &.ce-fileuploader--default {
+        color: @white;
+        background: @gradient-hot;
+        // States
+        &:hover {
+          background: #b3003a;
+        }
+        &:active {
+          background: #80002a;
+        }
+      }
+      &.ce-fileuploader--outline {
+        background: @white;
+        // border: 2px solid @gradient-hot; SAME ISSUE HERE!!!!
+        border: 2px solid green;
+
+        // States
+        &:hover {
           background: @white;
-          // border: 2px solid @gradient-hot; SAME ISSUE HERE!!!!
-          border: 2px solid green;
+          border: 2px solid #b3003a;
         }
-      }
-      // States
-      &:hover {
-        .ce-fileuploader__label {
-          &::before {
-            background: @white;
-            border: 2px solid #b3003a;
-          }
+        &:active {
+          border: 2px solid #80002a;
         }
-      }
-      &:active {
-        .ce-fileuploader__label {
-          &::before {
-            border: 2px solid #80002a;
-          }
-        }
-      }
-      &:focus {
-        .ce-fileuploader__label {
-          &::before {
+        &:focus {
+          .ce-fileuploader__label {
             border: 2px solid #900068;
             // INVESTIGATE WHY NO CONSISTANT FOCUS SHADOW IN THE DESIGNS FOR OUTLINE FOCUS STATES - NONE ON BUTTON EITHER
             // box-shadow: 0 0 0 3px
           }
         }
       }
-      // &.ce-fileuploader--disabled {
-      //   background: @focus-gray;
-      // }
     }
+
+    // BLACK
     &.ce-fileuploader--black {
-      .ce-fileuploader__label {
-        &::before {
-          background: @white;
-          // border: 2px solid @gradient-hot; SAME ISSUE HERE!!!!
-          border: 2px solid @black;
+      &.ce-fileuploader--default {
+        color: @white;
+        background: @black;
+        // States
+        &:hover {
+          background: #404040; // 50%-ish lighter
         }
-      }
-      &:hover {
-        .ce-fileuploader__label {
-          &::before {
-            // background: @white;
-            border: 2px solid #404040; // 50%-ish lighter
-          }
+        &:active {
+          background: #262626; // 30%-ish lighter
         }
+        // FOCUS ??????
       }
-      &:active {
-        .ce-fileuploader__label {
-          &::before {
-            border: 2px solid #262626; // 30%-ish lighter
-          }
+      &.ce-fileuploader--outline {
+        background: @white;
+        // border: 2px solid @gradient-hot; SAME ISSUE HERE!!!!
+        border: 2px solid @black;
+        &:hover {
+          // background: @white;
+          border: 2px solid #404040; // 50%-ish lighter
         }
-      }
-      &:focus {
-        // SAME NOTHING IN DESIGN oR BUTTONS
+        &:active {
+          border: 2px solid #262626; // 30%-ish lighter
+        }
+        &:focus {
+          // SAME NOTHING IN DESIGN oR BUTTONS
+        }
       }
     }
+
+    // INVERTED
     &.ce-fileuploader--inverted {
-      // background-color: @gradient-cool;
-      // background: black;
-      .ce-fileuploader__label {
+      &.ce-fileuploader--default {
+        background-color: @white;
+        &:hover {
+          color: #404040; // 50%-ish lighter
+        }
+        &:active {
+          color: #262626; // 30%-ish lighter
+        }
+      }
+      &.ce-fileuploader--outline {
         color: @white;
-        &::before {
-          background: @gradient-cool;
-          border: 2px solid white;
+        background: @gradient-cool;
+        border: 2px solid white;
+        &:hover {
+          background: #4a4396; // 15%-ish lighter;
         }
-      }
-      &:hover {
-        .ce-fileuploader__label {
-          &::before {
-            background: #4a4396; // 15%-ish lighter;
-          }
+        &:active {
+          background: #3e3e85; // 25%-ish lighter
         }
-      }
-      &:active {
-        .ce-fileuploader__label {
-          &::before {
-            background: #3e3e85; // 25%-ish lighter
-          }
+        &:focus {
+          // SAME ISSUE
         }
-      }
-      &:focus {
-        // SAME ISSUE
       }
     }
   }
 }
+
+//////////////////////////
+//       DISABLED       //
+//////////////////////////
+// &.ce-fileuploader--disabled {
+//   pointer-events: none;
+//   &.ce-fileuploader--default {
+//     .ce-fileuploader__label {
+//       // &::before {
+//       background: @focus-gray;
+//       // }
+//     }
+//   }
+//   &.ce-fileuploader--outline {
+//   }
+// }

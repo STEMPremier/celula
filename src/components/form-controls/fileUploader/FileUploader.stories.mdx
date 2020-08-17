@@ -46,12 +46,12 @@ import FileUploader from '.';
 
 ### Colors
 <Preview>
-  <Story name="FileUploader Colors">
+  <Story name="FileUploader Colors and Types">
     <div>
       {TYPES.map(type => (
         <div key={`${type}_color`}>
           {COLORS.map(color => (
-            <form id="FileUploader Colors">
+            <form id="FileUploader Colors and Types">
               <FileUploader 
                 label="This are the other colors"
                 name="This is a name"
@@ -85,21 +85,34 @@ import FileUploader from '.';
     </Story>
   </Preview>
 
-### Types 
+### Disabled 
 <Preview>
-  <Story name="FileUploader Types">
-     <form id="FileUploader Types">
-    {TYPES.map(type => (
-      <FileUploader 
-        label="These are the other types"
-        name="This is a name"
-        styleType={type}
-      >
-      {`${type} File Uploader`}
-      </FileUploader>
-    ))} </form>
+  <Story name="FileUploader Disabled">
+    <div>
+      {TYPES.map(type => (
+        <div key={`${type}_color`}>
+          {COLORS.map(color => (
+            <form id="FileUploader Disabled">
+              <FileUploader 
+                label="These are the disabled colors and types"
+                name="This is a name"
+                color={color}
+                styleType={type}
+                disabled
+              >
+               {`${color} ${type}`}
+             </FileUploader>
+           </form>
+           ))}
+        </div>
+      ))}
+    </div>
     </Story>
   </Preview>
+
+
+
+
 
 ### Accept, Capture, Multiple Functionality 
 
