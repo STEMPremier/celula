@@ -209,21 +209,18 @@
         }
       }
     }
+    //////////////////////////
+    //       DISABLED       //
+    //////////////////////////
+    &.ce-fileuploader--disabled {
+      pointer-events: none;
+      &.ce-fileuploader--default {
+        background: @focus-gray;
+      }
+      &.ce-fileuploader--outline {
+        border: 2px solid @focus-gray;
+        color: @focus-gray;
+      }
+    }
   }
 }
-
-//////////////////////////
-//       DISABLED       //
-//////////////////////////
-// &.ce-fileuploader--disabled {
-//   pointer-events: none;
-//   &.ce-fileuploader--default {
-//     .ce-fileuploader__label {
-//       // &::before {
-//       background: @focus-gray;
-//       // }
-//     }
-//   }
-//   &.ce-fileuploader--outline {
-//   }
-// }

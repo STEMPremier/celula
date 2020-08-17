@@ -74,7 +74,7 @@ import FileUploader from '.';
     {SIZES.map(size => (
       <form id="FileUploader Sizes">
       <FileUploader 
-        label="This are the other sizes"
+        label="These are the sizes"
         name="This is a name"
         size={size}
       >
@@ -90,30 +90,17 @@ import FileUploader from '.';
   <Story name="FileUploader Disabled">
     <div>
       {TYPES.map(type => (
-        <div key={`${type}_color`}>
-          {COLORS.map(color => (
             <form id="FileUploader Disabled">
               <FileUploader 
                 label="These are the disabled colors and types"
                 name="This is a name"
-                color={color}
                 styleType={type}
                 disabled
               >
-               {`${color} ${type}`}
+               {` ${type}`}
              </FileUploader>
            </form>
-           ))}
-        </div>
       ))}
     </div>
     </Story>
   </Preview>
-
-
-
-
-
-### Accept, Capture, Multiple Functionality 
-
-### Disabled 
