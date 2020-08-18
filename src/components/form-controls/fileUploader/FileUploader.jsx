@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -24,8 +22,6 @@ const FileUploader = ({
   errorMsg,
   formId,
   handleClick: handler,
-  helpText,
-  initialValue,
   label,
   multiple,
   name,
@@ -102,43 +98,31 @@ FileUploader.propTypes = {
    */
   children: PropTypes.string.isRequired,
   /**
-   * A class name, or string of class names, to add to the `<Input />`.
+   * A class name, or string of class names, to add to the `<FileUploader />`.
    */
   className: PropTypes.string,
   /**
-   *  The color of the input.  The choices are primary, secondar, black, and inverted. If not selected it will default to primary.
+   *  The color of the `<FileUploader />`.  The choices are primary, secondar, black, and inverted. If not selected it will default to primary.
    */
   color: PropTypes.string,
   /**
-   * Disables the `<Input />`.
+   * Disables the `<FileUploader />`.
    */
   disabled: PropTypes.bool,
   /**
-   * An error message to display in the `<Input />`.
+   * An error message to display in the `<FileUploader />`.
    */
   errorMsg: PropTypes.string,
   /**
-   * The id of the form the `<Input />` belongs to.
+   * The id of the form the `<FileUploader />` belongs to.
    */
   formId: PropTypes.string,
   /**
-   * A function to trigger when the state of the `<Input />` changes.
+   * A function to trigger when the state of the `<FileUploader />` changes.
    */
   handleClick: PropTypes.func,
   /**
-   * Any text to assist the user with this `<Input />`.
-   */
-  helpText: PropTypes.string,
-  /**
-   * The initial value of the `<Input />`, if any.
-   */
-  initialValue: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.bool,
-  ]),
-  /**
-   * The `<Input />` label.
+   * The `<FileUploader />` label.
    */
   label: PropTypes.string.isRequired,
   /**
@@ -146,15 +130,15 @@ FileUploader.propTypes = {
    */
   multiple: PropTypes.bool,
   /**
-   * The name given to the `<Input />`. It connects the label to the `<Input />`.
+   * The name given to the `<FileUploader />`. It connects the label to the `<FileUploader />`.
    */
   name: PropTypes.string.isRequired,
   /**
-   *
+   *  There are 3 sizes to choose from: small, large, and jumbo.  If none is selected, it will default to large.
    */
   size: PropTypes.string,
   /**
-   *  The default is the filled in button style and the other option available is 'outline'.
+   *  The default is the filled-in solid button style and the other option available is 'outline'.
    */
   styleType: PropTypes.string,
 };
@@ -168,8 +152,6 @@ FileUploader.defaultProps = {
   errorMsg: '',
   formId: '',
   handleClick: () => {},
-  helpText: '',
-  initialValue: null,
   multiple: false,
   size: 'large',
   styleType: 'default',
