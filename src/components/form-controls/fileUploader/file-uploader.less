@@ -96,7 +96,7 @@
           background: #00577f;
         }
         &:focus {
-          box-shadow: 0 0 0 0.3rem @primary-focus-shadow;
+          box-shadow: 0 0 0 0.5rem @primary-focus-shadow;
         }
       }
       &.ce-fileuploader--outline {
@@ -105,16 +105,16 @@
         }
         // border: 2px solid @gradient-cool;
         ///// ASK IAN FOR HELP AS TO WHY THE @GRADIENT-COOL IS NOT WORKING
-        border: 0.2rem solid @purple;
+        border: 0.3rem solid @purple;
         &:hover {
-          border: 0.2rem solid @primary-hover;
+          border: 0.3rem solid @primary-hover;
         }
         &:active {
-          border: 0.2rem solid @primary-active;
+          border: 0.3rem solid @primary-active;
         }
         &:focus {
-          border: 0.2rem solid @primary-focus;
-          box-shadow: 0 0 0 0.3rem @primary-focus-shadow;
+          border: 0.3rem solid @primary-focus;
+          box-shadow: 0 0 0 0.5rem @primary-focus-shadow;
         }
       }
     }
@@ -130,26 +130,27 @@
         &:active {
           background: @secondary-active;
         }
+        &:focus {
+          box-shadow: 0 0 0 0.5rem @primary-focus-shadow;
+        }
       }
       &.ce-fileuploader--outline {
         background: @white;
-        border: 2px solid @gradient-hot;
+        border: 0.3rem solid @gradient-hot;
         //SAME ISSUE HERE!!!!
         // border: 0.2rem solid green;
 
         // States
         &:hover {
           background: @white;
-          border: 0.2rem solid @secondary-hover;
+          border: 0.3rem solid @secondary-hover;
         }
         &:active {
-          border: 0.2rem solid @secondary-active;
+          border: 0.3rem solid @secondary-active;
         }
         &:focus {
-          .ce-fileuploader__label {
-            border: 0.2rem solid @secondary-focus;
-            // INVESTIGATE WHY NO CONSISTANT FOCUS SHADOW IN THE DESIGNS FOR OUTLINE FOCUS STATES - NONE ON BUTTON EITHER
-          }
+          border: 0.3rem solid @secondary-focus;
+          box-shadow: 0 0 0 0.5rem @primary-focus-shadow;
         }
       }
     }
@@ -166,21 +167,23 @@
         &:active {
           background: @black-background; // 30%-ish lighter
         }
-        // FOCUS ??????
+        &:focus {
+          box-shadow: 0 0 0 0.5rem @primary-focus-shadow;
+        }
       }
       &.ce-fileuploader--outline {
         background: @white;
         // border: 2px solid @gradient-hot; SAME ISSUE HERE!!!!
-        border: 0.2rem solid @black;
+        border: 0.3rem solid @black;
         &:hover {
-          // background: @white;
-          border: 0.2rem solid #404040; // 50%-ish lighter
+          border: 0.3rem solid #404040; // 50%-ish lighter
         }
         &:active {
-          border: 0.2rem solid #262626; // 30%-ish lighter
+          border: 0.3rem solid #262626; // 30%-ish lighter
         }
         &:focus {
-          // SAME NOTHING IN DESIGN oR BUTTONS
+          border: 0.3rem solid @black-focus;
+          box-shadow: 0 0 0 0.5rem @primary-focus-shadow;
         }
       }
     }
@@ -195,6 +198,9 @@
         &:active {
           color: @black-background; // 30%-ish lighter
         }
+        &:focus {
+          box-shadow: 0 0 0 0.5rem @primary-focus-shadow;
+        }
       }
       &.ce-fileuploader--outline {
         color: @white;
@@ -204,12 +210,10 @@
           background: @inverted-hover; // 15%-ish lighter;
         }
         &:active {
-          // Not sure why the below variable of @inverted-active does not work
-          // background: @inverted-active; // 25%-ish lighter
-          background: #3e3e85;
+          background: @inverted-active; // 25%-ish lighter
         }
         &:focus {
-          // SAME ISSUE
+          box-shadow: 0 0 0 0.5rem @primary-focus-shadow;
         }
       }
     }
