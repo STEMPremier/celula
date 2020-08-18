@@ -1,5 +1,4 @@
 @import '../../../styles/celula';
-@import '../../../styles/palettes.less';
 
 .ce-fileuploader {
   display: inline-block;
@@ -93,19 +92,20 @@
           background: @primary-hover;
         }
         &:active {
-          background: #00577f;
+          background: @primary-active;
         }
         &:focus {
           box-shadow: 0 0 0 0.5rem @primary-focus-shadow;
         }
       }
       &.ce-fileuploader--outline {
-        .ce-fileuploader__label {
-          background-color: @white;
-        }
+        background: @gradient-cool;
         // border: 2px solid @gradient-cool;
-        ///// ASK IAN FOR HELP AS TO WHY THE @GRADIENT-COOL IS NOT WORKING
-        border: 0.3rem solid @purple;
+        span {
+          background-color: @white;
+          background: @white;
+          padding: 0.8rem 40%;
+        }
         &:hover {
           border: 0.3rem solid @primary-hover;
         }
@@ -137,8 +137,6 @@
       &.ce-fileuploader--outline {
         background: @white;
         border: 0.3rem solid @gradient-hot;
-        //SAME ISSUE HERE!!!!
-        // border: 0.2rem solid green;
 
         // States
         &:hover {
@@ -173,7 +171,6 @@
       }
       &.ce-fileuploader--outline {
         background: @white;
-        // border: 2px solid @gradient-hot; SAME ISSUE HERE!!!!
         border: 0.3rem solid @black;
         &:hover {
           border: 0.3rem solid #404040; // 50%-ish lighter
@@ -230,5 +227,51 @@
         color: @focus-gray;
       }
     }
+  }
+
+  .ce-fileuploader__error-outline {
+    border: 3px solid @error-text;
+    padding: 10px;
+    border-radius: 5px;
+
+    .ce-fileuploader__error-text {
+      color: @error-text;
+      background: @white;
+      float: right;
+      height: 1.6rem;
+      margin-bottom: 18px;
+      margin-right: 22px;
+      margin-top: 4px;
+      padding: 0 30px;
+      text-align: right;
+    }
+
+    .ce-fileuploader--error {
+      &.ce-fileuploader--default {
+        background: @checked-red;
+        color: @white;
+
+        &:hover {
+          background: @hover-red;
+        }
+        &:active {
+          background: @active-red;
+        }
+        &:focus {
+          background: @focus-red;
+        }
+      }
+      &.ce-fileuploader--outline {
+        background: @white;
+        &.ce-fileuploader__label {
+          background: yellow;
+          background-color: @checked-red;
+          color: @error-text;
+        }
+      }
+    }
+
+    // .ce-fileuploader__error-outline {
+    // }
   }
 }

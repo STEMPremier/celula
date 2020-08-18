@@ -30,11 +30,6 @@ import FileUploader from '.';
       errorMsg={text('errorMsg', '', 'FileUploader Options')}
       formId={text('formId', 'fileUploaderWithKnobForm', 'FileUploader Options')}
       handleClick={action('`FileUploader with Knobs` onChange event triggered.')}
-      helpText={text(
-        'helpText',
-        'This is useful or helpful information.',
-        'FileUploader Options',
-      )}
       multiple={boolean('multiple', false, 'FileUploader Options')}
       name={text('name', 'fileUploaderWithKnobs', 'FileUploader Options')}
       size={text('size', 'large', 'FileUploader Options')}
@@ -96,6 +91,27 @@ import FileUploader from '.';
                 name="This is a name"
                 styleType={type}
                 disabled
+              >
+               {` ${type}`}
+             </FileUploader>
+           </form>
+      ))}
+    </div>
+    </Story>
+  </Preview>
+
+### Error State
+
+<Preview>
+  <Story name="FileUploader Error State">
+    <div>
+      {TYPES.map(type => (
+            <form id="FileUploader Error State">
+              <FileUploader 
+                label="These are the disabled colors and types"
+                name="This is a name"
+                errorMsg={'You did not choose wisely!'}
+                styleType={type}
               >
                {` ${type}`}
              </FileUploader>

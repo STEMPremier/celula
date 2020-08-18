@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import { ErrorBox } from '../core';
+// import { ErrorBox } from '../core';
 
 import './file-uploader.less';
 
@@ -76,10 +76,14 @@ const FileUploader = ({
         type="file"
         value={fieldValue}
       />
-      <label htmlFor={id} className={classes}>
-        <span className="ce-fileuploader__label-text">{children}</span>
-      </label>
-      {errorMsg && <ErrorBox errorMsg={errorMsg} />}
+      {errorMsg && (
+        <div className="ce-fileuploader__error-outline">
+          <label htmlFor={id} className={classes}>
+            <span className="ce-fileuploader__label-text">{children}</span>
+          </label>
+          <span className="ce-fileuploader__error-text">{errorMsg}</span>
+        </div>
+      )}
     </div>
   );
 };
