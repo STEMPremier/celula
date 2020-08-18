@@ -16,6 +16,7 @@ import {
 import { ProductIcon, SecondaryIcon, SystemIcon } from './components/icon';
 import Link from './components/link';
 import Switch from './components/switch';
+import Search from './components/search';
 import { ToggleButton, ToggleButtonGroup } from './components/toggle-button';
 
 import './styles/celula.less';
@@ -33,12 +34,13 @@ export {
   RadioGroup,
   Select,
   SubmitButton,
-  Switch,
   Textarea,
   ProductIcon,
   SecondaryIcon,
   SystemIcon,
   Link,
+  Search,
+  Switch,
   ToggleButton,
   ToggleButtonGroup,
 };

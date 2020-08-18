@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Search /> render() render the Search component 1`] = `
+<div
+  className="ce-search"
+>
+  <label
+    htmlFor="test"
+  >
+    test label
+  </label>
+  <div
+    className="ce-search__container"
+  >
+    <input
+      disabled={false}
+      id="test"
+      name="test"
+      onChange={[Function]}
+      placeholder=""
+      type="text"
+      value=""
+    />
+    <button
+      className="ce-search__button"
+      onClick={[Function]}
+      type="button"
+    >
+      <SystemIcon
+        color="inverted"
+        name="search"
+        size="large"
+      />
+    </button>
+  </div>
+</div>
+`;
