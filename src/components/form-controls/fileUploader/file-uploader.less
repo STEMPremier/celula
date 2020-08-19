@@ -25,6 +25,7 @@
     border-radius: 3.5rem;
     // setting up the basic font rules for default
     display: inline-flex;
+    // flex-grow: 1;
     font-family: inherit;
     justify-content: center;
     text-transform: uppercase;
@@ -40,7 +41,7 @@
     }
 
     // text only in label
-    .ce-fileUploader__label-text {
+    .ce-fileuploader__label-text {
       flex-grow: 1;
     }
 
@@ -79,155 +80,171 @@
     }
 
     //////////////////////////
-    // COLORS FOR BOTH TYPES //
-    //////////////////////////
-    // PRIMARY
-    &.ce-fileuploader--primary {
-      &.ce-fileuploader--default {
-        color: @white;
-        background: @gradient-cool;
-        // States
-        &:hover {
-          background: @primary-hover;
-        }
-        &:active {
-          background: @primary-active;
-        }
-        &:focus {
-          box-shadow: 0 0 0 0.5rem @primary-focus-shadow;
-        }
-      }
-      &.ce-fileuploader--outline {
-        background: @gradient-cool;
-        // border: 2px solid @gradient-cool;
-        span {
-          background-color: @white;
-          background: @white;
-          padding: 0.8rem 40%;
-        }
-        &:hover {
-          border: 0.3rem solid @primary-hover;
-        }
-        &:active {
-          border: 0.3rem solid @primary-active;
-        }
-        &:focus {
-          border: 0.3rem solid @primary-focus;
-          box-shadow: 0 0 0 0.5rem @primary-focus-shadow;
-        }
-      }
-    }
-    // SECONDARY
-    &.ce-fileuploader--secondary {
-      &.ce-fileuploader--default {
-        color: @white;
-        background: @gradient-hot;
-        // States
-        &:hover {
-          background: @secondary-hover;
-        }
-        &:active {
-          background: @secondary-active;
-        }
-        &:focus {
-          box-shadow: 0 0 0 0.5rem @primary-focus-shadow;
-        }
-      }
-      &.ce-fileuploader--outline {
-        background: @white;
-        // border: 0.3rem solid @gradient-hot;
-        border: 0.3rem solid pink;
-        // States
-        &:hover {
-          background: @white;
-          border: 0.3rem solid @secondary-hover;
-        }
-        &:active {
-          border: 0.3rem solid @secondary-active;
-        }
-        &:focus {
-          border: 0.3rem solid @secondary-focus;
-          box-shadow: 0 0 0 0.5rem @primary-focus-shadow;
-        }
-      }
-    }
-
-    // BLACK
-    &.ce-fileuploader--black {
-      &.ce-fileuploader--default {
-        color: @white;
-        background: @black;
-        // States
-        &:hover {
-          background: @black-hover; // 50%-ish lighter
-        }
-        &:active {
-          background: @black-background; // 30%-ish lighter
-        }
-        &:focus {
-          box-shadow: 0 0 0 0.5rem @primary-focus-shadow;
-        }
-      }
-      &.ce-fileuploader--outline {
-        background: @white;
-        border: 0.3rem solid @black;
-        &:hover {
-          border: 0.3rem solid #404040; // 50%-ish lighter
-        }
-        &:active {
-          border: 0.3rem solid #262626; // 30%-ish lighter
-        }
-        &:focus {
-          border: 0.3rem solid @black-focus;
-          box-shadow: 0 0 0 0.5rem @primary-focus-shadow;
-        }
-      }
-    }
-
-    // INVERTED
-    &.ce-fileuploader--inverted {
-      &.ce-fileuploader--default {
-        background-color: @white;
-        &:hover {
-          color: @black-hover; // 50%-ish lighter
-        }
-        &:active {
-          color: @black-background; // 30%-ish lighter
-        }
-        &:focus {
-          box-shadow: 0 0 0 0.5rem @primary-focus-shadow;
-        }
-      }
-      &.ce-fileuploader--outline {
-        color: @white;
-        background: @gradient-cool;
-        border: 0.2rem solid @white;
-        &:hover {
-          background: @inverted-hover; // 15%-ish lighter;
-        }
-        &:active {
-          background: @inverted-active; // 25%-ish lighter
-        }
-        &:focus {
-          box-shadow: 0 0 0 0.5rem @primary-focus-shadow;
-        }
-      }
-    }
-    //////////////////////////
     //       DISABLED       //
     //////////////////////////
     &.ce-fileuploader--disabled {
       pointer-events: none;
+
       &.ce-fileuploader--default {
         background: @focus-gray;
       }
       &.ce-fileuploader--outline {
-        border: 0.2rem solid @focus-gray;
+        background: @focus-gray;
         color: @focus-gray;
       }
     }
   }
 
+  //////////////////////////
+  //        COLORS        //
+  //////////////////////////
+  // Primary
+  .ce-fileuploader--primary {
+    color: @white;
+    background: @gradient-cool;
+
+    &:hover {
+      background: @primary-hover;
+    }
+    &:active {
+      background: @primary-active;
+    }
+    &:focus {
+      color: @primary-focus;
+    }
+
+    &.ce-fileuploader--outline {
+      color: @black;
+      &:hover {
+        color: @primary-hover;
+      }
+      &:active {
+        color: @primary-active;
+      }
+      &:focus {
+        color: @primary-focus;
+      }
+    }
+  }
+  // Secondary
+  .ce-fileuploader--secondary {
+    color: @white;
+    background: @gradient-hot;
+    // States
+    &:hover {
+      background: @secondary-hover;
+    }
+    &:active {
+      background: @secondary-active;
+    }
+    &:focus {
+      color: @primary-focus;
+    }
+
+    &.ce-fileuploader--outline {
+      background: @gradient-hot;
+      color: @black;
+      // States
+      &:hover {
+        color: @secondary-hover;
+      }
+      &:active {
+        color: @secondary-active;
+      }
+      &:focus {
+        color: @secondary-focus;
+      }
+    }
+  }
+  // Black
+  .ce-fileuploader--black {
+    color: @white;
+    background: @black;
+    &:hover {
+      background: @black-hover; // 50%-ish lighter
+    }
+    &:active {
+      background: @black-background; // 30%-ish lighter
+    }
+
+    &.ce-fileuploader--outline {
+      color: @black;
+      &:hover {
+        color: #404040; // 50%-ish lighter
+      }
+      &:active {
+        color: 0.3rem solid #262626; // 30%-ish lighter
+      }
+      &:focus {
+        color: @black-focus;
+      }
+    }
+  }
+  // Inverted
+  .ce-fileuploader--inverted {
+    color: @black;
+    background: @white;
+
+    &:hover {
+      color: @black-hover; // 50%-ish lighter
+    }
+    &:active {
+      color: @black-background; // 30%-ish lighter
+    }
+
+    &.ce-fileuploader--outline {
+      color: @white;
+      background: @white;
+
+      &.ce-filuploader--small {
+        .ce-fileuploader__label-text {
+          background: @gradient-cool;
+        }
+      }
+      &.ce-fileuploader--large {
+        .ce-fileuploader__label-text {
+          background: @gradient-cool;
+        }
+      }
+      &.ce-fileuploader--jumbo {
+        .ce-fileuploader__label-text {
+          background: @gradient-cool;
+        }
+      }
+
+      &:hover {
+        background: @inverted-hover; // 15%-ish lighter;
+      }
+      &:active {
+        background: @inverted-active; // 25%-ish lighter
+      }
+    }
+  }
+
+  //////////////////////////
+  //     OUTLINE TYPE     //
+  //////////////////////////
+  .ce-fileuploader--outline {
+    &.ce-fileuploader--small {
+      .ce-fileuploader__label-text {
+        background: @white;
+      }
+    }
+    &.ce-fileuploader--large {
+      .ce-fileuploader__label-text {
+        background: @white;
+      }
+    }
+    &.ce-fileuploader--jumbo {
+      .ce-fileuploader__label-text {
+        background: @white;
+      }
+    }
+  }
+
+  //////////////////////////
+  //     ERROR STATES     //
+  //////////////////////////
   .ce-fileuploader__error-outline {
     border: 3px solid @error-text;
     padding: 10px;

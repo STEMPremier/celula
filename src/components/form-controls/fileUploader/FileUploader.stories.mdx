@@ -37,7 +37,6 @@ import FileUploader from '.';
       name={text('name', 'fileUploaderWithKnobs', 'FileUploader Options')}
       size={text('size', 'large', 'FileUploader Options')}
       styleType={text('styleType', 'default', 'FileUploader Options')}
-      value={text('value', '', 'FileUploader Options')}
     >{text('children', 'CHILDREN LABEL')}</FileUploader>
   </form>
 </Story>
@@ -51,7 +50,6 @@ import FileUploader from '.';
           {COLORS.map(color => (
             <form id="FileUploader Colors and Types">
               <FileUploader 
-                label="This are the other colors"
                 name="This is a name"
                 color={color}
                 styleType={type}
@@ -73,9 +71,8 @@ import FileUploader from '.';
         <div key={`${size}`}>
           <form id="FileUploader Sizes">
             <FileUploader 
-              label="These are the sizes"
              name="This is a name"
-              size={size}
+            size={size}
            >
             {`${size} File Uploader`}
            </FileUploader>
@@ -92,7 +89,6 @@ import FileUploader from '.';
       {TYPES.map(type => (
             <form id="FileUploader Disabled">
               <FileUploader 
-                label="These are the disabled colors and types"
                 name="This is a name"
                 styleType={type}
                 disabled
@@ -113,7 +109,6 @@ import FileUploader from '.';
       {TYPES.map(type => (
             <form id="FileUploader Error State">
               <FileUploader 
-                label="These are the disabled colors and types"
                 name="This is a name"
                 errorMsg={'You did not choose wisely!'}
                 styleType={type}
