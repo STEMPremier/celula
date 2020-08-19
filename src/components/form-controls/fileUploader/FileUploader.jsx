@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-// import { ErrorBox } from '../core';
-
 import './file-uploader.less';
 
 import {
