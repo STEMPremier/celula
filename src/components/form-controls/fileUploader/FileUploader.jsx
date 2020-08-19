@@ -74,14 +74,15 @@ const FileUploader = ({
         type="file"
         value={fieldValue}
       />
-      {errorMsg && (
-        <div className="ce-fileuploader__error-outline">
-          <label htmlFor={id} className={classes}>
-            <span className="ce-fileuploader__label-text">{children}</span>
-          </label>
+
+      <div className={errorMsg ? 'ce-fileuploader__error-outline' : null}>
+        <label htmlFor={id} className={classes}>
+          <span className="ce-fileuploader__label-text">{children}</span>
+        </label>
+        {errorMsg && (
           <span className="ce-fileuploader__error-text">{errorMsg}</span>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

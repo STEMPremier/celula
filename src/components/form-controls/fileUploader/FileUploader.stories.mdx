@@ -25,15 +25,18 @@ import FileUploader from '.';
 <Story name="FileUplaoder with Knobs" parameters={{ docs: { disable: true } }}>
   <form id="fileUploaderWithKnobForm">
     <FileUploader
+      accept={boolean('accept', false, 'FileUploader Options')}
+      capture={boolean('capture', false, 'FileUploader Options')}
       className={text('className', '', 'FileUploader Options')}
+      color={text('color', 'primary', 'FileUploader Options')}
       disabled={boolean('disabled', false, 'FileUploader Options')}
       errorMsg={text('errorMsg', '', 'FileUploader Options')}
       formId={text('formId', 'fileUploaderWithKnobForm', 'FileUploader Options')}
-      handleClick={action('`FileUploader with Knobs` onChange event triggered.')}
+      handleClick={action('`FileUploader with Knobs` onChange event triggered.')} 
       multiple={boolean('multiple', false, 'FileUploader Options')}
       name={text('name', 'fileUploaderWithKnobs', 'FileUploader Options')}
       size={text('size', 'large', 'FileUploader Options')}
-      styleType={text('styleType', '', 'FileUploader Options')}
+      styleType={text('styleType', 'default', 'FileUploader Options')}
       value={text('value', '', 'FileUploader Options')}
     >{text('children', 'CHILDREN LABEL')}</FileUploader>
   </form>
@@ -67,16 +70,18 @@ import FileUploader from '.';
 <Preview>
   <Story name="FileUploader Sizes">
     {SIZES.map(size => (
-      <form id="FileUploader Sizes">
-      <FileUploader 
-        label="These are the sizes"
-        name="This is a name"
-        size={size}
-      >
-      {`${size} File Uploader`}
-      </FileUploader>
-      </form>
-    ))}
+        <div key={`${size}`}>
+          <form id="FileUploader Sizes">
+            <FileUploader 
+              label="These are the sizes"
+             name="This is a name"
+              size={size}
+           >
+            {`${size} File Uploader`}
+           </FileUploader>
+         </form>
+           </div>
+       ))}
     </Story>
   </Preview>
 
