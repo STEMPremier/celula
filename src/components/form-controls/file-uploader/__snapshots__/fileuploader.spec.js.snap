@@ -2,12 +2,10 @@
 
 exports[`<FileUploader /> render() render the FileUploader component 1`] = `
 <div
-  className="ce-fileuploader"
+  className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--large ce-file-uploader--default"
 >
   <input
     accept=""
-    capture=""
-    className="default"
     disabled={false}
     form=""
     id="test"
@@ -18,11 +16,11 @@ exports[`<FileUploader /> render() render the FileUploader component 1`] = `
     value=""
   />
   <label
-    className="ce-fileuploader__label ce-fileuploader--primary ce-fileuploader--large ce-fileuploader--default"
+    className="ce-file-uploader__button"
     htmlFor="test"
   >
     <span
-      className="ce-fileuploader__label-text"
+      className="ce-file-uploader__label"
     >
       Children
     </span>

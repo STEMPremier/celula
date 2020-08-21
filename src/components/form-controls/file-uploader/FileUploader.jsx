@@ -20,29 +20,28 @@ const FileUploader = ({
   errorMsg,
   formId,
   handleClick: handler,
-  label,
   multiple,
   name,
   size,
-  styleType,
+  type,
 }) => {
   const [fieldValue, setFieldValue] = useState('');
   const [errMsg, setErrMsg] = useState(errorMsg);
 
   const classes = cx(
-    'ce-fileuploader__label',
+    'ce-file-uploader',
     {
-      [`ce-fileuploader--${color}`]: COLORS.includes(
+      [`ce-file-uploader--${color}`]: COLORS.includes(
         color.toString().toLowerCase(),
       ),
-      [`ce-fileuploader--${size}`]: SIZES.includes(
+      [`ce-file-uploader--${size}`]: SIZES.includes(
         size.toString().toLowerCase(),
       ),
-      [`ce-fileuploader--${styleType}`]: TYPES.includes(
-        styleType.toString().toLowerCase(),
+      [`ce-file-uploader--${type}`]: TYPES.includes(
+        type.toString().toLowerCase(),
       ),
-      'ce-fileuploader--disabled': disabled,
-      'ce-fileuploader--error': errMsg,
+      'ce-file-uploader--disabled': disabled,
+      'ce-file-uploader--error': errMsg,
     },
     className,
   );
@@ -60,11 +59,10 @@ const FileUploader = ({
   };
 
   return (
-    <div className="ce-fileuploader">
+    <div className={classes}>
       <input
         accept={accept}
         capture={capture}
-        className={styleType}
         disabled={disabled}
         form={formId}
         id={id}
@@ -74,30 +72,33 @@ const FileUploader = ({
         type="file"
         value={fieldValue}
       />
-
-      <div className={errorMsg ? 'ce-fileuploader__error-outline' : null}>
-        <label htmlFor={id} className={classes}>
-          <span className="ce-fileuploader__label-text">{children}</span>
-        </label>
-        {errorMsg && (
-          <span className="ce-fileuploader__error-text">{errorMsg}</span>
-        )}
-      </div>
+      <label htmlFor={id} className="ce-file-uploader__button">
+        <span className="ce-file-uploader__label">{children}</span>
+      </label>
+      {errorMsg && (
+        <span className="ce-file-uploader__error-text">{errorMsg}</span>
+      )}
     </div>
   );
 };
 
 FileUploader.propTypes = {
   /**
-   * Defines the file types the file input should accept.  Inside the string, create a comma-separated list of unique file type specificiers.  An example would be accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document".
+   * Defines the file types the file input should accept. Inside the string, create a comma-separated list of unique file type specificiers.
+   *
+   * An example would be accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document".
    */
   accept: PropTypes.string,
   /**
-   * Specifies which cameria to use for capture of image or video data, if the accept attribute indicates that the inut should be one of those types.  A value of 'user' indicates that the user-facing camera and/or microphone should be used.  A value of 'enviroment' specifies that the outward-facing camera and/or microphone should be used.  If no value is declared, the use agent is free to decide on its own what to do.
-   */
-  capture: PropTypes.string,
-  /**
+   * Specifies which cameria to use for capture of image or video data, if the accept attribute indicates that the inupt should be one of those types.
    *
+   * A value of 'user' indicates that the user-facing camera and/or microphone should be used.
+   * A value of 'enviroment' specifies that the outward-facing camera and/or microphone should be used.
+   * If no value is declared, the use agent is free to decide on its own what to do.
+   */
+  capture: PropTypes.oneOf([undefined, 'user', 'environment']),
+  /**
+   * The `<FileUploader />` label.
    */
   children: PropTypes.string.isRequired,
   /**
@@ -105,7 +106,7 @@ FileUploader.propTypes = {
    */
   className: PropTypes.string,
   /**
-   *  The color of the `<FileUploader />`.  The choices are primary, secondar, black, and inverted. If not selected it will default to primary.
+   *  The color of the `<FileUploader />`.
    */
   color: PropTypes.string,
   /**
@@ -125,10 +126,6 @@ FileUploader.propTypes = {
    */
   handleClick: PropTypes.func,
   /**
-   * The `<FileUploader />` label.
-   */
-  label: PropTypes.string.isRequired,
-  /**
    * Allow the use to select more than one file.
    */
   multiple: PropTypes.bool,
@@ -141,14 +138,14 @@ FileUploader.propTypes = {
    */
   size: PropTypes.string,
   /**
-   *  The default is the filled-in solid button style and the other option available is 'outline'.
+   *  Which type of `<FileUpload />` to render.
    */
-  styleType: PropTypes.string,
+  type: PropTypes.string,
 };
 
 FileUploader.defaultProps = {
   accept: '',
-  capture: '',
+  capture: undefined,
   className: '',
   color: 'primary',
   disabled: false,
@@ -157,7 +154,7 @@ FileUploader.defaultProps = {
   handleClick: () => {},
   multiple: false,
   size: 'large',
-  styleType: 'default',
+  type: 'default',
 };
 
 export default FileUploader;

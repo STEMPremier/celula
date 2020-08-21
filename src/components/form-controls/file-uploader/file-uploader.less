@@ -1,0 +1,291 @@
+@import '../../../styles/celula';
+
+.ce-file-uploader {
+  border: 3px solid transparent;
+  box-sizing: border-box;
+  clear: both;
+  display: inline-block;
+  padding: 2.5rem;
+  margin-bottom: 0.5rem;
+
+  input {
+    display: none;
+  }
+
+  // Responsive Rules
+  @media screen {
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  .ce-file-uploader__button {
+    border-radius: 3.5rem;
+    border-width: 0;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    // Responsive Rules
+    @media screen {
+      @media (max-width: 76.8rem) {
+        width: 100%;
+      }
+    }
+
+    .ce-file-uploader__label {
+      border-radius: 3.5rem;
+      display: inline-flex;
+      flex: 1;
+      justify-content: center;
+      margin: 0.2rem;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.5rem @button-focus;
+      outline: none;
+    }
+  }
+
+  //////////////////////////
+  //        SIZES         //
+  //////////////////////////
+  &.ce-file-uploader--small {
+    .ce-file-uploader__label {
+      font-size: 1.2rem;
+      padding: 0.85rem 3.8rem;
+    }
+  }
+
+  &.ce-file-uploader--large {
+    .ce-file-uploader__label {
+        font-size: 1.6rem;
+        padding: 1.3rem 5.8rem;
+    }
+  }
+
+  &.ce-file-uploader--jumbo {
+    .ce-file-uploader__label {
+      font-size: 1.6rem;
+      padding: 2.3rem 5.8rem;
+    }
+  }
+
+  &.ce-file-uploader--disabled {
+    pointer-events: none;
+
+    .ce-file-uploader__button {
+      background: @button-disabled-gray !important;
+    }
+
+    &.ce-file-uploader--outline {
+      .ce-file-uploader__label {
+        color: @button-disabled-gray !important;
+      }
+    }
+  }
+
+  /////////////////////
+  //     OUTLINE     //
+  /////////////////////
+  &.ce-file-uploader--outline {
+    .ce-file-uploader__button {
+      .ce-file-uploader__label {
+        background: @white;
+      }
+    }
+  }
+
+  //////////////////////////
+  //        COLORS        //
+  //////////////////////////
+  &.ce-file-uploader--primary {
+    .ce-file-uploader__button {
+      background: @gradient-cool;
+
+      .ce-file-uploader__label {
+        color: @white;
+      }
+
+      &:hover {
+        background: @primary-hover;
+      }
+
+      &:active {
+        background: @primary-active;
+      }
+    }
+
+    &.ce-file-uploader--outline {
+      .ce-file-uploader__button {
+        .ce-file-uploader__label {
+          color: @black;
+
+          &:hover {
+            color: @primary-hover;
+          }
+
+          &:active {
+            color: @primary-active;
+          }
+        }
+      }
+    }
+  }
+
+  &.ce-file-uploader--secondary {
+    .ce-file-uploader__button {
+      background: @gradient-hot;
+
+      .ce-file-uploader__label {
+        color: @white;
+      }
+
+      // States
+      &:hover {
+        background: @secondary-hover;
+      }
+
+      &:active {
+        background: @secondary-active;
+      }
+    }
+
+    &.ce-file-uploader--outline {
+      .ce-file-uploader__button {
+        .ce-file-uploader__label {
+          color: @black;
+
+          &:hover {
+            color: @secondary-hover;
+          }
+
+          &:active {
+            color: @secondary-active;
+          }
+        }
+      }
+    }
+  }
+
+  &.ce-file-uploader--black {
+    .ce-file-uploader__button {
+      background: @black;
+
+      .ce-file-uploader__label {
+        color: @white;
+      }
+
+      // States
+      &:hover {
+        background: @black-hover;
+      }
+
+      &:active {
+        background: @black-active;
+      }
+    }
+
+    &.ce-file-uploader--outline {
+      .ce-file-uploader__button {
+        .ce-file-uploader__label {
+          color: @black;
+
+          &:hover {
+            color: @black-hover;
+          }
+
+          &:active {
+            color: @black-active;
+          }
+        }
+      }
+    }
+  }
+
+  // Inverted Base Colors
+  &.ce-file-uploader--inverted {
+    .ce-file-uploader__button {
+      background: @white;
+
+      .ce-file-uploader__label {
+        color: @black;
+      }
+
+      &:hover {
+        color: @inverted-hover;
+      }
+
+      &:active {
+        color: @inverted-active;
+      }
+    }
+
+    &.ce-file-uploader--outline {
+      .ce-file-uploader__button {
+        .ce-file-uploader__label {
+          background: @gradient-cool;
+          color: @white;
+
+          &:hover {
+            background: @inverted-hover;
+          }
+
+          &:active {
+            background: @inverted-active;
+          }
+        }
+      }
+    }
+  }
+
+  //////////////////////////
+  //     ERROR STATES     //
+  //////////////////////////
+  &.ce-file-uploader--error {
+    border-color: @checked-red;
+    border-radius: 0.5rem;
+
+    .ce-file-uploader__error-text {
+      background-color: @white;
+      color: @checked-red;
+      display: block;
+      float: right;
+      height: 1.6rem;
+      margin-bottom: -3rem;
+      margin-top: 2.2rem;
+      padding: 0 0.3rem;
+    }
+
+    .ce-file-uploader__button {
+      background: @checked-red;
+
+      .ce-file-uploader__label {
+        color: @white;
+      }
+
+      &:hover {
+        background: @error-hover;
+      }
+
+      &:active {
+        background: @error-active;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 0.5rem @error-focus;
+      }
+    }
+
+    &.ce-file-uploader--outline {
+      .ce-file-uploader__button {
+        .ce-file-uploader__label {
+          color: @error-text !important;
+        }
+      }
+    }
+  }
+}

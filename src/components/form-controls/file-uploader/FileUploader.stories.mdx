@@ -1,0 +1,126 @@
+import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { boolean, select, text } from '@storybook/addon-knobs';
+
+import {
+  COLORS,
+  COMPONENT_STATES as STATES,
+  FILEUPLOADER_TYPES as TYPES,
+  SIZES,
+} from '../../../utils/constants';
+
+import FileUploader from '.';
+
+<Meta component={FileUploader} title="Components/Molecules/Form Controls/FileUploader" />
+
+# FileUplaoder
+<Description of={FileUploader} />
+<Props of={FileUploader} />
+
+<Story name="FileUplaoder with Knobs" parameters={{ docs: { disable: true } }}>
+  <form id="fileUploaderWithKnobForm">
+    <FileUploader
+      accept={text('accept', '')}
+      capture={select('capture', ['', 'user', 'environment'])}
+      className={text('className', '')}
+      color={select('color', COLORS, 'primary')}
+      disabled={boolean('disabled', false)}
+      errorMsg={text('errorMsg', '')}
+      formId={text('formId', 'fileUploaderWithKnobForm')}
+      handleClick={action('`FileUploader with Knobs` onChange event triggered.')}
+      multiple={boolean('multiple', false)}
+      name={text('name', 'fileUploaderWithKnobs')}
+      size={select('size', SIZES, 'small')}
+      type={select('type', TYPES, 'default')}
+    >
+      {text('children', 'CHILDREN LABEL')}
+    </FileUploader>
+  </form>
+</Story>
+
+### Types
+<Preview>
+  <Story name="FileUploader Types">
+    <form id="fileUploaderWithTypes">
+      {TYPES.map(type => (
+        <FileUploader
+          accept="*"
+          formId="fileUploaderWithTypes"
+          name={`${type}_uploader`}
+          type={type}
+          key={`${type}_uploader`}
+        >
+          {`${type} Uploader`}
+        </FileUploader>
+      ))}
+    </form>
+  </Story>
+</Preview>
+
+### Sizes
+<Preview>
+  <Story name="FileUploader Sizes">
+    <form id="fileUploaderWithSizes">
+      {SIZES.map(size => (
+        <FileUploader
+          accept="*"
+          formId="fileUploaderWithSizes"
+          name={`${size}_uploader`}
+          size={size}
+          key={`${size}_uploader`}
+        >
+          {`${size} File Uploader`}
+        </FileUploader>
+      ))}
+    </form>
+  </Story>
+</Preview>
+
+### States
+<Preview>
+  <Story name="FileUploader States">
+    <form id="fileUploaderWithStates">
+      {TYPES.map(type => (
+        <div key={`${type}_states`}>
+          {STATES.map(state => (
+            <FileUploader
+              accept="*"
+              disabled={state === 'disabled'}
+              errorMsg={(state === 'error') ? 'This is an error message.' : ''}
+              formId="fileUploaderWithStates"
+              name={`${type}_${state}_uploader`}
+              type={type}
+              key={`${type}_${state}_uploader`}
+            >
+              {`${state} ${type}`}
+            </FileUploader>
+          ))}
+        </div>
+      ))}
+    </form>
+  </Story>
+</Preview>
+
+### Colors
+<Preview>
+  <Story name="FileUploader Colors">
+    <form id="fileUploaderWithColors">
+      {TYPES.map(type => (
+        <div key={`${type}_color`}>
+          {COLORS.map(color => (
+            <FileUploader
+              accept="*"
+              color={color}
+              formId="fileUploaderWithColors"
+              name={`${color}_${type}_uploader`}
+              type={type}
+              key={`${color}_${type}_uploader`}
+            >
+              {`${color} ${type}`}
+            </FileUploader>
+          ))}
+        </div>
+      ))}
+    </form>
+  </Story>
+</Preview>
