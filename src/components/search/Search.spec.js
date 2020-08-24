@@ -8,7 +8,14 @@ import Search from '.';
 describe('<Search />', () => {
   describe('render()', () => {
     test('render the Search component', () => {
-      const wrapper = shallow(<Search label="test label" name="test" />);
+      const wrapper = shallow(
+        <Search
+          handleSearch={value => console.log(value)}
+          label="test label"
+          name="test"
+        />,
+      );
+
       expect(toJson(wrapper)).toMatchSnapshot();
     });
   });
