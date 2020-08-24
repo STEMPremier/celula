@@ -5,7 +5,7 @@ const COLORS = ['primary', 'secondary', 'black', 'inverted'];
 const FILEUPLOADER_TYPES = ['default', 'outline'];
 const INPUT_TYPES = [
   'color',
-  'datetime-local',
+  'date',
   'email',
   'file',
   'hidden',
