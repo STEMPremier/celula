@@ -3,19 +3,16 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import Search from '.';
+import FileUploader from '.';
 
-describe('<Search />', () => {
+describe('<FileUploader />', () => {
   describe('render()', () => {
-    test('render the Search component', () => {
+    test('render the FileUploader component', () => {
       const wrapper = shallow(
-        <Search
-          handleSearch={value => console.log(value)}
-          label="test label"
-          name="test"
-        />,
+        <FileUploader label="test label" name="test">
+          Children
+        </FileUploader>,
       );
-
       expect(toJson(wrapper)).toMatchSnapshot();
     });
   });
