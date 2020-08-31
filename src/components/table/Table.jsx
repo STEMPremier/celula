@@ -8,6 +8,8 @@ import cx from 'classnames';
 
 import './table.less';
 
+import SystemIcon from '../icon/SystemIcon';
+
 const Table = ({
   className,
   handleChange,
@@ -17,9 +19,6 @@ const Table = ({
   rows,
   status,
 }) => {
-  // const [headers, setHeaders] = useState();
-  // const [rows, setRows] = useState();
-
   const classes = cx('ce-table', className);
   const propHeadings = [
     'First Name',
@@ -51,7 +50,14 @@ const Table = ({
 
           {rows.map(rowItems => (
             <tr>
-              <td>{rowItems.status}</td>
+              <td className="ce-table__status-container">
+                <div className="ce-table__status-systemicon">
+                  <SystemIcon name="navigate" color="black" />
+                </div>
+
+                <div className="ce-table__status-circle" />
+                {rowItems.status}
+              </td>
               {rowItems.data.map(rowData => (
                 <td>{rowData}</td>
               ))}

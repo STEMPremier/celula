@@ -5,24 +5,56 @@
   width: 100%;
   //border: 3px solid purple;
 
+  table {
+    border: none;
+  }
+
   tr {
+    border: none;
     padding: 20px;
     //  border: 3px solid black;
     th {
       font-weight: bold;
       background-color: @white;
       color: @black;
+      border-bottom: 1px solid black;
     }
     td {
       padding: 4px;
       border: 1px solid;
+      border: none;
       // background-color: @button-focus;
     }
   }
   tr:nth-child(even) {
-    background-color: @button-focus;
+    background-color: #f1f6f9;
   }
   tr:nth-child(odd) {
     background-color: @white;
+  }
+
+  .ce-table__status-container {
+    display: flex;
+    height: 100%;
+    padding: 10px;
+    .ce-table__status-circle {
+      height: 20px;
+      width: 20px;
+      background-color: #4dc7ff;
+      border-radius: 50%;
+      padding: 10px;
+      z-index: 0;
+    }
+  }
+  .ce-table__status-text {
+    padding: 10px;
+    color: yellow;
+  }
+
+  .ce-table__status-systemicon {
+    z-index: 1;
+    position: absolute;
+    margin-left: 13px;
+    margin-top: 10px;
   }
 }
