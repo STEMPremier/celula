@@ -18,11 +18,12 @@ import Table from '.';
 
 <Story name="Table with Knobs" parameters={{ docs: { disable: true } }}>
   <Table 
-  rows={array('rows', [])}
-  headers={array('headers', [])}
   handleChange={action('onClick event triggered')}
+  headers={array('headers', [])}
   label={text('label', 'This is the label')}
   name={text('name', 'name')}
+  rows={array('rows', [])}
+  status={boolean('status', false)}
   />
 </Story>
 
@@ -62,3 +63,41 @@ import Table from '.';
     />
   </Story>
 </Preview>
+
+### Status Column 
+<Preview>
+  <Story name="Status Column">
+    <Table
+      label="This is a label"
+      name="name"
+      status 
+      headings={[
+    'First Name',
+    'Last Name',
+    'Company',
+    'Job Title',
+    'Age',
+  ]}
+    rows={[
+    {
+      data: ['Jenny', 'Schutzman', 'Tallo', 'Software Engineer', '36'],
+      status: 'complete',
+    },
+    {
+      data: ['David', 'Morrow', 'Gildan', 'Supply Chain Manager', '43'],
+      status: 'in progress',
+    },
+    {
+      data: [
+        'Gina',
+        'Nicholas',
+        'Proctor and Gamble',
+        'Evaluation Data Manager',
+        '34',
+      ],
+      status: 'submitted',
+    },
+  ]}
+    />
+    </Story>
+  </Preview>
