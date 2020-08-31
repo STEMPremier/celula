@@ -1,0 +1,28 @@
+@import '../../styles/celula';
+
+.ce-table {
+  //border-spacing: 0px;
+  width: 100%;
+  //border: 3px solid purple;
+
+  tr {
+    padding: 20px;
+    //  border: 3px solid black;
+    th {
+      font-weight: bold;
+      background-color: @white;
+      color: @black;
+    }
+    td {
+      padding: 4px;
+      border: 1px solid;
+      // background-color: @button-focus;
+    }
+  }
+  tr:nth-child(even) {
+    background-color: @button-focus;
+  }
+  tr:nth-child(odd) {
+    background-color: @white;
+  }
+}

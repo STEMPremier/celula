@@ -1,0 +1,27 @@
+import {
+  Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { boolean, select, text, array } from '@storybook/addon-knobs';
+
+import Table from '.';
+
+<Meta component={Table} title="Components/Atoms/Table" />
+
+# Table
+<Description of={Table} />
+<Props of={Table} />
+
+<Story name="Table with Knobs" parameters={{ docs: { disable: true } }}>
+  <Table 
+  rows={array('rows', [])}
+  headers={array('headers', [])}
+  handleChange={action('onClick event triggered')}
+  label={text('label', 'This is the label')}
+  name={text('name', 'name')}
+  />
+</Story>
