@@ -14,9 +14,9 @@ import './table.less';
 // ACCESS QUICKLY IN THE JSX TABLE TAGS
 // DO ALL LOGIC ABOVE THE RETURN
 
-const Table = ({ className, handleChange, headings, label, name }) => {
-  const [headers, setHeaders] = useState();
-  const [rows, setRows] = useState();
+const Table = ({ className, handleChange, headings, label, name, rows }) => {
+  // const [headers, setHeaders] = useState();
+  // const [rows, setRows] = useState();
 
   const classes = cx('ce-table', className);
   const propHeadings = [
@@ -39,26 +39,26 @@ const Table = ({ className, handleChange, headings, label, name }) => {
   //   }]
   // }]
 
-  const propRows = [
-    {
-      data: ['Jenny', 'Schutzman', 'Tallo', 'Software Engineer', '36'],
-      status: '',
-    },
-    {
-      data: ['David', 'Morrow', 'Gildan', 'Supply Chain Manager', '43'],
-      status: '',
-    },
-    {
-      data: [
-        'Gina',
-        'Nicholas',
-        'Proctor and Gamble',
-        'Evaluation Data Manager',
-        '34',
-      ],
-      status: '',
-    },
-  ];
+  // const propRows = [
+  //   {
+  //     data: ['Jenny', 'Schutzman', 'Tallo', 'Software Engineer', '36'],
+  //     status: '',
+  //   },
+  //   {
+  //     data: ['David', 'Morrow', 'Gildan', 'Supply Chain Manager', '43'],
+  //     status: '',
+  //   },
+  //   {
+  //     data: [
+  //       'Gina',
+  //       'Nicholas',
+  //       'Proctor and Gamble',
+  //       'Evaluation Data Manager',
+  //       '34',
+  //     ],
+  //     status: '',
+  //   },
+  // ];
   // // not sure if I should push it into something visible or map over rows in jsx
   // const row = propRows.map(item => item.data);
   // const rowItems = row.map(item => item);
@@ -118,12 +118,15 @@ const Table = ({ className, handleChange, headings, label, name }) => {
           onChange={handleChange}
           className={classes}
         >
-          <tr>
-            {propHeadings.map(header => (
-              <th>{header}</th>
-            ))}
-          </tr>
-          {propRows.map(rowItems => (
+          {headings && (
+            <tr>
+              {headings.map(header => (
+                <th>{header}</th>
+              ))}
+            </tr>
+          )}
+
+          {rows.map(rowItems => (
             <tr>
               {rowItems.data.map(rowData => (
                 <td>{rowData}</td>
@@ -162,13 +165,13 @@ Table.propTypes = {
   /**
    * oinoinoin
    */
-  // rows: PropTypes.arrayOf(
-  //   PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
-  // ),
+  rows: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
+  ),
 };
 
 Table.defaultProps = {
-  // rows: [''],
+  rows: [''],
   name: '',
   handleChange: () => {},
   className: '',
