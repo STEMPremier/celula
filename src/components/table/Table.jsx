@@ -8,7 +8,9 @@ import cx from 'classnames';
 
 import './table.less';
 
-import SystemIcon from '../icon/SystemIcon';
+// import SystemIcon from '../icon/SystemIcon';
+
+import Checkbox from '../form-controls/checkbox/Checkbox';
 
 const Table = ({
   className,
@@ -19,14 +21,18 @@ const Table = ({
   rows,
   status,
 }) => {
+  const [selectAll, setSelectAll] = useState(false);
+  const [selected, setSelected] = useState(false);
+
+  const onChangeSelectAll = event => {
+    // console.log('event.target.value', event.target.value);
+    setSelectAll(true);
+    setSelected(true);
+  };
+
+  console.log('setSelected', selected);
+
   const classes = cx('ce-table', className);
-  const propHeadings = [
-    'First Name',
-    'Last Name',
-    'Company',
-    'Job Title',
-    'Age',
-  ];
 
   return (
     <div>
@@ -41,7 +47,15 @@ const Table = ({
         >
           {headings && (
             <tr>
-              {status && <th>Status</th>}
+              {/* {status && <th>Status</th>} */}
+              <th>
+                <Checkbox
+                  name="name"
+                  value={selectAll}
+                  checked={selectAll}
+                  handleChange={() => onChangeSelectAll()}
+                />
+              </th>
               {headings.map(header => (
                 <th>{header}</th>
               ))}
@@ -50,13 +64,18 @@ const Table = ({
 
           {rows.map(rowItems => (
             <tr>
-              <td className="ce-table__status-container">
-                <div className="ce-table__status-systemicon">
-                  <SystemIcon name="navigate" color="black" />
-                </div>
-
+              {/* <td className="ce-table__status-container">
+                <SystemIcon name="navigate" color="black" />
                 <div className="ce-table__status-circle" />
                 {rowItems.status}
+              </td> */}
+              <td>
+                <Checkbox
+                  name={rowItems}
+                  value={rowItems}
+                  checked={selected}
+                  handleChange={() => setSelected(true)}
+                />
               </td>
               {rowItems.data.map(rowData => (
                 <td>{rowData}</td>
