@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable react/jsx-indent */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable react/jsx-key */
@@ -11,6 +12,7 @@ import './table.less';
 // import SystemIcon from '../icon/SystemIcon';
 
 import Checkbox from '../form-controls/checkbox/Checkbox';
+import { CheckboxGroup } from '../form-controls/checkbox';
 
 const Table = ({
   className,
@@ -30,6 +32,11 @@ const Table = ({
   };
 
   console.log('setSelected', selected);
+
+  // const handleIndividual = () => {
+
+  //   setSelected(!selected)
+  // }
 
   const classes = cx('ce-table', className);
 
@@ -68,12 +75,12 @@ const Table = ({
                 <div className="ce-table__status-circle" />
                 {rowItems.status}
               </td> */}
-              <td>
+              {/* <div > */}
+              <td key={rowItems.data}>
                 <Checkbox
-                  name={rowItems}
-                  value={rowItems}
+                  name={rowItems.data}
+                  value={rowItems.data}
                   checked={selected}
-                  handleChange={() => setSelected(true)}
                 />
               </td>
               {rowItems.data.map(rowData => (
