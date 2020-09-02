@@ -25,9 +25,8 @@ const Table = ({
   const [selected, setSelected] = useState(false);
 
   const onChangeSelectAll = event => {
-    // console.log('event.target.value', event.target.value);
-    setSelectAll(true);
-    setSelected(true);
+    setSelectAll(!selectAll);
+    setSelected(!selected);
   };
 
   console.log('setSelected', selected);
