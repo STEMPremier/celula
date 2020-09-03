@@ -115,5 +115,12 @@
   "bugs": {
     "url": "https://github.com/STEMPremier/tallo-ui-kit/issues"
   },
-  "homepage": "https://github.com/STEMPremier/tallo-ui-kit#readme"
+  "homepage": "https://github.com/STEMPremier/tallo-ui-kit#readme",
+  "files": [
+    "dist/celula.js",
+    "dist/celula.js.map",
+    "dist/celula.min.css",
+    "dist/celula.min.css.map",
+    "dist/down-arrow.png"
+  ]
 }
