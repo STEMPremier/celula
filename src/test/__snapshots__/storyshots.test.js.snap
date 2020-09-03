@@ -9399,12 +9399,12 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
   </div>
   <div>
     <div
-      className="ce-input ce-input--datetime-local"
+      className="ce-input ce-input--date"
     >
       <label
-        htmlFor="datetime-localInputStandard"
+        htmlFor="dateInputStandard"
       >
-        Label for datetime-local
+        Label for date
       </label>
       
       <div
@@ -9415,14 +9415,14 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
           disabled={false}
           form="inputTypesForm"
           icon=""
-          id="datetime-localInputStandard"
+          id="dateInputStandard"
           max=""
           min=""
-          name="datetime-localInputStandard"
+          name="dateInputStandard"
           onBlur={[Function]}
           onChange={[Function]}
           placeholder=""
-          type="datetime-local"
+          type="date"
           value={null}
         />
         <div
@@ -9445,17 +9445,17 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
       
     </div>
     <div
-      className="ce-input ce-input--datetime-local"
+      className="ce-input ce-input--date"
     >
       <label
-        htmlFor="datetime-localInputHelpText"
+        htmlFor="dateInputHelpText"
       >
-        Label for datetime-local
+        Label for date
       </label>
       <div
         className="ce-input__help-text"
       >
-        Help text for datetime-local
+        Help text for date
       </div>
       <div
         className="ce-input__container"
@@ -9465,14 +9465,14 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
           disabled={false}
           form="inputTypesForm"
           icon=""
-          id="datetime-localInputHelpText"
+          id="dateInputHelpText"
           max=""
           min=""
-          name="datetime-localInputHelpText"
+          name="dateInputHelpText"
           onBlur={[Function]}
           onChange={[Function]}
           placeholder=""
-          type="datetime-local"
+          type="date"
           value={null}
         />
         <div
@@ -9495,12 +9495,12 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
       
     </div>
     <div
-      className="ce-input ce-input--datetime-local"
+      className="ce-input ce-input--date"
     >
       <label
-        htmlFor="datetime-localInputIcon"
+        htmlFor="dateInputIcon"
       >
-        Label for datetime-local
+        Label for date
       </label>
       
       <div
@@ -9525,14 +9525,14 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
           disabled={false}
           form="inputTypesForm"
           icon="edit"
-          id="datetime-localInputIcon"
+          id="dateInputIcon"
           max=""
           min=""
-          name="datetime-localInputIcon"
+          name="dateInputIcon"
           onBlur={[Function]}
           onChange={[Function]}
           placeholder=""
-          type="datetime-local"
+          type="date"
           value={null}
         />
         <div
@@ -9555,12 +9555,12 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
       
     </div>
     <div
-      className="ce-input ce-input--datetime-local"
+      className="ce-input ce-input--date"
     >
       <label
-        htmlFor="datetime-localInputButton"
+        htmlFor="dateInputButton"
       >
-        Label for datetime-local
+        Label for date
       </label>
       
       <div
@@ -9571,14 +9571,14 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
           disabled={false}
           form="inputTypesForm"
           icon=""
-          id="datetime-localInputButton"
+          id="dateInputButton"
           max=""
           min=""
-          name="datetime-localInputButton"
+          name="dateInputButton"
           onBlur={[Function]}
           onChange={[Function]}
           placeholder=""
-          type="datetime-local"
+          type="date"
           value={null}
         />
         <div
