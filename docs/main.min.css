@@ -15,6 +15,7 @@
 @import url(https://use.typekit.net/gww8gqf.css);
 @import url(https://use.typekit.net/gww8gqf.css);
 @import url(https://use.typekit.net/gww8gqf.css);
+@import url(https://use.typekit.net/gww8gqf.css);
 html,
 body,
 div,
@@ -784,25 +785,25 @@ ol {
   color: #00b0ff;
 }
 .ce-link.ce-link--primary:hover {
-  color: #008dd2;
+  color: #007ab2;
 }
 .ce-link.ce-link--primary:focus {
-  color: #006999;
+  color: #005883;
 }
 .ce-link.ce-link--primary:active {
-  color: #006999;
+  color: #00577f;
 }
 .ce-link.ce-link--secondary {
   color: #ff0054;
 }
 .ce-link.ce-link--secondary:hover {
-  color: #bc178f;
+  color: #b3003a;
 }
 .ce-link.ce-link--secondary:focus {
-  color: #900086;
+  color: #900068;
 }
 .ce-link.ce-link--secondary:active {
-  color: #900086;
+  color: #80002a;
 }
 .ce-link.ce-link--black {
   color: #000;
@@ -1603,13 +1604,13 @@ button {
   color: #007ab2;
 }
 .ce-button--primary.ce-button--text:hover {
-  color: #008dd2;
+  color: #007ab2;
 }
 .ce-button--primary.ce-button--text:active {
-  color: #006999;
+  color: #00577f;
 }
 .ce-button--primary.ce-button--text:focus {
-  color: #006999;
+  color: #005883;
 }
 .ce-button--primary.ce-button--text.ce-button--disabled {
   color: #ccc;
@@ -1644,13 +1645,13 @@ button {
   color: #982d7c;
 }
 .ce-button--secondary.ce-button--text:hover {
-  color: #bc178f;
+  color: #b3003a;
 }
 .ce-button--secondary.ce-button--text:active {
-  color: #900086;
+  color: #80002a;
 }
 .ce-button--secondary.ce-button--text:focus {
-  color: #900086;
+  color: #900068;
 }
 .ce-button--secondary.ce-button--text.ce-button--disabled {
   color: #ccc;
@@ -4314,6 +4315,504 @@ ol {
  * Disabled Select,
  * Checked/Unchecked Disabled Switch
  */
+.ce-file-uploader {
+  border: 3px solid transparent;
+  box-sizing: border-box;
+  clear: both;
+  display: inline-block;
+  padding: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.ce-file-uploader input {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .ce-file-uploader {
+    width: 100%;
+  }
+}
+.ce-file-uploader .ce-file-uploader__button {
+  border-radius: 3.5rem;
+  border-width: 0;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 76.8rem) {
+  .ce-file-uploader .ce-file-uploader__button {
+    width: 100%;
+  }
+}
+.ce-file-uploader .ce-file-uploader__button .ce-file-uploader__label {
+  border-radius: 3.5rem;
+  display: inline-flex;
+  flex: 1;
+  justify-content: center;
+  margin: 0.2rem;
+}
+.ce-file-uploader .ce-file-uploader__button:focus {
+  box-shadow: 0 0 0 0.5rem #b2e7ff;
+  outline: none;
+}
+.ce-file-uploader.ce-file-uploader--small .ce-file-uploader__label {
+  font-size: 1.2rem;
+  padding: 0.85rem 3.8rem;
+}
+.ce-file-uploader.ce-file-uploader--large .ce-file-uploader__label {
+  font-size: 1.6rem;
+  padding: 1.3rem 5.8rem;
+}
+.ce-file-uploader.ce-file-uploader--jumbo .ce-file-uploader__label {
+  font-size: 1.6rem;
+  padding: 2.3rem 5.8rem;
+}
+.ce-file-uploader.ce-file-uploader--disabled {
+  pointer-events: none;
+}
+.ce-file-uploader.ce-file-uploader--disabled .ce-file-uploader__button {
+  background: #ccc !important;
+}
+.ce-file-uploader.ce-file-uploader--disabled.ce-file-uploader--outline .ce-file-uploader__label {
+  color: #ccc !important;
+}
+.ce-file-uploader.ce-file-uploader--outline .ce-file-uploader__button .ce-file-uploader__label {
+  background: #fff;
+}
+.ce-file-uploader.ce-file-uploader--primary .ce-file-uploader__button {
+  background: linear-gradient(317.58deg, #6645ad 0%, #2d71be 100%);
+}
+.ce-file-uploader.ce-file-uploader--primary .ce-file-uploader__button .ce-file-uploader__label {
+  color: #fff;
+}
+.ce-file-uploader.ce-file-uploader--primary .ce-file-uploader__button:hover {
+  background: #007ab2;
+}
+.ce-file-uploader.ce-file-uploader--primary .ce-file-uploader__button:active {
+  background: #00577f;
+}
+.ce-file-uploader.ce-file-uploader--primary.ce-file-uploader--outline .ce-file-uploader__button .ce-file-uploader__label {
+  color: #000;
+}
+.ce-file-uploader.ce-file-uploader--primary.ce-file-uploader--outline .ce-file-uploader__button .ce-file-uploader__label:hover {
+  color: #007ab2;
+}
+.ce-file-uploader.ce-file-uploader--primary.ce-file-uploader--outline .ce-file-uploader__button .ce-file-uploader__label:active {
+  color: #00577f;
+}
+.ce-file-uploader.ce-file-uploader--secondary .ce-file-uploader__button {
+  background: linear-gradient(317.58deg, #62248d 0%, #c4356e 100%);
+}
+.ce-file-uploader.ce-file-uploader--secondary .ce-file-uploader__button .ce-file-uploader__label {
+  color: #fff;
+}
+.ce-file-uploader.ce-file-uploader--secondary .ce-file-uploader__button:hover {
+  background: #b3003a;
+}
+.ce-file-uploader.ce-file-uploader--secondary .ce-file-uploader__button:active {
+  background: #80002a;
+}
+.ce-file-uploader.ce-file-uploader--secondary.ce-file-uploader--outline .ce-file-uploader__button .ce-file-uploader__label {
+  color: #000;
+}
+.ce-file-uploader.ce-file-uploader--secondary.ce-file-uploader--outline .ce-file-uploader__button .ce-file-uploader__label:hover {
+  color: #b3003a;
+}
+.ce-file-uploader.ce-file-uploader--secondary.ce-file-uploader--outline .ce-file-uploader__button .ce-file-uploader__label:active {
+  color: #80002a;
+}
+.ce-file-uploader.ce-file-uploader--black .ce-file-uploader__button {
+  background: #000;
+}
+.ce-file-uploader.ce-file-uploader--black .ce-file-uploader__button .ce-file-uploader__label {
+  color: #fff;
+}
+.ce-file-uploader.ce-file-uploader--black .ce-file-uploader__button:hover {
+  background: #404040;
+}
+.ce-file-uploader.ce-file-uploader--black .ce-file-uploader__button:active {
+  background: #262626;
+}
+.ce-file-uploader.ce-file-uploader--black.ce-file-uploader--outline .ce-file-uploader__button .ce-file-uploader__label {
+  color: #000;
+}
+.ce-file-uploader.ce-file-uploader--black.ce-file-uploader--outline .ce-file-uploader__button .ce-file-uploader__label:hover {
+  color: #404040;
+}
+.ce-file-uploader.ce-file-uploader--black.ce-file-uploader--outline .ce-file-uploader__button .ce-file-uploader__label:active {
+  color: #262626;
+}
+.ce-file-uploader.ce-file-uploader--inverted .ce-file-uploader__button {
+  background: #fff;
+}
+.ce-file-uploader.ce-file-uploader--inverted .ce-file-uploader__button .ce-file-uploader__label {
+  color: #000;
+}
+.ce-file-uploader.ce-file-uploader--inverted .ce-file-uploader__button:hover {
+  color: #4a4396;
+}
+.ce-file-uploader.ce-file-uploader--inverted .ce-file-uploader__button:active {
+  color: #3e3e85;
+}
+.ce-file-uploader.ce-file-uploader--inverted.ce-file-uploader--outline .ce-file-uploader__button .ce-file-uploader__label {
+  background: linear-gradient(317.58deg, #6645ad 0%, #2d71be 100%);
+  color: #fff;
+}
+.ce-file-uploader.ce-file-uploader--inverted.ce-file-uploader--outline .ce-file-uploader__button .ce-file-uploader__label:hover {
+  background: #4a4396;
+}
+.ce-file-uploader.ce-file-uploader--inverted.ce-file-uploader--outline .ce-file-uploader__button .ce-file-uploader__label:active {
+  background: #3e3e85;
+}
+.ce-file-uploader.ce-file-uploader--error {
+  border-color: #e5004b;
+  border-radius: 0.5rem;
+}
+.ce-file-uploader.ce-file-uploader--error .ce-file-uploader__error-text {
+  background-color: #fff;
+  color: #e5004b;
+  display: block;
+  float: right;
+  height: 1.6rem;
+  margin-bottom: -3rem;
+  margin-top: 2.2rem;
+  padding: 0 0.3rem;
+}
+.ce-file-uploader.ce-file-uploader--error .ce-file-uploader__button {
+  background: #e5004b;
+}
+.ce-file-uploader.ce-file-uploader--error .ce-file-uploader__button .ce-file-uploader__label {
+  color: #fff;
+}
+.ce-file-uploader.ce-file-uploader--error .ce-file-uploader__button:hover {
+  background: #e5004b;
+}
+.ce-file-uploader.ce-file-uploader--error .ce-file-uploader__button:active {
+  background: #cc0043;
+}
+.ce-file-uploader.ce-file-uploader--error .ce-file-uploader__button:focus {
+  box-shadow: 0 0 0 0.5rem #ffccdc;
+}
+.ce-file-uploader.ce-file-uploader--error.ce-file-uploader--outline .ce-file-uploader__button .ce-file-uploader__label {
+  color: #e5004b !important;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+ * Font Guide: To get [Font Name] use the corresponding rules.
+ *
+ * Proxima Nova Black
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 900;
+ * font-style: normal;
+ *
+ * Proxima Nova Extrabold
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 800;
+ * font-style: normal;
+ *
+ * Proxima Nova Regular
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 400;
+ * font-style: normal;
+ *
+ * Proxima Nova Italic
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 400;
+ * font-style: italic;
+ *
+ * Proxima Nova Light
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 300;
+ * font-style: normal;
+ *
+ * Proxima Nova Light Italic
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 300;
+ * font-style: italic;
+ *
+ * Proxima Nova Medium Italic
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 500;
+ * font-style: italic;
+ */
+html {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+}
+body {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.6rem;
+}
+h1 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 9rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 9rem;
+}
+h2 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 6.7rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 6.2rem;
+}
+h3 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 5.1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 5.1rem;
+}
+h4 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 3.9rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 3.9rem;
+}
+h5 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 2.8rem;
+}
+h6 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 2.1rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 2.1rem;
+}
+p,
+span {
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+p.small,
+span.small {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+p.large,
+span.large {
+  font-size: 1.9rem;
+  line-height: 2.6rem;
+}
+blockquote {
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+ul,
+ol {
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+.subheading {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 800;
+}
+.subheading.small {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.hero {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 12rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 10rem;
+}
+.hero.large {
+  font-size: 15rem;
+  line-height: 12rem;
+}
+.pull-quote {
+  font-family: proxima-nova, sans-serif;
+  font-size: 2.8rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 4rem;
+}
+.caption {
+  font-family: proxima-nova, sans-serif;
+  font-size: 2.1rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 2.2rem;
+}
+.caption.small {
+  font-size: 1.6rem;
+}
+.primary-text {
+  color: rgba(0, 0, 0, 0.87);
+}
+.primary-text.inverted {
+  color: #ffffff;
+}
+.secondary-text {
+  color: rgba(0, 0, 0, 0.6);
+}
+.secondary-text.inverted {
+  color: rgba(255, 255, 255, 0.7);
+}
+.help-text {
+  color: rgba(0, 0, 0, 0.38);
+}
+.help-text.inverted {
+  color: rgba(255, 255, 255, 0.5);
+}
+/* Grayscale
+ * #fff - #000 in [various]% steps
+ * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
+ */
+/* Checked/Unchecked Disabled Radio,
+ * Checked/Unchecked Disabled Checkbox,
+ * Disabled Select,
+ * Checked/Unchecked Disabled Switch
+ */
 .ce-input label {
   color: rgba(0, 0, 0, 0.6);
   display: block;
@@ -4365,7 +4864,7 @@ ol {
   outline: none;
 }
 .ce-input .ce-input__container input[type="month"]::-webkit-calendar-picker-indicator,
-.ce-input .ce-input__container input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+.ce-input .ce-input__container input[type="date"]::-webkit-calendar-picker-indicator,
 .ce-input .ce-input__container input[type="time"]::-webkit-calendar-picker-indicator {
   background: none;
 }
