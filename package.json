@@ -97,7 +97,16 @@
     "style",
     "documentation"
   ],
-  "author": "Tallo Inc., Engineering",
+  "author": {
+    "name": "Ian Greulich",
+    "email": "igreulich@tallo.com"
+  },
+  "contributors": [
+    {
+      "name": "Jenny Schutzman",
+      "email": "jschutzman@tallo.com"
+    }
+  ],
   "engines": {
     "node": "10.x",
     "yarn": "1.x"
