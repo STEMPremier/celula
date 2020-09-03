@@ -1,5 +1,5 @@
 {
-  "name": "celula",
+  "name": "@talloinc/celula",
   "version": "0.1.0",
   "description": "Tallo Inc.'s React component library and ui documentation",
   "main": "dist/celula.js",
@@ -67,7 +67,7 @@
     "react": "^16.10.2"
   },
   "scripts": {
-    "build": "yarn run prebuild && yarn run build:components && yarn run build:styleguide",
+    "build": "npm run prebuild && npm run build:components",
     "build:components": "NODE_ENV=production webpack -p",
     "build:icons": "svg-sprite-generate -d src/components/icon/icons -o src/components/icon/icons/icons.svg",
     "build:styleguide": "build-storybook -c .storybook -o docs",
@@ -75,7 +75,7 @@
     "lint:check": "eslint \"**/*.{js,jsx}\"",
     "lint:fix": "eslint --fix \"**/*.{js,jsx}\"",
     "optimize:icons": "node src/utils/svgOptimize.js",
-    "prebuild": "yarn run pretty:fix && yarn lint:fix",
+    "prebuild": "npm run pretty:fix && npm lint:fix",
     "pretty:check": "prettier --check \"**/*.{js,jsx}\"",
     "pretty:fix": "prettier --write \"**/*.{js,jsx}\"",
     "start": "start-storybook -p 6006",
@@ -97,7 +97,16 @@
     "style",
     "documentation"
   ],
-  "author": "Tallo Inc., Engineering",
+  "author": {
+    "name": "Ian Greulich",
+    "email": "igreulich@tallo.com"
+  },
+  "contributors": [
+    {
+      "name": "Jenny Schutzman",
+      "email": "jschutzman@tallo.com"
+    }
+  ],
   "engines": {
     "node": "10.x",
     "yarn": "1.x"
@@ -106,5 +115,12 @@
   "bugs": {
     "url": "https://github.com/STEMPremier/tallo-ui-kit/issues"
   },
-  "homepage": "https://github.com/STEMPremier/tallo-ui-kit#readme"
+  "homepage": "https://github.com/STEMPremier/tallo-ui-kit#readme",
+  "files": [
+    "dist/celula.js",
+    "dist/celula.js.map",
+    "dist/celula.min.css",
+    "dist/celula.min.css.map",
+    "dist/down-arrow.png"
+  ]
 }
