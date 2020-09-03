@@ -32,9 +32,7 @@ const Input = ({
   const [fieldValue, setFieldValue] = useState(initialValue);
   const [errMsg, setErrMsg] = useState(errorMsg);
   const [isDate, setIsDate] = useState(
-    htmlType === 'month' ||
-      htmlType === 'datetime-local' ||
-      htmlType === 'week',
+    htmlType === 'month' || htmlType === 'date' || htmlType === 'week',
   );
 
   const id = `${name}`;
@@ -56,9 +54,7 @@ const Input = ({
 
   useEffect(() => {
     setIsDate(
-      htmlType === 'month' ||
-        htmlType === 'datetime-local' ||
-        htmlType === 'week',
+      htmlType === 'month' || htmlType === 'date' || htmlType === 'week',
     );
   }, [htmlType]);
 
