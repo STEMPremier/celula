@@ -48,15 +48,16 @@ const Table = ({
       name={name}
       onChange={handleChange}
     >
- 
       <div className="ce-table__container-desktop">
         <div className="ce-table__header-row">
+        <Checkbox name="headerCheckbox" value={selectAll} checked={selectAll} handleChange={() => onChangeSelectAll()} />
           {headings.map(header => (
             <div className="ce-table__header-cell">{header}</div>
           ))}
         </div>
           {rows.map(rowItems => (
              <div className="ce-table__data-row">
+               <Checkbox name="rowCheckbox" value={rowItems.data} checked={selected} />
               {rowItems.data.map(rowData => (
                  <div className="ce-table__data-cell ">
                 {rowData} 
@@ -68,13 +69,10 @@ const Table = ({
       
       
       <div className="ce-table__container-mobile">
-        <div className="ce-table__mobile-card">
-        {/* {headings.map(mobileHeading => (
-               <div className="ce-table__mobile-headings">{mobileHeading}</div>
-               ))} */}
-        
+        <div className="ce-table__mobile-row">
         {rows.map(rowItems => (
              <div className="ce-table__mobile-card-container">
+               <Checkbox name="name" value={rowItems.data} checked={selected} />
                <div className="ce-table__mobile-headings">
                   {headings.map(mobileHeading => (
                      <span>{mobileHeading}</span>
@@ -89,25 +87,7 @@ const Table = ({
            )
           )}
         </div>
-        {/* <h1>holding</h1> */}
       </div>
-
-      {/* <div className="ce-table__container-mobile">
-        <div className="ce-table__header-row">
-          {headings.map(header => (
-            <div className="ce-table__header-cell">{header}</div>
-          ))}
-        </div>
-          {rows.map(rowItems => (
-             <div className="ce-table__data-row">
-              {rowItems.data.map(rowData => (
-                 <div className="ce-table__data-cell ">
-                {rowData} 
-                 </div>
-              ))}
-             </div>
-          ))}
-      </div> */}
     </div>
   );
 };

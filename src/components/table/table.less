@@ -10,33 +10,61 @@
 
     .ce-table__header-row{
       display:flex;
-      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid @gray;
+      // flex-direction: row;
      }
 
      .ce-table__header-cell{  
-      align-items: center;
-      padding: 10px;
-      margin: 10px;
-      color:white;
-      background-color: blue;
+
+      // align-items: center;
+      padding-top: 10px;
+      // margin: 10px;
+      font-weight:bold;
+      background-color: @white;
       align-items:stretch;
       width: 100%;
+  
      }
 
      .ce-table__data-row{
+      align-items: center;
+      justify-content: center;
       display:flex;
       flex-direction: row;
-     }
+      }
+
+      .ce-table__data-row:nth-child(even){
+        background-color: #f1f6f9;
+        &:hover {
+          background-color: #E6F7FF;
+         }
+         &:active {
+          background-color: #CCEFFF;
+          }
+      }
+      .ce-table__data-row:nth-child(odd){
+        background-color: @white;
+        &:hover {
+          background-color: #E6F7FF;
+         }
+         &:active {
+          background-color: #CCEFFF;
+          }
+      }
+      
 
      .ce-table__data-cell{
       align-items: center;
       flex-basis: auto;
       padding: 10px;
-      margin: 10px;
-      background-color: yellow;
+      // margin: 10px;
+      // background-color: yellow;
       align-items:stretch;
       width: 100%;
      }
+
 
 
   }
@@ -44,8 +72,8 @@
   .ce-table__container-mobile {
     margin-top:40px;
     display:flex;
-    // flex-direction: column;
-    .ce-table__mobile-card {
+   
+    .ce-table__mobile-row {
       background-color: grey;
       width: 100%;
       border: 5px solid yellow;
@@ -54,11 +82,9 @@
 
       .ce-table__mobile-card-container{
         display:flex;
-        // flex-direction: column;
-        // flex-wrap:wrap;
         border: 10px solid black;
+
         .ce-table__mobile-headings{
-          // margin-top:40px;
           display: flex;
           flex-direction: column;
           border: 3px solid white;
@@ -68,7 +94,7 @@
             background-color: red;
         }
       }
-      }
+    }
 
 
 
