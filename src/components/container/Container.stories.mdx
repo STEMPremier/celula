@@ -1,4 +1,4 @@
-import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
 import { boolean, select } from '@storybook/addon-knobs';
 
 import Container from '.';
@@ -7,7 +7,7 @@ import Container from '.';
 
 # Container
 <Description of={Container} />
-<Props of={Container} />
+<ArgsTable of={Container} />
 
 <Story name="Container with Knobs" parameters={{ docs: { disable: true } }}>
   <Container
@@ -18,31 +18,64 @@ import Container from '.';
   </Container>
 </Story>
 
-### Types of Spacing
-<Preview>
-  <Story name="Container Spacing">
-    {['margin', 'padding', 'none'].map(spacer => (
-      <Container
-        border={true}
-        gap={spacer}
-        key={spacer}
-      >
-        <span>This is stuff in a container with {spacer}.</span>
-      </Container>
-    ))}
+## Spacing
+### Margin
+<Canvas>
+  <Story name="Margin Gap (Default)">
+    <Container
+      border={true}
+      gap="margin"
+    >
+      <span>This is stuff in a container with margin.</span>
+    </Container>
   </Story>
-</Preview>
+</Canvas>
 
-### Border
-<Preview>
-  <Story name="Container Border">
-    {[false, true].map(border => (
-      <Container
-        border={border}
-        key={`${border}`}
-      >
-        <span>This is stuff in a container.</span>
-      </Container>
-    ))}
+### Padding
+<Canvas>
+  <Story name="Padding Gap">
+    <Container
+      border={true}
+      gap="padding"
+    >
+      <span>This is stuff in a container with padding.</span>
+    </Container>
   </Story>
-</Preview>
+</Canvas>
+
+### None
+<Canvas>
+  <Story name="No Gap">
+    <Container
+      border={true}
+      gap="none"
+    >
+      <span>This is stuff in a container with no gap.</span>
+    </Container>
+  </Story>
+</Canvas>
+
+## Border
+### With
+<Canvas>
+  <Story name="Border">
+    <Container
+      border={true}
+      gap="padding"
+    >
+      <span>This is stuff in a container.</span>
+    </Container>
+  </Story>
+</Canvas>
+
+### Without
+<Canvas>
+  <Story name="No Border (Default)">
+    <Container
+      border={false}
+      gap="padding"
+    >
+      <span>This is stuff in a container.</span>
+    </Container>
+  </Story>
+</Canvas>

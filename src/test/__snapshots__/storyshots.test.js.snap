@@ -904,55 +904,14 @@ exports[`Storyshots Components/Atoms/Button Text Small 1`] = `
 </button>
 `;
 
-exports[`Storyshots Components/Atoms/Container Container Border 1`] = `
-Array [
-  <div
-    className="ce-container ce-container__margin"
-  >
-    <span>
-      This is stuff in a container.
-    </span>
-  </div>,
-  <div
-    className="ce-container ce-container__border ce-container__margin"
-  >
-    <span>
-      This is stuff in a container.
-    </span>
-  </div>,
-]
-`;
-
-exports[`Storyshots Components/Atoms/Container Container Spacing 1`] = `
-Array [
-  <div
-    className="ce-container ce-container__border ce-container__margin"
-  >
-    <span>
-      This is stuff in a container with 
-      margin
-      .
-    </span>
-  </div>,
-  <div
-    className="ce-container ce-container__border ce-container__padding"
-  >
-    <span>
-      This is stuff in a container with 
-      padding
-      .
-    </span>
-  </div>,
-  <div
-    className="ce-container ce-container__border"
-  >
-    <span>
-      This is stuff in a container with 
-      none
-      .
-    </span>
-  </div>,
-]
+exports[`Storyshots Components/Atoms/Container Border 1`] = `
+<div
+  className="ce-container ce-container__border ce-container__padding"
+>
+  <span>
+    This is stuff in a container.
+  </span>
+</div>
 `;
 
 exports[`Storyshots Components/Atoms/Container Container with Knobs 1`] = `
@@ -961,6 +920,46 @@ exports[`Storyshots Components/Atoms/Container Container with Knobs 1`] = `
 >
   <span>
     This is stuff in a container.
+  </span>
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/Container Margin Gap (Default) 1`] = `
+<div
+  className="ce-container ce-container__border ce-container__margin"
+>
+  <span>
+    This is stuff in a container with margin.
+  </span>
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/Container No Border (Default) 1`] = `
+<div
+  className="ce-container ce-container__padding"
+>
+  <span>
+    This is stuff in a container.
+  </span>
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/Container No Gap 1`] = `
+<div
+  className="ce-container ce-container__border"
+>
+  <span>
+    This is stuff in a container with no gap.
+  </span>
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/Container Padding Gap 1`] = `
+<div
+  className="ce-container ce-container__border ce-container__padding"
+>
+  <span>
+    This is stuff in a container with padding.
   </span>
 </div>
 `;
