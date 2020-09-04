@@ -1,5 +1,5 @@
 const ALERT_TYPES = ['info', 'warning', 'error', 'success'];
-const BUTTON_TYPES = ['default', 'outline', 'text'];
+const BUTTON_TYPES = ['solid', 'outline', 'text'];
 const COMPONENT_STATES = ['default', 'disabled', 'error'];
 const COLORS = ['primary', 'secondary', 'black', 'inverted'];
 const FILEUPLOADER_TYPES = ['default', 'outline'];

@@ -87,7 +87,7 @@ Button.defaultProps = {
   disabled: false,
   htmlType: 'button',
   size: 'large',
-  type: 'default',
+  type: 'solid',
 };
 
 export default Button;
