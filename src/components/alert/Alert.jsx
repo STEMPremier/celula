@@ -22,14 +22,14 @@ function allLinkOptions(props, propName, componentName = 'Alert') {
   // We have linkName but not address
   if (linkOptions.linkName && !linkOptions.address) {
     error = new Error(
-      `Invalid prop linkOptions. You must supply both linkName and address inside the object.`,
+      `Invalid prop linkOptions. You must supply both the linkName and address properties.`,
     );
   }
 
   // We have address, but not link name
   if (!linkOptions.linkName && linkOptions.address) {
     error = new Error(
-      `Invalid prop linkOptions. You must supply both linkName and address inside the object.`,
+      `Invalid prop linkOptions. You must supply both the linkName and address properties.`,
     );
   }
 
@@ -119,7 +119,40 @@ Alert.propTypes = {
   /**
    * You can choose any of the System Icons to display on the left hand side of the `<Alert />` box.  See the icons sections for a full list of System Icons.
    */
-  icon: PropTypes.oneOf(['', ...ICONS]),
+  // icon: PropTypes.oneOf(['', ...ICONS]),
+  icon: PropTypes.oneOf([
+    '',
+    'share',
+    'preview',
+    'export',
+    'follow',
+    'message',
+    'badges',
+    'website',
+    'edit',
+    'clear',
+    'navigate',
+    'down',
+    'up',
+    'user',
+    'visibility',
+    'help',
+    'close',
+    'calendar',
+    'warning',
+    'add',
+    'filter',
+    'menu',
+    'search',
+    'tutorial',
+    'yes',
+    'no',
+    'hobby',
+    'interest',
+    'outdoor',
+    'indoor',
+    'popular',
+  ]),
   /**
    * The linkOptions configures the optional `<Link />` component to the right of the `<Alert />`.  Both `linkName` and `address` are required for the `<Link />` component to appear.
    * `linkName` is the text that will appear as the `<Link />` itself.
@@ -131,9 +164,10 @@ Alert.propTypes = {
    */
   text: PropTypes.string.isRequired,
   /**
-   * The `<Alert />` has 4 type options to choose from: info, warning, error, and success.  Each is represented as a string in the TYPES array.  The selection of the type determines the color of the alert.
+   * Which type of `<Alert />` to render.
    */
-  type: PropTypes.oneOf(TYPES),
+  // type: PropTypes.oneOf(TYPES),
+  type: PropTypes.oneOf(['info', 'warning', 'error', 'success']),
 };
 
 Alert.defaultProps = {
