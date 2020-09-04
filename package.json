@@ -1,6 +1,6 @@
 {
   "name": "@talloinc/celula",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Tallo Inc.'s React component library and ui documentation",
   "main": "dist/celula.js",
   "dependencies": {
@@ -111,7 +111,7 @@
     "node": "10.x",
     "yarn": "1.x"
   },
-  "license": "ISC",
+  "license": "SEE LICENSE IN LICENSE.txt",
   "bugs": {
     "url": "https://github.com/STEMPremier/tallo-ui-kit/issues"
   },
