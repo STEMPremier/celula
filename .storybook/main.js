@@ -8,7 +8,7 @@ const plugins = [];
 module.exports = {
   addons: [
     '@storybook/addon-actions',
-    '@storybook/addon-a11y/register',
+    '@storybook/addon-a11y',
     '@storybook/addon-knobs/register',
     '@storybook/addon-viewport/register',
     '@storybook/addon-docs',
