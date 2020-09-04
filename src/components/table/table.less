@@ -1,56 +1,270 @@
 @import '../../styles/celula';
 
 .ce-table {
-  //border-spacing: 0px;
-  width: 100%;
-  //border: 3px solid purple;
+  // 4th attempt at structure rewrite
 
-  table {
-    border: none;
-  }
-
-  tr {
-    border: none;
-    padding: 20px;
-    //  border: 3px solid black;
-    th {
-      font-weight: bold;
-      background-color: @white;
-      color: @black;
-      border-bottom: 1px solid black;
-      padding: 10px;
-    }
-    td {
-      padding: 10px;
-      border: 1px solid;
-      border: none;
-      margin-bottom: 15%;
-      // background-color: @button-focus;
-    }
-  }
-  tr:nth-child(even) {
-    background-color: #f1f6f9;
-  }
-  tr:nth-child(odd) {
-    background-color: @white;
-  }
-
-  .ce-table__status-container {
+  .ce-table__container-desktop{
     display: flex;
-    .ce-table__status-circle {
-      height: 20px;
-      width: 20px;
-      background-color: #4dc7ff;
-      border-radius: 50%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    .ce-table__header-row{
+      display:flex;
+      flex-direction: row;
+     }
+
+     .ce-table__header-cell{  
+      align-items: center;
       padding: 10px;
-      z-index: 0;
-    }
+      margin: 10px;
+      color:white;
+      background-color: blue;
+      align-items:stretch;
+      width: 100%;
+     }
+
+     .ce-table__data-row{
+      display:flex;
+      flex-direction: row;
+     }
+
+     .ce-table__data-cell{
+      align-items: center;
+      flex-basis: auto;
+      padding: 10px;
+      margin: 10px;
+      background-color: yellow;
+      align-items:stretch;
+      width: 100%;
+     }
+
+
   }
 
-  .ce-table__status-systemicon {
-    z-index: 1;
-    position: absolute;
-    margin-left: 13px;
-    margin-top: 12px;
-  }
+  .ce-table__container-mobile {
+    margin-top:40px;
+    display:flex;
+    // flex-direction: column;
+    .ce-table__mobile-card {
+      background-color: grey;
+      width: 100%;
+      border: 5px solid yellow;
+      display:flex;
+      flex-direction: column;
+
+      .ce-table__mobile-card-container{
+        display:flex;
+        // flex-direction: column;
+        // flex-wrap:wrap;
+        border: 10px solid black;
+        .ce-table__mobile-headings{
+          // margin-top:40px;
+          display: flex;
+          flex-direction: column;
+          border: 3px solid white;
+          background-color: blue;
+          }
+          .ce-table__mobile-card-data{
+            background-color: red;
+        }
+      }
+      }
+
+
+
+
+
+  // width: 100%;
+  // max-width: 1000px;
+  // margin: 1em auto;
+  // padding: 1em;
+  // * {
+  //   box-sizing: border-box;
+  // }
+  // .ce-table--col-width1 {
+  //   width: 13%;
+  // }
+  // .ce-table--col-width2{
+  //   width: 20%;
+  // }
+  // .ce-table--col-width3{
+  //   width: 41%;
+  // }
+  // // NEW CODE FOR CSS LAYOUT INSTEAD OF HTML //
+  // .ce-table__container {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   margin: 0 0 3rem 0;
+  //   padding: 0;
+  //   box-shadow: 0 0 40px rgba(0,0,0,0.2);
+    
+  //   // .ce-table__header-row { 
+      
+  //   //   .ce-table__header-cell {
+      
+  //   //   }
+  //   // }
+  //   .ce-table__row{
+  //     width: 100%;
+  //     display: flex;
+
+  //     .ce-table__cell{
+  //       box-sizing: border-box;
+  //       flex-grow: 1;
+  //       padding: 0.8rem 1.2rem;
+  //       overflow: hidden;
+  //       list-style:none;
+
+  //       &.ce-table__heading{
+  //         background-color: blue;
+  //         color: white;
+  //         padding: 1rem;
+  //       }
+
+  //       .ce-table__cell-heading{
+  //         display: none;
+  //       }
+  //     }
+  //   }
+
+  //   // RESPONSIVENESS 
+  //   @media all and (max-width: 765px){
+  //     .ce-table--collapse{
+  //       display: block;
+  //       width: 100%;
+  //       padding: 1rem;
+  //       box-shadow: none;
+
+  //       .ce-table__row {
+  //         box-sizing: border-box;
+  //         width: 100%;
+  //         display: flex;
+  //         flex-wrap: wrap;
+  //         margin-bottom: 2rem;
+  //         box-shadow: 0 0 0 40px rgba(0,0,0,0.2);
+
+  //         .ce-table__cell {
+  //           width: 100% !important;
+  //           display: flex;
+  //           align-items:center;
+
+  //           .ce-table__cell-heading {
+  //             display: inline-block;
+  //             flex: 1;
+  //             max-width: 120px;
+  //             min-width: 120px;
+  //             color: green;
+  //             font-weight: 700;
+  //             border-right: 1px solid #ccc;
+  //             margin-right: 1em;
+  //           }
+
+  //           .ce-table__cell-content {
+  //             flex: 2;
+  //             padding-left: 1rem;
+  //           }
+  //         }
+  //       }
+
+  //       .ce-table__top-row-mobile { // top row will actually be the checkbox
+  //         order: -1;
+  //         .ce-table__cell-content{
+  //           padding-left: 0 !important;
+  //         }
+  //       }
+
+  //       .ce-table__header-row {
+  //         display: none;
+  //       }
+  //     }
+  //   }
+    // .ce-table__5cols > .ce-table__cell {
+    //   width: 20%;
+    // }
+    // .ce-table__5cols > .ce-table__header-cell {
+    //   width: 20%;
+    // }
+  // }
+
+  // ENDING CODE FOR CSS LAYTOUT INSTEAD OF HTML 
+
+  /// STARTING TABLE CODE ///
+
+  // table {
+  //   border: none;
+  // }
+  // tr {
+  //   border: none;
+  //   padding: 20px;
+  //   &:hover {
+  //     td {
+  //        background-color: #E6F7FF;
+  //     }
+  //   }
+  //   &:active {
+  //     td{
+  //       background-color: #CCEFFF;
+  //     }
+  //   }
+  //   th {
+  //     font-weight: bold;
+  //     background-color: @white;
+  //     color: @black;
+  //     border-bottom: 1px solid black;
+  //     padding: 10px;
+  //     vertical-align: middle;
+  //   }
+  //   td {
+  //     padding: 10px;
+  //     border: 1px solid;
+  //     border: none;
+  //     margin-bottom: 15%;
+  //     vertical-align: middle;
+    
+  //   }
+  // }
+  // tr:nth-child(even) {
+  //   background-color: #f1f6f9;
+  // }
+  // tr:nth-child(odd) {
+  //   background-color: @white;
+  // }
+
+/// STOPPING TABLE CODE ///
+
+
+
+
+  // ALL THE BELOW CSS IS ASSOCIATED WITH THE STATUS.  WHEN FINALIZING STATUS YOU CAN DECIDE WHAT TO KEEP
+  // .ce-table__status-container {
+  //   display: flex;
+  //   .ce-table__status-circle {
+  //     height: 20px;
+  //     width: 20px;
+  //     background-color: #4dc7ff;
+  //     border-radius: 50%;
+  //     padding: 10px;
+  //     z-index: 0;
+  //   }
+  // }
+
+  // .ce-table__status-systemicon {
+  //   z-index: 1;
+  //   position: absolute;
+  //   margin-left: 13px;
+  //   margin-top: 12px;
+  // }
+
+  // @media only screen and (max-width: 760px){
+  //   tr {
+  //     display:block; 
+  //     float:left;
+  //   }
+  //   th, td {
+  //     display: block;
+  //   }
+  // }
+
+}
+
 }

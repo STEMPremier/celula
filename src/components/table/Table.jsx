@@ -12,7 +12,6 @@ import './table.less';
 // import SystemIcon from '../icon/SystemIcon';
 
 import Checkbox from '../form-controls/checkbox/Checkbox';
-import { CheckboxGroup } from '../form-controls/checkbox';
 
 const Table = ({
   className,
@@ -21,7 +20,7 @@ const Table = ({
   label,
   name,
   rows,
-  status,
+  // status,
 }) => {
   const [selectAll, setSelectAll] = useState(false);
   const [selected, setSelected] = useState(false);
@@ -31,65 +30,84 @@ const Table = ({
     setSelected(!selected);
   };
 
-  console.log('setSelected', selected);
+  const mobileViewObject = {
+    mobileHeadings: headings,
+    mobileData: rows
+  }
 
-  // const handleIndividual = () => {
-
-  //   setSelected(!selected)
-  // }
+  console.log('mobileViewObject', mobileViewObject)
 
   const classes = cx('ce-table', className);
 
   return (
-    <div>
-      <body>
-        <table
-          headings={headings}
-          rows={rows}
-          label={label}
-          name={name}
-          onChange={handleChange}
-          className={classes}
-        >
-          {headings && (
-            <tr>
-              {/* {status && <th>Status</th>} */}
-              <th>
-                <Checkbox
-                  name="name"
-                  value={selectAll}
-                  checked={selectAll}
-                  handleChange={() => onChangeSelectAll()}
-                />
-              </th>
-              {headings.map(header => (
-                <th>{header}</th>
-              ))}
-            </tr>
-          )}
-
-          {rows.map(rowItems => (
-            <tr>
-              {/* <td className="ce-table__status-container">
-                <SystemIcon name="navigate" color="black" />
-                <div className="ce-table__status-circle" />
-                {rowItems.status}
-              </td> */}
-              {/* <div > */}
-              <td key={rowItems.data}>
-                <Checkbox
-                  name={rowItems.data}
-                  value={rowItems.data}
-                  checked={selected}
-                />
-              </td>
-              {rowItems.data.map(rowData => (
-                <td>{rowData}</td>
-              ))}
-            </tr>
+    <div
+      className={classes} 
+      label={label}
+      headings={headings}
+      rows={rows}
+      name={name}
+      onChange={handleChange}
+    >
+ 
+      <div className="ce-table__container-desktop">
+        <div className="ce-table__header-row">
+          {headings.map(header => (
+            <div className="ce-table__header-cell">{header}</div>
           ))}
-        </table>
-      </body>
+        </div>
+          {rows.map(rowItems => (
+             <div className="ce-table__data-row">
+              {rowItems.data.map(rowData => (
+                 <div className="ce-table__data-cell ">
+                {rowData} 
+                 </div>
+              ))}
+             </div>
+          ))}
+      </div>
+      
+      
+      <div className="ce-table__container-mobile">
+        <div className="ce-table__mobile-card">
+        {/* {headings.map(mobileHeading => (
+               <div className="ce-table__mobile-headings">{mobileHeading}</div>
+               ))} */}
+        
+        {rows.map(rowItems => (
+             <div className="ce-table__mobile-card-container">
+               <div className="ce-table__mobile-headings">
+                  {headings.map(mobileHeading => (
+                     <span>{mobileHeading}</span>
+               ))}
+               </div>
+                <div className="ce-table__mobile-card-data">
+               {rowItems.data.map(rowData => (
+                 <div>{rowData}</div>
+               ))}
+                </div>
+             </div>
+           )
+          )}
+        </div>
+        {/* <h1>holding</h1> */}
+      </div>
+
+      {/* <div className="ce-table__container-mobile">
+        <div className="ce-table__header-row">
+          {headings.map(header => (
+            <div className="ce-table__header-cell">{header}</div>
+          ))}
+        </div>
+          {rows.map(rowItems => (
+             <div className="ce-table__data-row">
+              {rowItems.data.map(rowData => (
+                 <div className="ce-table__data-cell ">
+                {rowData} 
+                 </div>
+              ))}
+             </div>
+          ))}
+      </div> */}
     </div>
   );
 };
@@ -123,7 +141,7 @@ Table.propTypes = {
   rows: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   ),
-  status: PropTypes.bool,
+  // status: PropTypes.bool,
 };
 
 Table.defaultProps = {
@@ -131,7 +149,7 @@ Table.defaultProps = {
   name: '',
   handleChange: () => {},
   rows: [''],
-  status: false,
+  // status: false,
 };
 
 export default Table;
