@@ -19,7 +19,7 @@ module.exports = {
       },
     },
   ],
-  stories: ['../src/**/**/*.stories.(jsx|mdx)'],
+  stories: ['../src/**/**/*.stories.@(jsx|mdx)'],
   webpackFinal: async (config, { configType }) => {
     console.log('env of Storybook process', configType);
     const rule = config.module.rules.find(r =>
