@@ -6,6 +6,9 @@ import './link.less';
 
 import { COLORS, LINK_TEXT_STYLES as TYPES } from '../../utils/constants';
 
+/**
+ * Typically `Links` are used inline with a paragraph while standard all caps complement button groups or individually.
+ */
 const Link = ({ className, textStyle, color, address, text }) => {
   const classes = cx(
     'ce-link',
@@ -37,7 +40,8 @@ Link.propTypes = {
   /**
    * The color of the `<Link />`.
    */
-  color: PropTypes.oneOf(COLORS),
+  // color: PropTypes.oneOf(COLORS),
+  color: PropTypes.oneOf(['primary', 'secondary', 'black', 'inverted']),
   /**
    * The text the `<Link />` displays.
    */
@@ -45,7 +49,8 @@ Link.propTypes = {
   /**
    * The `<Link />` text type.
    */
-  textStyle: PropTypes.oneOf(TYPES),
+  // textStyle: PropTypes.oneOf(TYPES),
+  textStyle: PropTypes.oneOf(['lowercase', 'uppercase']),
 };
 
 Link.defaultProps = {
