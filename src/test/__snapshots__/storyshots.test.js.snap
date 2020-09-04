@@ -1079,6 +1079,7 @@ exports[`Storyshots Components/Atoms/Link Uppercase Secondary 1`] = `
 </a>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots Components/Atoms/Pagination Pagination with Knobs 1`] = `
 <nav
   className="ce-pagination"
@@ -1187,210 +1188,216 @@ exports[`Storyshots Components/Atoms/Pagination Pagination with Knobs 1`] = `
 
 exports[`Storyshots Components/Atoms/Search Search States 1`] = `
 <div>
-  <div
-    className="ce-search ce-search--disabled"
+=======
+exports[`Storyshots Components/Atoms/Search As You Type 1`] = `
+<div
+  className="ce-search"
+>
+  <label
+    htmlFor="searchTypesOnType"
   >
-    <label
-      htmlFor="searchStatesDisabled"
-    >
-      Disabled Search:
-    </label>
-    <div
-      className="ce-search__help-text"
-    >
-      Open the console, click the button.
-    </div>
-    <div
-      className="ce-search__container"
-    >
-      <input
-        disabled={true}
-        id="searchStatesDisabled"
-        name="searchStatesDisabled"
-        onChange={[Function]}
-        placeholder="Enter search terms here"
-        type="text"
-        value=""
-      />
-      
-      <button
-        className="ce-search__button"
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className="ce-icon--inverted"
-          >
-            <use
-              xlinkHref="#icons_system-search"
-            />
-          </svg>
-        </span>
-      </button>
-    </div>
-    
+    Search as You Type:
+  </label>
+>>>>>>> 14d4762... update Search stories for new storybook version, and better documentation
+  <div
+    className="ce-search__help-text"
+  >
+    Clearing the search doesn't trigger the handleSearch function.
   </div>
   <div
-    className="ce-search ce-search--error"
+    className="ce-search__container"
   >
-    <label
-      htmlFor="searchStatesWithError"
-    >
-      Search with Error:
-    </label>
+    <input
+      disabled={false}
+      id="searchTypesOnType"
+      name="searchTypesOnType"
+      onChange={[Function]}
+      placeholder="Enter search terms here"
+      type="text"
+      value=""
+    />
+    
     <div
-      className="ce-search__help-text"
+      className="ce-search__search-icon"
     >
-      Clearing the search doesn't trigger the handleSearch function.
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-search"
+          />
+        </svg>
+      </span>
     </div>
-    <div
-      className="ce-search__container"
+  </div>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/Search Disabled 1`] = `
+<div
+  className="ce-search ce-search--disabled"
+>
+  <label
+    htmlFor="searchStatesDisabled"
+  >
+    Disabled Search:
+  </label>
+  <div
+    className="ce-search__help-text"
+  >
+    Open the console, click the button.
+  </div>
+  <div
+    className="ce-search__container"
+  >
+    <input
+      disabled={true}
+      id="searchStatesDisabled"
+      name="searchStatesDisabled"
+      onChange={[Function]}
+      placeholder="Enter search terms here"
+      type="text"
+      value=""
+    />
+    
+    <button
+      className="ce-search__button"
+      onClick={[Function]}
+      type="button"
     >
-      <input
-        disabled={false}
-        id="searchStatesWithError"
-        name="searchStatesWithError"
-        onChange={[Function]}
-        placeholder="Enter search terms here"
-        type="text"
-        value=""
-      />
-      
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className="ce-icon--inverted"
+        >
+          <use
+            xlinkHref="#icons_system-search"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/Search Error 1`] = `
+<div
+  className="ce-search ce-search--error"
+>
+  <label
+    htmlFor="searchStatesWithError"
+  >
+    Search with Error:
+  </label>
+  <div
+    className="ce-search__help-text"
+  >
+    Clearing the search doesn't trigger the handleSearch function.
+  </div>
+  <div
+    className="ce-search__container"
+  >
+    <input
+      disabled={false}
+      id="searchStatesWithError"
+      name="searchStatesWithError"
+      onChange={[Function]}
+      placeholder="Enter search terms here"
+      type="text"
+      value=""
+    />
+    
+    <div
+      className="ce-search__search-icon"
+    >
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-search"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+  <div
+    className="ce-errorbox"
+  >
+    <div
+      className="ce-errorbox__container"
+    >
       <div
-        className="ce-search__search-icon"
+        className="ce-errorbox__arrow"
+      />
+      <div
+        className="ce-errorbox__message"
       >
         <span
-          className="ce-icon ce-icon__system ce-icon--large"
+          className="ce-errorbox__text"
         >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-search"
-            />
-          </svg>
+          Whoops! Somthing is not okay.
         </span>
-      </div>
-    </div>
-    <div
-      className="ce-errorbox"
-    >
-      <div
-        className="ce-errorbox__container"
-      >
-        <div
-          className="ce-errorbox__arrow"
-        />
-        <div
-          className="ce-errorbox__message"
-        >
-          <span
-            className="ce-errorbox__text"
-          >
-            Whoops! Somthing is not okay.
-          </span>
-        </div>
       </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`Storyshots Components/Atoms/Search Search Types 1`] = `
-<div>
-  <div
-    className="ce-search"
+exports[`Storyshots Components/Atoms/Search On Click 1`] = `
+<div
+  className="ce-search"
+>
+  <label
+    htmlFor="searchTypesOnClick"
   >
-    <label
-      htmlFor="searchTypesOnClick"
-    >
-      Search on Click:
-    </label>
-    <div
-      className="ce-search__help-text"
-    >
-      Open the console, click the button.
-    </div>
-    <div
-      className="ce-search__container"
-    >
-      <input
-        disabled={false}
-        id="searchTypesOnClick"
-        name="searchTypesOnClick"
-        onChange={[Function]}
-        placeholder="Enter search terms here"
-        type="text"
-        value=""
-      />
-      
-      <button
-        className="ce-search__button"
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className="ce-icon--inverted"
-          >
-            <use
-              xlinkHref="#icons_system-search"
-            />
-          </svg>
-        </span>
-      </button>
-    </div>
-    
+    Search on Click:
+  </label>
+  <div
+    className="ce-search__help-text"
+  >
+    Open the console, click the button.
   </div>
   <div
-    className="ce-search"
+    className="ce-search__container"
   >
-    <label
-      htmlFor="searchTypesOnType"
-    >
-      Search as You Type:
-    </label>
-    <div
-      className="ce-search__help-text"
-    >
-      Clearing the search doesn't trigger the handleSearch function.
-    </div>
-    <div
-      className="ce-search__container"
-    >
-      <input
-        disabled={false}
-        id="searchTypesOnType"
-        name="searchTypesOnType"
-        onChange={[Function]}
-        placeholder="Enter search terms here"
-        type="text"
-        value=""
-      />
-      
-      <div
-        className="ce-search__search-icon"
-      >
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-search"
-            />
-          </svg>
-        </span>
-      </div>
-    </div>
+    <input
+      disabled={false}
+      id="searchTypesOnClick"
+      name="searchTypesOnClick"
+      onChange={[Function]}
+      placeholder="Enter search terms here"
+      type="text"
+      value=""
+    />
     
+    <button
+      className="ce-search__button"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className="ce-icon--inverted"
+        >
+          <use
+            xlinkHref="#icons_system-search"
+          />
+        </svg>
+      </span>
+    </button>
   </div>
+  
 </div>
 `;
 

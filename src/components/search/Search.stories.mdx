@@ -1,10 +1,4 @@
-import {
-  Description,
-  Meta,
-  Preview,
-  Props,
-  Story,
-} from '@storybook/addon-docs/blocks';
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
 
@@ -14,7 +8,7 @@ import Search from '.';
 
 # Search
 <Description of={Search} />
-<Props of={Search} />
+<ArgsTable of={Search} />
 
 <Story name="Search with Knobs" parameters={{ docs: { disable: true } }}>
   <Search
@@ -22,7 +16,7 @@ import Search from '.';
     disabled={boolean('disabled', false)}
     errorMsg={text('errorMsg', '')}
     instantSearch={boolean('instantSearch', false)}
-    handleSearch={action('Search With Knobs `hand;eSearch` function triggered.')}
+    handleSearch={action('Search With Knobs `handleSearch` function triggered.')}
     helpText={text('helpText', 'Helpful text.')}
     label={text('label', 'Do a search:')}
     name={text('name', 'searchWithKnobs')}
@@ -30,50 +24,60 @@ import Search from '.';
   />
 </Story>
 
-### Search Types
-<Preview>
-  <Story name="Search Types">
-    <div>
-      <Search
-        handleSearch={(value) => { console.log(value)}}
-        helpText="Open the console, click the button."
-        label="Search on Click:"
-        name="searchTypesOnClick"
-        placeholder="Enter search terms here"
-      />
-      <Search
-        handleSearch={(value) => { console.log(value)}}
-        helpText="Clearing the search doesn't trigger the handleSearch function."
-        instantSearch={true}
-        label="Search as You Type:"
-        name="searchTypesOnType"
-        placeholder="Enter search terms here"
-      />
-    </div>
+## Types
+By default `<Search />` searches on click or press of the included button:
+<Canvas>
+  <Story name="On Click">
+    <Search
+      handleSearch={value => console.log(value)}
+      helpText="Open the console, click the button."
+      label="Search on Click:"
+      name="searchTypesOnClick"
+      placeholder="Enter search terms here"
+    />
   </Story>
-</Preview>
+</Canvas>
 
-### Search States
-<Preview>
-  <Story name="Search States">
-    <div>
-      <Search
-        disabled={true}
-        handleSearch={(value) => { console.log(value)}}
-        helpText="Open the console, click the button."
-        label="Disabled Search:"
-        name="searchStatesDisabled"
-        placeholder="Enter search terms here"
-      />
-      <Search
-        errorMsg="Whoops! Somthing is not okay."
-        handleSearch={(value) => { console.log(value)}}
-        helpText="Clearing the search doesn't trigger the handleSearch function."
-        instantSearch={true}
-        label="Search with Error:"
-        name="searchStatesWithError"
-        placeholder="Enter search terms here"
-      />
-    </div>
+It has the option of searcing as you type as well:
+<Canvas>
+  <Story name="As You Type">
+    <Search
+      handleSearch={value => console.log(value)}
+      helpText="Clearing the search doesn't trigger the handleSearch function."
+      instantSearch={true}
+      label="Search as You Type:"
+      name="searchTypesOnType"
+      placeholder="Enter search terms here"
+    />
   </Story>
-</Preview>
+</Canvas>
+
+## States
+A `<Search />` can be disabled:
+<Canvas>
+  <Story name="Disabled">
+    <Search
+      disabled={true}
+      handleSearch={value => console.log(value)}
+      helpText="Open the console, click the button."
+      label="Disabled Search:"
+      name="searchStatesDisabled"
+      placeholder="Enter search terms here"
+    />
+  </Story>
+</Canvas>
+
+Or have an error:
+<Canvas>
+  <Story name="Error">
+    <Search
+      errorMsg="Whoops! Somthing is not okay."
+      handleSearch={value => console.log(value)}
+      helpText="Clearing the search doesn't trigger the handleSearch function."
+      instantSearch={true}
+      label="Search with Error:"
+      name="searchStatesWithError"
+      placeholder="Enter search terms here"
+    />
+  </Story>
+</Canvas>
