@@ -1,22 +1,18 @@
-import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
 
+import { BUTTON_TYPES as TYPES, COLORS, SIZES } from '../../../utils/constants';
+
 import SubmitButton from '.';
-import {
-  BUTTON_TYPES as TYPES,
-  COMPONENT_STATES as STATES,
-  COLORS,
-  SIZES
-} from '../../../utils/constants';
 
 <Meta component={SubmitButton} title="Components/Molecules/Form Controls/SubmitButton" />
 
 # SubmitButton
 <Description of={SubmitButton} />
-<Props of={SubmitButton} />
+<ArgsTable of={SubmitButton} />
 
-<Story name="SubmitButton with Knobs" parameters={{ docs: { disable: true }}}>
+<Story name="SubmitButton with Knobs" parameters={{docs:{disable:true}}}>
   <SubmitButton
     className={text('className', '')}
     color={select('color', COLORS, 'primary')}
@@ -29,89 +25,263 @@ import {
   </SubmitButton>
 </Story>
 
-### Types
-<Preview>
-  <Story name="SubmitButton Types">
-    <div>
-      {TYPES.map(type => (
-        <SubmitButton
-          handleClick={action('`SubmitButton Types` onClick event triggered.')}
-          key={type}
-          type={type}
-        >
-          {`${type} button`}
-        </SubmitButton>
-      ))}
-    </div>
-  </Story>
-</Preview>
+## Solid SubmitButtons (Default)
+Solid buttons are high-emphasis, distinguished by their use of elevation and fill. They contain actions that are primary to an application.
 
-### Sizes
-<Preview>
-  <Story name="SubmitButton Sizes">
-    <div>
-      {TYPES.map(type => (
-        <div key={`${type}_size`}>
-          {SIZES.map(size => (
-            <SubmitButton
-              handleClick={action('`SubmitButton Sizes` onClick event triggered.')}
-              key={`${type}_${size}`}
-              size={size}
-              type={type}
-            >
-              {`${type} ${size}`}
-            </SubmitButton>
-          ))}
-        </div>
-      ))}
-    </div>
+<Canvas>
+  <Story name="Solid Small">
+    <SubmitButton
+      handleClick={action("`Solid Small SubmitButton` onClick event triggered.`")}
+      size="small"
+    >
+      small button
+    </SubmitButton>
   </Story>
-</Preview>
+  <Story name="Solid Large (Default)">
+    <SubmitButton
+      handleClick={action("`Solid Large SubmitButton` onClick event triggered.`")}
+      size="large"
+    >
+      large button
+    </SubmitButton>
+  </Story>
+  <Story name="Solid Jumbo">
+    <SubmitButton
+      handleClick={action("`Solid Jumbo SubmitButton` onClick event triggered.`")}
+      size="jumbo"
+    >
+      jumbo button
+    </SubmitButton>
+  </Story>
+</Canvas>
 
-### States
-<Preview>
-  <Story name="SubmitButton States">
-    <div>
-      {TYPES.map(type => (
-        <div key={`${type}_state`}>
-          {STATES.filter(state => state !== 'error').map(state => (
-            <SubmitButton
-              disabled={state === 'disabled'}
-              handleClick={action('`SubmitButton States` onClick event triggered.')}
-              key={`${state}_${type}`}
-              type={type}
-            >
-              {`${state} ${type}`}
-            </SubmitButton>
-          ))}
-        </div>
-      ))}
+### Colors and States
+<Canvas>
+  <Story name="Solid Primary (Default)">
+    <SubmitButton
+      color="primary"
+      handleClick={action("`Solid Primary SubmitButton` onClick event triggered.`")}
+      size="small"
+    >
+      primary
+    </SubmitButton>
+  </Story>
+  <Story name="Solid Secondary">
+    <SubmitButton
+      color="secondary"
+      handleClick={action("`Solid Secondary SubmitButton` onClick event triggered.`")}
+      size="small"
+    >
+      secondary
+    </SubmitButton>
+  </Story>
+  <Story name="Solid Black">
+    <SubmitButton
+      color="black"
+      handleClick={action("`Solid Black SubmitButton` onClick event triggered.`")}
+      size="small"
+    >
+      black
+    </SubmitButton>
+  </Story>
+  <Story name="Solid Inverted">
+    <div style={{backgroundColor: 'black'}}>
+      <SubmitButton
+        color="inverted"
+        handleClick={action("`Solid Inverted SubmitButton` onClick event triggered.`")}
+        size="small"
+      >
+        inverted
+      </SubmitButton>
     </div>
   </Story>
-</Preview>
+  <Story name="Solid Disabled">
+    <SubmitButton
+      disabled={true}
+      handleClick={action("`Solid Disabled SubmitButton` onClick event triggered.`")}
+      size="small"
+    >
+      disabled
+    </SubmitButton>
+  </Story>
+</Canvas>
 
-### Colors
-<Preview>
-  <Story name="SubmitButton Colors">
-    <div>
-      {TYPES.map(type => (
-        <div key={`${type}_color`}>
-          {COLORS.map(color => (
-            <span
-              style={color === 'inverted' ? {backgroundColor:'black',display:'inline-block'} : {}}
-              key={`${type}_${color}`}
-            >
-              <SubmitButton
-                color={color}
-                handleClick={action('`SubmitButton Colors` onClick event triggered.')}
-                type={type}
-              >
-                {color}
-              </SubmitButton>
-            </span>
-          ))}
-        </div>
-      ))}
+## Outline SubmitButtons
+Outlined buttons are medium-emphasis buttons. They contain actions that are important, but aren’t the primary action in an app. Outlined buttons are also a lower emphasis alternative to contained buttons, or a higher emphasis alternative to text buttons.
+
+<Canvas>
+  <Story name="Outline Small">
+    <SubmitButton
+      handleClick={action("`Outline Small SubmitButton` onClick event triggered.`")}
+      size="small"
+      type="outline"
+    >
+      small button
+    </SubmitButton>
+  </Story>
+  <Story name="Outline Large (Default)">
+    <SubmitButton
+      handleClick={action("`Outline Large SubmitButton` onClick event triggered.`")}
+      size="large"
+      type="outline"
+    >
+      large button
+    </SubmitButton>
+  </Story>
+  <Story name="Outline Jumbo">
+    <SubmitButton
+      handleClick={action("`Outline Jumbo SubmitButton` onClick event triggered.`")}
+      size="jumbo"
+      type="outline"
+    >
+      jumbo button
+    </SubmitButton>
+  </Story>
+</Canvas>
+
+### Colors and States
+<Canvas>
+  <Story name="Outline Primary (Default)">
+    <SubmitButton
+      color="primary"
+      handleClick={action("`Outline Primary SubmitButton` onClick event triggered.`")}
+      size="small"
+      type="outline"
+    >
+      primary
+    </SubmitButton>
+  </Story>
+  <Story name="Outline Secondary">
+    <SubmitButton
+      color="secondary"
+      handleClick={action("`Outline Secondary SubmitButton` onClick event triggered.`")}
+      size="small"
+      type="outline"
+    >
+      secondary
+    </SubmitButton>
+  </Story>
+  <Story name="Outline Black">
+    <SubmitButton
+      color="black"
+      handleClick={action("`Outline Black SubmitButton` onClick event triggered.`")}
+      size="small"
+      type="outline"
+    >
+      black
+    </SubmitButton>
+  </Story>
+  <Story name="Outline Inverted">
+    <div style={{backgroundColor: 'black'}}>
+      <SubmitButton
+        color="inverted"
+        handleClick={action("`Outline Inverted SubmitButton` onClick event triggered.`")}
+        size="small"
+        type="outline"
+      >
+        inverted
+      </SubmitButton>
     </div>
   </Story>
-</Preview>
+  <Story name="Outline Disabled">
+    <SubmitButton
+      disabled={true}
+      handleClick={action("`Outline Disabled SubmitButton` onClick event triggered.`")}
+      size="small"
+      type="outline"
+    >
+      disabled
+    </SubmitButton>
+  </Story>
+</Canvas>
+
+## Text Buttons
+Text buttons are typically used for less-pronounced actions, including those located in dialogs and cards.
+
+Text buttons are often embedded in contained components like cards and dialogs, in order to relate themselves to the component in which they appear. Because text buttons don’t have a container, they don’t distract from nearby content.
+
+<Canvas>
+  <Story name="Text Small">
+    <SubmitButton
+      handleClick={action("`Text Small SubmitButton` onClick event triggered.`")}
+      size="small"
+      type="text"
+    >
+      small button
+    </SubmitButton>
+  </Story>
+  <Story name="Text Large (Default)">
+    <SubmitButton
+      handleClick={action("`Text Large SubmitButton` onClick event triggered.`")}
+      size="large"
+      type="text"
+    >
+      large button
+    </SubmitButton>
+  </Story>
+  <Story name="Text Jumbo">
+    <SubmitButton
+      handleClick={action("`Text Jumbo SubmitButton` onClick event triggered.`")}
+      size="jumbo"
+      type="text"
+    >
+      jumbo button
+    </SubmitButton>
+  </Story>
+</Canvas>
+
+### Colors and States
+<Canvas>
+  <Story name="Text Primary (Default)">
+    <SubmitButton
+      color="primary"
+      handleClick={action("`Text Primary SubmitButton` onClick event triggered.`")}
+      size="small"
+      type="text"
+    >
+      primary
+    </SubmitButton>
+  </Story>
+  <Story name="Text Secondary">
+    <SubmitButton
+      color="secondary"
+      handleClick={action("`Text Secondary SubmitButton` onClick event triggered.`")}
+      size="small"
+      type="text"
+    >
+      secondary
+    </SubmitButton>
+  </Story>
+  <Story name="Text Black">
+    <SubmitButton
+      color="black"
+      handleClick={action("`Text Black SubmitButton` onClick event triggered.`")}
+      size="small"
+      type="text"
+    >
+      black
+    </SubmitButton>
+  </Story>
+  <Story name="Text Inverted">
+    <div style={{backgroundColor: 'black'}}>
+      <SubmitButton
+        color="inverted"
+        handleClick={action("`Text Inverted SubmitButton` onClick event triggered.`")}
+        size="small"
+        type="text"
+      >
+        inverted
+      </SubmitButton>
+    </div>
+  </Story>
+  <Story name="Text Disabled">
+    <SubmitButton
+      disabled={true}
+      handleClick={action("`Text Disabled SubmitButton` onClick event triggered.`")}
+      size="small"
+      type="text"
+    >
+      disabled
+    </SubmitButton>
+  </Story>
+</Canvas>
