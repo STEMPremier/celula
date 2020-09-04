@@ -1,57 +1,117 @@
-import {
-  Description,
-  Meta,
-  Preview,
-  Props,
-  Story,
-} from '@storybook/addon-docs/blocks';
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { text } from '@storybook/addon-knobs';
+import { select, text } from '@storybook/addon-knobs';
+
+import { COLORS, LINK_TEXT_STYLES as TYPES } from '../../utils/constants';
 
 import Link from '.';
-import { COLORS, LINK_TEXT_STYLES as TYPES } from '../../utils/constants';
 
 <Meta component={Link} title="Components/Atoms/Link"/>
 
 # Links
 <Description of={Link}/>
-<Props of={Link}/>
+<ArgsTable of={Link}/>
 
 <Story name="Link with Knobs" parameters={{ docs: { disable: true}}}>
   <Link
     address={text('address','https://app.tallo.com/register' )}
     className={text('className', '')}
-    color={text('color', 'primary')}
+    color={select('color', COLORS, 'primary')}
     text={text('text', 'Tallo')}
-    textStyle={text('textStyle', 'uppercase' )}
+    textStyle={select('textStyle', TYPES, 'uppercase' )}
   />
 </Story>
 
-### Types
-<Preview>
-  <Story name="Link Types">
-    {TYPES.map(type => (
-      <Link
-        address='https://www.tallo.com'
-        key={type}
-        text={type}
-        textStyle={type}
-      />
-    ))}
+## Uppercase
+<Canvas>
+  <Story name="Uppercase (Primary)">
+    <Link
+      address="#"
+      text="link"
+      textStyle="uppercase"
+    />
   </Story>
-</Preview>
+</Canvas>
 
 ### Colors
-<Preview>
-  <Story name="Link Colors">
-    {COLORS.map(color => (
-      <span style={color === 'inverted' ? {backgroundColor:'black'} : {}} key={color}>
-        <Link
-          address='https://www.tallo.com'
-          text={color}
-          color={color}
-        />
-      </span>
-    ))}
+<Canvas>
+  <Story name="Uppercase Primary (Default)">
+    <Link
+      address="#"
+      color="primary"
+      text="primary"
+    />
   </Story>
-</Preview>
+  <Story name="Uppercase Secondary">
+    <Link
+      address="#"
+      color="secondary"
+      text="secondary"
+    />
+  </Story>
+  <Story name="Uppercase Black">
+    <Link
+      address="#"
+      color="black"
+      text="black"
+    />
+  </Story>
+  <Story name="Uppercase Inverted">
+    <div style={{backgroundColor:'black'}}>
+      <Link
+        address="#"
+        color="inverted"
+        text="inverted"
+      />
+    </div>
+  </Story>
+</Canvas>
+
+## Lowercase
+<Canvas>
+  <Story name="Lowercase">
+    <Link
+      address="#"
+      text="link"
+      textStyle="lowercase"
+    />
+  </Story>
+</Canvas>
+
+### Colors
+<Canvas>
+  <Story name="Lowercase Primary (Default)">
+    <Link
+      address="#"
+      color="primary"
+      text="primary"
+      textStyle="lowercase"
+    />
+  </Story>
+  <Story name="Lowercase Secondary">
+    <Link
+      address="#"
+      color="secondary"
+      text="secondary"
+      textStyle="lowercase"
+    />
+  </Story>
+  <Story name="Lowercase Black">
+    <Link
+      address="#"
+      color="black"
+      text="black"
+      textStyle="lowercase"
+    />
+  </Story>
+  <Story name="Lowercase Inverted">
+    <div style={{backgroundColor:'black'}}>
+      <Link
+        address="#"
+        color="inverted"
+        text="inverted"
+        textStyle="lowercase"
+      />
+    </div>
+  </Story>
+</Canvas>
