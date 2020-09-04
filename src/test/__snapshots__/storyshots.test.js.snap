@@ -4809,470 +4809,9 @@ exports[`Storyshots Components/Atoms/Alert Dismissible Alerts with Links 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/Atoms/Button Button Colors 1`] = `
-<div>
-  <div>
-    <span
-      style={Object {}}
-    >
-      <button
-        className="ce-button ce-button--default ce-button--large ce-button--primary"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-button__label"
-        >
-          primary
-        </span>
-      </button>
-    </span>
-    <span
-      style={Object {}}
-    >
-      <button
-        className="ce-button ce-button--default ce-button--large ce-button--secondary"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-button__label"
-        >
-          secondary
-        </span>
-      </button>
-    </span>
-    <span
-      style={Object {}}
-    >
-      <button
-        className="ce-button ce-button--default ce-button--large ce-button--black"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-button__label"
-        >
-          black
-        </span>
-      </button>
-    </span>
-    <span
-      style={
-        Object {
-          "backgroundColor": "black",
-          "display": "inline-block",
-        }
-      }
-    >
-      <button
-        className="ce-button ce-button--default ce-button--large ce-button--inverted"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-button__label"
-        >
-          inverted
-        </span>
-      </button>
-    </span>
-  </div>
-  <div>
-    <span
-      style={Object {}}
-    >
-      <button
-        className="ce-button ce-button--outline ce-button--large ce-button--primary"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-button__label"
-        >
-          primary
-        </span>
-      </button>
-    </span>
-    <span
-      style={Object {}}
-    >
-      <button
-        className="ce-button ce-button--outline ce-button--large ce-button--secondary"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-button__label"
-        >
-          secondary
-        </span>
-      </button>
-    </span>
-    <span
-      style={Object {}}
-    >
-      <button
-        className="ce-button ce-button--outline ce-button--large ce-button--black"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-button__label"
-        >
-          black
-        </span>
-      </button>
-    </span>
-    <span
-      style={
-        Object {
-          "backgroundColor": "black",
-          "display": "inline-block",
-        }
-      }
-    >
-      <button
-        className="ce-button ce-button--outline ce-button--large ce-button--inverted"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-button__label"
-        >
-          inverted
-        </span>
-      </button>
-    </span>
-  </div>
-  <div>
-    <span
-      style={Object {}}
-    >
-      <button
-        className="ce-button ce-button--text ce-button--large ce-button--primary"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-button__label"
-        >
-          primary
-        </span>
-      </button>
-    </span>
-    <span
-      style={Object {}}
-    >
-      <button
-        className="ce-button ce-button--text ce-button--large ce-button--secondary"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-button__label"
-        >
-          secondary
-        </span>
-      </button>
-    </span>
-    <span
-      style={Object {}}
-    >
-      <button
-        className="ce-button ce-button--text ce-button--large ce-button--black"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-button__label"
-        >
-          black
-        </span>
-      </button>
-    </span>
-    <span
-      style={
-        Object {
-          "backgroundColor": "black",
-          "display": "inline-block",
-        }
-      }
-    >
-      <button
-        className="ce-button ce-button--text ce-button--large ce-button--inverted"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-button__label"
-        >
-          inverted
-        </span>
-      </button>
-    </span>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/Atoms/Button Button Sizes 1`] = `
-<div>
-  <div>
-    <button
-      className="ce-button ce-button--default ce-button--small ce-button--primary"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="ce-button__label"
-      >
-        default small
-      </span>
-    </button>
-    <button
-      className="ce-button ce-button--default ce-button--large ce-button--primary"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="ce-button__label"
-      >
-        default large
-      </span>
-    </button>
-    <button
-      className="ce-button ce-button--default ce-button--jumbo ce-button--primary"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="ce-button__label"
-      >
-        default jumbo
-      </span>
-    </button>
-  </div>
-  <div>
-    <button
-      className="ce-button ce-button--outline ce-button--small ce-button--primary"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="ce-button__label"
-      >
-        outline small
-      </span>
-    </button>
-    <button
-      className="ce-button ce-button--outline ce-button--large ce-button--primary"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="ce-button__label"
-      >
-        outline large
-      </span>
-    </button>
-    <button
-      className="ce-button ce-button--outline ce-button--jumbo ce-button--primary"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="ce-button__label"
-      >
-        outline jumbo
-      </span>
-    </button>
-  </div>
-  <div>
-    <button
-      className="ce-button ce-button--text ce-button--small ce-button--primary"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="ce-button__label"
-      >
-        text small
-      </span>
-    </button>
-    <button
-      className="ce-button ce-button--text ce-button--large ce-button--primary"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="ce-button__label"
-      >
-        text large
-      </span>
-    </button>
-    <button
-      className="ce-button ce-button--text ce-button--jumbo ce-button--primary"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="ce-button__label"
-      >
-        text jumbo
-      </span>
-    </button>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/Atoms/Button Button States 1`] = `
-<div>
-  <div>
-    <button
-      className="ce-button ce-button--default ce-button--large ce-button--primary"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="ce-button__label"
-      >
-        default default
-      </span>
-    </button>
-    <button
-      className="ce-button ce-button--default ce-button--large ce-button--primary ce-button--disabled"
-      disabled={true}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="ce-button__label"
-      >
-        disabled default
-      </span>
-    </button>
-  </div>
-  <div>
-    <button
-      className="ce-button ce-button--outline ce-button--large ce-button--primary"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="ce-button__label"
-      >
-        default outline
-      </span>
-    </button>
-    <button
-      className="ce-button ce-button--outline ce-button--large ce-button--primary ce-button--disabled"
-      disabled={true}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="ce-button__label"
-      >
-        disabled outline
-      </span>
-    </button>
-  </div>
-  <div>
-    <button
-      className="ce-button ce-button--text ce-button--large ce-button--primary"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="ce-button__label"
-      >
-        default text
-      </span>
-    </button>
-    <button
-      className="ce-button ce-button--text ce-button--large ce-button--primary ce-button--disabled"
-      disabled={true}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="ce-button__label"
-      >
-        disabled text
-      </span>
-    </button>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/Atoms/Button Button Types 1`] = `
-<div>
-  <button
-    className="ce-button ce-button--default ce-button--large ce-button--primary"
-    disabled={false}
-    onClick={[Function]}
-    type="button"
-  >
-    <span
-      className="ce-button__label"
-    >
-      default button
-    </span>
-  </button>
-  <button
-    className="ce-button ce-button--outline ce-button--large ce-button--primary"
-    disabled={false}
-    onClick={[Function]}
-    type="button"
-  >
-    <span
-      className="ce-button__label"
-    >
-      outline button
-    </span>
-  </button>
-  <button
-    className="ce-button ce-button--text ce-button--large ce-button--primary"
-    disabled={false}
-    onClick={[Function]}
-    type="button"
-  >
-    <span
-      className="ce-button__label"
-    >
-      text button
-    </span>
-  </button>
-</div>
-`;
-
 exports[`Storyshots Components/Atoms/Button Button with Knobs 1`] = `
 <button
-  className="ce-button ce-button--default ce-button--small ce-button--primary"
+  className="ce-button ce-button--small ce-button--primary"
   disabled={false}
   onClick={[Function]}
   type="button"
@@ -5281,6 +4820,390 @@ exports[`Storyshots Components/Atoms/Button Button with Knobs 1`] = `
     className="ce-button__label"
   >
     a button
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Outline Black 1`] = `
+<button
+  className="ce-button ce-button--outline ce-button--small ce-button--black"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    black
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Outline Disabled 1`] = `
+<button
+  className="ce-button ce-button--outline ce-button--small ce-button--primary ce-button--disabled"
+  disabled={true}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    disabled
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Outline Inverted 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "black",
+    }
+  }
+>
+  <button
+    className="ce-button ce-button--outline ce-button--small ce-button--inverted"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="ce-button__label"
+    >
+      inverted
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/Button Outline Jumbo 1`] = `
+<button
+  className="ce-button ce-button--outline ce-button--jumbo ce-button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    jumbo button
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Outline Large (Default) 1`] = `
+<button
+  className="ce-button ce-button--outline ce-button--large ce-button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    large button
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Outline Primary 1`] = `
+<button
+  className="ce-button ce-button--outline ce-button--small ce-button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    primary
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Outline Secondary 1`] = `
+<button
+  className="ce-button ce-button--outline ce-button--small ce-button--secondary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    secondary
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Outline Small 1`] = `
+<button
+  className="ce-button ce-button--outline ce-button--small ce-button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    small button
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Solid Black 1`] = `
+<button
+  className="ce-button ce-button--solid ce-button--small ce-button--black"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    black
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Solid Disabled 1`] = `
+<button
+  className="ce-button ce-button--solid ce-button--small ce-button--primary ce-button--disabled"
+  disabled={true}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    disabled
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Solid Inverted 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "black",
+    }
+  }
+>
+  <button
+    className="ce-button ce-button--solid ce-button--small ce-button--inverted"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="ce-button__label"
+    >
+      inverted
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/Button Solid Jumbo 1`] = `
+<button
+  className="ce-button ce-button--solid ce-button--jumbo ce-button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    jumbo button
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Solid Large (Default) 1`] = `
+<button
+  className="ce-button ce-button--solid ce-button--large ce-button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    large button
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Solid Primary (Default) 1`] = `
+<button
+  className="ce-button ce-button--solid ce-button--small ce-button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    primary
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Solid Secondary 1`] = `
+<button
+  className="ce-button ce-button--solid ce-button--small ce-button--secondary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    secondary
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Solid Small 1`] = `
+<button
+  className="ce-button ce-button--solid ce-button--small ce-button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    small button
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Text Black 1`] = `
+<button
+  className="ce-button ce-button--text ce-button--small ce-button--black"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    black
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Text Disabled 1`] = `
+<button
+  className="ce-button ce-button--text ce-button--small ce-button--primary ce-button--disabled"
+  disabled={true}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    disabled
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Text Inverted 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "black",
+    }
+  }
+>
+  <button
+    className="ce-button ce-button--text ce-button--small ce-button--inverted"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="ce-button__label"
+    >
+      inverted
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/Button Text Jumbo 1`] = `
+<button
+  className="ce-button ce-button--text ce-button--jumbo ce-button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    jumbo button
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Text Large (Default) 1`] = `
+<button
+  className="ce-button ce-button--text ce-button--large ce-button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    large button
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Text Primary (Default) 1`] = `
+<button
+  className="ce-button ce-button--text ce-button--small ce-button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    primary
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Text Secondary 1`] = `
+<button
+  className="ce-button ce-button--text ce-button--small ce-button--secondary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    secondary
+  </span>
+</button>
+`;
+
+exports[`Storyshots Components/Atoms/Button Text Small 1`] = `
+<button
+  className="ce-button ce-button--text ce-button--small ce-button--primary"
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    className="ce-button__label"
+  >
+    small button
   </span>
 </button>
 `;
@@ -14544,7 +14467,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       style={Object {}}
     >
       <button
-        className="ce-button ce-button--default ce-button--small ce-button--primary"
+        className="ce-button ce-button--solid ce-button--small ce-button--primary"
         disabled={false}
         onClick={[Function]}
         type="submit"
@@ -14560,7 +14483,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       style={Object {}}
     >
       <button
-        className="ce-button ce-button--default ce-button--small ce-button--secondary"
+        className="ce-button ce-button--solid ce-button--small ce-button--secondary"
         disabled={false}
         onClick={[Function]}
         type="submit"
@@ -14576,7 +14499,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       style={Object {}}
     >
       <button
-        className="ce-button ce-button--default ce-button--small ce-button--black"
+        className="ce-button ce-button--solid ce-button--small ce-button--black"
         disabled={false}
         onClick={[Function]}
         type="submit"
@@ -14597,7 +14520,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       }
     >
       <button
-        className="ce-button ce-button--default ce-button--small ce-button--inverted"
+        className="ce-button ce-button--solid ce-button--small ce-button--inverted"
         disabled={false}
         onClick={[Function]}
         type="submit"
@@ -14759,7 +14682,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
 <div>
   <div>
     <button
-      className="ce-button ce-button--default ce-button--small ce-button--primary"
+      className="ce-button ce-button--solid ce-button--small ce-button--primary"
       disabled={false}
       onClick={[Function]}
       type="submit"
@@ -14767,11 +14690,11 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       <span
         className="ce-button__label"
       >
-        default small
+        solid small
       </span>
     </button>
     <button
-      className="ce-button ce-button--default ce-button--large ce-button--primary"
+      className="ce-button ce-button--solid ce-button--large ce-button--primary"
       disabled={false}
       onClick={[Function]}
       type="submit"
@@ -14779,11 +14702,11 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       <span
         className="ce-button__label"
       >
-        default large
+        solid large
       </span>
     </button>
     <button
-      className="ce-button ce-button--default ce-button--jumbo ce-button--primary"
+      className="ce-button ce-button--solid ce-button--jumbo ce-button--primary"
       disabled={false}
       onClick={[Function]}
       type="submit"
@@ -14791,7 +14714,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       <span
         className="ce-button__label"
       >
-        default jumbo
+        solid jumbo
       </span>
     </button>
   </div>
@@ -14878,7 +14801,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
 <div>
   <div>
     <button
-      className="ce-button ce-button--default ce-button--small ce-button--primary"
+      className="ce-button ce-button--solid ce-button--small ce-button--primary"
       disabled={false}
       onClick={[Function]}
       type="submit"
@@ -14886,11 +14809,11 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       <span
         className="ce-button__label"
       >
-        default default
+        default solid
       </span>
     </button>
     <button
-      className="ce-button ce-button--default ce-button--small ce-button--primary ce-button--disabled"
+      className="ce-button ce-button--solid ce-button--small ce-button--primary ce-button--disabled"
       disabled={true}
       onClick={[Function]}
       type="submit"
@@ -14898,7 +14821,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
       <span
         className="ce-button__label"
       >
-        disabled default
+        disabled solid
       </span>
     </button>
   </div>
@@ -14960,7 +14883,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
 exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton Types 1`] = `
 <div>
   <button
-    className="ce-button ce-button--default ce-button--small ce-button--primary"
+    className="ce-button ce-button--solid ce-button--small ce-button--primary"
     disabled={false}
     onClick={[Function]}
     type="submit"
@@ -14968,7 +14891,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
     <span
       className="ce-button__label"
     >
-      default button
+      solid button
     </span>
   </button>
   <button
@@ -15000,7 +14923,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton
 
 exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton with Knobs 1`] = `
 <button
-  className="ce-button ce-button--default ce-button--small ce-button--primary"
+  className="ce-button ce-button--small ce-button--primary"
   disabled={false}
   onClick={[Function]}
   type="submit"

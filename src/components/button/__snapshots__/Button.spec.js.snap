@@ -2,7 +2,7 @@
 
 exports[`<Button /> render() renders the component 1`] = `
 <button
-  className="ce-button ce-button--default ce-button--large ce-button--primary"
+  className="ce-button ce-button--solid ce-button--large ce-button--primary"
   disabled={false}
   onClick={[Function]}
   type="button"
