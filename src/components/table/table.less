@@ -3,69 +3,75 @@
 .ce-table {
   // 4th attempt at structure rewrite
 
-  .ce-table__container-desktop{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-
-    .ce-table__header-row{
-      display:flex;
-      align-items: center;
-      justify-content: center;
-      border-bottom: 1px solid @gray;
-      // flex-direction: row;
-     }
-
-     .ce-table__header-cell{  
-
-      // align-items: center;
-      padding-top: 10px;
-      // margin: 10px;
-      font-weight:bold;
-      background-color: @white;
-      align-items:stretch;
-      width: 100%;
+  @media screen and (max-width:765px){
+    .ce-table__container-desktop{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
   
-     }
-
-     .ce-table__data-row{
-      align-items: center;
-      justify-content: center;
-      display:flex;
-      flex-direction: row;
-      }
-
-      .ce-table__data-row:nth-child(even){
-        background-color: #f1f6f9;
-        &:hover {
-          background-color: #E6F7FF;
-         }
-         &:active {
-          background-color: #CCEFFF;
-          }
-      }
-      .ce-table__data-row:nth-child(odd){
+      .ce-table__header-row{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid @gray;
+        // flex-direction: row;
+       }
+  
+       .ce-table__header-cell{  
+  
+        // align-items: center;
+        padding-top: 10px;
+        // margin: 10px;
+        font-weight:bold;
         background-color: @white;
-        &:hover {
-          background-color: #E6F7FF;
-         }
-         &:active {
-          background-color: #CCEFFF;
-          }
-      }
-      
-
-     .ce-table__data-cell{
-      align-items: center;
-      flex-basis: auto;
-      padding: 10px;
-      // margin: 10px;
-      // background-color: yellow;
-      align-items:stretch;
-      width: 100%;
-     }
+        align-items:stretch;
+        width: 100%;
+    
+       }
+  
+       .ce-table__data-row{
+        align-items: center;
+        justify-content: center;
+        display:flex;
+        flex-direction: row;
+        }
+  
+        .ce-table__data-row:nth-child(even){
+          background-color: #f1f6f9;
+          &:hover {
+            background-color: #E6F7FF;
+           }
+           &:active {
+            background-color: #CCEFFF;
+            }
+        }
+        .ce-table__data-row:nth-child(odd){
+          background-color: @white;
+          &:hover {
+            background-color: #E6F7FF;
+           }
+           &:active {
+            background-color: #CCEFFF;
+            }
+        }
+        
+  
+       .ce-table__data-cell{
+        align-items: center;
+        flex-basis: auto;
+        padding: 10px;
+        // margin: 10px;
+        // background-color: yellow;
+        align-items:stretch;
+        width: 100%;
+       }
+    }
   }
 
+
+  @media screen and (min-width:765px){
+    
+  }
   .ce-table__container-mobile {
     margin-top:40px;
     display:flex;
