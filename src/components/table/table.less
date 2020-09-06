@@ -64,9 +64,6 @@
       align-items:stretch;
       width: 100%;
      }
-
-
-
   }
 
   .ce-table__container-mobile {
@@ -74,26 +71,66 @@
     display:flex;
    
     .ce-table__mobile-row {
-      background-color: grey;
+      // background-color: grey;
       width: 100%;
       border: 5px solid yellow;
       display:flex;
       flex-direction: column;
 
       .ce-table__mobile-card-container{
-        display:flex;
-        border: 10px solid black;
-
-        .ce-table__mobile-headings{
-          display: flex;
-          flex-direction: column;
-          border: 3px solid white;
-          background-color: blue;
+        // background-color: green;
+        // background-color: blue;
+        .ce-table__mobile-data-container{
+          display:flex;
+          border: 10px solid black;
+          padding: 10px;
+          .ce-table__mobile-headings{
+            display: flex;
+            flex-direction: column;
+            // border: 3px solid white;
+            // background-color: blue;
+            width: 30%;
+            }
+            .ce-table__mobile-card-data{
+              // background-color: red;
+              width: 100%;
+              padding: 10px;
+              .ce-table__mobile-card-row-data{
+                padding: 2px;
+              }
           }
-          .ce-table__mobile-card-data{
-            background-color: red;
+        }
+        .ce-table__mobile-card-container:nth-child(even){
+          // background-color: #f1f6f9;
+          background-color: purple;
+          &:hover {
+            background-color: #E6F7FF;
+           }
+           &:active {
+            background-color: #CCEFFF;
+            }
+        }
+        .ce-table__mobile-card-contain:nth-child(odd){
+          background-color: @white;
+          &:hover {
+            background-color: #E6F7FF;
+           }
+           &:active {
+            background-color: #CCEFFF;
+            }
         }
       }
+
+      .ce-table__mobile-card-contain:nth-child(odd){
+        background-color: @white;
+        &:hover {
+          background-color: #E6F7FF;
+         }
+         &:active {
+          background-color: #CCEFFF;
+          }
+      }
+      
     }
 
 

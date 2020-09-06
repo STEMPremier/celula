@@ -72,7 +72,10 @@ const Table = ({
         <div className="ce-table__mobile-row">
         {rows.map(rowItems => (
              <div className="ce-table__mobile-card-container">
-               <Checkbox name="name" value={rowItems.data} checked={selected} />
+               <div className="ce-table__mobile-checkbox">
+                 <Checkbox name="name" value={rowItems.data} checked={selected} />
+               </div>
+               <div className="ce-table__mobile-data-container">
                <div className="ce-table__mobile-headings">
                   {headings.map(mobileHeading => (
                      <span>{mobileHeading}</span>
@@ -80,9 +83,10 @@ const Table = ({
                </div>
                 <div className="ce-table__mobile-card-data">
                {rowItems.data.map(rowData => (
-                 <div>{rowData}</div>
+                 <div className="ce-table__mobile-card-row-data">{rowData}</div>
                ))}
                 </div>
+               </div>
              </div>
            )
           )}
