@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Table /> render() renders the component 1`] = `
+<div
+  className="ce-table"
+  headings={
+    Array [
+      "Heading 1",
+      "heading 2",
+    ]
+  }
+  label="This is a label"
+  name="Name"
+  onChange={false}
+  rows={
+    Array [
+      Object {
+        "data": Array [
+          "row 1 cell 1",
+          "row 2 cell 2",
+        ],
+      },
+      Object {
+        "data": Array [
+          "row 2 cell 1",
+          "row 2 cell 2",
+        ],
+      },
+    ]
+  }
+  selectable={false}
+>
+  <div
+    className="ce-table__container-desktop"
+  >
+    <div
+      className="ce-table__header-row"
+    >
+      <div
+        className="ce-table__header-cell"
+      >
+        Heading 1
+      </div>
+      <div
+        className="ce-table__header-cell"
+      >
+        heading 2
+      </div>
+    </div>
+    <div
+      className="ce-table__data-row null"
+    >
+      <div
+        className="ce-table__data-cell "
+      >
+        row 1 cell 1
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        row 2 cell 2
+      </div>
+    </div>
+    <div
+      className="ce-table__data-row null"
+    >
+      <div
+        className="ce-table__data-cell "
+      >
+        row 2 cell 1
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        row 2 cell 2
+      </div>
+    </div>
+  </div>
+  <div
+    className="ce-table__container-mobile"
+  >
+    <div
+      className="ce-table__mobile-row"
+    >
+      <div
+        className="ce-table__mobile-card-container null"
+      >
+        <div
+          className="ce-table__mobile-data-container"
+        >
+          <div
+            className="ce-table__mobile-headings"
+          >
+            <span>
+              <strong>
+                Heading 1
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                heading 2
+                :
+              </strong>
+            </span>
+          </div>
+          <div
+            className="ce-table__mobile-card-data"
+          >
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              row 1 cell 1
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              row 2 cell 2
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="ce-table__mobile-card-container null"
+      >
+        <div
+          className="ce-table__mobile-data-container"
+        >
+          <div
+            className="ce-table__mobile-headings"
+          >
+            <span>
+              <strong>
+                Heading 1
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                heading 2
+                :
+              </strong>
+            </span>
+          </div>
+          <div
+            className="ce-table__mobile-card-data"
+          >
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              row 2 cell 1
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              row 2 cell 2
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -132,7 +132,7 @@ Table.propTypes = {
    */
   name: PropTypes.string,
   /**
-   * The values that populate the header.
+   * The values that populate the header.  
    */
   headings: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
