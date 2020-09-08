@@ -15,7 +15,7 @@ import Checkbox from '../form-controls/checkbox/Checkbox';
 
 const Table = ({
   className,
-  handleChange,
+  handleClick,
   headings,
   label,
   name,
@@ -49,7 +49,7 @@ const Table = ({
       headings={headings}
       rows={rows}
       name={name}
-      onChange={handleChange}
+      onChange={selectable ? handleClick : false}
       selectable={selectable}
     >
       <div className="ce-table__container-desktop">
@@ -116,33 +116,33 @@ const Table = ({
 
 Table.propTypes = {
   /**
-   * A class name, or string of class names, to add to the `<Switch />`.
+   * A class name, or string of class names, to add to the `<Table />`.
    */
   className: PropTypes.string,
   /**
-   * A function to trigger when the state of the `<Switch />` changes.
+   * A function to trigger when the state of the `<Table />` changes.  This function is only accessible if the "selectable" prop is set to true.  The default for both "selectable" and this handleClick function are both false.
    */
-  handleChange: PropTypes.func,
+  handleClick: PropTypes.func,
   /**
-   * The `<Switch />` label.
+   * The `<Table />` label.
    */
   label: PropTypes.string.isRequired,
   /**
-   * The name given to all the children of the `<Switch />`.
+   * The name given to all the children of the `<Table />`.
    */
   name: PropTypes.string,
   /**
-   * The value of the `<Switch />`.
+   * The values that populate the header.
    */
   headings: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   ).isRequired,
   /**
-   * oinoinoin
+   * The values that populate the row cells.  Each row of data must be an object in an array.  Each object must have a property called 'data' containing an array of values that will then be pushed into the table row.
    */
   rows: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
-  ),
+  ).isRequired,
   /**
    * Makes the interactive with hover, active and checkbox functionality.  The default is false, hiding the checkbox column. 
    */
@@ -153,8 +153,7 @@ Table.propTypes = {
 Table.defaultProps = {
   className: '',
   name: '',
-  handleChange: () => {},
-  rows: [''],
+  handleClick: () => {},
   selectable: false,
   // status: false,
 };

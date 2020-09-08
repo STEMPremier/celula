@@ -18,13 +18,12 @@ import Table from '.';
 
 <Story name="Table with Knobs" parameters={{ docs: { disable: true } }}>
   <Table 
-  handleChange={action('onClick event triggered')}
+  handleClick={action('onClick event triggered')}
   headers={array('headers', [])}
   label={text('label', 'This is the label')}
   name={text('name', 'name')}
   rows={array('rows', [])}
-  status={text('status', '')}
-  statusColumn={boolean('status', false)}
+  selectable={boolean('selectable', true)}
   />
 </Story>
 
@@ -67,7 +66,7 @@ import Table from '.';
 
 ### Selectable 
 <Preview>
-  <Story name="Selectable">
+  <Story name="Table Selectable">
     <Table 
     selectable
     label="This is a label"
