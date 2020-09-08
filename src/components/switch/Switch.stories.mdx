@@ -1,10 +1,4 @@
-import {
-  Description,
-  Meta,
-  Preview,
-  Props,
-  Story,
-} from '@storybook/addon-docs/blocks';
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
 
@@ -14,7 +8,7 @@ import Switch from '.';
 
 # Switch
 <Description of={Switch} />
-<Props of={Switch} />
+<ArgsTable of={Switch} />
 
 <Story name="Switch with Knobs" parameters={{ docs: { disable: true } }}>
   <Switch
@@ -29,40 +23,46 @@ import Switch from '.';
   />
 </Story>
 
-### Switch States
-<Preview>
-  <Story name="Switch States">
-    <div>
-      <Switch
-        label="Check this slider"
-        name="checkSlider"
-        value="sliderChecked"
-      />
-      <Switch
-        checked
-        label="Uncheck this slider"
-        name="checkSlider"
-        value="sliderChecked"
-      />
-      <Switch
-        label="This slider is disabled and unchecked"
-        name="checkSlider"
-        value="sliderChecked"
-        disabled
-      />
-      <Switch
-        label="This slider is disabled and checked"
-        name="checkSlider"
-        value="sliderChecked"
-        checked
-        disabled
-      />
-      <Switch
-        label="This slider is in an error state"
-        name="checkSlider"
-        value="sliderChecked"
-        errorMsg="This is the wrong choice"
-      />
-    </div>
+## Colors and States
+
+### Default
+<Canvas>
+  <Story name="Default">
+    <Switch
+      label="I am a standard Switch"
+      name="default"
+      value="on"
+    />
   </Story>
-</Preview>
+</Canvas>
+
+### Disabled
+<Canvas>
+  <Story name="Disabled">
+    <Switch
+      label="This Switch is disabled"
+      name="disabledChecked"
+      value="disabledOn"
+      disabled
+    />
+    <Switch
+      label="So is this one"
+      name="disabledUnchecked"
+      value="disabledOff"
+      checked
+      disabled
+    />
+  </Story>
+</Canvas>
+
+### Error
+<Canvas>
+  <Story name="Error">
+    <Switch
+      label="This is a Switch with an error"
+      name="error"
+      value="on"
+      errorMsg="This is an error message."
+    />
+  </Story>
+</Canvas>

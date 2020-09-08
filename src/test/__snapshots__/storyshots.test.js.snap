@@ -1450,129 +1450,114 @@ exports[`Storyshots Components/Atoms/Search Search with Knobs 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/Atoms/Switch Switch States 1`] = `
-<div>
-  <div
-    className="ce-switch"
+exports[`Storyshots Components/Atoms/Switch Default 1`] = `
+<div
+  className="ce-switch"
+>
+  <input
+    checked={false}
+    disabled={false}
+    id="default_on"
+    name="default"
+    onChange={[Function]}
+    type="checkbox"
+    value="on"
+  />
+  <label
+    htmlFor="default_on"
   >
-    <input
-      checked={false}
-      disabled={false}
-      id="checkSlider_sliderChecked"
-      name="checkSlider"
-      onChange={[Function]}
-      type="checkbox"
-      value="sliderChecked"
-    />
-    <label
-      htmlFor="checkSlider_sliderChecked"
-    >
-      <span>
-        Check this slider
-      </span>
-    </label>
-    
-  </div>
-  <div
-    className="ce-switch"
-  >
-    <input
-      checked={true}
-      disabled={false}
-      id="checkSlider_sliderChecked"
-      name="checkSlider"
-      onChange={[Function]}
-      type="checkbox"
-      value="sliderChecked"
-    />
-    <label
-      htmlFor="checkSlider_sliderChecked"
-    >
-      <span>
-        Uncheck this slider
-      </span>
-    </label>
-    
-  </div>
+    <span>
+      I am a standard Switch
+    </span>
+  </label>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/Switch Disabled 1`] = `
+Array [
   <div
     className="ce-switch ce-switch--disabled"
   >
     <input
       checked={false}
       disabled={true}
-      id="checkSlider_sliderChecked"
-      name="checkSlider"
+      id="disabledChecked_disabledOn"
+      name="disabledChecked"
       onChange={[Function]}
       type="checkbox"
-      value="sliderChecked"
+      value="disabledOn"
     />
     <label
-      htmlFor="checkSlider_sliderChecked"
+      htmlFor="disabledChecked_disabledOn"
     >
       <span>
-        This slider is disabled and unchecked
+        This Switch is disabled
       </span>
     </label>
     
-  </div>
+  </div>,
   <div
     className="ce-switch ce-switch--disabled"
   >
     <input
       checked={true}
       disabled={true}
-      id="checkSlider_sliderChecked"
-      name="checkSlider"
+      id="disabledUnchecked_disabledOff"
+      name="disabledUnchecked"
       onChange={[Function]}
       type="checkbox"
-      value="sliderChecked"
+      value="disabledOff"
     />
     <label
-      htmlFor="checkSlider_sliderChecked"
+      htmlFor="disabledUnchecked_disabledOff"
     >
       <span>
-        This slider is disabled and checked
+        So is this one
       </span>
     </label>
     
-  </div>
-  <div
-    className="ce-switch ce-switch--error"
+  </div>,
+]
+`;
+
+exports[`Storyshots Components/Atoms/Switch Error 1`] = `
+<div
+  className="ce-switch ce-switch--error"
+>
+  <input
+    checked={false}
+    disabled={false}
+    id="error_on"
+    name="error"
+    onChange={[Function]}
+    type="checkbox"
+    value="on"
+  />
+  <label
+    htmlFor="error_on"
   >
-    <input
-      checked={false}
-      disabled={false}
-      id="checkSlider_sliderChecked"
-      name="checkSlider"
-      onChange={[Function]}
-      type="checkbox"
-      value="sliderChecked"
-    />
-    <label
-      htmlFor="checkSlider_sliderChecked"
-    >
-      <span>
-        This slider is in an error state
-      </span>
-    </label>
+    <span>
+      This is a Switch with an error
+    </span>
+  </label>
+  <div
+    className="ce-errorbox"
+  >
     <div
-      className="ce-errorbox"
+      className="ce-errorbox__container"
     >
       <div
-        className="ce-errorbox__container"
+        className="ce-errorbox__arrow"
+      />
+      <div
+        className="ce-errorbox__message"
       >
-        <div
-          className="ce-errorbox__arrow"
-        />
-        <div
-          className="ce-errorbox__message"
+        <span
+          className="ce-errorbox__text"
         >
-          <span
-            className="ce-errorbox__text"
-          >
-            This is the wrong choice
-          </span>
-        </div>
+          This is an error message.
+        </span>
       </div>
     </div>
   </div>

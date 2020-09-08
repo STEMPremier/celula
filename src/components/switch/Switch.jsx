@@ -6,6 +6,9 @@ import { ErrorBox } from '../form-controls/core';
 
 import '../form-controls/core/selectable/selectable.less';
 
+/**
+ * `Switches` toggle the state of a single setting on or off. They are the preferred way to adjust settings on mobile. Use them to toggle a single option on or off or to immediately activate or deactivate something
+ */
 const Switch = ({
   checked,
   className,
