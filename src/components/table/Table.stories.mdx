@@ -65,6 +65,46 @@ import Table from '.';
   </Story>
 </Preview>
 
+### Selectable 
+<Preview>
+  <Story name="Selectable">
+    <Table 
+    selectable
+    label="This is a label"
+    name="name"
+    headings={[
+    'First Name',
+    'Last Name',
+    'Company',
+    'Job Title',
+    'Age',
+  ]}
+    rows={[
+    {
+      data: ['Jenny', 'Schutzman', 'Tallo', 'Software Engineer', '36'],
+      status: '',
+    },
+    {
+      data: ['David', 'Morrow', 'Gildan', 'Supply Chain Manager', '43'],
+      status: '',
+    },
+    {
+      data: [
+        'Gina',
+        'Nicholas',
+        'Proctor and Gamble',
+        'Evaluation Data Manager',
+        '34',
+      ],
+      status: '',
+    },
+  ]}
+    />
+  </Story>
+</Preview>
+
+
+
 <!-- ### Status Column 
 <Preview>
   <Story name="Status Column">

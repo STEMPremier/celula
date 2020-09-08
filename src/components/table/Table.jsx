@@ -20,6 +20,7 @@ const Table = ({
   label,
   name,
   rows,
+  selectable,
   // status,
 }) => {
   const [selectAll, setSelectAll] = useState(false);
@@ -35,9 +36,11 @@ const Table = ({
     mobileData: rows
   }
 
-  console.log('mobileViewObject', mobileViewObject)
-
-  const classes = cx('ce-table', className);
+  const classes = cx('ce-table', 
+    {
+      'ce-table--selectable': selectable
+    },
+  className);
 
   return (
     <div
@@ -47,17 +50,24 @@ const Table = ({
       rows={rows}
       name={name}
       onChange={handleChange}
+      selectable={selectable}
     >
       <div className="ce-table__container-desktop">
         <div className="ce-table__header-row">
-        <Checkbox name="headerCheckbox" value={selectAll} checked={selectAll} handleChange={() => onChangeSelectAll()} />
+          {selectable && (
+            <Checkbox name="headerCheckbox" value={selectAll} checked={selectAll} handleChange={() => onChangeSelectAll()} />
+          )}
+       
           {headings.map(header => (
             <div className="ce-table__header-cell">{header}</div>
           ))}
         </div>
           {rows.map(rowItems => (
-             <div className="ce-table__data-row">
-               <Checkbox name="rowCheckbox" value={rowItems.data} checked={selected} />
+             <div className={`ce-table__data-row ${  selectable ? "ce-table--selectable": null}`}>
+               {selectable && (
+                 <Checkbox name="rowCheckbox" value={rowItems.data} checked={selected} />
+               )}
+             
               {rowItems.data.map(rowData => (
                  <div className="ce-table__data-cell ">
                 {rowData} 
@@ -66,15 +76,18 @@ const Table = ({
              </div>
           ))}
       </div>
-      
+
       
       <div className="ce-table__container-mobile">
         <div className="ce-table__mobile-row">
         {rows.map(rowItems => (
-             <div className="ce-table__mobile-card-container">
-               <div className="ce-table__mobile-checkbox">
-                 <Checkbox name="name" value={rowItems.data} checked={selected} />
-               </div>
+             <div className={`ce-table__mobile-card-container ${  selectable ? "ce-table--selectable": null}`}>
+               {selectable && (
+                <div className="ce-table__mobile-checkbox">
+                  <Checkbox name="name" value={rowItems.data} checked={selected} />
+                </div>
+               )}
+            
                <div className="ce-table__mobile-data-container">
                <div className="ce-table__mobile-headings">
                   {headings.map(mobileHeading => (
@@ -130,6 +143,10 @@ Table.propTypes = {
   rows: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   ),
+  /**
+   * Makes the interactive with hover, active and checkbox functionality.  The default is false, hiding the checkbox column. 
+   */
+  selectable: PropTypes.bool,
   // status: PropTypes.bool,
 };
 
@@ -138,6 +155,7 @@ Table.defaultProps = {
   name: '',
   handleChange: () => {},
   rows: [''],
+  selectable: false,
   // status: false,
 };
 

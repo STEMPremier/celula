@@ -2,6 +2,21 @@
 
 .ce-table {
 
+  // .ce-table--selectable{
+  
+  //   &.ce-table__data-row{
+  //     // .ce-table__container-desktop{
+  //         background-color: green;
+  //         &:hover {
+  //           // background-color: #E6F7FF;
+  //           background-color: pink;
+  //          }
+  //          &:active {
+  //           background-color: #CCEFFF;
+  //           }
+  //     // }
+  //   }
+  // }
   @media screen and (min-width:765px){
     .ce-table__container-mobile{
       display: none;
@@ -35,21 +50,26 @@
   
         .ce-table__data-row:nth-child(even){
           background-color: #f1f6f9;
-          &:hover {
-            background-color: #E6F7FF;
-           }
-           &:active {
-            background-color: #CCEFFF;
-            }
+          &.ce-table--selectable {
+            &:hover {
+              background-color: #E6F7FF;
+             }
+             &:active {
+              background-color: #CCEFFF;
+              }
+          }
+
         }
         .ce-table__data-row:nth-child(odd){
           background-color: @white;
-          &:hover {
-            background-color: #E6F7FF;
-           }
-           &:active {
-            background-color: #CCEFFF;
-            }
+          &.ce-table--selectable {
+            &:hover {
+              background-color: #E6F7FF;
+             }
+             &:active {
+              background-color: #CCEFFF;
+              }
+          }
         }
         
        .ce-table__data-cell{
@@ -73,12 +93,19 @@
      
       .ce-table__mobile-row {
         width: 100%;
-        border: 5px solid yellow;
         display:flex;
         flex-direction: column;
-        // align-items: center;
    
         .ce-table__mobile-card-container{
+          &.ce-table--selectable {
+            &:hover {
+              background-color: #E6F7FF;
+             }
+             &:active {
+              background-color: #CCEFFF;
+              }
+          }
+
           .ce-table__mobile-data-container{
             display:flex;
             align-items: center;
@@ -101,21 +128,9 @@
   
         .ce-table__mobile-card-container:nth-child(odd){
           background-color: #f1f6f9;
-          &:hover {
-            background-color: #E6F7FF;
-           }
-           &:active {
-            background-color: #CCEFFF;
-          }
         }
         .ce-table__mobile-card-container:nth-child(even){
           background-color: @white ;
-          &:hover {
-            background-color: #E6F7FF;
-           }
-           &:active {
-            background-color: #CCEFFF;
-            }
         }
       }
   }
