@@ -22,7 +22,20 @@ import Table from '.';
   headers={array('headers', [])}
   label={text('label', 'This is the label')}
   name={text('name', 'name')}
-  rows={array('rows', [])}
+  rows={array('rows', [
+    {
+      data: ['Row 1 cell 1', 'Row 1 cell 2', 'Row 1 cell 3', 'Row 1 cell 4', 'Row 1 cell 5'],
+      status: '',
+    },
+    {
+      data: ['Row 2 cell 1', 'Row 2 cell 2', 'Row 2 cell 3', 'Row 2 cell 4', 'Row 2 cell 5'],
+      status: '',
+    },
+    {
+      data: ['Row 3 cell 1', 'Row 3 cell 2', 'Row 3 cell 3', 'Row 3 cell 4', 'Row 3 cell 5'],  
+      status: '',
+    },
+  ])}
   selectable={boolean('selectable', true)}
   />
 </Story>
@@ -42,21 +55,15 @@ import Table from '.';
   ]}
     rows={[
     {
-      data: ['Jenny', 'Schutzman', 'Tallo', 'Software Engineer', '36'],
+      data: ['Row 1 cell 1', 'Row 1 cell 2', 'Row 1 cell 3', 'Row 1 cell 4', 'Row 1 cell 5'],
       status: '',
     },
     {
-      data: ['David', 'Morrow', 'Gildan', 'Supply Chain Manager', '43'],
+      data: ['Row 2 cell 1', 'Row 2 cell 2', 'Row 2 cell 3', 'Row 2 cell 4', 'Row 2 cell 5'],
       status: '',
     },
     {
-      data: [
-        'Gina',
-        'Nicholas',
-        'Proctor and Gamble',
-        'Evaluation Data Manager',
-        '34',
-      ],
+      data: ['Row 3 cell 1', 'Row 3 cell 2', 'Row 3 cell 3', 'Row 3 cell 4', 'Row 3 cell 5'],  
       status: '',
     },
   ]}
@@ -80,21 +87,15 @@ import Table from '.';
   ]}
     rows={[
     {
-      data: ['Jenny', 'Schutzman', 'Tallo', 'Software Engineer', '36'],
+      data: ['Row 1 cell 1', 'Row 1 cell 2', 'Row 1 cell 3', 'Row 1 cell 4', 'Row 1 cell 5'],
       status: '',
     },
     {
-      data: ['David', 'Morrow', 'Gildan', 'Supply Chain Manager', '43'],
+      data: ['Row 2 cell 1', 'Row 2 cell 2', 'Row 2 cell 3', 'Row 2 cell 4', 'Row 2 cell 5'],
       status: '',
     },
     {
-      data: [
-        'Gina',
-        'Nicholas',
-        'Proctor and Gamble',
-        'Evaluation Data Manager',
-        '34',
-      ],
+      data: ['Row 3 cell 1', 'Row 3 cell 2', 'Row 3 cell 3', 'Row 3 cell 4', 'Row 3 cell 5'],  
       status: '',
     },
   ]}
