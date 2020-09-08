@@ -78,7 +78,12 @@ const Table = ({
                <div className="ce-table__mobile-data-container">
                <div className="ce-table__mobile-headings">
                   {headings.map(mobileHeading => (
-                     <span>{mobileHeading}</span>
+                     <span>
+<strong>
+{mobileHeading}
+:
+</strong>
+                     </span>
                ))}
                </div>
                 <div className="ce-table__mobile-card-data">

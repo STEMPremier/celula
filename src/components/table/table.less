@@ -2,7 +2,7 @@
 
 .ce-table {
 
-  @media screen and (max-width:765px){
+  @media screen and (min-width:765px){
     .ce-table__container-mobile{
       display: none;
     }
@@ -63,7 +63,7 @@
   }
 
 
-  @media screen and (min-width:765px){
+  @media screen and (max-width:765px){
     .ce-table__container-desktop{
       display: none;
     }
@@ -76,53 +76,40 @@
         border: 5px solid yellow;
         display:flex;
         flex-direction: column;
-  
+        // align-items: center;
+   
         .ce-table__mobile-card-container{
-          // background-color: green;
-          // background-color: blue;
           .ce-table__mobile-data-container{
             display:flex;
-            border: 10px solid black;
-            padding: 10px;
+            align-items: center;
+            padding: 0px 0px 10px 50px;
             .ce-table__mobile-headings{
               display: flex;
               flex-direction: column;
-              // border: 3px solid white;
-              // background-color: blue;
               width: 30%;
+              font-weight: bold;
               }
               .ce-table__mobile-card-data{
-                // background-color: red;
-                width: 100%;
                 padding: 10px;
                 .ce-table__mobile-card-row-data{
-                  padding: 2px;
+                  padding: 3px;
                 }
             }
           }
-          .ce-table__mobile-card-container:nth-child(even){
-            // background-color: #f1f6f9;
-            background-color: purple;
-            &:hover {
-              background-color: #E6F7FF;
-             }
-             &:active {
-              background-color: #CCEFFF;
-              }
-          }
-          .ce-table__mobile-card-contain:nth-child(odd){
-            background-color: @white;
-            &:hover {
-              background-color: #E6F7FF;
-             }
-             &:active {
-              background-color: #CCEFFF;
-              }
-          }
+
         }
   
-        .ce-table__mobile-card-contain:nth-child(odd){
-          background-color: @white;
+        .ce-table__mobile-card-container:nth-child(odd){
+          background-color: #f1f6f9;
+          &:hover {
+            background-color: #E6F7FF;
+           }
+           &:active {
+            background-color: #CCEFFF;
+          }
+        }
+        .ce-table__mobile-card-container:nth-child(even){
+          background-color: @white ;
           &:hover {
             background-color: #E6F7FF;
            }
@@ -130,7 +117,6 @@
             background-color: #CCEFFF;
             }
         }
-        
       }
   }
   }
