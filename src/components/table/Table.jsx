@@ -39,15 +39,7 @@ const Table = ({
 
   const classes = cx('ce-table', className);
 
-  let width = window.innerWidth;
-
-
- 
-    if(width > 768){
-      
-    }
-   
-    return (
+  return (
     <div
       className={classes} 
       label={label}
