@@ -7,9 +7,6 @@ import { SIZES } from '../../utils/constants';
 
 import './toggle-button.less';
 
-/**
- * `ToggleButton` description and directions.
- */
 const ToggleButton = ({
   checked,
   className,

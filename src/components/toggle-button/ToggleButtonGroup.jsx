@@ -3,15 +3,10 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import { FormControlGroup } from '../form-controls/core';
-import * as CONSTANTS from '../../utils/constants';
+import { COLORS, SIZES } from '../../utils/constants';
 
 import './toggle-button-group.less';
 
-const { COLORS, SIZES } = CONSTANTS;
-
-/**
- * `ToggleButton` description and directions.
- */
 const ToggleButtonGroup = ({
   children,
   className,
@@ -63,7 +58,8 @@ ToggleButtonGroup.propTypes = {
   /**
    * The color of the `<ToggleButtonGroup />`.\
    */
-  color: PropTypes.string,
+  // color: PropTypes.oneOf(COLORS),
+  color: PropTypes.oneOf(['primary', 'secondary', 'black', 'inverted']),
   /**
    * Disables the `<ToggleButtonGroup />` and all of its children.
    */
@@ -91,7 +87,8 @@ ToggleButtonGroup.propTypes = {
   /**
    * The size of the `<ToggleButtonGroup />`.
    */
-  size: PropTypes.oneOf(SIZES),
+  // size: PropTypes.oneOf(SIZES),
+  size: PropTypes.oneOf(['small', 'large', 'jumbo']),
   // validators: PropTypes.array,
 };
 
