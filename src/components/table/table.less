@@ -2,6 +2,10 @@
 
 .ce-table {
 
+  label {
+    display: hidden;
+  }
+
   @media screen and (min-width:765px){
     .ce-table__container-mobile{
       display: none;
@@ -16,6 +20,10 @@
         align-items: center;
         justify-content: center;
         border-bottom: .1rem solid @gray;
+
+        .ce-checkbox {
+          padding-bottom: 12px;
+        }
        }
   
        .ce-table__header-cell{  
@@ -31,6 +39,10 @@
         justify-content: center;
         display:flex;
         flex-direction: row;
+
+        .ce-checkbox {
+          padding-bottom: 12px;
+        }
         }
   
         .ce-table__data-row:nth-child(even){

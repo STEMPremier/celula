@@ -1,8 +1,5 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable react/jsx-indent */
-/* eslint-disable no-unused-expressions */
+/* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/jsx-key */
-/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -24,90 +21,146 @@ const Table = ({
   // status,
 }) => {
   const [selectAll, setSelectAll] = useState(false);
-  const [selected, setSelected] = useState(false);
+  const [selected, setSelected] = useState();
 
-  const onChangeSelectAll = event => {
+  const onChangeSelectAll = () => {
     setSelectAll(!selectAll);
     setSelected(!selected);
   };
 
-  const mobileViewObject = {
-    mobileHeadings: headings,
-    mobileData: rows
-  }
-
-  const classes = cx('ce-table', 
+  const classes = cx(
+    'ce-table',
     {
-      'ce-table--selectable': selectable
+      'ce-table--selectable': selectable,
     },
-  className);
+    className,
+  );
 
   return (
     <div
-      className={classes} 
+      className={classes}
       label={label}
       headings={headings}
       rows={rows}
       name={name}
       onChange={selectable ? handleClick : false}
       selectable={selectable}
+      role="table"
+      aria-label={label}
     >
       <div className="ce-table__container-desktop">
-        <div className="ce-table__header-row">
+        <div
+          className="ce-table__header-row"
+          role="rowgroup"
+          aria-label="header row"
+        >
           {selectable && (
-            <Checkbox name="headerCheckbox" value={selectAll} checked={selectAll} handleChange={() => onChangeSelectAll()} />
+            <Checkbox
+              name="headerCheckbox"
+              value={selectAll}
+              checked={selectAll}
+              handleChange={() => onChangeSelectAll()}
+              role="cell"
+              aria-label="select all checkboxes"
+            />
           )}
-       
+
           {headings.map(header => (
-            <div className="ce-table__header-cell">{header}</div>
+            <div
+              className="ce-table__header-cell"
+              aria-label={header}
+              role="columnheader"
+            >
+              {header}
+            </div>
           ))}
         </div>
-          {rows.map(rowItems => (
-             <div className={`ce-table__data-row ${  selectable ? "ce-table--selectable": null}`}>
-               {selectable && (
-                 <Checkbox name="rowCheckbox" value={rowItems.data} checked={selected} />
-               )}
-             
-              {rowItems.data.map(rowData => (
-                 <div className="ce-table__data-cell ">
-                {rowData} 
-                 </div>
-              ))}
-             </div>
-          ))}
+        {rows.map(rowItems => (
+          <div
+            role="row"
+            aria-label="row items"
+            className={`ce-table__data-row ${
+              selectable ? 'ce-table--selectable' : null
+            }`}
+          >
+            {selectable && (
+              <Checkbox
+                name="row checkbox"
+                value={rowItems.data}
+                checked={selected}
+                aria-label={rowItems.data}
+                label=""
+              />
+            )}
+
+            {rowItems.data.map(rowData => (
+              <div
+                className="ce-table__data-cell"
+                role="cell"
+                aria-label={rowData}
+              >
+                {rowData}
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
 
-      
       <div className="ce-table__container-mobile">
-        <div className="ce-table__mobile-row">
-        {rows.map(rowItems => (
-             <div className={`ce-table__mobile-card-container ${  selectable ? "ce-table--selectable": null}`}>
-               {selectable && (
+        <div className="ce-table__mobile-row" role="rowgroup">
+          {rows.map(rowItems => (
+            <div
+              role="row"
+              aria-label="row items"
+              className={`ce-table__mobile-card-container ${
+                selectable ? 'ce-table--selectable' : null
+              }`}
+            >
+              {selectable && (
                 <div className="ce-table__mobile-checkbox">
-                  <Checkbox name="name" value={rowItems.data} checked={selected} />
+                  <Checkbox
+                    name="name"
+                    value={rowItems.data}
+                    checked={selected}
+                    role="rowheader"
+                    aria-label={rowItems.data}
+                    label=""
+                  />
                 </div>
-               )}
-            
-               <div className="ce-table__mobile-data-container">
-               <div className="ce-table__mobile-headings">
+              )}
+
+              <div className="ce-table__mobile-data-container">
+                <div
+                  className="ce-table__mobile-headings"
+                  role="row"
+                  aria-label="row"
+                >
                   {headings.map(mobileHeading => (
-                     <span>
-<strong>
-{mobileHeading}
-:
-</strong>
-                     </span>
-               ))}
-               </div>
-                <div className="ce-table__mobile-card-data">
-               {rowItems.data.map(rowData => (
-                 <div className="ce-table__mobile-card-row-data">{rowData}</div>
-               ))}
+                    <span>
+                      <strong role="columnheader" aria-label={mobileHeading}>
+                        {mobileHeading}:
+                      </strong>
+                    </span>
+                  ))}
                 </div>
-               </div>
-             </div>
-           )
-          )}
+                <div
+                  className="ce-table__mobile-card-data"
+                  role="row"
+                  aria-label="row"
+                >
+                  {rowItems.data.map(rowData => (
+                    <div
+                      className="ce-table__mobile-card-row-data"
+                      role="cell"
+                      aria-label={rowData}
+                    >
+                      {rowData}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -132,7 +185,7 @@ Table.propTypes = {
    */
   name: PropTypes.string,
   /**
-   * The values that populate the header.  
+   * The values that populate the header.
    */
   headings: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
@@ -144,7 +197,7 @@ Table.propTypes = {
     PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   ).isRequired,
   /**
-   * Makes the interactive with hover, active and checkbox functionality.  The default is false, hiding the checkbox column. 
+   * Makes the interactive with hover, active and checkbox functionality.  The default is false, hiding the checkbox column.
    */
   selectable: PropTypes.bool,
   // status: PropTypes.bool,
