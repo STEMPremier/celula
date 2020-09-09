@@ -170,7 +170,7 @@ Table.propTypes = {
    */
   className: PropTypes.string,
   /**
-   * A function to trigger when the state of the `<Table />` changes.  This function is only accessible if the "selectable" prop is set to true.  The default for both "selectable" and this handleClick function are both false.
+   * A function to trigger when the state of the `<Table />` changes.  This function is only accessible if the "selectable" prop is set to true.  The default for the selectable and this handleClick function are both false.
    */
   handleClick: PropTypes.func,
   /**
