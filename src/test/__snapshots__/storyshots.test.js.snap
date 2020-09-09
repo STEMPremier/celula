@@ -1588,6 +1588,7 @@ exports[`Storyshots Components/Atoms/Switch Switch with Knobs 1`] = `
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots Components/Atoms/Table Table Row State Changes 1`] = `
 <div
   className="ce-table"
@@ -3149,1040 +3150,10 @@ exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Colors 1`] = `
 <div>
   <span
     style={Object {}}
-  >
-    <fieldset
-      className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
-      disabled={false}
-      form=""
-      onChange={[Function]}
-    >
-      <legend>
-        
-      </legend>
-      <div
-        className="ce-toggle-button"
-      >
-        <input
-          defaultChecked={false}
-          disabled={false}
-          id="formColor_primary_export"
-          name="formColor_primary"
-          type="radio"
-          value="export"
-        />
-        <label
-          htmlFor="formColor_primary_export"
-        >
-          <span
-            className="ce-toggle-button__label--hidden"
-          >
-            export
-          </span>
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-export"
-              />
-            </svg>
-          </span>
-        </label>
-      </div>
-      <div
-        className="ce-toggle-button ce-toggle-button--checked"
-      >
-        <input
-          defaultChecked={true}
-          disabled={false}
-          id="formColor_primary_follow"
-          name="formColor_primary"
-          type="radio"
-          value="follow"
-        />
-        <label
-          htmlFor="formColor_primary_follow"
-        >
-          <span
-            className="ce-toggle-button__label--hidden"
-          >
-            follow
-          </span>
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-follow"
-              />
-            </svg>
-          </span>
-        </label>
-      </div>
-      <div
-        className="ce-toggle-button"
-      >
-        <input
-          defaultChecked={false}
-          disabled={false}
-          id="formColor_primary_message"
-          name="formColor_primary"
-          type="radio"
-          value="message"
-        />
-        <label
-          htmlFor="formColor_primary_message"
-        >
-          <span
-            className="ce-toggle-button__label--hidden"
-          >
-            message
-          </span>
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-message"
-              />
-            </svg>
-          </span>
-        </label>
-      </div>
-      <span
-        className=""
-      >
-        
-      </span>
-    </fieldset>
-  </span>
-  <span
-    style={Object {}}
-  >
-    <fieldset
-      className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--secondary"
-      disabled={false}
-      form=""
-      onChange={[Function]}
-    >
-      <legend>
-        
-      </legend>
-      <div
-        className="ce-toggle-button"
-      >
-        <input
-          defaultChecked={false}
-          disabled={false}
-          id="formColor_secondary_export"
-          name="formColor_secondary"
-          type="radio"
-          value="export"
-        />
-        <label
-          htmlFor="formColor_secondary_export"
-        >
-          <span
-            className="ce-toggle-button__label--hidden"
-          >
-            export
-          </span>
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-export"
-              />
-            </svg>
-          </span>
-        </label>
-      </div>
-      <div
-        className="ce-toggle-button ce-toggle-button--checked"
-      >
-        <input
-          defaultChecked={true}
-          disabled={false}
-          id="formColor_secondary_follow"
-          name="formColor_secondary"
-          type="radio"
-          value="follow"
-        />
-        <label
-          htmlFor="formColor_secondary_follow"
-        >
-          <span
-            className="ce-toggle-button__label--hidden"
-          >
-            follow
-          </span>
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-follow"
-              />
-            </svg>
-          </span>
-        </label>
-      </div>
-      <div
-        className="ce-toggle-button"
-      >
-        <input
-          defaultChecked={false}
-          disabled={false}
-          id="formColor_secondary_message"
-          name="formColor_secondary"
-          type="radio"
-          value="message"
-        />
-        <label
-          htmlFor="formColor_secondary_message"
-        >
-          <span
-            className="ce-toggle-button__label--hidden"
-          >
-            message
-          </span>
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-message"
-              />
-            </svg>
-          </span>
-        </label>
-      </div>
-      <span
-        className=""
-      >
-        
-      </span>
-    </fieldset>
-  </span>
-  <span
-    style={Object {}}
-  >
-    <fieldset
-      className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--black"
-      disabled={false}
-      form=""
-      onChange={[Function]}
-    >
-      <legend>
-        
-      </legend>
-      <div
-        className="ce-toggle-button"
-      >
-        <input
-          defaultChecked={false}
-          disabled={false}
-          id="formColor_black_export"
-          name="formColor_black"
-          type="radio"
-          value="export"
-        />
-        <label
-          htmlFor="formColor_black_export"
-        >
-          <span
-            className="ce-toggle-button__label--hidden"
-          >
-            export
-          </span>
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-export"
-              />
-            </svg>
-          </span>
-        </label>
-      </div>
-      <div
-        className="ce-toggle-button ce-toggle-button--checked"
-      >
-        <input
-          defaultChecked={true}
-          disabled={false}
-          id="formColor_black_follow"
-          name="formColor_black"
-          type="radio"
-          value="follow"
-        />
-        <label
-          htmlFor="formColor_black_follow"
-        >
-          <span
-            className="ce-toggle-button__label--hidden"
-          >
-            follow
-          </span>
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-follow"
-              />
-            </svg>
-          </span>
-        </label>
-      </div>
-      <div
-        className="ce-toggle-button"
-      >
-        <input
-          defaultChecked={false}
-          disabled={false}
-          id="formColor_black_message"
-          name="formColor_black"
-          type="radio"
-          value="message"
-        />
-        <label
-          htmlFor="formColor_black_message"
-        >
-          <span
-            className="ce-toggle-button__label--hidden"
-          >
-            message
-          </span>
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-message"
-              />
-            </svg>
-          </span>
-        </label>
-      </div>
-      <span
-        className=""
-      >
-        
-      </span>
-    </fieldset>
-  </span>
-  <span
-    style={
-      Object {
-        "backgroundColor": "black",
-        "display": "inline-block",
-      }
-    }
-  >
-    <fieldset
-      className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--inverted"
-      disabled={false}
-      form=""
-      onChange={[Function]}
-    >
-      <legend>
-        
-      </legend>
-      <div
-        className="ce-toggle-button"
-      >
-        <input
-          defaultChecked={false}
-          disabled={false}
-          id="formColor_inverted_export"
-          name="formColor_inverted"
-          type="radio"
-          value="export"
-        />
-        <label
-          htmlFor="formColor_inverted_export"
-        >
-          <span
-            className="ce-toggle-button__label--hidden"
-          >
-            export
-          </span>
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-export"
-              />
-            </svg>
-          </span>
-        </label>
-      </div>
-      <div
-        className="ce-toggle-button ce-toggle-button--checked"
-      >
-        <input
-          defaultChecked={true}
-          disabled={false}
-          id="formColor_inverted_follow"
-          name="formColor_inverted"
-          type="radio"
-          value="follow"
-        />
-        <label
-          htmlFor="formColor_inverted_follow"
-        >
-          <span
-            className="ce-toggle-button__label--hidden"
-          >
-            follow
-          </span>
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-follow"
-              />
-            </svg>
-          </span>
-        </label>
-      </div>
-      <div
-        className="ce-toggle-button"
-      >
-        <input
-          defaultChecked={false}
-          disabled={false}
-          id="formColor_inverted_message"
-          name="formColor_inverted"
-          type="radio"
-          value="message"
-        />
-        <label
-          htmlFor="formColor_inverted_message"
-        >
-          <span
-            className="ce-toggle-button__label--hidden"
-          >
-            message
-          </span>
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-message"
-              />
-            </svg>
-          </span>
-        </label>
-      </div>
-      <span
-        className=""
-      >
-        
-      </span>
-    </fieldset>
-  </span>
-</div>
-`;
-
-exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Sizes 1`] = `
-<div>
-  <fieldset
-    className="ce-toggle-button-group ce-toggle-button-group--small ce-toggle-button-group--primary"
-    disabled={false}
-    form=""
-    onChange={[Function]}
-  >
-    <legend>
-      
-    </legend>
-    <div
-      className="ce-toggle-button"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="formSizes_small_export"
-        name="formSizes_small"
-        type="radio"
-        value="export"
-      />
-      <label
-        htmlFor="formSizes_small_export"
-      >
-        <span
-          className="ce-toggle-button__label--hidden"
-        >
-          export
-        </span>
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-export"
-            />
-          </svg>
-        </span>
-      </label>
-    </div>
-    <div
-      className="ce-toggle-button ce-toggle-button--checked"
-    >
-      <input
-        defaultChecked={true}
-        disabled={false}
-        id="formSizes_small_follow"
-        name="formSizes_small"
-        type="radio"
-        value="follow"
-      />
-      <label
-        htmlFor="formSizes_small_follow"
-      >
-        <span
-          className="ce-toggle-button__label--hidden"
-        >
-          follow
-        </span>
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-follow"
-            />
-          </svg>
-        </span>
-      </label>
-    </div>
-    <div
-      className="ce-toggle-button"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="formSizes_small_message"
-        name="formSizes_small"
-        type="radio"
-        value="message"
-      />
-      <label
-        htmlFor="formSizes_small_message"
-      >
-        <span
-          className="ce-toggle-button__label--hidden"
-        >
-          message
-        </span>
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-message"
-            />
-          </svg>
-        </span>
-      </label>
-    </div>
-    <span
-      className=""
-    >
-      
-    </span>
-  </fieldset>
-  <fieldset
-    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
-    disabled={false}
-    form=""
-    onChange={[Function]}
-  >
-    <legend>
-      
-    </legend>
-    <div
-      className="ce-toggle-button"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="formSizes_large_export"
-        name="formSizes_large"
-        type="radio"
-        value="export"
-      />
-      <label
-        htmlFor="formSizes_large_export"
-      >
-        <span
-          className="ce-toggle-button__label--hidden"
-        >
-          export
-        </span>
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-export"
-            />
-          </svg>
-        </span>
-      </label>
-    </div>
-    <div
-      className="ce-toggle-button ce-toggle-button--checked"
-    >
-      <input
-        defaultChecked={true}
-        disabled={false}
-        id="formSizes_large_follow"
-        name="formSizes_large"
-        type="radio"
-        value="follow"
-      />
-      <label
-        htmlFor="formSizes_large_follow"
-      >
-        <span
-          className="ce-toggle-button__label--hidden"
-        >
-          follow
-        </span>
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-follow"
-            />
-          </svg>
-        </span>
-      </label>
-    </div>
-    <div
-      className="ce-toggle-button"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="formSizes_large_message"
-        name="formSizes_large"
-        type="radio"
-        value="message"
-      />
-      <label
-        htmlFor="formSizes_large_message"
-      >
-        <span
-          className="ce-toggle-button__label--hidden"
-        >
-          message
-        </span>
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-message"
-            />
-          </svg>
-        </span>
-      </label>
-    </div>
-    <span
-      className=""
-    >
-      
-    </span>
-  </fieldset>
-  <fieldset
-    className="ce-toggle-button-group ce-toggle-button-group--jumbo ce-toggle-button-group--primary"
-    disabled={false}
-    form=""
-    onChange={[Function]}
-  >
-    <legend>
-      
-    </legend>
-    <div
-      className="ce-toggle-button"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="formSizes_jumbo_export"
-        name="formSizes_jumbo"
-        type="radio"
-        value="export"
-      />
-      <label
-        htmlFor="formSizes_jumbo_export"
-      >
-        <span
-          className="ce-toggle-button__label--hidden"
-        >
-          export
-        </span>
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-export"
-            />
-          </svg>
-        </span>
-      </label>
-    </div>
-    <div
-      className="ce-toggle-button ce-toggle-button--checked"
-    >
-      <input
-        defaultChecked={true}
-        disabled={false}
-        id="formSizes_jumbo_follow"
-        name="formSizes_jumbo"
-        type="radio"
-        value="follow"
-      />
-      <label
-        htmlFor="formSizes_jumbo_follow"
-      >
-        <span
-          className="ce-toggle-button__label--hidden"
-        >
-          follow
-        </span>
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-follow"
-            />
-          </svg>
-        </span>
-      </label>
-    </div>
-    <div
-      className="ce-toggle-button"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="formSizes_jumbo_message"
-        name="formSizes_jumbo"
-        type="radio"
-        value="message"
-      />
-      <label
-        htmlFor="formSizes_jumbo_message"
-      >
-        <span
-          className="ce-toggle-button__label--hidden"
-        >
-          message
-        </span>
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-message"
-            />
-          </svg>
-        </span>
-      </label>
-    </div>
-    <span
-      className=""
-    >
-      
-    </span>
-  </fieldset>
-</div>
-`;
-
-exports[`Storyshots Components/Atoms/ToggleButton ToggleButton States 1`] = `
-Array [
-  <fieldset
-    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
-    disabled={false}
-    form=""
-    onChange={[Function]}
-  >
-    <legend>
-      
-    </legend>
-    <div
-      className="ce-toggle-button"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="formStates_default_export"
-        name="formStates_default"
-        type="radio"
-        value="export"
-      />
-      <label
-        htmlFor="formStates_default_export"
-      >
-        <span
-          className="ce-toggle-button__label--hidden"
-        >
-          export
-        </span>
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-export"
-            />
-          </svg>
-        </span>
-      </label>
-    </div>
-    <div
-      className="ce-toggle-button ce-toggle-button--checked"
-    >
-      <input
-        defaultChecked={true}
-        disabled={false}
-        id="formStates_default_follow"
-        name="formStates_default"
-        type="radio"
-        value="follow"
-      />
-      <label
-        htmlFor="formStates_default_follow"
-      >
-        <span
-          className="ce-toggle-button__label--hidden"
-        >
-          follow
-        </span>
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-follow"
-            />
-          </svg>
-        </span>
-      </label>
-    </div>
-    <div
-      className="ce-toggle-button"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="formStates_default_message"
-        name="formStates_default"
-        type="radio"
-        value="message"
-      />
-      <label
-        htmlFor="formStates_default_message"
-      >
-        <span
-          className="ce-toggle-button__label--hidden"
-        >
-          message
-        </span>
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-message"
-            />
-          </svg>
-        </span>
-      </label>
-    </div>
-    <span
-      className=""
-    >
-      
-    </span>
-  </fieldset>,
-  <fieldset
-    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--disabled"
-    disabled={true}
-    form=""
-    onChange={[Function]}
-  >
-    <legend>
-      
-    </legend>
-    <div
-      className="ce-toggle-button"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="formStates_disabled_export"
-        name="formStates_disabled"
-        type="radio"
-        value="export"
-      />
-      <label
-        htmlFor="formStates_disabled_export"
-      >
-        <span
-          className="ce-toggle-button__label--hidden"
-        >
-          export
-        </span>
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-export"
-            />
-          </svg>
-        </span>
-      </label>
-    </div>
-    <div
-      className="ce-toggle-button ce-toggle-button--checked"
-    >
-      <input
-        defaultChecked={true}
-        disabled={false}
-        id="formStates_disabled_follow"
-        name="formStates_disabled"
-        type="radio"
-        value="follow"
-      />
-      <label
-        htmlFor="formStates_disabled_follow"
-      >
-        <span
-          className="ce-toggle-button__label--hidden"
-        >
-          follow
-        </span>
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-follow"
-            />
-          </svg>
-        </span>
-      </label>
-    </div>
-    <div
-      className="ce-toggle-button"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="formStates_disabled_message"
-        name="formStates_disabled"
-        type="radio"
-        value="message"
-      />
-      <label
-        htmlFor="formStates_disabled_message"
-      >
-        <span
-          className="ce-toggle-button__label--hidden"
-        >
-          message
-        </span>
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-message"
-            />
-          </svg>
-        </span>
-      </label>
-    </div>
-    <span
-      className=""
-    >
-      
-    </span>
-  </fieldset>,
-]
-`;
-
-exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Types 1`] = `
+=======
+exports[`Storyshots Components/Atoms/ToggleButton Black 1`] = `
 <fieldset
-  className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
+  className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--black"
   disabled={false}
   form=""
   onChange={[Function]}
@@ -4192,17 +3163,18 @@ exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Types 1`] = `
   </legend>
   <div
     className="ce-toggle-button"
+>>>>>>> 194da23... update ToggleButton stories for new storybook version, and better documentation
   >
     <input
       defaultChecked={false}
       disabled={false}
-      id="formTypes_export"
-      name="formTypes"
+      id="formStates_black_export"
+      name="formStates_black"
       type="radio"
       value="export"
     />
     <label
-      htmlFor="formTypes_export"
+      htmlFor="formStates_black_export"
     >
       <span
         className="ce-toggle-button__label--hidden"
@@ -4228,13 +3200,13 @@ exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Types 1`] = `
     <input
       defaultChecked={true}
       disabled={false}
-      id="formTypes_follow"
-      name="formTypes"
+      id="formStates_black_follow"
+      name="formStates_black"
       type="radio"
       value="follow"
     />
     <label
-      htmlFor="formTypes_follow"
+      htmlFor="formStates_black_follow"
     >
       <span
         className="ce-toggle-button__label--hidden"
@@ -4260,13 +3232,705 @@ exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Types 1`] = `
     <input
       defaultChecked={false}
       disabled={false}
-      id="formTypes_message"
-      name="formTypes"
+      id="formStates_black_message"
+      name="formStates_black"
       type="radio"
       value="message"
     />
     <label
-      htmlFor="formTypes_message"
+      htmlFor="formStates_black_message"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        message
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-message"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <span
+    className=""
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton Inverted 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "black",
+    }
+  }
+>
+  <fieldset
+    className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--inverted"
+    disabled={false}
+    form=""
+    onChange={[Function]}
+  >
+    <legend>
+      
+    </legend>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formStates_inverted_export"
+        name="formStates_inverted"
+        type="radio"
+        value="export"
+      />
+      <label
+        htmlFor="formStates_inverted_export"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          export
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-export"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button ce-toggle-button--checked"
+    >
+      <input
+        defaultChecked={true}
+        disabled={false}
+        id="formStates_inverted_follow"
+        name="formStates_inverted"
+        type="radio"
+        value="follow"
+      />
+      <label
+        htmlFor="formStates_inverted_follow"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          follow
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-follow"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <div
+      className="ce-toggle-button"
+    >
+      <input
+        defaultChecked={false}
+        disabled={false}
+        id="formStates_inverted_message"
+        name="formStates_inverted"
+        type="radio"
+        value="message"
+      />
+      <label
+        htmlFor="formStates_inverted_message"
+      >
+        <span
+          className="ce-toggle-button__label--hidden"
+        >
+          message
+        </span>
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className=""
+          >
+            <use
+              xlinkHref="#icons_system-message"
+            />
+          </svg>
+        </span>
+      </label>
+    </div>
+    <span
+      className=""
+    >
+      
+    </span>
+  </fieldset>
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton Jumbo 1`] = `
+<fieldset
+  className="ce-toggle-button-group ce-toggle-button-group--jumbo ce-toggle-button-group--primary"
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    
+  </legend>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formSizes_jumbo_export"
+      name="formSizes_jumbo"
+      type="radio"
+      value="export"
+    />
+    <label
+      htmlFor="formSizes_jumbo_export"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        export
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-export"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button ce-toggle-button--checked"
+  >
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="formSizes_jumbo_follow"
+      name="formSizes_jumbo"
+      type="radio"
+      value="follow"
+    />
+    <label
+      htmlFor="formSizes_jumbo_follow"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        follow
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-follow"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formSizes_jumbo_message"
+      name="formSizes_jumbo"
+      type="radio"
+      value="message"
+    />
+    <label
+      htmlFor="formSizes_jumbo_message"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        message
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-message"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <span
+    className=""
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton Large (Default) 1`] = `
+<fieldset
+  className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    
+  </legend>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formSizes_large_export"
+      name="formSizes_large"
+      type="radio"
+      value="export"
+    />
+    <label
+      htmlFor="formSizes_large_export"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        export
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-export"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button ce-toggle-button--checked"
+  >
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="formSizes_large_follow"
+      name="formSizes_large"
+      type="radio"
+      value="follow"
+    />
+    <label
+      htmlFor="formSizes_large_follow"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        follow
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-follow"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formSizes_large_message"
+      name="formSizes_large"
+      type="radio"
+      value="message"
+    />
+    <label
+      htmlFor="formSizes_large_message"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        message
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-message"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <span
+    className=""
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton Primary (Default) 1`] = `
+<fieldset
+  className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--primary"
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    
+  </legend>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formStates_primary_export"
+      name="formStates_primary"
+      type="radio"
+      value="export"
+    />
+    <label
+      htmlFor="formStates_primary_export"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        export
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-export"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button ce-toggle-button--checked"
+  >
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="formStates_primary_follow"
+      name="formStates_primary"
+      type="radio"
+      value="follow"
+    />
+    <label
+      htmlFor="formStates_primary_follow"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        follow
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-follow"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formStates_primary_message"
+      name="formStates_primary"
+      type="radio"
+      value="message"
+    />
+    <label
+      htmlFor="formStates_primary_message"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        message
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-message"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <span
+    className=""
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton Secondary 1`] = `
+<fieldset
+  className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--secondary"
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    
+  </legend>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formStates_secondary_export"
+      name="formStates_secondary"
+      type="radio"
+      value="export"
+    />
+    <label
+      htmlFor="formStates_secondary_export"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        export
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-export"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button ce-toggle-button--checked"
+  >
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="formStates_secondary_follow"
+      name="formStates_secondary"
+      type="radio"
+      value="follow"
+    />
+    <label
+      htmlFor="formStates_secondary_follow"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        follow
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-follow"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formStates_secondary_message"
+      name="formStates_secondary"
+      type="radio"
+      value="message"
+    />
+    <label
+      htmlFor="formStates_secondary_message"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        message
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-message"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <span
+    className=""
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton Small 1`] = `
+<fieldset
+  className="ce-toggle-button-group ce-toggle-button-group--small ce-toggle-button-group--primary"
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    
+  </legend>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formSizes_small_export"
+      name="formSizes_small"
+      type="radio"
+      value="export"
+    />
+    <label
+      htmlFor="formSizes_small_export"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        export
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-export"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button ce-toggle-button--checked"
+  >
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="formSizes_small_follow"
+      name="formSizes_small"
+      type="radio"
+      value="follow"
+    />
+    <label
+      htmlFor="formSizes_small_follow"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        follow
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-follow"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formSizes_small_message"
+      name="formSizes_small"
+      type="radio"
+      value="message"
+    />
+    <label
+      htmlFor="formSizes_small_message"
     >
       <span
         className="ce-toggle-button__label--hidden"
@@ -4495,6 +4159,120 @@ exports[`Storyshots Components/Atoms/ToggleButton ToggleButtonGroup with Knobs 1
     />
     <label
       htmlFor="formKnobs_message"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        message
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-message"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <span
+    className=""
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Atoms/ToggleButton disabled 1`] = `
+<fieldset
+  className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--disabled"
+  disabled={true}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    
+  </legend>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formStates_disabled_export"
+      name="formStates_disabled"
+      type="radio"
+      value="export"
+    />
+    <label
+      htmlFor="formStates_disabled_export"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        export
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-export"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button ce-toggle-button--checked"
+  >
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="formStates_disabled_follow"
+      name="formStates_disabled"
+      type="radio"
+      value="follow"
+    />
+    <label
+      htmlFor="formStates_disabled_follow"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        follow
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-follow"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formStates_disabled_message"
+      name="formStates_disabled"
+      type="radio"
+      value="message"
+    />
+    <label
+      htmlFor="formStates_disabled_message"
     >
       <span
         className="ce-toggle-button__label--hidden"
