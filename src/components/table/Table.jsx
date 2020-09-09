@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/jsx-key */
 import React, { useState } from 'react';
@@ -130,14 +131,10 @@ const Table = ({
               )}
 
               <div className="ce-table__mobile-data-container">
-                <div
-                  className="ce-table__mobile-headings"
-                  role="row"
-                  aria-label="row"
-                >
+                <div className="ce-table__mobile-headings" role="columnheader">
                   {headings.map(mobileHeading => (
                     <span>
-                      <strong role="columnheader" aria-label={mobileHeading}>
+                      <strong aria-label="row" aria-label={mobileHeading}>
                         {mobileHeading}:
                       </strong>
                     </span>
