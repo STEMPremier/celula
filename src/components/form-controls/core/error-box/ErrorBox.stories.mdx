@@ -1,4 +1,4 @@
-import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
 import { text } from '@storybook/addon-knobs';
 
 import ErrorBox from '.';
@@ -7,15 +7,14 @@ import ErrorBox from '.';
 
 # ErrorBox
 <Dscription of={ErrorBox} />
-<Props of={ErrorBox} />
+<ArgsTable of={ErrorBox} />
 
 <Story name="ErrorBox with Knobs" parameters={{docs: {disable: true}}}>
   <ErrorBox errorMsg={text('errorMsg', 'This is an error message.')} />
 </Story>
 
-### Types
-<Preview>
-  <Story name="ErrorBox Types">
+<Canvas>
+  <Story name="ErrorBox">
     <ErrorBox errorMsg="My fancy error message." />
   </Story>
-</Preview>
+</Canvas>

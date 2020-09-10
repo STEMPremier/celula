@@ -4909,7 +4909,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Error 1`] =
 </fieldset>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/Core/ErrorBox ErrorBox Types 1`] = `
+exports[`Storyshots Components/Molecules/Form Controls/Core/ErrorBox ErrorBox 1`] = `
 <div
   className="ce-errorbox"
 >
