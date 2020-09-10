@@ -4300,139 +4300,6 @@ exports[`Storyshots Components/Atoms/ToggleButton disabled 1`] = `
 </fieldset>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox States 1`] = `
-<form
-  id="formStates"
->
-  <div
-    className="ce-checkbox"
-  >
-    <input
-      checked={false}
-      disabled={false}
-      form="formStates"
-      id="default_checkbox_default"
-      name="default_checkbox"
-      onChange={[Function]}
-      type="checkbox"
-      value="default"
-    />
-    <label
-      htmlFor="default_checkbox_default"
-    >
-      Default Checkbox
-    </label>
-    
-  </div>
-  <div
-    className="ce-checkbox ce-checkbox--disabled"
-  >
-    <input
-      checked={false}
-      disabled={true}
-      form="formStates"
-      id="disabled_checkbox_disabled"
-      name="disabled_checkbox"
-      onChange={[Function]}
-      type="checkbox"
-      value="disabled"
-    />
-    <label
-      htmlFor="disabled_checkbox_disabled"
-    >
-      Disabled Checkbox
-    </label>
-    
-  </div>
-  <div
-    className="ce-checkbox ce-checkbox--error"
-  >
-    <input
-      checked={false}
-      disabled={false}
-      form="formStates"
-      id="error_checkbox_error"
-      name="error_checkbox"
-      onChange={[Function]}
-      type="checkbox"
-      value="error"
-    />
-    <label
-      htmlFor="error_checkbox_error"
-    >
-      Error Checkbox
-    </label>
-    <div
-      className="ce-errorbox"
-    >
-      <div
-        className="ce-errorbox__container"
-      >
-        <div
-          className="ce-errorbox__arrow"
-        />
-        <div
-          className="ce-errorbox__message"
-        >
-          <span
-            className="ce-errorbox__text"
-          >
-            There is an error.
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-</form>
-`;
-
-exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox Types 1`] = `
-<form
-  id="formTypes"
->
-  <div
-    className="ce-checkbox"
-  >
-    <input
-      checked={true}
-      disabled={false}
-      form="formTypes"
-      id="checked_true"
-      name="checked"
-      onChange={[Function]}
-      type="checkbox"
-      value={true}
-    />
-    <label
-      htmlFor="checked_true"
-    >
-      I am checked
-    </label>
-    
-  </div>
-  <div
-    className="ce-checkbox"
-  >
-    <input
-      checked={false}
-      disabled={false}
-      form="formTwo"
-      id="unchecked_false"
-      name="unchecked"
-      onChange={[Function]}
-      type="checkbox"
-      value={false}
-    />
-    <label
-      htmlFor="unchecked_false"
-    >
-      I am unchecked
-    </label>
-    
-  </div>
-</form>
-`;
-
 exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox with Knobs 1`] = `
 <form
   id="formKnobs"
@@ -4458,6 +4325,94 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox with Kn
     
   </div>
 </form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Checkbox Default 1`] = `
+<div
+  className="ce-checkbox"
+>
+  <input
+    checked={false}
+    disabled={false}
+    form=""
+    id="default_true"
+    name="default"
+    onChange={[Function]}
+    type="checkbox"
+    value={true}
+  />
+  <label
+    htmlFor="default_true"
+  >
+    I am standard checkbox
+  </label>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Checkbox Disabled 1`] = `
+<div
+  className="ce-checkbox"
+>
+  <input
+    checked={false}
+    disabled={false}
+    form=""
+    id="disabled_true"
+    name="disabled"
+    onChange={[Function]}
+    type="checkbox"
+    value={true}
+  />
+  <label
+    htmlFor="disabled_true"
+  >
+    I am a disabled checkbox
+  </label>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Checkbox Error 1`] = `
+<div
+  className="ce-checkbox ce-checkbox--error"
+>
+  <input
+    checked={false}
+    disabled={false}
+    form=""
+    id="error_true"
+    name="error"
+    onChange={[Function]}
+    type="checkbox"
+    value={true}
+  />
+  <label
+    htmlFor="error_true"
+  >
+    This is a checkbox with an error
+  </label>
+  <div
+    className="ce-errorbox"
+  >
+    <div
+      className="ce-errorbox__container"
+    >
+      <div
+        className="ce-errorbox__arrow"
+      />
+      <div
+        className="ce-errorbox__message"
+      >
+        <span
+          className="ce-errorbox__text"
+        >
+          There is an error message.
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGroup States 1`] = `
