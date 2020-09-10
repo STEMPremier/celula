@@ -4415,475 +4415,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Error 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGroup States 1`] = `
-<form
-  id="formStates"
->
-  <fieldset
-    className="ce-checkbox-group"
-    disabled={false}
-    form="formStates"
-    onChange={[Function]}
-  >
-    <legend>
-      Default Checkbox Group
-    </legend>
-    <div
-      className="ce-checkbox"
-    >
-      <input
-        checked={true}
-        disabled={false}
-        form=""
-        id="favoriteOS_macos"
-        name="favoriteOS"
-        onChange={[Function]}
-        type="checkbox"
-        value="macos"
-      />
-      <label
-        htmlFor="favoriteOS_macos"
-      >
-        macOS
-      </label>
-      
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <input
-        checked={false}
-        disabled={false}
-        form=""
-        id="favoriteOS_windows"
-        name="favoriteOS"
-        onChange={[Function]}
-        type="checkbox"
-        value="windows"
-      />
-      <label
-        htmlFor="favoriteOS_windows"
-      >
-        Windows
-      </label>
-      
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <input
-        checked={false}
-        disabled={false}
-        form=""
-        id="favoriteOS_linux"
-        name="favoriteOS"
-        onChange={[Function]}
-        type="checkbox"
-        value="linux"
-      />
-      <label
-        htmlFor="favoriteOS_linux"
-      >
-        Linux
-      </label>
-      
-    </div>
-    <span
-      className="ce-checkbox-group--error__text"
-    >
-      
-    </span>
-  </fieldset>
-  <fieldset
-    className="ce-checkbox-group ce-checkbox-group--disabled"
-    disabled={true}
-    form="formStates"
-    onChange={[Function]}
-  >
-    <legend>
-      Favorite Beatle (Disabled Checkbox Group)
-    </legend>
-    <div
-      className="ce-checkbox"
-    >
-      <input
-        checked={false}
-        disabled={false}
-        form=""
-        id="favoriteBeatle_john"
-        name="favoriteBeatle"
-        onChange={[Function]}
-        type="checkbox"
-        value="john"
-      />
-      <label
-        htmlFor="favoriteBeatle_john"
-      >
-        John Lennon
-      </label>
-      
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <input
-        checked={false}
-        disabled={false}
-        form=""
-        id="favoriteBeatle_paul"
-        name="favoriteBeatle"
-        onChange={[Function]}
-        type="checkbox"
-        value="paul"
-      />
-      <label
-        htmlFor="favoriteBeatle_paul"
-      >
-        Paul Mccartney
-      </label>
-      
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <input
-        checked={true}
-        disabled={false}
-        form=""
-        id="favoriteBeatle_george"
-        name="favoriteBeatle"
-        onChange={[Function]}
-        type="checkbox"
-        value="george"
-      />
-      <label
-        htmlFor="favoriteBeatle_george"
-      >
-        George Harrison
-      </label>
-      
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <input
-        checked={false}
-        disabled={false}
-        form=""
-        id="favoriteBeatle_ringo"
-        name="favoriteBeatle"
-        onChange={[Function]}
-        type="checkbox"
-        value="ringo"
-      />
-      <label
-        htmlFor="favoriteBeatle_ringo"
-      >
-        Ringo Starr
-      </label>
-      
-    </div>
-    <span
-      className="ce-checkbox-group--error__text"
-    >
-      
-    </span>
-  </fieldset>
-  <fieldset
-    className="ce-checkbox-group"
-    disabled={false}
-    form="formStates"
-    onChange={[Function]}
-  >
-    <legend>
-      Favorite Beatle (Disabled Checkbox Individual)
-    </legend>
-    <div
-      className="ce-checkbox"
-    >
-      <input
-        checked={false}
-        disabled={false}
-        form=""
-        id="favoriteBeatle2_john"
-        name="favoriteBeatle2"
-        onChange={[Function]}
-        type="checkbox"
-        value="john"
-      />
-      <label
-        htmlFor="favoriteBeatle2_john"
-      >
-        John Lennon
-      </label>
-      
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <input
-        checked={false}
-        disabled={false}
-        form=""
-        id="favoriteBeatle2_paul"
-        name="favoriteBeatle2"
-        onChange={[Function]}
-        type="checkbox"
-        value="paul"
-      />
-      <label
-        htmlFor="favoriteBeatle2_paul"
-      >
-        Paul Mccartney
-      </label>
-      
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <input
-        checked={false}
-        disabled={false}
-        form=""
-        id="favoriteBeatle2_george"
-        name="favoriteBeatle2"
-        onChange={[Function]}
-        type="checkbox"
-        value="george"
-      />
-      <label
-        htmlFor="favoriteBeatle2_george"
-      >
-        George Harrison
-      </label>
-      
-    </div>
-    <div
-      className="ce-checkbox ce-checkbox--disabled"
-    >
-      <input
-        checked={false}
-        disabled={true}
-        form=""
-        id="favoriteBeatle2_ringo"
-        name="favoriteBeatle2"
-        onChange={[Function]}
-        type="checkbox"
-        value="ringo"
-      />
-      <label
-        htmlFor="favoriteBeatle2_ringo"
-      >
-        Ringo Starr (Disabled)
-      </label>
-      
-    </div>
-    <span
-      className="ce-checkbox-group--error__text"
-    >
-      
-    </span>
-  </fieldset>
-  <fieldset
-    className="ce-checkbox-group ce-checkbox-group--error"
-    disabled={false}
-    form="formStates"
-    onChange={[Function]}
-  >
-    <legend>
-      Favorite UI Framework
-    </legend>
-    <div
-      className="ce-checkbox"
-    >
-      <input
-        checked={true}
-        disabled={false}
-        form=""
-        id="favoriteFramework_react"
-        name="favoriteFramework"
-        onChange={[Function]}
-        type="checkbox"
-        value="react"
-      />
-      <label
-        htmlFor="favoriteFramework_react"
-      >
-        React
-      </label>
-      
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <input
-        checked={false}
-        disabled={false}
-        form=""
-        id="favoriteFramework_angularjs"
-        name="favoriteFramework"
-        onChange={[Function]}
-        type="checkbox"
-        value="angularjs"
-      />
-      <label
-        htmlFor="favoriteFramework_angularjs"
-      >
-        AngularJS
-      </label>
-      
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <input
-        checked={false}
-        disabled={false}
-        form=""
-        id="favoriteFramework_angular"
-        name="favoriteFramework"
-        onChange={[Function]}
-        type="checkbox"
-        value="angular"
-      />
-      <label
-        htmlFor="favoriteFramework_angular"
-      >
-        Angular
-      </label>
-      
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <input
-        checked={true}
-        disabled={false}
-        form=""
-        id="favoriteFramework_vue"
-        name="favoriteFramework"
-        onChange={[Function]}
-        type="checkbox"
-        value="vue"
-      />
-      <label
-        htmlFor="favoriteFramework_vue"
-      >
-        Vue
-      </label>
-      
-    </div>
-    <span
-      className="ce-checkbox-group--error__text"
-    >
-      Unable to set Vuejs as favorite framework.
-    </span>
-  </fieldset>
-</form>
-`;
-
-exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGroup Types 1`] = `
-<form
-  id="formTypes"
->
-  <fieldset
-    className="ce-checkbox-group"
-    disabled={false}
-    form="formTypes"
-    onChange={[Function]}
-  >
-    <legend>
-      Favorite Text Editor
-    </legend>
-    <div
-      className="ce-checkbox"
-    >
-      <input
-        checked={true}
-        disabled={false}
-        form=""
-        id="favoriteTextEditor_vim"
-        name="favoriteTextEditor"
-        onChange={[Function]}
-        type="checkbox"
-        value="vim"
-      />
-      <label
-        htmlFor="favoriteTextEditor_vim"
-      >
-        Vim
-      </label>
-      
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <input
-        checked={false}
-        disabled={false}
-        form=""
-        id="favoriteTextEditor_emacs"
-        name="favoriteTextEditor"
-        onChange={[Function]}
-        type="checkbox"
-        value="emacs"
-      />
-      <label
-        htmlFor="favoriteTextEditor_emacs"
-      >
-        Emacs
-      </label>
-      
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <input
-        checked={false}
-        disabled={false}
-        form=""
-        id="favoriteTextEditor_vscode"
-        name="favoriteTextEditor"
-        onChange={[Function]}
-        type="checkbox"
-        value="vscode"
-      />
-      <label
-        htmlFor="favoriteTextEditor_vscode"
-      >
-        VS Code
-      </label>
-      
-    </div>
-    <div
-      className="ce-checkbox"
-    >
-      <input
-        checked={false}
-        disabled={false}
-        form=""
-        id="favoriteTextEditor_atom"
-        name="favoriteTextEditor"
-        onChange={[Function]}
-        type="checkbox"
-        value="atom"
-      />
-      <label
-        htmlFor="favoriteTextEditor_atom"
-      >
-        Atom
-      </label>
-      
-    </div>
-    <span
-      className="ce-checkbox-group--error__text"
-    >
-      
-    </span>
-  </fieldset>
-</form>
-`;
-
 exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGroup with Knobs 1`] = `
 <form
   id="formKnobs"
@@ -4984,6 +4515,398 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
     </span>
   </fieldset>
 </form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Default 1`] = `
+<fieldset
+  className="ce-checkbox-group"
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    Favorite Text Editor
+  </legend>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={true}
+      disabled={false}
+      form=""
+      id="favoriteTextEditor_vim"
+      name="favoriteTextEditor"
+      onChange={[Function]}
+      type="checkbox"
+      value="vim"
+    />
+    <label
+      htmlFor="favoriteTextEditor_vim"
+    >
+      Vim
+    </label>
+    
+  </div>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form=""
+      id="favoriteTextEditor_emacs"
+      name="favoriteTextEditor"
+      onChange={[Function]}
+      type="checkbox"
+      value="emacs"
+    />
+    <label
+      htmlFor="favoriteTextEditor_emacs"
+    >
+      Emacs
+    </label>
+    
+  </div>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form=""
+      id="favoriteTextEditor_vscode"
+      name="favoriteTextEditor"
+      onChange={[Function]}
+      type="checkbox"
+      value="vscode"
+    />
+    <label
+      htmlFor="favoriteTextEditor_vscode"
+    >
+      VS Code
+    </label>
+    
+  </div>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form=""
+      id="favoriteTextEditor_atom"
+      name="favoriteTextEditor"
+      onChange={[Function]}
+      type="checkbox"
+      value="atom"
+    />
+    <label
+      htmlFor="favoriteTextEditor_atom"
+    >
+      Atom
+    </label>
+    
+  </div>
+  <span
+    className="ce-checkbox-group--error__text"
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (Group) 1`] = `
+<fieldset
+  className="ce-checkbox-group ce-checkbox-group--disabled"
+  disabled={true}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    Favorite Beatle (Disabled Checkbox Group)
+  </legend>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form=""
+      id="favoriteBeatle_john"
+      name="favoriteBeatle"
+      onChange={[Function]}
+      type="checkbox"
+      value="john"
+    />
+    <label
+      htmlFor="favoriteBeatle_john"
+    >
+      John Lennon
+    </label>
+    
+  </div>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form=""
+      id="favoriteBeatle_paul"
+      name="favoriteBeatle"
+      onChange={[Function]}
+      type="checkbox"
+      value="paul"
+    />
+    <label
+      htmlFor="favoriteBeatle_paul"
+    >
+      Paul Mccartney
+    </label>
+    
+  </div>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={true}
+      disabled={false}
+      form=""
+      id="favoriteBeatle_george"
+      name="favoriteBeatle"
+      onChange={[Function]}
+      type="checkbox"
+      value="george"
+    />
+    <label
+      htmlFor="favoriteBeatle_george"
+    >
+      George Harrison
+    </label>
+    
+  </div>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form=""
+      id="favoriteBeatle_ringo"
+      name="favoriteBeatle"
+      onChange={[Function]}
+      type="checkbox"
+      value="ringo"
+    />
+    <label
+      htmlFor="favoriteBeatle_ringo"
+    >
+      Ringo Starr
+    </label>
+    
+  </div>
+  <span
+    className="ce-checkbox-group--error__text"
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (Individual) 1`] = `
+<fieldset
+  className="ce-checkbox-group"
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    Favorite Beatle (Disabled Checkbox Individual)
+  </legend>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form=""
+      id="favoriteBeatle2_john2"
+      name="favoriteBeatle2"
+      onChange={[Function]}
+      type="checkbox"
+      value="john2"
+    />
+    <label
+      htmlFor="favoriteBeatle2_john2"
+    >
+      John Lennon
+    </label>
+    
+  </div>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form=""
+      id="favoriteBeatle2_paul2"
+      name="favoriteBeatle2"
+      onChange={[Function]}
+      type="checkbox"
+      value="paul2"
+    />
+    <label
+      htmlFor="favoriteBeatle2_paul2"
+    >
+      Paul Mccartney
+    </label>
+    
+  </div>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form=""
+      id="favoriteBeatle2_george2"
+      name="favoriteBeatle2"
+      onChange={[Function]}
+      type="checkbox"
+      value="george2"
+    />
+    <label
+      htmlFor="favoriteBeatle2_george2"
+    >
+      George Harrison
+    </label>
+    
+  </div>
+  <div
+    className="ce-checkbox ce-checkbox--disabled"
+  >
+    <input
+      checked={false}
+      disabled={true}
+      form=""
+      id="favoriteBeatle2_ringo2"
+      name="favoriteBeatle2"
+      onChange={[Function]}
+      type="checkbox"
+      value="ringo2"
+    />
+    <label
+      htmlFor="favoriteBeatle2_ringo2"
+    >
+      Ringo Starr (Disabled)
+    </label>
+    
+  </div>
+  <span
+    className="ce-checkbox-group--error__text"
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Error 1`] = `
+<fieldset
+  className="ce-checkbox-group ce-checkbox-group--error"
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    Favorite UI Framework
+  </legend>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={true}
+      disabled={false}
+      form=""
+      id="favoriteFramework_react"
+      name="favoriteFramework"
+      onChange={[Function]}
+      type="checkbox"
+      value="react"
+    />
+    <label
+      htmlFor="favoriteFramework_react"
+    >
+      React
+    </label>
+    
+  </div>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form=""
+      id="favoriteFramework_angularjs"
+      name="favoriteFramework"
+      onChange={[Function]}
+      type="checkbox"
+      value="angularjs"
+    />
+    <label
+      htmlFor="favoriteFramework_angularjs"
+    >
+      AngularJS
+    </label>
+    
+  </div>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={false}
+      disabled={false}
+      form=""
+      id="favoriteFramework_angular"
+      name="favoriteFramework"
+      onChange={[Function]}
+      type="checkbox"
+      value="angular"
+    />
+    <label
+      htmlFor="favoriteFramework_angular"
+    >
+      Angular
+    </label>
+    
+  </div>
+  <div
+    className="ce-checkbox"
+  >
+    <input
+      checked={true}
+      disabled={false}
+      form=""
+      id="favoriteFramework_vue"
+      name="favoriteFramework"
+      onChange={[Function]}
+      type="checkbox"
+      value="vue"
+    />
+    <label
+      htmlFor="favoriteFramework_vue"
+    >
+      Vue
+    </label>
+    
+  </div>
+  <span
+    className="ce-checkbox-group--error__text"
+  >
+    Unable to set Vuejs as favorite framework.
+  </span>
+</fieldset>
 `;
 
 exports[`Storyshots Components/Molecules/Form Controls/Core/ErrorBox ErrorBox Types 1`] = `
