@@ -5098,542 +5098,484 @@ exports[`Storyshots Components/Molecules/Form Controls/FileUploader FileUplaoder
 </form>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/FileUploader FileUploader Colors 1`] = `
-<form
-  id="fileUploaderWithColors"
+exports[`Storyshots Components/Molecules/Form Controls/FileUploader Outline Black 1`] = `
+<div
+  className="ce-file-uploader ce-file-uploader--black ce-file-uploader--small ce-file-uploader--outline"
 >
-  <div>
-    <div
-      className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--large ce-file-uploader--default"
+  <input
+    accept="*"
+    disabled={false}
+    form=""
+    id="outline_black"
+    multiple={false}
+    name="outline_black"
+    onChange={[Function]}
+    type="file"
+    value=""
+  />
+  <label
+    className="ce-file-uploader__button"
+    htmlFor="outline_black"
+  >
+    <span
+      className="ce-file-uploader__label"
     >
-      <input
-        accept="*"
-        disabled={false}
-        form="fileUploaderWithColors"
-        id="primary_default_uploader"
-        multiple={false}
-        name="primary_default_uploader"
-        onChange={[Function]}
-        type="file"
-        value=""
-      />
-      <label
-        className="ce-file-uploader__button"
-        htmlFor="primary_default_uploader"
-      >
-        <span
-          className="ce-file-uploader__label"
-        >
-          primary default
-        </span>
-      </label>
-      
-    </div>
-    <div
-      className="ce-file-uploader ce-file-uploader--secondary ce-file-uploader--large ce-file-uploader--default"
-    >
-      <input
-        accept="*"
-        disabled={false}
-        form="fileUploaderWithColors"
-        id="secondary_default_uploader"
-        multiple={false}
-        name="secondary_default_uploader"
-        onChange={[Function]}
-        type="file"
-        value=""
-      />
-      <label
-        className="ce-file-uploader__button"
-        htmlFor="secondary_default_uploader"
-      >
-        <span
-          className="ce-file-uploader__label"
-        >
-          secondary default
-        </span>
-      </label>
-      
-    </div>
-    <div
-      className="ce-file-uploader ce-file-uploader--black ce-file-uploader--large ce-file-uploader--default"
-    >
-      <input
-        accept="*"
-        disabled={false}
-        form="fileUploaderWithColors"
-        id="black_default_uploader"
-        multiple={false}
-        name="black_default_uploader"
-        onChange={[Function]}
-        type="file"
-        value=""
-      />
-      <label
-        className="ce-file-uploader__button"
-        htmlFor="black_default_uploader"
-      >
-        <span
-          className="ce-file-uploader__label"
-        >
-          black default
-        </span>
-      </label>
-      
-    </div>
-    <div
-      className="ce-file-uploader ce-file-uploader--inverted ce-file-uploader--large ce-file-uploader--default"
-    >
-      <input
-        accept="*"
-        disabled={false}
-        form="fileUploaderWithColors"
-        id="inverted_default_uploader"
-        multiple={false}
-        name="inverted_default_uploader"
-        onChange={[Function]}
-        type="file"
-        value=""
-      />
-      <label
-        className="ce-file-uploader__button"
-        htmlFor="inverted_default_uploader"
-      >
-        <span
-          className="ce-file-uploader__label"
-        >
-          inverted default
-        </span>
-      </label>
-      
-    </div>
-  </div>
-  <div>
-    <div
-      className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--large ce-file-uploader--outline"
-    >
-      <input
-        accept="*"
-        disabled={false}
-        form="fileUploaderWithColors"
-        id="primary_outline_uploader"
-        multiple={false}
-        name="primary_outline_uploader"
-        onChange={[Function]}
-        type="file"
-        value=""
-      />
-      <label
-        className="ce-file-uploader__button"
-        htmlFor="primary_outline_uploader"
-      >
-        <span
-          className="ce-file-uploader__label"
-        >
-          primary outline
-        </span>
-      </label>
-      
-    </div>
-    <div
-      className="ce-file-uploader ce-file-uploader--secondary ce-file-uploader--large ce-file-uploader--outline"
-    >
-      <input
-        accept="*"
-        disabled={false}
-        form="fileUploaderWithColors"
-        id="secondary_outline_uploader"
-        multiple={false}
-        name="secondary_outline_uploader"
-        onChange={[Function]}
-        type="file"
-        value=""
-      />
-      <label
-        className="ce-file-uploader__button"
-        htmlFor="secondary_outline_uploader"
-      >
-        <span
-          className="ce-file-uploader__label"
-        >
-          secondary outline
-        </span>
-      </label>
-      
-    </div>
-    <div
-      className="ce-file-uploader ce-file-uploader--black ce-file-uploader--large ce-file-uploader--outline"
-    >
-      <input
-        accept="*"
-        disabled={false}
-        form="fileUploaderWithColors"
-        id="black_outline_uploader"
-        multiple={false}
-        name="black_outline_uploader"
-        onChange={[Function]}
-        type="file"
-        value=""
-      />
-      <label
-        className="ce-file-uploader__button"
-        htmlFor="black_outline_uploader"
-      >
-        <span
-          className="ce-file-uploader__label"
-        >
-          black outline
-        </span>
-      </label>
-      
-    </div>
-    <div
-      className="ce-file-uploader ce-file-uploader--inverted ce-file-uploader--large ce-file-uploader--outline"
-    >
-      <input
-        accept="*"
-        disabled={false}
-        form="fileUploaderWithColors"
-        id="inverted_outline_uploader"
-        multiple={false}
-        name="inverted_outline_uploader"
-        onChange={[Function]}
-        type="file"
-        value=""
-      />
-      <label
-        className="ce-file-uploader__button"
-        htmlFor="inverted_outline_uploader"
-      >
-        <span
-          className="ce-file-uploader__label"
-        >
-          inverted outline
-        </span>
-      </label>
-      
-    </div>
-  </div>
-</form>
+      black
+    </span>
+  </label>
+  
+</div>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/FileUploader FileUploader Sizes 1`] = `
-<form
-  id="fileUploaderWithSizes"
+exports[`Storyshots Components/Molecules/Form Controls/FileUploader Outline Disabled 1`] = `
+<div
+  className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--small ce-file-uploader--outline ce-file-uploader--disabled"
 >
-  <div
-    className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--small ce-file-uploader--default"
+  <input
+    accept="*"
+    disabled={true}
+    form=""
+    id="outline_disabled"
+    multiple={false}
+    name="outline_disabled"
+    onChange={[Function]}
+    type="file"
+    value=""
+  />
+  <label
+    className="ce-file-uploader__button"
+    htmlFor="outline_disabled"
   >
-    <input
-      accept="*"
-      disabled={false}
-      form="fileUploaderWithSizes"
-      id="small_uploader"
-      multiple={false}
-      name="small_uploader"
-      onChange={[Function]}
-      type="file"
-      value=""
-    />
-    <label
-      className="ce-file-uploader__button"
-      htmlFor="small_uploader"
+    <span
+      className="ce-file-uploader__label"
     >
-      <span
-        className="ce-file-uploader__label"
-      >
-        small File Uploader
-      </span>
-    </label>
-    
-  </div>
-  <div
-    className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--large ce-file-uploader--default"
-  >
-    <input
-      accept="*"
-      disabled={false}
-      form="fileUploaderWithSizes"
-      id="large_uploader"
-      multiple={false}
-      name="large_uploader"
-      onChange={[Function]}
-      type="file"
-      value=""
-    />
-    <label
-      className="ce-file-uploader__button"
-      htmlFor="large_uploader"
-    >
-      <span
-        className="ce-file-uploader__label"
-      >
-        large File Uploader
-      </span>
-    </label>
-    
-  </div>
-  <div
-    className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--jumbo ce-file-uploader--default"
-  >
-    <input
-      accept="*"
-      disabled={false}
-      form="fileUploaderWithSizes"
-      id="jumbo_uploader"
-      multiple={false}
-      name="jumbo_uploader"
-      onChange={[Function]}
-      type="file"
-      value=""
-    />
-    <label
-      className="ce-file-uploader__button"
-      htmlFor="jumbo_uploader"
-    >
-      <span
-        className="ce-file-uploader__label"
-      >
-        jumbo File Uploader
-      </span>
-    </label>
-    
-  </div>
-</form>
+      disabled
+    </span>
+  </label>
+  
+</div>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/FileUploader FileUploader States 1`] = `
-<form
-  id="fileUploaderWithStates"
+exports[`Storyshots Components/Molecules/Form Controls/FileUploader Outline Inverted 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "black",
+    }
+  }
 >
-  <div>
-    <div
-      className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--large ce-file-uploader--default"
+  <div
+    className="ce-file-uploader ce-file-uploader--inverted ce-file-uploader--small ce-file-uploader--outline"
+  >
+    <input
+      accept="*"
+      disabled={false}
+      form=""
+      id="outline_inverted"
+      multiple={false}
+      name="outline_inverted"
+      onChange={[Function]}
+      type="file"
+      value=""
+    />
+    <label
+      className="ce-file-uploader__button"
+      htmlFor="outline_inverted"
     >
-      <input
-        accept="*"
-        disabled={false}
-        form="fileUploaderWithStates"
-        id="default_default_uploader"
-        multiple={false}
-        name="default_default_uploader"
-        onChange={[Function]}
-        type="file"
-        value=""
-      />
-      <label
-        className="ce-file-uploader__button"
-        htmlFor="default_default_uploader"
-      >
-        <span
-          className="ce-file-uploader__label"
-        >
-          default default
-        </span>
-      </label>
-      
-    </div>
-    <div
-      className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--large ce-file-uploader--default ce-file-uploader--disabled"
-    >
-      <input
-        accept="*"
-        disabled={true}
-        form="fileUploaderWithStates"
-        id="default_disabled_uploader"
-        multiple={false}
-        name="default_disabled_uploader"
-        onChange={[Function]}
-        type="file"
-        value=""
-      />
-      <label
-        className="ce-file-uploader__button"
-        htmlFor="default_disabled_uploader"
-      >
-        <span
-          className="ce-file-uploader__label"
-        >
-          disabled default
-        </span>
-      </label>
-      
-    </div>
-    <div
-      className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--large ce-file-uploader--default ce-file-uploader--error"
-    >
-      <input
-        accept="*"
-        disabled={false}
-        form="fileUploaderWithStates"
-        id="default_error_uploader"
-        multiple={false}
-        name="default_error_uploader"
-        onChange={[Function]}
-        type="file"
-        value=""
-      />
-      <label
-        className="ce-file-uploader__button"
-        htmlFor="default_error_uploader"
-      >
-        <span
-          className="ce-file-uploader__label"
-        >
-          error default
-        </span>
-      </label>
       <span
-        className="ce-file-uploader__error-text"
+        className="ce-file-uploader__label"
       >
-        This is an error message.
+        inverted
       </span>
-    </div>
+    </label>
+    
   </div>
-  <div>
-    <div
-      className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--large ce-file-uploader--outline"
-    >
-      <input
-        accept="*"
-        disabled={false}
-        form="fileUploaderWithStates"
-        id="outline_default_uploader"
-        multiple={false}
-        name="outline_default_uploader"
-        onChange={[Function]}
-        type="file"
-        value=""
-      />
-      <label
-        className="ce-file-uploader__button"
-        htmlFor="outline_default_uploader"
-      >
-        <span
-          className="ce-file-uploader__label"
-        >
-          default outline
-        </span>
-      </label>
-      
-    </div>
-    <div
-      className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--large ce-file-uploader--outline ce-file-uploader--disabled"
-    >
-      <input
-        accept="*"
-        disabled={true}
-        form="fileUploaderWithStates"
-        id="outline_disabled_uploader"
-        multiple={false}
-        name="outline_disabled_uploader"
-        onChange={[Function]}
-        type="file"
-        value=""
-      />
-      <label
-        className="ce-file-uploader__button"
-        htmlFor="outline_disabled_uploader"
-      >
-        <span
-          className="ce-file-uploader__label"
-        >
-          disabled outline
-        </span>
-      </label>
-      
-    </div>
-    <div
-      className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--large ce-file-uploader--outline ce-file-uploader--error"
-    >
-      <input
-        accept="*"
-        disabled={false}
-        form="fileUploaderWithStates"
-        id="outline_error_uploader"
-        multiple={false}
-        name="outline_error_uploader"
-        onChange={[Function]}
-        type="file"
-        value=""
-      />
-      <label
-        className="ce-file-uploader__button"
-        htmlFor="outline_error_uploader"
-      >
-        <span
-          className="ce-file-uploader__label"
-        >
-          error outline
-        </span>
-      </label>
-      <span
-        className="ce-file-uploader__error-text"
-      >
-        This is an error message.
-      </span>
-    </div>
-  </div>
-</form>
+</div>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/FileUploader FileUploader Types 1`] = `
-<form
-  id="fileUploaderWithTypes"
+exports[`Storyshots Components/Molecules/Form Controls/FileUploader Outline Jumbo 1`] = `
+<div
+  className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--jumbo ce-file-uploader--outline"
+>
+  <input
+    accept="*"
+    disabled={false}
+    form=""
+    id="outline_jumbo"
+    multiple={false}
+    name="outline_jumbo"
+    onChange={[Function]}
+    type="file"
+    value=""
+  />
+  <label
+    className="ce-file-uploader__button"
+    htmlFor="outline_jumbo"
+  >
+    <span
+      className="ce-file-uploader__label"
+    >
+      jumbo uploader
+    </span>
+  </label>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/FileUploader Outline Large (Default) 1`] = `
+<div
+  className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--large ce-file-uploader--outline"
+>
+  <input
+    accept="*"
+    disabled={false}
+    form=""
+    id="outline_large"
+    multiple={false}
+    name="outline_large"
+    onChange={[Function]}
+    type="file"
+    value=""
+  />
+  <label
+    className="ce-file-uploader__button"
+    htmlFor="outline_large"
+  >
+    <span
+      className="ce-file-uploader__label"
+    >
+      large uploader
+    </span>
+  </label>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/FileUploader Outline Primary (Default) 1`] = `
+<div
+  className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--small ce-file-uploader--outline"
+>
+  <input
+    accept="*"
+    disabled={false}
+    form=""
+    id="outline_primary"
+    multiple={false}
+    name="outline_primary"
+    onChange={[Function]}
+    type="file"
+    value=""
+  />
+  <label
+    className="ce-file-uploader__button"
+    htmlFor="outline_primary"
+  >
+    <span
+      className="ce-file-uploader__label"
+    >
+      primary
+    </span>
+  </label>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/FileUploader Outline Secondary 1`] = `
+<div
+  className="ce-file-uploader ce-file-uploader--secondary ce-file-uploader--small ce-file-uploader--outline"
+>
+  <input
+    accept="*"
+    disabled={false}
+    form=""
+    id="outline_secondary"
+    multiple={false}
+    name="outline_secondary"
+    onChange={[Function]}
+    type="file"
+    value=""
+  />
+  <label
+    className="ce-file-uploader__button"
+    htmlFor="outline_secondary"
+  >
+    <span
+      className="ce-file-uploader__label"
+    >
+      secondary
+    </span>
+  </label>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/FileUploader Outline Small 1`] = `
+<div
+  className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--small ce-file-uploader--outline"
+>
+  <input
+    accept="*"
+    disabled={false}
+    form=""
+    id="outline_small"
+    multiple={false}
+    name="outline_small"
+    onChange={[Function]}
+    type="file"
+    value=""
+  />
+  <label
+    className="ce-file-uploader__button"
+    htmlFor="outline_small"
+  >
+    <span
+      className="ce-file-uploader__label"
+    >
+      small uploader
+    </span>
+  </label>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/FileUploader Solid Black 1`] = `
+<div
+  className="ce-file-uploader ce-file-uploader--black ce-file-uploader--small"
+>
+  <input
+    accept="*"
+    disabled={false}
+    form=""
+    id="soild_black"
+    multiple={false}
+    name="soild_black"
+    onChange={[Function]}
+    type="file"
+    value=""
+  />
+  <label
+    className="ce-file-uploader__button"
+    htmlFor="soild_black"
+  >
+    <span
+      className="ce-file-uploader__label"
+    >
+      black
+    </span>
+  </label>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/FileUploader Solid Disabled 1`] = `
+<div
+  className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--small ce-file-uploader--disabled"
+>
+  <input
+    accept="*"
+    disabled={true}
+    form=""
+    id="soild_disabled"
+    multiple={false}
+    name="soild_disabled"
+    onChange={[Function]}
+    type="file"
+    value=""
+  />
+  <label
+    className="ce-file-uploader__button"
+    htmlFor="soild_disabled"
+  >
+    <span
+      className="ce-file-uploader__label"
+    >
+      disabled
+    </span>
+  </label>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/FileUploader Solid Inverted 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "black",
+    }
+  }
 >
   <div
-    className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--large ce-file-uploader--default"
+    className="ce-file-uploader ce-file-uploader--inverted ce-file-uploader--small"
   >
     <input
       accept="*"
       disabled={false}
-      form="fileUploaderWithTypes"
-      id="default_uploader"
+      form=""
+      id="soild_inverted"
       multiple={false}
-      name="default_uploader"
+      name="soild_inverted"
       onChange={[Function]}
       type="file"
       value=""
     />
     <label
       className="ce-file-uploader__button"
-      htmlFor="default_uploader"
+      htmlFor="soild_inverted"
     >
       <span
         className="ce-file-uploader__label"
       >
-        default Uploader
+        inverted
       </span>
     </label>
     
   </div>
-  <div
-    className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--large ce-file-uploader--outline"
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/FileUploader Solid Jumbo 1`] = `
+<div
+  className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--jumbo"
+>
+  <input
+    accept="*"
+    disabled={false}
+    form=""
+    id="solid_jumbo"
+    multiple={false}
+    name="solid_jumbo"
+    onChange={[Function]}
+    type="file"
+    value=""
+  />
+  <label
+    className="ce-file-uploader__button"
+    htmlFor="solid_jumbo"
   >
-    <input
-      accept="*"
-      disabled={false}
-      form="fileUploaderWithTypes"
-      id="outline_uploader"
-      multiple={false}
-      name="outline_uploader"
-      onChange={[Function]}
-      type="file"
-      value=""
-    />
-    <label
-      className="ce-file-uploader__button"
-      htmlFor="outline_uploader"
+    <span
+      className="ce-file-uploader__label"
     >
-      <span
-        className="ce-file-uploader__label"
-      >
-        outline Uploader
-      </span>
-    </label>
-    
-  </div>
-</form>
+      jumbo uploader
+    </span>
+  </label>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/FileUploader Solid Large (Default) 1`] = `
+<div
+  className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--large"
+>
+  <input
+    accept="*"
+    disabled={false}
+    form=""
+    id="solid_large"
+    multiple={false}
+    name="solid_large"
+    onChange={[Function]}
+    type="file"
+    value=""
+  />
+  <label
+    className="ce-file-uploader__button"
+    htmlFor="solid_large"
+  >
+    <span
+      className="ce-file-uploader__label"
+    >
+      large uploader
+    </span>
+  </label>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/FileUploader Solid Primary (Default) 1`] = `
+<div
+  className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--small"
+>
+  <input
+    accept="*"
+    disabled={false}
+    form=""
+    id="soild_primary"
+    multiple={false}
+    name="soild_primary"
+    onChange={[Function]}
+    type="file"
+    value=""
+  />
+  <label
+    className="ce-file-uploader__button"
+    htmlFor="soild_primary"
+  >
+    <span
+      className="ce-file-uploader__label"
+    >
+      primary
+    </span>
+  </label>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/FileUploader Solid Secondary 1`] = `
+<div
+  className="ce-file-uploader ce-file-uploader--secondary ce-file-uploader--small"
+>
+  <input
+    accept="*"
+    disabled={false}
+    form=""
+    id="soild_secondary"
+    multiple={false}
+    name="soild_secondary"
+    onChange={[Function]}
+    type="file"
+    value=""
+  />
+  <label
+    className="ce-file-uploader__button"
+    htmlFor="soild_secondary"
+  >
+    <span
+      className="ce-file-uploader__label"
+    >
+      secondary
+    </span>
+  </label>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/FileUploader Solid Small 1`] = `
+<div
+  className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--small"
+>
+  <input
+    accept="*"
+    disabled={false}
+    form=""
+    id="solid_small"
+    multiple={false}
+    name="solid_small"
+    onChange={[Function]}
+    type="file"
+    value=""
+  />
+  <label
+    className="ce-file-uploader__button"
+    htmlFor="solid_small"
+  >
+    <span
+      className="ce-file-uploader__label"
+    >
+      small uploader
+    </span>
+  </label>
+  
+</div>
 `;
 
 exports[`Storyshots Components/Molecules/Form Controls/Input Input States 1`] = `

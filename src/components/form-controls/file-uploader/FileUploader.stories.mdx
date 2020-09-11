@@ -1,10 +1,9 @@
-import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
 
 import {
   COLORS,
-  COMPONENT_STATES as STATES,
   FILEUPLOADER_TYPES as TYPES,
   SIZES,
 } from '../../../utils/constants';
@@ -15,7 +14,7 @@ import FileUploader from '.';
 
 # FileUplaoder
 <Description of={FileUploader} />
-<Props of={FileUploader} />
+<ArgsTable of={FileUploader} />
 
 <Story name="FileUplaoder with Knobs" parameters={{ docs: { disable: true } }}>
   <form id="fileUploaderWithKnobForm">
@@ -38,89 +37,184 @@ import FileUploader from '.';
   </form>
 </Story>
 
-### Types
-<Preview>
-  <Story name="FileUploader Types">
-    <form id="fileUploaderWithTypes">
-      {TYPES.map(type => (
-        <FileUploader
-          accept="*"
-          formId="fileUploaderWithTypes"
-          name={`${type}_uploader`}
-          type={type}
-          key={`${type}_uploader`}
-        >
-          {`${type} Uploader`}
-        </FileUploader>
-      ))}
-    </form>
+## Solid FileUploader (Default)
+<Canvas>
+  <Story name="Solid Small">
+     <FileUploader
+        accept="*"
+        name="solid_small"
+        size="small"
+      >
+        small uploader
+      </FileUploader>
   </Story>
-</Preview>
+  <Story name="Solid Large (Default)">
+     <FileUploader
+        accept="*"
+        name="solid_large"
+        size="large"
+      >
+        large uploader
+      </FileUploader>
+  </Story>
+  <Story name="Solid Jumbo">
+     <FileUploader
+        accept="*"
+        name="solid_jumbo"
+        size="jumbo"
+      >
+        jumbo uploader
+      </FileUploader>
+  </Story>
+</Canvas>
 
-### Sizes
-<Preview>
-  <Story name="FileUploader Sizes">
-    <form id="fileUploaderWithSizes">
-      {SIZES.map(size => (
-        <FileUploader
-          accept="*"
-          formId="fileUploaderWithSizes"
-          name={`${size}_uploader`}
-          size={size}
-          key={`${size}_uploader`}
-        >
-          {`${size} File Uploader`}
-        </FileUploader>
-      ))}
-    </form>
+### Colors and States
+<Canvas>
+  <Story name="Solid Primary (Default)">
+    <FileUploader
+      accept="*"
+      color="primary"
+      name="soild_primary"
+      size="small"
+    >
+      primary
+    </FileUploader>
   </Story>
-</Preview>
+  <Story name="Solid Secondary">
+    <FileUploader
+      accept="*"
+      color="secondary"
+      name="soild_secondary"
+      size="small"
+    >
+      secondary
+    </FileUploader>
+  </Story>
+  <Story name="Solid Black">
+    <FileUploader
+      accept="*"
+      color="black"
+      name="soild_black"
+      size="small"
+    >
+      black
+    </FileUploader>
+  </Story>
+  <Story name="Solid Inverted">
+    <div style={{backgroundColor:'black'}}>
+      <FileUploader
+        accept="*"
+        color="inverted"
+        name="soild_inverted"
+        size="small"
+      >
+        inverted
+      </FileUploader>
+    </div>
+  </Story>
+  <Story name="Solid Disabled">
+    <FileUploader
+      accept="*"
+      disabled={true}
+      name="soild_disabled"
+      size="small"
+    >
+      disabled
+    </FileUploader>
+  </Story>
+</Canvas>
 
-### States
-<Preview>
-  <Story name="FileUploader States">
-    <form id="fileUploaderWithStates">
-      {TYPES.map(type => (
-        <div key={`${type}_states`}>
-          {STATES.map(state => (
-            <FileUploader
-              accept="*"
-              disabled={state === 'disabled'}
-              errorMsg={(state === 'error') ? 'This is an error message.' : ''}
-              formId="fileUploaderWithStates"
-              name={`${type}_${state}_uploader`}
-              type={type}
-              key={`${type}_${state}_uploader`}
-            >
-              {`${state} ${type}`}
-            </FileUploader>
-          ))}
-        </div>
-      ))}
-    </form>
+## Outline FileUploaders
+<Canvas>
+  <Story name="Outline Small">
+     <FileUploader
+        accept="*"
+        name="outline_small"
+        size="small"
+        type="outline"
+      >
+        small uploader
+      </FileUploader>
   </Story>
-</Preview>
+  <Story name="Outline Large (Default)">
+     <FileUploader
+        accept="*"
+        name="outline_large"
+        size="large"
+        type="outline"
+      >
+        large uploader
+      </FileUploader>
+  </Story>
+  <Story name="Outline Jumbo">
+     <FileUploader
+        accept="*"
+        name="outline_jumbo"
+        size="jumbo"
+        type="outline"
+      >
+        jumbo uploader
+      </FileUploader>
+  </Story>
+</Canvas>
 
-### Colors
-<Preview>
-  <Story name="FileUploader Colors">
-    <form id="fileUploaderWithColors">
-      {TYPES.map(type => (
-        <div key={`${type}_color`}>
-          {COLORS.map(color => (
-            <FileUploader
-              accept="*"
-              color={color}
-              formId="fileUploaderWithColors"
-              name={`${color}_${type}_uploader`}
-              type={type}
-              key={`${color}_${type}_uploader`}
-            >
-              {`${color} ${type}`}
-            </FileUploader>
-          ))}
-        </div>
-      ))}
-    </form>
+### Colors and States
+<Canvas>
+  <Story name="Outline Primary (Default)">
+    <FileUploader
+      accept="*"
+      color="primary"
+      name="outline_primary"
+      size="small"
+      type="outline"
+    >
+      primary
+    </FileUploader>
   </Story>
-</Preview>
+  <Story name="Outline Secondary">
+    <FileUploader
+      accept="*"
+      color="secondary"
+      name="outline_secondary"
+      size="small"
+      type="outline"
+    >
+      secondary
+    </FileUploader>
+  </Story>
+  <Story name="Outline Black">
+    <FileUploader
+      accept="*"
+      color="black"
+      name="outline_black"
+      size="small"
+      type="outline"
+    >
+      black
+    </FileUploader>
+  </Story>
+  <Story name="Outline Inverted">
+    <div style={{backgroundColor:'black'}}>
+      <FileUploader
+        accept="*"
+        color="inverted"
+        name="outline_inverted"
+        size="small"
+        type="outline"
+      >
+        inverted
+      </FileUploader>
+    </div>
+  </Story>
+  <Story name="Outline Disabled">
+    <FileUploader
+      accept="*"
+      disabled={true}
+      name="outline_disabled"
+      size="small"
+      type="outline"
+    >
+      disabled
+    </FileUploader>
+  </Story>
+</Canvas>
