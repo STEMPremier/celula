@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
 
 import { ToggleButton, ToggleButtonGroup } from '.';
-import { COMPONENT_STATES as STATES, COLORS, SIZES, SYSTEM_ICONS } from '../../utils/constants';
+import { COLORS, SIZES, SYSTEM_ICONS } from '../../utils/constants';
 
 <Meta component={ToggleButton} title="Components/Atoms/ToggleButton" />
 
@@ -143,7 +143,7 @@ A `ToggleButton` is comprised of 2 seperate components; the individual buttons, 
       </ToggleButtonGroup>
     </div>
   </Story>
-  <Story name="disabled">
+  <Story name="Disabled">
     <ToggleButtonGroup
       disabled={true}
       handleChange={value => console.log(value)}

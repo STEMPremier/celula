@@ -3266,6 +3266,120 @@ exports[`Storyshots Components/Atoms/ToggleButton Black 1`] = `
 </fieldset>
 `;
 
+exports[`Storyshots Components/Atoms/ToggleButton Disabled 1`] = `
+<fieldset
+  className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--disabled"
+  disabled={true}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    
+  </legend>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formStates_disabled_export"
+      name="formStates_disabled"
+      type="radio"
+      value="export"
+    />
+    <label
+      htmlFor="formStates_disabled_export"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        export
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-export"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button ce-toggle-button--checked"
+  >
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="formStates_disabled_follow"
+      name="formStates_disabled"
+      type="radio"
+      value="follow"
+    />
+    <label
+      htmlFor="formStates_disabled_follow"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        follow
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-follow"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <div
+    className="ce-toggle-button"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="formStates_disabled_message"
+      name="formStates_disabled"
+      type="radio"
+      value="message"
+    />
+    <label
+      htmlFor="formStates_disabled_message"
+    >
+      <span
+        className="ce-toggle-button__label--hidden"
+      >
+        message
+      </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-message"
+          />
+        </svg>
+      </span>
+    </label>
+  </div>
+  <span
+    className=""
+  >
+    
+  </span>
+</fieldset>
+`;
+
 exports[`Storyshots Components/Atoms/ToggleButton Inverted 1`] = `
 <div
   style={
@@ -4159,120 +4273,6 @@ exports[`Storyshots Components/Atoms/ToggleButton ToggleButtonGroup with Knobs 1
     />
     <label
       htmlFor="formKnobs_message"
-    >
-      <span
-        className="ce-toggle-button__label--hidden"
-      >
-        message
-      </span>
-      <span
-        className="ce-icon ce-icon__system ce-icon--large"
-      >
-        <svg
-          className=""
-        >
-          <use
-            xlinkHref="#icons_system-message"
-          />
-        </svg>
-      </span>
-    </label>
-  </div>
-  <span
-    className=""
-  >
-    
-  </span>
-</fieldset>
-`;
-
-exports[`Storyshots Components/Atoms/ToggleButton disabled 1`] = `
-<fieldset
-  className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--disabled"
-  disabled={true}
-  form=""
-  onChange={[Function]}
->
-  <legend>
-    
-  </legend>
-  <div
-    className="ce-toggle-button"
-  >
-    <input
-      defaultChecked={false}
-      disabled={false}
-      id="formStates_disabled_export"
-      name="formStates_disabled"
-      type="radio"
-      value="export"
-    />
-    <label
-      htmlFor="formStates_disabled_export"
-    >
-      <span
-        className="ce-toggle-button__label--hidden"
-      >
-        export
-      </span>
-      <span
-        className="ce-icon ce-icon__system ce-icon--large"
-      >
-        <svg
-          className=""
-        >
-          <use
-            xlinkHref="#icons_system-export"
-          />
-        </svg>
-      </span>
-    </label>
-  </div>
-  <div
-    className="ce-toggle-button ce-toggle-button--checked"
-  >
-    <input
-      defaultChecked={true}
-      disabled={false}
-      id="formStates_disabled_follow"
-      name="formStates_disabled"
-      type="radio"
-      value="follow"
-    />
-    <label
-      htmlFor="formStates_disabled_follow"
-    >
-      <span
-        className="ce-toggle-button__label--hidden"
-      >
-        follow
-      </span>
-      <span
-        className="ce-icon ce-icon__system ce-icon--large"
-      >
-        <svg
-          className=""
-        >
-          <use
-            xlinkHref="#icons_system-follow"
-          />
-        </svg>
-      </span>
-    </label>
-  </div>
-  <div
-    className="ce-toggle-button"
-  >
-    <input
-      defaultChecked={false}
-      disabled={false}
-      id="formStates_disabled_message"
-      name="formStates_disabled"
-      type="radio"
-      value="message"
-    />
-    <label
-      htmlFor="formStates_disabled_message"
     >
       <span
         className="ce-toggle-button__label--hidden"
@@ -6248,316 +6248,262 @@ exports[`Storyshots Components/Molecules/Form Controls/Input with an Icon 1`] = 
 </div>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/Radio Radio States 1`] = `
-<form
-  id="formStates"
+exports[`Storyshots Components/Molecules/Form Controls/Radio Default 1`] = `
+<fieldset
+  className="ce-radio-group"
+  disabled={false}
+  form=""
+  onChange={[Function]}
 >
-  <fieldset
-    className="ce-radio-group"
-    disabled={false}
-    form="formStates"
-    onChange={[Function]}
+  <legend>
+    Default RadioGroup:
+  </legend>
+  <div
+    className="ce-radio"
   >
-    <legend>
-      Default RadioGroup:
-    </legend>
-    <div
-      className="ce-radio"
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="default_thisOne"
+      name="default"
+      type="radio"
+      value="thisOne"
+    />
+    <label
+      htmlFor="default_thisOne"
     >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="defaultGroup_thisOne"
-        name="defaultGroup"
-        type="radio"
-        value="thisOne"
-      />
-      <label
-        htmlFor="defaultGroup_thisOne"
-      >
-        This one
-      </label>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <input
-        defaultChecked={true}
-        disabled={false}
-        id="defaultGroup_thatOne"
-        name="defaultGroup"
-        type="radio"
-        value="thatOne"
-      />
-      <label
-        htmlFor="defaultGroup_thatOne"
-      >
-        That one
-      </label>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="defaultGroup_thisOtherOne"
-        name="defaultGroup"
-        type="radio"
-        value="thisOtherOne"
-      />
-      <label
-        htmlFor="defaultGroup_thisOtherOne"
-      >
-        This other one
-      </label>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="defaultGroup_thatOtherOne"
-        name="defaultGroup"
-        type="radio"
-        value="thatOtherOne"
-      />
-      <label
-        htmlFor="defaultGroup_thatOtherOne"
-      >
-        That other one
-      </label>
-    </div>
-    <span
-      className=""
-    >
-      
-    </span>
-  </fieldset>
-  <fieldset
-    className="ce-radio-group ce-radio-group--disabled"
-    disabled={true}
-    form="formStates"
-    onChange={[Function]}
+      This one
+    </label>
+  </div>
+  <div
+    className="ce-radio"
   >
-    <legend>
-      Disabled RadioGroup:
-    </legend>
-    <div
-      className="ce-radio"
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="default_thatOne"
+      name="default"
+      type="radio"
+      value="thatOne"
+    />
+    <label
+      htmlFor="default_thatOne"
     >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="disabledGroup_thisOne"
-        name="disabledGroup"
-        type="radio"
-        value="thisOne"
-      />
-      <label
-        htmlFor="disabledGroup_thisOne"
-      >
-        This one
-      </label>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <input
-        defaultChecked={true}
-        disabled={false}
-        id="disabledGroup_thatOne"
-        name="disabledGroup"
-        type="radio"
-        value="thatOne"
-      />
-      <label
-        htmlFor="disabledGroup_thatOne"
-      >
-        That one
-      </label>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="disabledGroup_thisOtherOne"
-        name="disabledGroup"
-        type="radio"
-        value="thisOtherOne"
-      />
-      <label
-        htmlFor="disabledGroup_thisOtherOne"
-      >
-        This other one
-      </label>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="disabledGroup_thatOtherOne"
-        name="disabledGroup"
-        type="radio"
-        value="thatOtherOne"
-      />
-      <label
-        htmlFor="disabledGroup_thatOtherOne"
-      >
-        That other one
-      </label>
-    </div>
-    <span
-      className=""
-    >
-      
-    </span>
-  </fieldset>
-  <fieldset
-    className="ce-radio-group ce-radio-group--error"
-    disabled={false}
-    form="formStates"
-    onChange={[Function]}
+      That one
+    </label>
+  </div>
+  <div
+    className="ce-radio"
   >
-    <legend>
-      Error RadioGroup:
-    </legend>
-    <div
-      className="ce-radio"
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="default_thisOtherOne"
+      name="default"
+      type="radio"
+      value="thisOtherOne"
+    />
+    <label
+      htmlFor="default_thisOtherOne"
     >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="errorGroup_thisOne"
-        name="errorGroup"
-        type="radio"
-        value="thisOne"
-      />
-      <label
-        htmlFor="errorGroup_thisOne"
-      >
-        This one
-      </label>
-    </div>
-    <div
-      className="ce-radio"
+      This other one
+    </label>
+  </div>
+  <div
+    className="ce-radio"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="default_thatOtherOne"
+      name="default"
+      type="radio"
+      value="thatOtherOne"
+    />
+    <label
+      htmlFor="default_thatOtherOne"
     >
-      <input
-        defaultChecked={true}
-        disabled={false}
-        id="errorGroup_thatOne"
-        name="errorGroup"
-        type="radio"
-        value="thatOne"
-      />
-      <label
-        htmlFor="errorGroup_thatOne"
-      >
-        That one
-      </label>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="errorGroup_thisOtherOne"
-        name="errorGroup"
-        type="radio"
-        value="thisOtherOne"
-      />
-      <label
-        htmlFor="errorGroup_thisOtherOne"
-      >
-        This other one
-      </label>
-    </div>
-    <div
-      className="ce-radio"
-    >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="errorGroup_thatOtherOne"
-        name="errorGroup"
-        type="radio"
-        value="thatOtherOne"
-      />
-      <label
-        htmlFor="errorGroup_thatOtherOne"
-      >
-        That other one
-      </label>
-    </div>
-    <span
-      className=""
-    >
-      You did not choose wisely!
-    </span>
-  </fieldset>
-</form>
+      That other one
+    </label>
+  </div>
+  <span
+    className=""
+  >
+    
+  </span>
+</fieldset>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/Radio Radio Types 1`] = `
-<form
-  id="formTypes"
+exports[`Storyshots Components/Molecules/Form Controls/Radio Disabled 1`] = `
+<fieldset
+  className="ce-radio-group ce-radio-group--disabled"
+  disabled={true}
+  form=""
+  onChange={[Function]}
 >
-  <fieldset
-    className="ce-radio-group"
-    disabled={false}
-    form="formTypes"
-    onChange={[Function]}
+  <legend>
+    Disabled RadioGroup:
+  </legend>
+  <div
+    className="ce-radio"
   >
-    <legend>
-      Please make a choice:
-    </legend>
-    <div
-      className="ce-radio"
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="disabled_thisOne"
+      name="disabled"
+      type="radio"
+      value="thisOne"
+    />
+    <label
+      htmlFor="disabled_thisOne"
     >
-      <input
-        defaultChecked={false}
-        disabled={false}
-        id="choice_yes"
-        name="choice"
-        type="radio"
-        value="yes"
-      />
-      <label
-        htmlFor="choice_yes"
-      >
-        Yes
-      </label>
-    </div>
-    <div
-      className="ce-radio"
+      This one
+    </label>
+  </div>
+  <div
+    className="ce-radio"
+  >
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="disabled_thatOne"
+      name="disabled"
+      type="radio"
+      value="thatOne"
+    />
+    <label
+      htmlFor="disabled_thatOne"
     >
-      <input
-        defaultChecked={true}
-        disabled={false}
-        id="choice_no"
-        name="choice"
-        type="radio"
-        value="no"
-      />
-      <label
-        htmlFor="choice_no"
-      >
-        No
-      </label>
-    </div>
-    <span
-      className=""
+      That one
+    </label>
+  </div>
+  <div
+    className="ce-radio"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="disabled_thisOtherOne"
+      name="disabled"
+      type="radio"
+      value="thisOtherOne"
+    />
+    <label
+      htmlFor="disabled_thisOtherOne"
     >
-      
-    </span>
-  </fieldset>
-</form>
+      This other one
+    </label>
+  </div>
+  <div
+    className="ce-radio"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="disabled_thatOtherOne"
+      name="disabled"
+      type="radio"
+      value="thatOtherOne"
+    />
+    <label
+      htmlFor="disabled_thatOtherOne"
+    >
+      That other one
+    </label>
+  </div>
+  <span
+    className=""
+  >
+    
+  </span>
+</fieldset>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Radio Error 1`] = `
+<fieldset
+  className="ce-radio-group ce-radio-group--error"
+  disabled={false}
+  form=""
+  onChange={[Function]}
+>
+  <legend>
+    Default RadioGroup:
+  </legend>
+  <div
+    className="ce-radio"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="error_thisOne"
+      name="error"
+      type="radio"
+      value="thisOne"
+    />
+    <label
+      htmlFor="error_thisOne"
+    >
+      This one
+    </label>
+  </div>
+  <div
+    className="ce-radio"
+  >
+    <input
+      defaultChecked={true}
+      disabled={false}
+      id="error_thatOne"
+      name="error"
+      type="radio"
+      value="thatOne"
+    />
+    <label
+      htmlFor="error_thatOne"
+    >
+      That one
+    </label>
+  </div>
+  <div
+    className="ce-radio"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="error_thisOtherOne"
+      name="error"
+      type="radio"
+      value="thisOtherOne"
+    />
+    <label
+      htmlFor="error_thisOtherOne"
+    >
+      This other one
+    </label>
+  </div>
+  <div
+    className="ce-radio"
+  >
+    <input
+      defaultChecked={false}
+      disabled={false}
+      id="error_thatOtherOne"
+      name="error"
+      type="radio"
+      value="thatOtherOne"
+    />
+    <label
+      htmlFor="error_thatOtherOne"
+    >
+      That other one
+    </label>
+  </div>
+  <span
+    className=""
+  >
+    Not that one!
+  </span>
+</fieldset>
 `;
 
 exports[`Storyshots Components/Molecules/Form Controls/Radio Radio with Knobs 1`] = `
