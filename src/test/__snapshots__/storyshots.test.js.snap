@@ -5578,2777 +5578,208 @@ exports[`Storyshots Components/Molecules/Form Controls/FileUploader Solid Small 
 </div>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/Input Input States 1`] = `
-<form
-  id="inputStatesForm"
+exports[`Storyshots Components/Molecules/Form Controls/Input Color 1`] = `
+<div
+  className="ce-input ce-input--color"
 >
-  <h2>
-    Default
-  </h2>
-  <div
-    className="ce-input ce-input--text"
+  <label
+    htmlFor="color"
   >
-    <label
-      htmlFor="defaultTextInput"
-    >
-      Label for Standard
-    </label>
+    Choose a color:
+  </label>
+  
+  <div
+    className="ce-input__container"
+  >
     
-    <div
-      className="ce-input__container"
-    >
-      
-      <input
-        disabled={false}
-        form="inputStatesForm"
-        icon=""
-        id="defaultTextInput"
-        max=""
-        min=""
-        name="defaultTextInput"
-        onBlur={[Function]}
-        onChange={[Function]}
-        placeholder=""
-        type="text"
-        value={null}
-      />
-      
-    </div>
+    <input
+      disabled={false}
+      form=""
+      icon=""
+      id="color"
+      max=""
+      min=""
+      name="color"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder=""
+      type="color"
+      value={null}
+    />
     
   </div>
-  <div
-    className="ce-input ce-input--text"
-  >
-    <label
-      htmlFor="defaultTextInputWithHelpText"
-    >
-      Label for Disabled
-    </label>
-    <div
-      className="ce-input__help-text"
-    >
-      Help text for default
-    </div>
-    <div
-      className="ce-input__container"
-    >
-      
-      <input
-        disabled={false}
-        form="inputStatesForm"
-        icon=""
-        id="defaultTextInputWithHelpText"
-        max=""
-        min=""
-        name="defaultTextInputWithHelpText"
-        onBlur={[Function]}
-        onChange={[Function]}
-        placeholder=""
-        type="text"
-        value={null}
-      />
-      
-    </div>
-    
-  </div>
-  <div
-    className="ce-input ce-input--text"
-  >
-    <label
-      htmlFor="defaultTextInputWithIcon"
-    >
-      Label for Icon
-    </label>
-    
-    <div
-      className="ce-input__container"
-    >
-      <div
-        className="ce-input__icon"
-      >
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-edit"
-            />
-          </svg>
-        </span>
-      </div>
-      <input
-        disabled={false}
-        form="inputStatesForm"
-        icon="edit"
-        id="defaultTextInputWithIcon"
-        max=""
-        min=""
-        name="defaultTextInputWithIcon"
-        onBlur={[Function]}
-        onChange={[Function]}
-        placeholder=""
-        type="text"
-        value={null}
-      />
-      
-    </div>
-    
-  </div>
-  <div
-    className="ce-input ce-input--text"
-  >
-    <label
-      htmlFor="defaultTextInputWithButton"
-    >
-      Label for Button
-    </label>
-    
-    <div
-      className="ce-input__container"
-    >
-      
-      <input
-        disabled={false}
-        form="inputStatesForm"
-        icon=""
-        id="defaultTextInputWithButton"
-        max=""
-        min=""
-        name="defaultTextInputWithButton"
-        onBlur={[Function]}
-        onChange={[Function]}
-        placeholder=""
-        type="text"
-        value={null}
-      />
-      <button
-        className="ce-input__button"
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className="ce-icon--inverted"
-          >
-            <use
-              xlinkHref="#icons_system-navigate"
-            />
-          </svg>
-        </span>
-      </button>
-    </div>
-    
-  </div>
-  <h2>
-    Disabled
-  </h2>
-  <div
-    className="ce-input ce-input--text ce-input--disabled"
-  >
-    <label
-      htmlFor="disabledTextInput"
-    >
-      Label for Standard
-    </label>
-    
-    <div
-      className="ce-input__container"
-    >
-      
-      <input
-        disabled={true}
-        form="inputStatesForm"
-        icon=""
-        id="disabledTextInput"
-        max=""
-        min=""
-        name="disabledTextInput"
-        onBlur={[Function]}
-        onChange={[Function]}
-        placeholder=""
-        type="text"
-        value={null}
-      />
-      
-    </div>
-    
-  </div>
-  <div
-    className="ce-input ce-input--text ce-input--disabled"
-  >
-    <label
-      htmlFor="disabledTextInputWithHelpText"
-    >
-      Label for Disabled
-    </label>
-    <div
-      className="ce-input__help-text"
-    >
-      Help text for disabled
-    </div>
-    <div
-      className="ce-input__container"
-    >
-      
-      <input
-        disabled={true}
-        form="inputStatesForm"
-        icon=""
-        id="disabledTextInputWithHelpText"
-        max=""
-        min=""
-        name="disabledTextInputWithHelpText"
-        onBlur={[Function]}
-        onChange={[Function]}
-        placeholder=""
-        type="text"
-        value={null}
-      />
-      
-    </div>
-    
-  </div>
-  <div
-    className="ce-input ce-input--text ce-input--disabled"
-  >
-    <label
-      htmlFor="disabledTextInputWithIcon"
-    >
-      Label for Icon
-    </label>
-    
-    <div
-      className="ce-input__container"
-    >
-      <div
-        className="ce-input__icon"
-      >
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-edit"
-            />
-          </svg>
-        </span>
-      </div>
-      <input
-        disabled={true}
-        form="inputStatesForm"
-        icon="edit"
-        id="disabledTextInputWithIcon"
-        max=""
-        min=""
-        name="disabledTextInputWithIcon"
-        onBlur={[Function]}
-        onChange={[Function]}
-        placeholder=""
-        type="text"
-        value={null}
-      />
-      
-    </div>
-    
-  </div>
-  <div
-    className="ce-input ce-input--text ce-input--disabled"
-  >
-    <label
-      htmlFor="disabledTextInputWithButton"
-    >
-      Label for Button
-    </label>
-    
-    <div
-      className="ce-input__container"
-    >
-      
-      <input
-        disabled={true}
-        form="inputStatesForm"
-        icon=""
-        id="disabledTextInputWithButton"
-        max=""
-        min=""
-        name="disabledTextInputWithButton"
-        onBlur={[Function]}
-        onChange={[Function]}
-        placeholder=""
-        type="text"
-        value={null}
-      />
-      <button
-        className="ce-input__button"
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className="ce-icon--inverted"
-          >
-            <use
-              xlinkHref="#icons_system-navigate"
-            />
-          </svg>
-        </span>
-      </button>
-    </div>
-    
-  </div>
-  <h2>
-    Error
-  </h2>
-  <div
-    className="ce-input ce-input--text ce-input--error"
-  >
-    <label
-      htmlFor="errorTextInput"
-    >
-      Label for Standard
-    </label>
-    
-    <div
-      className="ce-input__container"
-    >
-      
-      <input
-        disabled={false}
-        form="inputStatesForm"
-        icon=""
-        id="errorTextInput"
-        max=""
-        min=""
-        name="errorTextInput"
-        onBlur={[Function]}
-        onChange={[Function]}
-        placeholder=""
-        type="text"
-        value={null}
-      />
-      
-    </div>
-    <div
-      className="ce-errorbox"
-    >
-      <div
-        className="ce-errorbox__container"
-      >
-        <div
-          className="ce-errorbox__arrow"
-        />
-        <div
-          className="ce-errorbox__message"
-        >
-          <span
-            className="ce-errorbox__text"
-          >
-            This is an error message.
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="ce-input ce-input--text ce-input--error"
-  >
-    <label
-      htmlFor="errorTextInputWithHelpText"
-    >
-      Label for Disabled
-    </label>
-    <div
-      className="ce-input__help-text"
-    >
-      Help text for error
-    </div>
-    <div
-      className="ce-input__container"
-    >
-      
-      <input
-        disabled={false}
-        form="inputStatesForm"
-        icon=""
-        id="errorTextInputWithHelpText"
-        max=""
-        min=""
-        name="errorTextInputWithHelpText"
-        onBlur={[Function]}
-        onChange={[Function]}
-        placeholder=""
-        type="text"
-        value={null}
-      />
-      
-    </div>
-    <div
-      className="ce-errorbox"
-    >
-      <div
-        className="ce-errorbox__container"
-      >
-        <div
-          className="ce-errorbox__arrow"
-        />
-        <div
-          className="ce-errorbox__message"
-        >
-          <span
-            className="ce-errorbox__text"
-          >
-            This is an error message.
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="ce-input ce-input--text ce-input--error"
-  >
-    <label
-      htmlFor="errorTextInputWithIcon"
-    >
-      Label for Icon
-    </label>
-    
-    <div
-      className="ce-input__container"
-    >
-      <div
-        className="ce-input__icon"
-      >
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-edit"
-            />
-          </svg>
-        </span>
-      </div>
-      <input
-        disabled={false}
-        form="inputStatesForm"
-        icon="edit"
-        id="errorTextInputWithIcon"
-        max=""
-        min=""
-        name="errorTextInputWithIcon"
-        onBlur={[Function]}
-        onChange={[Function]}
-        placeholder=""
-        type="text"
-        value={null}
-      />
-      
-    </div>
-    <div
-      className="ce-errorbox"
-    >
-      <div
-        className="ce-errorbox__container"
-      >
-        <div
-          className="ce-errorbox__arrow"
-        />
-        <div
-          className="ce-errorbox__message"
-        >
-          <span
-            className="ce-errorbox__text"
-          >
-            This is an error message.
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="ce-input ce-input--text ce-input--error"
-  >
-    <label
-      htmlFor="errorTextInputWithButton"
-    >
-      Label for Button
-    </label>
-    
-    <div
-      className="ce-input__container"
-    >
-      
-      <input
-        disabled={false}
-        form="inputStatesForm"
-        icon=""
-        id="errorTextInputWithButton"
-        max=""
-        min=""
-        name="errorTextInputWithButton"
-        onBlur={[Function]}
-        onChange={[Function]}
-        placeholder=""
-        type="text"
-        value={null}
-      />
-      <button
-        className="ce-input__button"
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className="ce-icon--inverted"
-          >
-            <use
-              xlinkHref="#icons_system-navigate"
-            />
-          </svg>
-        </span>
-      </button>
-    </div>
-    <div
-      className="ce-errorbox"
-    >
-      <div
-        className="ce-errorbox__container"
-      >
-        <div
-          className="ce-errorbox__arrow"
-        />
-        <div
-          className="ce-errorbox__message"
-        >
-          <span
-            className="ce-errorbox__text"
-          >
-            This is an error message.
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-</form>
+  
+</div>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/Input Input Types 1`] = `
-<form
-  id="inputTypesForm"
+exports[`Storyshots Components/Molecules/Form Controls/Input Date 1`] = `
+<div
+  className="ce-input ce-input--date"
 >
-  <div>
+  <label
+    htmlFor="date"
+  >
+    What is your birthday?
+  </label>
+  
+  <div
+    className="ce-input__container"
+  >
+    
+    <input
+      disabled={false}
+      form=""
+      icon=""
+      id="date"
+      max=""
+      min=""
+      name="date"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder=""
+      type="date"
+      value={null}
+    />
     <div
-      className="ce-input ce-input--color"
+      className="ce-input__date-icon"
     >
-      <label
-        htmlFor="colorInputStandard"
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
       >
-        Label for color
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="colorInputStandard"
-          max=""
-          min=""
-          name="colorInputStandard"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="color"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--color"
-    >
-      <label
-        htmlFor="colorInputHelpText"
-      >
-        Label for color
-      </label>
-      <div
-        className="ce-input__help-text"
-      >
-        Help text for color
-      </div>
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="colorInputHelpText"
-          max=""
-          min=""
-          name="colorInputHelpText"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="color"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--color"
-    >
-      <label
-        htmlFor="colorInputIcon"
-      >
-        Label for color
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        <div
-          className="ce-input__icon"
+        <svg
+          className=""
         >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-edit"
-              />
-            </svg>
-          </span>
-        </div>
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon="edit"
-          id="colorInputIcon"
-          max=""
-          min=""
-          name="colorInputIcon"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="color"
-          value={null}
-        />
-        
-      </div>
-      
+          <use
+            xlinkHref="#icons_system-calendar"
+          />
+        </svg>
+      </span>
     </div>
+    
+  </div>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Disabled 1`] = `
+<div
+  className="ce-input ce-input--text ce-input--disabled"
+>
+  <label
+    htmlFor="disabledTextInput"
+  >
+    Fill me in, I dare you:
+  </label>
+  
+  <div
+    className="ce-input__container"
+  >
+    
+    <input
+      disabled={true}
+      form=""
+      icon=""
+      id="disabledTextInput"
+      max=""
+      min=""
+      name="disabledTextInput"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder=""
+      type="text"
+      value={null}
+    />
+    
+  </div>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Email 1`] = `
+<div
+  className="ce-input ce-input--email"
+>
+  <label
+    htmlFor="email"
+  >
+    What is your email address:
+  </label>
+  
+  <div
+    className="ce-input__container"
+  >
+    
+    <input
+      disabled={false}
+      form=""
+      icon=""
+      id="email"
+      max=""
+      min=""
+      name="email"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder=""
+      type="email"
+      value={null}
+    />
+    
+  </div>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Error 1`] = `
+<div
+  className="ce-input ce-input--text ce-input--error"
+>
+  <label
+    htmlFor="errorTextInput"
+  >
+    Try NOT to be wrong:
+  </label>
+  
+  <div
+    className="ce-input__container"
+  >
+    
+    <input
+      disabled={false}
+      form=""
+      icon=""
+      id="errorTextInput"
+      max=""
+      min=""
+      name="errorTextInput"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder=""
+      type="text"
+      value={null}
+    />
+    
+  </div>
+  <div
+    className="ce-errorbox"
+  >
     <div
-      className="ce-input ce-input--color"
+      className="ce-errorbox__container"
     >
-      <label
-        htmlFor="colorInputButton"
-      >
-        Label for color
-      </label>
-      
       <div
-        className="ce-input__container"
+        className="ce-errorbox__arrow"
+      />
+      <div
+        className="ce-errorbox__message"
       >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="colorInputButton"
-          max=""
-          min=""
-          name="colorInputButton"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="color"
-          value={null}
-        />
-        <button
-          className="ce-input__button"
-          onClick={[Function]}
-          type="button"
+        <span
+          className="ce-errorbox__text"
         >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className="ce-icon--inverted"
-            >
-              <use
-                xlinkHref="#icons_system-navigate"
-              />
-            </svg>
-          </span>
-        </button>
+          You were wrong.
+        </span>
       </div>
-      
     </div>
   </div>
-  <div>
-    <div
-      className="ce-input ce-input--date"
-    >
-      <label
-        htmlFor="dateInputStandard"
-      >
-        Label for date
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="dateInputStandard"
-          max=""
-          min=""
-          name="dateInputStandard"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="date"
-          value={null}
-        />
-        <div
-          className="ce-input__date-icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-calendar"
-              />
-            </svg>
-          </span>
-        </div>
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--date"
-    >
-      <label
-        htmlFor="dateInputHelpText"
-      >
-        Label for date
-      </label>
-      <div
-        className="ce-input__help-text"
-      >
-        Help text for date
-      </div>
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="dateInputHelpText"
-          max=""
-          min=""
-          name="dateInputHelpText"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="date"
-          value={null}
-        />
-        <div
-          className="ce-input__date-icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-calendar"
-              />
-            </svg>
-          </span>
-        </div>
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--date"
-    >
-      <label
-        htmlFor="dateInputIcon"
-      >
-        Label for date
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        <div
-          className="ce-input__icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-edit"
-              />
-            </svg>
-          </span>
-        </div>
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon="edit"
-          id="dateInputIcon"
-          max=""
-          min=""
-          name="dateInputIcon"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="date"
-          value={null}
-        />
-        <div
-          className="ce-input__date-icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-calendar"
-              />
-            </svg>
-          </span>
-        </div>
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--date"
-    >
-      <label
-        htmlFor="dateInputButton"
-      >
-        Label for date
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="dateInputButton"
-          max=""
-          min=""
-          name="dateInputButton"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="date"
-          value={null}
-        />
-        <div
-          className="ce-input__date-icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-calendar"
-              />
-            </svg>
-          </span>
-        </div>
-        <button
-          className="ce-input__button"
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className="ce-icon--inverted"
-            >
-              <use
-                xlinkHref="#icons_system-navigate"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-      
-    </div>
-  </div>
-  <div>
-    <div
-      className="ce-input ce-input--email"
-    >
-      <label
-        htmlFor="emailInputStandard"
-      >
-        Label for email
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="emailInputStandard"
-          max=""
-          min=""
-          name="emailInputStandard"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="email"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--email"
-    >
-      <label
-        htmlFor="emailInputHelpText"
-      >
-        Label for email
-      </label>
-      <div
-        className="ce-input__help-text"
-      >
-        Help text for email
-      </div>
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="emailInputHelpText"
-          max=""
-          min=""
-          name="emailInputHelpText"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="email"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--email"
-    >
-      <label
-        htmlFor="emailInputIcon"
-      >
-        Label for email
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        <div
-          className="ce-input__icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-edit"
-              />
-            </svg>
-          </span>
-        </div>
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon="edit"
-          id="emailInputIcon"
-          max=""
-          min=""
-          name="emailInputIcon"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="email"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--email"
-    >
-      <label
-        htmlFor="emailInputButton"
-      >
-        Label for email
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="emailInputButton"
-          max=""
-          min=""
-          name="emailInputButton"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="email"
-          value={null}
-        />
-        <button
-          className="ce-input__button"
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className="ce-icon--inverted"
-            >
-              <use
-                xlinkHref="#icons_system-navigate"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-      
-    </div>
-  </div>
-  <div>
-    <div
-      className="ce-input ce-input--file"
-    >
-      <label
-        htmlFor="fileInputStandard"
-      >
-        Label for file
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="fileInputStandard"
-          max=""
-          min=""
-          name="fileInputStandard"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="file"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--file"
-    >
-      <label
-        htmlFor="fileInputHelpText"
-      >
-        Label for file
-      </label>
-      <div
-        className="ce-input__help-text"
-      >
-        Help text for file
-      </div>
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="fileInputHelpText"
-          max=""
-          min=""
-          name="fileInputHelpText"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="file"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--file"
-    >
-      <label
-        htmlFor="fileInputIcon"
-      >
-        Label for file
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        <div
-          className="ce-input__icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-edit"
-              />
-            </svg>
-          </span>
-        </div>
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon="edit"
-          id="fileInputIcon"
-          max=""
-          min=""
-          name="fileInputIcon"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="file"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--file"
-    >
-      <label
-        htmlFor="fileInputButton"
-      >
-        Label for file
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="fileInputButton"
-          max=""
-          min=""
-          name="fileInputButton"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="file"
-          value={null}
-        />
-        <button
-          className="ce-input__button"
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className="ce-icon--inverted"
-            >
-              <use
-                xlinkHref="#icons_system-navigate"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-      
-    </div>
-  </div>
-  <div>
-    <div
-      className="ce-input ce-input--hidden"
-    >
-      <label
-        htmlFor="hiddenInputStandard"
-      >
-        Label for hidden
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="hiddenInputStandard"
-          max=""
-          min=""
-          name="hiddenInputStandard"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="hidden"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--hidden"
-    >
-      <label
-        htmlFor="hiddenInputHelpText"
-      >
-        Label for hidden
-      </label>
-      <div
-        className="ce-input__help-text"
-      >
-        Help text for hidden
-      </div>
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="hiddenInputHelpText"
-          max=""
-          min=""
-          name="hiddenInputHelpText"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="hidden"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--hidden"
-    >
-      <label
-        htmlFor="hiddenInputIcon"
-      >
-        Label for hidden
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        <div
-          className="ce-input__icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-edit"
-              />
-            </svg>
-          </span>
-        </div>
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon="edit"
-          id="hiddenInputIcon"
-          max=""
-          min=""
-          name="hiddenInputIcon"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="hidden"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--hidden"
-    >
-      <label
-        htmlFor="hiddenInputButton"
-      >
-        Label for hidden
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="hiddenInputButton"
-          max=""
-          min=""
-          name="hiddenInputButton"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="hidden"
-          value={null}
-        />
-        <button
-          className="ce-input__button"
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className="ce-icon--inverted"
-            >
-              <use
-                xlinkHref="#icons_system-navigate"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-      
-    </div>
-  </div>
-  <div>
-    <div
-      className="ce-input ce-input--month"
-    >
-      <label
-        htmlFor="monthInputStandard"
-      >
-        Label for month
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="monthInputStandard"
-          max=""
-          min=""
-          name="monthInputStandard"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="month"
-          value={null}
-        />
-        <div
-          className="ce-input__date-icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-calendar"
-              />
-            </svg>
-          </span>
-        </div>
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--month"
-    >
-      <label
-        htmlFor="monthInputHelpText"
-      >
-        Label for month
-      </label>
-      <div
-        className="ce-input__help-text"
-      >
-        Help text for month
-      </div>
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="monthInputHelpText"
-          max=""
-          min=""
-          name="monthInputHelpText"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="month"
-          value={null}
-        />
-        <div
-          className="ce-input__date-icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-calendar"
-              />
-            </svg>
-          </span>
-        </div>
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--month"
-    >
-      <label
-        htmlFor="monthInputIcon"
-      >
-        Label for month
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        <div
-          className="ce-input__icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-edit"
-              />
-            </svg>
-          </span>
-        </div>
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon="edit"
-          id="monthInputIcon"
-          max=""
-          min=""
-          name="monthInputIcon"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="month"
-          value={null}
-        />
-        <div
-          className="ce-input__date-icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-calendar"
-              />
-            </svg>
-          </span>
-        </div>
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--month"
-    >
-      <label
-        htmlFor="monthInputButton"
-      >
-        Label for month
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="monthInputButton"
-          max=""
-          min=""
-          name="monthInputButton"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="month"
-          value={null}
-        />
-        <div
-          className="ce-input__date-icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-calendar"
-              />
-            </svg>
-          </span>
-        </div>
-        <button
-          className="ce-input__button"
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className="ce-icon--inverted"
-            >
-              <use
-                xlinkHref="#icons_system-navigate"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-      
-    </div>
-  </div>
-  <div>
-    <div
-      className="ce-input ce-input--number"
-    >
-      <label
-        htmlFor="numberInputStandard"
-      >
-        Label for number
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="numberInputStandard"
-          max=""
-          min=""
-          name="numberInputStandard"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="number"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--number"
-    >
-      <label
-        htmlFor="numberInputHelpText"
-      >
-        Label for number
-      </label>
-      <div
-        className="ce-input__help-text"
-      >
-        Help text for number
-      </div>
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="numberInputHelpText"
-          max=""
-          min=""
-          name="numberInputHelpText"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="number"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--number"
-    >
-      <label
-        htmlFor="numberInputIcon"
-      >
-        Label for number
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        <div
-          className="ce-input__icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-edit"
-              />
-            </svg>
-          </span>
-        </div>
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon="edit"
-          id="numberInputIcon"
-          max=""
-          min=""
-          name="numberInputIcon"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="number"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--number"
-    >
-      <label
-        htmlFor="numberInputButton"
-      >
-        Label for number
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="numberInputButton"
-          max=""
-          min=""
-          name="numberInputButton"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="number"
-          value={null}
-        />
-        <button
-          className="ce-input__button"
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className="ce-icon--inverted"
-            >
-              <use
-                xlinkHref="#icons_system-navigate"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-      
-    </div>
-  </div>
-  <div>
-    <div
-      className="ce-input ce-input--password"
-    >
-      <label
-        htmlFor="passwordInputStandard"
-      >
-        Label for password
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="passwordInputStandard"
-          max=""
-          min=""
-          name="passwordInputStandard"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="password"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--password"
-    >
-      <label
-        htmlFor="passwordInputHelpText"
-      >
-        Label for password
-      </label>
-      <div
-        className="ce-input__help-text"
-      >
-        Help text for password
-      </div>
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="passwordInputHelpText"
-          max=""
-          min=""
-          name="passwordInputHelpText"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="password"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--password"
-    >
-      <label
-        htmlFor="passwordInputIcon"
-      >
-        Label for password
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        <div
-          className="ce-input__icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-edit"
-              />
-            </svg>
-          </span>
-        </div>
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon="edit"
-          id="passwordInputIcon"
-          max=""
-          min=""
-          name="passwordInputIcon"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="password"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--password"
-    >
-      <label
-        htmlFor="passwordInputButton"
-      >
-        Label for password
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="passwordInputButton"
-          max=""
-          min=""
-          name="passwordInputButton"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="password"
-          value={null}
-        />
-        <button
-          className="ce-input__button"
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className="ce-icon--inverted"
-            >
-              <use
-                xlinkHref="#icons_system-navigate"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-      
-    </div>
-  </div>
-  <div>
-    <div
-      className="ce-input ce-input--search"
-    >
-      <label
-        htmlFor="searchInputStandard"
-      >
-        Label for search
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="searchInputStandard"
-          max=""
-          min=""
-          name="searchInputStandard"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="search"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--search"
-    >
-      <label
-        htmlFor="searchInputHelpText"
-      >
-        Label for search
-      </label>
-      <div
-        className="ce-input__help-text"
-      >
-        Help text for search
-      </div>
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="searchInputHelpText"
-          max=""
-          min=""
-          name="searchInputHelpText"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="search"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--search"
-    >
-      <label
-        htmlFor="searchInputIcon"
-      >
-        Label for search
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        <div
-          className="ce-input__icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-edit"
-              />
-            </svg>
-          </span>
-        </div>
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon="edit"
-          id="searchInputIcon"
-          max=""
-          min=""
-          name="searchInputIcon"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="search"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--search"
-    >
-      <label
-        htmlFor="searchInputButton"
-      >
-        Label for search
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="searchInputButton"
-          max=""
-          min=""
-          name="searchInputButton"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="search"
-          value={null}
-        />
-        <button
-          className="ce-input__button"
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className="ce-icon--inverted"
-            >
-              <use
-                xlinkHref="#icons_system-navigate"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-      
-    </div>
-  </div>
-  <div>
-    <div
-      className="ce-input ce-input--tel"
-    >
-      <label
-        htmlFor="telInputStandard"
-      >
-        Label for tel
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="telInputStandard"
-          max=""
-          min=""
-          name="telInputStandard"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="tel"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--tel"
-    >
-      <label
-        htmlFor="telInputHelpText"
-      >
-        Label for tel
-      </label>
-      <div
-        className="ce-input__help-text"
-      >
-        Help text for tel
-      </div>
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="telInputHelpText"
-          max=""
-          min=""
-          name="telInputHelpText"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="tel"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--tel"
-    >
-      <label
-        htmlFor="telInputIcon"
-      >
-        Label for tel
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        <div
-          className="ce-input__icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-edit"
-              />
-            </svg>
-          </span>
-        </div>
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon="edit"
-          id="telInputIcon"
-          max=""
-          min=""
-          name="telInputIcon"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="tel"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--tel"
-    >
-      <label
-        htmlFor="telInputButton"
-      >
-        Label for tel
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="telInputButton"
-          max=""
-          min=""
-          name="telInputButton"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="tel"
-          value={null}
-        />
-        <button
-          className="ce-input__button"
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className="ce-icon--inverted"
-            >
-              <use
-                xlinkHref="#icons_system-navigate"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-      
-    </div>
-  </div>
-  <div>
-    <div
-      className="ce-input ce-input--text"
-    >
-      <label
-        htmlFor="textInputStandard"
-      >
-        Label for text
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="textInputStandard"
-          max=""
-          min=""
-          name="textInputStandard"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="text"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--text"
-    >
-      <label
-        htmlFor="textInputHelpText"
-      >
-        Label for text
-      </label>
-      <div
-        className="ce-input__help-text"
-      >
-        Help text for text
-      </div>
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="textInputHelpText"
-          max=""
-          min=""
-          name="textInputHelpText"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="text"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--text"
-    >
-      <label
-        htmlFor="textInputIcon"
-      >
-        Label for text
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        <div
-          className="ce-input__icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-edit"
-              />
-            </svg>
-          </span>
-        </div>
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon="edit"
-          id="textInputIcon"
-          max=""
-          min=""
-          name="textInputIcon"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="text"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--text"
-    >
-      <label
-        htmlFor="textInputButton"
-      >
-        Label for text
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="textInputButton"
-          max=""
-          min=""
-          name="textInputButton"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="text"
-          value={null}
-        />
-        <button
-          className="ce-input__button"
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className="ce-icon--inverted"
-            >
-              <use
-                xlinkHref="#icons_system-navigate"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-      
-    </div>
-  </div>
-  <div>
-    <div
-      className="ce-input ce-input--time"
-    >
-      <label
-        htmlFor="timeInputStandard"
-      >
-        Label for time
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="timeInputStandard"
-          max=""
-          min=""
-          name="timeInputStandard"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="time"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--time"
-    >
-      <label
-        htmlFor="timeInputHelpText"
-      >
-        Label for time
-      </label>
-      <div
-        className="ce-input__help-text"
-      >
-        Help text for time
-      </div>
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="timeInputHelpText"
-          max=""
-          min=""
-          name="timeInputHelpText"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="time"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--time"
-    >
-      <label
-        htmlFor="timeInputIcon"
-      >
-        Label for time
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        <div
-          className="ce-input__icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-edit"
-              />
-            </svg>
-          </span>
-        </div>
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon="edit"
-          id="timeInputIcon"
-          max=""
-          min=""
-          name="timeInputIcon"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="time"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--time"
-    >
-      <label
-        htmlFor="timeInputButton"
-      >
-        Label for time
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="timeInputButton"
-          max=""
-          min=""
-          name="timeInputButton"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="time"
-          value={null}
-        />
-        <button
-          className="ce-input__button"
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className="ce-icon--inverted"
-            >
-              <use
-                xlinkHref="#icons_system-navigate"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-      
-    </div>
-  </div>
-  <div>
-    <div
-      className="ce-input ce-input--url"
-    >
-      <label
-        htmlFor="urlInputStandard"
-      >
-        Label for url
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="urlInputStandard"
-          max=""
-          min=""
-          name="urlInputStandard"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="url"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--url"
-    >
-      <label
-        htmlFor="urlInputHelpText"
-      >
-        Label for url
-      </label>
-      <div
-        className="ce-input__help-text"
-      >
-        Help text for url
-      </div>
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="urlInputHelpText"
-          max=""
-          min=""
-          name="urlInputHelpText"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="url"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--url"
-    >
-      <label
-        htmlFor="urlInputIcon"
-      >
-        Label for url
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        <div
-          className="ce-input__icon"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className=""
-            >
-              <use
-                xlinkHref="#icons_system-edit"
-              />
-            </svg>
-          </span>
-        </div>
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon="edit"
-          id="urlInputIcon"
-          max=""
-          min=""
-          name="urlInputIcon"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="url"
-          value={null}
-        />
-        
-      </div>
-      
-    </div>
-    <div
-      className="ce-input ce-input--url"
-    >
-      <label
-        htmlFor="urlInputButton"
-      >
-        Label for url
-      </label>
-      
-      <div
-        className="ce-input__container"
-      >
-        
-        <input
-          disabled={false}
-          form="inputTypesForm"
-          icon=""
-          id="urlInputButton"
-          max=""
-          min=""
-          name="urlInputButton"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder=""
-          type="url"
-          value={null}
-        />
-        <button
-          className="ce-input__button"
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="ce-icon ce-icon__system ce-icon--large"
-          >
-            <svg
-              className="ce-icon--inverted"
-            >
-              <use
-                xlinkHref="#icons_system-navigate"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-      
-    </div>
-  </div>
-</form>
+</div>
 `;
 
 exports[`Storyshots Components/Molecules/Form Controls/Input Input with Knobs 1`] = `
@@ -8407,6 +5838,414 @@ exports[`Storyshots Components/Molecules/Form Controls/Input Input with Knobs 1`
     
   </div>
 </form>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Number 1`] = `
+<div
+  className="ce-input ce-input--number"
+>
+  <label
+    htmlFor="number"
+  >
+    How many cats do you have?
+  </label>
+  
+  <div
+    className="ce-input__container"
+  >
+    
+    <input
+      disabled={false}
+      form=""
+      icon=""
+      id="number"
+      max=""
+      min=""
+      name="number"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder=""
+      type="number"
+      value={null}
+    />
+    
+  </div>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Password 1`] = `
+<div
+  className="ce-input ce-input--password"
+>
+  <label
+    htmlFor="password"
+  >
+    Choose a secure password:
+  </label>
+  
+  <div
+    className="ce-input__container"
+  >
+    
+    <input
+      disabled={false}
+      form=""
+      icon=""
+      id="password"
+      max=""
+      min=""
+      name="password"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder=""
+      type="password"
+      value={null}
+    />
+    
+  </div>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Telephone Number 1`] = `
+<div
+  className="ce-input ce-input--tel"
+>
+  <label
+    htmlFor="tel"
+  >
+    What is your phone number?
+  </label>
+  
+  <div
+    className="ce-input__container"
+  >
+    
+    <input
+      disabled={false}
+      form=""
+      icon=""
+      id="tel"
+      max=""
+      min=""
+      name="tel"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder=""
+      type="tel"
+      value={null}
+    />
+    
+  </div>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Text (Default) 1`] = `
+<div
+  className="ce-input ce-input--text"
+>
+  <label
+    htmlFor="text"
+  >
+    What city where you born in?
+  </label>
+  
+  <div
+    className="ce-input__container"
+  >
+    
+    <input
+      disabled={false}
+      form=""
+      icon=""
+      id="text"
+      max=""
+      min=""
+      name="text"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder=""
+      type="text"
+      value={null}
+    />
+    
+  </div>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Time 1`] = `
+<div
+  className="ce-input ce-input--time"
+>
+  <label
+    htmlFor="time"
+  >
+    What time is it?
+  </label>
+  
+  <div
+    className="ce-input__container"
+  >
+    
+    <input
+      disabled={false}
+      form=""
+      icon=""
+      id="time"
+      max=""
+      min=""
+      name="time"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder=""
+      type="time"
+      value={null}
+    />
+    
+  </div>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input Url 1`] = `
+<div
+  className="ce-input ce-input--url"
+>
+  <label
+    htmlFor="url"
+  >
+    What is your business' website?
+  </label>
+  
+  <div
+    className="ce-input__container"
+  >
+    
+    <input
+      disabled={false}
+      form=""
+      icon=""
+      id="url"
+      max=""
+      min=""
+      name="url"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder=""
+      type="url"
+      value={null}
+    />
+    
+  </div>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input with Everything 1`] = `
+<div
+  className="ce-input ce-input--text"
+>
+  <label
+    htmlFor="test"
+  >
+    Input with an Everything:
+  </label>
+  <div
+    className="ce-input__help-text"
+  >
+    Hold the pickles
+  </div>
+  <div
+    className="ce-input__container"
+  >
+    <div
+      className="ce-input__icon"
+    >
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-edit"
+          />
+        </svg>
+      </span>
+    </div>
+    <input
+      disabled={false}
+      form=""
+      icon="edit"
+      id="test"
+      max=""
+      min=""
+      name="test"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder=""
+      type="text"
+      value={null}
+    />
+    <button
+      className="ce-input__button"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className="ce-icon--inverted"
+        >
+          <use
+            xlinkHref="#icons_system-navigate"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input with Help Text 1`] = `
+<div
+  className="ce-input ce-input--text"
+>
+  <label
+    htmlFor="withHelpText"
+  >
+    Input with Help Text:
+  </label>
+  <div
+    className="ce-input__help-text"
+  >
+    I am helpful text.
+  </div>
+  <div
+    className="ce-input__container"
+  >
+    
+    <input
+      disabled={false}
+      form=""
+      icon=""
+      id="withHelpText"
+      max=""
+      min=""
+      name="withHelpText"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder=""
+      type="text"
+      value={null}
+    />
+    
+  </div>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input with a Button 1`] = `
+<div
+  className="ce-input ce-input--text"
+>
+  <label
+    htmlFor="test"
+  >
+    Input with an Attached Button:
+  </label>
+  
+  <div
+    className="ce-input__container"
+  >
+    
+    <input
+      disabled={false}
+      form=""
+      icon=""
+      id="test"
+      max=""
+      min=""
+      name="test"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder=""
+      type="text"
+      value={null}
+    />
+    <button
+      className="ce-input__button"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className="ce-icon--inverted"
+        >
+          <use
+            xlinkHref="#icons_system-navigate"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Input with an Icon 1`] = `
+<div
+  className="ce-input ce-input--text"
+>
+  <label
+    htmlFor="withIcon"
+  >
+    Input with an Icon:
+  </label>
+  
+  <div
+    className="ce-input__container"
+  >
+    <div
+      className="ce-input__icon"
+    >
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-edit"
+          />
+        </svg>
+      </span>
+    </div>
+    <input
+      disabled={false}
+      form=""
+      icon="edit"
+      id="withIcon"
+      max=""
+      min=""
+      name="withIcon"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder=""
+      type="text"
+      value={null}
+    />
+    
+  </div>
+  
+</div>
 `;
 
 exports[`Storyshots Components/Molecules/Form Controls/Radio Radio States 1`] = `

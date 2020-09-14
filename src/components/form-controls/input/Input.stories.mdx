@@ -1,12 +1,6 @@
-import {
-  Description,
-  Meta,
-  Preview,
-  Props,
-  Story,
-} from '@storybook/addon-docs/blocks';
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { boolean, text } from '@storybook/addon-knobs';
+import { boolean, select, text } from '@storybook/addon-knobs';
 
 import Input from '.';
 import { INPUT_TYPES as TYPES } from '../../../utils/constants';
@@ -15,7 +9,7 @@ import { INPUT_TYPES as TYPES } from '../../../utils/constants';
 
 # Inputs
 <Description of={Input} />
-<Props of={Input} />
+<ArgsTable of={Input} />
 
 <Story name="Input with Knobs" parameters={{ docs: { disable: true } }}>
   <form id="inputWithKnobForm">
@@ -30,7 +24,7 @@ import { INPUT_TYPES as TYPES } from '../../../utils/constants';
       formId={text('formId', 'inputWithKnobsForm', 'Input Options')}
       handleChange={action('`Input with Knobs` onChange event triggered.')}
       helpText={text('helpText', 'This is useful or helpful information.', 'Input Options')}
-      htmlType={text('htmlType', 'text', 'Input Options')}
+      htmlType={select('htmlType', TYPES, 'text', 'Input Options')}
       icon={text('icon', '', 'Input Options')}
       initialValue={text('initialValue', '','Input Options')}
       label={text('label', 'Input with Knobs', 'Input Options')}
@@ -40,141 +34,186 @@ import { INPUT_TYPES as TYPES } from '../../../utils/constants';
   </form>
 </Story>
 
-### Types
-<Preview>
-  <Story name="Input Types">
-    <form id="inputTypesForm">
-      {TYPES.map(type => (
-        <div key={type}>
-          <Input
-            formId="inputTypesForm"
-            htmlType={type}
-            label={`Label for ${type}`}
-            name={`${type}InputStandard`}
-          />
-          <Input
-            formId="inputTypesForm"
-            helpText={`Help text for ${type}`}
-            htmlType={type}
-            label={`Label for ${type}`}
-            name={`${type}InputHelpText`}
-          />
-          <Input
-            formId="inputTypesForm"
-            htmlType={type}
-            icon="edit"
-            label={`Label for ${type}`}
-            name={`${type}InputIcon`}
-          />
-          <Input
-            btnOptions={{
-              btnClick: action(`'Input Types' of type ${type} button onClick event triggered.`),
-              btnIcon: 'navigate',
-            }}
-            formId="inputTypesForm"
-            htmlType={type}
-            label={`Label for ${type}`}
-            name={`${type}InputButton`}
-          />
-        </div>
-      ))}
-    </form>
-  </Story>
-</Preview>
+## Types
+Ther are several different types of `<Input />` available.
 
-### States
-<Preview>
-  <Story name="Input States">
-    <form id="inputStatesForm">
-      <h2>Default</h2>
+### Color
+<Canvas>
+  <Story name="Color">
+    <Input
+      htmlType="color"
+      label="Choose a color:"
+      name="color"
+    />
+  </Story>
+</Canvas>
+
+### Date
+<Canvas>
+  <Story name="Date">
+    <Input
+      htmlType="date"
+      label="What is your birthday?"
+      name="date"
+    />
+  </Story>
+</Canvas>
+
+### Email
+<Canvas>
+  <Story name="Email">
+    <Input
+      htmlType="email"
+      label="What is your email address:"
+      name="email"
+    />
+  </Story>
+</Canvas>
+
+### Number
+<Canvas>
+  <Story name="Number">
+    <Input
+      htmlType="number"
+      label="How many cats do you have?"
+      name="number"
+    />
+  </Story>
+</Canvas>
+
+### Password
+<Canvas>
+  <Story name="Password">
+    <Input
+      htmlType="password"
+      label="Choose a secure password:"
+      name="password"
+    />
+  </Story>
+</Canvas>
+
+### Phone number
+<Canvas>
+  <Story name="Telephone Number">
+    <Input
+      htmlType="tel"
+      label="What is your phone number?"
+      name="tel"
+    />
+  </Story>
+</Canvas>
+
+### Text
+<Canvas>
+  <Story name="Text (Default)">
+    <Input
+      htmlType="text"
+      label="What city where you born in?"
+      name="text"
+    />
+  </Story>
+</Canvas>
+
+### Time
+<Canvas>
+  <Story name="Time">
+    <Input
+      htmlType="time"
+      label="What time is it?"
+      name="time"
+    />
+  </Story>
+</Canvas>
+
+### URL
+<Canvas>
+  <Story name="Url">
+    <Input
+      htmlType="url"
+      label="What is your business' website?"
+      name="url"
+    />
+  </Story>
+</Canvas>
+
+## Options
+All of the options are avaliable on each of the different types of `Input`. (And you may enable all of them at the same time.) For the icon on the left of the `Input`, and in the button on the right, any of the `SystemIcons` are available to you.
+
+An `<Input />` can have help text.
+<Canvas>
+  <Story name="with Help Text">
+    <Input
+      helpText="I am helpful text."
+      htmlType="text"
+      label="Input with Help Text:"
+      name="withHelpText"
+    />
+  </Story>
+</Canvas>
+
+An `<Input />` can have helpful icons.
+<Canvas>
+  <Story name="with an Icon">
+    <Input
+      htmlType="text"
+      icon="edit"
+      label="Input with an Icon:"
+      name="withIcon"
+    />
+  </Story>
+</Canvas>
+
+An `<Input />` can have an attached button.
+<Canvas>
+  <Story name="with a Button">
+    <Input
+      btnOptions={{
+        btnClick: action(`'Input with a Button' button onClick event triggered.`),
+        btnIcon: 'navigate',
+      }}
+      htmlType="text"
+      label="Input with an Attached Button:"
+      name="test"
+    />
+  </Story>
+</Canvas>
+
+An `<Input />` can have everything at the same time.
+<Canvas>
+  <Story name="with Everything">
+    <Input
+      btnOptions={{
+        btnClick: action(`'Input with Everything' button onClick event triggered.`),
+        btnIcon: 'navigate',
+      }}
+      helpText="Hold the pickles"
+      htmlType="text"
+      icon="edit"
+      label="Input with an Everything:"
+      name="test"
+    />
+  </Story>
+</Canvas>
+
+## States
+An `<Input />` can be disabled:
+<Canvas>
+  <Story name="Disabled">
+    <Input
+      disabled
+      label="Fill me in, I dare you:"
+      name="disabledTextInput"
+    />
+  </Story>
+</Canvas>
+
+Or can have an error:
+<Canvas>
+  <Story name="Error">
       <Input
-        formId="inputStatesForm"
-        label="Label for Standard"
-        name="defaultTextInput"
-      />
-      <Input
-        formId="inputStatesForm"
-        helpText="Help text for default"
-        label="Label for Disabled"
-        name="defaultTextInputWithHelpText"
-      />
-      <Input
-        formId="inputStatesForm"
-        icon="edit"
-        label="Label for Icon"
-        name="defaultTextInputWithIcon"
-      />
-      <Input
-        btnOptions={{
-          btnClick: action(`'Input Types' button onClick event triggered.`),
-          btnIcon: 'navigate',
-        }}
-        formId="inputStatesForm"
-        label="Label for Button"
-        name="defaultTextInputWithButton"
-      />
-      <h2>Disabled</h2>
-      <Input
-        disabled
-        formId="inputStatesForm"
-        label="Label for Standard"
-        name="disabledTextInput"
-      />
-      <Input
-        disabled
-        formId="inputStatesForm"
-        helpText="Help text for disabled"
-        label="Label for Disabled"
-        name="disabledTextInputWithHelpText"
-      />
-      <Input
-        disabled
-        formId="inputStatesForm"
-        icon="edit"
-        label="Label for Icon"
-        name="disabledTextInputWithIcon"
-      />
-      <Input
-        disabled
-        btnOptions={{
-          btnClick: action(`'Input Types' disabled button onClick event triggered.`),
-          btnIcon: 'navigate',
-        }}
-        formId="inputStatesForm"
-        label="Label for Button"
-        name="disabledTextInputWithButton"
-      />
-      <h2>Error</h2>
-      <Input
-        errorMsg="This is an error message."
-        formId="inputStatesForm"
-        label="Label for Standard"
+        errorMsg="You were wrong."
+        label="Try NOT to be wrong:"
         name="errorTextInput"
       />
-      <Input
-        errorMsg="This is an error message."
-        formId="inputStatesForm"
-        helpText="Help text for error"
-        label="Label for Disabled"
-        name="errorTextInputWithHelpText"
-      />
-      <Input
-        errorMsg="This is an error message."
-        formId="inputStatesForm"
-        icon="edit"
-        label="Label for Icon"
-        name="errorTextInputWithIcon"
-      />
-      <Input
-        btnOptions={{
-          btnClick: action(`'Input Types' error button onClick event triggered.`),
-          btnIcon: 'navigate',
-        }}
-        errorMsg="This is an error message."
-        formId="inputStatesForm"
-        label="Label for Button"
-        name="errorTextInputWithButton"
-      />
-    </form>
   </Story>
-</Preview>
+</Canvas>
