@@ -5,7 +5,7 @@ import cx from 'classnames';
 import SystemIcon from '../../icon/SystemIcon';
 import { ErrorBox } from '../core';
 
-import { SYSTEM_ICONS as ICONS } from '../../../utils/constants';
+// import { SYSTEM_ICONS as ICONS } from '../../../utils/constants';
 
 import './select.less';
 
@@ -103,7 +103,40 @@ Select.propTypes = {
    */
   btnOptions: PropTypes.shape({
     btnClick: PropTypes.func,
-    btnIcon: PropTypes.oneOf([...ICONS, '']),
+    // btnIcon: PropTypes.oneOf([...ICONS, '']),
+    btnIcon: PropTypes.oneOf([
+      'share',
+      'preview',
+      'export',
+      'follow',
+      'message',
+      'badges',
+      'website',
+      'edit',
+      'clear',
+      'navigate',
+      'down',
+      'up',
+      'user',
+      'visibility',
+      'help',
+      'close',
+      'calendar',
+      'warning',
+      'add',
+      'filter',
+      'menu',
+      'search',
+      'tutorial',
+      'yes',
+      'no',
+      'hobby',
+      'interest',
+      'outdoor',
+      'indoor',
+      'popular',
+      '',
+    ]),
   }),
   /**
    * A class name, or string of class names, to add to the `<Select />`.
@@ -132,7 +165,40 @@ Select.propTypes = {
   /**
    * An icon to include on the left side of the `<Select />`.
    */
-  icon: PropTypes.oneOf([...ICONS, '']),
+  // icon: PropTypes.oneOf([...ICONS, '']),
+  icon: PropTypes.oneOf([
+    'share',
+    'preview',
+    'export',
+    'follow',
+    'message',
+    'badges',
+    'website',
+    'edit',
+    'clear',
+    'navigate',
+    'down',
+    'up',
+    'user',
+    'visibility',
+    'help',
+    'close',
+    'calendar',
+    'warning',
+    'add',
+    'filter',
+    'menu',
+    'search',
+    'tutorial',
+    'yes',
+    'no',
+    'hobby',
+    'interest',
+    'outdoor',
+    'indoor',
+    'popular',
+    '',
+  ]),
   /**
    * The `<Select />` label.
    */
