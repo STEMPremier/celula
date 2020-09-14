@@ -7419,127 +7419,117 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton Text Small 1
 </button>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/Textarea Textarea States 1`] = `
-<form
-  id="textareaStatesForm"
+exports[`Storyshots Components/Molecules/Form Controls/Textarea Disabled 1`] = `
+<div
+  className="ce-textarea ce-textarea--disabled"
 >
-  <div
-    className="ce-textarea"
+  <label
+    htmlFor="disabledTextarea"
   >
-    <label
-      htmlFor="defaultTextarea"
-    >
-      Label for Default
-    </label>
-    <div
-      className="ce-textarea__help-text"
-    >
-      This is useful or helpful information.
-    </div>
-    <textarea
-      disabled={false}
-      form="textareaStatesForm"
-      name="defaultTextarea"
-      onChange={[Function]}
-      placeholder="Please fill this in."
-    />
-    
-  </div>
-  <div
-    className="ce-textarea ce-textarea--disabled"
+    Fill me in, I dare you:
+  </label>
+  
+  <textarea
+    disabled={true}
+    form=""
+    name="disabledTextarea"
+    onChange={[Function]}
+    placeholder="I double-dog dare you."
+  />
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Textarea Error 1`] = `
+<div
+  className="ce-textarea ce-textarea--error"
+>
+  <label
+    htmlFor="errorTextarea"
   >
-    <label
-      htmlFor="disabledTextarea"
-    >
-      Label for Disabled
-    </label>
-    <div
-      className="ce-textarea__help-text"
-    >
-      This is useful or helpful information.
-    </div>
-    <textarea
-      disabled={true}
-      form="textareaStatesForm"
-      name="disabledTextarea"
-      onChange={[Function]}
-      placeholder="Fill this in, I dare you."
-    />
-    
-  </div>
+    Try NOT to be wrong:
+  </label>
+  
+  <textarea
+    disabled={false}
+    form=""
+    name="errorTextarea"
+    onChange={[Function]}
+    placeholder="Please fill this in."
+  />
   <div
-    className="ce-textarea ce-textarea--error"
+    className="ce-errorbox"
   >
-    <label
-      htmlFor="errorTextarea"
-    >
-      Label for Error
-    </label>
     <div
-      className="ce-textarea__help-text"
-    >
-      This is useful or helpful information.
-    </div>
-    <textarea
-      disabled={false}
-      form="textareaStatesForm"
-      name="errorTextarea"
-      onChange={[Function]}
-      placeholder="Please fill this in."
-    />
-    <div
-      className="ce-errorbox"
+      className="ce-errorbox__container"
     >
       <div
-        className="ce-errorbox__container"
+        className="ce-errorbox__arrow"
+      />
+      <div
+        className="ce-errorbox__message"
       >
-        <div
-          className="ce-errorbox__arrow"
-        />
-        <div
-          className="ce-errorbox__message"
+        <span
+          className="ce-errorbox__text"
         >
-          <span
-            className="ce-errorbox__text"
-          >
-            Seriously, fill this in!
-          </span>
-        </div>
+          You were wrong!
+        </span>
       </div>
     </div>
   </div>
-</form>
+</div>
 `;
 
 exports[`Storyshots Components/Molecules/Form Controls/Textarea Textarea with Knobs 1`] = `
-<form
-  id="textareaWithKnobsForm"
+<div
+  className="ce-textarea"
 >
-  <div
-    className="ce-textarea"
+  <label
+    htmlFor="textareaWithKnobs"
   >
-    <label
-      htmlFor="textareaWithKnobs"
-    >
-      Textarea with Knobs
-    </label>
-    <div
-      className="ce-textarea__help-text"
-    >
-      This is useful or helpful information.
-    </div>
-    <textarea
-      disabled={false}
-      form="textareaWithKnobsForm"
-      name="textareaWithKnobs"
-      onChange={[Function]}
-      placeholder="Please fill this in."
-    >
-      
-    </textarea>
-    
+    Textarea with Knobs
+  </label>
+  <div
+    className="ce-textarea__help-text"
+  >
+    This is useful or helpful information.
   </div>
-</form>
+  <textarea
+    disabled={false}
+    form="textareaWithKnobsForm"
+    name="textareaWithKnobs"
+    onChange={[Function]}
+    placeholder="Please fill this in."
+  >
+    
+  </textarea>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Textarea with Help Text 1`] = `
+<div
+  className="ce-textarea"
+>
+  <label
+    htmlFor="withHelpText"
+  >
+    Textarea with help text:
+  </label>
+  <div
+    className="ce-textarea__help-text"
+  >
+    I am helpful text.
+  </div>
+  <textarea
+    disabled={false}
+    form=""
+    name="withHelpText"
+    onChange={[Function]}
+    placeholder="Please fill this in."
+  />
+  
+</div>
 `;
 
 exports[`Storyshots Components/Molecules/Icons/ProductIcon All ProductIcons 1`] = `

@@ -1,10 +1,4 @@
-import {
-  Description,
-  Meta,
-  Preview,
-  Props,
-  Story,
-} from '@storybook/addon-docs/blocks';
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
 
@@ -14,52 +8,58 @@ import Textarea from '.';
 
 # Textarea
 <Description of={Textarea} />
-<Props of={Textarea} />
+<ArgsTable of={Textarea} />
 
 <Story name="Textarea with Knobs" parameters={{ docs: { disable: true } }}>
-  <form id="textareaWithKnobsForm">
-    <Textarea
-      className={text('className', '')}
-      disabled={boolean('disabled', false)}
-      errorMsg={text('errorMsg', '')}
-      formId={text('formId', 'textareaWithKnobsForm')}
-      handleChange={action('`Textarea with Knobs` onChange event triggered.')}
-      helpText={text('helpText', 'This is useful or helpful information.')}
-      initialValue={text('initialValue', '')}
-      label={text('label', 'Textarea with Knobs')}
-      name={text('name', 'textareaWithKnobs')}
-      placeholder={text('placeholder', 'Please fill this in.')}
-    />
-  </form>
+  <Textarea
+    className={text('className', '')}
+    disabled={boolean('disabled', false)}
+    errorMsg={text('errorMsg', '')}
+    formId={text('formId', 'textareaWithKnobsForm')}
+    handleChange={action('`Textarea with Knobs` onChange event triggered.')}
+    helpText={text('helpText', 'This is useful or helpful information.')}
+    initialValue={text('initialValue', '')}
+    label={text('label', 'Textarea with Knobs')}
+    name={text('name', 'textareaWithKnobs')}
+    placeholder={text('placeholder', 'Please fill this in.')}
+  />
 </Story>
 
-### States
-<Preview>
-  <Story name="Textarea States">
-    <form id="textareaStatesForm">
-      <Textarea
-        formId="textareaStatesForm"
-        helpText="This is useful or helpful information."
-        label="Label for Default"
-        name="defaultTextarea"
-        placeholder="Please fill this in."
-      />
-      <Textarea
-        disabled
-        formId="textareaStatesForm"
-        helpText="This is useful or helpful information."
-        label="Label for Disabled"
-        name="disabledTextarea"
-        placeholder="Fill this in, I dare you."
-      />
-      <Textarea
-        errorMsg="Seriously, fill this in!"
-        formId="textareaStatesForm"
-        helpText="This is useful or helpful information."
-        label="Label for Error"
-        name="errorTextarea"
-        placeholder="Please fill this in."
-      />
-    </form>
+## Options
+A `<Textarea />` can have help text.
+<Canvas>
+  <Story name="with Help Text">
+    <Textarea
+      helpText="I am helpful text."
+      label="Textarea with help text:"
+      name="withHelpText"
+      placeholder="Please fill this in."
+    />
   </Story>
-</Preview>
+</Canvas>
+
+## States
+
+A `<Textarea />` can be disabled.
+<Canvas>
+  <Story name="Disabled">
+    <Textarea
+      disabled
+      label="Fill me in, I dare you:"
+      name="disabledTextarea"
+      placeholder="I double-dog dare you."
+    />
+  </Story>
+</Canvas>
+
+Or can have an error:
+<Canvas>
+  <Story name="Error">
+    <Textarea
+      errorMsg="You were wrong!"
+      label="Try NOT to be wrong:"
+      name="errorTextarea"
+      placeholder="Please fill this in."
+    />
+  </Story>
+</Canvas>
