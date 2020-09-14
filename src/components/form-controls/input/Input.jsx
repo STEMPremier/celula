@@ -7,7 +7,7 @@ import { ErrorBox } from '../core';
 
 import {
   INPUT_TYPES as TYPES,
-  SYSTEM_ICONS as ICONS,
+  // SYSTEM_ICONS as ICONS,
 } from '../../../utils/constants';
 
 import './input.less';
@@ -193,7 +193,40 @@ Input.propTypes = {
    */
   btnOptions: PropTypes.shape({
     btnClick: PropTypes.func,
-    btnIcon: PropTypes.oneOf([...ICONS, '']),
+    // btnIcon: PropTypes.oneOf([...ICONS, '']),
+    btnIcon: PropTypes.oneOf([
+      'share',
+      'preview',
+      'export',
+      'follow',
+      'message',
+      'badges',
+      'website',
+      'edit',
+      'clear',
+      'navigate',
+      'down',
+      'up',
+      'user',
+      'visibility',
+      'help',
+      'close',
+      'calendar',
+      'warning',
+      'add',
+      'filter',
+      'menu',
+      'search',
+      'tutorial',
+      'yes',
+      'no',
+      'hobby',
+      'interest',
+      'outdoor',
+      'indoor',
+      'popular',
+      '',
+    ]),
   }),
   /**
    * A class name, or string of class names, to add to the `<Input />`.
@@ -222,11 +255,56 @@ Input.propTypes = {
   /**
    * The html type of the `<Input />`.
    */
-  htmlType: PropTypes.oneOf(TYPES),
+  // htmlType: PropTypes.oneOf(TYPES),
+  htmlType: PropTypes.oneOf([
+    'color',
+    'date',
+    'email',
+    'hidden',
+    'number',
+    'password',
+    'tel',
+    'text',
+    'time',
+    'url',
+  ]),
   /**
    * An icon to include on the left side of the `<Input />`.
    */
-  icon: PropTypes.string,
+  // icon: PropTypes.oneOf([...TYPES, '']),
+  icon: PropTypes.oneOf([
+    'share',
+    'preview',
+    'export',
+    'follow',
+    'message',
+    'badges',
+    'website',
+    'edit',
+    'clear',
+    'navigate',
+    'down',
+    'up',
+    'user',
+    'visibility',
+    'help',
+    'close',
+    'calendar',
+    'warning',
+    'add',
+    'filter',
+    'menu',
+    'search',
+    'tutorial',
+    'yes',
+    'no',
+    'hobby',
+    'interest',
+    'outdoor',
+    'indoor',
+    'popular',
+    '',
+  ]),
   /**
    * The initial value of the `<Input />`, if any.
    */
