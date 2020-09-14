@@ -6598,976 +6598,426 @@ exports[`Storyshots Components/Molecules/Form Controls/Radio RadioGroup with Kno
 </form>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/Select Select States 1`] = `
-<form>
-  <h2>
-    Default
-  </h2>
-  <div
-    className="ce-select"
+exports[`Storyshots Components/Molecules/Form Controls/Select Disabled 1`] = `
+<div
+  className="ce-select"
+>
+  <label
+    htmlFor="disbaledSelect"
   >
-    <label
-      htmlFor="defaultSelect2"
-    >
-      Default Select
-    </label>
+    Make a choice, I dare you:
+  </label>
+  
+  <div
+    className="ce-select__container"
+  >
     
-    <div
-      className="ce-select__container"
+    <select
+      disabled={false}
+      form=""
+      id="disbaledSelect"
+      label="Make a choice, I dare you:"
+      name="disbaledSelect"
+      onChange={[Function]}
+      value=""
     >
-      
-      <select
-        disabled={false}
-        form=""
-        id="defaultSelect2"
-        label="Default Select"
-        name="defaultSelect2"
-        onChange={[Function]}
+      <option
         value=""
       >
-        <option
-          value=""
-        >
-          Select one
-        </option>
-        <option
-          value={1}
-        >
-          option 1
-        </option>
-        <option
-          value={2}
-        >
-          option 2
-        </option>
-      </select>
-      
-    </div>
+        Select one
+      </option>
+      <option
+        value={1}
+      >
+        option 1
+      </option>
+      <option
+        value={2}
+      >
+        option 2
+      </option>
+    </select>
     
   </div>
-  <div
-    className="ce-select"
-  >
-    <label
-      htmlFor="defaultSelectwithHelpText2"
-    >
-      Default Select with Help Text
-    </label>
-    <span
-      className="ce-select__help-text"
-    >
-      This is useful or helpful information.
-    </span>
-    <div
-      className="ce-select__container"
-    >
-      
-      <select
-        disabled={false}
-        form=""
-        id="defaultSelectwithHelpText2"
-        label="Default Select with Help Text"
-        name="defaultSelectwithHelpText2"
-        onChange={[Function]}
-        value=""
-      >
-        <option
-          value=""
-        >
-          Select one
-        </option>
-        <option
-          value={1}
-        >
-          option 1
-        </option>
-        <option
-          value={2}
-        >
-          option 2
-        </option>
-      </select>
-      
-    </div>
-    
-  </div>
-  <div
-    className="ce-select"
-  >
-    <label
-      htmlFor="defaultSelectWithIcon2"
-    >
-      Default Select with Icon
-    </label>
-    
-    <div
-      className="ce-select__container"
-    >
-      <div
-        className="ce-select__icon"
-      >
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-calendar"
-            />
-          </svg>
-        </span>
-      </div>
-      <select
-        disabled={false}
-        form=""
-        id="defaultSelectWithIcon2"
-        label="Default Select with Icon"
-        name="defaultSelectWithIcon2"
-        onChange={[Function]}
-        value=""
-      >
-        <option
-          value=""
-        >
-          Select one
-        </option>
-        <option
-          value={1}
-        >
-          option 1
-        </option>
-        <option
-          value={2}
-        >
-          option 2
-        </option>
-      </select>
-      
-    </div>
-    
-  </div>
-  <div
-    className="ce-select"
-  >
-    <label
-      htmlFor="defaultSelectWithButton2"
-    >
-      Default Select with button
-    </label>
-    
-    <div
-      className="ce-select__container"
-    >
-      
-      <select
-        disabled={false}
-        form=""
-        id="defaultSelectWithButton2"
-        label="Default Select with button"
-        name="defaultSelectWithButton2"
-        onChange={[Function]}
-        value=""
-      >
-        <option
-          value=""
-        >
-          Select one
-        </option>
-        <option
-          value={1}
-        >
-          option 1
-        </option>
-        <option
-          value={2}
-        >
-          option 2
-        </option>
-      </select>
-      <button
-        className="ce-select__button"
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className="ce-icon--inverted"
-          >
-            <use
-              xlinkHref="#icons_system-add"
-            />
-          </svg>
-        </span>
-      </button>
-    </div>
-    
-  </div>
-  <h2>
-    Disabled
-  </h2>
-  <div
-    className="ce-select ce-select--disabled"
-  >
-    <label
-      htmlFor="disabledSelect"
-    >
-      Disabled Select
-    </label>
-    
-    <div
-      className="ce-select__container"
-    >
-      
-      <select
-        disabled={true}
-        form=""
-        id="disabledSelect"
-        label="Disabled Select"
-        name="disabledSelect"
-        onChange={[Function]}
-        value=""
-      >
-        <option
-          value=""
-        >
-          Select one
-        </option>
-        <option
-          value={1}
-        >
-          option 1
-        </option>
-        <option
-          value={2}
-        >
-          option 2
-        </option>
-      </select>
-      
-    </div>
-    
-  </div>
-  <div
-    className="ce-select ce-select--disabled"
-  >
-    <label
-      htmlFor="disabledSelectWithHelpText"
-    >
-      Disabled Select with Help Text
-    </label>
-    <span
-      className="ce-select__help-text"
-    >
-      This is useful or helpful information.
-    </span>
-    <div
-      className="ce-select__container"
-    >
-      
-      <select
-        disabled={true}
-        form=""
-        id="disabledSelectWithHelpText"
-        label="Disabled Select with Help Text"
-        name="disabledSelectWithHelpText"
-        onChange={[Function]}
-        value=""
-      >
-        <option
-          value=""
-        >
-          Select one
-        </option>
-        <option
-          value={1}
-        >
-          option 1
-        </option>
-        <option
-          value={2}
-        >
-          option 2
-        </option>
-      </select>
-      
-    </div>
-    
-  </div>
-  <div
-    className="ce-select ce-select--disabled"
-  >
-    <label
-      htmlFor="disabledSelectWithIcon"
-    >
-      Disabled Select with Icon
-    </label>
-    
-    <div
-      className="ce-select__container"
-    >
-      <div
-        className="ce-select__icon"
-      >
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-calendar"
-            />
-          </svg>
-        </span>
-      </div>
-      <select
-        disabled={true}
-        form=""
-        id="disabledSelectWithIcon"
-        label="Disabled Select with Icon"
-        name="disabledSelectWithIcon"
-        onChange={[Function]}
-        value=""
-      >
-        <option
-          value=""
-        >
-          Select one
-        </option>
-        <option
-          value={1}
-        >
-          option 1
-        </option>
-        <option
-          value={2}
-        >
-          option 2
-        </option>
-      </select>
-      
-    </div>
-    
-  </div>
-  <div
-    className="ce-select ce-select--disabled"
-  >
-    <label
-      htmlFor="disabledSelectWithButton"
-    >
-      Disabled Select with Button
-    </label>
-    
-    <div
-      className="ce-select__container"
-    >
-      
-      <select
-        disabled={true}
-        form=""
-        id="disabledSelectWithButton"
-        label="Disabled Select with Button"
-        name="disabledSelectWithButton"
-        onChange={[Function]}
-        value=""
-      >
-        <option
-          value=""
-        >
-          Select one
-        </option>
-        <option
-          value={1}
-        >
-          option 1
-        </option>
-        <option
-          value={2}
-        >
-          option 2
-        </option>
-      </select>
-      <button
-        className="ce-select__button"
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className="ce-icon--inverted"
-          >
-            <use
-              xlinkHref="#icons_system-add"
-            />
-          </svg>
-        </span>
-      </button>
-    </div>
-    
-  </div>
-  <h2>
-    Error
-  </h2>
-  <div
-    className="ce-select ce-select--error"
-  >
-    <label
-      htmlFor="errorSelect"
-    >
-      Error Select
-    </label>
-    
-    <div
-      className="ce-select__container"
-    >
-      
-      <select
-        disabled={false}
-        form=""
-        id="errorSelect"
-        label="Error Select"
-        name="errorSelect"
-        onChange={[Function]}
-        value=""
-      >
-        <option
-          value=""
-        >
-          Select one
-        </option>
-        <option
-          value={1}
-        >
-          option 1
-        </option>
-        <option
-          value={2}
-        >
-          option 2
-        </option>
-      </select>
-      
-    </div>
-    <div
-      className="ce-errorbox"
-    >
-      <div
-        className="ce-errorbox__container"
-      >
-        <div
-          className="ce-errorbox__arrow"
-        />
-        <div
-          className="ce-errorbox__message"
-        >
-          <span
-            className="ce-errorbox__text"
-          >
-            Error with Selection
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="ce-select ce-select--error"
-  >
-    <label
-      htmlFor="errorSelectWithHelpText"
-    >
-      Error Select with Help Text
-    </label>
-    <span
-      className="ce-select__help-text"
-    >
-      This is usefule or helpful information.
-    </span>
-    <div
-      className="ce-select__container"
-    >
-      
-      <select
-        disabled={false}
-        form=""
-        id="errorSelectWithHelpText"
-        label="Error Select with Help Text"
-        name="errorSelectWithHelpText"
-        onChange={[Function]}
-        value=""
-      >
-        <option
-          value=""
-        >
-          Select one
-        </option>
-        <option
-          value={1}
-        >
-          option 1
-        </option>
-        <option
-          value={2}
-        >
-          option 2
-        </option>
-      </select>
-      
-    </div>
-    <div
-      className="ce-errorbox"
-    >
-      <div
-        className="ce-errorbox__container"
-      >
-        <div
-          className="ce-errorbox__arrow"
-        />
-        <div
-          className="ce-errorbox__message"
-        >
-          <span
-            className="ce-errorbox__text"
-          >
-            Error with Selection
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="ce-select ce-select--error"
-  >
-    <label
-      htmlFor="errorSelectWithIcon"
-    >
-      Error Select with Icon
-    </label>
-    
-    <div
-      className="ce-select__container"
-    >
-      <div
-        className="ce-select__icon"
-      >
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-calendar"
-            />
-          </svg>
-        </span>
-      </div>
-      <select
-        disabled={false}
-        form=""
-        id="errorSelectWithIcon"
-        label="Error Select with Icon"
-        name="errorSelectWithIcon"
-        onChange={[Function]}
-        value=""
-      >
-        <option
-          value=""
-        >
-          Select one
-        </option>
-        <option
-          value={1}
-        >
-          option 1
-        </option>
-        <option
-          value={2}
-        >
-          option 2
-        </option>
-      </select>
-      
-    </div>
-    <div
-      className="ce-errorbox"
-    >
-      <div
-        className="ce-errorbox__container"
-      >
-        <div
-          className="ce-errorbox__arrow"
-        />
-        <div
-          className="ce-errorbox__message"
-        >
-          <span
-            className="ce-errorbox__text"
-          >
-            Error with Selection
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="ce-select ce-select--error"
-  >
-    <label
-      htmlFor="errorSelect"
-    >
-      Error Select with Button
-    </label>
-    
-    <div
-      className="ce-select__container"
-    >
-      
-      <select
-        disabled={false}
-        form=""
-        id="errorSelect"
-        label="Error Select with Button"
-        name="errorSelect"
-        onChange={[Function]}
-        value=""
-      >
-        <option
-          value=""
-        >
-          Select one
-        </option>
-        <option
-          value={1}
-        >
-          option 1
-        </option>
-        <option
-          value={2}
-        >
-          option 2
-        </option>
-      </select>
-      <button
-        className="ce-select__button"
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className="ce-icon--inverted"
-          >
-            <use
-              xlinkHref="#icons_system-add"
-            />
-          </svg>
-        </span>
-      </button>
-    </div>
-    <div
-      className="ce-errorbox"
-    >
-      <div
-        className="ce-errorbox__container"
-      >
-        <div
-          className="ce-errorbox__arrow"
-        />
-        <div
-          className="ce-errorbox__message"
-        >
-          <span
-            className="ce-errorbox__text"
-          >
-            Error with Selection
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-</form>
+  
+</div>
 `;
 
-exports[`Storyshots Components/Molecules/Form Controls/Select Select Types 1`] = `
-<form>
-  <div
-    className="ce-select"
+exports[`Storyshots Components/Molecules/Form Controls/Select Error 1`] = `
+<div
+  className="ce-select ce-select--error"
+>
+  <label
+    htmlFor="errorSelect"
   >
-    <label
-      htmlFor="defaultSelect"
-    >
-      Default Select
-    </label>
+    Try NOT to be wrong:
+  </label>
+  
+  <div
+    className="ce-select__container"
+  >
     
-    <div
-      className="ce-select__container"
+    <select
+      disabled={false}
+      form=""
+      id="errorSelect"
+      label="Try NOT to be wrong:"
+      name="errorSelect"
+      onChange={[Function]}
+      value=""
     >
-      
-      <select
-        disabled={false}
-        form=""
-        id="defaultSelect"
-        label="Default Select"
-        name="defaultSelect"
-        onChange={[Function]}
+      <option
         value=""
       >
-        <option
-          value=""
-        >
-          Select one
-        </option>
-        <option
-          value={1}
-        >
-          option 1
-        </option>
-        <option
-          value={2}
-        >
-          option 2
-        </option>
-      </select>
-      
-    </div>
+        Select one
+      </option>
+      <option
+        value={1}
+      >
+        option 1
+      </option>
+      <option
+        value={2}
+      >
+        option 2
+      </option>
+    </select>
     
   </div>
   <div
-    className="ce-select"
+    className="ce-errorbox"
   >
-    <label
-      htmlFor="defaultSelectWithHelpText"
-    >
-      Default Select with Help Text
-    </label>
-    <span
-      className="ce-select__help-text"
-    >
-      This is useful or helpful information.
-    </span>
     <div
-      className="ce-select__container"
-    >
-      
-      <select
-        disabled={false}
-        form=""
-        id="defaultSelectWithHelpText"
-        label="Default Select with Help Text"
-        name="defaultSelectWithHelpText"
-        onChange={[Function]}
-        value=""
-      >
-        <option
-          value=""
-        >
-          Select one
-        </option>
-        <option
-          value={1}
-        >
-          option 1
-        </option>
-        <option
-          value={2}
-        >
-          option 2
-        </option>
-      </select>
-      
-    </div>
-    
-  </div>
-  <div
-    className="ce-select"
-  >
-    <label
-      htmlFor="defaultSelectWithIcon"
-    >
-      Default Select with Icon
-    </label>
-    
-    <div
-      className="ce-select__container"
+      className="ce-errorbox__container"
     >
       <div
-        className="ce-select__icon"
+        className="ce-errorbox__arrow"
+      />
+      <div
+        className="ce-errorbox__message"
       >
         <span
-          className="ce-icon ce-icon__system ce-icon--large"
+          className="ce-errorbox__text"
         >
-          <svg
-            className=""
-          >
-            <use
-              xlinkHref="#icons_system-edit"
-            />
-          </svg>
+          You were wrong.
         </span>
       </div>
-      <select
-        disabled={false}
-        form=""
-        id="defaultSelectWithIcon"
-        label="Default Select with Icon"
-        name="defaultSelectWithIcon"
-        onChange={[Function]}
-        value=""
-      >
-        <option
-          value=""
-        >
-          Select one
-        </option>
-        <option
-          value={1}
-        >
-          option 1
-        </option>
-        <option
-          value={2}
-        >
-          option 2
-        </option>
-      </select>
-      
     </div>
-    
   </div>
-  <div
-    className="ce-select"
-  >
-    <label
-      htmlFor="defaultSelectWithButton"
-    >
-      Default Select with Button
-    </label>
-    
-    <div
-      className="ce-select__container"
-    >
-      
-      <select
-        disabled={false}
-        form=""
-        id="defaultSelectWithButton"
-        label="Default Select with Button"
-        name="defaultSelectWithButton"
-        onChange={[Function]}
-        value=""
-      >
-        <option
-          value=""
-        >
-          Select one
-        </option>
-        <option
-          value={1}
-        >
-          option 1
-        </option>
-        <option
-          value={2}
-        >
-          option 2
-        </option>
-      </select>
-      <button
-        className="ce-select__button"
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className="ce-icon--inverted"
-          >
-            <use
-              xlinkHref="#icons_system-add"
-            />
-          </svg>
-        </span>
-      </button>
-    </div>
-    
-  </div>
-</form>
+</div>
 `;
 
 exports[`Storyshots Components/Molecules/Form Controls/Select Select with Knobs 1`] = `
-<form
-  id="selectWithKnobsForm"
+<div
+  className="ce-select"
 >
-  <div
-    className="ce-select"
+  <label
+    htmlFor="selectWithKnobs"
   >
-    <label
-      htmlFor="selectWithKnobs"
+    Select with Knobs
+  </label>
+  <span
+    className="ce-select__help-text"
+  >
+    This is useful or helpful information.
+  </span>
+  <div
+    className="ce-select__container"
+  >
+    
+    <select
+      disabled={false}
+      form="selectWithKnobForm"
+      id="selectWithKnobs"
+      label="Select with Knobs"
+      name="selectWithKnobs"
+      onChange={[Function]}
+      value="none"
     >
-      Select with Knobs
-    </label>
-    <span
-      className="ce-select__help-text"
+      <option
+        value=""
+      >
+        Please make a choice
+      </option>
+      <option
+        value="1"
+      >
+        Option 1
+      </option>
+      <option
+        value="2"
+      >
+        Option 2
+      </option>
+    </select>
+    <button
+      className="ce-select__button"
+      onClick={[Function]}
+      type="button"
     >
-      This is useful or helpful information.
-    </span>
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className="ce-icon--inverted"
+        >
+          <use
+            xlinkHref="#icons_system-navigate"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Select with Everything 1`] = `
+<div
+  className="ce-select"
+>
+  <label
+    htmlFor="selectWithEverything"
+  >
+    Select with everything:
+  </label>
+  <span
+    className="ce-select__help-text"
+  >
+    Hold the pickles.
+  </span>
+  <div
+    className="ce-select__container"
+  >
     <div
-      className="ce-select__container"
+      className="ce-select__icon"
     >
-      
-      <select
-        disabled={false}
-        form="selectWithKnobForm"
-        id="selectWithKnobs"
-        label="Select with Knobs"
-        name="selectWithKnobs"
-        onChange={[Function]}
-        value="none"
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
       >
-        <option
-          value=""
+        <svg
+          className=""
         >
-          Please make a choice
-        </option>
-        <option
-          value="1"
-        >
-          Option 1
-        </option>
-        <option
-          value="2"
-        >
-          Option 2
-        </option>
-      </select>
-      <button
-        className="ce-select__button"
-        onClick={[Function]}
-        type="button"
-      >
-        <span
-          className="ce-icon ce-icon__system ce-icon--large"
-        >
-          <svg
-            className="ce-icon--inverted"
-          >
-            <use
-              xlinkHref="#icons_system-navigate"
-            />
-          </svg>
-        </span>
-      </button>
+          <use
+            xlinkHref="#icons_system-edit"
+          />
+        </svg>
+      </span>
     </div>
+    <select
+      disabled={false}
+      form=""
+      id="selectWithEverything"
+      label="Select with everything:"
+      name="selectWithEverything"
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select one
+      </option>
+      <option
+        value={1}
+      >
+        option 1
+      </option>
+      <option
+        value={2}
+      >
+        option 2
+      </option>
+    </select>
+    <button
+      className="ce-select__button"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className="ce-icon--inverted"
+        >
+          <use
+            xlinkHref="#icons_system-add"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Select with Help Text 1`] = `
+<div
+  className="ce-select"
+>
+  <label
+    htmlFor="withHelpText"
+  >
+    Select with Help Text:
+  </label>
+  <span
+    className="ce-select__help-text"
+  >
+    This is useful or helpful information.
+  </span>
+  <div
+    className="ce-select__container"
+  >
+    
+    <select
+      disabled={false}
+      form=""
+      id="withHelpText"
+      label="Select with Help Text:"
+      name="withHelpText"
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select one
+      </option>
+      <option
+        value={1}
+      >
+        option 1
+      </option>
+      <option
+        value={2}
+      >
+        option 2
+      </option>
+    </select>
     
   </div>
-</form>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Select with a Button 1`] = `
+<div
+  className="ce-select"
+>
+  <label
+    htmlFor="withAttachedButton"
+  >
+    Select with Attached Button
+  </label>
+  
+  <div
+    className="ce-select__container"
+  >
+    
+    <select
+      disabled={false}
+      form=""
+      id="withAttachedButton"
+      label="Select with Attached Button"
+      name="withAttachedButton"
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select one
+      </option>
+      <option
+        value={1}
+      >
+        option 1
+      </option>
+      <option
+        value={2}
+      >
+        option 2
+      </option>
+    </select>
+    <button
+      className="ce-select__button"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className="ce-icon--inverted"
+        >
+          <use
+            xlinkHref="#icons_system-add"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+  
+</div>
+`;
+
+exports[`Storyshots Components/Molecules/Form Controls/Select with an Icon 1`] = `
+<div
+  className="ce-select"
+>
+  <label
+    htmlFor="withIcon"
+  >
+    Select with an Icon:
+  </label>
+  
+  <div
+    className="ce-select__container"
+  >
+    <div
+      className="ce-select__icon"
+    >
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className=""
+        >
+          <use
+            xlinkHref="#icons_system-edit"
+          />
+        </svg>
+      </span>
+    </div>
+    <select
+      disabled={false}
+      form=""
+      id="withIcon"
+      label="Select with an Icon:"
+      name="withIcon"
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      >
+        Select one
+      </option>
+      <option
+        value={1}
+      >
+        option 1
+      </option>
+      <option
+        value={2}
+      >
+        option 2
+      </option>
+    </select>
+    
+  </div>
+  
+</div>
 `;
 
 exports[`Storyshots Components/Molecules/Form Controls/SubmitButton Outline Black 1`] = `
