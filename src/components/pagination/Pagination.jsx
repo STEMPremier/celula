@@ -47,24 +47,22 @@ const Pagination = ({ className, postsPerPage, data }) => {
   return (
     <div className={classes}>
       <ul className="ce-pagination__oval-container">
-        {/* <div className="ce-pagination__item-container"> */}
-        {/* <li className="ce-pagination__page-link"> */}
         <div className="ce-pagination__left-arrow" />
-        {/* </li> */}
         {pageNumbers.map(number => (
           <div key={number}>
             <li key={number} className="ce-pagination__page-item">
               <a
                 onClick={() => paginate(number)}
                 href="!#"
-                className="ce-pagination__page-link"
+                className={`ce-pagination__page-link ${
+                  currentPage === number ? 'ce-pagination--current' : ''
+                } `}
               >
                 {number}
               </a>
             </li>
           </div>
         ))}
-        {/* </div> */}
       </ul>
     </div>
   );
