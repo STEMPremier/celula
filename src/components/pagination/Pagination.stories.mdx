@@ -1,0 +1,25 @@
+import {
+  Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { text, number, array } from '@storybook/addon-knobs';
+
+import Pagination from '.';
+
+<Meta component={Pagination} title="Components/Atoms/Pagination"/>
+
+# Pagination
+<Description of={Pagination}/>
+<Props of={Pagination}/>
+
+<Story name="Pagination with Knobs" parameters={{ docs: { disable: true}}}>
+  <Pagination
+    className={text('className', '')}
+    postsPerPage={number('postsPerPage', 2)}
+    data={array('data', ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'])}
+  />
+</Story>
