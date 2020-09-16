@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-plusplus */
 /* eslint-disable react/forbid-prop-types */
@@ -16,14 +19,12 @@ const Pagination = ({ className, postsPerPage, data }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const pageNumbers = [];
+  const totalPosts = data.length;
 
-  // need a function that counts the # of items in the data array
   useEffect(() => {
-    console.log('data', data);
+    // console.log('data', data);
     setPosts(data);
   });
-
-  const totalPosts = data.length;
 
   // Get current posts
   const indexOfLastPost = currentPage * postsPerPage;
@@ -45,18 +46,46 @@ const Pagination = ({ className, postsPerPage, data }) => {
   }
   // console.log('pageNumbers.push', pageNumbers);
 
+  const paginateLeft = () => {
+    if (currentPage !== 1) {
+      const position = pageNumbers.indexOf(currentPage);
+      setCurrentPage(position);
+    }
+  };
+
+  console.log('currentPage after', currentPage);
+
+  const paginateRight = () => {
+    const lastPage = pageNumbers.pop();
+    console.log('lastPage', lastPage);
+    if (lastPage !== currentPage) {
+      const position = pageNumbers.indexOf(currentPage);
+      setCurrentPage(position + 2);
+    }
+
+    // const position = pageNumbers.findIndex(currentPage);
+    console.log('pageNumbers', pageNumbers);
+    console.log('currentPage', currentPage);
+    // console.log('position', position);
+  };
+
   return (
-    <div className={classes}>
+    <nav className={classes}>
+      <h1>{currentPosts}</h1>
       <ul className="ce-pagination__oval-container">
-        <div className="ce-pagination__arrow ce-pagination__arrow--left">
+        <button
+          type="button"
+          onClick={paginateLeft}
+          className="ce-pagination__arrow ce-pagination__arrow--left"
+        >
           <SystemIcon name="navigate" />
-        </div>
+        </button>
         {pageNumbers.map(number => (
           <div key={number}>
             <li key={number} className="ce-pagination__page-item">
               <a
                 onClick={() => paginate(number)}
-                href="!#"
+                href="#"
                 className={`ce-pagination__page-link ${
                   currentPage === number ? 'ce-pagination--current' : ''
                 } `}
@@ -66,11 +95,15 @@ const Pagination = ({ className, postsPerPage, data }) => {
             </li>
           </div>
         ))}
-        <div className="ce-pagination__arrow">
+        <button
+          type="button"
+          className="ce-pagination__arrow"
+          onClick={paginateRight}
+        >
           <SystemIcon name="navigate" />
-        </div>
+        </button>
       </ul>
-    </div>
+    </nav>
   );
 };
 
