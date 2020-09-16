@@ -7,7 +7,7 @@ import cx from 'classnames';
 
 import './pagination.less';
 
-import SystemIcon from '../icon';
+import { SystemIcon } from '../icon';
 
 const Pagination = ({ className, postsPerPage, data }) => {
   const classes = cx('ce-pagination', className);
@@ -30,10 +30,11 @@ const Pagination = ({ className, postsPerPage, data }) => {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
 
-  console.log('indexOfLastPost', indexOfLastPost);
-  console.log('indexOfFirstPost', indexOfFirstPost);
-  console.log('currentPosts', currentPosts);
-  console.log('totalPosts', totalPosts);
+  // console.log('indexOfLastPost', indexOfLastPost);
+  // console.log('indexOfFirstPost', indexOfFirstPost);
+  // console.log('currentPosts', currentPosts);
+  // console.log('totalPosts', totalPosts);
+  // console.log('pageNumbers', pageNumbers);
 
   // change page
   const paginate = pageNumber => setCurrentPage(pageNumber);
@@ -42,12 +43,14 @@ const Pagination = ({ className, postsPerPage, data }) => {
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
     pageNumbers.push(i);
   }
-  // <SystemIcon name="navigate" />
+  // console.log('pageNumbers.push', pageNumbers);
 
   return (
     <div className={classes}>
       <ul className="ce-pagination__oval-container">
-        <div className="ce-pagination__left-arrow" />
+        <div className="ce-pagination__arrow ce-pagination__arrow--left">
+          <SystemIcon name="navigate" />
+        </div>
         {pageNumbers.map(number => (
           <div key={number}>
             <li key={number} className="ce-pagination__page-item">
@@ -63,6 +66,9 @@ const Pagination = ({ className, postsPerPage, data }) => {
             </li>
           </div>
         ))}
+        <div className="ce-pagination__arrow">
+          <SystemIcon name="navigate" />
+        </div>
       </ul>
     </div>
   );
