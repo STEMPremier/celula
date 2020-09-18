@@ -23,7 +23,7 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
 
   // WILL NEED TO CHECK RIGHT ARROW DISABLED STATUS ON INIT IN USE EFFECT DEPENDING ON NUMBER OF POSTS AND PAGES
 
-  let pageNumbers = [];
+  const pageNumbers = [];
   const totalPosts = data.length;
 
   useEffect(() => {
@@ -68,7 +68,10 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
   } else {
     // calculate start and end pages
     const maxPagesBeforeCurrentPage = Math.floor(maxPages / 2);
+    console.log('maxPagesBeforeCurrentPage', maxPagesBeforeCurrentPage);
     const maxPagesAfterCurrentPage = Math.ceil(maxPages / 2) - 1;
+    console.log('maxPagesAfterCurrentPage', maxPagesAfterCurrentPage);
+
     if (currentPage <= maxPagesBeforeCurrentPage) {
       // current page near the start
       startPage = 1;
@@ -84,19 +87,12 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
     }
   }
 
-  // handle the page # and # to show
+  // get the truncatedData when applicable
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
-    // console.log('i before push', i);
-    // console.log('pageNumbers before push', pageNumbers);
-    // if (i <= limitPageNumbers) {
     pageNumbers.push(i);
     if (i >= startPage && i <= endPage) {
       truncatedData.push(i);
     }
-
-    // console.log('i after push', i);
-    // console.log('pageNumbers after push', pageNumbers);
-    // }
   }
 
   // let pageSize = 0;
@@ -122,22 +118,18 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
   // console.log('pageNumbers', pageNumbers);
   // console.log('totalPagesShown', totalPagesShown);
 
-  const goToLastPage = () => {
-    setCurrentPage(totalPosts);
-  };
-
   const handleEllipsis = () => {
-    pageNumbers = [];
+    // pageNumbers = [];
     console.log('show more to the right, maybe upt to 5 more????');
-    for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
-      console.log('i before push', i);
-      console.log('pageNumbers before push', pageNumbers);
-      if (i <= limitPageNumbers) {
-        pageNumbers.push(i);
-        console.log('i after push', i);
-        console.log('pageNumbers after push', pageNumbers);
-      }
-    }
+    // for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
+    //   console.log('i before push', i);
+    //   console.log('pageNumbers before push', pageNumbers);
+    //   if (i <= limitPageNumbers) {
+    //     pageNumbers.push(i);
+    //     console.log('i after push', i);
+    //     console.log('pageNumbers after push', pageNumbers);
+    //   }
+    // }
   };
 
   // change page
@@ -195,24 +187,25 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
             </li>
           </div>
         ))}
-        <li className="ce-pagination__page-item">
-          <a
-            onClick={() => handleEllipsis()}
-            href="#"
-            className="ce-pagination__ellipsis"
-          >
-            <SystemIcon name="menu" />
-          </a>
-        </li>
-        <li className="ce-pagination__page-item">
-          <a
-            onClick={() => paginate(totalPages)}
-            href="#"
-            className="ce-pagination__last-page"
-          >
-            {totalPages}
-          </a>
-        </li>
+        {endPage !== totalPages && (
+          <>
+            <li className="ce-pagination__page-item">
+              <a href="#" className="ce-pagination__ellipsis">
+                ...
+              </a>
+            </li>
+            <li className="ce-pagination__page-item">
+              <a
+                onClick={() => paginate(totalPages)}
+                href="#"
+                className="ce-pagination__last-page"
+              >
+                {totalPages}
+              </a>
+            </li>
+          </>
+        )}
+
         <button
           type="button"
           className="ce-pagination__arrow"
