@@ -19,6 +19,7 @@ import Pagination from '.';
 <Story name="Pagination with Knobs" parameters={{ docs: { disable: true}}}>
   <Pagination
     className={text('className', '')}
+    limitPageNumbers={number('limitPageNumbers', 3)}
     postsPerPage={number('postsPerPage', 2)}
     data={array('data', ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'])}
   />
