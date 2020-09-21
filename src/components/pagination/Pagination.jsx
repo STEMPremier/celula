@@ -74,7 +74,7 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
     }
   }
 
-  // get the truncatedData when applicable
+  // push in the correct data
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
     pageNumbers.push(i);
     if (i >= startPage && i <= endPage) {
