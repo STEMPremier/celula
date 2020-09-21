@@ -49,7 +49,7 @@ const Select = ({
     const { value } = event.target;
 
     setFieldValue(value);
-    handler(value);
+    handler(event);
   };
 
   return (
