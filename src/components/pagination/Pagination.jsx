@@ -82,19 +82,6 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
     }
   }
 
-  // console.log('totalPages', totalPages);
-  // console.log('truncatedData', truncatedData);
-  // console.log('currentPage', currentPage);
-  // console.log('startPage', startPage);
-  // console.log('endPage', endPage);
-  // console.log('indexOfLastPost', indexOfLastPost);
-  // console.log('indexOfFirstPost', indexOfFirstPost);
-  // console.log('currentPosts', currentPosts);
-  // console.log('totalPosts', totalPosts);
-  // console.log('limitPageNumbers', limitPageNumbers);
-  // console.log('pageNumbers', pageNumbers);
-  // console.log('totalPagesShown', totalPagesShown);
-
   // change page
   const paginate = pageNumber => {
     setCurrentPage(pageNumber);
@@ -210,15 +197,15 @@ Pagination.propTypes = {
    */
   postsPerPage: PropTypes.number,
   /**
-   * Pass in the posts from the http call.
+   * Pass in the posts as an array from the http call.
    */
   data: PropTypes.array,
 };
 
 Pagination.defaultProps = {
   className: '',
-  limitPageNumbers: 3,
-  postsPerPage: 4,
+  limitPageNumbers: 5,
+  postsPerPage: 10,
   data: [],
 };
 

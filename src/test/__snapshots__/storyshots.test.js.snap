@@ -5421,6 +5421,112 @@ exports[`Storyshots Components/Atoms/Link Link with Knobs 1`] = `
 </a>
 `;
 
+exports[`Storyshots Components/Atoms/Pagination Pagination with Knobs 1`] = `
+<nav
+  className="ce-pagination"
+>
+  <h1 />
+  <ul
+    className="ce-pagination__oval-container"
+  >
+    <button
+      className="ce-pagination__arrow ce-pagination__arrow--left"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className="ce-icon--grey "
+        >
+          <use
+            xlinkHref="#icons_system-navigate"
+          />
+        </svg>
+      </span>
+    </button>
+    <div>
+      <li
+        className="ce-pagination__page-item"
+      >
+        <a
+          className="ce-pagination__page-link ce-pagination--current "
+          href="#"
+          onClick={[Function]}
+        >
+          1
+        </a>
+      </li>
+    </div>
+    <div>
+      <li
+        className="ce-pagination__page-item"
+      >
+        <a
+          className="ce-pagination__page-link  "
+          href="#"
+          onClick={[Function]}
+        >
+          2
+        </a>
+      </li>
+    </div>
+    <div>
+      <li
+        className="ce-pagination__page-item"
+      >
+        <a
+          className="ce-pagination__page-link  "
+          href="#"
+          onClick={[Function]}
+        >
+          3
+        </a>
+      </li>
+    </div>
+    <li
+      className="ce-pagination__page-item"
+    >
+      <a
+        className="ce-pagination__ellipsis"
+        href="#"
+      >
+        ...
+      </a>
+    </li>
+    <li
+      className="ce-pagination__page-item"
+    >
+      <a
+        className="ce-pagination__last-page"
+        href="#"
+        onClick={[Function]}
+      >
+        5
+      </a>
+    </li>
+    <button
+      className="ce-pagination__arrow"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className="ce-icon--black "
+        >
+          <use
+            xlinkHref="#icons_system-navigate"
+          />
+        </svg>
+      </span>
+    </button>
+  </ul>
+</nav>
+`;
+
 exports[`Storyshots Components/Atoms/Search Search States 1`] = `
 <div>
   <div
