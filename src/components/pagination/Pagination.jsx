@@ -1,8 +1,4 @@
-/* eslint-disable eqeqeq */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-plusplus */
 /* eslint-disable react/forbid-prop-types */
 import React, { useState, useEffect } from 'react';
@@ -19,15 +15,11 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [leftArrowDisabled, setLeftArrowDisabled] = useState(true);
-  const [rightArrowDisabled, setRightArrowDisabled] = useState();
-
-  // WILL NEED TO CHECK RIGHT ARROW DISABLED STATUS ON INIT IN USE EFFECT DEPENDING ON NUMBER OF POSTS AND PAGES
 
   const pageNumbers = [];
   const totalPosts = data.length;
 
   useEffect(() => {
-    // console.log('data', data);
     setPosts(data);
     // handle leftArrowDisabled
     if (currentPage < 2) {
@@ -35,13 +27,13 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
     } else {
       setLeftArrowDisabled(false);
     }
-    // handle rightArrowDisabled after getting lastPage
   });
 
   // Get current posts
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
   // Calculate total pages
   const totalPages = Math.ceil(totalPosts / postsPerPage);
 
@@ -54,31 +46,26 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
 
   const truncatedData = [];
 
-  // change this const to a passable prop after working correctly
-  const maxPages = 3;
-
   let startPage = 0;
   let endPage = 0;
 
   // If truncation is neccessary, organize
-  if (totalPages <= maxPages) {
+  if (totalPages <= limitPageNumbers) {
     startPage = 1;
     // then show all pages
     endPage = totalPages;
   } else {
     // calculate start and end pages
-    const maxPagesBeforeCurrentPage = Math.floor(maxPages / 2);
-    console.log('maxPagesBeforeCurrentPage', maxPagesBeforeCurrentPage);
-    const maxPagesAfterCurrentPage = Math.ceil(maxPages / 2) - 1;
-    console.log('maxPagesAfterCurrentPage', maxPagesAfterCurrentPage);
+    const maxPagesBeforeCurrentPage = Math.floor(limitPageNumbers / 2);
+    const maxPagesAfterCurrentPage = Math.ceil(limitPageNumbers / 2) - 1;
 
     if (currentPage <= maxPagesBeforeCurrentPage) {
       // current page near the start
       startPage = 1;
-      endPage = maxPages;
+      endPage = limitPageNumbers;
     } else if (currentPage + maxPagesAfterCurrentPage >= totalPages) {
       // current page near the end
-      startPage = totalPages - maxPages + 1;
+      startPage = totalPages - limitPageNumbers + 1;
       endPage = totalPages;
     } else {
       // current page somwhere in the middle
@@ -95,16 +82,6 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
     }
   }
 
-  // let pageSize = 0;
-  // calculate start and end item indexes
-  // const startIndex = (currentPage - 1) * pageSize;
-  // const endIndex = Math.min(startIndex + pageSize - 1, totalItems - 1);
-
-  // create an array of pages to map over
-  // const pages = data
-  //   .from(pageNumbers(endPage + 1 - startPage).keys())
-  //   .map(index => startPage + index);
-
   console.log('totalPages', totalPages);
   console.log('truncatedData', truncatedData);
   // console.log('currentPage', currentPage);
@@ -117,20 +94,6 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
   // console.log('limitPageNumbers', limitPageNumbers);
   // console.log('pageNumbers', pageNumbers);
   // console.log('totalPagesShown', totalPagesShown);
-
-  const handleEllipsis = () => {
-    // pageNumbers = [];
-    console.log('show more to the right, maybe upt to 5 more????');
-    // for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
-    //   console.log('i before push', i);
-    //   console.log('pageNumbers before push', pageNumbers);
-    //   if (i <= limitPageNumbers) {
-    //     pageNumbers.push(i);
-    //     console.log('i after push', i);
-    //     console.log('pageNumbers after push', pageNumbers);
-    //   }
-    // }
-  };
 
   // change page
   const paginate = pageNumber => {
@@ -149,15 +112,9 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
     if (lastPage !== currentPage) {
       const position = pageNumbers.indexOf(currentPage);
       setCurrentPage(position + 2);
-      setRightArrowDisabled(false);
-    } else {
-      setRightArrowDisabled(true);
     }
   };
 
-  // always check to activate left arrow
-
-  // console.log('leftArrowDisabled', leftArrowDisabled);
   return (
     <nav className={classes}>
       <h1>{currentPosts}</h1>
@@ -213,7 +170,7 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
         >
           <SystemIcon
             name="navigate"
-            color={`${rightArrowDisabled === true ? 'gray' : 'black'} `}
+            color={`${endPage === totalPages ? 'gray' : 'black'} `}
           />
         </button>
       </ul>
