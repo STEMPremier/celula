@@ -43,7 +43,7 @@ const Textarea = ({
     const { value } = event.target;
 
     setFieldValue(value);
-    handler(value);
+    handler(event);
   };
 
   return (
