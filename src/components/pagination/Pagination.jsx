@@ -37,7 +37,7 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
   // Calculate total pages
   const totalPages = Math.ceil(totalPosts / postsPerPage);
 
-  // Make sure current page is not out of range = NOT SURE WHAT THIS DOES
+  // Make sure current page is not out of range
   if (currentPage < 1) {
     setCurrentPage(1);
   } else if (currentPage > totalPages) {
