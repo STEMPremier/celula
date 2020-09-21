@@ -4,28 +4,21 @@
   button {
     border: none;
     outline: none;
-    // text-decoration: none;
     cursor: pointer;
     background-color: @white;
   }
   .ce-pagination__oval-container {
-    background-color: white;
-    // margin: 2em auto 1em;
+    background-color: @white;
     flex-flow: row wrap;
     text-align: center;
     justify-content: center;
     align-items: center;
     display: flex;
-    // font-size: 1.6em;
-    // padding: 10px;
     height: 50px;
     border-radius: 33px;
-    // border: 1px solid green;
     box-shadow: -4px 4px 15px 0 rgba(0, 0, 0, 0.1);
 
     .ce-pagination__arrow {
-      // height: 20px;
-      // width: 30px;
       margin-top: 8px;
       &.ce-pagination__arrow--left {
         margin-top: 0px;
@@ -42,13 +35,10 @@
 
   .ce-pagination__page-item {
     height: 30px;
-    // padding: 10px;
-    margin: 10px 5px 0px 5px;
+    margin: 10px 10px 0px 10px;
 
     .ce-pagination__page-link {
-      //background-color: blue;
       padding: 11px;
-      font-size: 16px;
       color: @black;
 
       &.ce-pagination--current {
@@ -62,29 +52,18 @@
     }
 
     .ce-pagination__last-page {
-      color: black;
+      color: @black;
     }
 
     .ce-pagination__ellipsis {
-      color: black;
+      color: @black;
+      cursor: default;
     }
   }
 
-  // .ce-pagination__page-item {
-  // height: 2.5em;
   a {
-    // background-color: purple;
-    color: white;
-    // height: 2.5em;
-    // line-height: 2.5;
-    font-size: 16px;
+    // color: white;
     outline: none;
     text-decoration: none;
-    transition: all 0.2s;
-
-    // width: 2.5em;
-    // padding: 40px;
   }
-
-  // }
 }

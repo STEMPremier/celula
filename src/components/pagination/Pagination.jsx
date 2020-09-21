@@ -82,11 +82,11 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
     }
   }
 
-  console.log('totalPages', totalPages);
-  console.log('truncatedData', truncatedData);
+  // console.log('totalPages', totalPages);
+  // console.log('truncatedData', truncatedData);
   // console.log('currentPage', currentPage);
-  console.log('startPage', startPage);
-  console.log('endPage', endPage);
+  // console.log('startPage', startPage);
+  // console.log('endPage', endPage);
   // console.log('indexOfLastPost', indexOfLastPost);
   // console.log('indexOfFirstPost', indexOfFirstPost);
   // console.log('currentPosts', currentPosts);
@@ -129,6 +129,24 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
             color={`${leftArrowDisabled === true ? 'grey' : 'black'} `}
           />
         </button>
+        {startPage !== 1 && (
+          <>
+            <li className="ce-pagination__page-item">
+              <a
+                onClick={() => paginate(totalPages)}
+                href="#"
+                className="ce-pagination__last-page"
+              >
+                1
+              </a>
+            </li>
+            <li className="ce-pagination__page-item">
+              <a href="#" className="ce-pagination__ellipsis">
+                ...
+              </a>
+            </li>
+          </>
+        )}
         {truncatedData.map(number => (
           <div key={number}>
             <li key={number} className="ce-pagination__page-item">
@@ -179,11 +197,22 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
 };
 
 Pagination.propTypes = {
+  /**
+   * A class name, or string of class names, to add to the `<Pagination />`.
+   */
   className: PropTypes.string,
+  /**
+   * The maximum number of pages to show in the `<Pagination />` before setting up the ellipsis and last page format.
+   */
   limitPageNumbers: PropTypes.number,
+  /**
+   * The maximum number of posts to be paginated on each page.
+   */
   postsPerPage: PropTypes.number,
+  /**
+   * Pass in the posts from the http call.
+   */
   data: PropTypes.array,
-  // totalPagesShown: PropTypes.number,
 };
 
 Pagination.defaultProps = {
@@ -191,7 +220,6 @@ Pagination.defaultProps = {
   limitPageNumbers: 3,
   postsPerPage: 4,
   data: [],
-  // totalPagesShown: 4,
 };
 
 export default Pagination;
