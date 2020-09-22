@@ -19,6 +19,7 @@ const Table = ({
   name,
   rows,
   selectable,
+
   // status,
 }) => {
   const [selectAll, setSelectAll] = useState(false);
@@ -82,7 +83,7 @@ const Table = ({
             aria-label="row items"
             className={`ce-table__data-row ${
               selectable ? 'ce-table--selectable' : null
-            }`}
+              }`}
           >
             {selectable && (
               <Checkbox
@@ -115,7 +116,7 @@ const Table = ({
               aria-label="row items"
               className={`ce-table__mobile-card-container ${
                 selectable ? 'ce-table--selectable' : null
-              }`}
+                }`}
             >
               {selectable && (
                 <div className="ce-table__mobile-checkbox">
@@ -203,7 +204,7 @@ Table.propTypes = {
 Table.defaultProps = {
   className: '',
   name: '',
-  handleClick: () => {},
+  handleClick: () => { },
   selectable: false,
   // status: false,
 };
