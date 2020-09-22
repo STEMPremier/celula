@@ -54,8 +54,9 @@ const FileUploader = ({
 
   const handleClick = event => {
     const { value } = event.target;
+
     setFieldValue(value);
-    handler(value);
+    handler(event);
   };
 
   return (
