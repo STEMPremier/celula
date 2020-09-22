@@ -38,10 +38,10 @@ const Checkbox = ({
   }, [checked]);
 
   const handleChange = event => {
-    const { checked: targetChecked, value: targetValue } = event.target;
+    const { checked: targetChecked } = event.target;
 
     setIsChecked(targetChecked);
-    handler(targetValue);
+    handler(event);
   };
 
   return (
