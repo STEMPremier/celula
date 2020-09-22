@@ -14,7 +14,7 @@ describe('<Table />', () => {
           name="Name"
           headings={['Heading 1', 'heading 2']}
           rows={[
-            { data: ['row 1 cell 1', 'row 2 cell 2'] },
+            { data: ['row 1 cell 1', 'row 1 cell 2'] },
             { data: ['row 2 cell 1', 'row 2 cell 2'] },
           ]}
         />,

@@ -1,13 +1,9 @@
-/* eslint-disable react/jsx-no-duplicate-props */
-/* eslint-disable react/jsx-one-expression-per-line */
-/* eslint-disable react/jsx-key */
+/* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import './table.less';
-
-// import SystemIcon from '../icon/SystemIcon';
 
 import Checkbox from '../form-controls/checkbox/Checkbox';
 
@@ -19,8 +15,6 @@ const Table = ({
   name,
   rows,
   selectable,
-
-  // status,
 }) => {
   const [selectAll, setSelectAll] = useState(false);
   const [selected, setSelected] = useState();
@@ -61,7 +55,7 @@ const Table = ({
               name="headerCheckbox"
               value={selectAll}
               checked={selectAll}
-              handleChange={() => onChangeSelectAll()}
+              handleChange={onChangeSelectAll}
               role="cell"
               aria-label="select all checkboxes"
             />
@@ -72,6 +66,7 @@ const Table = ({
               className="ce-table__header-cell"
               aria-label={header}
               role="columnheader"
+              key={header}
             >
               {header}
             </div>
@@ -80,6 +75,7 @@ const Table = ({
         {rows.map(rowItems => (
           <div
             role="row"
+            key={rowItems}
             aria-label="row items"
             className={`ce-table__data-row ${
               selectable ? 'ce-table--selectable' : null
@@ -99,6 +95,7 @@ const Table = ({
               <div
                 className="ce-table__data-cell"
                 role="cell"
+                key={rowData}
                 aria-label={rowData}
               >
                 {rowData}
@@ -114,6 +111,7 @@ const Table = ({
             <div
               role="row"
               aria-label="row items"
+              key={rowItems}
               className={`ce-table__mobile-card-container ${
                 selectable ? 'ce-table--selectable' : null
                 }`}
@@ -134,10 +132,9 @@ const Table = ({
               <div className="ce-table__mobile-data-container">
                 <div className="ce-table__mobile-headings" role="columnheader">
                   {headings.map(mobileHeading => (
-                    <span>
-                      <strong aria-label="row" aria-label={mobileHeading}>
-                        {mobileHeading}:
-                      </strong>
+                    <span key={mobileHeading} aria-label="row">
+                      {mobileHeading}
+                      :
                     </span>
                   ))}
                 </div>
@@ -150,6 +147,7 @@ const Table = ({
                     <div
                       className="ce-table__mobile-card-row-data"
                       role="cell"
+                      key={rowData}
                       aria-label={rowData}
                     >
                       {rowData}
@@ -186,7 +184,7 @@ Table.propTypes = {
    * The values that populate the header.
    */
   headings: PropTypes.arrayOf(
-    PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
+    PropTypes.string
   ).isRequired,
   /**
    * The values that populate the row cells.  Each row of data must be an object in an array.  Each object must have a property called 'data' containing an array of values that will then be pushed into the table row.
@@ -198,7 +196,6 @@ Table.propTypes = {
    * Makes the interactive with hover, active and checkbox functionality.  The default is false, hiding the checkbox column.
    */
   selectable: PropTypes.bool,
-  // status: PropTypes.bool,
 };
 
 Table.defaultProps = {
@@ -206,7 +203,6 @@ Table.defaultProps = {
   name: '',
   handleClick: () => { },
   selectable: false,
-  // status: false,
 };
 
 export default Table;
