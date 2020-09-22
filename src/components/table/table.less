@@ -107,16 +107,30 @@
               }
           }
 
+          .ce-table__mobile-checkbox{
+            margin-top: 1.1rem;
+
+            .ce-checkbox {
+              + label {
+                 &::after {
+                  margin-left: 1.1rem;
+                 }
+              }
+            }
+          }
+
+
           .ce-table__mobile-data-container{
             display:flex;
             align-items: center;
             padding: 0rem 0rem 1rem 5rem;
+
             .ce-table__mobile-headings{
               display: flex;
               flex-direction: column;
               width: 30%;
               font-weight: bold;
-              }
+            }
               .ce-table__mobile-card-data{
                 padding: 1rem;
                 .ce-table__mobile-card-row-data{
@@ -124,7 +138,6 @@
                 }
             }
           }
-
         }
   
         .ce-table__mobile-card-container:nth-child(odd){
