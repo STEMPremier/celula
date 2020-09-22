@@ -39,15 +39,15 @@ const FormControlGroup = (
       selectedVals = selectedVals.filter(val => val !== value);
     }
 
-    handler(value);
     setFieldValues(selectedVals);
+    handler(event, selectedVals);
   };
 
   const handleRadioChange = event => {
     const { value } = event.target;
 
-    handler(value);
     setFieldValues([value]);
+    handler(event);
   };
 
   const handleChange = event => {
