@@ -76,7 +76,7 @@ const Table = ({
           <div
             role="row"
             key={rowItems}
-            aria-label="row items"
+            aria-label={rowItems}
             className={`ce-table__data-row ${
               selectable ? 'ce-table--selectable' : null
               }`}
@@ -110,7 +110,7 @@ const Table = ({
           {rows.map(rowItems => (
             <div
               role="row"
-              aria-label="row items"
+              aria-label={rowItems}
               key={rowItems}
               className={`ce-table__mobile-card-container ${
                 selectable ? 'ce-table--selectable' : null
@@ -132,7 +132,7 @@ const Table = ({
               <div className="ce-table__mobile-data-container">
                 <div className="ce-table__mobile-headings" role="columnheader">
                   {headings.map(mobileHeading => (
-                    <span key={mobileHeading} aria-label="row">
+                    <span key={mobileHeading} aria-label={mobileHeading}>
                       {mobileHeading}
                       :
                     </span>
