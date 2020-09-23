@@ -1,6 +1,6 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-plusplus */
-/* eslint-disable react/forbid-prop-types */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -135,7 +135,7 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
                 href="#"
                 className={`ce-pagination__page-link ${
                   currentPage === number ? 'ce-pagination--current' : ''
-                } `}
+                  } `}
               >
                 {number}
               </a>
@@ -190,9 +190,9 @@ Pagination.propTypes = {
    */
   postsPerPage: PropTypes.number,
   /**
-   * Pass in the posts as an array from the http call.
+   * Pass in the posts from the http call.
    */
-  data: PropTypes.array,
+  data: PropTypes.arrayOf(PropTypes.any),
 };
 
 Pagination.defaultProps = {
