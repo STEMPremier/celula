@@ -39,7 +39,7 @@ const Table = ({
       headings={headings}
       rows={rows}
       name={name}
-      onChange={selectable ? handleClick : false}
+      onChange={selectable ? handleClick : () => { }}
       selectable={selectable}
       role="table"
       aria-label={label}
