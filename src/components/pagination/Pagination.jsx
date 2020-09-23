@@ -112,13 +112,13 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
         {startPage !== 1 && (
           <>
             <li className="ce-pagination__page-item">
-              <a
+              <button
+                type="button"
                 onClick={() => paginate(totalPages)}
-                href="#"
                 className="ce-pagination__last-page"
               >
                 1
-              </a>
+              </button>
             </li>
             <li className="ce-pagination__page-item">
               <a href="#" className="ce-pagination__ellipsis">
@@ -130,33 +130,33 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
         {truncatedData.map(number => (
           <div key={number}>
             <li key={number} className="ce-pagination__page-item">
-              <a
+              <button
                 onClick={() => paginate(number)}
-                href="#"
+                type="button"
                 className={`ce-pagination__page-link ${
                   currentPage === number ? 'ce-pagination--current' : ''
                   } `}
               >
                 {number}
-              </a>
+              </button>
             </li>
           </div>
         ))}
         {endPage !== totalPages && (
           <>
             <li className="ce-pagination__page-item">
-              <a href="#" className="ce-pagination__ellipsis">
+              <button type="button" className="ce-pagination__ellipsis">
                 ...
-              </a>
+              </button>
             </li>
             <li className="ce-pagination__page-item">
-              <a
+              <button
                 onClick={() => paginate(totalPages)}
-                href="#"
+                type="button"
                 className="ce-pagination__last-page"
               >
                 {totalPages}
-              </a>
+              </button>
             </li>
           </>
         )}
