@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import { FormControlGroup } from '../core';
 
-import './checkbox-group.less';
+import '../core/selectable/selectable-group.less';
 
 /**
  * `Checkboxes` allow the user to select one or more items from a set. They can be used to turn an option on or off, select one or multiple items from a list, or present a list containing sub-selections.
@@ -34,7 +34,6 @@ const CheckboxGroup = ({
     <FormControlGroup
       className={classes}
       disabled={disabled}
-      errorClass="ce-checkbox-group--error__text"
       errorMsg={errorMsg}
       formId={formId}
       handleChange={handleChange}

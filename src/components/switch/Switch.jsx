@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import { ErrorBox } from '../form-controls/core';
 
-import './switch.less';
+import '../form-controls/core/selectable/selectable.less';
 
 const Switch = ({
   checked,
@@ -42,6 +42,7 @@ const Switch = ({
   return (
     <div className={classes}>
       <input
+        className="switch"
         checked={isChecked}
         disabled={disabled}
         id={id}

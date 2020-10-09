@@ -1,38 +1,39 @@
 @import '../../../styles/celula';
 
 .ce-checkbox-group {
-  border: 0.3rem solid @white;
+  // border: 0.3rem solid @white;
+  border: 0.3rem solid @purple;
   border-radius: 0.5rem;
-  clear: both;
-  margin-bottom: 0.7rem;
+  // clear: both;
+  // margin-bottom: 0.7rem;
 
   legend {
     color: @legend-text;
-    margin-bottom: 2.2rem;
-    margin-left: 2.2rem;
+    // margin-bottom: 2.2rem;
+    margin-left: 0.5rem;
     padding: 0 0.3rem;
   }
 
   span {
-    background-color: @white;
-    float: right;
-    height: 1.6rem;
-    margin-bottom: -1rem;
-    margin-right: 2.2rem;
-    margin-top: 2.2rem;
-    padding: 0 0.3rem;
-    text-align: right;
+    // background-color: @white;
+    // float: right;
+    // height: 1.6rem;
+    // margin-bottom: -1rem;
+    // margin-right: 2.2rem;
+    // margin-top: 2.2rem;
+    padding: 0 0.8rem;
+    // text-align: right;
   }
 
   &.ce-checkbox-group--disabled {
-    pointer-events: none;
+    cursor: not-allowed;
 
     input {
       + label {
         // Unchecked
         // The background
         &::before {
-          background-color: transparent;
+          // background-color: transparent;
         }
       }
 
@@ -40,48 +41,45 @@
         // Checked
         // The background
         &::before {
-          background-color: transparent;
+          // background-color: transparent;
         }
 
         // The dot
         &::after {
-          background-color: @checked-disabled-gray;
-          border: 0.5rem solid @white;
-          box-shadow: -1px 0 @checked-disabled-gray,
-            1px 0 @checked-disabled-gray,
-            0 -1px @checked-disabled-gray,
-            0 1px @checked-disabled-gray;
+          // background-color: @checked-disabled-gray;
+          // border: 0.5rem solid @white;
+          // box-shadow: -1px 0 @checked-disabled-gray,
+          // 1px 0 @checked-disabled-gray, 0 -1px @checked-disabled-gray,
+          // 0 1px @checked-disabled-gray;
         }
       }
     }
   }
 
   &.ce-checkbox-group--error {
-    border: 0.3rem solid @error-text;
-    color: @error-text;
+    border: 0.3rem solid #ff3376;
+    color: #e5004b;
 
     input:checked + label {
       // Checked
       // The background
       &::before {
-        background-color: transparent;
+        // background-color: transparent;
       }
 
       // The dot
       &::after {
-        background-color: @checked-red;
-        border: 0.5rem solid @white;
-        box-shadow: -1px 0 @checked-red,
-          1px 0 @checked-red,
-          0 -1px @checked-red,
-          0 1px @checked-red;
+        // background-color: @checked-red;
+        // border: 0.5rem solid @white;
+        // box-shadow: -1px 0 @checked-red, 1px 0 @checked-red, 0 -1px @checked-red,
+        //   0 1px @checked-red;
       }
 
       // Hover
       &:hover {
         // The background
         &::before {
-          background-color: @hover-red;
+          // background-color: @hover-red;
         }
       }
 
@@ -89,7 +87,7 @@
       // The background
       &:active {
         &::before {
-          background-color: @active-red;
+          // background-color: @active-red;
         }
       }
 
@@ -97,7 +95,7 @@
       &:focus {
         // The background
         &::before {
-          background-color: @focus-red;
+          // background-color: @focus-red;
         }
       }
     }
