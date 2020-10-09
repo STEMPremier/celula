@@ -1,0 +1,168 @@
+@import '../../../../styles/celula';
+
+.ce-checkbox-group,
+.ce-radio-group {
+  border: 0.3rem solid @white;
+  border-radius: 0.5rem;
+  clear: both;
+  padding-bottom: 0.6rem;
+  padding-top: 1rem;
+  margin-bottom: 0.7rem;
+
+  legend {
+    color: @legend-text;
+    margin-left: 0.5rem;
+    min-height: 1.6rem;
+    padding: 0 0.3rem;
+  }
+
+  span {
+    background-color: @white;
+    float: right;
+    height: 1.6rem;
+    margin-bottom: -1.2rem;
+    margin-right: 1.3rem;
+    padding: 0 0.9rem;
+    padding-top: 0.6rem;
+  }
+
+  &.ce-checkbox-group--disabled,
+  &.ce-radio-group--disabled {
+    cursor: not-allowed;
+
+    legend {
+      color: @disabled-text;
+    }
+  }
+
+  &.ce-checkbox-group--error,
+  &.ce-radio-group--error {
+    border: 0.3rem solid #ff3376;
+    color: #e5004b;
+
+    input[type='checkbox'],
+    input[type='radio'] {
+      &:hover {
+        &:not(:disabled) {
+          &:before {
+            --disc: @hover-red;
+          }
+        }
+      }
+
+      &:active {
+        &:not(:disabled) {
+          &:before {
+            --disc: @active-red;
+          }
+        }
+      }
+
+      &:focus {
+        &:not(:disabled) {
+          &:before {
+            --disc: @focus-red;
+          }
+        }
+      }
+
+      &:checked {
+        --border: #e5004b;
+
+        &:after {
+          --dot-background: #e5004b;
+          --dot-border: #e5004b;
+        }
+
+        &:hover {
+          &:not(:disabled) {
+            &:before {
+              --disc: @hover-red;
+            }
+          }
+        }
+
+        &:active {
+          &:not(:disabled) {
+            &:before {
+              --disc: @active-red;
+            }
+          }
+        }
+
+        &:focus {
+          &:not(:disabled) {
+            &:before {
+              --disc: @focus-red;
+            }
+          }
+        }
+      }
+
+      &:not(.switch) {
+        &:hover {
+          &:not(:disabled) {
+            --border: @hover-red;
+
+            &:before {
+              --disc: @hover-red;
+            }
+          }
+        }
+
+        &:active {
+          &:not(:disabled) {
+            --border: @active-red;
+          }
+        }
+
+        &:focus {
+          &:not(:disabled) {
+            --border: @focus-red;
+          }
+        }
+
+        &:checked {
+          &:hover {
+            &:not(:disabled) {
+              --border: @hover-red;
+
+              &:before {
+                --disc: @hover-red;
+              }
+            }
+          }
+
+          &:active {
+            &:not(:disabled) {
+              --border: @active-red;
+
+              &:before {
+                --disc: @active-red;
+              }
+            }
+          }
+
+          &:focus {
+            &:not(:disabled) {
+              --border: @focus-red;
+
+              &:before {
+                --disc: @focus-red;
+              }
+            }
+          }
+        }
+      }
+
+      & + label {
+        color: #e5004b;
+      }
+    }
+  }
+
+  .ce-checkbox + .ce-checkbox,
+  .ce-radio + .ce-radio {
+    margin-top: 0.5rem;
+  }
+}
