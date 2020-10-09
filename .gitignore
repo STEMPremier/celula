@@ -49,4 +49,4 @@ pids
 
 # misc
 .DS_Store
-
+.nova/
