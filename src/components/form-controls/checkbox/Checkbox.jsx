@@ -19,6 +19,7 @@ const Checkbox = ({
   name,
   label,
   value,
+  ...rest
 }) => {
   const [isChecked, setIsChecked] = useState(checked);
 
@@ -43,6 +44,9 @@ const Checkbox = ({
     handler(targetValue);
   };
 
+  // console.log('rest', rest);
+
+  /* eslint-disable react/jsx-props-no-spreading */
   return (
     <div className={classes}>
       <input
@@ -54,11 +58,13 @@ const Checkbox = ({
         onChange={handleChange}
         type="checkbox"
         value={value}
+        {...rest} // This lets us overwrite the previous declerations of the props. ie. For use as part of other display components.
       />
       <label htmlFor={id}>{label}</label>
       {errorMsg && <ErrorBox errorMsg={errorMsg} />}
     </div>
   );
+  /* eslint-enable react/jsx-props-no-spreading */
 };
 
 Checkbox.propTypes = {
