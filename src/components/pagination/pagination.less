@@ -7,6 +7,7 @@
     cursor: pointer;
     background-color: @white;
   }
+
   .ce-pagination__oval-container {
     background-color: @white;
     flex-flow: row wrap;
@@ -23,13 +24,9 @@
 
       &.ce-pagination__arrow--left {
         margin-top: 0px;
-        -webkit-transform: rotate(
-          180deg
-        ); /* Chrome and other webkit browsers */
-        -moz-transform: rotate(180deg); /* FF */
-        -o-transform: rotate(180deg); /* Opera */
-        -ms-transform: rotate(180deg); /* IE9 */
-        transform: rotate(180deg); /* W3C compliant browsers */
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        transform: rotate(180deg);
       }
     }
   }
@@ -39,8 +36,8 @@
     margin: 1rem 1rem 0 1rem;
 
     .ce-pagination__page-link {
-      padding: .5rem 1.1rem .7rem 1.1rem;
-      margin-top:-1px;
+      padding: 0.5rem 1.1rem 0.7rem 1.1rem;
+      margin-top: -1px;
       color: @black;
 
       &.ce-pagination--current {
