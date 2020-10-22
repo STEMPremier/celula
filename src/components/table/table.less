@@ -1,151 +1,231 @@
 @import '../../styles/celula';
 
 .ce-table {
+  display: flex;
 
-  @media screen and (min-width:765px){
-    .ce-table__container-mobile{
-      display: none;
-    }
-    .ce-table__container-desktop{
+  // desktop
+  @media screen and (min-width: 765px) {
+    flex-direction: column;
+  }
+
+  .ce-table__header {
+    box-sizing: border-box;
+
+    // desktop
+    @media screen and (min-width: 765px) {
+      border-bottom: 0.1rem solid #bfbfbf; // TODO: make this a variable
       display: flex;
       flex-direction: column;
-      flex-wrap: nowrap;
-  
-      .ce-table__header-row{
-        display:flex;
+
+      .ce-table__header--group {
         align-items: center;
-        justify-content: center;
-        border-bottom: .1rem solid @gray;
+        display: flex;
+        height: 5rem;
+        padding-left: 2.1rem;
 
-        .ce-checkbox {
-          padding-bottom: 12px;
-        }
-       }
-  
-       .ce-table__header-cell{  
-        padding: 1rem;
-        font-weight:bold;
-        background-color: @white;
-        align-items:stretch;
-        width: 100%;
-       }
-  
-       .ce-table__data-row{
-        align-items: center;
-        justify-content: center;
-        display:flex;
-        flex-direction: row;
-
-        .ce-checkbox {
-          padding-bottom: 12px;
-        }
-        }
-  
-        .ce-table__data-row:nth-child(even){
-          background-color: @catskill-white;
-          &.ce-table--selectable {
-            &:hover {
-              background-color: @hover-blue;
-             }
-             &:active {
-              background-color: @active-blue;
-              }
-          }
-
-        }
-        .ce-table__data-row:nth-child(odd){
+        .ce-table__heading {
           background-color: @white;
-          &.ce-table--selectable {
-            &:hover {
-              background-color: @hover-blue;
-             }
-             &:active {
-              background-color:@active-blue;
-              }
-          }
+          flex: 1 1 0px;
+          font-size: 1.4rem;
+          font-weight: bold;
+          line-height: 1.9rem;
         }
-        
-       .ce-table__data-cell{
-        align-items: center;
-        flex-basis: auto;
-        padding: 1rem;
-        align-items:stretch;
-        width: 100%;
-       }
+      }
     }
-  }
 
-
-  @media screen and (max-width:765px){
-    .ce-table__container-desktop{
+    // mobile
+    @media screen and (max-width: 765px) {
       display: none;
     }
-    .ce-table__container-mobile {
-      margin-top:4rem;
-      display:flex;
-      
-      span {
-        font-weight: bold;
-      }
-     
-      .ce-table__mobile-row {
-        width: 100%;
-        display:flex;
-        flex-direction: column;
-   
-        .ce-table__mobile-card-container{
+  }
 
-          &.ce-table--selectable {
-            &:hover {
-              background-color: @hover-blue;
-             }
-             &:active {
-              background-color: @active-blue;
-              }
+  .ce-table__body {
+    // mobile
+    @media screen and (max-width: 765px) {
+      flex: 1 1 0px; // Leave this `px` for IE support.
+    }
+
+    .ce-table__row {
+      display: flex;
+
+      // desktop
+      @media screen and (min-width: 765px) {
+        align-items: center;
+        height: 5rem;
+        padding-left: 2.1rem;
+      }
+
+      // mobile
+      @media screen and (max-width: 765px) {
+        flex-direction: column;
+        padding-left: 0.8rem;
+      }
+
+      .ce-table__cell {
+        // desktop
+        @media screen and (min-width: 765px) {
+          flex: 1 1 0px; // Leave this `px` for IE support.
+        }
+
+        // mobile
+        @media screen and (max-width: 765px) {
+          display: flex;
+          flex-direction: row;
+        }
+
+        .ce-table__cell-heading {
+          // desktop
+          @media screen and (min-width: 765px) {
+            display: none;
           }
 
-          .ce-table__mobile-checkbox{
-            margin-top: 1.1rem;
+          //mobile
+          @media screen and (max-width: 765px) {
+            flex: 1 1 0px; // Leave this `px` for IE support.
+            font-size: 1.4rem;
+            font-weight: bold;
+            line-height: 2.8rem;
+          }
+        }
+
+        .ce-table__cell-body {
+          font-size: 1.4rem;
+
+          // mobile
+          @media screen and (max-width: 765px) {
+            flex: 1 1 0px; // Leave this `px` for IE support.
+
+            line-height: 2.8rem;
+          }
+        }
+      }
+
+      &:nth-child(odd) {
+        background-color: @catskill-white;
+      }
+
+      &:nth-child(even) {
+        background-color: @white;
+
+        //mobile
+        @media screen and (max-width: 765px) {
+          border: 0.1rem solid @mobile-card-container-border;
+        }
+      }
+
+      &:hover {
+        background-color: #e6f7ff;
+      }
+    }
+  }
+
+  &.ce-table__selectable {
+    .ce-table__header {
+      .ce-table__header--group {
+        @media screen and (min-width: 765px) {
+          padding-left: 0;
+        }
+        .ce-table__heading {
+          &:first-of-type {
+            // desktop
+            @media screen and (min-width: 765px) {
+              box-sizing: border-box;
+              max-width: 5rem;
+              padding-left: 0.8rem;
+            }
 
             .ce-checkbox {
-              + label {
-                 &::after {
-                  margin-left: 1.1rem;
-                 }
+              label {
+                display: none;
               }
             }
           }
 
-
-          .ce-table__mobile-data-container{
-            display:flex;
-            align-items: center;
-            padding: 0rem 0rem 1rem 5rem;
-
-            .ce-table__mobile-headings{
-              display: flex;
-              flex-direction: column;
-              width: 30%;
-              font-weight: bold;
-            }
-              .ce-table__mobile-card-data{
-                padding: 1rem;
-                .ce-table__mobile-card-row-data{
-                  padding: .3rem;
-                }
+          &:not(:first-of-type) {
+            // desktop
+            @media screen and (min-width: 765px) {
+              padding-left: 25px;
             }
           }
         }
-  
-        .ce-table__mobile-card-container:nth-child(odd){
-          background-color: @catskill-white;
+      }
+    }
+
+    .ce-table__body {
+      .ce-table__row {
+        // desktop
+        @media screen and (min-width: 765px) {
+          padding-left: 0;
         }
-        .ce-table__mobile-card-container:nth-child(even){
-          background-color: @white;
-          border: .1rem solid @mobile-card-container-border;
+
+        // mobile
+        @media screen and (max-width: 765px) {
+          padding-left: 0;
+        }
+
+        .ce-table__cell {
+          &:first-of-type {
+            // desktop
+            @media screen and (min-width: 765px) {
+              box-sizing: border-box;
+              max-width: 5rem;
+              padding-left: 0.8rem;
+            }
+
+            // mobile
+            @media screen and (max-width: 765px) {
+              max-height: 4.3rem;
+            }
+
+            .ce-checkbox {
+              label {
+                display: none;
+              }
+            }
+
+            .ce-table__cell-heading {
+              box-sizing: border-box;
+              max-height: 4.3rem;
+              padding-left: 0.3rem;
+              padding-top: 0.3rem;
+
+              @media screen and (max-width: 765px) {
+                display: none;
+              }
+            }
+
+            .ce-table__cell-body {
+              //mobile
+              @media screen and (max-width: 765px) {
+                padding-left: 0.3rem;
+                padding-top: 0.3rem;
+              }
+            }
+          }
+
+          &:last-of-type {
+            padding-bottom: 2.2rem;
+          }
+
+          &:not(:first-of-type) {
+            // desktop
+            @media screen and (min-width: 765px) {
+              padding-left: 25px;
+            }
+
+            //mobile
+            @media screen and (max-width: 765px) {
+              padding-left: 50px;
+            }
+          }
         }
       }
-  }
+    }
   }
 
+  &.ce-table__clickable {
+    .ce-table__row {
+      cursor: pointer;
+    }
+  }
 }

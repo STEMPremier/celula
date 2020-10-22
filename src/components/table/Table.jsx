@@ -1,163 +1,126 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable prettier/prettier */
-import React, { useState } from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+
+import { useTable, useRowSelect } from 'react-table';
 
 import './table.less';
 
 import Checkbox from '../form-controls/checkbox/Checkbox';
 
+/* eslint-disable react/display-name */
+/* eslint-disable react/prop-types */
+/**
+ * A `useTable` compatible hook that will add a column of/for the checkbox. To be passed into the `useTable` hook.
+ * @param {object} instance - a `useTable` instance object. It is not a class so much as a pile of arrays (of functions).
+ */
+const useRowSelectComponents = (instance) => {
+  // visibleColumns (a property on the instance object) is an array of functions. Each of which will allow you to decorate some aspect of the columns. In our case, we are adding a checkbox to the beginning of each row.
+  instance.visibleColumns.push((decorators) => [
+    // This object is a 'constructor' for a column in the table. `useTable` will use the `Header` and `Cell` properties to determine what to put in our column. In our case they are components, but they could be strings.
+    {
+      id: 'selection',
+      Header: ({ getToggleAllRowsSelectedProps }) => (
+        <Checkbox {...getToggleAllRowsSelectedProps()} />
+      ),
+      Cell: ({ row }) => <Checkbox {...row.getToggleRowSelectedProps()} />,
+    },
+    ...decorators,
+  ]);
+};
+/* eslint-enable react/display-name */
+/* eslint-enable react/prop-types */
+
 const Table = ({
   className,
-  handleClick,
-  headings,
-  label,
-  name,
-  rows,
+  columns,
+  data,
+  // handleClick,
+  rowFunction = undefined,
   selectable,
 }) => {
-  const [selectAll, setSelectAll] = useState(false);
-  const [selected, setSelected] = useState();
+  // Memoize the data, and the columns to prevent rerenders, unless one of them actually changes.
+  const info = useMemo(() => data, []);
+  const cols = useMemo(() => columns, []);
 
-  const onChangeSelectAll = () => {
-    setSelectAll(!selectAll);
-    setSelected(!selected);
-  };
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    rows,
+    prepareRow,
+  } = useTable(
+    { columns: cols, data: info },
+    useRowSelect,
+    selectable ? useRowSelectComponents : () => {}, // This is the mechanism for turning on/off the checkbox column
+  );
 
   const classes = cx(
     'ce-table',
     {
-      'ce-table--selectable': selectable,
+      'ce-table__selectable': selectable,
+      'ce-table__clickable': rowFunction,
     },
     className,
   );
 
   return (
-    <div
-      className={classes}
-      label={label}
-      headings={headings}
-      rows={rows}
-      name={name}
-      onChange={selectable ? handleClick : () => { }}
-      selectable={selectable}
-      role="table"
-      aria-label={label}
-    >
-      <div className="ce-table__container-desktop">
-        <div
-          className="ce-table__header-row"
-          role="rowgroup"
-          aria-label="header row"
-        >
-          {selectable && (
-            <Checkbox
-              name="headerCheckbox"
-              value={selectAll}
-              checked={selectAll}
-              handleChange={onChangeSelectAll}
-              role="cell"
-              aria-label="select all checkboxes"
-            />
-          )}
-
-          {headings.map(header => (
-            <div
-              className="ce-table__header-cell"
-              aria-label={header}
-              role="columnheader"
-              key={header}
-            >
-              {header}
-            </div>
-          ))}
-        </div>
-        {rows.map(rowItems => (
+    <div className={classes} {...getTableProps()}>
+      {/* table header */}
+      <div className="ce-table__header" role="rowgroup">
+        {headerGroups.map((headerGroup) => (
           <div
-            role="row"
-            key={rowItems}
-            aria-label={rowItems}
-            className={`ce-table__data-row ${
-              selectable ? 'ce-table--selectable' : null
-              }`}
+            className="ce-table__header--group"
+            {...headerGroup.getHeaderGroupProps()}
+            key={headerGroup.id}
           >
-            {selectable && (
-              <Checkbox
-                name="row checkbox"
-                value={rowItems.data}
-                checked={selected}
-                aria-label={rowItems.data}
-                label=""
-              />
-            )}
-
-            {rowItems.data.map(rowData => (
+            {headerGroup.headers.map((column) => (
               <div
-                className="ce-table__data-cell"
-                role="cell"
-                key={rowData}
-                aria-label={rowData}
+                className="ce-table__heading"
+                {...column.getHeaderProps()}
+                key={column.id}
               >
-                {rowData}
+                {column.render('Header')}
               </div>
             ))}
           </div>
         ))}
       </div>
 
-      <div className="ce-table__container-mobile">
-        <div className="ce-table__mobile-row" role="rowgroup">
-          {rows.map(rowItems => (
-            <div
-              role="row"
-              aria-label={rowItems}
-              key={rowItems}
-              className={`ce-table__mobile-card-container ${
-                selectable ? 'ce-table--selectable' : null
-                }`}
-            >
-              {selectable && (
-                <div className="ce-table__mobile-checkbox">
-                  <Checkbox
-                    name="name"
-                    value={rowItems.data}
-                    checked={selected}
-                    role="rowheader"
-                    aria-label={rowItems.data}
-                    label=""
-                  />
-                </div>
-              )}
+      {/* table body */}
+      <div className="ce-table__body" {...getTableBodyProps()}>
+        {rows.map((row) => {
+          prepareRow(row);
 
-              <div className="ce-table__mobile-data-container">
-                <div className="ce-table__mobile-headings" role="columnheader">
-                  {headings.map(mobileHeading => (
-                    <span key={mobileHeading} aria-label={mobileHeading}>
-                      {mobileHeading}
-                      :
-                    </span>
-                  ))}
-                </div>
+          const rowProps = {
+            className: 'ce-table__row',
+            ...row.getRowProps(),
+            onClick: rowFunction,
+          };
+
+          return (
+            <div {...rowProps} key={row.id}>
+              {row.cells.map((cell) => (
                 <div
-                  className="ce-table__mobile-card-data"
-                  role="row"
-                  aria-label="row"
+                  className="ce-table__cell"
+                  {...cell.getCellProps()}
+                  key={cell.id}
                 >
-                  {rowItems.data.map(rowData => (
-                    <div
-                      className="ce-table__mobile-card-row-data"
-                      role="cell"
-                      key={rowData}
-                      aria-label={rowData}
-                    >
-                      {rowData}
-                    </div>
-                  ))}
+                  <div className="ce-table__cell-heading">
+                    {typeof cell.column.Header === 'string'
+                      ? `${cell.render('Header')}:`
+                      : cell.render('Header')}
+                  </div>
+                  <div className="ce-table__cell-body">
+                    {cell.render('Cell')}
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -169,39 +132,32 @@ Table.propTypes = {
    */
   className: PropTypes.string,
   /**
+   * The column definition for your `<Table />`. See [LINK TO react-table]
+   */
+  columns: PropTypes.arrayOf(PropTypes.object).isRequired,
+  /**
+   * The data for the `<Table />`.
+   */
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  /**
    * A function to trigger when the state of the `<Table />` changes.  This function is only accessible if the "selectable" prop is set to true.  The default for the selectable and this handleClick function are both false.
    */
-  handleClick: PropTypes.func,
+  // handleClick: PropTypes.func,
   /**
-   * The `<Table />` label.
+   * A function to trigger when clicking on a row. Also enables the rows to be clickable.
+   *
+   * NOTE: As I am using the presence of a function as a trigger for some functionality this is preferable than setting a default function that will evaluate to true, forcing me to also set up a bool prop.
    */
-  label: PropTypes.string.isRequired,
+  rowFunction: PropTypes.func, // eslint-disable-line
   /**
-   * The name given to all the children of the `<Table />`.
-   */
-  name: PropTypes.string,
-  /**
-   * The values that populate the header.
-   */
-  headings: PropTypes.arrayOf(
-    PropTypes.string
-  ).isRequired,
-  /**
-   * The values that populate the row cells.  Each row of data must be an object in an array.  Each object must have a property called 'data' containing an array of values that will then be pushed into the table row.
-   */
-  rows: PropTypes.arrayOf(
-    PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
-  ).isRequired,
-  /**
-   * Makes the interactive with hover, active and checkbox functionality.  The default is false, hiding the checkbox column.
+   * Automatically include a checkbox in the table, as the first column.
    */
   selectable: PropTypes.bool,
 };
 
 Table.defaultProps = {
   className: '',
-  name: '',
-  handleClick: () => { },
+  // handleClick: () => {},
   selectable: false,
 };
 

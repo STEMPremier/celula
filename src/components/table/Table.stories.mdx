@@ -8,98 +8,22 @@ import {
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text, array } from '@storybook/addon-knobs';
 
+import { data, columns } from './data.js';
 import Table from '.';
 
 <Meta component={Table} title="Components/Atoms/Table" />
 
 # Table
+
 <Description of={Table} />
 <Props of={Table} />
 
 <Story name="Table with Knobs" parameters={{ docs: { disable: true } }}>
-  <Table 
-  handleClick={action('onClick event triggered')}
-  headings={array('headers', ['header1', 'header2', 'header3', 'header4', 'header5'])}
-  label={text('label', 'This is the label')}
-  name={text('name', 'name')}
-  rows={array('rows', [
-    {
-      data: ['Row 1 cell 1', 'Row 1 cell 2', 'Row 1 cell 3', 'Row 1 cell 4', 'Row 1 cell 5'],
-      status: '',
-    },
-    {
-      data: ['Row 2 cell 1', 'Row 2 cell 2', 'Row 2 cell 3', 'Row 2 cell 4', 'Row 2 cell 5'],
-      status: '',
-    },
-    {
-      data: ['Row 3 cell 1', 'Row 3 cell 2', 'Row 3 cell 3', 'Row 3 cell 4', 'Row 3 cell 5'],  
-      status: '',
-    },
-  ])}
-  selectable={boolean('selectable', true)}
+  <Table
+    className={text('className', '')}
+    columns={array('columns', columns)}
+    data={array('data', data)}
+    rowFunction={(event) => console.log(event.target)}
+    selectable={false}
   />
 </Story>
-
-### State changes
-<Preview>
-  <Story name="Table Row State Changes">
-    <Table 
-    label="This is a label"
-    name="name"
-    headings={[
-    'First Name',
-    'Last Name',
-    'Company',
-    'Job Title',
-    'Age',
-  ]}
-    rows={[
-    {
-      data: ['Row 1 cell 1', 'Row 1 cell 2', 'Row 1 cell 3', 'Row 1 cell 4', 'Row 1 cell 5'],
-      status: '',
-    },
-    {
-      data: ['Row 2 cell 1', 'Row 2 cell 2', 'Row 2 cell 3', 'Row 2 cell 4', 'Row 2 cell 5'],
-      status: '',
-    },
-    {
-      data: ['Row 3 cell 1', 'Row 3 cell 2', 'Row 3 cell 3', 'Row 3 cell 4', 'Row 3 cell 5'],  
-      status: '',
-    },
-  ]}
-    />
-  </Story>
-</Preview>
-
-### Selectable 
-<Preview>
-  <Story name="Table Selectable">
-    <Table 
-    selectable
-    label="This is a label"
-    name="name"
-    headings={[
-    'First Name',
-    'Last Name',
-    'Company',
-    'Job Title',
-    'Age',
-  ]}
-    rows={[
-    {
-      data: ['Row 1 cell 1', 'Row 1 cell 2', 'Row 1 cell 3', 'Row 1 cell 4', 'Row 1 cell 5'],
-      status: '',
-    },
-    {
-      data: ['Row 2 cell 1', 'Row 2 cell 2', 'Row 2 cell 3', 'Row 2 cell 4', 'Row 2 cell 5'],
-      status: '',
-    },
-    {
-      data: ['Row 3 cell 1', 'Row 3 cell 2', 'Row 3 cell 3', 'Row 3 cell 4', 'Row 3 cell 5'],  
-      status: '',
-    },
-  ]}
-    />
-  </Story>
-</Preview>
-
