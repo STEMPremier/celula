@@ -4,7 +4,8 @@
   "description": "Tallo Inc.'s React component library and ui documentation",
   "main": "dist/celula.js",
   "dependencies": {
-    "classnames": "^2.2.6"
+    "classnames": "^2.2.6",
+    "react-table": "^7.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
