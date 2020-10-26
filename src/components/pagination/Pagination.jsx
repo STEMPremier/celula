@@ -183,6 +183,8 @@ Pagination.propTypes = {
   className: PropTypes.string,
   /**
    * The current page number.
+   *
+   * NOTE: Due to interactions between `<Pagination />` and `<Table />` this is 0-indexed.
    */
   currentPage: PropTypes.number.isRequired,
   /**
@@ -201,9 +203,6 @@ Pagination.propTypes = {
    * A function to trigger to navigate to the previous page.
    */
   prevPage: PropTypes.func.isRequired,
-  /**
-   * Pass in the posts from the http call.
-   */
 };
 
 Pagination.defaultProps = {
