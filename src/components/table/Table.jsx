@@ -156,29 +156,29 @@ Table.propTypes = {
    */
   className: PropTypes.string,
   /**
-   * The column definition for your `<Table />`. See [LINK TO react-table]
+   * The column definition for your `<Table />`. See [react-table](https://react-table.tanstack.com/).
    */
   columns: PropTypes.arrayOf(PropTypes.object).isRequired,
   /**
-   * The data for the `<Table />`.
+   * The data for the `<Table />`. See [react-table](https://react-table.tanstack.com/).
    */
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
   /**
-   * A function to trigger when the state of the `<Table />` changes.
+   * A function to trigger when a checkbox in the `<Table />` changes.
    * This function is only accessible if the "selectable" prop is set to true.
    * The default for the selectable and this handleClick function are both false.
    */
   // handleClick: PropTypes.func,
   /**
-   * A function to trigger when clicking on a row. Also enables the rows to be clickable.
-   *
-   * NOTE: As I am using the presence of a function as a trigger for some functionality,
+   * A function to trigger when clicking on a row in the `<Table />`. Also enables the rows to be clickable.
+   */
+  /* NOTE: As I am using the presence of a function as a trigger for some functionality,
    * turning off the `default value` warning is preferable than setting a default
    * function that will evaluate to true, forcing me to set up an otherwise unneeded bool prop.
    */
   rowFunction: PropTypes.func, // eslint-disable-line
   /**
-   * Automatically include a checkbox in the table, as the first column.
+   * Automatically include a checkbox in the `<Table />`, as the first column.
    */
   selectable: PropTypes.bool,
 };

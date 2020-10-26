@@ -6,7 +6,6 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { boolean, select, text, array } from '@storybook/addon-knobs';
 
 import { data, columns } from './data.js';
 import Table from '.';
@@ -18,12 +17,25 @@ import Table from '.';
 <Description of={Table} />
 <Props of={Table} />
 
-<Story name="Table with Knobs" parameters={{ docs: { disable: true } }}>
-  <Table
-    className={text('className', '')}
-    columns={array('columns', columns)}
-    data={array('data', data)}
-    rowFunction={(event) => console.log(event.target)}
-    selectable={false}
-  />
-</Story>
+### Types
+
+<Preview>
+  <Story name="Default">
+    <Table
+      columns={columns}
+      data={data}
+      rowFunction={(event) => console.log(event.target)}
+    />
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Selectable">
+    <Table
+      columns={columns}
+      data={data}
+      rowFunction={(event) => console.log(event.target)}
+      selectable={true}
+    />
+  </Story>
+</Preview>
