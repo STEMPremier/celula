@@ -5421,6 +5421,112 @@ exports[`Storyshots Components/Atoms/Link Link with Knobs 1`] = `
 </a>
 `;
 
+exports[`Storyshots Components/Atoms/Pagination Pagination with Knobs 1`] = `
+<nav
+  className="ce-pagination"
+>
+  <h1 />
+  <ul
+    className="ce-pagination__oval-container"
+  >
+    <button
+      className="ce-pagination__arrow ce-pagination__arrow--left"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className="ce-icon--grey "
+        >
+          <use
+            xlinkHref="#icons_system-navigate"
+          />
+        </svg>
+      </span>
+    </button>
+    <div>
+      <li
+        className="ce-pagination__page-item"
+      >
+        <a
+          className="ce-pagination__page-link ce-pagination--current "
+          href="#"
+          onClick={[Function]}
+        >
+          1
+        </a>
+      </li>
+    </div>
+    <div>
+      <li
+        className="ce-pagination__page-item"
+      >
+        <a
+          className="ce-pagination__page-link  "
+          href="#"
+          onClick={[Function]}
+        >
+          2
+        </a>
+      </li>
+    </div>
+    <div>
+      <li
+        className="ce-pagination__page-item"
+      >
+        <a
+          className="ce-pagination__page-link  "
+          href="#"
+          onClick={[Function]}
+        >
+          3
+        </a>
+      </li>
+    </div>
+    <li
+      className="ce-pagination__page-item"
+    >
+      <a
+        className="ce-pagination__ellipsis"
+        href="#"
+      >
+        ...
+      </a>
+    </li>
+    <li
+      className="ce-pagination__page-item"
+    >
+      <a
+        className="ce-pagination__last-page"
+        href="#"
+        onClick={[Function]}
+      >
+        5
+      </a>
+    </li>
+    <button
+      className="ce-pagination__arrow"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="ce-icon ce-icon__system ce-icon--large"
+      >
+        <svg
+          className="ce-icon--black "
+        >
+          <use
+            xlinkHref="#icons_system-navigate"
+          />
+        </svg>
+      </span>
+    </button>
+  </ul>
+</nav>
+`;
+
 exports[`Storyshots Components/Atoms/Search Search States 1`] = `
 <div>
   <div
@@ -5829,6 +5935,1563 @@ exports[`Storyshots Components/Atoms/Switch Switch with Knobs 1`] = `
     </span>
   </label>
   
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/Table Table Row State Changes 1`] = `
+<div
+  className="ce-table"
+  headings={
+    Array [
+      "First Name",
+      "Last Name",
+      "Company",
+      "Job Title",
+      "Age",
+    ]
+  }
+  label="This is a label"
+  name="name"
+  onChange={false}
+  rows={
+    Array [
+      Object {
+        "data": Array [
+          "Row 1 cell 1",
+          "Row 1 cell 2",
+          "Row 1 cell 3",
+          "Row 1 cell 4",
+          "Row 1 cell 5",
+        ],
+        "status": "",
+      },
+      Object {
+        "data": Array [
+          "Row 2 cell 1",
+          "Row 2 cell 2",
+          "Row 2 cell 3",
+          "Row 2 cell 4",
+          "Row 2 cell 5",
+        ],
+        "status": "",
+      },
+      Object {
+        "data": Array [
+          "Row 3 cell 1",
+          "Row 3 cell 2",
+          "Row 3 cell 3",
+          "Row 3 cell 4",
+          "Row 3 cell 5",
+        ],
+        "status": "",
+      },
+    ]
+  }
+  selectable={false}
+>
+  <div
+    className="ce-table__container-desktop"
+  >
+    <div
+      className="ce-table__header-row"
+    >
+      <div
+        className="ce-table__header-cell"
+      >
+        First Name
+      </div>
+      <div
+        className="ce-table__header-cell"
+      >
+        Last Name
+      </div>
+      <div
+        className="ce-table__header-cell"
+      >
+        Company
+      </div>
+      <div
+        className="ce-table__header-cell"
+      >
+        Job Title
+      </div>
+      <div
+        className="ce-table__header-cell"
+      >
+        Age
+      </div>
+    </div>
+    <div
+      className="ce-table__data-row null"
+    >
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 1 cell 1
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 1 cell 2
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 1 cell 3
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 1 cell 4
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 1 cell 5
+      </div>
+    </div>
+    <div
+      className="ce-table__data-row null"
+    >
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 2 cell 1
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 2 cell 2
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 2 cell 3
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 2 cell 4
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 2 cell 5
+      </div>
+    </div>
+    <div
+      className="ce-table__data-row null"
+    >
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 3 cell 1
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 3 cell 2
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 3 cell 3
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 3 cell 4
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 3 cell 5
+      </div>
+    </div>
+  </div>
+  <div
+    className="ce-table__container-mobile"
+  >
+    <div
+      className="ce-table__mobile-row"
+    >
+      <div
+        className="ce-table__mobile-card-container null"
+      >
+        <div
+          className="ce-table__mobile-data-container"
+        >
+          <div
+            className="ce-table__mobile-headings"
+          >
+            <span>
+              <strong>
+                First Name
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Last Name
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Company
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Job Title
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Age
+                :
+              </strong>
+            </span>
+          </div>
+          <div
+            className="ce-table__mobile-card-data"
+          >
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 1 cell 1
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 1 cell 2
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 1 cell 3
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 1 cell 4
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 1 cell 5
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="ce-table__mobile-card-container null"
+      >
+        <div
+          className="ce-table__mobile-data-container"
+        >
+          <div
+            className="ce-table__mobile-headings"
+          >
+            <span>
+              <strong>
+                First Name
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Last Name
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Company
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Job Title
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Age
+                :
+              </strong>
+            </span>
+          </div>
+          <div
+            className="ce-table__mobile-card-data"
+          >
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 2 cell 1
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 2 cell 2
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 2 cell 3
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 2 cell 4
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 2 cell 5
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="ce-table__mobile-card-container null"
+      >
+        <div
+          className="ce-table__mobile-data-container"
+        >
+          <div
+            className="ce-table__mobile-headings"
+          >
+            <span>
+              <strong>
+                First Name
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Last Name
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Company
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Job Title
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Age
+                :
+              </strong>
+            </span>
+          </div>
+          <div
+            className="ce-table__mobile-card-data"
+          >
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 3 cell 1
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 3 cell 2
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 3 cell 3
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 3 cell 4
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 3 cell 5
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/Table Table Selectable 1`] = `
+<div
+  className="ce-table ce-table--selectable"
+  headings={
+    Array [
+      "First Name",
+      "Last Name",
+      "Company",
+      "Job Title",
+      "Age",
+    ]
+  }
+  label="This is a label"
+  name="name"
+  onChange={[Function]}
+  rows={
+    Array [
+      Object {
+        "data": Array [
+          "Row 1 cell 1",
+          "Row 1 cell 2",
+          "Row 1 cell 3",
+          "Row 1 cell 4",
+          "Row 1 cell 5",
+        ],
+        "status": "",
+      },
+      Object {
+        "data": Array [
+          "Row 2 cell 1",
+          "Row 2 cell 2",
+          "Row 2 cell 3",
+          "Row 2 cell 4",
+          "Row 2 cell 5",
+        ],
+        "status": "",
+      },
+      Object {
+        "data": Array [
+          "Row 3 cell 1",
+          "Row 3 cell 2",
+          "Row 3 cell 3",
+          "Row 3 cell 4",
+          "Row 3 cell 5",
+        ],
+        "status": "",
+      },
+    ]
+  }
+  selectable={true}
+>
+  <div
+    className="ce-table__container-desktop"
+  >
+    <div
+      className="ce-table__header-row"
+    >
+      <div
+        className="ce-checkbox"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          form=""
+          id="headerCheckbox_false"
+          name="headerCheckbox"
+          onChange={[Function]}
+          type="checkbox"
+          value={false}
+        />
+        <label
+          htmlFor="headerCheckbox_false"
+        />
+        
+      </div>
+      <div
+        className="ce-table__header-cell"
+      >
+        First Name
+      </div>
+      <div
+        className="ce-table__header-cell"
+      >
+        Last Name
+      </div>
+      <div
+        className="ce-table__header-cell"
+      >
+        Company
+      </div>
+      <div
+        className="ce-table__header-cell"
+      >
+        Job Title
+      </div>
+      <div
+        className="ce-table__header-cell"
+      >
+        Age
+      </div>
+    </div>
+    <div
+      className="ce-table__data-row ce-table--selectable"
+    >
+      <div
+        className="ce-checkbox"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          form=""
+          id="rowCheckbox_Row 1 cell 1,Row 1 cell 2,Row 1 cell 3,Row 1 cell 4,Row 1 cell 5"
+          name="rowCheckbox"
+          onChange={[Function]}
+          type="checkbox"
+          value={
+            Array [
+              "Row 1 cell 1",
+              "Row 1 cell 2",
+              "Row 1 cell 3",
+              "Row 1 cell 4",
+              "Row 1 cell 5",
+            ]
+          }
+        />
+        <label
+          htmlFor="rowCheckbox_Row 1 cell 1,Row 1 cell 2,Row 1 cell 3,Row 1 cell 4,Row 1 cell 5"
+        />
+        
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 1 cell 1
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 1 cell 2
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 1 cell 3
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 1 cell 4
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 1 cell 5
+      </div>
+    </div>
+    <div
+      className="ce-table__data-row ce-table--selectable"
+    >
+      <div
+        className="ce-checkbox"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          form=""
+          id="rowCheckbox_Row 2 cell 1,Row 2 cell 2,Row 2 cell 3,Row 2 cell 4,Row 2 cell 5"
+          name="rowCheckbox"
+          onChange={[Function]}
+          type="checkbox"
+          value={
+            Array [
+              "Row 2 cell 1",
+              "Row 2 cell 2",
+              "Row 2 cell 3",
+              "Row 2 cell 4",
+              "Row 2 cell 5",
+            ]
+          }
+        />
+        <label
+          htmlFor="rowCheckbox_Row 2 cell 1,Row 2 cell 2,Row 2 cell 3,Row 2 cell 4,Row 2 cell 5"
+        />
+        
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 2 cell 1
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 2 cell 2
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 2 cell 3
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 2 cell 4
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 2 cell 5
+      </div>
+    </div>
+    <div
+      className="ce-table__data-row ce-table--selectable"
+    >
+      <div
+        className="ce-checkbox"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          form=""
+          id="rowCheckbox_Row 3 cell 1,Row 3 cell 2,Row 3 cell 3,Row 3 cell 4,Row 3 cell 5"
+          name="rowCheckbox"
+          onChange={[Function]}
+          type="checkbox"
+          value={
+            Array [
+              "Row 3 cell 1",
+              "Row 3 cell 2",
+              "Row 3 cell 3",
+              "Row 3 cell 4",
+              "Row 3 cell 5",
+            ]
+          }
+        />
+        <label
+          htmlFor="rowCheckbox_Row 3 cell 1,Row 3 cell 2,Row 3 cell 3,Row 3 cell 4,Row 3 cell 5"
+        />
+        
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 3 cell 1
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 3 cell 2
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 3 cell 3
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 3 cell 4
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 3 cell 5
+      </div>
+    </div>
+  </div>
+  <div
+    className="ce-table__container-mobile"
+  >
+    <div
+      className="ce-table__mobile-row"
+    >
+      <div
+        className="ce-table__mobile-card-container ce-table--selectable"
+      >
+        <div
+          className="ce-table__mobile-checkbox"
+        >
+          <div
+            className="ce-checkbox"
+          >
+            <input
+              checked={false}
+              disabled={false}
+              form=""
+              id="name_Row 1 cell 1,Row 1 cell 2,Row 1 cell 3,Row 1 cell 4,Row 1 cell 5"
+              name="name"
+              onChange={[Function]}
+              type="checkbox"
+              value={
+                Array [
+                  "Row 1 cell 1",
+                  "Row 1 cell 2",
+                  "Row 1 cell 3",
+                  "Row 1 cell 4",
+                  "Row 1 cell 5",
+                ]
+              }
+            />
+            <label
+              htmlFor="name_Row 1 cell 1,Row 1 cell 2,Row 1 cell 3,Row 1 cell 4,Row 1 cell 5"
+            />
+            
+          </div>
+        </div>
+        <div
+          className="ce-table__mobile-data-container"
+        >
+          <div
+            className="ce-table__mobile-headings"
+          >
+            <span>
+              <strong>
+                First Name
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Last Name
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Company
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Job Title
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Age
+                :
+              </strong>
+            </span>
+          </div>
+          <div
+            className="ce-table__mobile-card-data"
+          >
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 1 cell 1
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 1 cell 2
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 1 cell 3
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 1 cell 4
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 1 cell 5
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="ce-table__mobile-card-container ce-table--selectable"
+      >
+        <div
+          className="ce-table__mobile-checkbox"
+        >
+          <div
+            className="ce-checkbox"
+          >
+            <input
+              checked={false}
+              disabled={false}
+              form=""
+              id="name_Row 2 cell 1,Row 2 cell 2,Row 2 cell 3,Row 2 cell 4,Row 2 cell 5"
+              name="name"
+              onChange={[Function]}
+              type="checkbox"
+              value={
+                Array [
+                  "Row 2 cell 1",
+                  "Row 2 cell 2",
+                  "Row 2 cell 3",
+                  "Row 2 cell 4",
+                  "Row 2 cell 5",
+                ]
+              }
+            />
+            <label
+              htmlFor="name_Row 2 cell 1,Row 2 cell 2,Row 2 cell 3,Row 2 cell 4,Row 2 cell 5"
+            />
+            
+          </div>
+        </div>
+        <div
+          className="ce-table__mobile-data-container"
+        >
+          <div
+            className="ce-table__mobile-headings"
+          >
+            <span>
+              <strong>
+                First Name
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Last Name
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Company
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Job Title
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Age
+                :
+              </strong>
+            </span>
+          </div>
+          <div
+            className="ce-table__mobile-card-data"
+          >
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 2 cell 1
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 2 cell 2
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 2 cell 3
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 2 cell 4
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 2 cell 5
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="ce-table__mobile-card-container ce-table--selectable"
+      >
+        <div
+          className="ce-table__mobile-checkbox"
+        >
+          <div
+            className="ce-checkbox"
+          >
+            <input
+              checked={false}
+              disabled={false}
+              form=""
+              id="name_Row 3 cell 1,Row 3 cell 2,Row 3 cell 3,Row 3 cell 4,Row 3 cell 5"
+              name="name"
+              onChange={[Function]}
+              type="checkbox"
+              value={
+                Array [
+                  "Row 3 cell 1",
+                  "Row 3 cell 2",
+                  "Row 3 cell 3",
+                  "Row 3 cell 4",
+                  "Row 3 cell 5",
+                ]
+              }
+            />
+            <label
+              htmlFor="name_Row 3 cell 1,Row 3 cell 2,Row 3 cell 3,Row 3 cell 4,Row 3 cell 5"
+            />
+            
+          </div>
+        </div>
+        <div
+          className="ce-table__mobile-data-container"
+        >
+          <div
+            className="ce-table__mobile-headings"
+          >
+            <span>
+              <strong>
+                First Name
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Last Name
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Company
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Job Title
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                Age
+                :
+              </strong>
+            </span>
+          </div>
+          <div
+            className="ce-table__mobile-card-data"
+          >
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 3 cell 1
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 3 cell 2
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 3 cell 3
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 3 cell 4
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 3 cell 5
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Atoms/Table Table with Knobs 1`] = `
+<div
+  className="ce-table ce-table--selectable"
+  headings={
+    Array [
+      "header1",
+      "header2",
+      "header3",
+      "header4",
+      "header5",
+    ]
+  }
+  label="This is the label"
+  name="name"
+  onChange={[Function]}
+  rows={
+    Array [
+      Object {
+        "data": Array [
+          "Row 1 cell 1",
+          "Row 1 cell 2",
+          "Row 1 cell 3",
+          "Row 1 cell 4",
+          "Row 1 cell 5",
+        ],
+        "status": "",
+      },
+      Object {
+        "data": Array [
+          "Row 2 cell 1",
+          "Row 2 cell 2",
+          "Row 2 cell 3",
+          "Row 2 cell 4",
+          "Row 2 cell 5",
+        ],
+        "status": "",
+      },
+      Object {
+        "data": Array [
+          "Row 3 cell 1",
+          "Row 3 cell 2",
+          "Row 3 cell 3",
+          "Row 3 cell 4",
+          "Row 3 cell 5",
+        ],
+        "status": "",
+      },
+    ]
+  }
+  selectable={true}
+>
+  <div
+    className="ce-table__container-desktop"
+  >
+    <div
+      className="ce-table__header-row"
+    >
+      <div
+        className="ce-checkbox"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          form=""
+          id="headerCheckbox_false"
+          name="headerCheckbox"
+          onChange={[Function]}
+          type="checkbox"
+          value={false}
+        />
+        <label
+          htmlFor="headerCheckbox_false"
+        />
+        
+      </div>
+      <div
+        className="ce-table__header-cell"
+      >
+        header1
+      </div>
+      <div
+        className="ce-table__header-cell"
+      >
+        header2
+      </div>
+      <div
+        className="ce-table__header-cell"
+      >
+        header3
+      </div>
+      <div
+        className="ce-table__header-cell"
+      >
+        header4
+      </div>
+      <div
+        className="ce-table__header-cell"
+      >
+        header5
+      </div>
+    </div>
+    <div
+      className="ce-table__data-row ce-table--selectable"
+    >
+      <div
+        className="ce-checkbox"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          form=""
+          id="rowCheckbox_Row 1 cell 1,Row 1 cell 2,Row 1 cell 3,Row 1 cell 4,Row 1 cell 5"
+          name="rowCheckbox"
+          onChange={[Function]}
+          type="checkbox"
+          value={
+            Array [
+              "Row 1 cell 1",
+              "Row 1 cell 2",
+              "Row 1 cell 3",
+              "Row 1 cell 4",
+              "Row 1 cell 5",
+            ]
+          }
+        />
+        <label
+          htmlFor="rowCheckbox_Row 1 cell 1,Row 1 cell 2,Row 1 cell 3,Row 1 cell 4,Row 1 cell 5"
+        />
+        
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 1 cell 1
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 1 cell 2
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 1 cell 3
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 1 cell 4
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 1 cell 5
+      </div>
+    </div>
+    <div
+      className="ce-table__data-row ce-table--selectable"
+    >
+      <div
+        className="ce-checkbox"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          form=""
+          id="rowCheckbox_Row 2 cell 1,Row 2 cell 2,Row 2 cell 3,Row 2 cell 4,Row 2 cell 5"
+          name="rowCheckbox"
+          onChange={[Function]}
+          type="checkbox"
+          value={
+            Array [
+              "Row 2 cell 1",
+              "Row 2 cell 2",
+              "Row 2 cell 3",
+              "Row 2 cell 4",
+              "Row 2 cell 5",
+            ]
+          }
+        />
+        <label
+          htmlFor="rowCheckbox_Row 2 cell 1,Row 2 cell 2,Row 2 cell 3,Row 2 cell 4,Row 2 cell 5"
+        />
+        
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 2 cell 1
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 2 cell 2
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 2 cell 3
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 2 cell 4
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 2 cell 5
+      </div>
+    </div>
+    <div
+      className="ce-table__data-row ce-table--selectable"
+    >
+      <div
+        className="ce-checkbox"
+      >
+        <input
+          checked={false}
+          disabled={false}
+          form=""
+          id="rowCheckbox_Row 3 cell 1,Row 3 cell 2,Row 3 cell 3,Row 3 cell 4,Row 3 cell 5"
+          name="rowCheckbox"
+          onChange={[Function]}
+          type="checkbox"
+          value={
+            Array [
+              "Row 3 cell 1",
+              "Row 3 cell 2",
+              "Row 3 cell 3",
+              "Row 3 cell 4",
+              "Row 3 cell 5",
+            ]
+          }
+        />
+        <label
+          htmlFor="rowCheckbox_Row 3 cell 1,Row 3 cell 2,Row 3 cell 3,Row 3 cell 4,Row 3 cell 5"
+        />
+        
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 3 cell 1
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 3 cell 2
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 3 cell 3
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 3 cell 4
+      </div>
+      <div
+        className="ce-table__data-cell "
+      >
+        Row 3 cell 5
+      </div>
+    </div>
+  </div>
+  <div
+    className="ce-table__container-mobile"
+  >
+    <div
+      className="ce-table__mobile-row"
+    >
+      <div
+        className="ce-table__mobile-card-container ce-table--selectable"
+      >
+        <div
+          className="ce-table__mobile-checkbox"
+        >
+          <div
+            className="ce-checkbox"
+          >
+            <input
+              checked={false}
+              disabled={false}
+              form=""
+              id="name_Row 1 cell 1,Row 1 cell 2,Row 1 cell 3,Row 1 cell 4,Row 1 cell 5"
+              name="name"
+              onChange={[Function]}
+              type="checkbox"
+              value={
+                Array [
+                  "Row 1 cell 1",
+                  "Row 1 cell 2",
+                  "Row 1 cell 3",
+                  "Row 1 cell 4",
+                  "Row 1 cell 5",
+                ]
+              }
+            />
+            <label
+              htmlFor="name_Row 1 cell 1,Row 1 cell 2,Row 1 cell 3,Row 1 cell 4,Row 1 cell 5"
+            />
+            
+          </div>
+        </div>
+        <div
+          className="ce-table__mobile-data-container"
+        >
+          <div
+            className="ce-table__mobile-headings"
+          >
+            <span>
+              <strong>
+                header1
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                header2
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                header3
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                header4
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                header5
+                :
+              </strong>
+            </span>
+          </div>
+          <div
+            className="ce-table__mobile-card-data"
+          >
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 1 cell 1
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 1 cell 2
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 1 cell 3
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 1 cell 4
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 1 cell 5
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="ce-table__mobile-card-container ce-table--selectable"
+      >
+        <div
+          className="ce-table__mobile-checkbox"
+        >
+          <div
+            className="ce-checkbox"
+          >
+            <input
+              checked={false}
+              disabled={false}
+              form=""
+              id="name_Row 2 cell 1,Row 2 cell 2,Row 2 cell 3,Row 2 cell 4,Row 2 cell 5"
+              name="name"
+              onChange={[Function]}
+              type="checkbox"
+              value={
+                Array [
+                  "Row 2 cell 1",
+                  "Row 2 cell 2",
+                  "Row 2 cell 3",
+                  "Row 2 cell 4",
+                  "Row 2 cell 5",
+                ]
+              }
+            />
+            <label
+              htmlFor="name_Row 2 cell 1,Row 2 cell 2,Row 2 cell 3,Row 2 cell 4,Row 2 cell 5"
+            />
+            
+          </div>
+        </div>
+        <div
+          className="ce-table__mobile-data-container"
+        >
+          <div
+            className="ce-table__mobile-headings"
+          >
+            <span>
+              <strong>
+                header1
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                header2
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                header3
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                header4
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                header5
+                :
+              </strong>
+            </span>
+          </div>
+          <div
+            className="ce-table__mobile-card-data"
+          >
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 2 cell 1
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 2 cell 2
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 2 cell 3
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 2 cell 4
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 2 cell 5
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="ce-table__mobile-card-container ce-table--selectable"
+      >
+        <div
+          className="ce-table__mobile-checkbox"
+        >
+          <div
+            className="ce-checkbox"
+          >
+            <input
+              checked={false}
+              disabled={false}
+              form=""
+              id="name_Row 3 cell 1,Row 3 cell 2,Row 3 cell 3,Row 3 cell 4,Row 3 cell 5"
+              name="name"
+              onChange={[Function]}
+              type="checkbox"
+              value={
+                Array [
+                  "Row 3 cell 1",
+                  "Row 3 cell 2",
+                  "Row 3 cell 3",
+                  "Row 3 cell 4",
+                  "Row 3 cell 5",
+                ]
+              }
+            />
+            <label
+              htmlFor="name_Row 3 cell 1,Row 3 cell 2,Row 3 cell 3,Row 3 cell 4,Row 3 cell 5"
+            />
+            
+          </div>
+        </div>
+        <div
+          className="ce-table__mobile-data-container"
+        >
+          <div
+            className="ce-table__mobile-headings"
+          >
+            <span>
+              <strong>
+                header1
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                header2
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                header3
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                header4
+                :
+              </strong>
+            </span>
+            <span>
+              <strong>
+                header5
+                :
+              </strong>
+            </span>
+          </div>
+          <div
+            className="ce-table__mobile-card-data"
+          >
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 3 cell 1
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 3 cell 2
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 3 cell 3
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 3 cell 4
+            </div>
+            <div
+              className="ce-table__mobile-card-row-data"
+            >
+              Row 3 cell 5
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 

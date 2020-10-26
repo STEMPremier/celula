@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import { ErrorBox } from '../core';
 
-import './checkbox.less';
+import '../core/selectable/selectable.less';
 
 /**
  * `Checkboxes` allow the user to select one or more items from a set. They can be used to turn an option on or off, select one or multiple items from a list, or present a list containing sub-selections.
@@ -19,6 +19,7 @@ const Checkbox = ({
   name,
   label,
   value,
+  ...rest
 }) => {
   const [isChecked, setIsChecked] = useState(checked);
 
@@ -27,7 +28,6 @@ const Checkbox = ({
   const classes = cx(
     'ce-checkbox',
     {
-      'ce-checkbox--disabled': disabled,
       'ce-checkbox--error': errorMsg,
     },
     className,
@@ -44,6 +44,9 @@ const Checkbox = ({
     handler(event);
   };
 
+  // console.log('rest', rest);
+
+  /* eslint-disable react/jsx-props-no-spreading */
   return (
     <div className={classes}>
       <input
@@ -55,11 +58,13 @@ const Checkbox = ({
         onChange={handleChange}
         type="checkbox"
         value={value}
+        {...rest} // This lets us overwrite the previous declerations of the props. ie. For use as part of other display components.
       />
       <label htmlFor={id}>{label}</label>
       {errorMsg && <ErrorBox errorMsg={errorMsg} />}
     </div>
   );
+  /* eslint-enable react/jsx-props-no-spreading */
 };
 
 Checkbox.propTypes = {

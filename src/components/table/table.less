@@ -1,0 +1,231 @@
+@import '../../styles/celula';
+
+.ce-table {
+  display: flex;
+
+  // desktop
+  @media screen and (min-width: 765px) {
+    flex-direction: column;
+  }
+
+  .ce-table__header {
+    box-sizing: border-box;
+
+    // desktop
+    @media screen and (min-width: 765px) {
+      border-bottom: 0.1rem solid #bfbfbf; // TODO: make this a variable
+      display: flex;
+      flex-direction: column;
+
+      .ce-table__header--group {
+        align-items: center;
+        display: flex;
+        height: 5rem;
+        padding-left: 2.1rem;
+
+        .ce-table__heading {
+          background-color: @white;
+          flex: 1 1 0px;
+          font-size: 1.4rem;
+          font-weight: bold;
+          line-height: 1.9rem;
+        }
+      }
+    }
+
+    // mobile
+    @media screen and (max-width: 765px) {
+      display: none;
+    }
+  }
+
+  .ce-table__body {
+    // mobile
+    @media screen and (max-width: 765px) {
+      flex: 1 1 0px; // Leave this `px` for IE support.
+    }
+
+    .ce-table__row {
+      display: flex;
+
+      // desktop
+      @media screen and (min-width: 765px) {
+        align-items: center;
+        height: 5rem;
+        padding-left: 2.1rem;
+      }
+
+      // mobile
+      @media screen and (max-width: 765px) {
+        flex-direction: column;
+        padding-left: 0.8rem;
+      }
+
+      .ce-table__cell {
+        // desktop
+        @media screen and (min-width: 765px) {
+          flex: 1 1 0px; // Leave this `px` for IE support.
+        }
+
+        // mobile
+        @media screen and (max-width: 765px) {
+          display: flex;
+          flex-direction: row;
+        }
+
+        .ce-table__cell-heading {
+          // desktop
+          @media screen and (min-width: 765px) {
+            display: none;
+          }
+
+          //mobile
+          @media screen and (max-width: 765px) {
+            flex: 1 1 0px; // Leave this `px` for IE support.
+            font-size: 1.4rem;
+            font-weight: bold;
+            line-height: 2.8rem;
+          }
+        }
+
+        .ce-table__cell-body {
+          font-size: 1.4rem;
+
+          // mobile
+          @media screen and (max-width: 765px) {
+            flex: 1 1 0px; // Leave this `px` for IE support.
+
+            line-height: 2.8rem;
+          }
+        }
+      }
+
+      &:nth-child(odd) {
+        background-color: @catskill-white;
+      }
+
+      &:nth-child(even) {
+        background-color: @white;
+
+        //mobile
+        @media screen and (max-width: 765px) {
+          border: 0.1rem solid @mobile-card-container-border;
+        }
+      }
+
+      &:hover {
+        background-color: #e6f7ff;
+      }
+    }
+  }
+
+  &.ce-table__selectable {
+    .ce-table__header {
+      .ce-table__header--group {
+        @media screen and (min-width: 765px) {
+          padding-left: 0;
+        }
+        .ce-table__heading {
+          &:first-of-type {
+            // desktop
+            @media screen and (min-width: 765px) {
+              box-sizing: border-box;
+              max-width: 5rem;
+              padding-left: 0.8rem;
+            }
+
+            .ce-checkbox {
+              label {
+                display: none;
+              }
+            }
+          }
+
+          &:not(:first-of-type) {
+            // desktop
+            @media screen and (min-width: 765px) {
+              padding-left: 25px;
+            }
+          }
+        }
+      }
+    }
+
+    .ce-table__body {
+      .ce-table__row {
+        // desktop
+        @media screen and (min-width: 765px) {
+          padding-left: 0;
+        }
+
+        // mobile
+        @media screen and (max-width: 765px) {
+          padding-left: 0;
+        }
+
+        .ce-table__cell {
+          &:first-of-type {
+            // desktop
+            @media screen and (min-width: 765px) {
+              box-sizing: border-box;
+              max-width: 5rem;
+              padding-left: 0.8rem;
+            }
+
+            // mobile
+            @media screen and (max-width: 765px) {
+              max-height: 4.3rem;
+            }
+
+            .ce-checkbox {
+              label {
+                display: none;
+              }
+            }
+
+            .ce-table__cell-heading {
+              box-sizing: border-box;
+              max-height: 4.3rem;
+              padding-left: 0.3rem;
+              padding-top: 0.3rem;
+
+              @media screen and (max-width: 765px) {
+                display: none;
+              }
+            }
+
+            .ce-table__cell-body {
+              //mobile
+              @media screen and (max-width: 765px) {
+                padding-left: 0.3rem;
+                padding-top: 0.3rem;
+              }
+            }
+          }
+
+          &:last-of-type {
+            padding-bottom: 2.2rem;
+          }
+
+          &:not(:first-of-type) {
+            // desktop
+            @media screen and (min-width: 765px) {
+              padding-left: 25px;
+            }
+
+            //mobile
+            @media screen and (max-width: 765px) {
+              padding-left: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.ce-table__clickable {
+    .ce-table__row {
+      cursor: pointer;
+    }
+  }
+}

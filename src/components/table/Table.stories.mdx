@@ -1,0 +1,41 @@
+import {
+  Description,
+  Meta,
+  Preview,
+  Props,
+  Story,
+} from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+
+import { data, columns } from './data.js';
+import Table from '.';
+
+<Meta component={Table} title="Components/Atoms/Table" />
+
+# Table
+
+<Description of={Table} />
+<Props of={Table} />
+
+### Types
+
+<Preview>
+  <Story name="Default">
+    <Table
+      columns={columns}
+      data={data}
+      rowFunction={(event) => console.log(event.target)}
+    />
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Selectable">
+    <Table
+      columns={columns}
+      data={data}
+      rowFunction={(event) => console.log(event.target)}
+      selectable={true}
+    />
+  </Story>
+</Preview>

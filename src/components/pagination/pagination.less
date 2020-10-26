@@ -1,0 +1,83 @@
+@import '../../styles/celula';
+
+.ce-pagination {
+  background-color: @white;
+  display: flex;
+  justify-content: center;
+
+  .ce-pagination__container {
+    align-items: center;
+    border-radius: 3.3rem;
+    box-shadow: -0.4rem 0.4rem 1.5rem 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 1rem 4.8rem;
+
+    li {
+      button {
+        background-color: transparent;
+        border: none;
+        border-radius: 5rem;
+        cursor: pointer;
+        height: 3rem;
+        margin: 0 0.5rem;
+        outline: none;
+        width: 3rem;
+
+        span {
+          height: 1.6rem;
+        }
+
+        &:disabled {
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    .ce-pagination__arrow {
+      &:first-of-type {
+        margin-top: -0.4rem;
+        margin-right: 1.3rem;
+
+        button {
+          -webkit-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          transform: rotate(180deg);
+        }
+      }
+
+      &:last-of-type {
+        margin-top: 0.4rem;
+        margin-left: 1.3rem;
+      }
+    }
+  }
+
+  .ce-pagination__number {
+    button {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    &.current-page {
+      button {
+        background: @pagination-highlighted;
+        color: @white;
+      }
+    }
+
+    .ce-pagination__page-link {
+      // padding: 0.5rem 1.1rem 0.7rem 1.1rem;
+      // margin-top: -1px;
+      // color: @black;
+    }
+
+    .ce-pagination__last-page {
+      // color: @black;
+    }
+
+    .ce-pagination__ellipsis {
+      // color: @black;
+      // cursor: default;
+    }
+  }
+}
