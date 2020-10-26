@@ -4,11 +4,12 @@ import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import { useTable, useRowSelect } from 'react-table';
+import { useTable, usePagination, useRowSelect } from 'react-table';
 
 import './table.less';
 
-import Checkbox from '../form-controls/checkbox/Checkbox';
+import { Checkbox } from '../form-controls/checkbox';
+import Pagination from '../pagination';
 
 /* eslint-disable react/display-name */
 /* eslint-disable react/prop-types */
@@ -49,10 +50,20 @@ const Table = ({
     getTableProps,
     getTableBodyProps,
     headerGroups,
-    rows,
     prepareRow,
+    page,
+    canPreviousPage,
+    canNextPage,
+    pageCount,
+    gotoPage,
+    nextPage,
+    previousPage,
+    // setPageSize,
+    // state: { pageIndex, pageSize },
+    state: { pageIndex },
   } = useTable(
     { columns: cols, data: info },
+    usePagination,
     useRowSelect,
     selectable ? useRowSelectComponents : () => {}, // This is the mechanism for turning on/off the checkbox column
   );
@@ -67,62 +78,75 @@ const Table = ({
   );
 
   return (
-    <div className={classes} {...getTableProps()}>
-      {/* table header */}
-      <div className="ce-table__header" role="rowgroup">
-        {headerGroups.map((headerGroup) => (
-          <div
-            className="ce-table__header--group"
-            {...headerGroup.getHeaderGroupProps()}
-            key={headerGroup.id}
-          >
-            {headerGroup.headers.map((column) => (
-              <div
-                className="ce-table__heading"
-                {...column.getHeaderProps()}
-                key={column.id}
-              >
-                {column.render('Header')}
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
-
-      {/* table body */}
-      <div className="ce-table__body" {...getTableBodyProps()}>
-        {rows.map((row) => {
-          prepareRow(row);
-
-          const rowProps = {
-            className: 'ce-table__row',
-            ...row.getRowProps(),
-            onClick: rowFunction,
-          };
-
-          return (
-            <div {...rowProps} key={row.id}>
-              {row.cells.map((cell) => (
+    <>
+      <div className={classes} {...getTableProps()}>
+        {/* table header */}
+        <div className="ce-table__header" role="rowgroup">
+          {headerGroups.map((headerGroup) => (
+            <div
+              className="ce-table__header--group"
+              {...headerGroup.getHeaderGroupProps()}
+              key={headerGroup.id}
+            >
+              {headerGroup.headers.map((column) => (
                 <div
-                  className="ce-table__cell"
-                  {...cell.getCellProps()}
-                  key={cell.id}
+                  className="ce-table__heading"
+                  {...column.getHeaderProps()}
+                  key={column.id}
                 >
-                  <div className="ce-table__cell-heading">
-                    {typeof cell.column.Header === 'string'
-                      ? `${cell.render('Header')}:`
-                      : cell.render('Header')}
-                  </div>
-                  <div className="ce-table__cell-body">
-                    {cell.render('Cell')}
-                  </div>
+                  {column.render('Header')}
                 </div>
               ))}
             </div>
-          );
-        })}
+          ))}
+        </div>
+
+        {/* table body */}
+        <div className="ce-table__body" {...getTableBodyProps()}>
+          {page.map((row) => {
+            prepareRow(row);
+
+            const rowProps = {
+              className: 'ce-table__row',
+              ...row.getRowProps(),
+              onClick: rowFunction,
+            };
+
+            return (
+              <div {...rowProps} key={row.id}>
+                {row.cells.map((cell) => (
+                  <div
+                    className="ce-table__cell"
+                    {...cell.getCellProps()}
+                    key={cell.id}
+                  >
+                    <div className="ce-table__cell-heading">
+                      {typeof cell.column.Header === 'string'
+                        ? `${cell.render('Header')}:`
+                        : cell.render('Header')}
+                    </div>
+                    <div className="ce-table__cell-body">
+                      {cell.render('Cell')}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            );
+          })}
+        </div>
       </div>
-    </div>
+      {pageCount > 1 && (
+        <Pagination
+          canPreviousPage={canPreviousPage}
+          canNextPage={canNextPage}
+          currentPage={pageIndex}
+          gotoPage={gotoPage}
+          nextPage={nextPage}
+          pageCount={pageCount}
+          prevPage={previousPage}
+        />
+      )}
+    </>
   );
 };
 
@@ -140,13 +164,17 @@ Table.propTypes = {
    */
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
   /**
-   * A function to trigger when the state of the `<Table />` changes.  This function is only accessible if the "selectable" prop is set to true.  The default for the selectable and this handleClick function are both false.
+   * A function to trigger when the state of the `<Table />` changes.
+   * This function is only accessible if the "selectable" prop is set to true.
+   * The default for the selectable and this handleClick function are both false.
    */
   // handleClick: PropTypes.func,
   /**
    * A function to trigger when clicking on a row. Also enables the rows to be clickable.
    *
-   * NOTE: As I am using the presence of a function as a trigger for some functionality this is preferable than setting a default function that will evaluate to true, forcing me to also set up a bool prop.
+   * NOTE: As I am using the presence of a function as a trigger for some functionality,
+   * turning off the `default value` warning is preferable than setting a default
+   * function that will evaluate to true, forcing me to set up an otherwise unneeded bool prop.
    */
   rowFunction: PropTypes.func, // eslint-disable-line
   /**

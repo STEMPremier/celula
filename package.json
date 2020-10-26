@@ -49,6 +49,7 @@
     "less-loader": "^5.0.0",
     "lodash.flow": "^3.5.0",
     "mini-css-extract-plugin": "^0.8.0",
+    "namor": "^2.0.2",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
