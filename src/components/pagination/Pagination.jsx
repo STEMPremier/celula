@@ -1,7 +1,6 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable no-plusplus */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
@@ -9,168 +8,161 @@ import './pagination.less';
 
 import { SystemIcon } from '../icon';
 
-const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
+const Pagination = ({
+  className,
+  canNextPage,
+  canPreviousPage,
+  currentPage, // 0-indexed
+  gotoPage,
+  nextPage,
+  pageCount,
+  prevPage,
+}) => {
   const classes = cx('ce-pagination', className);
 
-  const [posts, setPosts] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [leftArrowDisabled, setLeftArrowDisabled] = useState(true);
+  const renderNumbers = () => {
+    const elements = [];
+    const realPage = currentPage + 1;
 
-  const pageNumbers = [];
-  const totalPosts = data.length;
+    if (pageCount > 5) {
+      for (let i = 1; i < 6; i++) {
+        let classList = 'ce-pagination__number';
+        let label = '...';
+        let navToPage; // because currentPage is 0 indexed, so is this
 
-  useEffect(() => {
-    setPosts(data);
-    // handle leftArrowDisabled
-    if (currentPage < 2) {
-      setLeftArrowDisabled(true);
+        switch (i) {
+          case 1:
+            label = 1;
+            navToPage = 0;
+
+            if (realPage === 1) classList = `${classList} current-page`;
+            break;
+          case 2:
+            if (realPage <= 3) {
+              label = 2;
+              navToPage = 1;
+            }
+
+            if (realPage === 2) {
+              classList = `${classList} current-page`;
+            }
+
+            if (realPage > 3) {
+              label = '...';
+              navToPage = currentPage - 1;
+            }
+            break;
+          case 3:
+            if (realPage <= 3) {
+              label = 3;
+              navToPage = 2;
+            }
+
+            if (realPage === 3) classList = `${classList} current-page`;
+
+            if (realPage > 3 && realPage < pageCount - 1) {
+              label = realPage;
+              navToPage = currentPage;
+            }
+
+            if (realPage > 3 && realPage < pageCount - 1) {
+              classList = `${classList} current-page`;
+            }
+
+            if (realPage === pageCount - 1 || realPage === pageCount) {
+              label = pageCount - 2;
+              navToPage = pageCount - 3;
+            }
+            break;
+          case 4:
+            if (realPage < pageCount - 2) {
+              label = '...';
+              navToPage = currentPage + 1;
+            }
+
+            if (realPage === pageCount - 2) {
+              label = realPage + 1;
+              navToPage = currentPage + 1;
+            }
+
+            if (realPage === pageCount - 1) {
+              classList = `${classList} current-page`;
+              label = realPage;
+              navToPage = currentPage;
+            }
+
+            if (currentPage + 1 === pageCount) {
+              label = pageCount - 1;
+              navToPage = pageCount - 2;
+            }
+            break;
+          case 5: // extreme right
+            label = pageCount;
+            navToPage = pageCount - 1;
+
+            if (currentPage + 1 === pageCount) {
+              classList = `${classList} current-page`;
+            }
+            break;
+          default:
+        }
+
+        elements.push(
+          <li className={classList} key={i}>
+            <button
+              type="button"
+              onClick={() => gotoPage(navToPage) /* The pages are 0-indexed */}
+            >
+              {label}
+            </button>
+          </li>,
+        );
+      }
     } else {
-      setLeftArrowDisabled(false);
+      for (let i = 0; i < pageCount; i++) {
+        elements.push(
+          <li
+            className={`ce-pagination__number${
+              currentPage === i ? ' current-page' : ''
+            }`}
+            key={i}
+          >
+            <button
+              type="button"
+              onClick={() => gotoPage(i) /* The pages are 0-indexed */}
+            >
+              {i + 1}
+            </button>
+          </li>,
+        );
+      }
     }
-  });
 
-  // Get current posts
-  const indexOfLastPost = currentPage * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
-
-  // Calculate total pages
-  const totalPages = Math.ceil(totalPosts / postsPerPage);
-
-  const truncatedData = [];
-
-  let startPage = 0;
-  let endPage = 0;
-
-  // If truncation is neccessary, organize
-  if (totalPages <= limitPageNumbers) {
-    startPage = 1;
-    // then show all pages
-    endPage = totalPages;
-  } else {
-    // calculate start and end pages
-    const maxPagesBeforeCurrentPage = Math.floor(limitPageNumbers / 2);
-    const maxPagesAfterCurrentPage = Math.ceil(limitPageNumbers / 2) - 1;
-
-    if (currentPage <= maxPagesBeforeCurrentPage) {
-      // current page near the start
-      startPage = 1;
-      endPage = limitPageNumbers;
-    } else if (currentPage + maxPagesAfterCurrentPage >= totalPages) {
-      // current page near the end
-      startPage = totalPages - limitPageNumbers + 1;
-      endPage = totalPages;
-    } else {
-      // current page somwhere in the middle
-      startPage = currentPage - maxPagesBeforeCurrentPage;
-      endPage = currentPage + maxPagesAfterCurrentPage;
-    }
-  }
-
-  // push in the correct data
-  for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
-    pageNumbers.push(i);
-    if (i >= startPage && i <= endPage) {
-      truncatedData.push(i);
-    }
-  }
-
-  // change page
-  const paginate = pageNumber => {
-    setCurrentPage(pageNumber);
-  };
-
-  const paginateLeft = () => {
-    if (currentPage !== 1) {
-      const position = pageNumbers.indexOf(currentPage);
-      setCurrentPage(position);
-    }
-  };
-
-  const paginateRight = () => {
-    const lastPage = pageNumbers.pop();
-    if (lastPage !== currentPage) {
-      const position = pageNumbers.indexOf(currentPage);
-      setCurrentPage(position + 2);
-    }
+    return elements;
   };
 
   return (
     <nav className={classes}>
-      <h1>{currentPosts}</h1>
-      <ul className="ce-pagination__oval-container">
-        <button
-          type="button"
-          onClick={paginateLeft}
-          className="ce-pagination__arrow ce-pagination__arrow--left"
+      <ul className="ce-pagination__container">
+        <li
+          className={`ce-pagination__arrow${
+            !canPreviousPage ? ' ce-arrow--disabled' : ''
+          }`}
         >
-          <SystemIcon
-            name="navigate"
-            color={`${leftArrowDisabled === true ? 'grey' : 'black'} `}
-          />
-        </button>
-        {startPage !== 1 && (
-          <>
-            <li className="ce-pagination__page-item">
-              <button
-                type="button"
-                onClick={() => paginate(totalPages)}
-                className="ce-pagination__last-page"
-              >
-                1
-              </button>
-            </li>
-            <li className="ce-pagination__page-item">
-              <a href="#" className="ce-pagination__ellipsis">
-                ...
-              </a>
-            </li>
-          </>
-        )}
-        {truncatedData.map(number => (
-          <div key={number}>
-            <li key={number} className="ce-pagination__page-item">
-              <button
-                onClick={() => paginate(number)}
-                type="button"
-                className={`ce-pagination__page-link ${
-                  currentPage === number ? 'ce-pagination--current' : ''
-                  } `}
-              >
-                {number}
-              </button>
-            </li>
-          </div>
-        ))}
-        {endPage !== totalPages && (
-          <>
-            <li className="ce-pagination__page-item">
-              <button type="button" className="ce-pagination__ellipsis">
-                ...
-              </button>
-            </li>
-            <li className="ce-pagination__page-item">
-              <button
-                onClick={() => paginate(totalPages)}
-                type="button"
-                className="ce-pagination__last-page"
-              >
-                {totalPages}
-              </button>
-            </li>
-          </>
-        )}
-
-        <button
-          type="button"
-          className="ce-pagination__arrow"
-          onClick={paginateRight}
+          <button disabled={!canPreviousPage} onClick={prevPage} type="button">
+            <SystemIcon name="navigate" color="black" />
+          </button>
+        </li>
+        {renderNumbers()}
+        <li
+          className={`ce-pagination__arrow${
+            !canNextPage ? ' ce-arrow--disabled' : ''
+          }`}
         >
-          <SystemIcon
-            name="navigate"
-            color={`${endPage === totalPages ? 'gray' : 'black'} `}
-          />
-        </button>
+          <button disabled={!canNextPage} onClick={nextPage} type="button">
+            <SystemIcon name="navigate" color="black" />
+          </button>
+        </li>
       </ul>
     </nav>
   );
@@ -178,28 +170,47 @@ const Pagination = ({ className, limitPageNumbers, postsPerPage, data }) => {
 
 Pagination.propTypes = {
   /**
+   * Disable the next page button if there are no more pages.
+   */
+  canNextPage: PropTypes.bool,
+  /**
+   * Disable the previous page if there are no prior pages.
+   */
+  canPreviousPage: PropTypes.bool,
+  /**
    * A class name, or string of class names, to add to the `<Pagination />`.
    */
   className: PropTypes.string,
   /**
-   * The maximum number of pages to show in the `<Pagination />` before setting up the ellipsis and last page format.
+   * The current page number.
    */
-  limitPageNumbers: PropTypes.number,
+  currentPage: PropTypes.number.isRequired,
   /**
-   * The maximum number of posts to be paginated on each page.
+   * A function to trigger to navigate to an arbitrary page.
    */
-  postsPerPage: PropTypes.number,
+  gotoPage: PropTypes.func.isRequired,
+  /**
+   * A function to trigger to navigate to the next page.
+   */
+  nextPage: PropTypes.func.isRequired,
+  /**
+   * The total number of pages.
+   */
+  pageCount: PropTypes.number.isRequired,
+  /**
+   * A function to trigger to navigate to the previous page.
+   */
+  prevPage: PropTypes.func.isRequired,
   /**
    * Pass in the posts from the http call.
    */
-  data: PropTypes.arrayOf(PropTypes.any),
 };
 
 Pagination.defaultProps = {
+  canNextPage: true,
+  canPreviousPage: true,
   className: '',
-  limitPageNumbers: 5,
-  postsPerPage: 10,
-  data: [],
 };
 
 export default Pagination;
+/* eslint-enable react/no-array-index-key */
