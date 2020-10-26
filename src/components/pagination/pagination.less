@@ -1,67 +1,83 @@
 @import '../../styles/celula';
 
 .ce-pagination {
-  button {
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: @white;
-  }
+  background-color: @white;
+  display: flex;
+  justify-content: center;
 
-  .ce-pagination__oval-container {
-    background-color: @white;
-    flex-flow: row wrap;
-    text-align: center;
-    justify-content: center;
+  .ce-pagination__container {
     align-items: center;
-    display: flex;
-    height: 5rem;
     border-radius: 3.3rem;
     box-shadow: -0.4rem 0.4rem 1.5rem 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 1rem 4.8rem;
 
-    .ce-pagination__arrow {
-      margin: 0.8rem 1rem 0 1rem;
-
-      &.ce-pagination__arrow--left {
-        margin-top: 0px;
-        -webkit-transform: rotate(180deg);
-        -moz-transform: rotate(180deg);
-        transform: rotate(180deg);
-      }
-    }
-  }
-
-  .ce-pagination__page-item {
-    height: 3rem;
-    margin: 1rem 1rem 0 1rem;
-
-    .ce-pagination__page-link {
-      padding: 0.5rem 1.1rem 0.7rem 1.1rem;
-      margin-top: -1px;
-      color: @black;
-
-      &.ce-pagination--current {
-        color: @white;
+    li {
+      button {
+        background-color: transparent;
+        border: none;
         border-radius: 5rem;
-        background: @pagination-highlighted;
-        .ce-pagination__page-link {
-          color: @white;
+        cursor: pointer;
+        height: 3rem;
+        margin: 0 0.5rem;
+        outline: none;
+        width: 3rem;
+
+        span {
+          height: 1.6rem;
+        }
+
+        &:disabled {
+          cursor: not-allowed;
         }
       }
     }
 
-    .ce-pagination__last-page {
-      color: @black;
-    }
+    .ce-pagination__arrow {
+      &:first-of-type {
+        margin-top: -0.4rem;
+        margin-right: 1.3rem;
 
-    .ce-pagination__ellipsis {
-      color: @black;
-      cursor: default;
+        button {
+          -webkit-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          transform: rotate(180deg);
+        }
+      }
+
+      &:last-of-type {
+        margin-top: 0.4rem;
+        margin-left: 1.3rem;
+      }
     }
   }
 
-  a {
-    outline: none;
-    text-decoration: none;
+  .ce-pagination__number {
+    button {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    &.current-page {
+      button {
+        background: @pagination-highlighted;
+        color: @white;
+      }
+    }
+
+    .ce-pagination__page-link {
+      // padding: 0.5rem 1.1rem 0.7rem 1.1rem;
+      // margin-top: -1px;
+      // color: @black;
+    }
+
+    .ce-pagination__last-page {
+      // color: @black;
+    }
+
+    .ce-pagination__ellipsis {
+      // color: @black;
+      // cursor: default;
+    }
   }
 }
