@@ -5983,7 +5983,7 @@ exports[`Storyshots Components/Molecules/Form Controls/FileUploader FileUplaoder
   id="fileUploaderWithKnobForm"
 >
   <div
-    className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--small ce-file-uploader--default"
+    className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--small"
   >
     <input
       accept=""
@@ -8191,7 +8191,7 @@ exports[`Storyshots Components/Molecules/Form Controls/SubmitButton Solid Small 
 
 exports[`Storyshots Components/Molecules/Form Controls/SubmitButton SubmitButton with Knobs 1`] = `
 <button
-  className="ce-button ce-button--small ce-button--primary"
+  className="ce-button ce-button--solid ce-button--small ce-button--primary"
   disabled={false}
   onClick={[Function]}
   type="submit"

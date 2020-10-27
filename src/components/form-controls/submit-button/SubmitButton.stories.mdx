@@ -1,4 +1,10 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
 
@@ -6,9 +12,13 @@ import { BUTTON_TYPES as TYPES, COLORS, SIZES } from '../../../utils/constants';
 
 import SubmitButton from '.';
 
-<Meta component={SubmitButton} title="Components/Molecules/Form Controls/SubmitButton" />
+<Meta
+  component={SubmitButton}
+  title="Components/Molecules/Form Controls/SubmitButton"
+/>
 
 # SubmitButton
+
 <Description of={SubmitButton} />
 <ArgsTable of={SubmitButton} />
 
@@ -19,19 +29,22 @@ import SubmitButton from '.';
     disabled={boolean('disabled', false)}
     handleClick={action('`SubmitButton with Knobs` onClick event triggered.')}
     size={select('size', SIZES, 'small')}
-    type={select('type', TYPES, 'default')}
+    type={select('type', TYPES, 'solid')}
   >
     {text('children', 'a button')}
   </SubmitButton>
 </Story>
 
 ## Solid SubmitButtons (Default)
+
 Solid buttons are high-emphasis, distinguished by their use of elevation and fill. They contain actions that are primary to an application.
 
 <Canvas>
   <Story name="Solid Small">
     <SubmitButton
-      handleClick={action("`Solid Small SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Solid Small SubmitButton` onClick event triggered.`',
+      )}
       size="small"
     >
       small button
@@ -39,7 +52,9 @@ Solid buttons are high-emphasis, distinguished by their use of elevation and fil
   </Story>
   <Story name="Solid Large (Default)">
     <SubmitButton
-      handleClick={action("`Solid Large SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Solid Large SubmitButton` onClick event triggered.`',
+      )}
       size="large"
     >
       large button
@@ -47,7 +62,9 @@ Solid buttons are high-emphasis, distinguished by their use of elevation and fil
   </Story>
   <Story name="Solid Jumbo">
     <SubmitButton
-      handleClick={action("`Solid Jumbo SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Solid Jumbo SubmitButton` onClick event triggered.`',
+      )}
       size="jumbo"
     >
       jumbo button
@@ -56,11 +73,14 @@ Solid buttons are high-emphasis, distinguished by their use of elevation and fil
 </Canvas>
 
 ### Colors and States
+
 <Canvas>
   <Story name="Solid Primary (Default)">
     <SubmitButton
       color="primary"
-      handleClick={action("`Solid Primary SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Solid Primary SubmitButton` onClick event triggered.`',
+      )}
       size="small"
     >
       primary
@@ -69,7 +89,9 @@ Solid buttons are high-emphasis, distinguished by their use of elevation and fil
   <Story name="Solid Secondary">
     <SubmitButton
       color="secondary"
-      handleClick={action("`Solid Secondary SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Solid Secondary SubmitButton` onClick event triggered.`',
+      )}
       size="small"
     >
       secondary
@@ -78,17 +100,21 @@ Solid buttons are high-emphasis, distinguished by their use of elevation and fil
   <Story name="Solid Black">
     <SubmitButton
       color="black"
-      handleClick={action("`Solid Black SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Solid Black SubmitButton` onClick event triggered.`',
+      )}
       size="small"
     >
       black
     </SubmitButton>
   </Story>
   <Story name="Solid Inverted">
-    <div style={{backgroundColor: 'black'}}>
+    <div style={{ backgroundColor: 'black' }}>
       <SubmitButton
         color="inverted"
-        handleClick={action("`Solid Inverted SubmitButton` onClick event triggered.`")}
+        handleClick={action(
+          '`Solid Inverted SubmitButton` onClick event triggered.`',
+        )}
         size="small"
       >
         inverted
@@ -98,7 +124,9 @@ Solid buttons are high-emphasis, distinguished by their use of elevation and fil
   <Story name="Solid Disabled">
     <SubmitButton
       disabled={true}
-      handleClick={action("`Solid Disabled SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Solid Disabled SubmitButton` onClick event triggered.`',
+      )}
       size="small"
     >
       disabled
@@ -107,12 +135,15 @@ Solid buttons are high-emphasis, distinguished by their use of elevation and fil
 </Canvas>
 
 ## Outline SubmitButtons
+
 Outlined buttons are medium-emphasis buttons. They contain actions that are important, but aren’t the primary action in an app. Outlined buttons are also a lower emphasis alternative to contained buttons, or a higher emphasis alternative to text buttons.
 
 <Canvas>
   <Story name="Outline Small">
     <SubmitButton
-      handleClick={action("`Outline Small SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Outline Small SubmitButton` onClick event triggered.`',
+      )}
       size="small"
       type="outline"
     >
@@ -121,7 +152,9 @@ Outlined buttons are medium-emphasis buttons. They contain actions that are impo
   </Story>
   <Story name="Outline Large (Default)">
     <SubmitButton
-      handleClick={action("`Outline Large SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Outline Large SubmitButton` onClick event triggered.`',
+      )}
       size="large"
       type="outline"
     >
@@ -130,7 +163,9 @@ Outlined buttons are medium-emphasis buttons. They contain actions that are impo
   </Story>
   <Story name="Outline Jumbo">
     <SubmitButton
-      handleClick={action("`Outline Jumbo SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Outline Jumbo SubmitButton` onClick event triggered.`',
+      )}
       size="jumbo"
       type="outline"
     >
@@ -140,11 +175,14 @@ Outlined buttons are medium-emphasis buttons. They contain actions that are impo
 </Canvas>
 
 ### Colors and States
+
 <Canvas>
   <Story name="Outline Primary (Default)">
     <SubmitButton
       color="primary"
-      handleClick={action("`Outline Primary SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Outline Primary SubmitButton` onClick event triggered.`',
+      )}
       size="small"
       type="outline"
     >
@@ -154,7 +192,9 @@ Outlined buttons are medium-emphasis buttons. They contain actions that are impo
   <Story name="Outline Secondary">
     <SubmitButton
       color="secondary"
-      handleClick={action("`Outline Secondary SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Outline Secondary SubmitButton` onClick event triggered.`',
+      )}
       size="small"
       type="outline"
     >
@@ -164,7 +204,9 @@ Outlined buttons are medium-emphasis buttons. They contain actions that are impo
   <Story name="Outline Black">
     <SubmitButton
       color="black"
-      handleClick={action("`Outline Black SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Outline Black SubmitButton` onClick event triggered.`',
+      )}
       size="small"
       type="outline"
     >
@@ -172,10 +214,12 @@ Outlined buttons are medium-emphasis buttons. They contain actions that are impo
     </SubmitButton>
   </Story>
   <Story name="Outline Inverted">
-    <div style={{backgroundColor: 'black'}}>
+    <div style={{ backgroundColor: 'black' }}>
       <SubmitButton
         color="inverted"
-        handleClick={action("`Outline Inverted SubmitButton` onClick event triggered.`")}
+        handleClick={action(
+          '`Outline Inverted SubmitButton` onClick event triggered.`',
+        )}
         size="small"
         type="outline"
       >
@@ -186,7 +230,9 @@ Outlined buttons are medium-emphasis buttons. They contain actions that are impo
   <Story name="Outline Disabled">
     <SubmitButton
       disabled={true}
-      handleClick={action("`Outline Disabled SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Outline Disabled SubmitButton` onClick event triggered.`',
+      )}
       size="small"
       type="outline"
     >
@@ -196,6 +242,7 @@ Outlined buttons are medium-emphasis buttons. They contain actions that are impo
 </Canvas>
 
 ## Text Buttons
+
 Text buttons are typically used for less-pronounced actions, including those located in dialogs and cards.
 
 Text buttons are often embedded in contained components like cards and dialogs, in order to relate themselves to the component in which they appear. Because text buttons don’t have a container, they don’t distract from nearby content.
@@ -203,7 +250,9 @@ Text buttons are often embedded in contained components like cards and dialogs, 
 <Canvas>
   <Story name="Text Small">
     <SubmitButton
-      handleClick={action("`Text Small SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Text Small SubmitButton` onClick event triggered.`',
+      )}
       size="small"
       type="text"
     >
@@ -212,7 +261,9 @@ Text buttons are often embedded in contained components like cards and dialogs, 
   </Story>
   <Story name="Text Large (Default)">
     <SubmitButton
-      handleClick={action("`Text Large SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Text Large SubmitButton` onClick event triggered.`',
+      )}
       size="large"
       type="text"
     >
@@ -221,7 +272,9 @@ Text buttons are often embedded in contained components like cards and dialogs, 
   </Story>
   <Story name="Text Jumbo">
     <SubmitButton
-      handleClick={action("`Text Jumbo SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Text Jumbo SubmitButton` onClick event triggered.`',
+      )}
       size="jumbo"
       type="text"
     >
@@ -231,11 +284,14 @@ Text buttons are often embedded in contained components like cards and dialogs, 
 </Canvas>
 
 ### Colors and States
+
 <Canvas>
   <Story name="Text Primary (Default)">
     <SubmitButton
       color="primary"
-      handleClick={action("`Text Primary SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Text Primary SubmitButton` onClick event triggered.`',
+      )}
       size="small"
       type="text"
     >
@@ -245,7 +301,9 @@ Text buttons are often embedded in contained components like cards and dialogs, 
   <Story name="Text Secondary">
     <SubmitButton
       color="secondary"
-      handleClick={action("`Text Secondary SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Text Secondary SubmitButton` onClick event triggered.`',
+      )}
       size="small"
       type="text"
     >
@@ -255,7 +313,9 @@ Text buttons are often embedded in contained components like cards and dialogs, 
   <Story name="Text Black">
     <SubmitButton
       color="black"
-      handleClick={action("`Text Black SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Text Black SubmitButton` onClick event triggered.`',
+      )}
       size="small"
       type="text"
     >
@@ -263,10 +323,12 @@ Text buttons are often embedded in contained components like cards and dialogs, 
     </SubmitButton>
   </Story>
   <Story name="Text Inverted">
-    <div style={{backgroundColor: 'black'}}>
+    <div style={{ backgroundColor: 'black' }}>
       <SubmitButton
         color="inverted"
-        handleClick={action("`Text Inverted SubmitButton` onClick event triggered.`")}
+        handleClick={action(
+          '`Text Inverted SubmitButton` onClick event triggered.`',
+        )}
         size="small"
         type="text"
       >
@@ -277,7 +339,9 @@ Text buttons are often embedded in contained components like cards and dialogs, 
   <Story name="Text Disabled">
     <SubmitButton
       disabled={true}
-      handleClick={action("`Text Disabled SubmitButton` onClick event triggered.`")}
+      handleClick={action(
+        '`Text Disabled SubmitButton` onClick event triggered.`',
+      )}
       size="small"
       type="text"
     >
