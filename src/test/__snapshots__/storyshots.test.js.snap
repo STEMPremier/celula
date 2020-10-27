@@ -1079,116 +1079,212 @@ exports[`Storyshots Components/Atoms/Link Uppercase Secondary 1`] = `
 </a>
 `;
 
-<<<<<<< HEAD
-exports[`Storyshots Components/Atoms/Pagination Pagination with Knobs 1`] = `
+exports[`Storyshots Components/Atoms/Pagination Pagination 1`] = `
 <nav
   className="ce-pagination"
 >
-  <h1 />
   <ul
-    className="ce-pagination__oval-container"
+    className="ce-pagination__container"
   >
-    <button
-      className="ce-pagination__arrow ce-pagination__arrow--left"
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="ce-icon ce-icon__system ce-icon--large"
-      >
-        <svg
-          className="ce-icon--grey "
-        >
-          <use
-            xlinkHref="#icons_system-navigate"
-          />
-        </svg>
-      </span>
-    </button>
-    <div>
-      <li
-        className="ce-pagination__page-item"
-      >
-        <a
-          className="ce-pagination__page-link ce-pagination--current "
-          href="#"
-          onClick={[Function]}
-        >
-          1
-        </a>
-      </li>
-    </div>
-    <div>
-      <li
-        className="ce-pagination__page-item"
-      >
-        <a
-          className="ce-pagination__page-link  "
-          href="#"
-          onClick={[Function]}
-        >
-          2
-        </a>
-      </li>
-    </div>
-    <div>
-      <li
-        className="ce-pagination__page-item"
-      >
-        <a
-          className="ce-pagination__page-link  "
-          href="#"
-          onClick={[Function]}
-        >
-          3
-        </a>
-      </li>
-    </div>
     <li
-      className="ce-pagination__page-item"
+      className="ce-pagination__arrow"
     >
-      <a
-        className="ce-pagination__ellipsis"
-        href="#"
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className="ce-icon--black"
+          >
+            <use
+              xlinkHref="#icons_system-navigate"
+            />
+          </svg>
+        </span>
+      </button>
+    </li>
+    <li
+      className="ce-pagination__number"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        1
+      </button>
+    </li>
+    <li
+      className="ce-pagination__number current-page"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        2
+      </button>
+    </li>
+    <li
+      className="ce-pagination__number"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        3
+      </button>
+    </li>
+    <li
+      className="ce-pagination__number"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
       >
         ...
-      </a>
+      </button>
     </li>
     <li
-      className="ce-pagination__page-item"
+      className="ce-pagination__number"
     >
-      <a
-        className="ce-pagination__last-page"
-        href="#"
+      <button
         onClick={[Function]}
+        type="button"
       >
-        5
-      </a>
+        10
+      </button>
     </li>
-    <button
+    <li
       className="ce-pagination__arrow"
-      onClick={[Function]}
-      type="button"
     >
-      <span
-        className="ce-icon ce-icon__system ce-icon--large"
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
       >
-        <svg
-          className="ce-icon--black "
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
         >
-          <use
-            xlinkHref="#icons_system-navigate"
-          />
-        </svg>
-      </span>
-    </button>
+          <svg
+            className="ce-icon--black"
+          >
+            <use
+              xlinkHref="#icons_system-navigate"
+            />
+          </svg>
+        </span>
+      </button>
+    </li>
   </ul>
 </nav>
 `;
 
-exports[`Storyshots Components/Atoms/Search Search States 1`] = `
-<div>
-=======
+exports[`Storyshots Components/Atoms/Pagination Pagination with Knobs 1`] = `
+<nav
+  className="ce-pagination"
+>
+  <ul
+    className="ce-pagination__container"
+  >
+    <li
+      className="ce-pagination__arrow ce-arrow--disabled"
+    >
+      <button
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className="ce-icon--black"
+          >
+            <use
+              xlinkHref="#icons_system-navigate"
+            />
+          </svg>
+        </span>
+      </button>
+    </li>
+    <li
+      className="ce-pagination__number current-page"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        1
+      </button>
+    </li>
+    <li
+      className="ce-pagination__number"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        2
+      </button>
+    </li>
+    <li
+      className="ce-pagination__number"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        3
+      </button>
+    </li>
+    <li
+      className="ce-pagination__number"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        ...
+      </button>
+    </li>
+    <li
+      className="ce-pagination__number"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        10
+      </button>
+    </li>
+    <li
+      className="ce-pagination__arrow"
+    >
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="ce-icon ce-icon__system ce-icon--large"
+        >
+          <svg
+            className="ce-icon--black"
+          >
+            <use
+              xlinkHref="#icons_system-navigate"
+            />
+          </svg>
+        </span>
+      </button>
+    </li>
+  </ul>
+</nav>
+`;
+
 exports[`Storyshots Components/Atoms/Search As You Type 1`] = `
 <div
   className="ce-search"
@@ -1198,7 +1294,6 @@ exports[`Storyshots Components/Atoms/Search As You Type 1`] = `
   >
     Search as You Type:
   </label>
->>>>>>> 14d4762... update Search stories for new storybook version, and better documentation
   <div
     className="ce-search__help-text"
   >
@@ -1456,6 +1551,7 @@ exports[`Storyshots Components/Atoms/Switch Default 1`] = `
 >
   <input
     checked={false}
+    className="switch"
     disabled={false}
     id="default_on"
     name="default"
@@ -1481,6 +1577,7 @@ Array [
   >
     <input
       checked={false}
+      className="switch"
       disabled={true}
       id="disabledChecked_disabledOn"
       name="disabledChecked"
@@ -1502,6 +1599,7 @@ Array [
   >
     <input
       checked={true}
+      className="switch"
       disabled={true}
       id="disabledUnchecked_disabledOff"
       name="disabledUnchecked"
@@ -1527,6 +1625,7 @@ exports[`Storyshots Components/Atoms/Switch Error 1`] = `
 >
   <input
     checked={false}
+    className="switch"
     disabled={false}
     id="error_on"
     name="error"
@@ -1570,6 +1669,7 @@ exports[`Storyshots Components/Atoms/Switch Switch with Knobs 1`] = `
 >
   <input
     checked={false}
+    className="switch"
     disabled={false}
     id="termsAndConditions_accepted"
     name="termsAndConditions"
@@ -1588,1569 +1688,2356 @@ exports[`Storyshots Components/Atoms/Switch Switch with Knobs 1`] = `
 </div>
 `;
 
-<<<<<<< HEAD
-exports[`Storyshots Components/Atoms/Table Table Row State Changes 1`] = `
-<div
-  className="ce-table"
-  headings={
-    Array [
-      "First Name",
-      "Last Name",
-      "Company",
-      "Job Title",
-      "Age",
-    ]
-  }
-  label="This is a label"
-  name="name"
-  onChange={false}
-  rows={
-    Array [
-      Object {
-        "data": Array [
-          "Row 1 cell 1",
-          "Row 1 cell 2",
-          "Row 1 cell 3",
-          "Row 1 cell 4",
-          "Row 1 cell 5",
-        ],
-        "status": "",
-      },
-      Object {
-        "data": Array [
-          "Row 2 cell 1",
-          "Row 2 cell 2",
-          "Row 2 cell 3",
-          "Row 2 cell 4",
-          "Row 2 cell 5",
-        ],
-        "status": "",
-      },
-      Object {
-        "data": Array [
-          "Row 3 cell 1",
-          "Row 3 cell 2",
-          "Row 3 cell 3",
-          "Row 3 cell 4",
-          "Row 3 cell 5",
-        ],
-        "status": "",
-      },
-    ]
-  }
-  selectable={false}
->
+exports[`Storyshots Components/Atoms/Table Default 1`] = `
+Array [
   <div
-    className="ce-table__container-desktop"
+    className="ce-table ce-table__clickable"
+    role="table"
   >
     <div
-      className="ce-table__header-row"
+      className="ce-table__header"
+      role="rowgroup"
     >
       <div
-        className="ce-table__header-cell"
+        className="ce-table__header--group"
+        role="row"
       >
-        First Name
-      </div>
-      <div
-        className="ce-table__header-cell"
-      >
-        Last Name
-      </div>
-      <div
-        className="ce-table__header-cell"
-      >
-        Company
-      </div>
-      <div
-        className="ce-table__header-cell"
-      >
-        Job Title
-      </div>
-      <div
-        className="ce-table__header-cell"
-      >
-        Age
+        <div
+          className="ce-table__heading"
+          colSpan={1}
+          role="columnheader"
+        >
+          First Name
+        </div>
+        <div
+          className="ce-table__heading"
+          colSpan={1}
+          role="columnheader"
+        >
+          Last Name
+        </div>
+        <div
+          className="ce-table__heading"
+          colSpan={1}
+          role="columnheader"
+        >
+          Age
+        </div>
+        <div
+          className="ce-table__heading"
+          colSpan={1}
+          role="columnheader"
+        >
+          Sex
+        </div>
       </div>
     </div>
     <div
-      className="ce-table__data-row null"
+      className="ce-table__body"
+      role="rowgroup"
     >
       <div
-        className="ce-table__data-cell "
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
       >
-        Row 1 cell 1
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Terry
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Jeffords
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            30-65
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            male
+          </div>
+        </div>
       </div>
       <div
-        className="ce-table__data-cell "
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
       >
-        Row 1 cell 2
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Jake
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Peralta
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            40
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            male
+          </div>
+        </div>
       </div>
       <div
-        className="ce-table__data-cell "
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
       >
-        Row 1 cell 3
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Rosa
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Diaz
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            35
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            female
+          </div>
+        </div>
       </div>
       <div
-        className="ce-table__data-cell "
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
       >
-        Row 1 cell 4
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Amy
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Santiago
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            36
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            female
+          </div>
+        </div>
       </div>
       <div
-        className="ce-table__data-cell "
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
       >
-        Row 1 cell 5
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Raymond
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Holt
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            65
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            male
+          </div>
+        </div>
+      </div>
+      <div
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
+      >
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Gina
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Linetti
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            40
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            female
+          </div>
+        </div>
+      </div>
+      <div
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
+      >
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Charles
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Boyle
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            45
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            male
+          </div>
+        </div>
+      </div>
+      <div
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
+      >
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Norm
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Scully
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            lucky to be alive
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            male
+          </div>
+        </div>
+      </div>
+      <div
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
+      >
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            John
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Smith
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            30
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            male
+          </div>
+        </div>
+      </div>
+      <div
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
+      >
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Jack
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Parr
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            47
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            male
+          </div>
+        </div>
       </div>
     </div>
-    <div
-      className="ce-table__data-row null"
-    >
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 2 cell 1
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 2 cell 2
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 2 cell 3
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 2 cell 4
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 2 cell 5
-      </div>
-    </div>
-    <div
-      className="ce-table__data-row null"
-    >
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 3 cell 1
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 3 cell 2
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 3 cell 3
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 3 cell 4
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 3 cell 5
-      </div>
-    </div>
-  </div>
-  <div
-    className="ce-table__container-mobile"
+  </div>,
+  <nav
+    className="ce-pagination"
   >
-    <div
-      className="ce-table__mobile-row"
+    <ul
+      className="ce-pagination__container"
     >
-      <div
-        className="ce-table__mobile-card-container null"
+      <li
+        className="ce-pagination__arrow ce-arrow--disabled"
       >
-        <div
-          className="ce-table__mobile-data-container"
+        <button
+          disabled={true}
+          onClick={[Function]}
+          type="button"
         >
-          <div
-            className="ce-table__mobile-headings"
+          <span
+            className="ce-icon ce-icon__system ce-icon--large"
           >
-            <span>
-              <strong>
-                First Name
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Last Name
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Company
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Job Title
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Age
-                :
-              </strong>
-            </span>
-          </div>
-          <div
-            className="ce-table__mobile-card-data"
-          >
-            <div
-              className="ce-table__mobile-card-row-data"
+            <svg
+              className="ce-icon--black"
             >
-              Row 1 cell 1
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 1 cell 2
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 1 cell 3
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 1 cell 4
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 1 cell 5
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="ce-table__mobile-card-container null"
+              <use
+                xlinkHref="#icons_system-navigate"
+              />
+            </svg>
+          </span>
+        </button>
+      </li>
+      <li
+        className="ce-pagination__number current-page"
       >
-        <div
-          className="ce-table__mobile-data-container"
+        <button
+          onClick={[Function]}
+          type="button"
         >
-          <div
-            className="ce-table__mobile-headings"
-          >
-            <span>
-              <strong>
-                First Name
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Last Name
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Company
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Job Title
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Age
-                :
-              </strong>
-            </span>
-          </div>
-          <div
-            className="ce-table__mobile-card-data"
-          >
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 2 cell 1
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 2 cell 2
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 2 cell 3
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 2 cell 4
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 2 cell 5
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="ce-table__mobile-card-container null"
+          1
+        </button>
+      </li>
+      <li
+        className="ce-pagination__number"
       >
-        <div
-          className="ce-table__mobile-data-container"
+        <button
+          onClick={[Function]}
+          type="button"
         >
-          <div
-            className="ce-table__mobile-headings"
+          2
+        </button>
+      </li>
+      <li
+        className="ce-pagination__number"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          3
+        </button>
+      </li>
+      <li
+        className="ce-pagination__number"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          4
+        </button>
+      </li>
+      <li
+        className="ce-pagination__number"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          5
+        </button>
+      </li>
+      <li
+        className="ce-pagination__arrow"
+      >
+        <button
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="ce-icon ce-icon__system ce-icon--large"
           >
-            <span>
-              <strong>
-                First Name
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Last Name
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Company
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Job Title
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Age
-                :
-              </strong>
-            </span>
-          </div>
-          <div
-            className="ce-table__mobile-card-data"
-          >
-            <div
-              className="ce-table__mobile-card-row-data"
+            <svg
+              className="ce-icon--black"
             >
-              Row 3 cell 1
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 3 cell 2
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 3 cell 3
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 3 cell 4
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 3 cell 5
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+              <use
+                xlinkHref="#icons_system-navigate"
+              />
+            </svg>
+          </span>
+        </button>
+      </li>
+    </ul>
+  </nav>,
+]
 `;
 
-exports[`Storyshots Components/Atoms/Table Table Selectable 1`] = `
-<div
-  className="ce-table ce-table--selectable"
-  headings={
-    Array [
-      "First Name",
-      "Last Name",
-      "Company",
-      "Job Title",
-      "Age",
-    ]
-  }
-  label="This is a label"
-  name="name"
-  onChange={[Function]}
-  rows={
-    Array [
-      Object {
-        "data": Array [
-          "Row 1 cell 1",
-          "Row 1 cell 2",
-          "Row 1 cell 3",
-          "Row 1 cell 4",
-          "Row 1 cell 5",
-        ],
-        "status": "",
-      },
-      Object {
-        "data": Array [
-          "Row 2 cell 1",
-          "Row 2 cell 2",
-          "Row 2 cell 3",
-          "Row 2 cell 4",
-          "Row 2 cell 5",
-        ],
-        "status": "",
-      },
-      Object {
-        "data": Array [
-          "Row 3 cell 1",
-          "Row 3 cell 2",
-          "Row 3 cell 3",
-          "Row 3 cell 4",
-          "Row 3 cell 5",
-        ],
-        "status": "",
-      },
-    ]
-  }
-  selectable={true}
->
+exports[`Storyshots Components/Atoms/Table Selectable 1`] = `
+Array [
   <div
-    className="ce-table__container-desktop"
+    className="ce-table ce-table__selectable ce-table__clickable"
+    role="table"
   >
     <div
-      className="ce-table__header-row"
+      className="ce-table__header"
+      role="rowgroup"
     >
       <div
-        className="ce-checkbox"
+        className="ce-table__header--group"
+        role="row"
       >
-        <input
-          checked={false}
-          disabled={false}
-          form=""
-          id="headerCheckbox_false"
-          name="headerCheckbox"
-          onChange={[Function]}
-          type="checkbox"
-          value={false}
-        />
-        <label
-          htmlFor="headerCheckbox_false"
-        />
-        
-      </div>
-      <div
-        className="ce-table__header-cell"
-      >
-        First Name
-      </div>
-      <div
-        className="ce-table__header-cell"
-      >
-        Last Name
-      </div>
-      <div
-        className="ce-table__header-cell"
-      >
-        Company
-      </div>
-      <div
-        className="ce-table__header-cell"
-      >
-        Job Title
-      </div>
-      <div
-        className="ce-table__header-cell"
-      >
-        Age
+        <div
+          className="ce-table__heading"
+          colSpan={1}
+          role="columnheader"
+        >
+          <div
+            className="ce-checkbox"
+          >
+            <input
+              checked={false}
+              disabled={false}
+              form=""
+              id="_allRows[]"
+              indeterminate={false}
+              isA="checkbox"
+              name=""
+              onChange={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              title="Toggle All Rows Selected"
+              type="checkbox"
+              value="allRows[]"
+            />
+            <label
+              htmlFor="_allRows[]"
+            >
+              label
+            </label>
+            
+          </div>
+        </div>
+        <div
+          className="ce-table__heading"
+          colSpan={1}
+          role="columnheader"
+        >
+          First Name
+        </div>
+        <div
+          className="ce-table__heading"
+          colSpan={1}
+          role="columnheader"
+        >
+          Last Name
+        </div>
+        <div
+          className="ce-table__heading"
+          colSpan={1}
+          role="columnheader"
+        >
+          Age
+        </div>
+        <div
+          className="ce-table__heading"
+          colSpan={1}
+          role="columnheader"
+        >
+          Sex
+        </div>
       </div>
     </div>
     <div
-      className="ce-table__data-row ce-table--selectable"
+      className="ce-table__body"
+      role="rowgroup"
     >
       <div
-        className="ce-checkbox"
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
       >
-        <input
-          checked={false}
-          disabled={false}
-          form=""
-          id="rowCheckbox_Row 1 cell 1,Row 1 cell 2,Row 1 cell 3,Row 1 cell 4,Row 1 cell 5"
-          name="rowCheckbox"
-          onChange={[Function]}
-          type="checkbox"
-          value={
-            Array [
-              "Row 1 cell 1",
-              "Row 1 cell 2",
-              "Row 1 cell 3",
-              "Row 1 cell 4",
-              "Row 1 cell 5",
-            ]
-          }
-        />
-        <label
-          htmlFor="rowCheckbox_Row 1 cell 1,Row 1 cell 2,Row 1 cell 3,Row 1 cell 4,Row 1 cell 5"
-        />
-        
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_0"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="0"
+              />
+              <label
+                htmlFor="_0"
+              >
+                0
+              </label>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Terry
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Jeffords
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            30-65
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            male
+          </div>
+        </div>
       </div>
       <div
-        className="ce-table__data-cell "
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
       >
-        Row 1 cell 1
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_1"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="1"
+              />
+              <label
+                htmlFor="_1"
+              >
+                1
+              </label>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Jake
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Peralta
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            40
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            male
+          </div>
+        </div>
       </div>
       <div
-        className="ce-table__data-cell "
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
       >
-        Row 1 cell 2
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_2"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="2"
+              />
+              <label
+                htmlFor="_2"
+              >
+                2
+              </label>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Rosa
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Diaz
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            35
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            female
+          </div>
+        </div>
       </div>
       <div
-        className="ce-table__data-cell "
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
       >
-        Row 1 cell 3
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_3"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="3"
+              />
+              <label
+                htmlFor="_3"
+              >
+                3
+              </label>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Amy
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Santiago
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            36
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            female
+          </div>
+        </div>
       </div>
       <div
-        className="ce-table__data-cell "
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
       >
-        Row 1 cell 4
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_4"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="4"
+              />
+              <label
+                htmlFor="_4"
+              >
+                4
+              </label>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Raymond
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Holt
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            65
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            male
+          </div>
+        </div>
       </div>
       <div
-        className="ce-table__data-cell "
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
       >
-        Row 1 cell 5
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_5"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="5"
+              />
+              <label
+                htmlFor="_5"
+              >
+                5
+              </label>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Gina
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Linetti
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            40
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            female
+          </div>
+        </div>
+      </div>
+      <div
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
+      >
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_6"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="6"
+              />
+              <label
+                htmlFor="_6"
+              >
+                6
+              </label>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Charles
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Boyle
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            45
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            male
+          </div>
+        </div>
+      </div>
+      <div
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
+      >
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_7"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="7"
+              />
+              <label
+                htmlFor="_7"
+              >
+                7
+              </label>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Norm
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Scully
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            lucky to be alive
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            male
+          </div>
+        </div>
+      </div>
+      <div
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
+      >
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_8"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="8"
+              />
+              <label
+                htmlFor="_8"
+              >
+                8
+              </label>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            John
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Smith
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            30
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            male
+          </div>
+        </div>
+      </div>
+      <div
+        className="ce-table__row"
+        onClick={[Function]}
+        role="row"
+      >
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_9"
+                indeterminate={false}
+                isA="checkbox"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="9"
+              />
+              <label
+                htmlFor="_9"
+              >
+                9
+              </label>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            First Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Jack
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Last Name:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            Parr
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Age:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            47
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            Sex:
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            male
+          </div>
+        </div>
       </div>
     </div>
-    <div
-      className="ce-table__data-row ce-table--selectable"
-    >
-      <div
-        className="ce-checkbox"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          form=""
-          id="rowCheckbox_Row 2 cell 1,Row 2 cell 2,Row 2 cell 3,Row 2 cell 4,Row 2 cell 5"
-          name="rowCheckbox"
-          onChange={[Function]}
-          type="checkbox"
-          value={
-            Array [
-              "Row 2 cell 1",
-              "Row 2 cell 2",
-              "Row 2 cell 3",
-              "Row 2 cell 4",
-              "Row 2 cell 5",
-            ]
-          }
-        />
-        <label
-          htmlFor="rowCheckbox_Row 2 cell 1,Row 2 cell 2,Row 2 cell 3,Row 2 cell 4,Row 2 cell 5"
-        />
-        
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 2 cell 1
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 2 cell 2
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 2 cell 3
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 2 cell 4
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 2 cell 5
-      </div>
-    </div>
-    <div
-      className="ce-table__data-row ce-table--selectable"
-    >
-      <div
-        className="ce-checkbox"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          form=""
-          id="rowCheckbox_Row 3 cell 1,Row 3 cell 2,Row 3 cell 3,Row 3 cell 4,Row 3 cell 5"
-          name="rowCheckbox"
-          onChange={[Function]}
-          type="checkbox"
-          value={
-            Array [
-              "Row 3 cell 1",
-              "Row 3 cell 2",
-              "Row 3 cell 3",
-              "Row 3 cell 4",
-              "Row 3 cell 5",
-            ]
-          }
-        />
-        <label
-          htmlFor="rowCheckbox_Row 3 cell 1,Row 3 cell 2,Row 3 cell 3,Row 3 cell 4,Row 3 cell 5"
-        />
-        
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 3 cell 1
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 3 cell 2
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 3 cell 3
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 3 cell 4
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 3 cell 5
-      </div>
-    </div>
-  </div>
-  <div
-    className="ce-table__container-mobile"
+  </div>,
+  <nav
+    className="ce-pagination"
   >
-    <div
-      className="ce-table__mobile-row"
+    <ul
+      className="ce-pagination__container"
     >
-      <div
-        className="ce-table__mobile-card-container ce-table--selectable"
+      <li
+        className="ce-pagination__arrow ce-arrow--disabled"
       >
-        <div
-          className="ce-table__mobile-checkbox"
+        <button
+          disabled={true}
+          onClick={[Function]}
+          type="button"
         >
-          <div
-            className="ce-checkbox"
+          <span
+            className="ce-icon ce-icon__system ce-icon--large"
           >
-            <input
-              checked={false}
-              disabled={false}
-              form=""
-              id="name_Row 1 cell 1,Row 1 cell 2,Row 1 cell 3,Row 1 cell 4,Row 1 cell 5"
-              name="name"
-              onChange={[Function]}
-              type="checkbox"
-              value={
-                Array [
-                  "Row 1 cell 1",
-                  "Row 1 cell 2",
-                  "Row 1 cell 3",
-                  "Row 1 cell 4",
-                  "Row 1 cell 5",
-                ]
-              }
-            />
-            <label
-              htmlFor="name_Row 1 cell 1,Row 1 cell 2,Row 1 cell 3,Row 1 cell 4,Row 1 cell 5"
-            />
-            
-          </div>
-        </div>
-        <div
-          className="ce-table__mobile-data-container"
-        >
-          <div
-            className="ce-table__mobile-headings"
-          >
-            <span>
-              <strong>
-                First Name
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Last Name
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Company
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Job Title
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Age
-                :
-              </strong>
-            </span>
-          </div>
-          <div
-            className="ce-table__mobile-card-data"
-          >
-            <div
-              className="ce-table__mobile-card-row-data"
+            <svg
+              className="ce-icon--black"
             >
-              Row 1 cell 1
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 1 cell 2
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 1 cell 3
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 1 cell 4
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 1 cell 5
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="ce-table__mobile-card-container ce-table--selectable"
+              <use
+                xlinkHref="#icons_system-navigate"
+              />
+            </svg>
+          </span>
+        </button>
+      </li>
+      <li
+        className="ce-pagination__number current-page"
       >
-        <div
-          className="ce-table__mobile-checkbox"
+        <button
+          onClick={[Function]}
+          type="button"
         >
-          <div
-            className="ce-checkbox"
-          >
-            <input
-              checked={false}
-              disabled={false}
-              form=""
-              id="name_Row 2 cell 1,Row 2 cell 2,Row 2 cell 3,Row 2 cell 4,Row 2 cell 5"
-              name="name"
-              onChange={[Function]}
-              type="checkbox"
-              value={
-                Array [
-                  "Row 2 cell 1",
-                  "Row 2 cell 2",
-                  "Row 2 cell 3",
-                  "Row 2 cell 4",
-                  "Row 2 cell 5",
-                ]
-              }
-            />
-            <label
-              htmlFor="name_Row 2 cell 1,Row 2 cell 2,Row 2 cell 3,Row 2 cell 4,Row 2 cell 5"
-            />
-            
-          </div>
-        </div>
-        <div
-          className="ce-table__mobile-data-container"
-        >
-          <div
-            className="ce-table__mobile-headings"
-          >
-            <span>
-              <strong>
-                First Name
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Last Name
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Company
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Job Title
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Age
-                :
-              </strong>
-            </span>
-          </div>
-          <div
-            className="ce-table__mobile-card-data"
-          >
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 2 cell 1
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 2 cell 2
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 2 cell 3
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 2 cell 4
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 2 cell 5
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="ce-table__mobile-card-container ce-table--selectable"
+          1
+        </button>
+      </li>
+      <li
+        className="ce-pagination__number"
       >
-        <div
-          className="ce-table__mobile-checkbox"
+        <button
+          onClick={[Function]}
+          type="button"
         >
-          <div
-            className="ce-checkbox"
-          >
-            <input
-              checked={false}
-              disabled={false}
-              form=""
-              id="name_Row 3 cell 1,Row 3 cell 2,Row 3 cell 3,Row 3 cell 4,Row 3 cell 5"
-              name="name"
-              onChange={[Function]}
-              type="checkbox"
-              value={
-                Array [
-                  "Row 3 cell 1",
-                  "Row 3 cell 2",
-                  "Row 3 cell 3",
-                  "Row 3 cell 4",
-                  "Row 3 cell 5",
-                ]
-              }
-            />
-            <label
-              htmlFor="name_Row 3 cell 1,Row 3 cell 2,Row 3 cell 3,Row 3 cell 4,Row 3 cell 5"
-            />
-            
-          </div>
-        </div>
-        <div
-          className="ce-table__mobile-data-container"
+          2
+        </button>
+      </li>
+      <li
+        className="ce-pagination__number"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
         >
-          <div
-            className="ce-table__mobile-headings"
+          3
+        </button>
+      </li>
+      <li
+        className="ce-pagination__number"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          4
+        </button>
+      </li>
+      <li
+        className="ce-pagination__number"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          5
+        </button>
+      </li>
+      <li
+        className="ce-pagination__arrow"
+      >
+        <button
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="ce-icon ce-icon__system ce-icon--large"
           >
-            <span>
-              <strong>
-                First Name
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Last Name
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Company
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Job Title
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                Age
-                :
-              </strong>
-            </span>
-          </div>
-          <div
-            className="ce-table__mobile-card-data"
-          >
-            <div
-              className="ce-table__mobile-card-row-data"
+            <svg
+              className="ce-icon--black"
             >
-              Row 3 cell 1
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 3 cell 2
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 3 cell 3
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 3 cell 4
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 3 cell 5
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+              <use
+                xlinkHref="#icons_system-navigate"
+              />
+            </svg>
+          </span>
+        </button>
+      </li>
+    </ul>
+  </nav>,
+]
 `;
 
-exports[`Storyshots Components/Atoms/Table Table with Knobs 1`] = `
-<div
-  className="ce-table ce-table--selectable"
-  headings={
-    Array [
-      "header1",
-      "header2",
-      "header3",
-      "header4",
-      "header5",
-    ]
-  }
-  label="This is the label"
-  name="name"
-  onChange={[Function]}
-  rows={
-    Array [
-      Object {
-        "data": Array [
-          "Row 1 cell 1",
-          "Row 1 cell 2",
-          "Row 1 cell 3",
-          "Row 1 cell 4",
-          "Row 1 cell 5",
-        ],
-        "status": "",
-      },
-      Object {
-        "data": Array [
-          "Row 2 cell 1",
-          "Row 2 cell 2",
-          "Row 2 cell 3",
-          "Row 2 cell 4",
-          "Row 2 cell 5",
-        ],
-        "status": "",
-      },
-      Object {
-        "data": Array [
-          "Row 3 cell 1",
-          "Row 3 cell 2",
-          "Row 3 cell 3",
-          "Row 3 cell 4",
-          "Row 3 cell 5",
-        ],
-        "status": "",
-      },
-    ]
-  }
-  selectable={true}
->
-  <div
-    className="ce-table__container-desktop"
-  >
-    <div
-      className="ce-table__header-row"
-    >
-      <div
-        className="ce-checkbox"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          form=""
-          id="headerCheckbox_false"
-          name="headerCheckbox"
-          onChange={[Function]}
-          type="checkbox"
-          value={false}
-        />
-        <label
-          htmlFor="headerCheckbox_false"
-        />
-        
-      </div>
-      <div
-        className="ce-table__header-cell"
-      >
-        header1
-      </div>
-      <div
-        className="ce-table__header-cell"
-      >
-        header2
-      </div>
-      <div
-        className="ce-table__header-cell"
-      >
-        header3
-      </div>
-      <div
-        className="ce-table__header-cell"
-      >
-        header4
-      </div>
-      <div
-        className="ce-table__header-cell"
-      >
-        header5
-      </div>
-    </div>
-    <div
-      className="ce-table__data-row ce-table--selectable"
-    >
-      <div
-        className="ce-checkbox"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          form=""
-          id="rowCheckbox_Row 1 cell 1,Row 1 cell 2,Row 1 cell 3,Row 1 cell 4,Row 1 cell 5"
-          name="rowCheckbox"
-          onChange={[Function]}
-          type="checkbox"
-          value={
-            Array [
-              "Row 1 cell 1",
-              "Row 1 cell 2",
-              "Row 1 cell 3",
-              "Row 1 cell 4",
-              "Row 1 cell 5",
-            ]
-          }
-        />
-        <label
-          htmlFor="rowCheckbox_Row 1 cell 1,Row 1 cell 2,Row 1 cell 3,Row 1 cell 4,Row 1 cell 5"
-        />
-        
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 1 cell 1
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 1 cell 2
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 1 cell 3
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 1 cell 4
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 1 cell 5
-      </div>
-    </div>
-    <div
-      className="ce-table__data-row ce-table--selectable"
-    >
-      <div
-        className="ce-checkbox"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          form=""
-          id="rowCheckbox_Row 2 cell 1,Row 2 cell 2,Row 2 cell 3,Row 2 cell 4,Row 2 cell 5"
-          name="rowCheckbox"
-          onChange={[Function]}
-          type="checkbox"
-          value={
-            Array [
-              "Row 2 cell 1",
-              "Row 2 cell 2",
-              "Row 2 cell 3",
-              "Row 2 cell 4",
-              "Row 2 cell 5",
-            ]
-          }
-        />
-        <label
-          htmlFor="rowCheckbox_Row 2 cell 1,Row 2 cell 2,Row 2 cell 3,Row 2 cell 4,Row 2 cell 5"
-        />
-        
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 2 cell 1
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 2 cell 2
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 2 cell 3
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 2 cell 4
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 2 cell 5
-      </div>
-    </div>
-    <div
-      className="ce-table__data-row ce-table--selectable"
-    >
-      <div
-        className="ce-checkbox"
-      >
-        <input
-          checked={false}
-          disabled={false}
-          form=""
-          id="rowCheckbox_Row 3 cell 1,Row 3 cell 2,Row 3 cell 3,Row 3 cell 4,Row 3 cell 5"
-          name="rowCheckbox"
-          onChange={[Function]}
-          type="checkbox"
-          value={
-            Array [
-              "Row 3 cell 1",
-              "Row 3 cell 2",
-              "Row 3 cell 3",
-              "Row 3 cell 4",
-              "Row 3 cell 5",
-            ]
-          }
-        />
-        <label
-          htmlFor="rowCheckbox_Row 3 cell 1,Row 3 cell 2,Row 3 cell 3,Row 3 cell 4,Row 3 cell 5"
-        />
-        
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 3 cell 1
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 3 cell 2
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 3 cell 3
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 3 cell 4
-      </div>
-      <div
-        className="ce-table__data-cell "
-      >
-        Row 3 cell 5
-      </div>
-    </div>
-  </div>
-  <div
-    className="ce-table__container-mobile"
-  >
-    <div
-      className="ce-table__mobile-row"
-    >
-      <div
-        className="ce-table__mobile-card-container ce-table--selectable"
-      >
-        <div
-          className="ce-table__mobile-checkbox"
-        >
-          <div
-            className="ce-checkbox"
-          >
-            <input
-              checked={false}
-              disabled={false}
-              form=""
-              id="name_Row 1 cell 1,Row 1 cell 2,Row 1 cell 3,Row 1 cell 4,Row 1 cell 5"
-              name="name"
-              onChange={[Function]}
-              type="checkbox"
-              value={
-                Array [
-                  "Row 1 cell 1",
-                  "Row 1 cell 2",
-                  "Row 1 cell 3",
-                  "Row 1 cell 4",
-                  "Row 1 cell 5",
-                ]
-              }
-            />
-            <label
-              htmlFor="name_Row 1 cell 1,Row 1 cell 2,Row 1 cell 3,Row 1 cell 4,Row 1 cell 5"
-            />
-            
-          </div>
-        </div>
-        <div
-          className="ce-table__mobile-data-container"
-        >
-          <div
-            className="ce-table__mobile-headings"
-          >
-            <span>
-              <strong>
-                header1
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                header2
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                header3
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                header4
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                header5
-                :
-              </strong>
-            </span>
-          </div>
-          <div
-            className="ce-table__mobile-card-data"
-          >
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 1 cell 1
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 1 cell 2
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 1 cell 3
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 1 cell 4
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 1 cell 5
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="ce-table__mobile-card-container ce-table--selectable"
-      >
-        <div
-          className="ce-table__mobile-checkbox"
-        >
-          <div
-            className="ce-checkbox"
-          >
-            <input
-              checked={false}
-              disabled={false}
-              form=""
-              id="name_Row 2 cell 1,Row 2 cell 2,Row 2 cell 3,Row 2 cell 4,Row 2 cell 5"
-              name="name"
-              onChange={[Function]}
-              type="checkbox"
-              value={
-                Array [
-                  "Row 2 cell 1",
-                  "Row 2 cell 2",
-                  "Row 2 cell 3",
-                  "Row 2 cell 4",
-                  "Row 2 cell 5",
-                ]
-              }
-            />
-            <label
-              htmlFor="name_Row 2 cell 1,Row 2 cell 2,Row 2 cell 3,Row 2 cell 4,Row 2 cell 5"
-            />
-            
-          </div>
-        </div>
-        <div
-          className="ce-table__mobile-data-container"
-        >
-          <div
-            className="ce-table__mobile-headings"
-          >
-            <span>
-              <strong>
-                header1
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                header2
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                header3
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                header4
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                header5
-                :
-              </strong>
-            </span>
-          </div>
-          <div
-            className="ce-table__mobile-card-data"
-          >
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 2 cell 1
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 2 cell 2
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 2 cell 3
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 2 cell 4
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 2 cell 5
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="ce-table__mobile-card-container ce-table--selectable"
-      >
-        <div
-          className="ce-table__mobile-checkbox"
-        >
-          <div
-            className="ce-checkbox"
-          >
-            <input
-              checked={false}
-              disabled={false}
-              form=""
-              id="name_Row 3 cell 1,Row 3 cell 2,Row 3 cell 3,Row 3 cell 4,Row 3 cell 5"
-              name="name"
-              onChange={[Function]}
-              type="checkbox"
-              value={
-                Array [
-                  "Row 3 cell 1",
-                  "Row 3 cell 2",
-                  "Row 3 cell 3",
-                  "Row 3 cell 4",
-                  "Row 3 cell 5",
-                ]
-              }
-            />
-            <label
-              htmlFor="name_Row 3 cell 1,Row 3 cell 2,Row 3 cell 3,Row 3 cell 4,Row 3 cell 5"
-            />
-            
-          </div>
-        </div>
-        <div
-          className="ce-table__mobile-data-container"
-        >
-          <div
-            className="ce-table__mobile-headings"
-          >
-            <span>
-              <strong>
-                header1
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                header2
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                header3
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                header4
-                :
-              </strong>
-            </span>
-            <span>
-              <strong>
-                header5
-                :
-              </strong>
-            </span>
-          </div>
-          <div
-            className="ce-table__mobile-card-data"
-          >
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 3 cell 1
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 3 cell 2
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 3 cell 3
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 3 cell 4
-            </div>
-            <div
-              className="ce-table__mobile-card-row-data"
-            >
-              Row 3 cell 5
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/Atoms/ToggleButton ToggleButton Colors 1`] = `
-<div>
-  <span
-    style={Object {}}
-=======
 exports[`Storyshots Components/Atoms/ToggleButton Black 1`] = `
 <fieldset
   className="ce-toggle-button-group ce-toggle-button-group--large ce-toggle-button-group--black"
@@ -3163,7 +4050,6 @@ exports[`Storyshots Components/Atoms/ToggleButton Black 1`] = `
   </legend>
   <div
     className="ce-toggle-button"
->>>>>>> 194da23... update ToggleButton stories for new storybook version, and better documentation
   >
     <input
       defaultChecked={false}
@@ -4311,7 +5197,9 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox with Kn
       checked={false}
       disabled={false}
       form="formKnobs"
+      handleClick={[Function]}
       id="termsAndConditions_accepted"
+      isA="checkbox"
       name="termsAndConditions"
       onChange={[Function]}
       type="checkbox"
@@ -4336,6 +5224,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Default 1`] = `
     disabled={false}
     form=""
     id="default_true"
+    isA="checkbox"
     name="default"
     onChange={[Function]}
     type="checkbox"
@@ -4359,6 +5248,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Disabled 1`] = `
     disabled={false}
     form=""
     id="disabled_true"
+    isA="checkbox"
     name="disabled"
     onChange={[Function]}
     type="checkbox"
@@ -4382,6 +5272,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Error 1`] = `
     disabled={false}
     form=""
     id="error_true"
+    isA="checkbox"
     name="error"
     onChange={[Function]}
     type="checkbox"
@@ -4436,6 +5327,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
         disabled={false}
         form=""
         id="favoriteFood_pizza"
+        isA="checkbox"
         name="favoriteFood"
         onChange={[Function]}
         type="checkbox"
@@ -4456,6 +5348,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
         disabled={false}
         form=""
         id="favoriteFood_hotdog"
+        isA="checkbox"
         name="favoriteFood"
         onChange={[Function]}
         type="checkbox"
@@ -4476,6 +5369,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
         disabled={false}
         form=""
         id="favoriteFood_hamburger"
+        isA="checkbox"
         name="favoriteFood"
         onChange={[Function]}
         type="checkbox"
@@ -4496,6 +5390,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
         disabled={false}
         form=""
         id="favoriteFood_coleslaw"
+        isA="checkbox"
         name="favoriteFood"
         onChange={[Function]}
         type="checkbox"
@@ -4509,7 +5404,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
       
     </div>
     <span
-      className="ce-checkbox-group--error__text"
+      className=""
     >
       
     </span>
@@ -4535,6 +5430,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Default 1`]
       disabled={false}
       form=""
       id="favoriteTextEditor_vim"
+      isA="checkbox"
       name="favoriteTextEditor"
       onChange={[Function]}
       type="checkbox"
@@ -4555,6 +5451,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Default 1`]
       disabled={false}
       form=""
       id="favoriteTextEditor_emacs"
+      isA="checkbox"
       name="favoriteTextEditor"
       onChange={[Function]}
       type="checkbox"
@@ -4575,6 +5472,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Default 1`]
       disabled={false}
       form=""
       id="favoriteTextEditor_vscode"
+      isA="checkbox"
       name="favoriteTextEditor"
       onChange={[Function]}
       type="checkbox"
@@ -4595,6 +5493,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Default 1`]
       disabled={false}
       form=""
       id="favoriteTextEditor_atom"
+      isA="checkbox"
       name="favoriteTextEditor"
       onChange={[Function]}
       type="checkbox"
@@ -4608,7 +5507,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Default 1`]
     
   </div>
   <span
-    className="ce-checkbox-group--error__text"
+    className=""
   >
     
   </span>
@@ -4633,6 +5532,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (G
       disabled={false}
       form=""
       id="favoriteBeatle_john"
+      isA="checkbox"
       name="favoriteBeatle"
       onChange={[Function]}
       type="checkbox"
@@ -4653,6 +5553,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (G
       disabled={false}
       form=""
       id="favoriteBeatle_paul"
+      isA="checkbox"
       name="favoriteBeatle"
       onChange={[Function]}
       type="checkbox"
@@ -4673,6 +5574,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (G
       disabled={false}
       form=""
       id="favoriteBeatle_george"
+      isA="checkbox"
       name="favoriteBeatle"
       onChange={[Function]}
       type="checkbox"
@@ -4693,6 +5595,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (G
       disabled={false}
       form=""
       id="favoriteBeatle_ringo"
+      isA="checkbox"
       name="favoriteBeatle"
       onChange={[Function]}
       type="checkbox"
@@ -4706,7 +5609,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (G
     
   </div>
   <span
-    className="ce-checkbox-group--error__text"
+    className=""
   >
     
   </span>
@@ -4731,6 +5634,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (I
       disabled={false}
       form=""
       id="favoriteBeatle2_john2"
+      isA="checkbox"
       name="favoriteBeatle2"
       onChange={[Function]}
       type="checkbox"
@@ -4751,6 +5655,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (I
       disabled={false}
       form=""
       id="favoriteBeatle2_paul2"
+      isA="checkbox"
       name="favoriteBeatle2"
       onChange={[Function]}
       type="checkbox"
@@ -4771,6 +5676,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (I
       disabled={false}
       form=""
       id="favoriteBeatle2_george2"
+      isA="checkbox"
       name="favoriteBeatle2"
       onChange={[Function]}
       type="checkbox"
@@ -4784,13 +5690,14 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (I
     
   </div>
   <div
-    className="ce-checkbox ce-checkbox--disabled"
+    className="ce-checkbox"
   >
     <input
       checked={false}
       disabled={true}
       form=""
       id="favoriteBeatle2_ringo2"
+      isA="checkbox"
       name="favoriteBeatle2"
       onChange={[Function]}
       type="checkbox"
@@ -4804,7 +5711,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (I
     
   </div>
   <span
-    className="ce-checkbox-group--error__text"
+    className=""
   >
     
   </span>
@@ -4829,6 +5736,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Error 1`] =
       disabled={false}
       form=""
       id="favoriteFramework_react"
+      isA="checkbox"
       name="favoriteFramework"
       onChange={[Function]}
       type="checkbox"
@@ -4849,6 +5757,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Error 1`] =
       disabled={false}
       form=""
       id="favoriteFramework_angularjs"
+      isA="checkbox"
       name="favoriteFramework"
       onChange={[Function]}
       type="checkbox"
@@ -4869,6 +5778,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Error 1`] =
       disabled={false}
       form=""
       id="favoriteFramework_angular"
+      isA="checkbox"
       name="favoriteFramework"
       onChange={[Function]}
       type="checkbox"
@@ -4889,6 +5799,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Error 1`] =
       disabled={false}
       form=""
       id="favoriteFramework_vue"
+      isA="checkbox"
       name="favoriteFramework"
       onChange={[Function]}
       type="checkbox"
@@ -4902,7 +5813,7 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Error 1`] =
     
   </div>
   <span
-    className="ce-checkbox-group--error__text"
+    className=""
   >
     Unable to set Vuejs as favorite framework.
   </span>
@@ -5025,6 +5936,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Core/FormControlGroup For
       disabled={false}
       form=""
       id="myGroup_checkboxOne"
+      isA="checkbox"
       name="myGroup"
       onChange={[Function]}
       type="checkbox"
@@ -5045,6 +5957,7 @@ exports[`Storyshots Components/Molecules/Form Controls/Core/FormControlGroup For
       disabled={false}
       form=""
       id="myGroup_checkboxTwo"
+      isA="checkbox"
       name="myGroup"
       onChange={[Function]}
       type="checkbox"

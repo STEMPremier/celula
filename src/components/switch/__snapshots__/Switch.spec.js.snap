@@ -6,6 +6,7 @@ exports[`<Switch /> render() render the Switch component 1`] = `
 >
   <input
     checked={false}
+    className="switch"
     disabled={false}
     id="Switch Test Name_switch value"
     name="Switch Test Name"
