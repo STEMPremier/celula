@@ -78,7 +78,7 @@
     "lint:fix": "eslint --fix \"src/*.{js,jsx}\"",
     "optimize:icons": "node src/utils/svgOptimize.js",
     "prebuild": "npm run pretty:fix && npm run lint:fix",
-    "prepublish": "npm run build:components",
+    "prepublishOnly": "npm run build:components",
     "pretty:check": "prettier --check \"src/*.{js,jsx}\"",
     "pretty:fix": "prettier --write \"src/*.{js,jsx}\"",
     "start": "start-storybook -p 6006",
