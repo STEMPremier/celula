@@ -12,6 +12,7 @@ exports[`<Pagination /> render() renders the component 1`] = `
     >
       <button
         disabled={false}
+        onClick={[Function]}
         type="button"
       >
         <SystemIcon
@@ -22,10 +23,66 @@ exports[`<Pagination /> render() renders the component 1`] = `
       </button>
     </li>
     <li
+      className="ce-pagination__number"
+      key="1"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        1
+      </button>
+    </li>
+    <li
+      className="ce-pagination__number current-page"
+      key="2"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        2
+      </button>
+    </li>
+    <li
+      className="ce-pagination__number"
+      key="3"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        3
+      </button>
+    </li>
+    <li
+      className="ce-pagination__number"
+      key="4"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        ...
+      </button>
+    </li>
+    <li
+      className="ce-pagination__number"
+      key="5"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        10
+      </button>
+    </li>
+    <li
       className="ce-pagination__arrow"
     >
       <button
         disabled={false}
+        onClick={[Function]}
         type="button"
       >
         <SystemIcon

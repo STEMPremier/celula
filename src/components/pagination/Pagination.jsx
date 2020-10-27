@@ -8,6 +8,9 @@ import './pagination.less';
 
 import { SystemIcon } from '../icon';
 
+/**
+ * Pagination is the process of dividing data into discrete pages. This graphical control element is frequently used as a navigational aid.
+ */
 const Pagination = ({
   className,
   canNextPage,
