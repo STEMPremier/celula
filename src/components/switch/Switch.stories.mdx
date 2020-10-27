@@ -1,4 +1,10 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
 
@@ -7,6 +13,7 @@ import Switch from '.';
 <Meta component={Switch} title="Components/Atoms/Switch" />
 
 # Switch
+
 <Description of={Switch} />
 <ArgsTable of={Switch} />
 
@@ -26,17 +33,15 @@ import Switch from '.';
 ## Colors and States
 
 ### Default
+
 <Canvas>
   <Story name="Default">
-    <Switch
-      label="I am a standard Switch"
-      name="default"
-      value="on"
-    />
+    <Switch label="I am a standard Switch" name="default" value="on" />
   </Story>
 </Canvas>
 
 ### Disabled
+
 <Canvas>
   <Story name="Disabled">
     <Switch
@@ -56,6 +61,7 @@ import Switch from '.';
 </Canvas>
 
 ### Error
+
 <Canvas>
   <Story name="Error">
     <Switch
