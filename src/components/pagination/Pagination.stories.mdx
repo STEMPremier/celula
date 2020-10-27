@@ -20,7 +20,15 @@ import SomethingToPage from './SomethingToPage';
 
 <Story name="Pagination with Knobs" parameters={{ docs: { disable: true } }}>
   <SomethingToPage pageCount={number('pageCount', 10)}>
-    <Pagination />
+    <Pagination
+      canNextPage={true}
+      canPreviousPage={true}
+      currentPage={1}
+      gotoPage={() => console.log('Navigate to a different page.')}
+      nextPage={() => console.log('Navigate up a page.')}
+      pageCount={10}
+      prevPage={() => console.log('Navigate down a page.')}
+    />
   </SomethingToPage>
 </Story>
 

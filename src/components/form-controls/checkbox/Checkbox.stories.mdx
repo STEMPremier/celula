@@ -1,17 +1,16 @@
-import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text, array } from '@storybook/addon-knobs';
 
 import { Checkbox } from '.';
-import { COMPONENT_STATES as STATES } from '../../../utils/constants';
 
 <Meta component={Checkbox} title="Components/Molecules/Form Controls/Checkbox"/>
 
 # Checkbox
 <Description of={Checkbox} />
-<Props of={Checkbox}/>
+<ArgsTable of={Checkbox}/>
 
-<Story name="Checkbox with Knobs" parameters={{docs: {disable: true}}}>
+<Story name="Checkbox with Knobs" parameters={{ docs: { disable: true } }}>
   <form id="formKnobs">
     <Checkbox
       checked={boolean('checked', false )}
@@ -27,43 +26,38 @@ import { COMPONENT_STATES as STATES } from '../../../utils/constants';
   </form>
 </Story>
 
-### Types
-<Preview>
-  <Story name="Checkbox Types">
-    <form id="formTypes">
-      <Checkbox
-        checked
-        formId="formTypes"
-        label="I am checked"
-        name="checked"
-        value={true}
-      />
-      <Checkbox
-        formId="formTwo"
-        label="I am unchecked"
-        name="unchecked"
-        value={false}
-      />
-    </form>
-  </Story>
-</Preview>
+## Colors and States
 
-
-### States
-<Preview>
-  <Story name="Checkbox States">
-    <form id="formStates">
-      {STATES.map(state => (
-        <Checkbox
-          disabled={state === 'disabled'}
-          errorMsg={state === 'error' ? "There is an error." : ''}
-          formId="formStates"
-          key={state}
-          label={`${state.charAt(0).toUpperCase()}${state.slice(1)} Checkbox`}
-          name={`${state}_checkbox`}
-          value={state}
-        />
-      ))}
-    </form>
+### Default
+<Canvas>
+  <Story name="Default">
+    <Checkbox
+      label="I am standard checkbox"
+      name="default"
+      value={true}
+    />
   </Story>
-</Preview>
+</Canvas>
+
+### Disabled
+<Canvas>
+  <Story name="Disabled">
+    <Checkbox
+      label="I am a disabled checkbox"
+      name="disabled"
+      value={true}
+    />
+  </Story>
+</Canvas>
+
+### Error
+<Canvas>
+  <Story name="Error">
+    <Checkbox
+      errorMsg="There is an error message."
+      label="This is a checkbox with an error"
+      name="error"
+      value={true}
+    />
+  </Story>
+</Canvas>

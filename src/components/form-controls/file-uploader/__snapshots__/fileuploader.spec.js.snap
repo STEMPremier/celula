@@ -2,7 +2,7 @@
 
 exports[`<FileUploader /> render() render the FileUploader component 1`] = `
 <div
-  className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--large ce-file-uploader--default"
+  className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--large"
 >
   <input
     accept=""

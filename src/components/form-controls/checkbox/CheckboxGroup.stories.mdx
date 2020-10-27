@@ -1,6 +1,6 @@
-import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { boolean, select, text, array } from '@storybook/addon-knobs';
+import { array, boolean, text } from '@storybook/addon-knobs';
 
 import { Checkbox, CheckboxGroup } from '.';
 
@@ -8,9 +8,9 @@ import { Checkbox, CheckboxGroup } from '.';
 
 # CheckboxGroup
 <Description of={CheckboxGroup} />
-<Props of={CheckboxGroup} />
+<ArgsTable of={CheckboxGroup} />
 
-<Story name="CheckboxGroup with Knobs" parameters={{docs: {disable: true}}}>
+<Story name="CheckboxGroup with Knobs" parameters={{ docs: { disable: true } }}>
   <form id="formKnobs">
     <CheckboxGroup
       className={text('className', '')}
@@ -30,78 +30,69 @@ import { Checkbox, CheckboxGroup } from '.';
   </form>
 </Story>
 
-### Types
-<Preview>
-  <Story name="CheckboxGroup Types">
-    <form id="formTypes">
-      <CheckboxGroup
-        formId="formTypes"
-        handleChange={action('`CheckboxGroup Types` onChange event triggered.')}
-        label="Favorite Text Editor"
-        name="favoriteTextEditor"
-        selectedValues={['vim']}
-      >
-        <Checkbox label="Vim" value="vim" />
-        <Checkbox label="Emacs" value="emacs" />
-        <Checkbox label="VS Code" value="vscode" />
-        <Checkbox label="Atom" value="atom" />
-      </CheckboxGroup>
-    </form>
-  </Story>
-</Preview>
+## Colors and States
 
-### States
-<Preview>
-  <Story name="CheckboxGroup States">
-    <form id="formStates">
-      <CheckboxGroup
-        formId="formStates"
-        handleChange={action('`CheckboxGroup States` onChange event triggered.')}
-        label="Default Checkbox Group"
-        name="favoriteOS"
-        selectedValues={['macos']}
-      >
-        <Checkbox label="macOS" value="macos" />
-        <Checkbox label="Windows" value="windows" />
-        <Checkbox label="Linux" value="linux" />
-      </CheckboxGroup>
-      <CheckboxGroup
-        disabled
-        formId="formStates"
-        handleChange={action('`CheckboxGroup States` onChange event triggered.')}
-        label="Favorite Beatle (Disabled Checkbox Group)"
-        name="favoriteBeatle"
-        selectedValues={['george']}
-      >
-        <Checkbox label="John Lennon" value="john" />
-        <Checkbox label="Paul Mccartney" value="paul" />
-        <Checkbox label="George Harrison" value="george" />
-        <Checkbox label="Ringo Starr" value="ringo" />
-      </CheckboxGroup>
-      <CheckboxGroup
-        formId="formStates"
-        handleChange={action('`CheckboxGroup States` onChange event triggered.')}
-        label="Favorite Beatle (Disabled Checkbox Individual)"
-        name="favoriteBeatle2"
-      >
-        <Checkbox label="John Lennon" value="john" />
-        <Checkbox label="Paul Mccartney" value="paul" />
-        <Checkbox label="George Harrison" value="george" />
-        <Checkbox label="Ringo Starr (Disabled)" value="ringo" disabled />
-      </CheckboxGroup>
-      <CheckboxGroup
-        errorMsg="Unable to set Vuejs as favorite framework."
-        formId="formStates"
-        handleChange={action('`CheckboxGroup States` onChange event triggered.')}
-        label="Favorite UI Framework"
-        name="favoriteFramework"
-        selectedValues={["react", "vue"]}
-      >
-        <Checkbox label="React" value="react" />
-        <Checkbox label="AngularJS" value="angularjs" />
-        <Checkbox label="Angular" value="angular" />
-        <Checkbox label="Vue" value="vue" />
-      </CheckboxGroup>
-    </form>
+### Default
+<Canvas>
+  <Story name="Default">
+    <CheckboxGroup
+      handleChange={value => console.log(value)}
+      label="Favorite Text Editor"
+      name="favoriteTextEditor"
+      selectedValues={['vim']}
+    >
+      <Checkbox label="Vim" value="vim" />
+      <Checkbox label="Emacs" value="emacs" />
+      <Checkbox label="VS Code" value="vscode" />
+      <Checkbox label="Atom" value="atom" />
+    </CheckboxGroup>
   </Story>
-</Preview>
+</Canvas>
+
+### Disabled
+<Canvas>
+  <Story name="Disabled (Group)">
+    <CheckboxGroup
+      disabled
+      handleChange={value => console.log(value)}
+      label="Favorite Beatle (Disabled Checkbox Group)"
+      name="favoriteBeatle"
+      selectedValues={['george']}
+    >
+      <Checkbox label="John Lennon" value="john" />
+      <Checkbox label="Paul Mccartney" value="paul" />
+      <Checkbox label="George Harrison" value="george" />
+      <Checkbox label="Ringo Starr" value="ringo" />
+    </CheckboxGroup>
+  </Story>
+  <Story name="Disabled (Individual)">
+    <CheckboxGroup
+      handleChange={value => console.log(value)}
+      label="Favorite Beatle (Disabled Checkbox Individual)"
+      name="favoriteBeatle2"
+    >
+      <Checkbox label="John Lennon" value="john2" />
+      <Checkbox label="Paul Mccartney" value="paul2" />
+      <Checkbox label="George Harrison" value="george2" />
+      <Checkbox label="Ringo Starr (Disabled)" value="ringo2" disabled />
+    </CheckboxGroup>
+  </Story>
+</Canvas>
+
+## Error
+<Canvas>
+  <Story name="Error">
+    <CheckboxGroup
+      errorMsg="Unable to set Vuejs as favorite framework."
+      handleChange={value => console.log(value)}
+      label="Favorite UI Framework"
+      name="favoriteFramework"
+      selectedValues={["react", "vue"]}
+    >
+      <Checkbox label="React" value="react" />
+      <Checkbox label="AngularJS" value="angularjs" />
+      <Checkbox label="Angular" value="angular" />
+      <Checkbox label="Vue" value="vue" />
+    </CheckboxGroup>
+  </Story>
+</Canvas>

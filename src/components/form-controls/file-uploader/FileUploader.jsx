@@ -109,7 +109,8 @@ FileUploader.propTypes = {
   /**
    *  The color of the `<FileUploader />`.
    */
-  color: PropTypes.string,
+  // color: PropTypes.oneOf(COLORS),
+  color: PropTypes.oneOf(['primary', 'secondary', 'black', 'inverted']),
   /**
    * Disables the `<FileUploader />`.
    */
@@ -135,13 +136,15 @@ FileUploader.propTypes = {
    */
   name: PropTypes.string.isRequired,
   /**
-   *  There are 3 sizes to choose from: small, large, and jumbo.  If none is selected, it will default to large.
+   * The size of the `<Button />`.
    */
-  size: PropTypes.string,
+  // size: PropTypes.oneOf(SIZES),
+  size: PropTypes.oneOf(['small', 'large', 'jumbo']),
   /**
    *  Which type of `<FileUpload />` to render.
    */
-  type: PropTypes.string,
+  // type: PropTypes.oneOf(TYPES),
+  type: PropTypes.oneOf(['solid', 'outline', 'text']),
 };
 
 FileUploader.defaultProps = {
@@ -155,7 +158,7 @@ FileUploader.defaultProps = {
   handleClick: () => {},
   multiple: false,
   size: 'large',
-  type: 'default',
+  type: 'solid',
 };
 
 export default FileUploader;

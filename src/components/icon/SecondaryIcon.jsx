@@ -3,12 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import * as CONSTANTS from '../../utils/constants';
+import { COLORS, SECONDARY_ICONS, SIZES } from '../../utils/constants';
 
 import './icons/icons.svg';
 import './icon.less';
-
-const { COLORS, SECONDARY_ICONS, SIZES } = CONSTANTS;
 
 // Our custom props validator. I am not in love with the name, but a descriptive name was absurdly long.
 function nameOrText(props, propName, componentName = 'SecondaryIcon') {
@@ -89,7 +87,8 @@ SecondaryIcon.propTypes = {
   /**
    * The color of the `<SecondaryIcon />` background gradient.
    */
-  color: PropTypes.oneOf(COLORS),
+  // color: PropTypes.oneOf(COLORS),
+  color: PropTypes.oneOf(['primary', 'secondary']),
   /**
    * The `<SecondaryIcon />`.
    */
@@ -97,7 +96,8 @@ SecondaryIcon.propTypes = {
   /**
    * The size you want the `<SecondaryIcon />` to be.
    */
-  size: PropTypes.oneOf(SIZES),
+  // size: PropTypes.oneOf(SIZES),
+  size: PropTypes.oneOf(['small', 'large', 'jumbo']),
   /**
    * Up to 2 characters you would like in the `<SecondaryIcon />`, rather than a predefined one.
    */

@@ -1,9 +1,4 @@
-import { Description,
-  Meta,
-  Preview,
-  Props,
-  Story,
-} from '@storybook/addon-docs/blocks';
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
 
@@ -12,14 +7,15 @@ import { COMPONENT_STATES as STATES } from '../../../utils/constants';
 
 <Meta component={RadioGroup} title="Components/Molecules/Form Controls/Radio" />
 
-# RadioGroup and Radio
-## RadioGroup
-<Description of={RadioGroup} />
-<Props of={RadioGroup} />
+# Radio
 
 ## Radio
 <Description of={Radio} />
-<Props of={Radio} />
+<ArgsTable of={Radio} />
+
+## RadioGroup
+<Description of={RadioGroup} />
+<ArgsTable of={RadioGroup} />
 
 <Story name="RadioGroup with Knobs" parameters={{ docs: {disable: true}}}>
   <form id="formKnobs">
@@ -48,47 +44,53 @@ import { COMPONENT_STATES as STATES } from '../../../utils/constants';
   />
 </Story>
 
-### Types
-<Preview>
-  <Story name="Radio Types">
-    <form id="formTypes">
-      <RadioGroup
-        formId="formTypes"
-        handleChange={action('`Radio Types` onChange event triggered.')}
-        handleChange={val => console.log(`The value is ${val}`)}
-        label="Please make a choice:"
-        name="choice"
-        selectedValue="no"
-      >
-        <Radio label="Yes" value="yes" />
-        <Radio label="No" value="no" />
-      </RadioGroup>
-    </form>
+## States
+<Canvas>
+  <Story name="Default">
+    <RadioGroup
+      handleChange={action('`Radio States` onChange event triggered.')}
+      label="Default RadioGroup:"
+      name="default"
+      selectedValue="thatOne"
+    >
+      <Radio label="This one" value="thisOne" />
+      <Radio label="That one" value="thatOne" />
+      <Radio label="This other one" value="thisOtherOne" />
+      <Radio label="That other one" value="thatOtherOne" />
+    </RadioGroup>
   </Story>
-</Preview>
+</Canvas>
 
-
-### States
-<Preview>
-  <Story name="Radio States">
-    <form id="formStates">
-      {STATES.map(state => (
-        <RadioGroup
-          disabled={state === 'disabled'}
-          errorMsg={state === 'error' ? 'You did not choose wisely!' : ''}
-          formId="formStates"
-          handleChange={action('`Radio States` onChange event triggered.')}
-          key={state}
-          label={`${state.charAt(0).toUpperCase()}${state.slice(1)} RadioGroup:`}
-          name={`${state}Group`}
-          selectedValue="thatOne"
-        >
-          <Radio label="This one" value="thisOne" />
-          <Radio label="That one" value="thatOne" />
-          <Radio label="This other one" value="thisOtherOne" />
-          <Radio label="That other one" value="thatOtherOne" />
-        </RadioGroup>
-      ))}
-    </form>
+<Canvas>
+  <Story name="Disabled">
+    <RadioGroup
+      disabled={true}
+      handleChange={action('`Radio States` onChange event triggered.')}
+      label="Disabled RadioGroup:"
+      name="disabled"
+      selectedValue="thatOne"
+    >
+      <Radio label="This one" value="thisOne" />
+      <Radio label="That one" value="thatOne" />
+      <Radio label="This other one" value="thisOtherOne" />
+      <Radio label="That other one" value="thatOtherOne" />
+    </RadioGroup>
   </Story>
-</Preview>
+</Canvas>
+
+<Canvas>
+  <Story name="Error">
+    <RadioGroup
+      errorMsg="Not that one!"
+      handleChange={action('`Radio States` onChange event triggered.')}
+      label="Default RadioGroup:"
+      name="error"
+      selectedValue="thatOne"
+    >
+      <Radio label="This one" value="thisOne" />
+      <Radio label="That one" value="thatOne" />
+      <Radio label="This other one" value="thisOtherOne" />
+      <Radio label="That other one" value="thatOtherOne" />
+    </RadioGroup>
+  </Story>
+</Canvas>

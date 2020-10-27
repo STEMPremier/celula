@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Button from '../../button';
 
-import { BUTTON_TYPES as TYPES, COLORS, SIZES } from '../../../utils/constants';
+// import { BUTTON_TYPES as TYPES, COLORS, SIZES } from '../../../utils/constants';
 
 /**
  * `Submit Buttons` allow users to submit forms with a single tap. They are typically placed throughout your UI in every form.
@@ -30,8 +30,6 @@ const SubmitButton = ({
   </Button>
 );
 
-export default SubmitButton;
-
 SubmitButton.propTypes = {
   /**
    * The `<SubmitButton />` label.
@@ -44,7 +42,8 @@ SubmitButton.propTypes = {
   /**
    * The color of the `<SubmitButton />`.
    */
-  color: PropTypes.oneOf(COLORS),
+  // color: PropTypes.oneOf(COLORS),
+  color: PropTypes.oneOf(['primary', 'secondary', 'black', 'inverted']),
   /**
    * Disables the `<SubmitButton />`.
    */
@@ -56,11 +55,13 @@ SubmitButton.propTypes = {
   /**
    * The size of the `<SubmitButton />`.
    */
-  size: PropTypes.oneOf(SIZES),
+  // size: PropTypes.oneOf(SIZES),
+  size: PropTypes.oneOf(['small', 'large', 'jumbo']),
   /**
    * Which type of `<SubmitButton />` to render.
    */
-  type: PropTypes.oneOf(TYPES),
+  // type: PropTypes.oneOf(TYPES),
+  type: PropTypes.oneOf(['solid', 'outline', 'text']),
   /**
    * A function that is called when the button is clicked.
    */
@@ -71,5 +72,7 @@ SubmitButton.defaultProps = {
   color: 'primary',
   disabled: false,
   size: 'small',
-  type: 'default',
+  type: 'solid',
 };
+
+export default SubmitButton;

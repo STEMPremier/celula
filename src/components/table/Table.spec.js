@@ -3,6 +3,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
+import { data, columns } from './data';
 import Table from '.';
 
 describe('<Table />', () => {
@@ -10,13 +11,9 @@ describe('<Table />', () => {
     test('renders the component', () => {
       const wrapper = shallow(
         <Table
-          label="This is a label"
-          name="Name"
-          headings={['Heading 1', 'heading 2']}
-          rows={[
-            { data: ['row 1 cell 1', 'row 1 cell 2'] },
-            { data: ['row 2 cell 1', 'row 2 cell 2'] },
-          ]}
+          columns={columns}
+          data={data}
+          rowFunction={event => console.log(event.target)}
         />,
       );
       expect(toJson(wrapper)).toMatchSnapshot();

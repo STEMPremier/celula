@@ -8,18 +8,12 @@ const plugins = [];
 module.exports = {
   addons: [
     '@storybook/addon-actions',
-    '@storybook/addon-a11y/register',
+    '@storybook/addon-a11y',
     '@storybook/addon-knobs/register',
-    '@storybook/addon-links',
     '@storybook/addon-viewport/register',
-    {
-      name: '@storybook/addon-docs',
-      options: {
-        configureJSX: true,
-      },
-    },
+    '@storybook/addon-docs',
   ],
-  stories: ['../src/**/**/*.stories.(jsx|mdx)'],
+  stories: ['../src/**/**/*.stories.@(jsx|mdx)'],
   webpackFinal: async (config, { configType }) => {
     console.log('env of Storybook process', configType);
     const rule = config.module.rules.find(r =>

@@ -56,7 +56,8 @@ Button.propTypes = {
   /**
    * The color of the `<Button />`.
    */
-  color: PropTypes.oneOf(COLORS),
+  // color: PropTypes.oneOf(COLORS),
+  color: PropTypes.oneOf(['primary', 'secondary', 'black', 'inverted']),
   /**
    * Disables the `<Button />`.
    */
@@ -74,11 +75,13 @@ Button.propTypes = {
   /**
    * The size of the `<Button />`.
    */
-  size: PropTypes.oneOf(SIZES),
+  // size: PropTypes.oneOf(SIZES),
+  size: PropTypes.oneOf(['small', 'large', 'jumbo']),
   /**
    * Which type of `<Button />` to render.
    */
-  type: PropTypes.oneOf(TYPES),
+  // type: PropTypes.oneOf(TYPES),
+  type: PropTypes.oneOf(['solid', 'outline', 'text']),
 };
 
 Button.defaultProps = {
@@ -87,7 +90,7 @@ Button.defaultProps = {
   disabled: false,
   htmlType: 'button',
   size: 'large',
-  type: 'default',
+  type: 'solid',
 };
 
 export default Button;

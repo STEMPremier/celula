@@ -24,9 +24,19 @@ const useRowSelectComponents = (instance) => {
     {
       id: 'selection',
       Header: ({ getToggleAllRowsSelectedProps }) => (
-        <Checkbox {...getToggleAllRowsSelectedProps()} />
+        <Checkbox
+          value="allRows[]"
+          label="label"
+          {...getToggleAllRowsSelectedProps()}
+        />
       ),
-      Cell: ({ row }) => <Checkbox {...row.getToggleRowSelectedProps()} />,
+      Cell: ({ row }) => (
+        <Checkbox
+          value={row.id}
+          label={row.id}
+          {...row.getToggleRowSelectedProps()}
+        />
+      ),
     },
     ...decorators,
   ]);
@@ -34,6 +44,12 @@ const useRowSelectComponents = (instance) => {
 /* eslint-enable react/display-name */
 /* eslint-enable react/prop-types */
 
+/**
+ * `Tables` display information in a grid-like format of rows and columns. They organize information in a way that’s easy to scan, so that users can look for patterns and insights. Tables can contain interactive components (such as chips, buttons, or menus), non-interactive elements (such as badges).
+ *
+ * ### *Mobile Tables*
+ * These list can support up to one inline link with additional actions placed within an ellipse menu in stacked tables. The purpose of this is to retain a relatively short row height. These lists are also stacked directly next to one another vertically allowing for no spacing. Text truncation is an option if desired.
+ */
 const Table = ({
   className,
   columns,
@@ -84,15 +100,15 @@ const Table = ({
         <div className="ce-table__header" role="rowgroup">
           {headerGroups.map((headerGroup) => (
             <div
+              key={headerGroup.id}
               className="ce-table__header--group"
               {...headerGroup.getHeaderGroupProps()}
-              key={headerGroup.id}
             >
               {headerGroup.headers.map((column) => (
                 <div
+                  key={column.id}
                   className="ce-table__heading"
                   {...column.getHeaderProps()}
-                  key={column.id}
                 >
                   {column.render('Header')}
                 </div>
@@ -113,12 +129,12 @@ const Table = ({
             };
 
             return (
-              <div {...rowProps} key={row.id}>
+              <div key={row.id} {...rowProps}>
                 {row.cells.map((cell) => (
                   <div
+                    key={cell.id}
                     className="ce-table__cell"
                     {...cell.getCellProps()}
-                    key={cell.id}
                   >
                     <div className="ce-table__cell-heading">
                       {typeof cell.column.Header === 'string'

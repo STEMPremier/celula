@@ -4,133 +4,94 @@ exports[`<Pagination /> render() renders the component 1`] = `
 <nav
   className="ce-pagination"
 >
-  <h1 />
   <ul
-    className="ce-pagination__oval-container"
+    className="ce-pagination__container"
   >
-    <button
-      className="ce-pagination__arrow ce-pagination__arrow--left"
-      onClick={[Function]}
-      type="button"
+    <li
+      className="ce-pagination__arrow"
     >
-      <SystemIcon
-        color="grey "
-        name="navigate"
-        size="large"
-      />
-    </button>
-    <div
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <SystemIcon
+          color="black"
+          name="navigate"
+          size="large"
+        />
+      </button>
+    </li>
+    <li
+      className="ce-pagination__number"
       key="1"
     >
-      <li
-        className="ce-pagination__page-item"
-        key="1"
+      <button
+        onClick={[Function]}
+        type="button"
       >
-        <a
-          className="ce-pagination__page-link ce-pagination--current "
-          href="#"
-          onClick={[Function]}
-        >
-          1
-        </a>
-      </li>
-    </div>
-    <div
+        1
+      </button>
+    </li>
+    <li
+      className="ce-pagination__number current-page"
       key="2"
     >
-      <li
-        className="ce-pagination__page-item"
-        key="2"
+      <button
+        onClick={[Function]}
+        type="button"
       >
-        <a
-          className="ce-pagination__page-link  "
-          href="#"
-          onClick={[Function]}
-        >
-          2
-        </a>
-      </li>
-    </div>
-    <div
+        2
+      </button>
+    </li>
+    <li
+      className="ce-pagination__number"
       key="3"
     >
-      <li
-        className="ce-pagination__page-item"
-        key="3"
+      <button
+        onClick={[Function]}
+        type="button"
       >
-        <a
-          className="ce-pagination__page-link  "
-          href="#"
-          onClick={[Function]}
-        >
-          3
-        </a>
-      </li>
-    </div>
-    <div
+        3
+      </button>
+    </li>
+    <li
+      className="ce-pagination__number"
       key="4"
     >
-      <li
-        className="ce-pagination__page-item"
-        key="4"
-      >
-        <a
-          className="ce-pagination__page-link  "
-          href="#"
-          onClick={[Function]}
-        >
-          4
-        </a>
-      </li>
-    </div>
-    <div
-      key="5"
-    >
-      <li
-        className="ce-pagination__page-item"
-        key="5"
-      >
-        <a
-          className="ce-pagination__page-link  "
-          href="#"
-          onClick={[Function]}
-        >
-          5
-        </a>
-      </li>
-    </div>
-    <li
-      className="ce-pagination__page-item"
-    >
-      <a
-        className="ce-pagination__ellipsis"
-        href="#"
+      <button
+        onClick={[Function]}
+        type="button"
       >
         ...
-      </a>
+      </button>
     </li>
     <li
-      className="ce-pagination__page-item"
+      className="ce-pagination__number"
+      key="5"
     >
-      <a
-        className="ce-pagination__last-page"
-        href="#"
+      <button
         onClick={[Function]}
+        type="button"
       >
-        8
-      </a>
+        10
+      </button>
     </li>
-    <button
+    <li
       className="ce-pagination__arrow"
-      onClick={[Function]}
-      type="button"
     >
-      <SystemIcon
-        color="black "
-        name="navigate"
-        size="large"
-      />
-    </button>
+      <button
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <SystemIcon
+          color="black"
+          name="navigate"
+          size="large"
+        />
+      </button>
+    </li>
   </ul>
 </nav>
 `;

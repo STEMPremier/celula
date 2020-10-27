@@ -1,117 +1,308 @@
-import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
 
+import { BUTTON_TYPES as TYPES, COLORS, SIZES } from '../../utils/constants';
+
 import Button from '.';
-import {
-  BUTTON_TYPES as TYPES,
-  COMPONENT_STATES as STATES,
-  COLORS,
-  SIZES
-} from '../../utils/constants';
 
 <Meta component={Button} title="Components/Atoms/Button" />
 
 # Button
-<Description of={Button} />
-<Props of={Button} />
 
-<Story name="Button with Knobs" parameters={{ docs: { disable: true }}}>
+<Description of={Button} />
+<ArgsTable of={Button} />
+
+<Story name="Button with Knobs" parameters={{ docs: { disable: true } }}>
   <Button
     className={text('className', '')}
     color={select('color', COLORS, 'primary')}
     disabled={boolean('disabled', false)}
     handleClick={action('`Button with Knobs` onClick event triggered.')}
     size={select('size', SIZES, 'small')}
-    type={select('type', TYPES, 'default')}
+    type={select('type', TYPES, 'solid')}
   >
     {text('children', 'a button')}
   </Button>
 </Story>
 
-### Types
-<Preview>
-  <Story name="Button Types">
-    <div>
-      {TYPES.map(type => (
-        <Button
-          handleClick={action('`Button Types` onClick event triggered.')}
-          key={type}
-          type={type}
-        >
-          {`${type} button`}
-        </Button>
-      ))}
-    </div>
-  </Story>
-</Preview>
+## Solid Buttons (Default)
 
-### Sizes
-<Preview>
-  <Story name="Button Sizes">
-    <div>
-      {TYPES.map(type => (
-        <div key={`${type}_size`}>
-          {SIZES.map(size => (
-            <Button
-              handleClick={action('`Button Sizes` onClick event triggered.')}
-              key={`${type}_${size}`}
-              size={size}
-              type={type}
-            >
-              {`${type} ${size}`}
-            </Button>
-          ))}
-        </div>
-      ))}
-    </div>
-  </Story>
-</Preview>
+Solid buttons are high-emphasis, distinguished by their use of elevation and fill. They contain actions that are primary to an application.
 
-### States
-<Preview>
-  <Story name="Button States">
-    <div>
-      {TYPES.map(type => (
-        <div key={`${type}_state`}>
-          {STATES.filter(state => state !== 'error').map(state => (
-            <Button
-              disabled={state === 'disabled'}
-              handleClick={action('`Button States` onClick event triggered.')}
-              key={`${state}_${type}`}
-              type={type}
-            >
-              {`${state} ${type}`}
-            </Button>
-          ))}
-        </div>
-      ))}
-    </div>
+<Canvas>
+  <Story name="Solid Small">
+    <Button
+      handleClick={action('`Solid Small Button` onClick event triggered.`')}
+      size="small"
+    >
+      small button
+    </Button>
   </Story>
-</Preview>
+  <Story name="Solid Large (Default)">
+    <Button
+      handleClick={action('`Solid Large Button` onClick event triggered.`')}
+      size="large"
+    >
+      large button
+    </Button>
+  </Story>
+  <Story name="Solid Jumbo">
+    <Button
+      handleClick={action('`Solid Jumbo Button` onClick event triggered.`')}
+      size="jumbo"
+    >
+      jumbo button
+    </Button>
+  </Story>
+</Canvas>
 
-### Colors
-<Preview>
-  <Story name="Button Colors">
-    <div>
-      {TYPES.map(type => (
-        <div key={`${type}_color`}>
-          {COLORS.map(color => (
-            <span
-              style={color === 'inverted' ? {backgroundColor:'black',display:'inline-block'} : {}}
-              key={`${type}_${color}`}
-            >
-              <Button
-                color={color}
-                handleClick={action('`Button Colors` onClick event triggered.')}
-                type={type}
-              >
-                {color}
-              </Button>
-            </span>
-          ))}
-        </div>
-      ))}
+### Colors and States
+
+<Canvas>
+  <Story name="Solid Primary (Default)">
+    <Button
+      color="primary"
+      handleClick={action('`Solid Primary Button` onClick event triggered.`')}
+      size="small"
+    >
+      primary
+    </Button>
+  </Story>
+  <Story name="Solid Secondary">
+    <Button
+      color="secondary"
+      handleClick={action('`Solid Secondary Button` onClick event triggered.`')}
+      size="small"
+    >
+      secondary
+    </Button>
+  </Story>
+  <Story name="Solid Black">
+    <Button
+      color="black"
+      handleClick={action('`Solid Black Button` onClick event triggered.`')}
+      size="small"
+    >
+      black
+    </Button>
+  </Story>
+  <Story name="Solid Inverted">
+    <div style={{ backgroundColor: 'black' }}>
+      <Button
+        color="inverted"
+        handleClick={action(
+          '`Solid Inverted Button` onClick event triggered.`',
+        )}
+        size="small"
+      >
+        inverted
+      </Button>
     </div>
   </Story>
-</Preview>
+  <Story name="Solid Disabled">
+    <Button
+      disabled={true}
+      handleClick={action('`Solid Disabled Button` onClick event triggered.`')}
+      size="small"
+    >
+      disabled
+    </Button>
+  </Story>
+</Canvas>
+
+## Outline Buttons
+
+Outlined buttons are medium-emphasis buttons. They contain actions that are important, but aren’t the primary action in an app. Outlined buttons are also a lower emphasis alternative to contained buttons, or a higher emphasis alternative to text buttons.
+
+<Canvas>
+  <Story name="Outline Small">
+    <Button
+      handleClick={action('`Outline Small Button` onClick event triggered.`')}
+      size="small"
+      type="outline"
+    >
+      small button
+    </Button>
+  </Story>
+  <Story name="Outline Large (Default)">
+    <Button
+      handleClick={action('`Outline Large Button` onClick event triggered.`')}
+      size="large"
+      type="outline"
+    >
+      large button
+    </Button>
+  </Story>
+  <Story name="Outline Jumbo">
+    <Button
+      handleClick={action('`Outline Jumbo Button` onClick event triggered.`')}
+      size="jumbo"
+      type="outline"
+    >
+      jumbo button
+    </Button>
+  </Story>
+</Canvas>
+
+### Colors and States
+
+<Canvas>
+  <Story name="Outline Primary (Default)">
+    <Button
+      color="primary"
+      handleClick={action('`Outline Primary Button` onClick event triggered.`')}
+      size="small"
+      type="outline"
+    >
+      primary
+    </Button>
+  </Story>
+  <Story name="Outline Secondary">
+    <Button
+      color="secondary"
+      handleClick={action(
+        '`Outline Secondary Button` onClick event triggered.`',
+      )}
+      size="small"
+      type="outline"
+    >
+      secondary
+    </Button>
+  </Story>
+  <Story name="Outline Black">
+    <Button
+      color="black"
+      handleClick={action('`Outline Black Button` onClick event triggered.`')}
+      size="small"
+      type="outline"
+    >
+      black
+    </Button>
+  </Story>
+  <Story name="Outline Inverted">
+    <div style={{ backgroundColor: 'black' }}>
+      <Button
+        color="inverted"
+        handleClick={action(
+          '`Outline Inverted Button` onClick event triggered.`',
+        )}
+        size="small"
+        type="outline"
+      >
+        inverted
+      </Button>
+    </div>
+  </Story>
+  <Story name="Outline Disabled">
+    <Button
+      disabled={true}
+      handleClick={action(
+        '`Outline Disabled Button` onClick event triggered.`',
+      )}
+      size="small"
+      type="outline"
+    >
+      disabled
+    </Button>
+  </Story>
+</Canvas>
+
+## Text Buttons
+
+Text buttons are typically used for less-pronounced actions, including those located in dialogs and cards.
+
+Text buttons are often embedded in contained components like cards and dialogs, in order to relate themselves to the component in which they appear. Because text buttons don’t have a container, they don’t distract from nearby content.
+
+<Canvas>
+  <Story name="Text Small">
+    <Button
+      handleClick={action('`Text Small Button` onClick event triggered.`')}
+      size="small"
+      type="text"
+    >
+      small button
+    </Button>
+  </Story>
+  <Story name="Text Large (Default)">
+    <Button
+      handleClick={action('`Text Large Button` onClick event triggered.`')}
+      size="large"
+      type="text"
+    >
+      large button
+    </Button>
+  </Story>
+  <Story name="Text Jumbo">
+    <Button
+      handleClick={action('`Text Jumbo Button` onClick event triggered.`')}
+      size="jumbo"
+      type="text"
+    >
+      jumbo button
+    </Button>
+  </Story>
+</Canvas>
+
+### Colors and States
+
+<Canvas>
+  <Story name="Text Primary (Default)">
+    <Button
+      color="primary"
+      handleClick={action('`Text Primary Button` onClick event triggered.`')}
+      size="small"
+      type="text"
+    >
+      primary
+    </Button>
+  </Story>
+  <Story name="Text Secondary">
+    <Button
+      color="secondary"
+      handleClick={action('`Text Secondary Button` onClick event triggered.`')}
+      size="small"
+      type="text"
+    >
+      secondary
+    </Button>
+  </Story>
+  <Story name="Text Black">
+    <Button
+      color="black"
+      handleClick={action('`Text Black Button` onClick event triggered.`')}
+      size="small"
+      type="text"
+    >
+      black
+    </Button>
+  </Story>
+  <Story name="Text Inverted">
+    <div style={{ backgroundColor: 'black' }}>
+      <Button
+        color="inverted"
+        handleClick={action('`Text Inverted Button` onClick event triggered.`')}
+        size="small"
+        type="text"
+      >
+        inverted
+      </Button>
+    </div>
+  </Story>
+  <Story name="Text Disabled">
+    <Button
+      disabled={true}
+      handleClick={action('`Text Disabled Button` onClick event triggered.`')}
+      size="small"
+      type="text"
+    >
+      disabled
+    </Button>
+  </Story>
+</Canvas>

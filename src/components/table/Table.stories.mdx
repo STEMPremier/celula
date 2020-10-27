@@ -1,11 +1,11 @@
 import {
+  ArgsTable,
+  Canvas,
   Description,
   Meta,
-  Preview,
-  Props,
   Story,
 } from '@storybook/addon-docs/blocks';
-import { action } from '@storybook/addon-actions';
+import { boolean } from '@storybook/addon-knobs';
 
 import { data, columns } from './data.js';
 import Table from '.';
@@ -15,11 +15,11 @@ import Table from '.';
 # Table
 
 <Description of={Table} />
-<Props of={Table} />
+<ArgsTable of={Table} />
 
-### Types
+## Default
 
-<Preview>
+<Canvas>
   <Story name="Default">
     <Table
       columns={columns}
@@ -27,9 +27,19 @@ import Table from '.';
       rowFunction={(event) => console.log(event.target)}
     />
   </Story>
-</Preview>
+</Canvas>
 
-<Preview>
+## Options
+
+Data tables can include interactive elements, such as checkboxes (on rows), sorting (on colums), and icons to communcate alerts.
+
+When a user hovers over a row, that row displays a background color.
+
+When a row checkbox is selected, the row displays a background color. For users who use screen magnification, the background color fill provides a way to indicate that a row has been selected, as the selected checkbox may appear outside of the magnified screen area.
+
+### Checkboxes
+
+<Canvas>
   <Story name="Selectable">
     <Table
       columns={columns}
@@ -38,4 +48,4 @@ import Table from '.';
       selectable={true}
     />
   </Story>
-</Preview>
+</Canvas>

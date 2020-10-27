@@ -1,4 +1,5 @@
-import namor from 'namor'; // eslint-disable-line import/no-extraneous-dependencies
+/* eslint-disable */
+import namor from 'namor';
 /**
  * @typedef {Object} Person
  * @property {string} firstName - The person's first name.
@@ -15,7 +16,7 @@ import namor from 'namor'; // eslint-disable-line import/no-extraneous-dependenc
  * @param {string} string - The string to capitalize.
  * @return {string} string - The capitalized string.
  */
-const capitalizeFirstLetter = string => {
+const capitalizeFirstLetter = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
@@ -49,10 +50,9 @@ const makePerson = () => {
  * @param {len} number - The length of the array.
  * @return {array} - The data.
  */
-const makeData = len => {
+const makeData = (len) => {
   const array = [];
 
-  // eslint-disable-next-line no-plusplus
   for (let i = 0; i < len; i++) {
     array.push(makePerson());
   }
@@ -65,7 +65,297 @@ const makeData = len => {
  * The structure of a datum's object is arbitrary, but the structure of any two objects must match.
  * The property names are used to map text for the header (defined in a separate array) to the column containing their respective data.
  */
-const data = makeData(100);
+// const data = makeData(100);
+const data = [
+  {
+    firstName: 'Terry',
+    lastName: 'Jeffords',
+    age: '30-65',
+    sex: 'male',
+  },
+  {
+    firstName: 'Jake',
+    lastName: 'Peralta',
+    age: '40',
+    sex: 'male',
+  },
+  {
+    firstName: 'Rosa',
+    lastName: 'Diaz',
+    age: '35',
+    sex: 'female',
+  },
+  {
+    firstName: 'Amy',
+    lastName: 'Santiago',
+    age: '36',
+    sex: 'female',
+  },
+  {
+    firstName: 'Raymond',
+    lastName: 'Holt',
+    age: '65',
+    sex: 'male',
+  },
+  {
+    firstName: 'Gina',
+    lastName: 'Linetti',
+    age: '40',
+    sex: 'female',
+  },
+  {
+    firstName: 'Charles',
+    lastName: 'Boyle',
+    age: '45',
+    sex: 'male',
+  },
+  {
+    firstName: 'Norm',
+    lastName: 'Scully',
+    age: 'lucky to be alive',
+    sex: 'male',
+  },
+  {
+    firstName: 'John',
+    lastName: 'Smith',
+    age: '30',
+    sex: 'male',
+  },
+  {
+    firstName: 'Jack',
+    lastName: 'Parr',
+    age: '47',
+    sex: 'male',
+  },
+  {
+    firstName: 'Rosanne',
+    lastName: 'Hernendex',
+    age: '38',
+    sex: 'female',
+  },
+  {
+    firstName: 'Carol',
+    lastName: 'Beattie',
+    age: '59',
+    sex: 'female',
+  },
+  {
+    firstName: 'Jesse',
+    lastName: 'Humboldt',
+    age: '15',
+    sex: 'male',
+  },
+  {
+    firstName: 'Paula',
+    lastName: 'Aubermol',
+    age: '47',
+    sex: 'female',
+  },
+  {
+    firstName: 'Clint',
+    lastName: 'Ferman',
+    age: '28',
+    sex: 'male',
+  },
+  {
+    firstName: 'Eddie',
+    lastName: 'Smadder',
+    age: '24',
+    sex: 'male',
+  },
+  {
+    firstName: 'Terry',
+    lastName: 'Jeffords',
+    age: '30-65',
+    sex: 'male',
+  },
+  {
+    firstName: 'Jake',
+    lastName: 'Peralta',
+    age: '40',
+    sex: 'male',
+  },
+  {
+    firstName: 'Rosa',
+    lastName: 'Diaz',
+    age: '35',
+    sex: 'female',
+  },
+  {
+    firstName: 'Amy',
+    lastName: 'Santiago',
+    age: '36',
+    sex: 'female',
+  },
+  {
+    firstName: 'Raymond',
+    lastName: 'Holt',
+    age: '65',
+    sex: 'male',
+  },
+  {
+    firstName: 'Gina',
+    lastName: 'Linetti',
+    age: '40',
+    sex: 'female',
+  },
+  {
+    firstName: 'Charles',
+    lastName: 'Boyle',
+    age: '45',
+    sex: 'male',
+  },
+  {
+    firstName: 'Norm',
+    lastName: 'Scully',
+    age: 'lucky to be alive',
+    sex: 'male',
+  },
+  {
+    firstName: 'John',
+    lastName: 'Smith',
+    age: '30',
+    sex: 'male',
+  },
+  {
+    firstName: 'Jack',
+    lastName: 'Parr',
+    age: '47',
+    sex: 'male',
+  },
+  {
+    firstName: 'Rosanne',
+    lastName: 'Hernendex',
+    age: '38',
+    sex: 'female',
+  },
+  {
+    firstName: 'Carol',
+    lastName: 'Beattie',
+    age: '59',
+    sex: 'female',
+  },
+  {
+    firstName: 'Jesse',
+    lastName: 'Humboldt',
+    age: '15',
+    sex: 'male',
+  },
+  {
+    firstName: 'Paula',
+    lastName: 'Aubermol',
+    age: '47',
+    sex: 'female',
+  },
+  {
+    firstName: 'Clint',
+    lastName: 'Ferman',
+    age: '28',
+    sex: 'male',
+  },
+  {
+    firstName: 'Eddie',
+    lastName: 'Smadder',
+    age: '24',
+    sex: 'male',
+  },
+  {
+    firstName: 'Terry',
+    lastName: 'Jeffords',
+    age: '30-65',
+    sex: 'male',
+  },
+  {
+    firstName: 'Jake',
+    lastName: 'Peralta',
+    age: '40',
+    sex: 'male',
+  },
+  {
+    firstName: 'Rosa',
+    lastName: 'Diaz',
+    age: '35',
+    sex: 'female',
+  },
+  {
+    firstName: 'Amy',
+    lastName: 'Santiago',
+    age: '36',
+    sex: 'female',
+  },
+  {
+    firstName: 'Raymond',
+    lastName: 'Holt',
+    age: '65',
+    sex: 'male',
+  },
+  {
+    firstName: 'Gina',
+    lastName: 'Linetti',
+    age: '40',
+    sex: 'female',
+  },
+  {
+    firstName: 'Charles',
+    lastName: 'Boyle',
+    age: '45',
+    sex: 'male',
+  },
+  {
+    firstName: 'Norm',
+    lastName: 'Scully',
+    age: 'lucky to be alive',
+    sex: 'male',
+  },
+  {
+    firstName: 'John',
+    lastName: 'Smith',
+    age: '30',
+    sex: 'male',
+  },
+  {
+    firstName: 'Jack',
+    lastName: 'Parr',
+    age: '47',
+    sex: 'male',
+  },
+  {
+    firstName: 'Rosanne',
+    lastName: 'Hernendex',
+    age: '38',
+    sex: 'female',
+  },
+  {
+    firstName: 'Carol',
+    lastName: 'Beattie',
+    age: '59',
+    sex: 'female',
+  },
+  {
+    firstName: 'Jesse',
+    lastName: 'Humboldt',
+    age: '15',
+    sex: 'male',
+  },
+  {
+    firstName: 'Paula',
+    lastName: 'Aubermol',
+    age: '47',
+    sex: 'female',
+  },
+  {
+    firstName: 'Clint',
+    lastName: 'Ferman',
+    age: '28',
+    sex: 'male',
+  },
+  {
+    firstName: 'Eddie',
+    lastName: 'Smadder',
+    age: '24',
+    sex: 'male',
+  },
+];
 
 /**
  * An array that describes the column header text and it's relationship to (a column of) the data.
@@ -94,3 +384,4 @@ const columns = [
 ];
 
 export { data, columns };
+/* eslint-enable */

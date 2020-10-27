@@ -1,4 +1,4 @@
-import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
 
 import FormControlGroup from '.';
@@ -9,10 +9,10 @@ import { Radio } from '../../radio';
 
 # FormControlGroup
 <Description of={FormControlGroup} />
-<Props of={FormControlGroup} />
+<ArgsTable of={FormControlGroup} />
 
 ## Grouping Checkboxes
-<Preview>
+<Canvas>
   <Story name="FormControlGroup with Checkboxes">
     <FormControlGroup
       label="Test Group"
@@ -24,10 +24,10 @@ import { Radio } from '../../radio';
       <Checkbox label="Checkbox 2" value="checkboxTwo" />
     </FormControlGroup>
   </Story>
-</Preview>
+</Canvas>
 
 ## Grouping Radios
-<Preview>
+<Canvas>
   <Story name="Form Control Group with Radios">
     <FormControlGroup
       label="Test Group"
@@ -39,4 +39,4 @@ import { Radio } from '../../radio';
       <Radio label="Radio 2" value="radioTwo" />
     </FormControlGroup>
   </Story>
-</Preview>
+</Canvas>

@@ -1,22 +1,24 @@
-import { Description, Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
 import { boolean, select, text } from '@storybook/addon-knobs';
 
 import { ToggleButton, ToggleButtonGroup } from '.';
-import { COMPONENT_STATES as STATES, COLORS, SIZES, SYSTEM_ICONS } from '../../utils/constants';
+import { COLORS, SIZES, SYSTEM_ICONS } from '../../utils/constants';
 
 <Meta component={ToggleButton} title="Components/Atoms/ToggleButton" />
 
-# ToggleButtonGroup and ToggleButton
-## ToggleButtonGroup
-<Description of={ToggleButtonGroup} />
-<Props of={ToggleButtonGroup}/>
+# ToggleButton
+A `ToggleButton` is comprised of 2 seperate components; the individual buttons, `ToggleButton`, and their container, `ToggleButtonGroup`. `ToggleButtons` must always be inside a `TogglebuttonContainer` to function properly, and as a group.
 
 ## ToggleButton
 <Description of={ToggleButton} />
-<Props of={ToggleButton}/>
+<ArgsTable of={ToggleButton}/>
 
-<Story name="ToggleButtonGroup with Knobs" parameters={{ docs: { disable: true }}}>
+## ToggleButtonGroup
+<Description of={ToggleButtonGroup} />
+<ArgsTable of={ToggleButtonGroup}/>
+
+<Story name="ToggleButtonGroup with Knobs" parameters={{docs:{disable:true}}}>
   <ToggleButtonGroup
     className={text('className', '')}
     color={select('color', COLORS, 'primary')}
@@ -33,7 +35,7 @@ import { COMPONENT_STATES as STATES, COLORS, SIZES, SYSTEM_ICONS } from '../../u
   </ToggleButtonGroup>
 </Story>
 
-<Story name="ToggleButton with Knobs" parameters={{ docs: {disable: true}}}>
+<Story name="ToggleButton with Knobs" parameters={{docs:{disable:true}}}>
   <ToggleButtonGroup
     handleChange={action('`ToggleButton with Knobs` onChange event triggered.')}
     name="formKnobs2"
@@ -49,12 +51,53 @@ import { COMPONENT_STATES as STATES, COLORS, SIZES, SYSTEM_ICONS } from '../../u
   </ToggleButtonGroup>
 </Story>
 
-### Types
-<Preview>
-  <Story name="ToggleButton Types">
+## Sizes
+<Canvas>
+  <Story name="Small">
     <ToggleButtonGroup
-      handleChange={action('`ToggleButton Types` onChange event triggered.')}
-      name="formTypes"
+      handleChange={value => console.log(value)}
+      name={`formSizes_small`}
+      selectedValue="follow"
+      size="small"
+    >
+      <ToggleButton icon="export" value="export" />
+      <ToggleButton icon="follow" value="follow" />
+      <ToggleButton icon="message" value="message" />
+    </ToggleButtonGroup>
+  </Story>
+  <Story name="Large (Default)">
+    <ToggleButtonGroup
+      handleChange={value => console.log(value)}
+      name={`formSizes_large`}
+      selectedValue="follow"
+      size="large"
+    >
+      <ToggleButton icon="export" value="export" />
+      <ToggleButton icon="follow" value="follow" />
+      <ToggleButton icon="message" value="message" />
+    </ToggleButtonGroup>
+  </Story>
+  <Story name="Jumbo">
+    <ToggleButtonGroup
+      handleChange={value => console.log(value)}
+      name={`formSizes_jumbo`}
+      selectedValue="follow"
+      size="jumbo"
+    >
+      <ToggleButton icon="export" value="export" />
+      <ToggleButton icon="follow" value="follow" />
+      <ToggleButton icon="message" value="message" />
+    </ToggleButtonGroup>
+  </Story>
+</Canvas>
+
+## Colors and States
+<Canvas>
+  <Story name="Primary (Default)">
+    <ToggleButtonGroup
+      color="primary"
+      handleChange={value => console.log(value)}
+      name={`formStates_primary`}
       selectedValue="follow"
     >
       <ToggleButton icon="export" value="export" />
@@ -62,69 +105,54 @@ import { COMPONENT_STATES as STATES, COLORS, SIZES, SYSTEM_ICONS } from '../../u
       <ToggleButton icon="message" value="message" />
     </ToggleButtonGroup>
   </Story>
-</Preview>
-
-### Sizes
-<Preview>
-  <Story name="ToggleButton Sizes">
-    <div>
-      {SIZES.map(size => (
-        <ToggleButtonGroup
-          handleChange={action('`ToggleButton Sizes` onChange event triggered.')}
-          key={`formSizes_${size}`}
-          name={`formSizes_${size}`}
-          selectedValue="follow"
-          size={size}
-        >
-          <ToggleButton icon="export" value="export" />
-          <ToggleButton icon="follow" value="follow" />
-          <ToggleButton icon="message" value="message" />
-        </ToggleButtonGroup>
-      ))}
-    </div>
+  <Story name="Secondary">
+    <ToggleButtonGroup
+      color="secondary"
+      handleChange={value => console.log(value)}
+      name={`formStates_secondary`}
+      selectedValue="follow"
+    >
+      <ToggleButton icon="export" value="export" />
+      <ToggleButton icon="follow" value="follow" />
+      <ToggleButton icon="message" value="message" />
+    </ToggleButtonGroup>
   </Story>
-</Preview>
-
-### States
-<Preview>
-  <Story name="ToggleButton States">
-    {STATES.filter(state => state !== 'error').map(state => (
+  <Story name="Black">
+    <ToggleButtonGroup
+      color="black"
+      handleChange={value => console.log(value)}
+      name={`formStates_black`}
+      selectedValue="follow"
+    >
+      <ToggleButton icon="export" value="export" />
+      <ToggleButton icon="follow" value="follow" />
+      <ToggleButton icon="message" value="message" />
+    </ToggleButtonGroup>
+  </Story>
+  <Story name="Inverted">
+    <div style={{backgroundColor:'black'}}>
       <ToggleButtonGroup
-        disabled={state === 'disabled'}
-        handleChange={action('`ToggleButton States` onChange event triggered.')}
-        key={`formStates_${state}`}
-        name={`formStates_${state}`}
+        color="inverted"
+        handleChange={value => console.log(value)}
+        name={`formStates_inverted`}
         selectedValue="follow"
       >
         <ToggleButton icon="export" value="export" />
         <ToggleButton icon="follow" value="follow" />
         <ToggleButton icon="message" value="message" />
       </ToggleButtonGroup>
-    ))}
-  </Story>
-</Preview>
-
-### Colors
-<Preview>
-  <Story name="ToggleButton Colors">
-    <div>
-      {COLORS.map(color => (
-        <span
-          style={color === 'inverted' ? {backgroundColor:'black',display:'inline-block'} : {}}
-          key={`formColors_${color}`}
-        >
-          <ToggleButtonGroup
-            color={color}
-            handleChange={action('`ToggleButton Colors` onChange event triggered.')}
-            name={`formColor_${color}`}
-            selectedValue="follow"
-          >
-            <ToggleButton icon="export" value="export" />
-            <ToggleButton icon="follow" value="follow" />
-            <ToggleButton icon="message" value="message" />
-          </ToggleButtonGroup>
-        </span>
-      ))}
     </div>
   </Story>
-</Preview>
+  <Story name="Disabled">
+    <ToggleButtonGroup
+      disabled={true}
+      handleChange={value => console.log(value)}
+      name={`formStates_disabled`}
+      selectedValue="follow"
+    >
+      <ToggleButton icon="export" value="export" />
+      <ToggleButton icon="follow" value="follow" />
+      <ToggleButton icon="message" value="message" />
+    </ToggleButtonGroup>
+  </Story>
+</Canvas>
