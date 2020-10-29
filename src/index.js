@@ -15,8 +15,10 @@ import {
 } from './components/form-controls';
 import { ProductIcon, SecondaryIcon, SystemIcon } from './components/icon';
 import Link from './components/link';
-import Switch from './components/switch';
+import Pagination from './components/pagination';
 import Search from './components/search';
+import Switch from './components/switch';
+import Table from './components/table';
 import { ToggleButton, ToggleButtonGroup } from './components/toggle-button';
 
 import './styles/celula.less';
@@ -39,8 +41,10 @@ export {
   SecondaryIcon,
   SystemIcon,
   Link,
+  Pagination,
   Search,
   Switch,
+  Table,
   ToggleButton,
   ToggleButtonGroup,
 };

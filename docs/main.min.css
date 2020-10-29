@@ -15,7 +15,6 @@
 @import url(https://use.typekit.net/gww8gqf.css);
 @import url(https://use.typekit.net/gww8gqf.css);
 @import url(https://use.typekit.net/gww8gqf.css);
-@import url(https://use.typekit.net/gww8gqf.css);
 html,
 body,
 div,
@@ -324,11 +323,6 @@ ol {
 /* Grayscale
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
- */
-/* Checked/Unchecked Disabled Radio,
- * Checked/Unchecked Disabled Checkbox,
- * Disabled Select,
- * Checked/Unchecked Disabled Switch
  */
 .ce-icon.ce-icon__product {
   align-items: center;
@@ -770,11 +764,6 @@ ol {
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
  */
-/* Checked/Unchecked Disabled Radio,
- * Checked/Unchecked Disabled Checkbox,
- * Disabled Select,
- * Checked/Unchecked Disabled Switch
- */
 .ce-link {
   text-decoration: none;
 }
@@ -1129,11 +1118,6 @@ ol {
 /* Grayscale
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
- */
-/* Checked/Unchecked Disabled Radio,
- * Checked/Unchecked Disabled Checkbox,
- * Disabled Select,
- * Checked/Unchecked Disabled Switch
  */
 .ce-alert {
   padding: 1.4rem 2rem;
@@ -1494,11 +1478,6 @@ ol {
 /* Grayscale
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
- */
-/* Checked/Unchecked Disabled Radio,
- * Checked/Unchecked Disabled Checkbox,
- * Disabled Select,
- * Checked/Unchecked Disabled Switch
  */
 button {
   margin: 0;
@@ -2052,11 +2031,6 @@ ol {
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
  */
-/* Checked/Unchecked Disabled Radio,
- * Checked/Unchecked Disabled Checkbox,
- * Disabled Select,
- * Checked/Unchecked Disabled Switch
- */
 .ce-container {
   box-sizing: border-box;
 }
@@ -2384,14 +2358,6 @@ ol {
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
  */
-/* Checked/Unchecked Disabled Radio,
- * Checked/Unchecked Disabled Checkbox,
- * Disabled Select,
- * Checked/Unchecked Disabled Switch
- */
-.ce-errorbox {
-  background-color: #fff;
-}
 .ce-errorbox .ce-errorbox__container {
   display: inline-block;
 }
@@ -2722,138 +2688,569 @@ ol {
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
  */
-/* Checked/Unchecked Disabled Radio,
- * Checked/Unchecked Disabled Checkbox,
- * Disabled Select,
- * Checked/Unchecked Disabled Switch
- */
-.ce-checkbox {
-  user-select: none;
-}
-.ce-checkbox input {
-  opacity: 0;
-}
-.ce-checkbox input + label {
-  color: rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-  display: inline-block;
-  height: 2rem;
-  line-height: 2rem;
-  padding: 0.8rem 4.4rem;
-}
-.ce-checkbox input + label::before {
-  background-color: transparent;
-  border: 0.75rem solid transparent;
-  border-radius: 50%;
-  box-sizing: border-box;
-  content: '';
-  height: 3.6rem;
-  left: 0;
-  margin: -0.8rem;
-  margin-left: 2rem;
-  position: absolute;
-  width: 3.6rem;
-}
-.ce-checkbox input + label::after {
-  background-color: #fbfbfb;
-  border-radius: 0.3rem;
-  box-shadow: -1px 0 #b2b2b2, 1px 0 #b2b2b2, 0 -1px #b2b2b2, 0 1px #b2b2b2;
-  box-sizing: border-box;
-  content: '';
-  height: 2rem;
-  left: 0;
-  margin-left: 2.8rem;
-  position: absolute;
-  width: 2rem;
-}
-.ce-checkbox input + label:hover::before {
-  background-color: #e5e5e5;
-  border: 0;
-}
-.ce-checkbox input + label:hover::after {
-  box-shadow: none;
-}
-.ce-checkbox input + label:active::before {
-  background-color: #b3b3b3;
-  border: 0;
-}
-.ce-checkbox input + label:active::after {
-  box-shadow: none;
-}
-.ce-checkbox input + label:focus::before {
-  background-color: #ccc;
-  border: 0;
-}
-.ce-checkbox input + label:focus::after {
-  box-shadow: none;
-}
-.ce-checkbox input:checked + label::after {
-  background-color: #192344;
-  border: 0.5rem solid #fff;
-  box-shadow: -1px 0 #192344, 1px 0 #192344, 0 -1px #192344, 0 1px #192344;
-}
-.ce-checkbox input:checked + label:hover::before {
-  background-color: #e6f7ff;
-}
-.ce-checkbox input:checked + label:hover::after {
-  box-shadow: none;
-}
-.ce-checkbox input:checked + label:active::before {
-  background-color: #b2e7ff;
-}
-.ce-checkbox input:checked + label:active::after {
-  box-shadow: none;
-}
-.ce-checkbox input:checked + label:focus::before {
-  background-color: #ccefff;
-}
-.ce-checkbox input:checked + label:focus::after {
-  box-shadow: none;
-}
-.ce-checkbox.ce-checkbox--disabled {
-  pointer-events: none;
-}
-.ce-checkbox.ce-checkbox--disabled input:checked + label::before {
-  background-color: #aeaeae;
-}
-.ce-checkbox.ce-checkbox--disabled input:checked + label::after {
-  background-color: #aeaeae;
-  box-shadow: -1px 0 #aeaeae, 1px 0 #aeaeae, 0 -1px #aeaeae, 0 1px #aeaeae;
-}
-.ce-checkbox.ce-checkbox--error input + label {
-  color: #e5004b;
-}
-.ce-checkbox.ce-checkbox--error input:checked + label::after {
-  background-color: #e5004b;
-  box-shadow: -1px 0 #e5004b, 1px 0 #e5004b, 0 -1px #e5004b, 0 1px #e5004b;
-}
-.ce-checkbox.ce-checkbox--error input:checked + label:hover::before {
-  background-color: #ffe5ed;
-  border: 0;
-}
-.ce-checkbox.ce-checkbox--error input:checked + label:hover::after {
-  box-shadow: none;
-}
-.ce-checkbox.ce-checkbox--error input:checked + label:active::before {
-  background-color: #ffb3cc;
-  border: 0;
-}
-.ce-checkbox.ce-checkbox--error input:checked + label:active::after {
-  box-shadow: none;
-}
-.ce-checkbox.ce-checkbox--error input:checked + label:focus::before {
-  background-color: #ffccdc;
-  border: 0;
-}
-.ce-checkbox.ce-checkbox--error input:checked + label:focus::after {
-  box-shadow: none;
-}
-.ce-checkbox.ce-checkbox--error .ce-errorbox {
-  margin-left: 2.75rem;
-  max-width: calc(100% - 2.75rem);
-}
-.ce-checkbox + .ce-checkbox {
-  margin-top: 0.4rem;
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  .ce-checkbox,
+  .ce-radio,
+  .ce-switch {
+    padding: 8px;
+  }
+  .ce-checkbox input[type='checkbox'],
+  .ce-radio input[type='checkbox'],
+  .ce-switch input[type='checkbox'],
+  .ce-checkbox input[type='radio'],
+  .ce-radio input[type='radio'],
+  .ce-switch input[type='radio'] {
+    --initial-background: #fbfbfb;
+    --initial-border: #b2b2b2;
+    --initial-channel: #7f7f7f;
+    --initial-disc: transparent;
+    --initial-disc-hover: #e5e5e5;
+    --initial-disc-active: #b3b3b3;
+    --initial-disc-focus: #ccc;
+    --checked-background: #fff;
+    --checked-border: #192344;
+    --checked-indicator: #192344;
+    --checked-channel: #007ab2;
+    --checked-disc-hover: #e6f7ff;
+    --checked-disc-active: #b2e7ff;
+    --checked-disc-focus: #ccefff;
+    --disabled-unchecked-border: #dbdbdb;
+    --disabled-unchecked-channel: #e5e5e5;
+    --disabled-checked-border: #aeaeae;
+    --disabled-switch-indicator: #99dfff;
+    --disabled-checked-channel: #ccefff;
+    --disabled-checked-indicator: #aeaeae;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: var(--background, var(--initial-background));
+    border: 1px solid var(--border, var(--initial-border));
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    margin: 0;
+    outline: none;
+    position: relative;
+    transition: background 0.3s, border-color 0.3s;
+    vertical-align: top;
+  }
+  .ce-checkbox input[type='checkbox']:before,
+  .ce-radio input[type='checkbox']:before,
+  .ce-switch input[type='checkbox']:before,
+  .ce-checkbox input[type='radio']:before,
+  .ce-radio input[type='radio']:before,
+  .ce-switch input[type='radio']:before {
+    background: var(--disc, var(--initial-disc));
+    border: 18px solid transparent;
+    border-radius: 50%;
+    content: '';
+    display: inline-block;
+    height: 0px;
+    margin: -9px;
+    position: relative;
+    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+    width: 0px;
+    z-index: -1;
+  }
+  .ce-checkbox input[type='checkbox']:after,
+  .ce-radio input[type='checkbox']:after,
+  .ce-switch input[type='checkbox']:after,
+  .ce-checkbox input[type='radio']:after,
+  .ce-radio input[type='radio']:after,
+  .ce-switch input[type='radio']:after {
+    background: var(--dot-background, #fbfbfb);
+    border: 1px solid var(--dot-border, #b2b2b2);
+    content: '';
+    display: block;
+    opacity: var(--dot-opacity, 0);
+    position: absolute;
+    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+  }
+  .ce-checkbox input[type='checkbox']:checked,
+  .ce-radio input[type='checkbox']:checked,
+  .ce-switch input[type='checkbox']:checked,
+  .ce-checkbox input[type='radio']:checked,
+  .ce-radio input[type='radio']:checked,
+  .ce-switch input[type='radio']:checked {
+    --background: var(--checked-background);
+    --border: var(--checked-border);
+    --d-t: 0.6s;
+    --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    --d-o: 0.3s;
+  }
+  .ce-checkbox input[type='checkbox']:checked:after,
+  .ce-radio input[type='checkbox']:checked:after,
+  .ce-switch input[type='checkbox']:checked:after,
+  .ce-checkbox input[type='radio']:checked:after,
+  .ce-radio input[type='radio']:checked:after,
+  .ce-switch input[type='radio']:checked:after {
+    --dot-opacity: 1;
+  }
+  .ce-checkbox input[type='checkbox']:checked:hover:not(:disabled):before,
+  .ce-radio input[type='checkbox']:checked:hover:not(:disabled):before,
+  .ce-switch input[type='checkbox']:checked:hover:not(:disabled):before,
+  .ce-checkbox input[type='radio']:checked:hover:not(:disabled):before,
+  .ce-radio input[type='radio']:checked:hover:not(:disabled):before,
+  .ce-switch input[type='radio']:checked:hover:not(:disabled):before {
+    --disc: var(--checked-disc-hover);
+  }
+  .ce-checkbox input[type='checkbox']:checked:active:not(:disabled):before,
+  .ce-radio input[type='checkbox']:checked:active:not(:disabled):before,
+  .ce-switch input[type='checkbox']:checked:active:not(:disabled):before,
+  .ce-checkbox input[type='radio']:checked:active:not(:disabled):before,
+  .ce-radio input[type='radio']:checked:active:not(:disabled):before,
+  .ce-switch input[type='radio']:checked:active:not(:disabled):before {
+    --disc: var(--checked-disc-active);
+  }
+  .ce-checkbox input[type='checkbox']:checked:focus:not(:disabled):before,
+  .ce-radio input[type='checkbox']:checked:focus:not(:disabled):before,
+  .ce-switch input[type='checkbox']:checked:focus:not(:disabled):before,
+  .ce-checkbox input[type='radio']:checked:focus:not(:disabled):before,
+  .ce-radio input[type='radio']:checked:focus:not(:disabled):before,
+  .ce-switch input[type='radio']:checked:focus:not(:disabled):before {
+    --disc: var(--checked-disc-focus);
+  }
+  .ce-checkbox input[type='checkbox']:disabled,
+  .ce-radio input[type='checkbox']:disabled,
+  .ce-switch input[type='checkbox']:disabled,
+  .ce-checkbox input[type='radio']:disabled,
+  .ce-radio input[type='radio']:disabled,
+  .ce-switch input[type='radio']:disabled {
+    --border: var(--disabled-unchecked-border);
+    cursor: not-allowed;
+  }
+  .ce-checkbox input[type='checkbox']:disabled:checked,
+  .ce-radio input[type='checkbox']:disabled:checked,
+  .ce-switch input[type='checkbox']:disabled:checked,
+  .ce-checkbox input[type='radio']:disabled:checked,
+  .ce-radio input[type='radio']:disabled:checked,
+  .ce-switch input[type='radio']:disabled:checked {
+    --border: var(--disabled-checked-border);
+  }
+  .ce-checkbox input[type='checkbox']:disabled:checked:after,
+  .ce-radio input[type='checkbox']:disabled:checked:after,
+  .ce-switch input[type='checkbox']:disabled:checked:after,
+  .ce-checkbox input[type='radio']:disabled:checked:after,
+  .ce-radio input[type='radio']:disabled:checked:after,
+  .ce-switch input[type='radio']:disabled:checked:after {
+    --dot-background: var(--disabled-checked-indicator);
+    --dot-border: var(--disabled-checked-indicator);
+  }
+  .ce-checkbox input[type='checkbox']:disabled + label,
+  .ce-radio input[type='checkbox']:disabled + label,
+  .ce-switch input[type='checkbox']:disabled + label,
+  .ce-checkbox input[type='radio']:disabled + label,
+  .ce-radio input[type='radio']:disabled + label,
+  .ce-switch input[type='radio']:disabled + label {
+    cursor: not-allowed;
+  }
+  .ce-checkbox input[type='checkbox']:hover:not(:disabled):before,
+  .ce-radio input[type='checkbox']:hover:not(:disabled):before,
+  .ce-switch input[type='checkbox']:hover:not(:disabled):before,
+  .ce-checkbox input[type='radio']:hover:not(:disabled):before,
+  .ce-radio input[type='radio']:hover:not(:disabled):before,
+  .ce-switch input[type='radio']:hover:not(:disabled):before {
+    --disc: var(--initial-disc-hover);
+  }
+  .ce-checkbox input[type='checkbox']:active:not(:disabled):before,
+  .ce-radio input[type='checkbox']:active:not(:disabled):before,
+  .ce-switch input[type='checkbox']:active:not(:disabled):before,
+  .ce-checkbox input[type='radio']:active:not(:disabled):before,
+  .ce-radio input[type='radio']:active:not(:disabled):before,
+  .ce-switch input[type='radio']:active:not(:disabled):before {
+    --disc: var(--initial-disc-active);
+  }
+  .ce-checkbox input[type='checkbox']:focus:not(:disabled):before,
+  .ce-radio input[type='checkbox']:focus:not(:disabled):before,
+  .ce-switch input[type='checkbox']:focus:not(:disabled):before,
+  .ce-checkbox input[type='radio']:focus:not(:disabled):before,
+  .ce-radio input[type='radio']:focus:not(:disabled):before,
+  .ce-switch input[type='radio']:focus:not(:disabled):before {
+    --disc: var(--initial-disc-focus);
+  }
+  .ce-checkbox input[type='checkbox']:not(.switch),
+  .ce-radio input[type='checkbox']:not(.switch),
+  .ce-switch input[type='checkbox']:not(.switch),
+  .ce-checkbox input[type='radio']:not(.switch),
+  .ce-radio input[type='radio']:not(.switch),
+  .ce-switch input[type='radio']:not(.switch) {
+    width: 20px;
+  }
+  .ce-checkbox input[type='checkbox']:not(.switch):checked:hover:not(:disabled),
+  .ce-radio input[type='checkbox']:not(.switch):checked:hover:not(:disabled),
+  .ce-switch input[type='checkbox']:not(.switch):checked:hover:not(:disabled),
+  .ce-checkbox input[type='radio']:not(.switch):checked:hover:not(:disabled),
+  .ce-radio input[type='radio']:not(.switch):checked:hover:not(:disabled),
+  .ce-switch input[type='radio']:not(.switch):checked:hover:not(:disabled) {
+    --border: var(--checked-disc-hover);
+  }
+  .ce-checkbox input[type='checkbox']:not(.switch):checked:hover:not(:disabled):before,
+  .ce-radio input[type='checkbox']:not(.switch):checked:hover:not(:disabled):before,
+  .ce-switch input[type='checkbox']:not(.switch):checked:hover:not(:disabled):before,
+  .ce-checkbox input[type='radio']:not(.switch):checked:hover:not(:disabled):before,
+  .ce-radio input[type='radio']:not(.switch):checked:hover:not(:disabled):before,
+  .ce-switch input[type='radio']:not(.switch):checked:hover:not(:disabled):before {
+    --disc: var(--checked-disc-hover);
+  }
+  .ce-checkbox input[type='checkbox']:not(.switch):checked:active:not(:disabled),
+  .ce-radio input[type='checkbox']:not(.switch):checked:active:not(:disabled),
+  .ce-switch input[type='checkbox']:not(.switch):checked:active:not(:disabled),
+  .ce-checkbox input[type='radio']:not(.switch):checked:active:not(:disabled),
+  .ce-radio input[type='radio']:not(.switch):checked:active:not(:disabled),
+  .ce-switch input[type='radio']:not(.switch):checked:active:not(:disabled) {
+    --border: var(--checked-disc-active);
+  }
+  .ce-checkbox input[type='checkbox']:not(.switch):checked:active:not(:disabled):before,
+  .ce-radio input[type='checkbox']:not(.switch):checked:active:not(:disabled):before,
+  .ce-switch input[type='checkbox']:not(.switch):checked:active:not(:disabled):before,
+  .ce-checkbox input[type='radio']:not(.switch):checked:active:not(:disabled):before,
+  .ce-radio input[type='radio']:not(.switch):checked:active:not(:disabled):before,
+  .ce-switch input[type='radio']:not(.switch):checked:active:not(:disabled):before {
+    --disc: var(--checked-disc-active);
+  }
+  .ce-checkbox input[type='checkbox']:not(.switch):checked:focus:not(:disabled),
+  .ce-radio input[type='checkbox']:not(.switch):checked:focus:not(:disabled),
+  .ce-switch input[type='checkbox']:not(.switch):checked:focus:not(:disabled),
+  .ce-checkbox input[type='radio']:not(.switch):checked:focus:not(:disabled),
+  .ce-radio input[type='radio']:not(.switch):checked:focus:not(:disabled),
+  .ce-switch input[type='radio']:not(.switch):checked:focus:not(:disabled) {
+    --border: var(--checked-disc-focus);
+  }
+  .ce-checkbox input[type='checkbox']:not(.switch):checked:focus:not(:disabled):before,
+  .ce-radio input[type='checkbox']:not(.switch):checked:focus:not(:disabled):before,
+  .ce-switch input[type='checkbox']:not(.switch):checked:focus:not(:disabled):before,
+  .ce-checkbox input[type='radio']:not(.switch):checked:focus:not(:disabled):before,
+  .ce-radio input[type='radio']:not(.switch):checked:focus:not(:disabled):before,
+  .ce-switch input[type='radio']:not(.switch):checked:focus:not(:disabled):before {
+    --disc: var(--checked-disc-focus);
+  }
+  .ce-checkbox input[type='checkbox']:not(.switch):hover:not(:disabled),
+  .ce-radio input[type='checkbox']:not(.switch):hover:not(:disabled),
+  .ce-switch input[type='checkbox']:not(.switch):hover:not(:disabled),
+  .ce-checkbox input[type='radio']:not(.switch):hover:not(:disabled),
+  .ce-radio input[type='radio']:not(.switch):hover:not(:disabled),
+  .ce-switch input[type='radio']:not(.switch):hover:not(:disabled) {
+    --border: var(--initial-disc-hover);
+  }
+  .ce-checkbox input[type='checkbox']:not(.switch):active:not(:disabled),
+  .ce-radio input[type='checkbox']:not(.switch):active:not(:disabled),
+  .ce-switch input[type='checkbox']:not(.switch):active:not(:disabled),
+  .ce-checkbox input[type='radio']:not(.switch):active:not(:disabled),
+  .ce-radio input[type='radio']:not(.switch):active:not(:disabled),
+  .ce-switch input[type='radio']:not(.switch):active:not(:disabled) {
+    --border: var(--initial-disc-active);
+  }
+  .ce-checkbox input[type='checkbox']:not(.switch):focus:not(:disabled),
+  .ce-radio input[type='checkbox']:not(.switch):focus:not(:disabled),
+  .ce-switch input[type='checkbox']:not(.switch):focus:not(:disabled),
+  .ce-checkbox input[type='radio']:not(.switch):focus:not(:disabled),
+  .ce-radio input[type='radio']:not(.switch):focus:not(:disabled),
+  .ce-switch input[type='radio']:not(.switch):focus:not(:disabled) {
+    --border: var(--initial-disc-focus);
+  }
+  .ce-checkbox input[type='checkbox'] + label,
+  .ce-radio input[type='checkbox'] + label,
+  .ce-switch input[type='checkbox'] + label,
+  .ce-checkbox input[type='radio'] + label,
+  .ce-radio input[type='radio'] + label,
+  .ce-switch input[type='radio'] + label {
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 9.5px;
+    vertical-align: top;
+  }
+  .ce-checkbox input[type='checkbox']:not(.switch),
+  .ce-radio input[type='checkbox']:not(.switch),
+  .ce-switch input[type='checkbox']:not(.switch) {
+    border-radius: 3px;
+  }
+  .ce-checkbox input[type='checkbox']:not(.switch):after,
+  .ce-radio input[type='checkbox']:not(.switch):after,
+  .ce-switch input[type='checkbox']:not(.switch):after {
+    --dot-background: var(--checked-indicator);
+    --dot-border: var(--checked-indicator);
+    box-sizing: border-box;
+    height: 10px;
+    left: 4px;
+    top: 4px;
+    width: 10px;
+  }
+  .ce-checkbox input[type='checkbox'].switch,
+  .ce-radio input[type='checkbox'].switch,
+  .ce-switch input[type='checkbox'].switch {
+    --background: var(--initial-channel);
+    --border: var(--initial-channel);
+    border-radius: 9px;
+    height: 12px;
+    top: 4px;
+    width: 40px;
+  }
+  .ce-checkbox input[type='checkbox'].switch:before,
+  .ce-radio input[type='checkbox'].switch:before,
+  .ce-switch input[type='checkbox'].switch:before {
+    margin-top: -8px;
+    top: -5px;
+    transform: translateX(var(--disc-x, 0));
+  }
+  .ce-checkbox input[type='checkbox'].switch:after,
+  .ce-radio input[type='checkbox'].switch:after,
+  .ce-switch input[type='checkbox'].switch:after {
+    --dot-opacity: 1;
+    border-radius: 50%;
+    height: 18px;
+    left: -1px;
+    top: -5px;
+    transform: translateX(var(--dot-x, 0));
+    width: 18px;
+  }
+  .ce-checkbox input[type='checkbox'].switch:checked,
+  .ce-radio input[type='checkbox'].switch:checked,
+  .ce-switch input[type='checkbox'].switch:checked {
+    --background: var(--checked-channel);
+    --border: var(--checked-channel);
+    --dot-x: 23px;
+    --disc-x: 23px;
+    --d-t: 0.6s;
+    --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    --d-o: 0.3s;
+  }
+  .ce-checkbox input[type='checkbox'].switch:checked:after,
+  .ce-radio input[type='checkbox'].switch:checked:after,
+  .ce-switch input[type='checkbox'].switch:checked:after {
+    --dot-background: var(--checked-indicator);
+    --dot-border: var(--checked-indicator);
+  }
+  .ce-checkbox input[type='checkbox'].switch:disabled,
+  .ce-radio input[type='checkbox'].switch:disabled,
+  .ce-switch input[type='checkbox'].switch:disabled {
+    --background: var(--disabled-unchecked-channel);
+    --border: var(--disabled-unchecked-channel);
+  }
+  .ce-checkbox input[type='checkbox'].switch:disabled:checked,
+  .ce-radio input[type='checkbox'].switch:disabled:checked,
+  .ce-switch input[type='checkbox'].switch:disabled:checked {
+    --background: var(--disabled-checked-channel);
+    --border: var(--disabled-checked-channel);
+  }
+  .ce-checkbox input[type='checkbox'].switch:disabled:checked:after,
+  .ce-radio input[type='checkbox'].switch:disabled:checked:after,
+  .ce-switch input[type='checkbox'].switch:disabled:checked:after {
+    --dot-background: var(--disabled-switch-indicator);
+    --dot-border: var(--disabled-switch-indicator);
+  }
+  .ce-checkbox input[type='radio'],
+  .ce-radio input[type='radio'],
+  .ce-switch input[type='radio'] {
+    border-radius: 50%;
+  }
+  .ce-checkbox input[type='radio']:after,
+  .ce-radio input[type='radio']:after,
+  .ce-switch input[type='radio']:after {
+    --dot-background: var(--checked-indicator);
+    --dot-border: var(--checked-indicator);
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 10px;
+    left: 4px;
+    top: 4px;
+    width: 10px;
+  }
+  .ce-checkbox--error input[type='checkbox']:hover:not(:disabled):before,
+  .ce-radio--error input[type='checkbox']:hover:not(:disabled):before,
+  .ce-switch--error input[type='checkbox']:hover:not(:disabled):before,
+  .ce-checkbox--error input[type='radio']:hover:not(:disabled):before,
+  .ce-radio--error input[type='radio']:hover:not(:disabled):before,
+  .ce-switch--error input[type='radio']:hover:not(:disabled):before {
+    --disc: #ffe5ed;
+  }
+  .ce-checkbox--error input[type='checkbox']:active:not(:disabled):before,
+  .ce-radio--error input[type='checkbox']:active:not(:disabled):before,
+  .ce-switch--error input[type='checkbox']:active:not(:disabled):before,
+  .ce-checkbox--error input[type='radio']:active:not(:disabled):before,
+  .ce-radio--error input[type='radio']:active:not(:disabled):before,
+  .ce-switch--error input[type='radio']:active:not(:disabled):before {
+    --disc: #ffb3cc;
+  }
+  .ce-checkbox--error input[type='checkbox']:focus:not(:disabled):before,
+  .ce-radio--error input[type='checkbox']:focus:not(:disabled):before,
+  .ce-switch--error input[type='checkbox']:focus:not(:disabled):before,
+  .ce-checkbox--error input[type='radio']:focus:not(:disabled):before,
+  .ce-radio--error input[type='radio']:focus:not(:disabled):before,
+  .ce-switch--error input[type='radio']:focus:not(:disabled):before {
+    --disc: #ffccdc;
+  }
+  .ce-checkbox--error input[type='checkbox']:checked,
+  .ce-radio--error input[type='checkbox']:checked,
+  .ce-switch--error input[type='checkbox']:checked,
+  .ce-checkbox--error input[type='radio']:checked,
+  .ce-radio--error input[type='radio']:checked,
+  .ce-switch--error input[type='radio']:checked {
+    --border: #e5004b;
+  }
+  .ce-checkbox--error input[type='checkbox']:checked:after,
+  .ce-radio--error input[type='checkbox']:checked:after,
+  .ce-switch--error input[type='checkbox']:checked:after,
+  .ce-checkbox--error input[type='radio']:checked:after,
+  .ce-radio--error input[type='radio']:checked:after,
+  .ce-switch--error input[type='radio']:checked:after {
+    --dot-background: #e5004b;
+    --dot-border: #e5004b;
+  }
+  .ce-checkbox--error input[type='checkbox']:checked:hover:not(:disabled):before,
+  .ce-radio--error input[type='checkbox']:checked:hover:not(:disabled):before,
+  .ce-switch--error input[type='checkbox']:checked:hover:not(:disabled):before,
+  .ce-checkbox--error input[type='radio']:checked:hover:not(:disabled):before,
+  .ce-radio--error input[type='radio']:checked:hover:not(:disabled):before,
+  .ce-switch--error input[type='radio']:checked:hover:not(:disabled):before {
+    --disc: #ffe5ed;
+  }
+  .ce-checkbox--error input[type='checkbox']:checked:active:not(:disabled):before,
+  .ce-radio--error input[type='checkbox']:checked:active:not(:disabled):before,
+  .ce-switch--error input[type='checkbox']:checked:active:not(:disabled):before,
+  .ce-checkbox--error input[type='radio']:checked:active:not(:disabled):before,
+  .ce-radio--error input[type='radio']:checked:active:not(:disabled):before,
+  .ce-switch--error input[type='radio']:checked:active:not(:disabled):before {
+    --disc: #ffb3cc;
+  }
+  .ce-checkbox--error input[type='checkbox']:checked:focus:not(:disabled):before,
+  .ce-radio--error input[type='checkbox']:checked:focus:not(:disabled):before,
+  .ce-switch--error input[type='checkbox']:checked:focus:not(:disabled):before,
+  .ce-checkbox--error input[type='radio']:checked:focus:not(:disabled):before,
+  .ce-radio--error input[type='radio']:checked:focus:not(:disabled):before,
+  .ce-switch--error input[type='radio']:checked:focus:not(:disabled):before {
+    --disc: #ffccdc;
+  }
+  .ce-checkbox--error input[type='checkbox']:not(.switch):hover:not(:disabled),
+  .ce-radio--error input[type='checkbox']:not(.switch):hover:not(:disabled),
+  .ce-switch--error input[type='checkbox']:not(.switch):hover:not(:disabled),
+  .ce-checkbox--error input[type='radio']:not(.switch):hover:not(:disabled),
+  .ce-radio--error input[type='radio']:not(.switch):hover:not(:disabled),
+  .ce-switch--error input[type='radio']:not(.switch):hover:not(:disabled) {
+    --border: #ffe5ed;
+  }
+  .ce-checkbox--error input[type='checkbox']:not(.switch):hover:not(:disabled):before,
+  .ce-radio--error input[type='checkbox']:not(.switch):hover:not(:disabled):before,
+  .ce-switch--error input[type='checkbox']:not(.switch):hover:not(:disabled):before,
+  .ce-checkbox--error input[type='radio']:not(.switch):hover:not(:disabled):before,
+  .ce-radio--error input[type='radio']:not(.switch):hover:not(:disabled):before,
+  .ce-switch--error input[type='radio']:not(.switch):hover:not(:disabled):before {
+    --disc: #ffe5ed;
+  }
+  .ce-checkbox--error input[type='checkbox']:not(.switch):active:not(:disabled),
+  .ce-radio--error input[type='checkbox']:not(.switch):active:not(:disabled),
+  .ce-switch--error input[type='checkbox']:not(.switch):active:not(:disabled),
+  .ce-checkbox--error input[type='radio']:not(.switch):active:not(:disabled),
+  .ce-radio--error input[type='radio']:not(.switch):active:not(:disabled),
+  .ce-switch--error input[type='radio']:not(.switch):active:not(:disabled) {
+    --border: #ffb3cc;
+  }
+  .ce-checkbox--error input[type='checkbox']:not(.switch):focus:not(:disabled),
+  .ce-radio--error input[type='checkbox']:not(.switch):focus:not(:disabled),
+  .ce-switch--error input[type='checkbox']:not(.switch):focus:not(:disabled),
+  .ce-checkbox--error input[type='radio']:not(.switch):focus:not(:disabled),
+  .ce-radio--error input[type='radio']:not(.switch):focus:not(:disabled),
+  .ce-switch--error input[type='radio']:not(.switch):focus:not(:disabled) {
+    --border: #ffccdc;
+  }
+  .ce-checkbox--error input[type='checkbox']:not(.switch):checked:hover:not(:disabled),
+  .ce-radio--error input[type='checkbox']:not(.switch):checked:hover:not(:disabled),
+  .ce-switch--error input[type='checkbox']:not(.switch):checked:hover:not(:disabled),
+  .ce-checkbox--error input[type='radio']:not(.switch):checked:hover:not(:disabled),
+  .ce-radio--error input[type='radio']:not(.switch):checked:hover:not(:disabled),
+  .ce-switch--error input[type='radio']:not(.switch):checked:hover:not(:disabled) {
+    --border: #ffe5ed;
+  }
+  .ce-checkbox--error input[type='checkbox']:not(.switch):checked:hover:not(:disabled):before,
+  .ce-radio--error input[type='checkbox']:not(.switch):checked:hover:not(:disabled):before,
+  .ce-switch--error input[type='checkbox']:not(.switch):checked:hover:not(:disabled):before,
+  .ce-checkbox--error input[type='radio']:not(.switch):checked:hover:not(:disabled):before,
+  .ce-radio--error input[type='radio']:not(.switch):checked:hover:not(:disabled):before,
+  .ce-switch--error input[type='radio']:not(.switch):checked:hover:not(:disabled):before {
+    --disc: #ffe5ed;
+  }
+  .ce-checkbox--error input[type='checkbox']:not(.switch):checked:active:not(:disabled),
+  .ce-radio--error input[type='checkbox']:not(.switch):checked:active:not(:disabled),
+  .ce-switch--error input[type='checkbox']:not(.switch):checked:active:not(:disabled),
+  .ce-checkbox--error input[type='radio']:not(.switch):checked:active:not(:disabled),
+  .ce-radio--error input[type='radio']:not(.switch):checked:active:not(:disabled),
+  .ce-switch--error input[type='radio']:not(.switch):checked:active:not(:disabled) {
+    --border: #ffb3cc;
+  }
+  .ce-checkbox--error input[type='checkbox']:not(.switch):checked:active:not(:disabled):before,
+  .ce-radio--error input[type='checkbox']:not(.switch):checked:active:not(:disabled):before,
+  .ce-switch--error input[type='checkbox']:not(.switch):checked:active:not(:disabled):before,
+  .ce-checkbox--error input[type='radio']:not(.switch):checked:active:not(:disabled):before,
+  .ce-radio--error input[type='radio']:not(.switch):checked:active:not(:disabled):before,
+  .ce-switch--error input[type='radio']:not(.switch):checked:active:not(:disabled):before {
+    --disc: #ffb3cc;
+  }
+  .ce-checkbox--error input[type='checkbox']:not(.switch):checked:focus:not(:disabled),
+  .ce-radio--error input[type='checkbox']:not(.switch):checked:focus:not(:disabled),
+  .ce-switch--error input[type='checkbox']:not(.switch):checked:focus:not(:disabled),
+  .ce-checkbox--error input[type='radio']:not(.switch):checked:focus:not(:disabled),
+  .ce-radio--error input[type='radio']:not(.switch):checked:focus:not(:disabled),
+  .ce-switch--error input[type='radio']:not(.switch):checked:focus:not(:disabled) {
+    --border: #ffccdc;
+  }
+  .ce-checkbox--error input[type='checkbox']:not(.switch):checked:focus:not(:disabled):before,
+  .ce-radio--error input[type='checkbox']:not(.switch):checked:focus:not(:disabled):before,
+  .ce-switch--error input[type='checkbox']:not(.switch):checked:focus:not(:disabled):before,
+  .ce-checkbox--error input[type='radio']:not(.switch):checked:focus:not(:disabled):before,
+  .ce-radio--error input[type='radio']:not(.switch):checked:focus:not(:disabled):before,
+  .ce-switch--error input[type='radio']:not(.switch):checked:focus:not(:disabled):before {
+    --disc: #ffccdc;
+  }
+  .ce-checkbox--error input[type='checkbox'].switch,
+  .ce-radio--error input[type='checkbox'].switch,
+  .ce-switch--error input[type='checkbox'].switch,
+  .ce-checkbox--error input[type='radio'].switch,
+  .ce-radio--error input[type='radio'].switch,
+  .ce-switch--error input[type='radio'].switch {
+    --background: #cc0043;
+    --border: #cc0043;
+  }
+  .ce-checkbox--error input[type='checkbox'].switch:after,
+  .ce-radio--error input[type='checkbox'].switch:after,
+  .ce-switch--error input[type='checkbox'].switch:after,
+  .ce-checkbox--error input[type='radio'].switch:after,
+  .ce-radio--error input[type='radio'].switch:after,
+  .ce-switch--error input[type='radio'].switch:after {
+    --dot-background: #fff;
+    --dot-border: #ff3376;
+  }
+  .ce-checkbox--error input[type='checkbox'].switch:checked,
+  .ce-radio--error input[type='checkbox'].switch:checked,
+  .ce-switch--error input[type='checkbox'].switch:checked,
+  .ce-checkbox--error input[type='radio'].switch:checked,
+  .ce-radio--error input[type='radio'].switch:checked,
+  .ce-switch--error input[type='radio'].switch:checked {
+    --background: #cc0043;
+    --border: #cc0043;
+  }
+  .ce-checkbox--error input[type='checkbox'].switch:checked:after,
+  .ce-radio--error input[type='checkbox'].switch:checked:after,
+  .ce-switch--error input[type='checkbox'].switch:checked:after,
+  .ce-checkbox--error input[type='radio'].switch:checked:after,
+  .ce-radio--error input[type='radio'].switch:checked:after,
+  .ce-switch--error input[type='radio'].switch:checked:after {
+    --dot-background: #e5004b;
+    --dot-border: #e5004b;
+  }
+  .ce-checkbox--error input[type='checkbox'] + label,
+  .ce-radio--error input[type='checkbox'] + label,
+  .ce-switch--error input[type='checkbox'] + label,
+  .ce-checkbox--error input[type='radio'] + label,
+  .ce-radio--error input[type='radio'] + label,
+  .ce-switch--error input[type='radio'] + label {
+    color: #e5004b;
+  }
+  .ce-checkbox--error .ce-errorbox,
+  .ce-radio--error .ce-errorbox,
+  .ce-switch--error .ce-errorbox {
+    margin-top: 3px;
+  }
 }
 
 html,
@@ -3165,840 +3562,247 @@ ol {
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
  */
-/* Checked/Unchecked Disabled Radio,
- * Checked/Unchecked Disabled Checkbox,
- * Disabled Select,
- * Checked/Unchecked Disabled Switch
- */
-.ce-checkbox-group {
-  border: 0.3rem solid #fff;
-  border-radius: 0.5rem;
-  clear: both;
-  margin-bottom: 0.7rem;
-}
-.ce-checkbox-group legend {
-  color: rgba(0, 0, 0, 0.87);
-  margin-bottom: 2.2rem;
-  margin-left: 2.2rem;
-  padding: 0 0.3rem;
-}
-.ce-checkbox-group span {
-  background-color: #fff;
-  float: right;
-  height: 1.6rem;
-  margin-bottom: -1rem;
-  margin-right: 2.2rem;
-  margin-top: 2.2rem;
-  padding: 0 0.3rem;
-  text-align: right;
-}
-.ce-checkbox-group.ce-checkbox-group--disabled {
-  pointer-events: none;
-}
-.ce-checkbox-group.ce-checkbox-group--disabled input + label::before {
-  background-color: transparent;
-}
-.ce-checkbox-group.ce-checkbox-group--disabled input:checked + label::before {
-  background-color: transparent;
-}
-.ce-checkbox-group.ce-checkbox-group--disabled input:checked + label::after {
-  background-color: #aeaeae;
-  border: 0.5rem solid #fff;
-  box-shadow: -1px 0 #aeaeae, 1px 0 #aeaeae, 0 -1px #aeaeae, 0 1px #aeaeae;
-}
-.ce-checkbox-group.ce-checkbox-group--error {
-  border: 0.3rem solid #e5004b;
-  color: #e5004b;
-}
-.ce-checkbox-group.ce-checkbox-group--error input:checked + label::before {
-  background-color: transparent;
-}
-.ce-checkbox-group.ce-checkbox-group--error input:checked + label::after {
-  background-color: #e5004b;
-  border: 0.5rem solid #fff;
-  box-shadow: -1px 0 #e5004b, 1px 0 #e5004b, 0 -1px #e5004b, 0 1px #e5004b;
-}
-.ce-checkbox-group.ce-checkbox-group--error input:checked + label:hover::before {
-  background-color: #ffe5ed;
-}
-.ce-checkbox-group.ce-checkbox-group--error input:checked + label:active::before {
-  background-color: #ffb3cc;
-}
-.ce-checkbox-group.ce-checkbox-group--error input:checked + label:focus::before {
-  background-color: #ffccdc;
-}
-
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strong,
-sub,
-sup,
-var,
-b,
-u,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-/*
- * Font Guide: To get [Font Name] use the corresponding rules.
- *
- * Proxima Nova Black
- * font-family: proxima-nova, sans-serif;
- * font-weight: 900;
- * font-style: normal;
- *
- * Proxima Nova Extrabold
- * font-family: proxima-nova, sans-serif;
- * font-weight: 800;
- * font-style: normal;
- *
- * Proxima Nova Regular
- * font-family: proxima-nova, sans-serif;
- * font-weight: 400;
- * font-style: normal;
- *
- * Proxima Nova Italic
- * font-family: proxima-nova, sans-serif;
- * font-weight: 400;
- * font-style: italic;
- *
- * Proxima Nova Light
- * font-family: proxima-nova, sans-serif;
- * font-weight: 300;
- * font-style: normal;
- *
- * Proxima Nova Light Italic
- * font-family: proxima-nova, sans-serif;
- * font-weight: 300;
- * font-style: italic;
- *
- * Proxima Nova Medium Italic
- * font-family: proxima-nova, sans-serif;
- * font-weight: 500;
- * font-style: italic;
- */
-html {
-  color: rgba(0, 0, 0, 0.87);
-  font-family: proxima-nova, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 10px;
-}
-body {
-  color: rgba(0, 0, 0, 0.87);
-  font-size: 1.6rem;
-}
-h1 {
-  color: rgba(0, 0, 0, 0.87);
-  font-family: proxima-nova, sans-serif;
-  font-size: 9rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 9rem;
-}
-h2 {
-  color: rgba(0, 0, 0, 0.87);
-  font-family: proxima-nova, sans-serif;
-  font-size: 6.7rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 6.2rem;
-}
-h3 {
-  color: rgba(0, 0, 0, 0.87);
-  font-family: proxima-nova, sans-serif;
-  font-size: 5.1rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 5.1rem;
-}
-h4 {
-  color: rgba(0, 0, 0, 0.87);
-  font-family: proxima-nova, sans-serif;
-  font-size: 3.9rem;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 3.9rem;
-}
-h5 {
-  color: rgba(0, 0, 0, 0.87);
-  font-family: proxima-nova, sans-serif;
-  font-size: 2.8rem;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 2.8rem;
-}
-h6 {
-  color: rgba(0, 0, 0, 0.87);
-  font-family: proxima-nova, sans-serif;
-  font-size: 2.1rem;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 2.1rem;
-}
-p,
-span {
-  font-family: proxima-nova, sans-serif;
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 2.2rem;
-}
-p.small,
-span.small {
-  font-size: 1.4rem;
-  line-height: 2.2rem;
-}
-p.large,
-span.large {
-  font-size: 1.9rem;
-  line-height: 2.6rem;
-}
-blockquote {
-  font-family: proxima-nova, sans-serif;
-  font-size: 1.6rem;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 2.8rem;
-}
-ul,
-ol {
-  font-family: proxima-nova, sans-serif;
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 2.2rem;
-}
-.subheading {
-  color: rgba(0, 0, 0, 0.6);
-  font-family: proxima-nova, sans-serif;
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: 800;
-}
-.subheading.small {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-.hero {
-  color: rgba(0, 0, 0, 0.87);
-  font-family: proxima-nova, sans-serif;
-  font-size: 12rem;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 10rem;
-}
-.hero.large {
-  font-size: 15rem;
-  line-height: 12rem;
-}
-.pull-quote {
-  font-family: proxima-nova, sans-serif;
-  font-size: 2.8rem;
-  font-style: italic;
-  font-weight: 500;
-  line-height: 4rem;
-}
-.caption {
-  font-family: proxima-nova, sans-serif;
-  font-size: 2.1rem;
-  font-style: italic;
-  font-weight: 300;
-  line-height: 2.2rem;
-}
-.caption.small {
-  font-size: 1.6rem;
-}
-.primary-text {
-  color: rgba(0, 0, 0, 0.87);
-}
-.primary-text.inverted {
-  color: #ffffff;
-}
-.secondary-text {
-  color: rgba(0, 0, 0, 0.6);
-}
-.secondary-text.inverted {
-  color: rgba(255, 255, 255, 0.7);
-}
-.help-text {
-  color: rgba(0, 0, 0, 0.38);
-}
-.help-text.inverted {
-  color: rgba(255, 255, 255, 0.5);
-}
-/* Grayscale
- * #fff - #000 in [various]% steps
- * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
- */
-/* Checked/Unchecked Disabled Radio,
- * Checked/Unchecked Disabled Checkbox,
- * Disabled Select,
- * Checked/Unchecked Disabled Switch
- */
-.ce-radio {
-  user-select: none;
-}
-.ce-radio input {
-  opacity: 0;
-}
-.ce-radio input + label {
-  color: rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-  display: inline-block;
-  height: 2rem;
-  line-height: 2rem;
-  padding: 0.8rem 4.4rem;
-}
-.ce-radio input + label::before {
-  background-color: #b2b2b2;
-  border: 0.75rem solid #fff;
-  border-radius: 50%;
-  box-sizing: border-box;
-  content: '';
-  height: 3.6rem;
-  left: 0;
-  margin: -0.8rem;
-  margin-left: 2rem;
-  position: absolute;
-  width: 3.6rem;
-}
-.ce-radio input + label::after {
-  background-color: #fbfbfb;
-  border-radius: 50%;
-  box-sizing: border-box;
-  content: '';
-  height: 2rem;
-  left: 0;
-  margin-left: 2.8rem;
-  position: absolute;
-  width: 2rem;
-  box-shadow: -0.5px 0 #b2b2b2, 0.5px 0 #b2b2b2, 0 -0.5px #b2b2b2, 0 0.5px #b2b2b2;
-}
-.ce-radio input + label:hover::before {
-  background-color: #e5e5e5;
-  border: 0;
-}
-.ce-radio input + label:hover::after {
-  box-shadow: none;
-}
-.ce-radio input + label:active::before {
-  background-color: #b3b3b3;
-  border: 0;
-}
-.ce-radio input + label:active::after {
-  box-shadow: none;
-}
-.ce-radio input + label:focus::before {
-  background-color: #ccc;
-  border: 0;
-}
-.ce-radio input + label:focus::after {
-  box-shadow: none;
-}
-.ce-radio input:checked + label::before {
-  background-color: #192344;
-}
-.ce-radio input:checked + label::after {
-  background-color: #192344;
-  border: 0.5rem solid #fff;
-}
-.ce-radio input:checked + label:hover::before {
-  background-color: #e6f7ff;
-}
-.ce-radio input:checked + label:active::before {
-  background-color: #b2e7ff;
-}
-.ce-radio input:checked + label:focus::before {
-  background-color: #ccefff;
-}
-.ce-radio + .ce-radio {
-  margin-top: 0.4rem;
-}
-
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strong,
-sub,
-sup,
-var,
-b,
-u,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-/*
- * Font Guide: To get [Font Name] use the corresponding rules.
- *
- * Proxima Nova Black
- * font-family: proxima-nova, sans-serif;
- * font-weight: 900;
- * font-style: normal;
- *
- * Proxima Nova Extrabold
- * font-family: proxima-nova, sans-serif;
- * font-weight: 800;
- * font-style: normal;
- *
- * Proxima Nova Regular
- * font-family: proxima-nova, sans-serif;
- * font-weight: 400;
- * font-style: normal;
- *
- * Proxima Nova Italic
- * font-family: proxima-nova, sans-serif;
- * font-weight: 400;
- * font-style: italic;
- *
- * Proxima Nova Light
- * font-family: proxima-nova, sans-serif;
- * font-weight: 300;
- * font-style: normal;
- *
- * Proxima Nova Light Italic
- * font-family: proxima-nova, sans-serif;
- * font-weight: 300;
- * font-style: italic;
- *
- * Proxima Nova Medium Italic
- * font-family: proxima-nova, sans-serif;
- * font-weight: 500;
- * font-style: italic;
- */
-html {
-  color: rgba(0, 0, 0, 0.87);
-  font-family: proxima-nova, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 10px;
-}
-body {
-  color: rgba(0, 0, 0, 0.87);
-  font-size: 1.6rem;
-}
-h1 {
-  color: rgba(0, 0, 0, 0.87);
-  font-family: proxima-nova, sans-serif;
-  font-size: 9rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 9rem;
-}
-h2 {
-  color: rgba(0, 0, 0, 0.87);
-  font-family: proxima-nova, sans-serif;
-  font-size: 6.7rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 6.2rem;
-}
-h3 {
-  color: rgba(0, 0, 0, 0.87);
-  font-family: proxima-nova, sans-serif;
-  font-size: 5.1rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 5.1rem;
-}
-h4 {
-  color: rgba(0, 0, 0, 0.87);
-  font-family: proxima-nova, sans-serif;
-  font-size: 3.9rem;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 3.9rem;
-}
-h5 {
-  color: rgba(0, 0, 0, 0.87);
-  font-family: proxima-nova, sans-serif;
-  font-size: 2.8rem;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 2.8rem;
-}
-h6 {
-  color: rgba(0, 0, 0, 0.87);
-  font-family: proxima-nova, sans-serif;
-  font-size: 2.1rem;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 2.1rem;
-}
-p,
-span {
-  font-family: proxima-nova, sans-serif;
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 2.2rem;
-}
-p.small,
-span.small {
-  font-size: 1.4rem;
-  line-height: 2.2rem;
-}
-p.large,
-span.large {
-  font-size: 1.9rem;
-  line-height: 2.6rem;
-}
-blockquote {
-  font-family: proxima-nova, sans-serif;
-  font-size: 1.6rem;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 2.8rem;
-}
-ul,
-ol {
-  font-family: proxima-nova, sans-serif;
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 2.2rem;
-}
-.subheading {
-  color: rgba(0, 0, 0, 0.6);
-  font-family: proxima-nova, sans-serif;
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: 800;
-}
-.subheading.small {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-.hero {
-  color: rgba(0, 0, 0, 0.87);
-  font-family: proxima-nova, sans-serif;
-  font-size: 12rem;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 10rem;
-}
-.hero.large {
-  font-size: 15rem;
-  line-height: 12rem;
-}
-.pull-quote {
-  font-family: proxima-nova, sans-serif;
-  font-size: 2.8rem;
-  font-style: italic;
-  font-weight: 500;
-  line-height: 4rem;
-}
-.caption {
-  font-family: proxima-nova, sans-serif;
-  font-size: 2.1rem;
-  font-style: italic;
-  font-weight: 300;
-  line-height: 2.2rem;
-}
-.caption.small {
-  font-size: 1.6rem;
-}
-.primary-text {
-  color: rgba(0, 0, 0, 0.87);
-}
-.primary-text.inverted {
-  color: #ffffff;
-}
-.secondary-text {
-  color: rgba(0, 0, 0, 0.6);
-}
-.secondary-text.inverted {
-  color: rgba(255, 255, 255, 0.7);
-}
-.help-text {
-  color: rgba(0, 0, 0, 0.38);
-}
-.help-text.inverted {
-  color: rgba(255, 255, 255, 0.5);
-}
-/* Grayscale
- * #fff - #000 in [various]% steps
- * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
- */
-/* Checked/Unchecked Disabled Radio,
- * Checked/Unchecked Disabled Checkbox,
- * Disabled Select,
- * Checked/Unchecked Disabled Switch
- */
+.ce-checkbox-group,
 .ce-radio-group {
   border: 0.3rem solid #fff;
   border-radius: 0.5rem;
   clear: both;
+  padding-bottom: 0.6rem;
+  padding-top: 1rem;
   margin-bottom: 0.7rem;
 }
+.ce-checkbox-group legend,
 .ce-radio-group legend {
   color: rgba(0, 0, 0, 0.87);
-  margin-bottom: 2.2rem;
-  margin-left: 2.2rem;
+  margin-left: 0.5rem;
+  min-height: 1.6rem;
   padding: 0 0.3rem;
 }
+.ce-checkbox-group span,
 .ce-radio-group span {
   background-color: #fff;
-  display: block;
   float: right;
   height: 1.6rem;
-  margin-bottom: -1rem;
-  margin-right: 2.2rem;
-  margin-top: 2.2rem;
-  padding: 0 0.3rem;
+  margin-bottom: -1.2rem;
+  margin-right: 1.3rem;
+  padding: 0 0.9rem;
+  padding-top: 0.6rem;
 }
+.ce-checkbox-group.ce-checkbox-group--disabled,
+.ce-radio-group.ce-checkbox-group--disabled,
+.ce-checkbox-group.ce-radio-group--disabled,
 .ce-radio-group.ce-radio-group--disabled {
-  pointer-events: none;
+  cursor: not-allowed;
 }
-.ce-radio-group.ce-radio-group--disabled input + label::before {
-  background-color: #dbdbdb;
+.ce-checkbox-group.ce-checkbox-group--disabled legend,
+.ce-radio-group.ce-checkbox-group--disabled legend,
+.ce-checkbox-group.ce-radio-group--disabled legend,
+.ce-radio-group.ce-radio-group--disabled legend {
+  color: rgba(0, 0, 0, 0.38);
 }
-.ce-radio-group.ce-radio-group--disabled input:checked + label::before {
-  background-color: #aeaeae;
-}
-.ce-radio-group.ce-radio-group--disabled input:checked + label::after {
-  background-color: #aeaeae;
-}
+.ce-checkbox-group.ce-checkbox-group--error,
+.ce-radio-group.ce-checkbox-group--error,
+.ce-checkbox-group.ce-radio-group--error,
 .ce-radio-group.ce-radio-group--error {
-  border: 0.3rem solid #e5004b;
+  border: 0.3rem solid #ff3376;
   color: #e5004b;
 }
-.ce-radio-group.ce-radio-group--error input:checked + label::before {
-  background-color: #e5004b;
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox']:hover:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox']:hover:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox']:hover:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='checkbox']:hover:not(:disabled):before,
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio']:hover:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='radio']:hover:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='radio']:hover:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='radio']:hover:not(:disabled):before {
+  --disc: #ffe5ed;
 }
-.ce-radio-group.ce-radio-group--error input:checked + label::after {
-  background-color: #e5004b;
-  border: 0.5rem solid #fff;
-  box-shadow: -0.5px 0 #e5004b, 0.5px 0 #e5004b, 0 -0.5px #e5004b, 0 0.5px #e5004b;
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox']:active:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox']:active:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox']:active:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='checkbox']:active:not(:disabled):before,
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio']:active:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='radio']:active:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='radio']:active:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='radio']:active:not(:disabled):before {
+  --disc: #ffb3cc;
 }
-.ce-radio-group.ce-radio-group--error input:checked + label:hover::before {
-  background-color: #ffe5ed;
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox']:focus:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox']:focus:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox']:focus:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='checkbox']:focus:not(:disabled):before,
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio']:focus:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='radio']:focus:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='radio']:focus:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='radio']:focus:not(:disabled):before {
+  --disc: #ffccdc;
 }
-.ce-radio-group.ce-radio-group--error input:checked + label:hover::after {
-  box-shadow: none;
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox']:checked,
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox']:checked,
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox']:checked,
+.ce-radio-group.ce-radio-group--error input[type='checkbox']:checked,
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio']:checked,
+.ce-radio-group.ce-checkbox-group--error input[type='radio']:checked,
+.ce-checkbox-group.ce-radio-group--error input[type='radio']:checked,
+.ce-radio-group.ce-radio-group--error input[type='radio']:checked {
+  --border: #e5004b;
 }
-.ce-radio-group.ce-radio-group--error input:checked + label:active::before {
-  background-color: #ffb3cc;
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox']:checked:after,
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox']:checked:after,
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox']:checked:after,
+.ce-radio-group.ce-radio-group--error input[type='checkbox']:checked:after,
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio']:checked:after,
+.ce-radio-group.ce-checkbox-group--error input[type='radio']:checked:after,
+.ce-checkbox-group.ce-radio-group--error input[type='radio']:checked:after,
+.ce-radio-group.ce-radio-group--error input[type='radio']:checked:after {
+  --dot-background: #e5004b;
+  --dot-border: #e5004b;
 }
-.ce-radio-group.ce-radio-group--error input:checked + label:active::after {
-  box-shadow: none;
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox']:checked:hover:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox']:checked:hover:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox']:checked:hover:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='checkbox']:checked:hover:not(:disabled):before,
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio']:checked:hover:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='radio']:checked:hover:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='radio']:checked:hover:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='radio']:checked:hover:not(:disabled):before {
+  --disc: #ffe5ed;
 }
-.ce-radio-group.ce-radio-group--error input:checked + label:focus::before {
-  background-color: #ffccdc;
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox']:checked:active:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox']:checked:active:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox']:checked:active:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='checkbox']:checked:active:not(:disabled):before,
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio']:checked:active:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='radio']:checked:active:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='radio']:checked:active:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='radio']:checked:active:not(:disabled):before {
+  --disc: #ffb3cc;
 }
-.ce-radio-group.ce-radio-group--error input:checked + label:focus::after {
-  box-shadow: none;
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox']:checked:focus:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox']:checked:focus:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox']:checked:focus:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='checkbox']:checked:focus:not(:disabled):before,
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio']:checked:focus:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='radio']:checked:focus:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='radio']:checked:focus:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='radio']:checked:focus:not(:disabled):before {
+  --disc: #ffccdc;
+}
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):hover:not(:disabled),
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):hover:not(:disabled),
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox']:not(.switch):hover:not(:disabled),
+.ce-radio-group.ce-radio-group--error input[type='checkbox']:not(.switch):hover:not(:disabled),
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio']:not(.switch):hover:not(:disabled),
+.ce-radio-group.ce-checkbox-group--error input[type='radio']:not(.switch):hover:not(:disabled),
+.ce-checkbox-group.ce-radio-group--error input[type='radio']:not(.switch):hover:not(:disabled),
+.ce-radio-group.ce-radio-group--error input[type='radio']:not(.switch):hover:not(:disabled) {
+  --border: #ffe5ed;
+}
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):hover:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):hover:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox']:not(.switch):hover:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='checkbox']:not(.switch):hover:not(:disabled):before,
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio']:not(.switch):hover:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='radio']:not(.switch):hover:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='radio']:not(.switch):hover:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='radio']:not(.switch):hover:not(:disabled):before {
+  --disc: #ffe5ed;
+}
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):active:not(:disabled),
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):active:not(:disabled),
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox']:not(.switch):active:not(:disabled),
+.ce-radio-group.ce-radio-group--error input[type='checkbox']:not(.switch):active:not(:disabled),
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio']:not(.switch):active:not(:disabled),
+.ce-radio-group.ce-checkbox-group--error input[type='radio']:not(.switch):active:not(:disabled),
+.ce-checkbox-group.ce-radio-group--error input[type='radio']:not(.switch):active:not(:disabled),
+.ce-radio-group.ce-radio-group--error input[type='radio']:not(.switch):active:not(:disabled) {
+  --border: #ffb3cc;
+}
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):focus:not(:disabled),
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):focus:not(:disabled),
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox']:not(.switch):focus:not(:disabled),
+.ce-radio-group.ce-radio-group--error input[type='checkbox']:not(.switch):focus:not(:disabled),
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio']:not(.switch):focus:not(:disabled),
+.ce-radio-group.ce-checkbox-group--error input[type='radio']:not(.switch):focus:not(:disabled),
+.ce-checkbox-group.ce-radio-group--error input[type='radio']:not(.switch):focus:not(:disabled),
+.ce-radio-group.ce-radio-group--error input[type='radio']:not(.switch):focus:not(:disabled) {
+  --border: #ffccdc;
+}
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):checked:hover:not(:disabled),
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):checked:hover:not(:disabled),
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox']:not(.switch):checked:hover:not(:disabled),
+.ce-radio-group.ce-radio-group--error input[type='checkbox']:not(.switch):checked:hover:not(:disabled),
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio']:not(.switch):checked:hover:not(:disabled),
+.ce-radio-group.ce-checkbox-group--error input[type='radio']:not(.switch):checked:hover:not(:disabled),
+.ce-checkbox-group.ce-radio-group--error input[type='radio']:not(.switch):checked:hover:not(:disabled),
+.ce-radio-group.ce-radio-group--error input[type='radio']:not(.switch):checked:hover:not(:disabled) {
+  --border: #ffe5ed;
+}
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):checked:hover:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):checked:hover:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox']:not(.switch):checked:hover:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='checkbox']:not(.switch):checked:hover:not(:disabled):before,
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio']:not(.switch):checked:hover:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='radio']:not(.switch):checked:hover:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='radio']:not(.switch):checked:hover:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='radio']:not(.switch):checked:hover:not(:disabled):before {
+  --disc: #ffe5ed;
+}
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):checked:active:not(:disabled),
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):checked:active:not(:disabled),
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox']:not(.switch):checked:active:not(:disabled),
+.ce-radio-group.ce-radio-group--error input[type='checkbox']:not(.switch):checked:active:not(:disabled),
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio']:not(.switch):checked:active:not(:disabled),
+.ce-radio-group.ce-checkbox-group--error input[type='radio']:not(.switch):checked:active:not(:disabled),
+.ce-checkbox-group.ce-radio-group--error input[type='radio']:not(.switch):checked:active:not(:disabled),
+.ce-radio-group.ce-radio-group--error input[type='radio']:not(.switch):checked:active:not(:disabled) {
+  --border: #ffb3cc;
+}
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):checked:active:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):checked:active:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox']:not(.switch):checked:active:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='checkbox']:not(.switch):checked:active:not(:disabled):before,
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio']:not(.switch):checked:active:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='radio']:not(.switch):checked:active:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='radio']:not(.switch):checked:active:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='radio']:not(.switch):checked:active:not(:disabled):before {
+  --disc: #ffb3cc;
+}
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):checked:focus:not(:disabled),
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):checked:focus:not(:disabled),
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox']:not(.switch):checked:focus:not(:disabled),
+.ce-radio-group.ce-radio-group--error input[type='checkbox']:not(.switch):checked:focus:not(:disabled),
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio']:not(.switch):checked:focus:not(:disabled),
+.ce-radio-group.ce-checkbox-group--error input[type='radio']:not(.switch):checked:focus:not(:disabled),
+.ce-checkbox-group.ce-radio-group--error input[type='radio']:not(.switch):checked:focus:not(:disabled),
+.ce-radio-group.ce-radio-group--error input[type='radio']:not(.switch):checked:focus:not(:disabled) {
+  --border: #ffccdc;
+}
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):checked:focus:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox']:not(.switch):checked:focus:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox']:not(.switch):checked:focus:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='checkbox']:not(.switch):checked:focus:not(:disabled):before,
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio']:not(.switch):checked:focus:not(:disabled):before,
+.ce-radio-group.ce-checkbox-group--error input[type='radio']:not(.switch):checked:focus:not(:disabled):before,
+.ce-checkbox-group.ce-radio-group--error input[type='radio']:not(.switch):checked:focus:not(:disabled):before,
+.ce-radio-group.ce-radio-group--error input[type='radio']:not(.switch):checked:focus:not(:disabled):before {
+  --disc: #ffccdc;
+}
+.ce-checkbox-group.ce-checkbox-group--error input[type='checkbox'] + label,
+.ce-radio-group.ce-checkbox-group--error input[type='checkbox'] + label,
+.ce-checkbox-group.ce-radio-group--error input[type='checkbox'] + label,
+.ce-radio-group.ce-radio-group--error input[type='checkbox'] + label,
+.ce-checkbox-group.ce-checkbox-group--error input[type='radio'] + label,
+.ce-radio-group.ce-checkbox-group--error input[type='radio'] + label,
+.ce-checkbox-group.ce-radio-group--error input[type='radio'] + label,
+.ce-radio-group.ce-radio-group--error input[type='radio'] + label {
+  color: #e5004b;
+}
+.ce-checkbox-group .ce-checkbox + .ce-checkbox,
+.ce-radio-group .ce-checkbox + .ce-checkbox,
+.ce-checkbox-group .ce-radio + .ce-radio,
+.ce-radio-group .ce-radio + .ce-radio {
+  margin-top: 0.5rem;
 }
 
 html,
@@ -4310,19 +4114,6 @@ ol {
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
  */
-/* Checked/Unchecked Disabled Radio,
- * Checked/Unchecked Disabled Checkbox,
- * Disabled Select,
- * Checked/Unchecked Disabled Switch
- */
-.ce-file-uploader {
-  border: 3px solid transparent;
-  box-sizing: border-box;
-  clear: both;
-  display: inline-block;
-  padding: 2.5rem;
-  margin-bottom: 0.5rem;
-}
 .ce-file-uploader input {
   display: none;
 }
@@ -4808,11 +4599,6 @@ ol {
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
  */
-/* Checked/Unchecked Disabled Radio,
- * Checked/Unchecked Disabled Checkbox,
- * Disabled Select,
- * Checked/Unchecked Disabled Switch
- */
 .ce-input label {
   color: rgba(0, 0, 0, 0.6);
   display: block;
@@ -5271,11 +5057,6 @@ ol {
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
  */
-/* Checked/Unchecked Disabled Radio,
- * Checked/Unchecked Disabled Checkbox,
- * Disabled Select,
- * Checked/Unchecked Disabled Switch
- */
 .ce-select label {
   color: rgba(0, 0, 0, 0.6);
   display: block;
@@ -5326,7 +5107,7 @@ ol {
   box-sizing: border-box;
   flex-grow: 1;
   padding-left: 1rem;
-  background-image: url(static/media/down-arrow.05baa019.png);
+  background-image: url(static/media/down-arrow.7f9b80ce.png);
   background-position: calc(100% - 2rem) calc(1em + 0.9rem), calc(100% - 1.5rem) calc(1em + 0.2rem), calc(100% - 2.5rem) 0.5em;
   background-repeat: no-repeat;
   background-size: 1.5rem;
@@ -5719,11 +5500,6 @@ ol {
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
  */
-/* Checked/Unchecked Disabled Radio,
- * Checked/Unchecked Disabled Checkbox,
- * Disabled Select,
- * Checked/Unchecked Disabled Switch
- */
 .ce-textarea label {
   color: rgba(0, 0, 0, 0.6);
   display: block;
@@ -6097,10 +5873,364 @@ ol {
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
  */
-/* Checked/Unchecked Disabled Radio,
- * Checked/Unchecked Disabled Checkbox,
- * Disabled Select,
- * Checked/Unchecked Disabled Switch
+.ce-pagination {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+.ce-pagination .ce-pagination__container {
+  align-items: center;
+  border-radius: 3.3rem;
+  box-shadow: -0.4rem 0.4rem 1.5rem 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 1rem 4.8rem;
+}
+.ce-pagination .ce-pagination__container li button {
+  background-color: transparent;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  height: 3rem;
+  margin: 0 0.5rem;
+  outline: none;
+  width: 3rem;
+}
+.ce-pagination .ce-pagination__container li button span {
+  height: 1.6rem;
+}
+.ce-pagination .ce-pagination__container li button:disabled {
+  cursor: not-allowed;
+}
+.ce-pagination .ce-pagination__container .ce-pagination__arrow:first-of-type {
+  margin-top: -0.4rem;
+  margin-right: 1.3rem;
+}
+.ce-pagination .ce-pagination__container .ce-pagination__arrow:first-of-type button {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.ce-pagination .ce-pagination__container .ce-pagination__arrow:last-of-type {
+  margin-top: 0.4rem;
+  margin-left: 1.3rem;
+}
+.ce-pagination .ce-pagination__number button {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.ce-pagination .ce-pagination__number.current-page button {
+  background: linear-gradient(317.58deg, #098dc9 0%, #7838a8 100%);
+  color: #fff;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+ * Font Guide: To get [Font Name] use the corresponding rules.
+ *
+ * Proxima Nova Black
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 900;
+ * font-style: normal;
+ *
+ * Proxima Nova Extrabold
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 800;
+ * font-style: normal;
+ *
+ * Proxima Nova Regular
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 400;
+ * font-style: normal;
+ *
+ * Proxima Nova Italic
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 400;
+ * font-style: italic;
+ *
+ * Proxima Nova Light
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 300;
+ * font-style: normal;
+ *
+ * Proxima Nova Light Italic
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 300;
+ * font-style: italic;
+ *
+ * Proxima Nova Medium Italic
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 500;
+ * font-style: italic;
+ */
+html {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+}
+body {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.6rem;
+}
+h1 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 9rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 9rem;
+}
+h2 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 6.7rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 6.2rem;
+}
+h3 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 5.1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 5.1rem;
+}
+h4 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 3.9rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 3.9rem;
+}
+h5 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 2.8rem;
+}
+h6 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 2.1rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 2.1rem;
+}
+p,
+span {
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+p.small,
+span.small {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+p.large,
+span.large {
+  font-size: 1.9rem;
+  line-height: 2.6rem;
+}
+blockquote {
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+ul,
+ol {
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+.subheading {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 800;
+}
+.subheading.small {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.hero {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 12rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 10rem;
+}
+.hero.large {
+  font-size: 15rem;
+  line-height: 12rem;
+}
+.pull-quote {
+  font-family: proxima-nova, sans-serif;
+  font-size: 2.8rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 4rem;
+}
+.caption {
+  font-family: proxima-nova, sans-serif;
+  font-size: 2.1rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 2.2rem;
+}
+.caption.small {
+  font-size: 1.6rem;
+}
+.primary-text {
+  color: rgba(0, 0, 0, 0.87);
+}
+.primary-text.inverted {
+  color: #ffffff;
+}
+.secondary-text {
+  color: rgba(0, 0, 0, 0.6);
+}
+.secondary-text.inverted {
+  color: rgba(255, 255, 255, 0.7);
+}
+.help-text {
+  color: rgba(0, 0, 0, 0.38);
+}
+.help-text.inverted {
+  color: rgba(255, 255, 255, 0.5);
+}
+/* Grayscale
+ * #fff - #000 in [various]% steps
+ * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
  */
 .ce-search label {
   color: rgba(0, 0, 0, 0.6);
@@ -6547,119 +6677,187 @@ ol {
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
  */
-/* Checked/Unchecked Disabled Radio,
- * Checked/Unchecked Disabled Checkbox,
- * Disabled Select,
- * Checked/Unchecked Disabled Switch
- */
-.ce-switch {
-  height: 3.8rem;
+.ce-table {
+  display: flex;
 }
-.ce-switch input {
-  opacity: 0;
-  position: absolute;
+@media screen and (min-width: 765px) {
+  .ce-table {
+    flex-direction: column;
+  }
 }
-.ce-switch input + label {
-  cursor: pointer;
-  display: inline-block;
-  height: 2.9rem;
-  margin-left: 5.8rem;
-  padding-top: 0.9rem;
-  position: relative;
-}
-.ce-switch input + label span {
-  display: inline-block;
-  margin-left: 0.9rem;
-  margin-top: -0.2rem;
-}
-.ce-switch input + label::before {
-  background-color: #7f7f7f;
-  border-radius: 0.75rem;
-  content: '';
-  height: 1.2rem;
-  left: -4.8rem;
-  position: absolute;
-  top: 1.2rem;
-  transition: 250ms ease-in-out;
-  width: 4.1rem;
-}
-.ce-switch input + label::after {
-  background-color: #fbfbfb;
-  border: 0.1rem solid #b2b2b2;
-  border-radius: 50%;
+.ce-table .ce-table__header {
   box-sizing: border-box;
-  content: '';
-  height: 1.8rem;
-  left: -4.8rem;
-  position: absolute;
-  transition: 250ms ease-in-out;
-  width: 1.8rem;
 }
-.ce-switch input + label:hover::after {
-  box-shadow: -0.1rem 0 0 0.9rem #e5e5e5, 0.1rem 0 0 0.9rem #e5e5e5, 0 -0.1rem 0 0.9rem #e5e5e5, 0 0.1rem 0 0.9rem #e5e5e5;
+@media screen and (min-width: 765px) {
+  .ce-table .ce-table__header {
+    border-bottom: 0.1rem solid #bfbfbf;
+    display: flex;
+    flex-direction: column;
+  }
+  .ce-table .ce-table__header .ce-table__header--group {
+    align-items: center;
+    display: flex;
+    height: 5rem;
+    padding-left: 2.1rem;
+  }
+  .ce-table .ce-table__header .ce-table__header--group .ce-table__heading {
+    background-color: #fff;
+    flex: 1 1 0px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.9rem;
+  }
 }
-.ce-switch input + label:active::after {
-  box-shadow: -0.1rem 0 0 0.9rem #b3b3b3, 0.1rem 0 0 0.9rem #b3b3b3, 0 -0.1rem 0 0.9rem #b3b3b3, 0 0.1rem 0 0.9rem #b3b3b3;
+@media screen and (max-width: 765px) {
+  .ce-table .ce-table__header {
+    display: none;
+  }
 }
-.ce-switch input + label:focus::after {
-  box-shadow: -0.1rem 0 0 0.9rem #ccc, 0.1rem 0 0 0.9rem #ccc, 0 -0.1rem 0 0.9rem #ccc, 0 0.1rem 0 0.9rem #ccc;
+@media screen and (max-width: 765px) {
+  .ce-table .ce-table__body {
+    flex: 1 1 0px;
+  }
 }
-.ce-switch input:checked + label::before {
-  background-color: #007ab2;
+.ce-table .ce-table__body .ce-table__row {
+  display: flex;
 }
-.ce-switch input:checked + label::after {
-  background-color: #002333;
-  border-color: #002333;
-  left: -2.5rem;
+@media screen and (min-width: 765px) {
+  .ce-table .ce-table__body .ce-table__row {
+    align-items: center;
+    height: 5rem;
+    padding-left: 2.1rem;
+  }
 }
-.ce-switch input:checked + label:hover::after {
-  box-shadow: -0.1rem 0 0 0.9rem #e6f7ff, 0.1rem 0 0 0.9rem #e6f7ff, 0 -0.1rem 0 0.9rem #e6f7ff, 0 0.1rem 0 0.9rem #e6f7ff;
+@media screen and (max-width: 765px) {
+  .ce-table .ce-table__body .ce-table__row {
+    flex-direction: column;
+    padding-left: 0.8rem;
+  }
 }
-.ce-switch input:checked + label:active::after {
-  box-shadow: -0.1rem 0 0 0.9rem #b2e7ff, 0.1rem 0 0 0.9rem #b2e7ff, 0 -0.1rem 0 0.9rem #b2e7ff, 0 0.1rem 0 0.9rem #b2e7ff;
+@media screen and (min-width: 765px) {
+  .ce-table .ce-table__body .ce-table__row .ce-table__cell {
+    flex: 1 1 0px;
+  }
 }
-.ce-switch input:checked + label:focus::after {
-  box-shadow: -0.1rem 0 0 0.9rem #ccefff, 0.1rem 0 0 0.9rem #ccefff, 0 -0.1rem 0 0.9rem #ccefff, 0 0.1rem 0 0.9rem #ccefff;
+@media screen and (max-width: 765px) {
+  .ce-table .ce-table__body .ce-table__row .ce-table__cell {
+    display: flex;
+    flex-direction: row;
+  }
 }
-.ce-switch.ce-switch--disabled {
-  pointer-events: none;
+@media screen and (min-width: 765px) {
+  .ce-table .ce-table__body .ce-table__row .ce-table__cell .ce-table__cell-heading {
+    display: none;
+  }
 }
-.ce-switch.ce-switch--disabled input + label::before {
-  background-color: #e5e5e5;
+@media screen and (max-width: 765px) {
+  .ce-table .ce-table__body .ce-table__row .ce-table__cell .ce-table__cell-heading {
+    flex: 1 1 0px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 2.8rem;
+  }
 }
-.ce-switch.ce-switch--disabled input + label::after {
-  background-color: #fbfbfb;
-  border-color: #dbdbdb;
+.ce-table .ce-table__body .ce-table__row .ce-table__cell .ce-table__cell-body {
+  font-size: 1.4rem;
 }
-.ce-switch.ce-switch--disabled input:checked + label::before {
-  background-color: #ccefff;
+@media screen and (max-width: 765px) {
+  .ce-table .ce-table__body .ce-table__row .ce-table__cell .ce-table__cell-body {
+    flex: 1 1 0px;
+    line-height: 2.8rem;
+  }
 }
-.ce-switch.ce-switch--disabled input:checked + label::after {
-  background-color: #99dfff;
-  border-color: #99dfff;
+.ce-table .ce-table__body .ce-table__row:nth-child(odd) {
+  background-color: #f1f6f9;
 }
-.ce-switch.ce-switch--error input + label span {
-  color: #e5004b;
-}
-.ce-switch.ce-switch--error input + label::before {
-  background-color: #cc0043;
-}
-.ce-switch.ce-switch--error input + label::after {
-  border: 0.1rem solid #ff3376;
+.ce-table .ce-table__body .ce-table__row:nth-child(even) {
   background-color: #fff;
 }
-.ce-switch.ce-switch--error input + label:hover::after {
-  box-shadow: -0.1rem 0 0 0.9rem #ffe5ed, 0.1rem 0 0 0.9rem #ffe5ed, 0 -0.1rem 0 0.9rem #ffe5ed, 0 0.1rem 0 0.9rem #ffe5ed;
+@media screen and (max-width: 765px) {
+  .ce-table .ce-table__body .ce-table__row:nth-child(even) {
+    border: 0.1rem solid #e8e8e8;
+  }
 }
-.ce-switch.ce-switch--error input + label:active::after {
-  box-shadow: -0.1rem 0 0 0.9rem #ffb3cc, 0.1rem 0 0 0.9rem #ffb3cc, 0 -0.1rem 0 0.9rem #ffb3cc, 0 0.1rem 0 0.9rem #ffb3cc;
+.ce-table .ce-table__body .ce-table__row:hover {
+  background-color: #e6f7ff;
 }
-.ce-switch.ce-switch--error input + label:focus::after {
-  box-shadow: -0.1rem 0 0 0.9rem #ffccdc, 0.1rem 0 0 0.9rem #ffccdc, 0 -0.1rem 0 0.9rem #ffccdc, 0 0.1rem 0 0.9rem #ffccdc;
+@media screen and (min-width: 765px) {
+  .ce-table.ce-table__selectable .ce-table__header .ce-table__header--group {
+    padding-left: 0;
+  }
 }
-.ce-switch.ce-switch--error input:checked + label::after {
-  background-color: #cc0043;
-  border-color: #cc0043;
+@media screen and (min-width: 765px) {
+  .ce-table.ce-table__selectable .ce-table__header .ce-table__header--group .ce-table__heading:first-of-type {
+    box-sizing: border-box;
+    max-width: 5rem;
+    padding-left: 0.8rem;
+  }
+}
+.ce-table.ce-table__selectable .ce-table__header .ce-table__header--group .ce-table__heading:first-of-type .ce-checkbox label {
+  display: none;
+}
+@media screen and (min-width: 765px) {
+  .ce-table.ce-table__selectable .ce-table__header .ce-table__header--group .ce-table__heading:not(:first-of-type) {
+    padding-left: 25px;
+  }
+}
+@media screen and (min-width: 765px) {
+  .ce-table.ce-table__selectable .ce-table__body .ce-table__row {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 765px) {
+  .ce-table.ce-table__selectable .ce-table__body .ce-table__row {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 765px) {
+  .ce-table.ce-table__selectable .ce-table__body .ce-table__row .ce-table__cell:first-of-type {
+    box-sizing: border-box;
+    max-width: 5rem;
+    padding-left: 0.8rem;
+  }
+}
+@media screen and (max-width: 765px) {
+  .ce-table.ce-table__selectable .ce-table__body .ce-table__row .ce-table__cell:first-of-type {
+    max-height: 4.3rem;
+  }
+}
+.ce-table.ce-table__selectable .ce-table__body .ce-table__row .ce-table__cell:first-of-type .ce-checkbox label {
+  display: none;
+}
+.ce-table.ce-table__selectable .ce-table__body .ce-table__row .ce-table__cell:first-of-type .ce-table__cell-heading {
+  box-sizing: border-box;
+  max-height: 4.3rem;
+  padding-left: 0.3rem;
+  padding-top: 0.3rem;
+}
+@media screen and (max-width: 765px) {
+  .ce-table.ce-table__selectable .ce-table__body .ce-table__row .ce-table__cell:first-of-type .ce-table__cell-heading {
+    display: none;
+  }
+}
+@media screen and (max-width: 765px) {
+  .ce-table.ce-table__selectable .ce-table__body .ce-table__row .ce-table__cell:first-of-type .ce-table__cell-body {
+    padding-left: 0.3rem;
+    padding-top: 0.3rem;
+  }
+}
+.ce-table.ce-table__selectable .ce-table__body .ce-table__row .ce-table__cell:last-of-type {
+  padding-bottom: 2.2rem;
+}
+@media screen and (min-width: 765px) {
+  .ce-table.ce-table__selectable .ce-table__body .ce-table__row .ce-table__cell:not(:first-of-type) {
+    padding-left: 25px;
+  }
+}
+@media screen and (max-width: 765px) {
+  .ce-table.ce-table__selectable .ce-table__body .ce-table__row .ce-table__cell:not(:first-of-type) {
+    padding-left: 50px;
+  }
+}
+.ce-table.ce-table__clickable .ce-table__row {
+  cursor: pointer;
 }
 
 html,
@@ -6970,11 +7168,6 @@ ol {
 /* Grayscale
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
- */
-/* Checked/Unchecked Disabled Radio,
- * Checked/Unchecked Disabled Checkbox,
- * Disabled Select,
- * Checked/Unchecked Disabled Switch
  */
 .sr-only {
   border: 0;
@@ -7332,11 +7525,6 @@ ol {
 /* Grayscale
  * #fff - #000 in [various]% steps
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
- */
-/* Checked/Unchecked Disabled Radio,
- * Checked/Unchecked Disabled Checkbox,
- * Disabled Select,
- * Checked/Unchecked Disabled Switch
  */
 .ce-toggle-button-group {
   border-radius: 3.5rem;
