@@ -54,6 +54,7 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-test-renderer": "^16.13.0",
+    "rimraf": "^3.0.2",
     "style-loader": "^1.0.0",
     "svg-sprite-generator": "^0.0.7",
     "svg-sprite-loader": "^4.2.1",
@@ -67,22 +68,25 @@
     "react": "^16.10.2"
   },
   "scripts": {
-    "build": "npm run prebuild && npm run build:components",
+    "build": "yarn clean && yarn prebuild && yarn build:components && yarn build:styleguide",
     "build:components": "NODE_ENV=production webpack -p",
     "build:icons": "svg-sprite-generate -d src/components/icon/icons -o src/components/icon/icons/icons.svg",
     "build:styleguide": "build-storybook -c .storybook -o docs",
-    "check": "yarn run lint:check && yarn run pretty:check",
+    "check": "yarn lint:check && yarn pretty:check",
+    "clean": "rimraf dist docs",
+    "coverage": "yarn test -- --coverage",
     "lint:check": "eslint \"src/*.{js,jsx}\"",
     "lint:fix": "eslint --fix \"src/*.{js,jsx}\"",
     "optimize:icons": "node src/utils/svgOptimize.js",
-    "prebuild": "npm run pretty:fix && npm run lint:fix",
-    "prepublishOnly": "npm run build:components",
+    "prebuild": "yarn pretty:fix && yarn lint:fix",
+    "prepublishOnly": "yarn build:components",
     "pretty:check": "prettier --check \"src/*.{js,jsx}\"",
     "pretty:fix": "prettier --write \"src/*.{js,jsx}\"",
     "start": "start-storybook -p 6006",
-    "test": "NODE_ENV=test jest --verbose --coverage",
-    "test:watch": "NODE_ENV=test jest --verbose --watch",
-    "test:debug": "NODE_ENV=test node --inspect node_modules/.bin/jest --runInBand --watch"
+    "test": "NODE_ENV=test jest",
+    "test:debug": "NODE_ENV=test node --inspect node_modules/.bin/jest --runInBand --watch",
+    "test:verbose": "yarn test -- --verbose",
+    "test:watch": "NODE_ENV=test jest --verbose --watch"
   },
   "repository": {
     "type": "git",
@@ -112,7 +116,7 @@
     "node": "10.x",
     "yarn": "1.x"
   },
-  "license": "SEE LICENSE IN LICENSE.txt",
+  "license": "LGPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/STEMPremier/tallo-ui-kit/issues"
   },
