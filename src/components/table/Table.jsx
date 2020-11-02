@@ -17,7 +17,7 @@
  */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable prettier/prettier */
-import React, { useMemo } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
@@ -75,9 +75,6 @@ const Table = ({
   rowFunction = undefined,
   selectable,
 }) => {
-  // Memoize the data, and the columns to prevent rerenders, unless one of them actually changes.
-  const info = useMemo(() => data, []);
-  const cols = useMemo(() => columns, []);
 
   const {
     getTableProps,
@@ -95,7 +92,7 @@ const Table = ({
     // state: { pageIndex, pageSize },
     state: { pageIndex },
   } = useTable(
-    { columns: cols, data: info },
+    { columns, data },
     usePagination,
     useRowSelect,
     selectable ? useRowSelectComponents : () => {}, // This is the mechanism for turning on/off the checkbox column
