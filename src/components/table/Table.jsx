@@ -17,7 +17,7 @@
  */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable prettier/prettier */
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
@@ -72,6 +72,7 @@ const Table = ({
   columns,
   data,
   // handleClick,
+  pageSize,
   rowFunction = undefined,
   selectable,
 }) => {
@@ -88,8 +89,7 @@ const Table = ({
     gotoPage,
     nextPage,
     previousPage,
-    // setPageSize,
-    // state: { pageIndex, pageSize },
+    setPageSize,
     state: { pageIndex },
   } = useTable(
     { columns, data },
@@ -97,6 +97,8 @@ const Table = ({
     useRowSelect,
     selectable ? useRowSelectComponents : () => {}, // This is the mechanism for turning on/off the checkbox column
   );
+
+  useEffect(() => setPageSize(pageSize), [pageSize]);
 
   const classes = cx(
     'ce-table',
@@ -198,7 +200,11 @@ Table.propTypes = {
    * This function is only accessible if the "selectable" prop is set to true.
    * The default for the selectable and this handleClick function are both false.
    */
-  // handleClick: PropTypes.func,
+  // handleClick: Pr parameters={{ docs: { disable: true } }}opTypes.func,
+  /**
+   * The number of items per page in the `<Table />`.
+   */
+  pageSize: PropTypes.number,
   /**
    * A function to trigger when clicking on a row in the `<Table />`. Also enables the rows to be clickable.
    * The function accepts 2 arguments, `row` and `event`, in that order: `(row, event) => {}`.
@@ -220,6 +226,7 @@ Table.propTypes = {
 Table.defaultProps = {
   className: '',
   // handleClick: () => {},
+  pageSize: 10,
   selectable: false,
 };
 
