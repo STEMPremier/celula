@@ -24,7 +24,7 @@ import Table from '.';
     <Table
       columns={columns}
       data={data}
-      rowFunction={(event) => console.log(event.target)}
+      rowFunction={(row, event) => console.log('row', row, "\nevent", event)}
     />
   </Story>
 </Canvas>
