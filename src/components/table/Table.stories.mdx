@@ -5,7 +5,7 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks';
-import { boolean } from '@storybook/addon-knobs';
+import { number } from '@storybook/addon-knobs';
 
 import { data, columns } from './data.js';
 import Table from '.';
@@ -16,6 +16,15 @@ import Table from '.';
 
 <Description of={Table} />
 <ArgsTable of={Table} />
+
+<Story name="Table with Knobs" parameters={{ docs: { disable: true } }}>
+  <Table
+    columns={columns}
+    data={data}
+    rowFunction={(row, event) => console.log('row', row, "\nevent", event)}
+    pageSize={number('pageSize', 5)}
+  />
+</Story>
 
 ## Default
 
