@@ -139,7 +139,7 @@ const Table = ({
             const rowProps = {
               className: 'ce-table__row',
               ...row.getRowProps(),
-              onClick: rowFunction,
+              onClick: event => rowFunction(row, event),
             };
 
             return (
@@ -186,11 +186,11 @@ Table.propTypes = {
    */
   className: PropTypes.string,
   /**
-   * The column definition for your `<Table />`. See [react-table](https://react-table.tanstack.com/).
+   * An array for the column definition of your `<Table />`. See [react-table](https://react-table.tanstack.com/).
    */
   columns: PropTypes.arrayOf(PropTypes.object).isRequired,
   /**
-   * The data for the `<Table />`. See [react-table](https://react-table.tanstack.com/).
+   * An array of data (objects) for the `<Table />`. See [react-table](https://react-table.tanstack.com/).
    */
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
   /**
@@ -201,6 +201,10 @@ Table.propTypes = {
   // handleClick: PropTypes.func,
   /**
    * A function to trigger when clicking on a row in the `<Table />`. Also enables the rows to be clickable.
+   * The function accepts 2 arguments, `row` and `event`, in that order: `(row, event) => {}`.
+   *
+   * @param {row} object - The row object for this row of the table.
+   * @param {event} object - The event triggered by the click on the row.
    */
   /* NOTE: As I am using the presence of a function as a trigger for some functionality,
    * turning off the `default value` warning is preferable than setting a default
