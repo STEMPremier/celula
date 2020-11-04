@@ -5,7 +5,7 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks';
-import { number } from '@storybook/addon-knobs';
+import { boolean, number } from '@storybook/addon-knobs';
 
 import { data, columns } from './data.js';
 import Table from '.';
@@ -23,6 +23,7 @@ import Table from '.';
     data={data}
     rowFunction={(row, event) => console.log('row', row, "\nevent", event)}
     pageSize={number('pageSize', 5)}
+    selectable={boolean('selectable', false)}
   />
 </Story>
 
