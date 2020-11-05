@@ -21,9 +21,11 @@ import Table from '.';
   <Table
     columns={columns}
     data={data}
-    rowFunction={(row, event) => console.log('row', row, "\nevent", event)}
     pageSize={number('pageSize', 5)}
+    clickable={boolean('clickable', false)}
+    rowFunction={(row, event) => console.log('From the row:\nrow', row, "\nevent", event)}
     selectable={boolean('selectable', false)}
+    checkboxFunction={(row, event) => console.log('From the checkbox:\nrow', row, "\nevent", event)}
   />
 </Story>
 

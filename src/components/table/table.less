@@ -114,7 +114,11 @@
           border: 0.1rem solid @mobile-card-container-border;
         }
       }
+    }
+  }
 
+  &.ce-table__clickable {
+    .ce-table__row {
       &:hover {
         --background-color: #e6f7ff;
       }
@@ -229,6 +233,10 @@
 
         &.ce-table__row--selected {
           --background-color: @focus-blue;
+        }
+
+        &:hover {
+          --background-color: #e6f7ff;
         }
       }
     }

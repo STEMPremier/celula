@@ -34,7 +34,7 @@ import Pagination from '../pagination';
  * A `useTable` compatible hook that will add a column of/for the checkbox. To be passed into the `useTable` hook.
  * @param {object} instance - a `useTable` instance object. It is not a class so much as a pile of arrays (of functions).
  */
-const useRowSelectComponents = (instance) => {
+const useRowSelectComponent = (checkboxFunction = () => {}) => instance => {
   // visibleColumns (a property on the instance object) is an array of functions. Each of which will allow you to decorate some aspect of the columns. In our case, we are adding a checkbox to the beginning of each row.
   instance.visibleColumns.push((decorators) => [
     // This object is a 'constructor' for a column in the table. `useTable` will use the `Header` and `Cell` properties to determine what to put in our column. In our case they are components, but they could be strings.
@@ -42,16 +42,24 @@ const useRowSelectComponents = (instance) => {
       id: 'selection',
       Header: ({ getToggleAllRowsSelectedProps }) => (
         <Checkbox
-          value="allRows[]"
           label="label"
+          value="allRows[]"
           {...getToggleAllRowsSelectedProps()}
         />
       ),
       Cell: ({ row }) => (
         <Checkbox
-          value={row.id}
           label={row.id}
-          {...row.getToggleRowSelectedProps()}
+          value={row.id}
+          {...row.getToggleRowSelectedProps({
+            /* When we override the deafult onChange handler provided by useRowSelect,
+             * we have to manually trigger the toggleRowSelected function manually.
+             */
+            onChange: event => {
+              row.toggleRowSelected(event.target.checked);
+              checkboxFunction(row, event);
+            },
+          })}
         />
       ),
     },
@@ -71,10 +79,11 @@ const Table = ({
   className,
   columns,
   data,
-  // handleClick,
   pageSize,
-  rowFunction = undefined,
+  clickable,
+  rowFunction,
   selectable,
+  checkboxFunction,
 }) => {
   const {
     getTableProps,
@@ -108,7 +117,7 @@ const Table = ({
     },
     usePagination,
     useRowSelect,
-    useRowSelectComponents,
+    useRowSelectComponent(checkboxFunction),
   );
 
   useEffect(() => setPageSize(pageSize), [pageSize]);
@@ -117,8 +126,8 @@ const Table = ({
   const classes = cx(
     'ce-table',
     {
+      'ce-table__clickable': clickable,
       'ce-table__selectable': selectable,
-      'ce-table__clickable': rowFunction,
     },
     className,
   );
@@ -155,7 +164,7 @@ const Table = ({
             const rowProps = {
               className: `ce-table__row${row.isSelected ? ' ce-table__row--selected' : ''}`,
               ...row.getRowProps(),
-              onClick: event => rowFunction(row, event),
+              onClick: clickable ? event => rowFunction(row, event) : () => {},
             };
 
             return (
@@ -210,38 +219,42 @@ Table.propTypes = {
    */
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
   /**
-   * A function to trigger when a checkbox in the `<Table />` changes.
-   * This function is only accessible if the "selectable" prop is set to true.
-   * The default for the selectable and this handleClick function are both false.
-   */
-  // handleClick: Pr parameters={{ docs: { disable: true } }}opTypes.func,
-  /**
    * The number of items per page in the `<Table />`.
    */
   pageSize: PropTypes.number,
   /**
-   * A function to trigger when clicking on a row in the `<Table />`. Also enables the rows to be clickable.
+   * Make the rows in the `<Table />` clickable.
+   */
+  clickable: PropTypes.bool,
+  /**
+   * A function to trigger when clicking on a row in the `<Table />`.
    * The function accepts 2 arguments, `row` and `event`, in that order: `(row, event) => {}`.
    *
    * @param {row} object - The row object for this row of the table.
    * @param {event} object - The event triggered by the click on the row.
    */
-  /* NOTE: As I am using the presence of a function as a trigger for some functionality,
-   * turning off the `default value` warning is preferable than setting a default
-   * function that will evaluate to true, forcing me to set up an otherwise unneeded bool prop.
-   */
-  rowFunction: PropTypes.func, // eslint-disable-line
+  rowFunction: PropTypes.func,
   /**
-   * Automatically include a checkbox in the `<Table />`, as the first column.
+   * Adds a checkbox in the `<Table />`, as the first column.
    */
   selectable: PropTypes.bool,
+  /**
+   * A function to trigger when clicking on a checkbox in a row in the `<Table />`.
+   * The function accepts 2 arguments, `row` and `event`, in that order: `(row, event) => {}`.
+   *
+   * @param {row} object - The row object for this row of the table.
+   * @param {event} object - The event triggered by the click on the row.
+   */
+  checkboxFunction: PropTypes.func,
 };
 
 Table.defaultProps = {
   className: '',
-  // handleClick: () => {},
   pageSize: 10,
+  clickable: false,
+  rowFunction: () => {},
   selectable: false,
+  checkboxFunction: () => {},
 };
 
 export default Table;
