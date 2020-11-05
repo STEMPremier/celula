@@ -40,11 +40,11 @@ const useRowSelectComponent = (checkboxFunction = () => {}) => instance => {
     // This object is a 'constructor' for a column in the table. `useTable` will use the `Header` and `Cell` properties to determine what to put in our column. In our case they are components, but they could be strings.
     {
       id: 'selection',
-      Header: ({ getToggleAllRowsSelectedProps }) => (
+      Header: ({ getToggleAllPageRowsSelectedProps }) => (
         <Checkbox
           label="label"
           value="allRows[]"
-          {...getToggleAllRowsSelectedProps()}
+          {...getToggleAllPageRowsSelectedProps()}
         />
       ),
       Cell: ({ row }) => (
