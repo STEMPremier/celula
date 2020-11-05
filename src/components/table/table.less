@@ -1,6 +1,8 @@
 @import '../../styles/celula';
 
 .ce-table {
+  --initial-background: transparent;
+
   display: flex;
 
   // desktop
@@ -24,7 +26,6 @@
         padding-left: 2.1rem;
 
         .ce-table__heading {
-          background-color: @white;
           flex: 1 1 0px;
           font-size: 1.4rem;
           font-weight: bold;
@@ -46,6 +47,7 @@
     }
 
     .ce-table__row {
+      background-color: var(--background-color, var(--initial-background));
       display: flex;
 
       // desktop
@@ -101,11 +103,11 @@
       }
 
       &:nth-child(odd) {
-        background-color: @catskill-white;
+        --background-color: @catskill-white;
       }
 
       &:nth-child(even) {
-        background-color: @white;
+        --background-color: @white;
 
         //mobile
         @media screen and (max-width: 765px) {
@@ -114,7 +116,7 @@
       }
 
       &:hover {
-        background-color: #e6f7ff;
+        --background-color: #e6f7ff;
       }
     }
   }
@@ -153,6 +155,8 @@
 
     .ce-table__body {
       .ce-table__row {
+        cursor: pointer;
+
         // desktop
         @media screen and (min-width: 765px) {
           padding-left: 0;
@@ -219,13 +223,11 @@
             }
           }
         }
-      }
-    }
-  }
 
-  &.ce-table__clickable {
-    .ce-table__row {
-      cursor: pointer;
+        &.ce-table__row--selected {
+          --background-color: @focus-blue;
+        }
+      }
     }
   }
 }

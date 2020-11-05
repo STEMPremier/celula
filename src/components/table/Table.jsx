@@ -153,7 +153,7 @@ const Table = ({
             prepareRow(row);
 
             const rowProps = {
-              className: 'ce-table__row',
+              className: `ce-table__row${row.isSelected ? ' ce-table__row--selected' : ''}`,
               ...row.getRowProps(),
               onClick: event => rowFunction(row, event),
             };
