@@ -36,28 +36,46 @@ import Table from '.';
     <Table
       columns={columns}
       data={data}
-      rowFunction={(row, event) => console.log('row', row, "\nevent", event)}
     />
   </Story>
 </Canvas>
 
 ## Options
 
-Data tables can include interactive elements, such as checkboxes (on rows), sorting (on columns), and icons to communcate alerts.
+Data tables can include interactive elements, such as making the rows clickable, checkboxes (on rows), sorting (on columns).
 
+### Clickable
+When a user hovers over a row, that row displays a background color.
+
+A clicked row can trigger an (optional) function, `rowFunction`, on click: `function(row, event) {}`.
+
+<Canvas>
+  <Story name="Clickable">
+    <Table
+      columns={columns}
+      data={data}
+      clickable={true}
+      rowFunction={(row, event) => console.log('From the row:\nrow', row, "\nevent", event)}
+    />
+  </Story>
+</Canvas>
+
+### Selectable
 When a user hovers over a row, that row displays a background color.
 
 When a row checkbox is selected, the row displays a background color. For users who use screen magnification, the background color fill provides a way to indicate that a row has been selected, as the selected checkbox may appear outside of the magnified screen area.
 
-### Checkboxes
+A checkbox can trigger an (optional) function, `checkboxFunction`, on click: `function(row, event) {}`.
+
+Note: If you have both a `checkboxFunction` and a `rowFunction`, when you click the checkbox, both functions will trigger.
 
 <Canvas>
   <Story name="Selectable">
     <Table
       columns={columns}
       data={data}
-      rowFunction={(event) => console.log(event.target)}
       selectable={true}
+      checkboxFunction={(row, event) => console.log('From the checkbox:\nrow', row, "\nevent", event)}
     />
   </Story>
 </Canvas>
