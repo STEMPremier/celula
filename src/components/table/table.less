@@ -126,6 +126,21 @@
   }
 
   &.ce-table__selectable {
+    .ce-checkbox {
+      input[type='checkbox'] {
+        &:hover {
+          border-color: #b2b2b2;
+        }
+
+        &:checked:hover {
+          border-color: @big-stone;
+        }
+      }
+
+      label {
+        display: none;
+      }
+    }
     .ce-table__header {
       .ce-table__header--group {
         @media screen and (min-width: 765px) {
@@ -138,12 +153,6 @@
               box-sizing: border-box;
               max-width: 5rem;
               padding-left: 0.8rem;
-            }
-
-            .ce-checkbox {
-              label {
-                display: none;
-              }
             }
           }
 
@@ -183,12 +192,6 @@
             // mobile
             @media screen and (max-width: 765px) {
               max-height: 4.3rem;
-            }
-
-            .ce-checkbox {
-              label {
-                display: none;
-              }
             }
 
             .ce-table__cell-heading {
