@@ -2730,7 +2730,6 @@ ol {
     margin: 0;
     outline: none;
     position: relative;
-    transition: background 0.3s, border-color 0.3s;
     vertical-align: top;
   }
   .ce-checkbox input[type='checkbox']:before,
@@ -2747,7 +2746,6 @@ ol {
     height: 0px;
     margin: -9px;
     position: relative;
-    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
     width: 0px;
     z-index: -1;
   }
@@ -2763,7 +2761,6 @@ ol {
     display: block;
     opacity: var(--dot-opacity, 0);
     position: absolute;
-    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
   }
   .ce-checkbox input[type='checkbox']:checked,
   .ce-radio input[type='checkbox']:checked,
@@ -2773,9 +2770,6 @@ ol {
   .ce-switch input[type='radio']:checked {
     --background: var(--checked-background);
     --border: var(--checked-border);
-    --d-t: 0.6s;
-    --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
-    --d-o: 0.3s;
   }
   .ce-checkbox input[type='checkbox']:checked:after,
   .ce-radio input[type='checkbox']:checked:after,
@@ -3012,9 +3006,6 @@ ol {
     --border: var(--checked-channel);
     --dot-x: 23px;
     --disc-x: 23px;
-    --d-t: 0.6s;
-    --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
-    --d-o: 0.3s;
   }
   .ce-checkbox input[type='checkbox'].switch:checked:after,
   .ce-radio input[type='checkbox'].switch:checked:after,
@@ -6678,6 +6669,7 @@ ol {
  * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
  */
 .ce-table {
+  --initial-background: transparent;
   display: flex;
 }
 @media screen and (min-width: 765px) {
@@ -6701,7 +6693,6 @@ ol {
     padding-left: 2.1rem;
   }
   .ce-table .ce-table__header .ce-table__header--group .ce-table__heading {
-    background-color: #fff;
     flex: 1 1 0px;
     font-size: 1.4rem;
     font-weight: bold;
@@ -6719,6 +6710,7 @@ ol {
   }
 }
 .ce-table .ce-table__body .ce-table__row {
+  background-color: var(--background-color, var(--initial-background));
   display: flex;
 }
 @media screen and (min-width: 765px) {
@@ -6768,18 +6760,27 @@ ol {
   }
 }
 .ce-table .ce-table__body .ce-table__row:nth-child(odd) {
-  background-color: #f1f6f9;
+  --background-color: #f1f6f9;
 }
 .ce-table .ce-table__body .ce-table__row:nth-child(even) {
-  background-color: #fff;
+  --background-color: #fff;
 }
 @media screen and (max-width: 765px) {
   .ce-table .ce-table__body .ce-table__row:nth-child(even) {
     border: 0.1rem solid #e8e8e8;
   }
 }
-.ce-table .ce-table__body .ce-table__row:hover {
-  background-color: #e6f7ff;
+.ce-table.ce-table__clickable .ce-table__row:hover {
+  --background-color: #e6f7ff;
+}
+.ce-table.ce-table__selectable .ce-checkbox input[type='checkbox']:hover {
+  border-color: #b2b2b2;
+}
+.ce-table.ce-table__selectable .ce-checkbox input[type='checkbox']:checked:hover {
+  border-color: #192344;
+}
+.ce-table.ce-table__selectable .ce-checkbox label {
+  display: none;
 }
 @media screen and (min-width: 765px) {
   .ce-table.ce-table__selectable .ce-table__header .ce-table__header--group {
@@ -6793,13 +6794,13 @@ ol {
     padding-left: 0.8rem;
   }
 }
-.ce-table.ce-table__selectable .ce-table__header .ce-table__header--group .ce-table__heading:first-of-type .ce-checkbox label {
-  display: none;
-}
 @media screen and (min-width: 765px) {
   .ce-table.ce-table__selectable .ce-table__header .ce-table__header--group .ce-table__heading:not(:first-of-type) {
-    padding-left: 25px;
+    padding-left: 2.5rem;
   }
+}
+.ce-table.ce-table__selectable .ce-table__body .ce-table__row {
+  cursor: pointer;
 }
 @media screen and (min-width: 765px) {
   .ce-table.ce-table__selectable .ce-table__body .ce-table__row {
@@ -6823,9 +6824,6 @@ ol {
     max-height: 4.3rem;
   }
 }
-.ce-table.ce-table__selectable .ce-table__body .ce-table__row .ce-table__cell:first-of-type .ce-checkbox label {
-  display: none;
-}
 .ce-table.ce-table__selectable .ce-table__body .ce-table__row .ce-table__cell:first-of-type .ce-table__cell-heading {
   box-sizing: border-box;
   max-height: 4.3rem;
@@ -6843,21 +6841,26 @@ ol {
     padding-top: 0.3rem;
   }
 }
-.ce-table.ce-table__selectable .ce-table__body .ce-table__row .ce-table__cell:last-of-type {
-  padding-bottom: 2.2rem;
+@media screen and (max-width: 765px) {
+  .ce-table.ce-table__selectable .ce-table__body .ce-table__row .ce-table__cell:last-of-type {
+    padding-bottom: 2.2rem;
+  }
 }
 @media screen and (min-width: 765px) {
   .ce-table.ce-table__selectable .ce-table__body .ce-table__row .ce-table__cell:not(:first-of-type) {
-    padding-left: 25px;
+    padding-left: 2.5rem;
   }
 }
 @media screen and (max-width: 765px) {
   .ce-table.ce-table__selectable .ce-table__body .ce-table__row .ce-table__cell:not(:first-of-type) {
-    padding-left: 50px;
+    padding-left: 5rem;
   }
 }
-.ce-table.ce-table__clickable .ce-table__row {
-  cursor: pointer;
+.ce-table.ce-table__selectable .ce-table__body .ce-table__row.ce-table__row--selected {
+  --background-color: #ccefff;
+}
+.ce-table.ce-table__selectable .ce-table__body .ce-table__row:hover {
+  --background-color: #e6f7ff;
 }
 
 html,
