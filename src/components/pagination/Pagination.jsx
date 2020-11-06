@@ -32,7 +32,7 @@ const Pagination = ({
   className,
   canNextPage,
   canPreviousPage,
-  currentPage, // 0-indexed
+  currentPage,
   gotoPage,
   nextPage,
   pageCount,
@@ -42,85 +42,81 @@ const Pagination = ({
 
   const renderNumbers = () => {
     const elements = [];
-    const realPage = currentPage + 1;
 
     if (pageCount > 5) {
       for (let i = 1; i < 6; i++) {
         let classList = 'ce-pagination__number';
         let label = '...';
-        let navToPage; // because currentPage is 0 indexed, so is this
+        let navToPage;
 
         switch (i) {
           case 1:
             label = 1;
-            navToPage = 0;
+            navToPage = 1;
 
-            if (realPage === 1) classList = `${classList} current-page`;
+            if (currentPage === 1) classList = `${classList} current-page`;
             break;
           case 2:
-            if (realPage <= 3) {
+            if (currentPage <= 3) {
               label = 2;
-              navToPage = 1;
+              navToPage = 2;
             }
 
-            if (realPage === 2) {
+            if (currentPage === 2) {
               classList = `${classList} current-page`;
             }
 
-            if (realPage > 3) {
+            if (currentPage > 3) {
               label = '...';
               navToPage = currentPage - 1;
             }
             break;
           case 3:
-            if (realPage <= 3) {
+            if (currentPage <= 3) {
               label = 3;
-              navToPage = 2;
+              navToPage = 3;
             }
 
-            if (realPage === 3) classList = `${classList} current-page`;
+            if (currentPage === 3) classList = `${classList} current-page`;
 
-            if (realPage > 3 && realPage < pageCount - 1) {
-              label = realPage;
+            if (currentPage > 3 && currentPage < pageCount - 1) {
+              classList = `${classList} current-page`;
+              label = currentPage;
               navToPage = currentPage;
             }
 
-            if (realPage > 3 && realPage < pageCount - 1) {
-              classList = `${classList} current-page`;
-            }
-
-            if (realPage === pageCount - 1 || realPage === pageCount) {
+            if (currentPage === pageCount - 1 || currentPage === pageCount) {
               label = pageCount - 2;
-              navToPage = pageCount - 3;
+              navToPage = pageCount - 2;
             }
             break;
           case 4:
-            if (realPage < pageCount - 2) {
+            if (currentPage < pageCount - 2) {
               label = '...';
               navToPage = currentPage + 1;
             }
 
-            if (realPage === pageCount - 2) {
-              label = realPage + 1;
+            if (currentPage === pageCount - 2) {
+              label = currentPage + 1;
               navToPage = currentPage + 1;
             }
 
-            if (realPage === pageCount - 1) {
+            if (currentPage === pageCount - 1) {
               classList = `${classList} current-page`;
-              label = realPage;
+              label = currentPage;
               navToPage = currentPage;
             }
 
-            if (currentPage + 1 === pageCount) {
+            if (currentPage === pageCount) {
               label = pageCount - 1;
-              navToPage = pageCount - 2;
+              navToPage = pageCount - 1;
             }
             break;
           case 5: // extreme right
             label = pageCount;
-            navToPage = pageCount - 1;
+            navToPage = pageCount;
 
-            if (currentPage + 1 === pageCount) {
+            if (currentPage === pageCount) {
               classList = `${classList} current-page`;
             }
             break;
@@ -139,7 +135,7 @@ const Pagination = ({
         );
       }
     } else {
-      for (let i = 0; i < pageCount; i++) {
+      for (let i = 1; i <= pageCount; i++) {
         elements.push(
           <li
             className={`ce-pagination__number${
@@ -147,11 +143,8 @@ const Pagination = ({
             }`}
             key={i}
           >
-            <button
-              type="button"
-              onClick={() => gotoPage(i) /* The pages are 0-indexed */}
-            >
-              {i + 1}
+            <button type="button" onClick={() => gotoPage(i)}>
+              {i}
             </button>
           </li>,
         );
