@@ -3,6 +3,7 @@ const flow = require('lodash.flow');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const LicenseWebpackPlugin = require('license-webpack-plugin').LicenseWebpackPlugin; // eslint-disable-line
 
 const MODES = {
   PRODUCTION: 'production',
@@ -10,20 +11,25 @@ const MODES = {
   TEST: 'test',
 };
 const env = process.env.NODE_ENV || MODES.DEVELOPMENT;
-const banner = `Copyright 2020 Tallo Inc.,
-
-  This program is free software: you can redistribute it and/or modify
-  it under the terms of the GNU Lesser General Public License as published by
-  the Free Software Foundation, either version 3 of the License, or
-  (at your option) any later version.
-
-  This program is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU Lesser General Public License for more details.
-
-  You should have received a copy of the GNU Lesser General Public License
-  along with this program.  If not, see <https://www.gnu.org/licenses/>.`;
+const banner = `
+ * @license magnet:?xt=urn:btih:0ef1b8170b3b615170ff270def6427c317705f85&dn=lgpl-3.0.txt GPL-v3-or-Later
+ * Celula - Tallo's ui kit.
+ * Copyright 2020 Tallo Inc.,
+ *
+ * Celula is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ * @license-end
+`;
 
 function generateBaseConfig() {
   let devtool;
@@ -100,6 +106,9 @@ function applyPlugins(config) {
       new MiniCssExtractPlugin({
         filename: '[name].min.css',
       }),
+      new LicenseWebpackPlugin({
+        outputFilename: '3RD_PARTY_LICENSES.txt',
+      }),
     ];
   } else {
     plugins = [...plugins];
@@ -118,8 +127,8 @@ function applyOptimizations(config) {
         sourceMap: true,
         parallel: true,
         extractComments: {
-          filename: 'LICENSE.txt',
-          banner: () => banner,
+          filename: 'DELETE_ME.txt',
+          banner,
         },
       }),
       new OptimizeCSSAssetsPlugin({

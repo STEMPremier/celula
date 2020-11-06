@@ -45,6 +45,7 @@
     "jest": "^25.1.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
+    "license-webpack-plugin": "^2.3.1",
     "lodash.flow": "^3.5.0",
     "mini-css-extract-plugin": "^0.8.0",
     "namor": "^2.0.2",
@@ -70,7 +71,7 @@
   },
   "scripts": {
     "build": "yarn clean && yarn prebuild && yarn build:components && yarn build:styleguide",
-    "build:components": "NODE_ENV=production webpack -p",
+    "build:components": "NODE_ENV=production webpack -p && rimraf dist/DELETE_ME.txt",
     "build:icons": "svg-sprite-generate -d src/components/icon/icons -o src/components/icon/icons/icons.svg",
     "build:styleguide": "build-storybook -c .storybook -o docs",
     "check": "yarn lint:check && yarn pretty:check",
