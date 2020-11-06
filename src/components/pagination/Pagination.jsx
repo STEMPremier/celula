@@ -162,7 +162,13 @@ const Pagination = ({
             !canPreviousPage ? ' ce-arrow--disabled' : ''
           }`}
         >
-          <button disabled={!canPreviousPage} onClick={prevPage} type="button">
+          <button
+            disabled={!canPreviousPage}
+            onClick={prevPage}
+            title="Previous Page"
+            type="button"
+            aria-label="Previous Page"
+          >
             <SystemIcon name="navigate" color="black" />
           </button>
         </li>
@@ -172,7 +178,13 @@ const Pagination = ({
             !canNextPage ? ' ce-arrow--disabled' : ''
           }`}
         >
-          <button disabled={!canNextPage} onClick={nextPage} type="button">
+          <button
+            disabled={!canNextPage}
+            onClick={nextPage}
+            title="Next Page"
+            type="button"
+            aria-label="Next Page"
+          >
             <SystemIcon name="navigate" color="black" />
           </button>
         </li>
@@ -196,8 +208,6 @@ Pagination.propTypes = {
   className: PropTypes.string,
   /**
    * The current page number.
-   *
-   * NOTE: Due to interactions between `<Pagination />` and `<Table />` this is 0-indexed.
    */
   currentPage: PropTypes.number.isRequired,
   /**
