@@ -1,6 +1,8 @@
 @import '../../styles/celula';
 
 .ce-table {
+  --initial-background: transparent;
+
   display: flex;
 
   // desktop
@@ -24,8 +26,7 @@
         padding-left: 2.1rem;
 
         .ce-table__heading {
-          background-color: @white;
-          flex: 1 1 0px;
+          flex: 1 1 0px; // Leave this `px` for IE support.
           font-size: 1.4rem;
           font-weight: bold;
           line-height: 1.9rem;
@@ -46,6 +47,7 @@
     }
 
     .ce-table__row {
+      background-color: var(--background-color, var(--initial-background));
       display: flex;
 
       // desktop
@@ -101,25 +103,44 @@
       }
 
       &:nth-child(odd) {
-        background-color: @catskill-white;
+        --background-color: @catskill-white;
       }
 
       &:nth-child(even) {
-        background-color: @white;
+        --background-color: @white;
 
         //mobile
         @media screen and (max-width: 765px) {
           border: 0.1rem solid @mobile-card-container-border;
         }
       }
+    }
+  }
 
+  &.ce-table__clickable {
+    .ce-table__row {
       &:hover {
-        background-color: #e6f7ff;
+        --background-color: #e6f7ff;
       }
     }
   }
 
   &.ce-table__selectable {
+    .ce-checkbox {
+      input[type='checkbox'] {
+        &:hover {
+          border-color: #b2b2b2;
+        }
+
+        &:checked:hover {
+          border-color: @big-stone;
+        }
+      }
+
+      label {
+        display: none;
+      }
+    }
     .ce-table__header {
       .ce-table__header--group {
         @media screen and (min-width: 765px) {
@@ -133,18 +154,12 @@
               max-width: 5rem;
               padding-left: 0.8rem;
             }
-
-            .ce-checkbox {
-              label {
-                display: none;
-              }
-            }
           }
 
           &:not(:first-of-type) {
             // desktop
             @media screen and (min-width: 765px) {
-              padding-left: 25px;
+              padding-left: 2.5rem;
             }
           }
         }
@@ -153,6 +168,8 @@
 
     .ce-table__body {
       .ce-table__row {
+        cursor: pointer;
+
         // desktop
         @media screen and (min-width: 765px) {
           padding-left: 0;
@@ -177,25 +194,20 @@
               max-height: 4.3rem;
             }
 
-            .ce-checkbox {
-              label {
-                display: none;
-              }
-            }
-
             .ce-table__cell-heading {
               box-sizing: border-box;
               max-height: 4.3rem;
               padding-left: 0.3rem;
               padding-top: 0.3rem;
 
+              // mobile
               @media screen and (max-width: 765px) {
                 display: none;
               }
             }
 
             .ce-table__cell-body {
-              //mobile
+              // mobile
               @media screen and (max-width: 765px) {
                 padding-left: 0.3rem;
                 padding-top: 0.3rem;
@@ -204,28 +216,32 @@
           }
 
           &:last-of-type {
-            padding-bottom: 2.2rem;
+            @media screen and (max-width: 765px) {
+              padding-bottom: 2.2rem;
+            }
           }
 
           &:not(:first-of-type) {
             // desktop
             @media screen and (min-width: 765px) {
-              padding-left: 25px;
+              padding-left: 2.5rem;
             }
 
             //mobile
             @media screen and (max-width: 765px) {
-              padding-left: 50px;
+              padding-left: 5rem;
             }
           }
         }
-      }
-    }
-  }
 
-  &.ce-table__clickable {
-    .ce-table__row {
-      cursor: pointer;
+        &.ce-table__row--selected {
+          --background-color: @focus-blue;
+        }
+
+        &:hover {
+          --background-color: #e6f7ff;
+        }
+      }
     }
   }
 }
