@@ -3,13 +3,11 @@ permalink: /index.html
 ---
 # Celula
 
-## Development
-To aid in the development of Celula, there are several tasks/scripts available to you via the command line; `yarn run [task]`
+## Scripts
+To aid in the development, deployment, and maintenance of Celula, there are several tasks/scripts available to you via the command line; `yarn run [task]`
 
 ### build
-The `build` task is a compound task. It runs the `prebuild`, `build:components`, and `build:styleguide` tasks, in that order. Ultimately this task runs the [prettier](https://prettier.io/), and [eslint](https://eslint.org/) fixes, then builds the component library and the documentation site ([Storybook](https://storybook.js.org/)).
-
-TODO: Add `build:icons` to this task.
+The `build` task produces a build that is the same as what is deployed to npm. Ultimately this task runs the [prettier](https://prettier.io/), and [eslint](https://eslint.org/) fixes, then builds the component library. It runs the `clean`, prebuild`, and `build:components` tasks, in that order. 
 
 ### build:components
 The `build:components` task builds the component library.
@@ -22,6 +20,15 @@ The `build:styleguide` task builds the styleguide documentation site ([Storybook
 
 ### check
 The `check` task runs the [eslint](https://eslint.org/) and [prettier](https://prettier.io/) checks. It does not fix any of the errors/warnings.
+
+### clean
+The `clean` task uses `rimraf` to delete the `docs` and the `dist` directories.
+
+### coverage
+The `coverage` taske runs the test suite and generates a coverage report.
+
+### generate
+The `generate` task uses `plop` to generate the boilerplate for a new React component.
 
 ### lint:check
 The `lint:check` task runs the [eslint](https://eslint.org/) checks. It does not fix any of the errors/warnings.
@@ -45,11 +52,21 @@ The `pretty:fix` task fixes any [prettier](https://prettier.io/) erros/warnings 
 The `start` task runs the documentation site ([Storybook](https://storybook.js.org/)) for devlopment.
 
 ### test
-The `test` task runs the [jest](https://jestjs.io/docs/en/getting-started) tests, and generates a code coverage report.
+The `test` task runs the [jest](https://jestjs.io/docs/en/getting-started) tests.
+
+### test:debug
+The `test:debug` task runs the [jest](https://jestjs.io/docs/en/getting-started)  tests in debug mode. This is helpful if you need to see into other libs your tests might be 'using', such as a component from Semantic UI your component composes.
+
+Once the test is complete, you will need to vist [chrome://inspect](chrome://inspect) in Google Chrome. You should see something that looks like this:
+
+TODO: Add screenshot
+
+Under 'Remote Target' click the `inspect` link to be taken to the debugger.
 
 ### test:watch
-The `test:watch` task runs the [jest](https://jestjs.io/docs/en/getting-started) tests, in [watch](https://jestjs.io/docs/en/cli#--watch) mode. Once running, you have several options:
+The `test:watch` task runs the [jest](https://jestjs.io/docs/en/getting-started) tests, in [watch](https://jestjs.io/docs/en/cli#--watch) mode.
 
+Once running, you have several options:
 - Press a to run all tests.
 - Press f to run only failed tests.
 - Press p to filter by a filename regex pattern.
@@ -60,12 +77,3 @@ The `test:watch` task runs the [jest](https://jestjs.io/docs/en/getting-started)
 And if the [snapshots](https://jestjs.io/docs/en/snapshot-testing) are out of date:
 
 - Press u to update the snapshots.
-
-### test:debug
-The `test:debug` task runs the [jest](https://jestjs.io/docs/en/getting-started)  tests in debug mode. This is helpful if you need to see into other libs your tests might be 'using', such as a component from Semantic UI your component composes.
-
-Once the test is complete, you will need to vist [chrome://inspect](chrome://inspect) in Google Chrome. You should see something that looks like this:
-
-TODO: Add screenshot
-
-Under 'Remote Target' click the `inspect` link to be taken to the debugger.
