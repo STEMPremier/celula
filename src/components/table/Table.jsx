@@ -16,7 +16,6 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 /* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable prettier/prettier */
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -28,16 +27,16 @@ import './table.less';
 import { Checkbox } from '../form-controls/checkbox';
 import Pagination from '../pagination';
 
-/* eslint-disable react/display-name */
-/* eslint-disable react/prop-types */
 /**
  * A `useTable` compatible hook that will add a column of/for the checkbox. To be passed into the `useTable` hook.
  * @param {object} instance - a `useTable` instance object. It is not a class so much as a pile of arrays (of functions).
  */
 const useRowSelectComponent = (checkboxFunction = () => {}) => instance => {
   // visibleColumns (a property on the instance object) is an array of functions. Each of which will allow you to decorate some aspect of the columns. In our case, we are adding a checkbox to the beginning of each row.
-  instance.visibleColumns.push((decorators) => [
+  instance.visibleColumns.push(decorators => [
     // This object is a 'constructor' for a column in the table. `useTable` will use the `Header` and `Cell` properties to determine what to put in our column. In our case they are components, but they could be strings.
+    /* eslint-disable react/display-name */
+    /* eslint-disable react/prop-types */
     {
       id: 'selection',
       Header: ({ getToggleAllPageRowsSelectedProps }) => (
@@ -63,11 +62,11 @@ const useRowSelectComponent = (checkboxFunction = () => {}) => instance => {
         />
       ),
     },
+    /* eslint-enable react/prop-types */
+    /* eslint-enable react/display-name */
     ...decorators,
   ]);
 };
-/* eslint-enable react/display-name */
-/* eslint-enable react/prop-types */
 
 /**
  * `Tables` display information in a grid-like format of rows and columns. They organize information in a way that’s easy to scan, so that users can look for patterns and insights. Tables can contain interactive components (such as chips, buttons, or menus), non-interactive elements (such as badges).
@@ -132,18 +131,20 @@ const Table = ({
     className,
   );
 
+  const navToPage = pg => gotoPage(pg - 1);
+
   return (
     <>
       <div className={classes} {...getTableProps()}>
         {/* table header */}
         <div className="ce-table__header" role="rowgroup">
-          {headerGroups.map((headerGroup) => (
+          {headerGroups.map(headerGroup => (
             <div
               key={headerGroup.id}
               className="ce-table__header--group"
               {...headerGroup.getHeaderGroupProps()}
             >
-              {headerGroup.headers.map((column) => (
+              {headerGroup.headers.map(column => (
                 <div
                   key={column.id}
                   className="ce-table__heading"
@@ -158,18 +159,20 @@ const Table = ({
 
         {/* table body */}
         <div className="ce-table__body" {...getTableBodyProps()}>
-          {page.map((row) => {
+          {page.map(row => {
             prepareRow(row);
 
             const rowProps = {
-              className: `ce-table__row${row.isSelected ? ' ce-table__row--selected' : ''}`,
+              className: `ce-table__row${
+                row.isSelected ? ' ce-table__row--selected' : ''
+              }`,
               ...row.getRowProps(),
               onClick: clickable ? event => rowFunction(row, event) : () => {},
             };
 
             return (
               <div key={row.id} {...rowProps}>
-                {row.cells.map((cell) => (
+                {row.cells.map(cell => (
                   <div
                     key={cell.id}
                     className="ce-table__cell"
@@ -194,8 +197,11 @@ const Table = ({
         <Pagination
           canPreviousPage={canPreviousPage}
           canNextPage={canNextPage}
-          currentPage={pageIndex}
-          gotoPage={gotoPage}
+          currentPage={
+            /* Pagination expects currentPage to be 1-index, and react-table provides the number 0-indexed */
+            pageIndex + 1
+          }
+          gotoPage={navToPage}
           nextPage={nextPage}
           pageCount={pageCount}
           prevPage={previousPage}
@@ -258,3 +264,4 @@ Table.defaultProps = {
 };
 
 export default Table;
+/* eslint-enable react/jsx-props-no-spreading */
