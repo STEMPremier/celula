@@ -11,8 +11,10 @@ exports[`<Pagination /> render() renders the component 1`] = `
       className="ce-pagination__arrow"
     >
       <button
+        aria-label="Previous Page"
         disabled={false}
         onClick={[Function]}
+        title="Previous Page"
         type="button"
       >
         <SystemIcon
@@ -23,7 +25,7 @@ exports[`<Pagination /> render() renders the component 1`] = `
       </button>
     </li>
     <li
-      className="ce-pagination__number"
+      className="ce-pagination__number current-page"
       key="1"
     >
       <button
@@ -34,7 +36,7 @@ exports[`<Pagination /> render() renders the component 1`] = `
       </button>
     </li>
     <li
-      className="ce-pagination__number current-page"
+      className="ce-pagination__number"
       key="2"
     >
       <button
@@ -81,8 +83,10 @@ exports[`<Pagination /> render() renders the component 1`] = `
       className="ce-pagination__arrow"
     >
       <button
+        aria-label="Next Page"
         disabled={false}
         onClick={[Function]}
+        title="Next Page"
         type="button"
       >
         <SystemIcon

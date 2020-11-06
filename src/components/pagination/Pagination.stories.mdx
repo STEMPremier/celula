@@ -6,7 +6,7 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { number } from '@storybook/addon-knobs';
+import { boolean, number } from '@storybook/addon-knobs';
 
 import Pagination from '.';
 import SomethingToPage from './SomethingToPage';
@@ -19,15 +19,20 @@ import SomethingToPage from './SomethingToPage';
 <Props of={Pagination} />
 
 <Story name="Pagination with Knobs" parameters={{ docs: { disable: true } }}>
-  <SomethingToPage pageCount={number('pageCount', 10)}>
+  <SomethingToPage
+    canNext={boolean('canNextPage', true)}
+    canPrev={boolean('canPrevPage', true)}
+    initialPage={number('currentPage', 1)}
+    pageCount={number('pageCount', 10)}
+  >
     <Pagination
       canNextPage={true}
       canPreviousPage={true}
       currentPage={1}
-      gotoPage={() => console.log('Navigate to a different page.')}
-      nextPage={() => console.log('Navigate up a page.')}
+      gotoPage={() => {}}
+      nextPage={() => {}}
       pageCount={10}
-      prevPage={() => console.log('Navigate down a page.')}
+      prevPage={() => {}}
     />
   </SomethingToPage>
 </Story>
@@ -37,7 +42,7 @@ import SomethingToPage from './SomethingToPage';
     <Pagination
       canNextPage={true}
       canPreviousPage={true}
-      currentPage={1}
+      currentPage={3}
       gotoPage={() => console.log('Navigate to a different page.')}
       nextPage={() => console.log('Navigate up a page.')}
       pageCount={10}

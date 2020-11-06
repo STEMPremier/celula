@@ -1,18 +1,35 @@
-import React, { useState } from 'react';
+/* eslint-disable */
+import React, { useEffect, useState } from 'react';
 
-const SomethingToPage = ({ children, initialPage = 0, pageCount = 10 }) => {
+const SomethingToPage = ({
+  canNext = true,
+  canPrev = false,
+  children,
+  initialPage = 0,
+  pageCount = 10,
+}) => {
   const [currentPage, setPage] = useState(initialPage);
+  const [canPreviousPage, setCanPrev] = useState(canPrev);
+  const [canNextPage, setCanNext] = useState(canNext);
 
-  const canNextPage = currentPage < pageCount;
-  const canPreviousPage = currentPage > 0;
-  const gotoPage = page => {
+  useEffect(() => setPage(initialPage), [initialPage]);
+  useEffect(() => setCanPrev(canPrev), [canPrev]);
+  useEffect(() => setCanNext(canNext), [canNext]);
+
+  const prevPage = () => {
+    const page = currentPage > 1 ? currentPage - 1 : 1;
+
     setPage(page);
   };
-  const nextPage = () => setPage(currentPage + 1);
-  const prevPage = () => setPage(currentPage - 1);
+  const nextPage = () => {
+    const page = currentPage >= pageCount ? pageCount : currentPage + 1;
+
+    setPage(page);
+  };
+  const gotoPage = page => setPage(page);
 
   return React.Children.map(children, child => {
-    const childProps = {
+    return React.cloneElement(child, {
       canNextPage,
       canPreviousPage,
       currentPage,
@@ -20,10 +37,9 @@ const SomethingToPage = ({ children, initialPage = 0, pageCount = 10 }) => {
       nextPage,
       pageCount,
       prevPage,
-    };
-
-    return React.cloneElement(child, { ...childProps });
+    });
   });
 };
 
 export default SomethingToPage;
+/* eslint-disable */
