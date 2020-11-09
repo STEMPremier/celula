@@ -96,7 +96,7 @@ const Table = ({
   data,
   pageSize,
   clickable,
-  rowFunction,
+  clickFn,
   selectable,
   selectionHeaderFn,
   selectionFn,
@@ -185,7 +185,7 @@ const Table = ({
               }`,
               ...row.getRowProps(),
               onClick: clickable
-                ? event => rowFunction(row.original, event)
+                ? event => clickFn(row.original, event)
                 : () => {},
             };
 
@@ -258,7 +258,7 @@ Table.propTypes = {
    * @param {row} object - The row object for this row of the table.
    * @param {event} object - The event triggered by the click on the row.
    */
-  rowFunction: PropTypes.func,
+  clickFn: PropTypes.func,
   /**
    * Adds a checkbox in the `<Table />`, as the first column.
    */
@@ -285,7 +285,7 @@ Table.defaultProps = {
   className: '',
   pageSize: 10,
   clickable: false,
-  rowFunction: () => {},
+  clickFn: () => {},
   selectable: false,
   selectionHeaderFn: () => {},
   selectionFn: () => {},
