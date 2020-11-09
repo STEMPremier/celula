@@ -25,7 +25,8 @@ import Table from '.';
     clickable={boolean('clickable', false)}
     rowFunction={(row, event) => console.log('From the row:\nrow', row, "\nevent", event)}
     selectable={boolean('selectable', false)}
-    checkboxFunction={(row, event) => console.log('From the checkbox:\nrow', row, "\nevent", event)}
+    selectionHeaderFn={(rows, event) => console.log('From the header checkbox:\nrows', rows, "\nevent", event)}
+    selectionFn={(row, event) => console.log('From the checkbox:\nrow', row, "\nevent", event)}
   />
 </Story>
 
@@ -65,7 +66,7 @@ When a user hovers over a row, that row displays a background color.
 
 When a row checkbox is selected, the row displays a background color. For users who use screen magnification, the background color fill provides a way to indicate that a row has been selected, as the selected checkbox may appear outside of the magnified screen area.
 
-A checkbox can trigger an (optional) function, `checkboxFunction`, on click: `function(row, event) {}`.
+The checkbox in the header can trigger an (optional) function, `selectionHeaderFn`, on click: `function(rows, event) {}`. A checkbox in the body of the table can trigger an (optional) function, `selectionFn`, on click: `function(row, event) {}`.
 
 Note: If you have both a `checkboxFunction` and a `rowFunction`, when you click the checkbox, both functions will trigger.
 

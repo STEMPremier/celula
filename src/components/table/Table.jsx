@@ -31,7 +31,7 @@ import Pagination from '../pagination';
  * A `useTable` compatible hook that will add a column of/for the checkbox. To be passed into the `useTable` hook.
  * @param {object} instance - a `useTable` instance object. It is not a class so much as a pile of arrays (of functions).
  */
-const useRowSelectComponent = (checkboxFunction = () => {}) => instance => {
+const useRowSelectComponent = (selectionHeaderFn, selectionFn) => instance => {
   // visibleColumns (a property on the instance object) is an array of functions. Each of which will allow you to decorate some aspect of the columns. In our case, we are adding a checkbox to the beginning of each row.
   instance.visibleColumns.push(decorators => [
     // This object is a 'constructor' for a column in the table. `useTable` will use the `Header` and `Cell` properties to determine what to put in our column. In our case they are components, but they could be strings.
@@ -39,13 +39,29 @@ const useRowSelectComponent = (checkboxFunction = () => {}) => instance => {
     /* eslint-disable react/prop-types */
     {
       id: 'selection',
-      Header: ({ getToggleAllPageRowsSelectedProps }) => (
-        <Checkbox
-          label="label"
-          value="allRows[]"
-          {...getToggleAllPageRowsSelectedProps()}
-        />
-      ),
+      Header: ({
+        getToggleAllPageRowsSelectedProps,
+        page,
+        toggleAllPageRowsSelected,
+      }) => {
+        const rows = page.map(row => row.original);
+
+        return (
+          <Checkbox
+            label="label"
+            value="allRows[]"
+            {...getToggleAllPageRowsSelectedProps({
+              /* When we override the deafult onChange handler provided by useRowSelect,
+               * we have to manually trigger the toggleRowSelected function manually.
+               */
+              onChange: event => {
+                toggleAllPageRowsSelected();
+                selectionHeaderFn(rows, event);
+              },
+            })}
+          />
+        );
+      },
       Cell: ({ row }) => (
         <Checkbox
           label={row.id}
@@ -56,7 +72,7 @@ const useRowSelectComponent = (checkboxFunction = () => {}) => instance => {
              */
             onChange: event => {
               row.toggleRowSelected(event.target.checked);
-              checkboxFunction(row, event);
+              selectionFn(row.original, event);
             },
           })}
         />
@@ -82,7 +98,8 @@ const Table = ({
   clickable,
   rowFunction,
   selectable,
-  checkboxFunction,
+  selectionHeaderFn,
+  selectionFn,
 }) => {
   const {
     getTableProps,
@@ -116,7 +133,7 @@ const Table = ({
     },
     usePagination,
     useRowSelect,
-    useRowSelectComponent(checkboxFunction),
+    useRowSelectComponent(selectionHeaderFn, selectionFn),
   );
 
   useEffect(() => setPageSize(pageSize), [pageSize]);
@@ -167,7 +184,9 @@ const Table = ({
                 row.isSelected ? ' ce-table__row--selected' : ''
               }`,
               ...row.getRowProps(),
-              onClick: clickable ? event => rowFunction(row, event) : () => {},
+              onClick: clickable
+                ? event => rowFunction(row.original, event)
+                : () => {},
             };
 
             return (
@@ -245,13 +264,21 @@ Table.propTypes = {
    */
   selectable: PropTypes.bool,
   /**
-   * A function to trigger when clicking on a checkbox in a row in the `<Table />`.
+   * A function to trigger when clicking on the checkbox in the header row in the `<Table />`.
    * The function accepts 2 arguments, `row` and `event`, in that order: `(row, event) => {}`.
    *
    * @param {row} object - The row object for this row of the table.
    * @param {event} object - The event triggered by the click on the row.
    */
-  checkboxFunction: PropTypes.func,
+  selectionHeaderFn: PropTypes.func,
+  /**
+   * A function to trigger when clicking on the checkbox in a row in the `<Table />`.
+   * The function accepts 2 arguments, `rows` and `event`, in that order: `(row, event) => {}`.
+   *
+   * @param {rows} object - The row object for this row of the table.
+   * @param {event} object - The event triggered by the click on the row.
+   */
+  selectionFn: PropTypes.func,
 };
 
 Table.defaultProps = {
@@ -260,7 +287,8 @@ Table.defaultProps = {
   clickable: false,
   rowFunction: () => {},
   selectable: false,
-  checkboxFunction: () => {},
+  selectionHeaderFn: () => {},
+  selectionFn: () => {},
 };
 
 export default Table;
