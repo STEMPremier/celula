@@ -1090,8 +1090,10 @@ exports[`Storyshots Components/Atoms/Pagination Pagination 1`] = `
       className="ce-pagination__arrow"
     >
       <button
+        aria-label="Previous Page"
         disabled={false}
         onClick={[Function]}
+        title="Previous Page"
         type="button"
       >
         <span
@@ -1118,7 +1120,7 @@ exports[`Storyshots Components/Atoms/Pagination Pagination 1`] = `
       </button>
     </li>
     <li
-      className="ce-pagination__number current-page"
+      className="ce-pagination__number"
     >
       <button
         onClick={[Function]}
@@ -1128,7 +1130,7 @@ exports[`Storyshots Components/Atoms/Pagination Pagination 1`] = `
       </button>
     </li>
     <li
-      className="ce-pagination__number"
+      className="ce-pagination__number current-page"
     >
       <button
         onClick={[Function]}
@@ -1161,8 +1163,10 @@ exports[`Storyshots Components/Atoms/Pagination Pagination 1`] = `
       className="ce-pagination__arrow"
     >
       <button
+        aria-label="Next Page"
         disabled={false}
         onClick={[Function]}
+        title="Next Page"
         type="button"
       >
         <span
@@ -1190,11 +1194,13 @@ exports[`Storyshots Components/Atoms/Pagination Pagination with Knobs 1`] = `
     className="ce-pagination__container"
   >
     <li
-      className="ce-pagination__arrow ce-arrow--disabled"
+      className="ce-pagination__arrow"
     >
       <button
-        disabled={true}
+        aria-label="Previous Page"
+        disabled={false}
         onClick={[Function]}
+        title="Previous Page"
         type="button"
       >
         <span
@@ -1264,8 +1270,10 @@ exports[`Storyshots Components/Atoms/Pagination Pagination with Knobs 1`] = `
       className="ce-pagination__arrow"
     >
       <button
+        aria-label="Next Page"
         disabled={false}
         onClick={[Function]}
+        title="Next Page"
         type="button"
       >
         <span
@@ -3132,8 +3140,10 @@ Array [
         className="ce-pagination__arrow ce-arrow--disabled"
       >
         <button
+          aria-label="Previous Page"
           disabled={true}
           onClick={[Function]}
+          title="Previous Page"
           type="button"
         >
           <span
@@ -3203,8 +3213,10 @@ Array [
         className="ce-pagination__arrow"
       >
         <button
+          aria-label="Next Page"
           disabled={false}
           onClick={[Function]}
+          title="Next Page"
           type="button"
         >
           <span
@@ -4669,8 +4681,10 @@ Array [
         className="ce-pagination__arrow ce-arrow--disabled"
       >
         <button
+          aria-label="Previous Page"
           disabled={true}
           onClick={[Function]}
+          title="Previous Page"
           type="button"
         >
           <span
@@ -4740,8 +4754,10 @@ Array [
         className="ce-pagination__arrow"
       >
         <button
+          aria-label="Next Page"
           disabled={false}
           onClick={[Function]}
+          title="Next Page"
           type="button"
         >
           <span
@@ -5482,8 +5498,10 @@ Array [
         className="ce-pagination__arrow ce-arrow--disabled"
       >
         <button
+          aria-label="Previous Page"
           disabled={true}
           onClick={[Function]}
+          title="Previous Page"
           type="button"
         >
           <span
@@ -5553,8 +5571,10 @@ Array [
         className="ce-pagination__arrow"
       >
         <button
+          aria-label="Next Page"
           disabled={false}
           onClick={[Function]}
+          title="Next Page"
           type="button"
         >
           <span
@@ -7019,8 +7039,10 @@ Array [
         className="ce-pagination__arrow ce-arrow--disabled"
       >
         <button
+          aria-label="Previous Page"
           disabled={true}
           onClick={[Function]}
+          title="Previous Page"
           type="button"
         >
           <span
@@ -7090,8 +7112,10 @@ Array [
         className="ce-pagination__arrow"
       >
         <button
+          aria-label="Next Page"
           disabled={false}
           onClick={[Function]}
+          title="Next Page"
           type="button"
         >
           <span
