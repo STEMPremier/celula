@@ -48,9 +48,8 @@ const useRowSelectComponent = (selectionHeaderFn, selectionFn) => instance => {
 
         return (
           <Checkbox
-            label="label"
-            value="allRows[]"
             {...getToggleAllPageRowsSelectedProps({
+              label: 'label',
               /* When we override the deafult onChange handler provided by useRowSelect,
                * we have to manually trigger the toggleRowSelected function manually.
                */
@@ -58,15 +57,15 @@ const useRowSelectComponent = (selectionHeaderFn, selectionFn) => instance => {
                 toggleAllPageRowsSelected();
                 selectionHeaderFn(rows, event);
               },
+              value: 'allRows[]',
             })}
           />
         );
       },
       Cell: ({ row }) => (
         <Checkbox
-          label={row.id}
-          value={row.id}
           {...row.getToggleRowSelectedProps({
+            label: row.id,
             /* When we override the deafult onChange handler provided by useRowSelect,
              * we have to manually trigger the toggleRowSelected function manually.
              */
@@ -74,6 +73,7 @@ const useRowSelectComponent = (selectionHeaderFn, selectionFn) => instance => {
               row.toggleRowSelected(event.target.checked);
               selectionFn(row.original, event);
             },
+            value: row.id,
           })}
         />
       ),
