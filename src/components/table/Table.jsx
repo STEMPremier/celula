@@ -114,22 +114,11 @@ const Table = ({
     nextPage,
     previousPage,
     setPageSize,
-    toggleHideColumn,
     state: { pageIndex },
   } = useTable(
     {
       columns,
       data,
-      initialState: {
-        /* Based on the documentation at https://react-table.tanstack.com/docs/api/useTable
-         * `intitialState.hiddenColumns` is supposed to be an array of column ids that you
-         *  want to have hidden.
-         *
-         *  I cannot figure out why, but in this use case, I am seeing
-         *  this work backwards. and ONLY with the checkbox columns (id = 'selection').
-         */
-        hiddenColumns: selectable ? ['selection'] : [],
-      },
     },
     usePagination,
     useRowSelect,
@@ -137,7 +126,6 @@ const Table = ({
   );
 
   useEffect(() => setPageSize(pageSize), [pageSize]);
-  useEffect(() => toggleHideColumn('selection'), [selectable]);
 
   const classes = cx(
     'ce-table',

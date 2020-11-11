@@ -30,6 +30,10 @@
           font-size: 1.4rem;
           font-weight: bold;
           line-height: 1.9rem;
+
+          &:first-of-type {
+            display: none;
+          }
         }
       }
     }
@@ -100,6 +104,10 @@
             line-height: 2.8rem;
           }
         }
+
+        &:first-of-type {
+          display: none;
+        }
       }
 
       &:nth-child(odd) {
@@ -151,6 +159,7 @@
             // desktop
             @media screen and (min-width: 765px) {
               box-sizing: border-box;
+              display: block;
               max-width: 5rem;
               padding-left: 0.8rem;
             }
@@ -185,6 +194,7 @@
             // desktop
             @media screen and (min-width: 765px) {
               box-sizing: border-box;
+              display: block;
               max-width: 5rem;
               padding-left: 0.8rem;
             }
@@ -192,6 +202,7 @@
             // mobile
             @media screen and (max-width: 765px) {
               max-height: 4.3rem;
+              display: flex;
             }
 
             .ce-table__cell-heading {
