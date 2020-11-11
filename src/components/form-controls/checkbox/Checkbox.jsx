@@ -61,7 +61,11 @@ const Checkbox = ({
     handler(event);
   };
 
-  // console.log('rest', rest);
+  const finProps = Object.entries(rest).reduce(
+    (a, [k, v]) =>
+      k === 'indeterminate' || k === 'isA' ? a : { ...a, [k]: v },
+    {},
+  );
 
   /* eslint-disable react/jsx-props-no-spreading */
   return (
@@ -75,7 +79,7 @@ const Checkbox = ({
         onChange={handleChange}
         type="checkbox"
         value={value}
-        {...rest} // This lets us overwrite the previous declerations of the props. ie. For use as part of other display components.
+        {...finProps} // This lets us overwrite the previous declerations of the props. ie. For use as part of other display components.
       />
       <label htmlFor={id}>{label}</label>
       {errorMsg && <ErrorBox errorMsg={errorMsg} />}
