@@ -42,4 +42,4 @@ const SomethingToPage = ({
 };
 
 export default SomethingToPage;
-/* eslint-disable */
+/* eslint-enable */
