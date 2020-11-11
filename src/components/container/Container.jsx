@@ -24,11 +24,15 @@ import './container.less';
 /**
  * `<Containers />` group componets together, adding margin, or padding, (or neither) and an optional border.
  */
-const Container = ({ border, children, gap }) => {
-  const classes = cx('ce-container', {
-    'ce-container__border': border,
-    [`ce-container__${gap}`]: gap !== 'none',
-  });
+const Container = ({ border, className, children, gap }) => {
+  const classes = cx(
+    'ce-container',
+    {
+      'ce-container__border': border,
+      [`ce-container__${gap}`]: gap !== 'none',
+    },
+    className,
+  );
 
   return <div className={classes}>{children}</div>;
 };
@@ -43,6 +47,10 @@ Container.propTypes = {
    */
   children: PropTypes.node.isRequired,
   /**
+   * A class name, or string of class names, to add to the `<Container />`.
+   */
+  className: PropTypes.string,
+  /**
    * The method the spacing (if any) around the `<Container />` is applied.
    */
   gap: PropTypes.oneOf(['margin', 'padding', 'none']),
@@ -50,6 +58,7 @@ Container.propTypes = {
 
 Container.defaultProps = {
   border: false,
+  className: '',
   gap: 'margin',
 };
 
