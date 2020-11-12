@@ -67,7 +67,7 @@ function nameOrText(props, propName, componentName = 'SecondaryIcon') {
  * These light icons are mostly used as an actionable element.
  * Alternatively, they can be used as avatars or indicators with two varying gradient options.
  */
-const SecondaryIcon = ({ color, name, size, text }) => {
+const SecondaryIcon = ({ className, color, name, size, text }) => {
   /* eslint-disable prettier/prettier */
   const classes = cx(
     'ce-icon',
@@ -76,6 +76,7 @@ const SecondaryIcon = ({ color, name, size, text }) => {
       [`ce-icon--${size}`]: SIZES.includes(size.toString().toLowerCase()),
       [`ce-icon--${color}`]: COLORS.includes(color.toString().toLowerCase()),
     },
+    className,
   );
   /* eslint-enable prettier/prettier */
 
@@ -102,6 +103,10 @@ const SecondaryIcon = ({ color, name, size, text }) => {
 
 SecondaryIcon.propTypes = {
   /**
+   * A class name, or string of class names, to add to the `<SecondaryIcon />`.
+   */
+  className: PropTypes.string,
+  /**
    * The color of the `<SecondaryIcon />` background gradient.
    */
   // color: PropTypes.oneOf(COLORS),
@@ -122,6 +127,7 @@ SecondaryIcon.propTypes = {
 };
 
 SecondaryIcon.defaultProps = {
+  className: '',
   color: 'primary',
   name: '',
   size: 'small',

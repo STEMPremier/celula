@@ -9,6 +9,7 @@ import { boolean, number } from '@storybook/addon-knobs';
 
 import { data, columns } from './data.js';
 import Table from '.';
+import SomethingToMemo from './SomethingToMemo'
 
 <Meta component={Table} title="Components/Atoms/Table" />
 
@@ -23,8 +24,8 @@ import Table from '.';
     data={data}
     pageSize={number('pageSize', 5)}
     clickable={boolean('clickable', false)}
-    rowFunction={(row, event) => console.log('From the row:\nrow', row, "\nevent", event)}
-    selectable={boolean('selectable', false)}
+    clickFn={(row, event) => console.log('From the row:\nrow', row, "\nevent", event)}
+    selectable={boolean('selectable', true)}
     selectionHeaderFn={(rows, event) => console.log('From the header checkbox:\nrows', rows, "\nevent", event)}
     selectionFn={(row, event) => console.log('From the checkbox:\nrow', row, "\nevent", event)}
   />

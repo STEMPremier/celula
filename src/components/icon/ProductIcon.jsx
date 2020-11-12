@@ -28,10 +28,15 @@ import './icon.less';
 /** Bold icons are used with a gradient background circle.
  * These icons can be actionable or used as a static element.
  */
-const ProductIcon = ({ name, size }) => {
-  const classes = cx('ce-icon', 'ce-icon__product', {
-    [`ce-icon--${size}`]: SIZES.includes(size.toString().toLowerCase()),
-  });
+const ProductIcon = ({ className, name, size }) => {
+  const classes = cx(
+    'ce-icon',
+    'ce-icon__product',
+    {
+      [`ce-icon--${size}`]: SIZES.includes(size.toString().toLowerCase()),
+    },
+    className,
+  );
 
   return (
     <span className={classes}>
@@ -43,6 +48,10 @@ const ProductIcon = ({ name, size }) => {
 };
 
 ProductIcon.propTypes = {
+  /**
+   * A class name, or string of class names, to add to the `<ProductIcon />`.
+   */
+  className: PropTypes.string,
   /**
    * The `<ProductIcon />`.
    */
@@ -81,6 +90,7 @@ ProductIcon.propTypes = {
 };
 
 ProductIcon.defaultProps = {
+  className: '',
   size: 'small',
 };
 

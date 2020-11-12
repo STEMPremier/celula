@@ -48,9 +48,8 @@ const useRowSelectComponent = (selectionHeaderFn, selectionFn) => instance => {
 
         return (
           <Checkbox
-            label="label"
-            value="allRows[]"
             {...getToggleAllPageRowsSelectedProps({
+              label: 'label',
               /* When we override the deafult onChange handler provided by useRowSelect,
                * we have to manually trigger the toggleRowSelected function manually.
                */
@@ -58,15 +57,15 @@ const useRowSelectComponent = (selectionHeaderFn, selectionFn) => instance => {
                 toggleAllPageRowsSelected();
                 selectionHeaderFn(rows, event);
               },
+              value: 'allRows[]',
             })}
           />
         );
       },
       Cell: ({ row }) => (
         <Checkbox
-          label={row.id}
-          value={row.id}
           {...row.getToggleRowSelectedProps({
+            label: row.id,
             /* When we override the deafult onChange handler provided by useRowSelect,
              * we have to manually trigger the toggleRowSelected function manually.
              */
@@ -74,6 +73,7 @@ const useRowSelectComponent = (selectionHeaderFn, selectionFn) => instance => {
               row.toggleRowSelected(event.target.checked);
               selectionFn(row.original, event);
             },
+            value: row.id,
           })}
         />
       ),
@@ -114,22 +114,11 @@ const Table = ({
     nextPage,
     previousPage,
     setPageSize,
-    toggleHideColumn,
     state: { pageIndex },
   } = useTable(
     {
       columns,
       data,
-      initialState: {
-        /* Based on the documentation at https://react-table.tanstack.com/docs/api/useTable
-         * `intitialState.hiddenColumns` is supposed to be an array of column ids that you
-         *  want to have hidden.
-         *
-         *  I cannot figure out why, but in this use case, I am seeing
-         *  this work backwards. and ONLY with the checkbox columns (id = 'selection').
-         */
-        hiddenColumns: selectable ? ['selection'] : [],
-      },
     },
     usePagination,
     useRowSelect,
@@ -137,7 +126,6 @@ const Table = ({
   );
 
   useEffect(() => setPageSize(pageSize), [pageSize]);
-  useEffect(() => toggleHideColumn('selection'), [selectable]);
 
   const classes = cx(
     'ce-table',

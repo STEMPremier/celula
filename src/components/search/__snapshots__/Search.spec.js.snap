@@ -27,6 +27,7 @@ exports[`<Search /> render() render the Search component 1`] = `
       type="button"
     >
       <SystemIcon
+        className=""
         color="inverted"
         name="search"
         size="large"

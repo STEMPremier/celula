@@ -306,3 +306,24 @@ Text buttons are often embedded in contained components like cards and dialogs, 
     </Button>
   </Story>
 </Canvas>
+
+## Multiple Buttons
+
+If you place Buttons next to one another, there will be a 10px margin between them.
+
+<Canvas>
+  <Story name="Multiple">
+    <Button
+      handleClick={action('`Multiple Button One` onClick event triggered.`')}
+      size="small"
+    >
+      this button
+    </Button>
+    <Button
+      handleClick={action('`Multiple Button Two` onClick event triggered.`')}
+      size="small"
+    >
+      that button
+    </Button>
+  </Story>
+</Canvas>

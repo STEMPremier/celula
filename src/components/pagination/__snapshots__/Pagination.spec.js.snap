@@ -18,6 +18,7 @@ exports[`<Pagination /> render() renders the component 1`] = `
         type="button"
       >
         <SystemIcon
+          className=""
           color="black"
           name="navigate"
           size="large"
@@ -90,6 +91,7 @@ exports[`<Pagination /> render() renders the component 1`] = `
         type="button"
       >
         <SystemIcon
+          className=""
           color="black"
           name="navigate"
           size="large"

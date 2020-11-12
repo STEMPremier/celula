@@ -1526,6 +1526,9 @@ button {
   box-shadow: 0 0 0 5px #b2e7ff;
   outline: none;
 }
+.ce-button + .ce-button {
+  margin-left: 1rem;
+}
 .ce-button--outline.ce-button--small .ce-button__label {
   background: #fff;
 }
@@ -6698,6 +6701,9 @@ ol {
     font-weight: bold;
     line-height: 1.9rem;
   }
+  .ce-table .ce-table__header .ce-table__header--group .ce-table__heading:first-of-type {
+    display: none;
+  }
 }
 @media screen and (max-width: 765px) {
   .ce-table .ce-table__header {
@@ -6759,6 +6765,9 @@ ol {
     line-height: 2.8rem;
   }
 }
+.ce-table .ce-table__body .ce-table__row .ce-table__cell:first-of-type {
+  display: none;
+}
 .ce-table .ce-table__body .ce-table__row:nth-child(odd) {
   --background-color: #f1f6f9;
 }
@@ -6790,6 +6799,7 @@ ol {
 @media screen and (min-width: 765px) {
   .ce-table.ce-table__selectable .ce-table__header .ce-table__header--group .ce-table__heading:first-of-type {
     box-sizing: border-box;
+    display: block;
     max-width: 5rem;
     padding-left: 0.8rem;
   }
@@ -6815,6 +6825,7 @@ ol {
 @media screen and (min-width: 765px) {
   .ce-table.ce-table__selectable .ce-table__body .ce-table__row .ce-table__cell:first-of-type {
     box-sizing: border-box;
+    display: block;
     max-width: 5rem;
     padding-left: 0.8rem;
   }
@@ -6822,6 +6833,7 @@ ol {
 @media screen and (max-width: 765px) {
   .ce-table.ce-table__selectable .ce-table__body .ce-table__row .ce-table__cell:first-of-type {
     max-height: 4.3rem;
+    display: flex;
   }
 }
 .ce-table.ce-table__selectable .ce-table__body .ce-table__row .ce-table__cell:first-of-type .ce-table__cell-heading {

@@ -25,20 +25,12 @@ import Button from '../../button';
 /**
  * `Submit Buttons` allow users to submit forms with a single tap. They are typically placed throughout your UI in every form.
  */
-const SubmitButton = ({
-  children,
-  className,
-  color,
-  disabled,
-  handleClick,
-  size,
-  type,
-}) => (
+const SubmitButton = ({ children, className, color, disabled, size, type }) => (
   <Button
     className={className}
     color={color}
     disabled={disabled}
-    handleClick={handleClick}
+    handleClick={() => {}}
     htmlType="submit"
     size={size}
     type={type}
@@ -65,10 +57,6 @@ SubmitButton.propTypes = {
    * Disables the `<SubmitButton />`.
    */
   disabled: PropTypes.bool,
-  /**
-   * A function to trigger when the `<SubmitButton />` is clicked.
-   */
-  handleClick: PropTypes.func.isRequired,
   /**
    * The size of the `<SubmitButton />`.
    */
