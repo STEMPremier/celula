@@ -9,7 +9,6 @@ exports[`<Checkbox /> render() render the Checkbox 1`] = `
     disabled={false}
     form=""
     id="_Checkbox Value Here 1"
-    isA="checkbox"
     name=""
     onChange={[Function]}
     type="checkbox"

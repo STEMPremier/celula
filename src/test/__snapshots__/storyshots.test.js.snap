@@ -520,6 +520,35 @@ exports[`Storyshots Components/Atoms/Button Button with Knobs 1`] = `
 </button>
 `;
 
+exports[`Storyshots Components/Atoms/Button Multiple 1`] = `
+Array [
+  <button
+    className="ce-button ce-button--solid ce-button--small ce-button--primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="ce-button__label"
+    >
+      this button
+    </span>
+  </button>,
+  <button
+    className="ce-button ce-button--solid ce-button--small ce-button--primary"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="ce-button__label"
+    >
+      that button
+    </span>
+  </button>,
+]
+`;
+
 exports[`Storyshots Components/Atoms/Button Outline Black 1`] = `
 <button
   className="ce-button ce-button--outline ce-button--small ce-button--black"
@@ -1723,8 +1752,6 @@ Array [
               disabled={false}
               form=""
               id="_allRows[]"
-              indeterminate={false}
-              isA="checkbox"
               name=""
               onChange={[Function]}
               style={
@@ -1798,8 +1825,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -1830,8 +1855,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_0"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -1933,8 +1956,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -1965,8 +1986,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_1"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -2068,8 +2087,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -2100,8 +2117,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_2"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -2203,8 +2218,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -2235,8 +2248,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_3"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -2338,8 +2349,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -2370,8 +2379,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_4"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -2473,8 +2480,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -2505,8 +2510,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_5"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -2608,8 +2611,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -2640,8 +2641,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_6"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -2743,8 +2742,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -2775,8 +2772,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_7"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -2878,8 +2873,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -2910,8 +2903,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_8"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -3013,8 +3004,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -3045,8 +3034,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_9"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -3264,8 +3251,6 @@ Array [
               disabled={false}
               form=""
               id="_allRows[]"
-              indeterminate={false}
-              isA="checkbox"
               name=""
               onChange={[Function]}
               style={
@@ -3339,8 +3324,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -3371,8 +3354,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_0"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -3474,8 +3455,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -3506,8 +3485,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_1"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -3609,8 +3586,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -3641,8 +3616,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_2"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -3744,8 +3717,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -3776,8 +3747,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_3"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -3879,8 +3848,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -3911,8 +3878,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_4"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -4014,8 +3979,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -4046,8 +4009,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_5"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -4149,8 +4110,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -4181,8 +4140,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_6"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -4284,8 +4241,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -4316,8 +4271,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_7"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -4419,8 +4372,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -4451,8 +4402,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_8"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -4554,8 +4503,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -4586,8 +4533,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_9"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -4797,6 +4742,38 @@ Array [
           colSpan={1}
           role="columnheader"
         >
+          <div
+            className="ce-checkbox"
+          >
+            <input
+              checked={false}
+              disabled={false}
+              form=""
+              id="_allRows[]"
+              name=""
+              onChange={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
+              title="Toggle All Current Page Rows Selected"
+              type="checkbox"
+              value="allRows[]"
+            />
+            <label
+              htmlFor="_allRows[]"
+            >
+              label
+            </label>
+            
+          </div>
+        </div>
+        <div
+          className="ce-table__heading"
+          colSpan={1}
+          role="columnheader"
+        >
           First Name
         </div>
         <div
@@ -4831,6 +4808,71 @@ Array [
         onClick={[Function]}
         role="row"
       >
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Current Page Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_0"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="0"
+              />
+              <label
+                htmlFor="_0"
+              >
+                0
+              </label>
+              
+            </div>
+          </div>
+        </div>
         <div
           className="ce-table__cell"
           role="cell"
@@ -4904,6 +4946,71 @@ Array [
           <div
             className="ce-table__cell-heading"
           >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Current Page Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_1"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="1"
+              />
+              <label
+                htmlFor="_1"
+              >
+                1
+              </label>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
             First Name:
           </div>
           <div
@@ -4963,6 +5070,71 @@ Array [
         onClick={[Function]}
         role="row"
       >
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Current Page Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_2"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="2"
+              />
+              <label
+                htmlFor="_2"
+              >
+                2
+              </label>
+              
+            </div>
+          </div>
+        </div>
         <div
           className="ce-table__cell"
           role="cell"
@@ -5036,6 +5208,71 @@ Array [
           <div
             className="ce-table__cell-heading"
           >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Current Page Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_3"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="3"
+              />
+              <label
+                htmlFor="_3"
+              >
+                3
+              </label>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
             First Name:
           </div>
           <div
@@ -5095,6 +5332,71 @@ Array [
         onClick={[Function]}
         role="row"
       >
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Current Page Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_4"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="4"
+              />
+              <label
+                htmlFor="_4"
+              >
+                4
+              </label>
+              
+            </div>
+          </div>
+        </div>
         <div
           className="ce-table__cell"
           role="cell"
@@ -5168,6 +5470,71 @@ Array [
           <div
             className="ce-table__cell-heading"
           >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Current Page Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_5"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="5"
+              />
+              <label
+                htmlFor="_5"
+              >
+                5
+              </label>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
             First Name:
           </div>
           <div
@@ -5227,6 +5594,71 @@ Array [
         onClick={[Function]}
         role="row"
       >
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Current Page Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_6"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="6"
+              />
+              <label
+                htmlFor="_6"
+              >
+                6
+              </label>
+              
+            </div>
+          </div>
+        </div>
         <div
           className="ce-table__cell"
           role="cell"
@@ -5300,6 +5732,71 @@ Array [
           <div
             className="ce-table__cell-heading"
           >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Current Page Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_7"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="7"
+              />
+              <label
+                htmlFor="_7"
+              >
+                7
+              </label>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
             First Name:
           </div>
           <div
@@ -5366,6 +5863,71 @@ Array [
           <div
             className="ce-table__cell-heading"
           >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Current Page Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_8"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="8"
+              />
+              <label
+                htmlFor="_8"
+              >
+                8
+              </label>
+              
+            </div>
+          </div>
+        </div>
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
             First Name:
           </div>
           <div
@@ -5425,6 +5987,71 @@ Array [
         onClick={[Function]}
         role="row"
       >
+        <div
+          className="ce-table__cell"
+          role="cell"
+        >
+          <div
+            className="ce-table__cell-heading"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_allRows[]"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle All Current Page Rows Selected"
+                type="checkbox"
+                value="allRows[]"
+              />
+              <label
+                htmlFor="_allRows[]"
+              >
+                label
+              </label>
+              
+            </div>
+          </div>
+          <div
+            className="ce-table__cell-body"
+          >
+            <div
+              className="ce-checkbox"
+            >
+              <input
+                checked={false}
+                disabled={false}
+                form=""
+                id="_9"
+                name=""
+                onChange={[Function]}
+                style={
+                  Object {
+                    "cursor": "pointer",
+                  }
+                }
+                title="Toggle Row Selected"
+                type="checkbox"
+                value="9"
+              />
+              <label
+                htmlFor="_9"
+              >
+                9
+              </label>
+              
+            </div>
+          </div>
+        </div>
         <div
           className="ce-table__cell"
           role="cell"
@@ -5598,7 +6225,7 @@ Array [
 exports[`Storyshots Components/Atoms/Table Table with Knobs 1`] = `
 Array [
   <div
-    className="ce-table"
+    className="ce-table ce-table__selectable"
     role="table"
   >
     <div
@@ -5622,8 +6249,6 @@ Array [
               disabled={false}
               form=""
               id="_allRows[]"
-              indeterminate={false}
-              isA="checkbox"
               name=""
               onChange={[Function]}
               style={
@@ -5697,8 +6322,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -5729,8 +6352,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_0"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -5832,8 +6453,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -5864,8 +6483,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_1"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -5967,8 +6584,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -5999,8 +6614,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_2"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -6102,8 +6715,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -6134,8 +6745,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_3"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -6237,8 +6846,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -6269,8 +6876,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_4"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -6372,8 +6977,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -6404,8 +7007,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_5"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -6507,8 +7108,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -6539,8 +7138,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_6"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -6642,8 +7239,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -6674,8 +7269,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_7"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -6777,8 +7370,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -6809,8 +7400,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_8"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -6912,8 +7501,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_allRows[]"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -6944,8 +7531,6 @@ Array [
                 disabled={false}
                 form=""
                 id="_9"
-                indeterminate={false}
-                isA="checkbox"
                 name=""
                 onChange={[Function]}
                 style={
@@ -8297,7 +8882,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Checkbox with Kn
       form="formKnobs"
       handleClick={[Function]}
       id="termsAndConditions_accepted"
-      isA="checkbox"
       name="termsAndConditions"
       onChange={[Function]}
       type="checkbox"
@@ -8322,7 +8906,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Default 1`] = `
     disabled={false}
     form=""
     id="default_true"
-    isA="checkbox"
     name="default"
     onChange={[Function]}
     type="checkbox"
@@ -8346,7 +8929,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Disabled 1`] = `
     disabled={false}
     form=""
     id="disabled_true"
-    isA="checkbox"
     name="disabled"
     onChange={[Function]}
     type="checkbox"
@@ -8370,7 +8952,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Checkbox Error 1`] = `
     disabled={false}
     form=""
     id="error_true"
-    isA="checkbox"
     name="error"
     onChange={[Function]}
     type="checkbox"
@@ -8425,7 +9006,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
         disabled={false}
         form=""
         id="favoriteFood_pizza"
-        isA="checkbox"
         name="favoriteFood"
         onChange={[Function]}
         type="checkbox"
@@ -8446,7 +9026,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
         disabled={false}
         form=""
         id="favoriteFood_hotdog"
-        isA="checkbox"
         name="favoriteFood"
         onChange={[Function]}
         type="checkbox"
@@ -8467,7 +9046,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
         disabled={false}
         form=""
         id="favoriteFood_hamburger"
-        isA="checkbox"
         name="favoriteFood"
         onChange={[Function]}
         type="checkbox"
@@ -8488,7 +9066,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup CheckboxGro
         disabled={false}
         form=""
         id="favoriteFood_coleslaw"
-        isA="checkbox"
         name="favoriteFood"
         onChange={[Function]}
         type="checkbox"
@@ -8528,7 +9105,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Default 1`]
       disabled={false}
       form=""
       id="favoriteTextEditor_vim"
-      isA="checkbox"
       name="favoriteTextEditor"
       onChange={[Function]}
       type="checkbox"
@@ -8549,7 +9125,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Default 1`]
       disabled={false}
       form=""
       id="favoriteTextEditor_emacs"
-      isA="checkbox"
       name="favoriteTextEditor"
       onChange={[Function]}
       type="checkbox"
@@ -8570,7 +9145,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Default 1`]
       disabled={false}
       form=""
       id="favoriteTextEditor_vscode"
-      isA="checkbox"
       name="favoriteTextEditor"
       onChange={[Function]}
       type="checkbox"
@@ -8591,7 +9165,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Default 1`]
       disabled={false}
       form=""
       id="favoriteTextEditor_atom"
-      isA="checkbox"
       name="favoriteTextEditor"
       onChange={[Function]}
       type="checkbox"
@@ -8630,7 +9203,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (G
       disabled={false}
       form=""
       id="favoriteBeatle_john"
-      isA="checkbox"
       name="favoriteBeatle"
       onChange={[Function]}
       type="checkbox"
@@ -8651,7 +9223,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (G
       disabled={false}
       form=""
       id="favoriteBeatle_paul"
-      isA="checkbox"
       name="favoriteBeatle"
       onChange={[Function]}
       type="checkbox"
@@ -8672,7 +9243,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (G
       disabled={false}
       form=""
       id="favoriteBeatle_george"
-      isA="checkbox"
       name="favoriteBeatle"
       onChange={[Function]}
       type="checkbox"
@@ -8693,7 +9263,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (G
       disabled={false}
       form=""
       id="favoriteBeatle_ringo"
-      isA="checkbox"
       name="favoriteBeatle"
       onChange={[Function]}
       type="checkbox"
@@ -8732,7 +9301,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (I
       disabled={false}
       form=""
       id="favoriteBeatle2_john2"
-      isA="checkbox"
       name="favoriteBeatle2"
       onChange={[Function]}
       type="checkbox"
@@ -8753,7 +9321,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (I
       disabled={false}
       form=""
       id="favoriteBeatle2_paul2"
-      isA="checkbox"
       name="favoriteBeatle2"
       onChange={[Function]}
       type="checkbox"
@@ -8774,7 +9341,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (I
       disabled={false}
       form=""
       id="favoriteBeatle2_george2"
-      isA="checkbox"
       name="favoriteBeatle2"
       onChange={[Function]}
       type="checkbox"
@@ -8795,7 +9361,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Disabled (I
       disabled={true}
       form=""
       id="favoriteBeatle2_ringo2"
-      isA="checkbox"
       name="favoriteBeatle2"
       onChange={[Function]}
       type="checkbox"
@@ -8834,7 +9399,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Error 1`] =
       disabled={false}
       form=""
       id="favoriteFramework_react"
-      isA="checkbox"
       name="favoriteFramework"
       onChange={[Function]}
       type="checkbox"
@@ -8855,7 +9419,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Error 1`] =
       disabled={false}
       form=""
       id="favoriteFramework_angularjs"
-      isA="checkbox"
       name="favoriteFramework"
       onChange={[Function]}
       type="checkbox"
@@ -8876,7 +9439,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Error 1`] =
       disabled={false}
       form=""
       id="favoriteFramework_angular"
-      isA="checkbox"
       name="favoriteFramework"
       onChange={[Function]}
       type="checkbox"
@@ -8897,7 +9459,6 @@ exports[`Storyshots Components/Molecules/Form Controls/CheckboxGroup Error 1`] =
       disabled={false}
       form=""
       id="favoriteFramework_vue"
-      isA="checkbox"
       name="favoriteFramework"
       onChange={[Function]}
       type="checkbox"
@@ -9034,7 +9595,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Core/FormControlGroup For
       disabled={false}
       form=""
       id="myGroup_checkboxOne"
-      isA="checkbox"
       name="myGroup"
       onChange={[Function]}
       type="checkbox"
@@ -9055,7 +9615,6 @@ exports[`Storyshots Components/Molecules/Form Controls/Core/FormControlGroup For
       disabled={false}
       form=""
       id="myGroup_checkboxTwo"
-      isA="checkbox"
       name="myGroup"
       onChange={[Function]}
       type="checkbox"
