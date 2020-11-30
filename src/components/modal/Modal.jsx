@@ -1,0 +1,216 @@
+/* Copyright 2020 Tallo Inc.,
+ *
+ * This file is part of Celula.
+ *
+ * Celula is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+/*
+ * The Modal is a little different. Instead of just _exporting_ the Modal,
+ * we (react-modal) have to know what DOM element to 'pin' it to, for accessibilitys
+ * sake. Since Celula is made to be used by a consuming app, we don't know
+ * the app root. So we export a function that returns the Modal component
+ * pinned to the consuming app's root element.
+ */
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import ReactModal from 'react-modal';
+import cx from 'classnames';
+
+import Button from '../button';
+import Container from '../container';
+import { SystemIcon } from '../icon';
+
+import { SIZES } from '../../utils/constants';
+
+import './modal.less';
+
+const modalSizes = ['default', ...SIZES];
+
+// A custom prop validator for the Modal.
+// We need to check and see if the prop is contains a value of undefined, (vs being undefined itself), or a function.
+function actionFnOrUndef(props, propName, componentName = 'Modal') {
+  let error;
+
+  if (
+    typeof props[propName] !== 'undefined' &&
+    typeof props[propName] !== 'function'
+  ) {
+    error = new Error(
+      `Invalid prop ${propName} supplied to ${componentName} Validation failed.`,
+    );
+  }
+
+  return error;
+}
+
+// The modal itself.
+/**
+ * Standard modals can contain a heading, description text, inputs, various content blocks and a button. Modals are
+ * fixed position to the parent page and horizontally centered. These modals also have an option to scroll within
+ * the modal.
+ */
+const Modal = ({
+  actionFn = undefined,
+  actionLabel = 'Close',
+  actionSize = 'large',
+  children,
+  className = '',
+  disabled = false,
+  size = 'default',
+  title,
+  triggerColor = 'primary',
+  triggerLabel,
+  triggerSize = 'large',
+  triggerType = 'solid',
+}) => {
+  const [visible, setVisibility] = useState(false);
+  const classes = cx(
+    'ce-modal',
+    {
+      [`ce-modal--${size}`]: modalSizes.includes(size.toString().toLowerCase()),
+    },
+    className,
+  );
+
+  const showModal = () => setVisibility(true);
+  const hideModal = () => setVisibility(false);
+
+  const action = actionFn || hideModal;
+
+  return (
+    <>
+      <ReactModal
+        className={classes}
+        contentLabel={title}
+        isOpen={visible}
+        shouldFocusAfterRender
+        shouldCloseOnOverlayClick
+        shouldCloseOnEsc
+        shouldReturnFocusAfterClose
+      >
+        <button
+          className="ce-modal__close"
+          onClick={hideModal}
+          type="button"
+          aria-label="Close"
+        >
+          <SystemIcon color="black" name="close" size="jumbo" />
+        </button>
+        <Container className="ce-modal__container" gap="padding">
+          <h4 className="ce-modal__header">{title}</h4>
+          <div className="ce-modal__body">{children}</div>
+          <div className="ce-modal__footer">
+            <Button handleClick={action} size={actionSize}>
+              {actionLabel}
+            </Button>
+            <Button
+              className="ce-modal__cancel"
+              color="secondary"
+              handleClick={hideModal}
+              size={actionSize}
+              type="text"
+            >
+              Cancel
+            </Button>
+          </div>
+        </Container>
+      </ReactModal>
+      <Button
+        color={triggerColor}
+        disabled={disabled}
+        handleClick={showModal}
+        size={triggerSize}
+        type={triggerType}
+      >
+        {triggerLabel}
+      </Button>
+    </>
+  );
+};
+
+Modal.propTypes = {
+  /**
+   * The action (function) the action button in the footer of the `<Modal />` triggers.
+   */
+  actionFn: actionFnOrUndef,
+  /**
+   * The label for the action button in the footer of the `<Modal />`.
+   */
+  actionLabel: PropTypes.string,
+  /**
+   * The size of the `<Modal />` action button. Same options as `<Button />`.
+   */
+  actionSize: PropTypes.oneOf(['small', 'large', 'jumbo']),
+  /**
+   * The `<Modal />` body. This can be a string, a component, or anything else React can render.
+   */
+  children: PropTypes.node.isRequired,
+  /**
+   * A class name, or string of class names, to add to the `<Modal />`.
+   */
+  className: PropTypes.string,
+  /**
+   * Disables the `<Modal />`.
+   */
+  disabled: PropTypes.bool,
+  /**
+   * The size of the `<Modal />`.
+   */
+  // size: PropTypes.oneOf(SIZES),
+  size: PropTypes.oneOf(['default', 'small', 'large', 'jumbo']),
+  /**
+   * The title of the `<Modal />`.
+   */
+  title: PropTypes.string.isRequired,
+  /**
+   *  The `<Modal />` trigger button color.
+   */
+  triggerColor: PropTypes.string,
+  /**
+   * The `<Modal />` trigger button label.
+   */
+  triggerLabel: PropTypes.string.isRequired,
+  /**
+   * The size of the `<Modal />` trigger. Same options as `<Button />`.
+   */
+  triggerSize: PropTypes.oneOf(['small', 'large', 'jumbo']),
+  /**
+   * The type of trigger `<Button />` the `<Modal />` will have.
+   */
+  triggerType: PropTypes.oneOf(['solid', 'outline', 'text']),
+};
+
+Modal.defaultProps = {
+  actionFn: undefined,
+  actionLabel: 'Close',
+  actionSize: 'large',
+  className: '',
+  disabled: false,
+  size: 'default',
+  triggerColor: 'primary',
+  triggerSize: 'large',
+  triggerType: 'solid',
+};
+
+// The function that does the magic.
+export default (root = '#root') => {
+  // Tell `react-modal` where it can Portal into.
+  ReactModal.setAppElement(root);
+
+  // Then just return the component. You can then just use it; like any other compnent.
+  return Modal;
+};
+
+// this export does not make it to the outside world. It is so we can expose the component directly to Storybook.
+export { Modal as ModalDocs };
