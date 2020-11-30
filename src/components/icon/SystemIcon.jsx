@@ -50,7 +50,7 @@ const SystemIcon = ({ className, color, name, size }) => {
 
 SystemIcon.propTypes = {
   /**
-   * A class name, or string of class names, to add to the `<Container />`.
+   * A class name, or string of class names, to add to the `<SystemIcon />`.
    */
   className: PropTypes.string,
   /*
