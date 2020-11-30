@@ -15,7 +15,6 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -25,6 +24,7 @@ import { COLORS, SECONDARY_ICONS, SIZES } from '../../utils/constants';
 import './icons/icons.svg';
 import './icon.less';
 
+/* eslint-disable no-unused-vars */
 // Our custom props validator. I am not in love with the name, but a descriptive name was absurdly long.
 function nameOrText(props, propName, componentName = 'SecondaryIcon') {
   const types = ['name', 'text'];
@@ -62,6 +62,7 @@ function nameOrText(props, propName, componentName = 'SecondaryIcon') {
 
   return error;
 }
+/* eslint-enable no-unused-vars */
 
 /**
  * These light icons are mostly used as an actionable element.
