@@ -1,0 +1,560 @@
+import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import { boolean, select, text } from '@storybook/addon-knobs';
+
+import Modal from './SomethingToModal';
+import { ModalDocs } from './Modal';
+import Button from '../button';
+import Container from '../container';
+import { SystemIcon } from '../icon';
+
+
+<Meta component={ ModalDocs } title="Components/Atoms/Modal" />
+
+# Modal
+<Description of={ ModalDocs } />
+<ArgsTable of={ ModalDocs } />
+
+<Story name="Modal with Knobs" parameters={ { docs: { disable: true } } }>
+  <Modal
+    actionFn={() => console.log('Modal action button clicked.')}
+    actionLabel={text('actionLabel', 'log something')}
+    actionSize={select('actionSize', ['small', 'large', 'jumbo'], 'large')}
+    size={select('size', ['default', 'small', 'large', 'jumbo'], 'default')}
+    title={text('title', 'This is My Modal')}
+    triggerLabel={text('triggerLabel', 'open modal')}
+    triggerSize={select('triggerSize', ['small', 'large', 'jumbo'], 'large')}
+    triggerType={select('triggerType', ['solid', 'outline', 'text'], 'solid')}
+  >
+    <p>
+      Bacon ipsum dolor amet consectetur landjaeger proident jerky qui
+      nisi. Exercitation excepteur cillum qui, t-bone venison corned
+      beef non sausage anim id. Cupim boudin ground round, porchetta
+      minim aliqua cow meatloaf dolore. Non hamburger cillum bresaola
+      est eu biltong rump excepteur ad kevin pastrami magna jowl.
+      Eiusmod pork belly porchetta occaecat, hamburger proident tongue
+      doner kevin cupim id salami.
+    </p>
+    <p>
+      Cillum corned beef sunt venison. Ullamco cillum pastrami nisi.
+      Chuck turducken boudin occaecat shankle. Jerky venison filet
+      mignon minim duis burgdoggen. Exercitation veniam pork loin,
+      consectetur occaecat laborum quis. Sausage filet mignon
+      incididunt, proident frankfurter adipisicing swine labore ball
+      tip. Alcatra leberkas incididunt sunt brisket, hamburger kevin.
+    </p>
+  </Modal>
+</Story>
+
+The `<Modal />`  export is different from the rest of the components in Celula. Rather than just being a component that is exported;
+```js
+import { Button } from '@talloinc/celula';
+```
+
+It is a function that returns the `<Modal />` component;
+```jsx
+import React from 'react';
+import { Modal as ModalFn } from '@talloinc/celula';
+
+const Modal = ModalFn('#modal-root');
+
+const MyComponent = () => {
+  return (
+    <div>
+      <Modal {/* modal props go here */}>
+        {/* modal contents go here */}
+      </Modal>
+    </div>
+  );
+};
+
+export default MyComponent;
+```
+
+We do this because `<Modal />` is attached to the DOM by `ReactDOM.Portal`, and we have to tell React where that portal is in the DOM.
+
+The function takes the id of a DOM element, and returns the `<Modal />`, aware of where you have for it to render.
+
+## Modal Options
+A `<Modal />` *must* have a `title`, and `children`. It also has several optional props. `size`, `className`, as well as a series of options for the action button in the Modal.
+
+**Note**: The `<Modal />` will not appear inline. They are shown this way for documentation only.
+
+### Sizes
+<Canvas>
+  <Story name="Small Modal">
+    <Modal
+      actionSize="small"
+      size="small"
+      title="Small"
+      triggerLabel="Small Modal"
+      triggerSize="small"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+  <div className="ce-modal ce-modal--small" style={{
+    left: 'unset',
+    position: 'relative',
+    top: 'unset',
+    transform: 'unset',
+    zIndex: 'unset',
+  }}>
+    <button
+      className="ce-modal__close"
+      onClick={() => {}}
+      type="button"
+      aria-label="Close"
+      style={{zIndex: 'unset'}}
+    >
+      <SystemIcon color="black" name="close" size="jumbo" />
+    </button>
+    <Container className="ce-modal__container" gap="padding">
+      <h4 className="ce-modal__header">Small</h4>
+      <div className="ce-modal__body">
+        <p>Modal Contents</p>
+      </div>
+      <div className="ce-modal__footer">
+        <Button handleClick={() => {}} size="small">
+          Small
+        </Button>
+        <Button
+          className="ce-modal__cancel"
+          color="secondary"
+          handleClick={() => {}}
+          size="small"
+          type="text"
+        >
+          Cancel
+        </Button>
+      </div>
+    </Container>
+  </div>
+</Canvas>
+
+<Canvas>
+  <Story name="Default Modal">
+    <Modal
+      size="default"
+      title="Default Modal"
+      triggerLabel="Default Modal"
+      triggerSize="small"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+  <div className="ce-modal ce-modal--default" style={{
+    left: 'unset',
+    position: 'relative',
+    top: 'unset',
+    transform: 'unset',
+    zIndex: 'unset',
+  }}>
+    <button
+      className="ce-modal__close"
+      onClick={() => {}}
+      type="button"
+      aria-label="Close"
+      style={{zIndex: 'unset'}}
+    >
+      <SystemIcon color="black" name="close" size="jumbo" />
+    </button>
+    <Container className="ce-modal__container" gap="padding">
+      <h4 className="ce-modal__header">Default Modal</h4>
+      <div className="ce-modal__body">
+        <p>Modal Contents</p>
+      </div>
+      <div className="ce-modal__footer">
+        <Button handleClick={() => {}} size="small">
+          Default Modal
+        </Button>
+        <Button
+          className="ce-modal__cancel"
+          color="secondary"
+          handleClick={() => {}}
+          size="small"
+          type="text"
+        >
+          Cancel
+        </Button>
+      </div>
+    </Container>
+  </div>
+</Canvas>
+
+<Canvas>
+  <Story name="Large Modal">
+    <Modal
+      size="large"
+      title="Large Modal"
+      triggerLabel="Large Modal"
+      triggerSize="small"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+  <div className="ce-modal ce-modal--large" style={{
+    left: 'unset',
+    position: 'relative',
+    top: 'unset',
+    transform: 'unset',
+    zIndex: 'unset',
+  }}>
+    <button
+      className="ce-modal__close"
+      onClick={() => {}}
+      type="button"
+      aria-label="Close"
+      style={{zIndex: 'unset'}}
+    >
+      <SystemIcon color="black" name="close" size="jumbo" />
+    </button>
+    <Container className="ce-modal__container" gap="padding">
+      <h4 className="ce-modal__header">Large Modal</h4>
+      <div className="ce-modal__body">
+        <p>Modal Contents</p>
+      </div>
+      <div className="ce-modal__footer">
+        <Button handleClick={() => {}} size="small">
+          Large Modal
+        </Button>
+        <Button
+          className="ce-modal__cancel"
+          color="secondary"
+          handleClick={() => {}}
+          size="small"
+          type="text"
+        >
+          Cancel
+        </Button>
+      </div>
+    </Container>
+  </div>
+</Canvas>
+
+<Canvas>
+  <Story name="Jumbo Modal">
+    <Modal
+      size="jumbo"
+      title="Jumbo Modal"
+      triggerLabel="Jumbo Modal"
+      triggerSize="small"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+  <div className="ce-modal ce-modal--jumbo" style={{
+    left: 'unset',
+    position: 'relative',
+    top: 'unset',
+    transform: 'unset',
+    zIndex: 'unset',
+  }}>
+    <button
+      className="ce-modal__close"
+      onClick={() => {}}
+      type="button"
+      aria-label="Close"
+      style={{zIndex: 'unset'}}
+    >
+      <SystemIcon color="black" name="close" size="jumbo" />
+    </button>
+    <Container className="ce-modal__container" gap="padding">
+      <h4 className="ce-modal__header">Jumbo Modal</h4>
+      <div className="ce-modal__body">
+        <p>Modal Contents</p>
+      </div>
+      <div className="ce-modal__footer">
+        <Button handleClick={() => {}} size="small">
+          Jumbo Modal
+        </Button>
+        <Button
+          className="ce-modal__cancel"
+          color="secondary"
+          handleClick={() => {}}
+          size="small"
+          type="text"
+        >
+          Cancel
+        </Button>
+      </div>
+    </Container>
+  </div>
+</Canvas>
+
+### Action Button Options
+A `<Modal />` takes a function (`actionFn`) that is trigged by the included `<Button />`. If you do not supply a function, the button will simply close the `<Modal />`. A `<Modal />` also takes label (`actionLabel`) and size (`actionSize`) for the action trigger. If you do not supply a label, the action trigger will be labeled 'Close'.
+
+<Canvas>
+  <Story name="Small Action">
+    <Modal
+      actionSize="small"
+      title="Small Action"
+      triggerLabel="Small Action"
+      triggerSize="small"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+  <div className="ce-modal ce-modal--default" style={{
+    left: 'unset',
+    position: 'relative',
+    top: 'unset',
+    transform: 'unset',
+    zIndex: 'unset',
+  }}>
+    <button
+      className="ce-modal__close"
+      onClick={() => {}}
+      type="button"
+      aria-label="Close"
+      style={{zIndex: 'unset'}}
+    >
+      <SystemIcon color="black" name="close" size="jumbo" />
+    </button>
+    <Container className="ce-modal__container" gap="padding">
+      <h4 className="ce-modal__header">Default Modal</h4>
+      <div className="ce-modal__body">
+        <p>Modal Contents</p>
+      </div>
+      <div className="ce-modal__footer">
+        <Button handleClick={() => {}} size="small">
+          Small Action
+        </Button>
+        <Button
+          className="ce-modal__cancel"
+          color="secondary"
+          handleClick={() => {}}
+          size="small"
+          type="text"
+        >
+          Cancel
+        </Button>
+      </div>
+    </Container>
+  </div>
+</Canvas>
+
+<Canvas>
+  <Story name="Large Action (Default)">
+    <Modal
+      actionSize="large"
+      title="Large Action"
+      triggerLabel="Large Action"
+      triggerSize="small"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+  <div className="ce-modal ce-modal--default" style={{
+    left: 'unset',
+    position: 'relative',
+    top: 'unset',
+    transform: 'unset',
+    zIndex: 'unset',
+  }}>
+    <button
+      className="ce-modal__close"
+      onClick={() => {}}
+      type="button"
+      aria-label="Close"
+      style={{zIndex: 'unset'}}
+    >
+      <SystemIcon color="black" name="close" size="jumbo" />
+    </button>
+    <Container className="ce-modal__container" gap="padding">
+      <h4 className="ce-modal__header">Default Modal</h4>
+      <div className="ce-modal__body">
+        <p>Modal Contents</p>
+      </div>
+      <div className="ce-modal__footer">
+        <Button handleClick={() => {}} size="large">
+          Large Action
+        </Button>
+        <Button
+          className="ce-modal__cancel"
+          color="secondary"
+          handleClick={() => {}}
+          size="small"
+          type="text"
+        >
+          Cancel
+        </Button>
+      </div>
+    </Container>
+  </div>
+</Canvas>
+
+<Canvas>
+  <Story name="Jumbo Action">
+    <Modal
+      actionSize="jumbo"
+      title="Jumbo Action"
+      triggerLabel="Jumbo Action"
+      triggerSize="small"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+  <div className="ce-modal ce-modal--default" style={{
+    left: 'unset',
+    position: 'relative',
+    top: 'unset',
+    transform: 'unset',
+    zIndex: 'unset',
+  }}>
+    <button
+      className="ce-modal__close"
+      onClick={() => {}}
+      type="button"
+      aria-label="Close"
+      style={{zIndex: 'unset'}}
+    >
+      <SystemIcon color="black" name="close" size="jumbo" />
+    </button>
+    <Container className="ce-modal__container" gap="padding">
+      <h4 className="ce-modal__header">Default Modal</h4>
+      <div className="ce-modal__body">
+        <p>Modal Contents</p>
+      </div>
+      <div className="ce-modal__footer">
+        <Button handleClick={() => {}} size="jumbo">
+          Jumbo Action
+        </Button>
+        <Button
+          className="ce-modal__cancel"
+          color="secondary"
+          handleClick={() => {}}
+          size="small"
+          type="text"
+        >
+          Cancel
+        </Button>
+      </div>
+    </Container>
+  </div>
+</Canvas>
+
+## Trigger Options
+The `<Modal />` trigger is just a `<Button />`, and has all the same options as one.
+
+### Sizes
+
+<Canvas>
+  <Story name="Small Trigger">
+    <Modal
+      title="Small Trigger"
+      triggerLabel="Small Trigger"
+      triggerSize="small"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+  <Story name="Large Trigger">
+    <Modal
+      title="Large Trigger"
+      triggerLabel="Large Trigger"
+      triggerSize="large"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+  <Story name="Jumbo Trigger">
+    <Modal
+      title="Jumbo Trigger"
+      triggerLabel="Jumbo Trigger"
+      triggerSize="jumbo"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+</Canvas>
+
+### Colors and States
+
+<Canvas>
+  <Story name="Primary Trigger">
+    <Modal
+      title="Primary Trigger"
+      triggerColor="primary"
+      triggerLabel="Primary"
+      triggerSize="small"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+  <Story name="Secondary Trigger">
+    <Modal
+      title="Secondary Trigger"
+      triggerColor="secondary"
+      triggerLabel="Secondary"
+      triggerSize="small"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+  <Story name="Black Trigger">
+    <Modal
+      title="Black Trigger"
+      triggerColor="black"
+      triggerLabel="Black"
+      triggerSize="small"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+  <Story name="Inverted Trigger">
+    <div style={{ backgroundColor: 'black' }}>
+      <Modal
+        title="Inverted Trigger"
+        triggerColor="inverted"
+        triggerLabel="Inverted"
+        triggerSize="small"
+      >
+        <p>Modal Contents</p>
+      </Modal>
+    </div>
+  </Story>
+  <Story name="Disabled Trigger">
+    <Modal
+      disabled
+      title="Disabled Trigger"
+      triggerLabel="Disabled"
+      triggerSize="small"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+</Canvas>
+
+### Types
+
+<Canvas>
+  <Story name="Solid Trigger">
+    <Modal
+      title="Solid Trigger"
+      triggerLabel="Solid Trigger"
+      triggerType="solid"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+  <Story name="Outline Trigger">
+    <Modal
+      title="Outline Trigger"
+      triggerLabel="Outline Trigger"
+      triggerType="outline"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+  <Story name="Text Trigger">
+    <Modal
+      title="Text Trigger"
+      triggerLabel="Text Trigger"
+      triggerType="text"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+</Canvas>

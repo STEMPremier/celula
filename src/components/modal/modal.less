@@ -1,0 +1,90 @@
+@import '../../styles/celula';
+
+button {
+  margin: 0;
+  padding: 0;
+}
+
+.ce-modal {
+  background-color: @white;
+  border: 0.1rem solid #dcdcdc;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  left: 50%;
+  max-height: 100%;
+  min-height: 35rem;
+  outline: 0;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 60rem;
+
+  .ce-modal__close {
+    align-self: flex-end;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    height: 1.6rem; // I dunno why, but this button is 3px taller the icon.
+    margin-top: 3rem;
+    margin-right: 3rem;
+    z-index: 1;
+  }
+
+  .ce-modal__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    left: 0;
+    overflow-y: scroll;
+    padding-bottom: 0;
+    padding-top: 4.5rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .ce-modal__header {}
+
+  .ce-modal__body {
+    flex-grow: 1;
+  }
+
+  .ce-modal__footer {
+    background: @white;
+    padding-bottom: 4rem;
+    padding-top: 6rem;
+
+    .ce-button + .ce-button {
+      margin-left: 0.5rem;
+    }
+
+    .ce-modal__cancel {
+      span {
+        padding-left: 2rem; 
+        padding-right: 0;
+      }
+    }
+  }
+
+  &.ce-modal--small {
+    max-height: 60rem;
+    max-width: 100%;
+    width: 30rem;
+  }
+
+  &.ce-modal--large {
+    max-height: 55rem;
+    max-width: 100%;
+    width: 80rem;
+  }
+
+  &.ce-modal--jumbo {
+    max-height: 76rem;
+    max-width: 100%;
+    width: 114rem;
+  }
+
+}
