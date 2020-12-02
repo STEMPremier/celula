@@ -125,6 +125,7 @@
   },
   "homepage": "https://github.com/STEMPremier/tallo-ui-kit#readme",
   "files": [
+    "dist/3RD_PARTY_LICENSES.txt",
     "dist/celula.js",
     "dist/celula.js.map",
     "dist/celula.min.css",
