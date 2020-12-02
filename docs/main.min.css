@@ -15,6 +15,7 @@
 @import url(https://use.typekit.net/gww8gqf.css);
 @import url(https://use.typekit.net/gww8gqf.css);
 @import url(https://use.typekit.net/gww8gqf.css);
+@import url(https://use.typekit.net/gww8gqf.css);
 html,
 body,
 div,
@@ -229,6 +230,11 @@ h6 {
   font-weight: 800;
   line-height: 2.1rem;
 }
+strong {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
 p,
 span {
   font-family: proxima-nova, sans-serif;
@@ -416,6 +422,7 @@ ol {
   stroke: #fff;
 }
 .ce-icon.ce-icon__system {
+  display: inline-block;
   stroke: #72828d;
 }
 .ce-icon.ce-icon__system.ce-icon--small {
@@ -668,6 +675,11 @@ h6 {
   font-style: normal;
   font-weight: 800;
   line-height: 2.1rem;
+}
+strong {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
 }
 p,
 span {
@@ -1023,6 +1035,11 @@ h6 {
   font-style: normal;
   font-weight: 800;
   line-height: 2.1rem;
+}
+strong {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
 }
 p,
 span {
@@ -1384,6 +1401,11 @@ h6 {
   font-weight: 800;
   line-height: 2.1rem;
 }
+strong {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
 p,
 span {
   font-family: proxima-nova, sans-serif;
@@ -1505,6 +1527,8 @@ button {
   border-radius: 3.5rem;
   display: inline-block;
   font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 0.05rem;
   margin: 0.2rem;
   padding: 0.85rem 3.8rem;
 }
@@ -1512,6 +1536,8 @@ button {
   border-radius: 3.5rem;
   display: inline-block;
   font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 0.05rem;
   margin: 0.2rem;
   padding: 1.3rem 5.8rem;
 }
@@ -1519,8 +1545,10 @@ button {
   border-radius: 3.5rem;
   display: inline-block;
   font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 0.05rem;
   margin: 0.2rem;
-  padding: 2.3rem 5.8rem;
+  padding: 2.2rem 5.8rem;
 }
 .ce-button:focus {
   box-shadow: 0 0 0 5px #b2e7ff;
@@ -1548,7 +1576,7 @@ button {
 }
 .ce-button--text.ce-button--jumbo .ce-button__label {
   margin: 0;
-  padding: 2.5rem 6rem;
+  padding: 2.4rem 6rem;
 }
 .ce-button--text:focus {
   box-shadow: none;
@@ -1939,6 +1967,11 @@ h6 {
   font-weight: 800;
   line-height: 2.1rem;
 }
+strong {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
 p,
 span {
   font-family: proxima-nova, sans-serif;
@@ -2265,6 +2298,11 @@ h6 {
   font-style: normal;
   font-weight: 800;
   line-height: 2.1rem;
+}
+strong {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
 }
 p,
 span {
@@ -2595,6 +2633,11 @@ h6 {
   font-style: normal;
   font-weight: 800;
   line-height: 2.1rem;
+}
+strong {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
 }
 p,
 span {
@@ -3461,6 +3504,11 @@ h6 {
   font-weight: 800;
   line-height: 2.1rem;
 }
+strong {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
 p,
 span {
   font-family: proxima-nova, sans-serif;
@@ -4013,6 +4061,11 @@ h6 {
   font-weight: 800;
   line-height: 2.1rem;
 }
+strong {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
 p,
 span {
   font-family: proxima-nova, sans-serif;
@@ -4498,6 +4551,11 @@ h6 {
   font-weight: 800;
   line-height: 2.1rem;
 }
+strong {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
 p,
 span {
   font-family: proxima-nova, sans-serif;
@@ -4956,6 +5014,11 @@ h6 {
   font-weight: 800;
   line-height: 2.1rem;
 }
+strong {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
 p,
 span {
   font-family: proxima-nova, sans-serif;
@@ -5399,6 +5462,11 @@ h6 {
   font-weight: 800;
   line-height: 2.1rem;
 }
+strong {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
 p,
 span {
   font-family: proxima-nova, sans-serif;
@@ -5772,6 +5840,399 @@ h6 {
   font-weight: 800;
   line-height: 2.1rem;
 }
+strong {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+p,
+span {
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+p.small,
+span.small {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+p.large,
+span.large {
+  font-size: 1.9rem;
+  line-height: 2.6rem;
+}
+blockquote {
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+ul,
+ol {
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+.subheading {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 800;
+}
+.subheading.small {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.hero {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 12rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 10rem;
+}
+.hero.large {
+  font-size: 15rem;
+  line-height: 12rem;
+}
+.pull-quote {
+  font-family: proxima-nova, sans-serif;
+  font-size: 2.8rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 4rem;
+}
+.caption {
+  font-family: proxima-nova, sans-serif;
+  font-size: 2.1rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 2.2rem;
+}
+.caption.small {
+  font-size: 1.6rem;
+}
+.primary-text {
+  color: rgba(0, 0, 0, 0.87);
+}
+.primary-text.inverted {
+  color: #ffffff;
+}
+.secondary-text {
+  color: rgba(0, 0, 0, 0.6);
+}
+.secondary-text.inverted {
+  color: rgba(255, 255, 255, 0.7);
+}
+.help-text {
+  color: rgba(0, 0, 0, 0.38);
+}
+.help-text.inverted {
+  color: rgba(255, 255, 255, 0.5);
+}
+/* Grayscale
+ * #fff - #000 in [various]% steps
+ * See https://talloux.invisionapp.com/console/Design-System-ck70x3ivn2cy2017xjpu68gy4/ck70x4duz0046013ojf58m5ig/inspect
+ */
+button {
+  margin: 0;
+  padding: 0;
+}
+.ce-modal {
+  background-color: #fff;
+  border: 0.1rem solid #dcdcdc;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  left: 50%;
+  max-height: 100%;
+  min-height: 35rem;
+  outline: 0;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 60rem;
+}
+.ce-modal .ce-modal__close {
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  height: 1.6rem;
+  margin-top: 3rem;
+  margin-right: 3rem;
+  z-index: 1;
+}
+.ce-modal .ce-modal__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  left: 0;
+  overflow-y: scroll;
+  padding-bottom: 0;
+  padding-top: 4.5rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.ce-modal .ce-modal__body {
+  flex-grow: 1;
+}
+.ce-modal .ce-modal__footer {
+  background: #fff;
+  padding-bottom: 4rem;
+  padding-top: 6rem;
+}
+.ce-modal .ce-modal__footer .ce-button + .ce-button {
+  margin-left: 0.5rem;
+}
+.ce-modal .ce-modal__footer .ce-modal__cancel span {
+  padding-left: 2rem;
+  padding-right: 0;
+}
+.ce-modal.ce-modal--small {
+  max-height: 60rem;
+  max-width: 100%;
+  width: 30rem;
+}
+.ce-modal.ce-modal--large {
+  max-height: 55rem;
+  max-width: 100%;
+  width: 80rem;
+}
+.ce-modal.ce-modal--jumbo {
+  max-height: 76rem;
+  max-width: 100%;
+  width: 114rem;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+ * Font Guide: To get [Font Name] use the corresponding rules.
+ *
+ * Proxima Nova Black
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 900;
+ * font-style: normal;
+ *
+ * Proxima Nova Extrabold
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 800;
+ * font-style: normal;
+ *
+ * Proxima Nova Regular
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 400;
+ * font-style: normal;
+ *
+ * Proxima Nova Italic
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 400;
+ * font-style: italic;
+ *
+ * Proxima Nova Light
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 300;
+ * font-style: normal;
+ *
+ * Proxima Nova Light Italic
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 300;
+ * font-style: italic;
+ *
+ * Proxima Nova Medium Italic
+ * font-family: proxima-nova, sans-serif;
+ * font-weight: 500;
+ * font-style: italic;
+ */
+html {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+}
+body {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.6rem;
+}
+h1 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 9rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 9rem;
+}
+h2 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 6.7rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 6.2rem;
+}
+h3 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 5.1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 5.1rem;
+}
+h4 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 3.9rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 3.9rem;
+}
+h5 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 2.8rem;
+}
+h6 {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 2.1rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 2.1rem;
+}
+strong {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
 p,
 span {
   font-family: proxima-nova, sans-serif;
@@ -6130,6 +6591,11 @@ h6 {
   font-style: normal;
   font-weight: 800;
   line-height: 2.1rem;
+}
+strong {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
 }
 p,
 span {
@@ -6575,6 +7041,11 @@ h6 {
   font-style: normal;
   font-weight: 800;
   line-height: 2.1rem;
+}
+strong {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
 }
 p,
 span {
@@ -7089,6 +7560,11 @@ h6 {
   font-weight: 800;
   line-height: 2.1rem;
 }
+strong {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
 p,
 span {
   font-family: proxima-nova, sans-serif;
@@ -7445,6 +7921,11 @@ h6 {
   font-style: normal;
   font-weight: 800;
   line-height: 2.1rem;
+}
+strong {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 800;
+  font-style: normal;
 }
 p,
 span {
