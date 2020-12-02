@@ -7,7 +7,7 @@ permalink: /index.html
 To aid in the development, deployment, and maintenance of Celula, there are several tasks/scripts available to you via the command line; `yarn run [task]`
 
 ### build
-The `build` task produces a build that is the same as what is deployed to npm. Ultimately this task runs the [prettier](https://prettier.io/), and [eslint](https://eslint.org/) fixes, then builds the component library. It runs the `clean`, prebuild`, and `build:components` tasks, in that order. 
+The `build` task produces a build that is the same as what is deployed to npm. Ultimately this task runs the [prettier](https://prettier.io/), and [eslint](https://eslint.org/) fixes, then builds the component library. It runs the `clean`, `prebuild`, and `build:components` tasks, in that order. 
 
 ### build:components
 The `build:components` task builds the component library.
