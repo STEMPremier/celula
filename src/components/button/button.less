@@ -12,6 +12,7 @@ button {
 .ce-button {
   border-radius: 3.5rem;
   border-width: 0;
+  cursor: pointer;
   display: inline-flex;
   font-family: inherit;
   font-size: 1.6rem;
@@ -21,7 +22,7 @@ button {
 
   // Responsive Rules
   @media screen {
-    @media (max-width: 576px) {
+    @media (max-width: 576px) { // phones
       width: 100%;
     }
   }
@@ -71,6 +72,10 @@ button {
   &:focus {
     box-shadow: 0 0 0 5px #b2e7ff;
     outline: none;
+  }
+
+  &.ce-button--disabled {
+    cursor: not-allowed;
   }
 }
 
