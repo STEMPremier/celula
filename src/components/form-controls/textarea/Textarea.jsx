@@ -73,9 +73,8 @@ const Textarea = ({
         name={name}
         onChange={handleChange}
         placeholder={placeholder}
-      >
-        {fieldValue}
-      </textarea>
+        value={fieldValue}
+      />
       {errMsg && <ErrorBox errorMsg={errMsg} />}
     </div>
   );
