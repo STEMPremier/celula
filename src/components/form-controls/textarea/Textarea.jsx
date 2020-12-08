@@ -134,7 +134,7 @@ Textarea.defaultProps = {
   formId: '',
   handleChange: () => {},
   helpText: '',
-  initialValue: null,
+  initialValue: '',
   placeholder: '',
 };
 
