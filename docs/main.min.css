@@ -4698,8 +4698,14 @@ ol {
   border: none;
   border-radius: 0.5rem;
   box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
   height: 100%;
   flex-grow: 1;
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;
   padding: 0 0 0 1rem;
 }
 .ce-input .ce-input__container input:focus {
@@ -5166,7 +5172,13 @@ ol {
   background-color: transparent;
   border: none;
   box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
   flex-grow: 1;
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;
   padding-left: 1rem;
   background-image: url(static/media/down-arrow.7f9b80ce.png);
   background-position: calc(100% - 2rem) calc(1em + 0.9rem), calc(100% - 1.5rem) calc(1em + 0.2rem), calc(100% - 2.5rem) 0.5em;
@@ -5585,6 +5597,13 @@ ol {
   border: 0.1rem solid #b2b2b2;
   border-radius: 0.5rem;
   box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;
+  padding: 1rem;
   width: 100%;
 }
 .ce-textarea textarea:focus {
