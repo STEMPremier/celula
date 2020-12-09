@@ -17,10 +17,10 @@
  */
 /*
  * The Modal is a little different. Instead of just _exporting_ the Modal,
- * we (react-modal) have to know what DOM element to 'pin' it to, for accessibilitys
+ * we (react-modal) have to know what DOM element is the root of your app, for accessibilitys
  * sake. Since Celula is made to be used by a consuming app, we don't know
  * the app root. So we export a function that returns the Modal component
- * pinned to the consuming app's root element.
+ * aware of the consuming app's root element.
  */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
@@ -204,7 +204,7 @@ Modal.defaultProps = {
 };
 
 // The function that does the magic.
-export default (root = '#root') => {
+export default (root = '#app-root') => {
   // Tell `react-modal` where it can Portal into.
   ReactModal.setAppElement(root);
 
