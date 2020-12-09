@@ -73,9 +73,9 @@ const Textarea = ({
         name={name}
         onChange={handleChange}
         placeholder={placeholder}
-      >
-        {fieldValue}
-      </textarea>
+        value={fieldValue}
+        rows="3"
+      />
       {errMsg && <ErrorBox errorMsg={errMsg} />}
     </div>
   );
@@ -135,7 +135,7 @@ Textarea.defaultProps = {
   formId: '',
   handleChange: () => {},
   helpText: '',
-  initialValue: null,
+  initialValue: '',
   placeholder: '',
 };
 

@@ -56,7 +56,7 @@ It is a function that returns the `<Modal />` component;
 import React from 'react';
 import { Modal as ModalFn } from '@talloinc/celula';
 
-const Modal = ModalFn('#modal-root');
+const Modal = ModalFn('#app-root');
 
 const MyComponent = () => {
   return (
@@ -71,9 +71,9 @@ const MyComponent = () => {
 export default MyComponent;
 ```
 
-We do this because `<Modal />` is attached to the DOM by `ReactDOM.Portal`, and we have to tell React where that portal is in the DOM.
+We do this for the overall accessibility of the `<Modal />`. We (react-modal) has to know what DOM element is the root of your app, to make sure focus is returned appropriately, etc. Since Celula is made to be used by a consuming app, we don't know the app root. So we export a function that returns the `<Modal />` component aware of the consuming app's root element.
 
-The function takes the id of a DOM element, and returns the `<Modal />`, aware of where you have for it to render.
+The function takes the id of a DOM element, and returns the `<Modal />`, aware of where your app's root is.
 
 ## Modal Options
 A `<Modal />` *must* have a `title`, and `children`. It also has several optional props. `size`, `className`, as well as a series of options for the action button in the Modal.

@@ -17,10 +17,10 @@
  */
 /*
  * The Modal is a little different. Instead of just _exporting_ the Modal,
- * we (react-modal) have to know what DOM element to 'pin' it to, for accessibilitys
+ * we (react-modal) have to know what DOM element is the root of your app, for accessibilitys
  * sake. Since Celula is made to be used by a consuming app, we don't know
  * the app root. So we export a function that returns the Modal component
- * pinned to the consuming app's root element.
+ * aware of the consuming app's root element.
  */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
@@ -38,8 +38,8 @@ import './modal.less';
 const modalSizes = ['default', ...SIZES];
 
 // A custom prop validator for the Modal.
-// We need to check and see if the prop is contains a value of undefined, (vs being undefined itself), or a function.
-function actionFnOrUndef(props, propName, componentName = 'Modal') {
+// We need to check and see if a prop contains a value of undefined, (vs being undefined itself), or a function.
+function functionOrUndef(props, propName, componentName = 'Modal') {
   let error;
 
   if (
@@ -67,6 +67,7 @@ const Modal = ({
   children,
   className = '',
   disabled = false,
+  parentEl = '',
   size = 'default',
   title,
   triggerColor = 'primary',
@@ -88,12 +89,17 @@ const Modal = ({
 
   const action = actionFn || hideModal;
 
+  const findParent = parentEl
+    ? () => document.getElementById(parentEl)
+    : () => document.body;
+
   return (
     <>
       <ReactModal
         className={classes}
         contentLabel={title}
         isOpen={visible}
+        parentSelector={findParent}
         shouldFocusAfterRender
         shouldCloseOnOverlayClick
         shouldCloseOnEsc
@@ -143,7 +149,7 @@ Modal.propTypes = {
   /**
    * The action (function) the action button in the footer of the `<Modal />` triggers.
    */
-  actionFn: actionFnOrUndef,
+  actionFn: functionOrUndef,
   /**
    * The label for the action button in the footer of the `<Modal />`.
    */
@@ -164,6 +170,12 @@ Modal.propTypes = {
    * Disables the `<Modal />`.
    */
   disabled: PropTypes.bool,
+  /**
+   * The id of the element that the `<Modal />` will be rendered to. If no id is given, the modal will be rendered to the body.
+   *
+   * You might use this if you need to add custom styles to the container the modal renders to.
+   */
+  parentEl: PropTypes.string,
   /**
    * The size of the `<Modal />`.
    */
@@ -197,6 +209,7 @@ Modal.defaultProps = {
   actionSize: 'large',
   className: '',
   disabled: false,
+  parentEl: '',
   size: 'default',
   triggerColor: 'primary',
   triggerSize: 'large',
@@ -204,7 +217,7 @@ Modal.defaultProps = {
 };
 
 // The function that does the magic.
-export default (root = '#root') => {
+export default (root = '#app-root') => {
   // Tell `react-modal` where it can Portal into.
   ReactModal.setAppElement(root);
 

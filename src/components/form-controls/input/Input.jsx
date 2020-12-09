@@ -364,7 +364,7 @@ Input.defaultProps = {
   helpText: '',
   htmlType: 'text',
   icon: '',
-  initialValue: null,
+  initialValue: '',
   max: '',
   min: '',
   placeholder: '',
