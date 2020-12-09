@@ -16,7 +16,11 @@ function configurePresets() {
 }
 
 function configurePlugins() {
-  const plugins = ['@babel/plugin-proposal-class-properties', 'react-docgen'];
+  const plugins = [
+    '@babel/plugin-proposal-class-properties',
+    '@babel/plugin-proposal-private-methods',
+    'react-docgen',
+  ];
 
   if (env === MODES.TEST) plugins.push('@babel/plugin-transform-runtime');
 
