@@ -38,8 +38,8 @@ import './modal.less';
 const modalSizes = ['default', ...SIZES];
 
 // A custom prop validator for the Modal.
-// We need to check and see if the prop is contains a value of undefined, (vs being undefined itself), or a function.
-function actionFnOrUndef(props, propName, componentName = 'Modal') {
+// We need to check and see if a prop contains a value of undefined, (vs being undefined itself), or a function.
+function functionOrUndef(props, propName, componentName = 'Modal') {
   let error;
 
   if (
@@ -149,7 +149,7 @@ Modal.propTypes = {
   /**
    * The action (function) the action button in the footer of the `<Modal />` triggers.
    */
-  actionFn: actionFnOrUndef,
+  actionFn: functionOrUndef,
   /**
    * The label for the action button in the footer of the `<Modal />`.
    */
