@@ -67,6 +67,7 @@ const Modal = ({
   children,
   className = '',
   disabled = false,
+  parentEl = '',
   size = 'default',
   title,
   triggerColor = 'primary',
@@ -88,12 +89,17 @@ const Modal = ({
 
   const action = actionFn || hideModal;
 
+  const findParent = parentEl
+    ? () => document.getElementById(parentEl)
+    : () => document.body;
+
   return (
     <>
       <ReactModal
         className={classes}
         contentLabel={title}
         isOpen={visible}
+        parentSelector={findParent}
         shouldFocusAfterRender
         shouldCloseOnOverlayClick
         shouldCloseOnEsc
@@ -165,6 +171,12 @@ Modal.propTypes = {
    */
   disabled: PropTypes.bool,
   /**
+   * The id of the element that the `<Modal />` will be rendered to. If no id is given, the modal will be rendered to the body.
+   *
+   * You might use this if you need to add custom styles to the container the modal renders to.
+   */
+  parentEl: PropTypes.string,
+  /**
    * The size of the `<Modal />`.
    */
   // size: PropTypes.oneOf(SIZES),
@@ -197,6 +209,7 @@ Modal.defaultProps = {
   actionSize: 'large',
   className: '',
   disabled: false,
+  parentEl: '',
   size: 'default',
   triggerColor: 'primary',
   triggerSize: 'large',
