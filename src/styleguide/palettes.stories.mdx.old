@@ -1,0 +1,47 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Palettes" />
+
+# Color usage & palettes
+The Tallo color system uses an organized approach to applying color to a UI. In this system, a primary and a secondary color are typically selected to represent your brand. Dark and light variants of each color can then be applied to the UI in different ways.
+
+## Primary & variant
+A primary color is the color displayed most frequently within an interface. Dark and light variants of primary colors also exist for more flexibility; especially for color contrast compliance.
+
+Color Name|Hex Value
+--- | ---
+Dodger Blue|#00b0ff
+Torch Red|#ff0054
+Royal Purple|#7838A8
+Sea Buckthorn|#fca635
+Primary Conifer|#acd84F
+
+## Gradients
+Gradient palettes are to be used uniquely as a brand accent and sparingly with text overlays to avoid legibility issues. As a strong identifier of the Tallo brand, there are specific uses for gradients.
+
+Appropriate uses for gradients are:
+- Backgrounds (Page and section headers)
+- Buttons
+- Icons
+
+Gradient Name|Hex Start|Hex End
+--- | --- | ---
+Cool|#6645ad|#2d71be
+Warm|#fba635|#acd743
+Hot|#62248d|#c4356e
+
+## Secondary
+A secondary color provides more ways to accent and distinguish an interface. Having a secondary color is optional and should be used sparingly. Secondary colors may be used in combination with primary colors when contrast compliance applies with text.
+
+Secondary colors are best used for:
+- Backgrounds (navigation, cards etc.)
+- Selection controls
+- Status labels (active, inactive etc.)
+
+Color Name|Hex Value
+--- | ---
+Catskill White|#f1f6f9
+Hit Gray|#a6b0b6
+Slate Gray|#72828d
+Big Stone|#192344
+Ebony|#0f1422
