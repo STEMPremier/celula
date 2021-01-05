@@ -1,0 +1,57 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Getting Started" />
+
+# Getting Started
+
+## Installation
+
+To install Celula you can use either `yarn`:
+```bash
+yarn add @talloinc@celula
+```
+
+or `npm`:
+
+```bash
+npm install @talloinc/celula --save
+```
+
+## Usage
+
+### JavaScript
+Celula is distributed as a single minified JavaScript file. To use it, in your React compoonents:
+
+```jsx
+// And/or Input, Checkbox, Container, etc...
+import { Button } from '@talloinc/celula';
+```
+
+### CSS
+Celula is styled with `Less` but is distributed as minified CSS file.
+
+You can use the css file however your app consumes css. With Webpack, for example, you have to use the correct loaders:
+
+```js
+// webpack.config.js
+module.exports = {
+  // ...
+  module: {
+    rules: [
+      {
+        test: /\.less$/,
+        use: ['style-loader', 'css-loader', 'less-loader'],
+      },
+    ],
+  },
+  // ...
+};
+
+```
+
+Then in your main less file:
+
+```css
+/* the `~` infront of the lib name tells webpack to find the path after it in the `/node_modules` directory */
+@import '~@talloinc/celula/dist/celula.min.css';
+```
