@@ -1,0 +1,147 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Styleguide/Typography" />
+
+# The Type System
+Use typography to present your design and content as clearly and efficiently as possible.
+
+## Body Text
+<p style={{color:'rgba(0, 0, 0, 0.87)',fontFamily:'proxima-nova,sans-serif',fontSize:'1.4rem',fontStyle:'normal',fontWeight:'400',lineHeight:'2.2rem'}}>Small Paragraph (p), Span (span)</p>
+<p style={{color:'rgba(0, 0, 0, 0.87)',fontFamily:'proxima-nova,sans-serif',fontSize:'1.6rem',fontStyle:'normal',fontWeight:'400',lineHeight:'2.2rem'}}>Default Paragraph (p), Span (span)</p>
+<p style={{color:'rgba(0, 0, 0, 0.87)',fontFamily:'proxima-nova,sans-serif',fontSize:'2.6rem',fontStyle:'normal',fontWeight:'400',lineHeight:'2.6rem'}}>Large Paragraph (p), Span (span)</p>
+
+Typeface|Style|Weight|Size|Class Name
+--- | --- | --- | --- | ---
+Proxima Nova|Normal|400|14p|p.small, span.small
+Proxima Nova|Normal|400|16px|n/a
+Proxima Nova|Normal|400|19px|p.large, span.large
+
+## Headers
+<h1 style={{color:'rgba(0, 0, 0, 0.87)',fontFamily:'proxima-nova,sans-serif',fontSize:'9rem',fontStyle:'normal',fontWeight:'300',lineHeight:'9rem'}}>Heading 1 (h1)</h1>
+
+Typeface|Style|Weight|Size|Case
+--- | --- | --- | --- | ---
+Proxima Nova|Normal|300|90px|Title
+
+<h2 style={{color:'rgba(0, 0, 0, 0.87)',fontFamily:'proxima-nova,sans-serif',fontSize:'6.7rem',fontStyle:'normal',fontWeight:'300',lineHeight:'6.2rem',border:'none'}}>Heading 2 (h2)</h2>
+
+Typeface|Style|Weight|Size|Case
+--- | --- | --- | --- | ---
+Proxima Nova|Normal|300|67px|Title
+
+<h3 style={{color:'rgba(0, 0, 0, 0.87)',fontFamily:'proxima-nova,sans-serif',fontSize:'5.1rem',fontStyle:'normal',fontWeight:'300',lineHeight:'5.1rem',border:'none'}}>Heading 3 (h3)</h3>
+
+Typeface|Style|Weight|Size|Case
+--- | --- | --- | --- | ---
+Proxima Nova|Normal|300|51px|Title
+
+<h4 style={{color:'rgba(0, 0, 0, 0.87)',fontFamily:'proxima-nova,sans-serif',fontSize:'3.9rem',fontStyle:'normal',fontWeight:'800',lineHeight:'3.9rem',border:'none'}}>Heading 4 (h4)</h4>
+
+Typeface|Style|Weight|Size|Case
+--- | --- | --- | --- | ---
+Proxima Nova|Normal|800|39px|Title
+
+<h5 style={{color:'rgba(0, 0, 0, 0.87)',fontFamily:'proxima-nova,sans-serif',fontSize:'2.8rem',fontStyle:'normal',fontWeight:'800',lineHeight:'2.8rem',border:'none'}}>Heading 5 (h5)</h5>
+
+Typeface|Style|Weight|Size|Case
+--- | --- | --- | --- | ---
+Proxima Nova|Normal|800|28px|Title
+
+<h6 style={{color:'rgba(0, 0, 0, 0.87)',fontFamily:'proxima-nova,sans-serif',fontSize:'2.1rem',fontStyle:'normal',fontWeight:'800',lineHeight:'2.1rem',border:'none'}}>Heading 6 (h6)</h6>
+
+Typeface|Style|Weight|Size|Case
+--- | --- | --- | --- | ---
+Proxima Nova|Normal|800|21px|Title
+
+## Lists
+### Unordered List
+<ul style={{color:'rgba(0, 0, 0, 0.87)',fontFamily:'proxima-nova,sans-serif',fontSize:'1.6rem',fontStyle:'normal',fontWeight:'400',lineHeight:'2.2rem'}}>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+### Ordered List
+<ol style={{color:'rgba(0, 0, 0, 0.87)',fontFamily:'proxima-nova,sans-serif',fontSize:'1.6rem',fontStyle:'normal',fontWeight:'400',lineHeight:'2.2rem'}}>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ol>
+
+Typeface|Style|Weight|Size
+--- | --- | --- | ---
+Proxima Nova|Normal|400|16px
+
+## Blockquote
+<blockquote style={{color:'rgba(0, 0, 0, 0.87)',fontFamily:'proxima-nova,sans-serif',fontSize:'1.6rem',fontStyle:'italic',fontWeight:'400',lineHeight:'2.8rem'}}>You can quote me on that.</blockquote>
+
+Typeface|Style|Weight|Size|Case
+--- | --- | --- | ---
+Proxima Nova|Italic|400|16px
+
+## Utilities, Helpers, & Modifiers
+### Primary Text Colors
+<p style={{color:'rgba(0, 0, 0, 0.87)',fontFamily:'proxima-nova,sans-serif',fontSize:'1.6rem',fontStyle:'normal',fontWeight:'400',lineHeight:'2.2rem'}}>Primary Text Color</p>
+<p style={{color:'rgba(255, 255, 255, 1)',fontFamily:'proxima-nova,sans-serif',fontSize:'1.6rem',fontStyle:'normal',fontWeight:'400',lineHeight:'2.2rem',backgroundColor:'#000000'}}>Inverted Primary Text Color</p>
+
+rgba Value|Class Name
+--- | ---
+0,0,0,0.87|.primary-text
+255,255,255,1|.primary-text.inverted
+
+### Secondary Text Colors
+<p style={{color:'rgba(0, 0, 0, 0.6)',fontFamily:'proxima-nova,sans-serif',fontSize:'1.6rem',fontStyle:'normal',fontWeight:'400',lineHeight:'2.2rem'}}>Secondary Text Color</p>
+<p style={{color:'rgba(255, 255, 255, 0.7)',fontFamily:'proxima-nova,sans-serif',fontSize:'1.6rem',fontStyle:'normal',fontWeight:'400',lineHeight:'2.2rem',backgroundColor:'#000000'}}>Inverted Secondary Text Color</p>
+
+rgba Value|Class Name
+--- | ---
+0,0,0,0.6|.secondary-text
+255,255,255,0.7|.secondary-text.inverted
+
+### Strong
+<strong>Strong Text</strong>
+
+Typeface|Style|Weight|Size
+--- | --- | --- | ---
+Proxima Nova|Normal|800|16px
+
+### Hero
+<p style={{color:'rgba(0, 0, 0, 0.87)',fontFamily:'proxima-nova,sans-serif',fontSize:'12rem',fontStyle:'normal',fontWeight:'900',lineHeight:'10rem'}}>Default Hero</p>
+<p style={{color:'rgba(0, 0, 0, 0.87)',fontFamily:'proxima-nova,sans-serif',fontSize:'15rem',fontStyle:'normal',fontWeight:'900',lineHeight:'12rem'}}>Large Hero</p>
+
+Typeface|Style|Weight|Size|Class Name
+--- | --- | --- | --- | ---
+Proxima Nova|Normal|900|120px|.hero
+Proxima Nova|Normal|900|150px|.hero.large
+
+### Subheading
+<p style={{color:'rgba(0, 0, 0, 0.6)',fontFamily:'proxima-nova,sans-serif',fontSize:'1.6rem',fontStyle:'normal',fontWeight:'800',lineHeight:'2.2rem'}}>Default Subheading</p>
+<p style={{color:'rgba(0, 0, 0, 0.6)',fontFamily:'proxima-nova,sans-serif',fontSize:'1.2rem',fontStyle:'normal',fontWeight:'800',lineHeight:'2.2rem',textTransform:'uppercase'}}>Small Subheading</p>
+
+Typeface|Style|Weight|Size|Class Name
+--- | --- | --- | --- | ---
+Proxima Nova|Regular|800|16px|.caption
+Proxima Nova|Regular|800|14px|.caption.small
+
+### Pull Quote
+<p style={{color:'rgba(0, 0, 0, 0.87)',fontFamily:'proxima-nova,sans-serif',fontSize:'2.8rem',fontStyle:'italic',fontWeight:'500',lineHeight:'4rem'}}>Pull quote</p>
+
+Typeface|Style|Weight|Size|Class Name
+--- | --- | --- | --- | ---
+Proxima Nova|Italic|500|28px|.pull-puote
+
+### Caption
+<p style={{color:'rgba(0, 0, 0, 0.87)',fontFamily:'proxima-nova,sans-serif',fontSize:'2.1rem',fontStyle:'italic',fontWeight:'300',lineHeight:'2.2rem'}}>Caption</p>
+<p style={{color:'rgba(0, 0, 0, 0.87)',fontFamily:'proxima-nova,sans-serif',fontSize:'1.6rem',fontStyle:'italic',fontWeight:'300',lineHeight:'2.2rem'}}>Small Caption</p>
+
+Typeface|Style|Weight|Size|Class Name
+--- | --- | --- | --- | ---
+Proxima Nova|Italic|500|21px|.caption
+Proxima Nova|Italic|500|16px|.caption.small
+
+### Help Text
+<p style={{color:'rgba(0, 0, 0, 0.6)',fontFamily:'proxima-nova,sans-serif',fontSize:'1.6rem',fontStyle:'normal',fontWeight:'400',lineHeight:'2.2rem'}}>Help Text Color</p>
+<p style={{color:'rgba(255, 255, 255, 0.7)',fontFamily:'proxima-nova,sans-serif',fontSize:'1.6rem',fontStyle:'normal',fontWeight:'400',lineHeight:'2.2rem',backgroundColor:'#000000'}}>Inverted Help Text Color</p>
+
+rgba Value|Class Name
+--- | ---
+0,0,0,0.6|.help-text
+255,255,255,0.7|.help-text.inverted
