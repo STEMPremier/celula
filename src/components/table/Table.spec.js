@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
@@ -20,4 +19,3 @@ describe('<Table />', () => {
     });
   });
 });
-/* eslint-enable react/jsx-filename-extension */

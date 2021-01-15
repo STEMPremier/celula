@@ -15,8 +15,6 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-/* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -26,7 +24,7 @@ import Link from '../link';
 
 import {
   ALERT_TYPES as TYPES,
-  SYSTEM_ICONS as ICONS,
+  // SYSTEM_ICONS as ICONS,
 } from '../../utils/constants';
 
 import './alert.less';
@@ -39,14 +37,14 @@ function allLinkOptions(props, propName, componentName = 'Alert') {
   // We have linkName but not address
   if (linkOptions.linkName && !linkOptions.address) {
     error = new Error(
-      `Invalid prop linkOptions. You must supply both the linkName and address properties.`,
+      `Invalid prop linkOptions for ${componentName}. You must supply both the linkName and address properties.`,
     );
   }
 
   // We have address, but not link name
   if (!linkOptions.linkName && linkOptions.address) {
     error = new Error(
-      `Invalid prop linkOptions. You must supply both the linkName and address properties.`,
+      `Invalid prop linkOptions ${componentName}. You must supply both the linkName and address properties.`,
     );
   }
 

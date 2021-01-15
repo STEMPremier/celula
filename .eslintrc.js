@@ -20,5 +20,12 @@ module.exports = {
   rules: {
     'prettier/prettier': ['error'],
     'react/state-in-constructor': 0,
+    'jsx-a11y/anchor-is-valid': ['error', {
+      'components': ['Link'],
+      'specialLink': ['address'],
+    }],
+    'react/jsx-filename-extension': [1, {
+      extensions: ['.js', '.jsx'],
+    }],
   },
 };
