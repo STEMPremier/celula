@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SubmitButton /> render() renders the component 1`] = `
+<Button
+  className=""
+  color="primary"
+  disabled={false}
+  handleClick={[Function]}
+  htmlType="submit"
+  size="small"
+  type="solid"
+>
+  click me
+</Button>
+`;
