@@ -24,7 +24,7 @@ exports[`<Input /> render() render the Input component 1`] = `
       onChange={[Function]}
       placeholder=""
       type="text"
-      value={null}
+      value=""
     />
   </div>
 </div>
