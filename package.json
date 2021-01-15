@@ -1,6 +1,6 @@
 {
   "name": "@talloinc/celula",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "Tallo Inc.'s React component library and ui documentation",
   "main": "dist/celula.js",
   "dependencies": {
