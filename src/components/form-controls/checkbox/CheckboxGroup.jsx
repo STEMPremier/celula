@@ -66,8 +66,6 @@ const CheckboxGroup = ({
 CheckboxGroup.propTypes = {
   /**
    * The `<Checkbox />` components you want the `<CheckboxGroup />` to group together.
-   *
-   * @ignore
    */
   children: PropTypes.node.isRequired,
   /**
