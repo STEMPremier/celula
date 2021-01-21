@@ -66,6 +66,8 @@ const CheckboxGroup = ({
 CheckboxGroup.propTypes = {
   /**
    * The `<Checkbox />` components you want the `<CheckboxGroup />` to group together.
+   *
+   * @ignore
    */
   children: PropTypes.node.isRequired,
   /**
@@ -85,7 +87,10 @@ CheckboxGroup.propTypes = {
    */
   formId: PropTypes.string,
   /**
-   * A function to trigger when the state of the `<CheckboxGroup />` changes.
+   * A function to trigger when the state of the `<CheckboxGroup />` changes. The function recieves 2 arguments, `event`, and `values`.
+   *
+   * @param {Event} event - The event that triggered the change.
+   * @param {[]} values - The array of selected values in the <CheckboxGroup />.
    */
   handleChange: PropTypes.func,
   /**
