@@ -3620,9 +3620,15 @@ ol {
 .ce-checkbox-group legend,
 .ce-radio-group legend {
   color: rgba(0, 0, 0, 0.87);
-  margin-left: 0.5rem;
+  margin-left: 1.5rem;
   min-height: 1.6rem;
-  padding: 0 0.3rem;
+  padding: 0 0.9rem;
+}
+.ce-checkbox-group .ce-checkbox,
+.ce-radio-group .ce-checkbox,
+.ce-checkbox-group .ce-radio,
+.ce-radio-group .ce-radio {
+  margin-left: 1.6rem;
 }
 .ce-checkbox-group span,
 .ce-radio-group span {
@@ -4660,14 +4666,14 @@ ol {
   display: block;
   font-size: 1.6rem;
   line-height: 2.2rem;
-  margin: 0.3rem;
+  margin: 0.3rem 0;
 }
 .ce-input .ce-input__help-text {
   color: rgba(0, 0, 0, 0.38);
   display: block;
   font-size: 1.4rem;
   line-height: 1.6rem;
-  margin: 0.3rem;
+  margin: 0.3rem 0;
 }
 .ce-input .ce-input__container {
   background-color: #fbfbfb;
@@ -4677,7 +4683,7 @@ ol {
   display: flex;
   height: 6rem;
   justify-content: space-between;
-  margin: 0.3rem;
+  margin: 0.3rem 0;
   width: calc(100% - 0.6rem);
 }
 .ce-input .ce-input__container .ce-input__icon {
@@ -7272,6 +7278,9 @@ ol {
   .ce-table .ce-table__body .ce-table__row:nth-child(even) {
     border: 0.1rem solid #e8e8e8;
   }
+}
+.ce-table.ce-table__clickable .ce-table__row {
+  cursor: pointer;
 }
 .ce-table.ce-table__clickable .ce-table__row:hover {
   --background-color: #e6f7ff;
