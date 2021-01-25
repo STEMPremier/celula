@@ -139,7 +139,10 @@ FormControlGroup.propTypes = {
    */
   formId: PropTypes.string,
   /**
-   * A function to trigger when the state of the `<FormControlGroup />` changes.
+   * A function to trigger when the state of the `<FormControlGroup />` changes. The function recieves 2 arguments, `event`, and `values`.
+   *
+   * @param {Event} event - The event that triggered the change.
+   * @param {[]} values - The array of selected values in the <FormControlGroup />.
    */
   handleChange: PropTypes.func,
   /**
