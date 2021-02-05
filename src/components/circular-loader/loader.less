@@ -1,0 +1,33 @@
+@import '../../styles/celula';
+
+.ce-circular-loader {
+  .ce-cl__label {
+    fill: @primary-text;
+
+    .ce-cl__label__number {
+      font-size: 0.6em;
+      line-height: 1;
+      text-anchor: middle;
+      transform: translateY(0.25em);
+    }
+  }
+
+  .ce-cl__legend {
+    color: @primary-text;
+  }
+
+  &.ce-cl-indeterminate {
+    animation-duration: 2s;
+    animation-name: spin;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
