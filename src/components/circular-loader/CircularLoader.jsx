@@ -61,6 +61,7 @@ const CircularLoader = ({
   }, [percentage]);
 
   useEffect(() => {
+    // The else clause might look unneeded, but in actuality am specifically EXCLUDING the case where progressBar equals percentage, where I want nothing to happen.
     if (progressBar < percentage) {
       increasePercentage();
     } else if (progressBar > percentage) {
