@@ -30,6 +30,9 @@ const circleConfig = {
   y: '19',
 };
 
+/**
+ * Progress indicators inform users about the status of ongoing processes, such as loading an application, submitting a form or saving updates. They communicate an application’s state and indicate available actions, such as whether users can navigate away from the current screen.
+ */
 const CircularLoader = ({
   className,
   color,
@@ -137,11 +140,29 @@ const CircularLoader = ({
 };
 
 CircularLoader.propTypes = {
+  /**
+   * A class name, or string of class names, to add to the `<CircularLoader />`.
+   */
   className: PropTypes.string,
-  color: PropTypes.string,
+  /**
+   * The color of the `<CircularLoader />`.
+   */
+  color: PropTypes.oneOf(['cool', 'warm', 'hot']),
+  /**
+   * Changes the `<CircularLoader />` from a precentage-based one to a generic spinner-style indicator.
+   */
   indeterminate: PropTypes.bool,
+  /**
+   * Any text you would like displayed below the `<CircularLoader />`.
+   */
   legend: PropTypes.string,
+  /**
+   * The percentage (complete) the `<CircularLoader />` indicates/fills.
+   */
   percentage: PropTypes.string,
+  /**
+   * Show the percentage complete, as text, in the center of the `<CircularLoader />`.
+   */
   showPercentage: PropTypes.bool,
 };
 
