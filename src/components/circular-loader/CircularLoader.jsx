@@ -170,8 +170,8 @@ CircularLoader.propTypes = {
 CircularLoader.defaultProps = {
   className: '',
   color: 'cool',
-  legend: '',
   indeterminate: false,
+  legend: '',
   percentage: 0,
   showPercentage: false,
 };
