@@ -160,7 +160,7 @@ CircularLoader.propTypes = {
   /**
    * The percentage (complete) the `<CircularLoader />` indicates/fills.
    */
-  percentage: PropTypes.string,
+  percentage: PropTypes.number,
   /**
    * Show the percentage complete, as text, in the center of the `<CircularLoader />`.
    */
@@ -172,7 +172,7 @@ CircularLoader.defaultProps = {
   color: 'cool',
   legend: '',
   indeterminate: false,
-  percentage: '0',
+  percentage: 0,
   showPercentage: false,
 };
 
