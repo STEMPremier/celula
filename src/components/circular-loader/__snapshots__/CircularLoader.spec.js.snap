@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CircularLoader /> render() renders the component 1`] = `
+<Fragment>
+  <div
+    className="ce-circular-loader"
+  >
+    <svg
+      viewBox="0 0 38 38"
+    >
+      <defs>
+        <filter
+          id="shadow"
+        >
+          <feDropShadow
+            dx="0"
+            dy="0"
+            floodColor="rgb(116,55,187,0.4)"
+            stdDeviation="0.3"
+          />
+        </filter>
+      </defs>
+      <linearGradient
+        id="cool"
+        x1="0"
+        x2="1"
+        y1="0"
+        y2="1"
+      >
+        <stop
+          offset="0%"
+          stopColor="#6645ad"
+        />
+        <stop
+          offset="100%"
+          stopColor="#2d71be"
+        />
+      </linearGradient>
+      <linearGradient
+        id="warm"
+        x1="0"
+        x2="1"
+        y1="0"
+        y2="1"
+      >
+        <stop
+          offset="0%"
+          stopColor="#fba635"
+        />
+        <stop
+          offset="100%"
+          stopColor="#acd74e"
+        />
+      </linearGradient>
+      <linearGradient
+        id="hot"
+        x1="0"
+        x2="1"
+        y1="0"
+        y2="1"
+      >
+        <stop
+          offset="0%"
+          stopColor="#62248d"
+        />
+        <stop
+          offset="100%"
+          stopColor="#c4356e"
+        />
+      </linearGradient>
+      <circle
+        cx="19"
+        cy="19"
+        fill="transparent"
+        r={15.915494309189533}
+        stroke="#d2d3d4"
+        strokeDasharray="0"
+        strokeWidth={1}
+      />
+      <circle
+        cx="19"
+        cy="19"
+        fill="transparent"
+        r={15.915494309189533}
+        stroke="url(#cool)"
+        strokeDasharray="0 100"
+        strokeDashoffset={25}
+        strokeLinecap="round"
+        strokeWidth={1}
+        style={
+          Object {
+            "filter": "url(#shadow)",
+          }
+        }
+      />
+    </svg>
+  </div>
+</Fragment>
+`;
