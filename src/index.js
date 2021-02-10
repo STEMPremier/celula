@@ -1,5 +1,6 @@
 import Alert from './components/alert';
 import Button from './components/button';
+import CircularLoader from './components/circular-loader';
 import Container from './components/container';
 import {
   Checkbox,
@@ -28,6 +29,7 @@ import './styles/celula.less';
 export {
   Alert,
   Button,
+  CircularLoader,
   Container,
   Checkbox,
   CheckboxGroup,
