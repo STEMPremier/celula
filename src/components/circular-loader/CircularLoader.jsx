@@ -43,17 +43,16 @@ const CircularLoader = ({
 }) => {
   const [progressBar, setProgressBar] = useState(0);
 
-  const pace = percentage / 5;
   const increasePercentage = () => {
     setTimeout(() => {
       setProgressBar(progressBar + 1);
-    }, pace);
+    }, 20);
   };
 
   const decreasePercentage = () => {
     setTimeout(() => {
       setProgressBar(progressBar - 1);
-    }, pace);
+    }, 20);
   };
 
   useEffect(() => {
