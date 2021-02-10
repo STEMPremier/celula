@@ -23,7 +23,7 @@ import './loader.less';
 
 const INITIAL_OFFSET = 25; // The default starting place to draw the progess line is '3 o'clock'. This moves it back to '12'.
 const circleConfig = {
-  radius: '15.91549430918954', // radius = cirumfrence / 2pi; we want a circumferunce of 100 to easily display precentages
+  radius: 100 / (2 * Math.PI), // radius = circumference / 2pi; we want a circumferunce of 100 to easily display precentages
   strokeWidth: 1,
   viewBox: '0 0 38 38',
   x: '19',
