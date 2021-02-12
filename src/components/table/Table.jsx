@@ -86,8 +86,8 @@ const useRowSelectComponent = (selectionHeaderFn, selectionFn) => instance => {
 
 /**
  * `Tables` display information in a grid-like format of rows and columns. They organize information in a way that’s easy to scan, so that users can look for patterns and insights. Tables can contain interactive components (such as chips, buttons, or menus), non-interactive elements (such as badges).
- *
- * ### *Mobile Tables*
+ */
+/* ### *Mobile Tables*
  * These list can support up to one inline link with additional actions placed within an ellipse menu in stacked tables. The purpose of this is to retain a relatively short row height. These lists are also stacked directly next to one another vertically allowing for no spacing. Text truncation is an option if desired.
  */
 const Table = ({
