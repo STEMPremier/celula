@@ -224,11 +224,11 @@ Table.propTypes = {
    */
   className: PropTypes.string,
   /**
-   * An array for the column definition of your `<Table />`. See [react-table](https://react-table.tanstack.com/).
+   * An array for the column definition of your `<Table />`.
    */
   columns: PropTypes.arrayOf(PropTypes.object).isRequired,
   /**
-   * An array of data (objects) for the `<Table />`. See [react-table](https://react-table.tanstack.com/).
+   * An array of data (objects) for the `<Table />`.
    */
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
   /**
