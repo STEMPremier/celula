@@ -18,6 +18,95 @@ import SomethingToMemo from './SomethingToMemo'
 <Description of={Table} />
 <ArgsTable of={Table} />
 
+## Background
+The `<Table />` component uses [react-table](https://react-table.tanstack.com/) under the hood. That confers some requirements in how you use have to set up your `<Table />`.
+
+When building out rows and columns behind the scenes, `react-table` needs a mechanism to keep track of the which column header/title goes with which column of data. Take the following column and row data:
+
+```js
+// Each object in the array is describes a row of data.
+// The object's keys describe the column the values are to be displayed in.
+const data = [
+  {
+    first: 'Bruce',
+    last: 'Wayne',
+  },
+  {
+    first: 'Clark',
+    last: 'Kent',
+  },
+  {
+    first: 'Jean',
+    last: 'Gray',
+  },
+];
+
+/* Each object in the columns array must have the following shape:
+ * {
+ *   // The title of the column as displayed in the header of the Table
+ *   Header: 'string', 
+ *   // The key (from an object from the data array) that contains the data
+ *   // to be displayed in the Table
+ *   accessor: 'string',
+ * }
+ */
+const columns = [
+  {
+    Header: 'First Name',
+    accessor: 'first',
+  },
+  {
+    Header: 'Last Name',
+    accessor: 'last',
+  },
+];
+```
+
+That will produce a table that looks like the following:
+
+|First Name|Last Name|
+| --- | --- |
+|Bruce|Wayne|
+|Clark|Kent|
+|Jean|Gray|
+
+Furthermore it is advisable to wrap that data in a `React.useMemo` call to keep `react-table` from recreating its data graph unless the data actually changes. There is a lot of logic involved in that and we should avoid recalculating it if we can.
+
+```js
+const dataFromOutside = [
+  {
+    first: 'Bruce',
+    last: 'Wayne',
+  },
+  {
+    first: 'Clark',
+    last: 'Kent',
+  },
+  {
+    first: 'Jean',
+    last: 'Gray',
+  },
+];
+
+// If your data is stored in state, and is updated via an api call you will need to include
+// that in the dependency array to make sure the memo is updated if data is updated.
+const data = React.useMemo(() => dataFromOutside, [dataFromOutSide]);
+
+// Your columns are not likely to be updated, so you probably don't neet to worry about
+// updating it's memo after the table is mounted.
+const columns = React.useMemo(() => [
+  {
+    Header: 'First Name',
+    accessor: 'first',
+  },
+  {
+    Header: 'Last Name',
+    accessor: 'last',
+  },
+], []);
+```
+For More information, see [react-table](https://react-table.tanstack.com/).
+
 <Story name="Table with Knobs" parameters={{ docs: { disable: true } }}>
   <Table
     columns={columns}
