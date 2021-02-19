@@ -63,6 +63,7 @@ h1 {
   font-style: normal;
   font-weight: 300;
   line-height: 9rem;
+  margin-bottom: 2rem;
 }
 
 h2 {
@@ -72,6 +73,7 @@ h2 {
   font-style: normal;
   font-weight: 300;
   line-height: 6.2rem;
+  margin-bottom: 2rem;
 }
 
 h3 {
@@ -81,6 +83,7 @@ h3 {
   font-style: normal;
   font-weight: 300;
   line-height: 5.1rem;
+  margin-bottom: 2rem;
 }
 
 h4 {
@@ -90,6 +93,7 @@ h4 {
   font-style: normal;
   font-weight: 800;
   line-height: 3.9rem;
+  margin-bottom: 2rem;
 }
 
 h5 {
@@ -99,6 +103,7 @@ h5 {
   font-style: normal;
   font-weight: 800;
   line-height: 2.8rem;
+  margin-bottom: 2rem;
 }
 
 h6 {
@@ -108,6 +113,7 @@ h6 {
   font-style: normal;
   font-weight: 800;
   line-height: 2.1rem;
+  margin-bottom: 2rem;
 }
 
 strong {
@@ -131,6 +137,10 @@ p, span { // p2 is the default
   &.large {
     font-size: 1.9rem;
     line-height: 2.6rem;
+  }
+
+  & + p {
+    margin-top: 3rem;
   }
 }
 
