@@ -30,19 +30,16 @@ button {
     height: 1.6rem; // I dunno why, but this button is 3px taller the icon.
     margin-top: 3rem;
     margin-right: 3rem;
+    position: absolute;
+    right: 0;
     z-index: 1;
   }
 
   .ce-modal__container {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    left: 0;
-    overflow-y: scroll;
-    padding-bottom: 0;
-    padding-top: 4.5rem;
-    position: absolute;
-    top: 0;
+    flex-grow: 1;
+    overflow-y: auto;
     width: 100%;
   }
 
@@ -54,8 +51,7 @@ button {
 
   .ce-modal__footer {
     background: @white;
-    padding-bottom: 4rem;
-    padding-top: 6rem;
+    padding-top: 4rem;
 
     .ce-button + .ce-button {
       margin-left: 0.5rem;
