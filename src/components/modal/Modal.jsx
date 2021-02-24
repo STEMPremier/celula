@@ -91,8 +91,12 @@ const Modal = ({
 
   const showModal = () => setVisibility(true);
   const hideModal = () => setVisibility(false);
+  const modalAction = () => {
+    const action = actionFn || hideModal;
 
-  const action = actionFn || hideModal;
+    action();
+    hideModal();
+  };
 
   const findParent = parentEl
     ? () => document.getElementById(parentEl)
@@ -122,7 +126,7 @@ const Modal = ({
           <h4 className="ce-modal__header">{title}</h4>
           <div className="ce-modal__body">{children}</div>
           <div className="ce-modal__footer">
-            <Button handleClick={action} size={actionSize}>
+            <Button handleClick={modalAction} size={actionSize}>
               {actionLabel}
             </Button>
             <Button
