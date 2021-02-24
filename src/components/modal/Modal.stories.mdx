@@ -8,7 +8,6 @@ import Button from '../button';
 import Container from '../container';
 import { SystemIcon } from '../icon';
 
-
 <Meta component={ ModalDocs } title="Components/Atoms/Modal" />
 
 # Modal
@@ -20,6 +19,7 @@ import { SystemIcon } from '../icon';
     actionFn={() => console.log('Modal action button clicked.')}
     actionLabel={text('actionLabel', 'log something')}
     actionSize={select('actionSize', ['small', 'large', 'jumbo'], 'large')}
+    isOpen={boolean('isOpen', false)}
     size={select('size', ['default', 'small', 'large', 'jumbo'], 'default')}
     title={text('title', 'This is My Modal')}
     triggerLabel={text('triggerLabel', 'open modal')}

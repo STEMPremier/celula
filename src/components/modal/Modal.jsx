@@ -22,7 +22,7 @@
  * the app root. So we export a function that returns the Modal component
  * aware of the consuming app's root element.
  */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 import cx from 'classnames';
@@ -67,6 +67,7 @@ const Modal = ({
   children,
   className = '',
   disabled = false,
+  isOpen = false,
   parentEl = '',
   size = 'default',
   title,
@@ -75,7 +76,7 @@ const Modal = ({
   triggerSize = 'large',
   triggerType = 'solid',
 }) => {
-  const [visible, setVisibility] = useState(false);
+  const [visible, setVisibility] = useState(isOpen);
   const classes = cx(
     'ce-modal',
     {
@@ -83,6 +84,10 @@ const Modal = ({
     },
     className,
   );
+
+  useEffect(() => {
+    setVisibility(isOpen);
+  }, [isOpen]);
 
   const showModal = () => setVisibility(true);
   const hideModal = () => setVisibility(false);
@@ -171,6 +176,10 @@ Modal.propTypes = {
    */
   disabled: PropTypes.bool,
   /**
+   * Allows you to close the `<Modal />` from out side the `<Modal />`.
+   */
+  isOpen: PropTypes.bool,
+  /**
    * The id of the element that the `<Modal />` will be rendered to. If no id is given, the modal will be rendered to the body.
    *
    * You might use this if you need to add custom styles to the container the modal renders to.
@@ -209,6 +218,7 @@ Modal.defaultProps = {
   actionSize: 'large',
   className: '',
   disabled: false,
+  isOpen: false,
   parentEl: '',
   size: 'default',
   triggerColor: 'primary',
