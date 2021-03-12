@@ -68,7 +68,7 @@ function nameOrText(props, propName, componentName = 'SecondaryIcon') {
  * These light icons are mostly used as an actionable element.
  * Alternatively, they can be used as avatars or indicators with two varying gradient options.
  */
-const SecondaryIcon = ({ className, color, name, size, text }) => {
+const SecondaryIcon = ({ className, color, name, size, text, title }) => {
   /* eslint-disable prettier/prettier */
   const classes = cx(
     'ce-icon',
@@ -86,7 +86,8 @@ const SecondaryIcon = ({ className, color, name, size, text }) => {
 
     if (name) {
       contents = (
-        <svg className="ce-icon--white">
+        <svg aria-hidden={!title} className="ce-icon--white" role="img">
+          <title>{title || name}</title>
           <use xlinkHref={`#icons_secondary-${name}`} />
         </svg>
       );
@@ -125,6 +126,15 @@ SecondaryIcon.propTypes = {
    * Up to 2 characters you would like in the `<SecondaryIcon />`, rather than a predefined one.
    */
   text: nameOrText,
+  /**
+   * By default, we hide SecondaryIcons from assitive technologies,
+   * such as screen readers, because there should be useful text
+   * associated with most icons.
+   *
+   * If you need to use an icon with no text, just add a descriptive title,
+   * and the icon will no longer be hidden from those technologies.
+   */
+  title: PropTypes.string,
 };
 
 SecondaryIcon.defaultProps = {
@@ -133,6 +143,7 @@ SecondaryIcon.defaultProps = {
   name: '',
   size: 'small',
   text: '',
+  title: '',
 };
 
 export default SecondaryIcon;

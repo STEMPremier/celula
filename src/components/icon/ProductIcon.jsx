@@ -28,7 +28,7 @@ import './icon.less';
 /** Bold icons are used with a gradient background circle.
  * These icons can be actionable or used as a static element.
  */
-const ProductIcon = ({ className, name, size }) => {
+const ProductIcon = ({ className, name, size, title }) => {
   const classes = cx(
     'ce-icon',
     'ce-icon__product',
@@ -40,7 +40,8 @@ const ProductIcon = ({ className, name, size }) => {
 
   return (
     <span className={classes}>
-      <svg className="ce-icon--white">
+      <svg aria-hidden={!title} className="ce-icon--white" role="img">
+        <title>{title || name}</title>
         <use xlinkHref={`#icons_product-${name}`} />
       </svg>
     </span>
@@ -87,11 +88,21 @@ ProductIcon.propTypes = {
    */
   // size: PropTypes.oneOf(SIZES),
   size: PropTypes.oneOf(['small', 'large', 'jumbo']),
+  /**
+   * By default, we hide ProductIcons from assitive technologies,
+   * such as screen readers, because there should be useful text
+   * associated with most icons.
+   *
+   * If you need to use an icon with no text, just add a descriptive title,
+   * and the icon will no longer be hidden from those technologies.
+   */
+  title: PropTypes.string,
 };
 
 ProductIcon.defaultProps = {
   className: '',
   size: 'small',
+  title: '',
 };
 
 export default ProductIcon;

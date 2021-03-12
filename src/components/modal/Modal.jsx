@@ -120,7 +120,12 @@ const Modal = ({
           type="button"
           aria-label="Close"
         >
-          <SystemIcon color="black" name="close" size="jumbo" />
+          <SystemIcon
+            color="black"
+            name="close"
+            size="jumbo"
+            title="Close Modal"
+          />
         </button>
         <Container className="ce-modal__container" gap="padding">
           <h4 className="ce-modal__header">{title}</h4>
