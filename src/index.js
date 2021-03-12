@@ -17,7 +17,7 @@ import {
 } from './components/form-controls';
 import { ProductIcon, SecondaryIcon, SystemIcon } from './components/icon';
 import Link from './components/link';
-import Modal from './components/modal';
+import Modal, { MockModal } from './components/modal';
 import Pagination from './components/pagination';
 import Search from './components/search';
 import Switch from './components/switch';
@@ -53,4 +53,5 @@ export {
   Table,
   ToggleButton,
   ToggleButtonGroup,
+  MockModal,
 };
