@@ -73,7 +73,12 @@ const CircularLoader = ({
   return (
     <>
       <div className={classes}>
-        <svg viewBox={circleConfig.viewBox}>
+        <svg
+          viewBox={circleConfig.viewBox}
+          role="img"
+          aria-labelledby="ce-cl-title"
+        >
+          <title id="ce-cl-title">Circular Loader</title>
           <defs>
             <filter id="shadow">
               <feDropShadow
