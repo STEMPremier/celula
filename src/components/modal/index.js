@@ -1,4 +1,5 @@
-import Modal, { ModalDocs as MockModal } from './Modal';
+import Modal from './Modal';
+import MockModal from './MockModal';
 
 export default Modal;
 
