@@ -69,6 +69,7 @@ const Textarea = ({
       {helpText && <div className="ce-textarea__help-text">{helpText}</div>}
       <textarea
         disabled={disabled}
+        id={id}
         form={formId}
         name={name}
         onChange={handleChange}
