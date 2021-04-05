@@ -27,5 +27,8 @@ module.exports = {
     'react/jsx-filename-extension': [1, {
       extensions: ['.js', '.jsx'],
     }],
+    'jsx-a11y/label-has-associated-control': ['error', {
+      'depth': 3,
+    }],
   },
 };
