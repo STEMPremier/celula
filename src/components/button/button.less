@@ -70,7 +70,7 @@ button {
 
   // States
   &:focus {
-    box-shadow: 0 0 0 5px #b2e7ff;
+    box-shadow: 0 0 0 0.5rem @button-focus;
     outline: none;
   }
 
@@ -153,11 +153,11 @@ button {
 
   // States
   &:hover {
-    background: #007ab2;
+    background: @primary-hover;
   }
 
   &:active {
-    background: #00577f;
+    background: @primary-active;
   }
 
   &.ce-button--disabled {
