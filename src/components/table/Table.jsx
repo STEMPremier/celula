@@ -175,6 +175,7 @@ const Table = ({
               onClick: clickable
                 ? event => clickFn(row.original, event)
                 : () => {},
+              tabIndex: clickable ? '0' : null,
             };
 
             return (

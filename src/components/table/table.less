@@ -52,6 +52,7 @@
 
     .ce-table__row {
       background-color: var(--background-color, var(--initial-background));
+      box-sizing: border-box;
       display: flex;
 
       // desktop
@@ -131,6 +132,10 @@
 
       &:hover {
         --background-color: #e6f7ff;
+      }
+
+      &:focus-visible {
+        outline: .1rem solid @button-focus;
       }
     }
   }
