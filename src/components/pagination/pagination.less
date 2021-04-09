@@ -27,6 +27,18 @@
           height: 1.6rem;
         }
 
+        &:hover {
+          box-shadow: 0 0 0 .5rem @hover-blue;
+        }
+
+        &:active {
+          box-shadow: 0 0 0 .5rem @active-blue;
+        }
+
+        &:focus {
+          box-shadow: 0 0 0 .5rem @focus-blue;
+        }
+
         &:disabled {
           cursor: not-allowed;
         }
@@ -62,22 +74,21 @@
       button {
         background: @pagination-highlighted;
         color: @white;
+
+        &:hover {
+          background: @primary-hover;
+          box-shadow: none;
+        }
+
+        &:active {
+          background: @primary-active;
+          box-shadow: none;
+        }
+
+        &:focus {
+          box-shadow: 0 0 0 .5rem @button-focus;
+        }
       }
-    }
-
-    .ce-pagination__page-link {
-      // padding: 0.5rem 1.1rem 0.7rem 1.1rem;
-      // margin-top: -1px;
-      // color: @black;
-    }
-
-    .ce-pagination__last-page {
-      // color: @black;
-    }
-
-    .ce-pagination__ellipsis {
-      // color: @black;
-      // cursor: default;
     }
   }
 }
