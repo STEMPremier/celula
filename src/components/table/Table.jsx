@@ -100,6 +100,7 @@ const Table = ({
   selectable,
   selectionHeaderFn,
   selectionFn,
+  style,
 }) => {
   const {
     getTableProps,
@@ -140,7 +141,7 @@ const Table = ({
 
   return (
     <>
-      <div className={classes} {...getTableProps()}>
+      <div className={classes} style={style} {...getTableProps()}>
         {/* table header */}
         <div className="ce-table__header" role="rowgroup">
           {headerGroups.map(headerGroup => (
@@ -268,6 +269,10 @@ Table.propTypes = {
    * @param {event} object - The event triggered by the click on the row.
    */
   selectionFn: PropTypes.func,
+  /**
+   * Any inline styles you would like to add to the `<Table />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
 Table.defaultProps = {
@@ -278,6 +283,7 @@ Table.defaultProps = {
   selectable: false,
   selectionHeaderFn: () => {},
   selectionFn: () => {},
+  style: {},
 };
 
 export default Table;

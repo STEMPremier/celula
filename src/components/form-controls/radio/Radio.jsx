@@ -24,12 +24,12 @@ import '../core/selectable/selectable.less';
 /**
  * `Radios` allow the user to select one option from a set. Use radio buttons when the user needs to see all available options.
  */
-const Radio = ({ checked, className, disabled, label, name, value }) => {
+const Radio = ({ checked, className, disabled, label, name, style, value }) => {
   const id = `${name}_${value}`;
   const classes = cx('ce-radio', className);
 
   return (
-    <div className={classes}>
+    <div className={classes} style={style}>
       <input
         defaultChecked={checked}
         disabled={disabled}
@@ -73,6 +73,10 @@ Radio.propTypes = {
    */
   name: PropTypes.string,
   /**
+   * Any inline styles you would like to add to the `<Radio />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  /**
    * The value of the `<Radio />`.
    */
   value: PropTypes.oneOfType([
@@ -88,6 +92,7 @@ Radio.defaultProps = {
   disabled: false,
   isA: 'radio',
   name: undefined,
+  style: {},
 };
 
 export default Radio;

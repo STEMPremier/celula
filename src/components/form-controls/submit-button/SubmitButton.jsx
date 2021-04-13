@@ -25,7 +25,15 @@ import Button from '../../button';
 /**
  * `Submit Buttons` allow users to submit forms with a single tap. They are typically placed throughout your UI in every form.
  */
-const SubmitButton = ({ children, className, color, disabled, size, type }) => (
+const SubmitButton = ({
+  children,
+  className,
+  color,
+  disabled,
+  size,
+  style,
+  type,
+}) => (
   <Button
     className={className}
     color={color}
@@ -33,6 +41,7 @@ const SubmitButton = ({ children, className, color, disabled, size, type }) => (
     handleClick={() => {}}
     htmlType="submit"
     size={size}
+    style={style}
     type={type}
   >
     {children}
@@ -63,6 +72,10 @@ SubmitButton.propTypes = {
   // size: PropTypes.oneOf(SIZES),
   size: PropTypes.oneOf(['small', 'large', 'jumbo']),
   /**
+   * Any inline styles you would like to add to the `<SubmitButton />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  /**
    * Which type of `<SubmitButton />` to render.
    */
   // type: PropTypes.oneOf(TYPES),
@@ -77,6 +90,7 @@ SubmitButton.defaultProps = {
   color: 'primary',
   disabled: false,
   size: 'small',
+  style: {},
   type: 'solid',
 };
 

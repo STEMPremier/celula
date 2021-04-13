@@ -34,6 +34,7 @@ const ToggleButtonGroup = ({
   name,
   selectedValue,
   size,
+  style,
 }) => {
   const classes = cx(
     'ce-toggle-button-group',
@@ -57,6 +58,7 @@ const ToggleButtonGroup = ({
       formId={formId}
       name={name}
       selectedValues={[selectedValue]}
+      style={style}
     >
       {children}
     </FormControlGroup>
@@ -106,6 +108,10 @@ ToggleButtonGroup.propTypes = {
    */
   // size: PropTypes.oneOf(SIZES),
   size: PropTypes.oneOf(['small', 'large', 'jumbo']),
+  /**
+   * Any inline styles you would like to add to the `<ToggleButtonGroup />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   // validators: PropTypes.array,
 };
 
@@ -117,6 +123,7 @@ ToggleButtonGroup.defaultProps = {
   handleChange: () => {},
   selectedValue: '',
   size: 'large',
+  style: {},
 };
 
 export default ToggleButtonGroup;

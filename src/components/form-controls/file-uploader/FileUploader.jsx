@@ -31,6 +31,7 @@ const FileUploader = ({
   handleClick: handler,
   multiple,
   name,
+  style,
 }) => {
   const [setFiles] = useState([]);
   const [errMsg, setErrMsg] = useState(errorMsg);
@@ -60,7 +61,7 @@ const FileUploader = ({
   // const renderFiles = () => files.map(f => <span key={f.name}>{f.name}</span>);
 
   return (
-    <div className={classes}>
+    <div className={classes} style={style}>
       {/* complete upload file list */}
       {/* in-progress upload file list */}
       {/* <div className="ce-fu-file-list">{renderFiles()}</div> */}
@@ -130,6 +131,10 @@ FileUploader.propTypes = {
    * The name given to the `<FileUploader />`. It connects the label to the `<FileUploader />`.
    */
   name: PropTypes.string.isRequired,
+  /**
+   * Any inline styles you would like to add to the `<FileUploader />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
 FileUploader.defaultProps = {
@@ -141,6 +146,7 @@ FileUploader.defaultProps = {
   formId: '',
   handleClick: () => {},
   multiple: false,
+  style: {},
 };
 
 export default FileUploader;

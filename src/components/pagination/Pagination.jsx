@@ -37,6 +37,7 @@ const Pagination = ({
   nextPage,
   pageCount,
   prevPage,
+  style,
 }) => {
   const classes = cx('ce-pagination', className);
 
@@ -155,7 +156,7 @@ const Pagination = ({
   };
 
   return (
-    <nav className={classes}>
+    <nav className={classes} style={style}>
       <ul className="ce-pagination__container">
         <li
           className={`ce-pagination__arrow${
@@ -226,12 +227,17 @@ Pagination.propTypes = {
    * A function to trigger to navigate to the previous page.
    */
   prevPage: PropTypes.func.isRequired,
+  /**
+   * Any inline styles you would like to add to the `<Pagination />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
 Pagination.defaultProps = {
   canNextPage: true,
   canPreviousPage: true,
   className: '',
+  style: {},
 };
 
 export default Pagination;

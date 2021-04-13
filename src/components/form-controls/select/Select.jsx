@@ -40,6 +40,7 @@ const Select = ({
   options,
   placeholder,
   selectedValue,
+  style,
 }) => {
   const [fieldValue, setFieldValue] = useState(selectedValue);
   const [errMsg, setErrMsg] = useState(errorMsg);
@@ -70,7 +71,7 @@ const Select = ({
   };
 
   return (
-    <div className={classes}>
+    <div className={classes} style={style}>
       <label htmlFor={id}>{label}</label>
       {helpText && <span className="ce-select__help-text">{helpText}</span>}
       <div className="ce-select__container">
@@ -238,6 +239,10 @@ Select.propTypes = {
    * The value used to pre-select an option of the `<Select />`.
    */
   selectedValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /**
+   * Any inline styles you would like to add to the `<Select />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
 Select.defaultProps = {
@@ -254,6 +259,7 @@ Select.defaultProps = {
   icon: '',
   placeholder: 'Select one',
   selectedValue: '',
+  style: {},
 };
 
 export default Select;

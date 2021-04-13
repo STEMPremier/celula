@@ -33,6 +33,7 @@ const Button = ({
   handleClick,
   htmlType,
   size,
+  style,
   type,
   disabled,
 }) => {
@@ -54,6 +55,7 @@ const Button = ({
       disabled={disabled}
       onClick={handleClick}
       type={htmlType}
+      style={style}
     >
       <span className="ce-button__label">{children}</span>
     </button>
@@ -95,6 +97,10 @@ Button.propTypes = {
   // size: PropTypes.oneOf(SIZES),
   size: PropTypes.oneOf(['small', 'large', 'jumbo']),
   /**
+   * Any inline styles you would like to add to the `<Button />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  /**
    * Which type of `<Button />` to render.
    */
   // type: PropTypes.oneOf(TYPES),
@@ -107,6 +113,7 @@ Button.defaultProps = {
   disabled: false,
   htmlType: 'button',
   size: 'large',
+  style: {},
   type: 'solid',
 };
 

@@ -26,7 +26,7 @@ import { COLORS, LINK_TEXT_STYLES as TYPES } from '../../utils/constants';
 /**
  * Typically `Links` are used inline with a paragraph while standard all caps complement button groups or individually.
  */
-const Link = ({ className, textStyle, color, address, text }) => {
+const Link = ({ className, textStyle, color, address, style, text }) => {
   const classes = cx(
     'ce-link',
     {
@@ -39,7 +39,7 @@ const Link = ({ className, textStyle, color, address, text }) => {
   );
 
   return (
-    <a className={classes} href={address}>
+    <a className={classes} href={address} style={style}>
       {text}
     </a>
   );
@@ -60,6 +60,10 @@ Link.propTypes = {
   // color: PropTypes.oneOf(COLORS),
   color: PropTypes.oneOf(['primary', 'secondary', 'black', 'inverted']),
   /**
+   * Any inline styles you would like to add to the `<Link />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  /**
    * The text the `<Link />` displays.
    */
   text: PropTypes.string.isRequired,
@@ -73,6 +77,7 @@ Link.propTypes = {
 Link.defaultProps = {
   className: '',
   color: 'primary',
+  style: {},
   textStyle: 'uppercase',
 };
 

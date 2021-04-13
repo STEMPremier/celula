@@ -33,6 +33,7 @@ const RadioGroup = ({
   label,
   name,
   selectedValue,
+  style,
   // validators,
 }) => {
   const classes = cx(
@@ -54,6 +55,7 @@ const RadioGroup = ({
       label={label}
       name={name}
       selectedValues={[selectedValue]}
+      style={style}
     >
       {children}
     </FormControlGroup>
@@ -104,6 +106,10 @@ RadioGroup.propTypes = {
     PropTypes.number,
     PropTypes.bool,
   ]),
+  /**
+   * Any inline styles you would like to add to the `<RadioGroup />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   // validators: PropTypes.array,
 };
 
@@ -114,6 +120,7 @@ RadioGroup.defaultProps = {
   formId: '',
   handleChange: () => {},
   selectedValue: '',
+  style: {},
   // validators: [],
 };
 

@@ -40,6 +40,7 @@ const CircularLoader = ({
   legend,
   percentage,
   showPercentage,
+  style,
 }) => {
   const [progressBar, setProgressBar] = useState(0);
 
@@ -72,7 +73,7 @@ const CircularLoader = ({
 
   return (
     <>
-      <div className={classes}>
+      <div className={classes} style={style}>
         <svg
           viewBox={circleConfig.viewBox}
           role="img"
@@ -165,6 +166,10 @@ CircularLoader.propTypes = {
    * Show the percentage complete, as text, in the center of the `<CircularLoader />`.
    */
   showPercentage: PropTypes.bool,
+  /**
+   * Any inline styles you would like to add to the `<CircularLoader />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
 CircularLoader.defaultProps = {
@@ -174,6 +179,7 @@ CircularLoader.defaultProps = {
   legend: '',
   percentage: 0,
   showPercentage: false,
+  style: {},
 };
 
 export default CircularLoader;

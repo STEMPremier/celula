@@ -35,6 +35,7 @@ const Checkbox = ({
   handleChange: handler,
   name,
   label,
+  style,
   value,
   ...rest
 }) => {
@@ -69,7 +70,7 @@ const Checkbox = ({
 
   /* eslint-disable react/jsx-props-no-spreading */
   return (
-    <div className={classes}>
+    <div className={classes} style={style}>
       <input
         checked={isChecked}
         disabled={disabled}
@@ -129,6 +130,10 @@ Checkbox.propTypes = {
    */
   name: PropTypes.string,
   /**
+   * Any inline styles you would like to add to the `<Checkbox />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  /**
    * The value of the `<Checkbox />`.
    */
   value: PropTypes.oneOfType([
@@ -147,6 +152,7 @@ Checkbox.defaultProps = {
   handleChange: () => {},
   isA: 'checkbox',
   name: '',
+  style: {},
 };
 
 export default Checkbox;

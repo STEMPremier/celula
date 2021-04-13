@@ -24,7 +24,7 @@ import './container.less';
 /**
  * `<Containers />` group componets together, adding margin, or padding, (or neither) and an optional border.
  */
-const Container = ({ border, className, children, gap }) => {
+const Container = ({ border, className, children, gap, style }) => {
   const classes = cx(
     'ce-container',
     {
@@ -34,7 +34,11 @@ const Container = ({ border, className, children, gap }) => {
     className,
   );
 
-  return <div className={classes}>{children}</div>;
+  return (
+    <div className={classes} style={style}>
+      {children}
+    </div>
+  );
 };
 
 Container.propTypes = {
@@ -54,12 +58,17 @@ Container.propTypes = {
    * The method the spacing (if any) around the `<Container />` is applied.
    */
   gap: PropTypes.oneOf(['margin', 'padding', 'none']),
+  /**
+   * Any inline styles you would like to add to the `<Container />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
 Container.defaultProps = {
   border: false,
   className: '',
   gap: 'margin',
+  style: {},
 };
 
 export default Container;

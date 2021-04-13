@@ -37,6 +37,7 @@ const FormControlGroup = (
     label,
     name,
     selectedValues,
+    style,
   },
   ...props
 ) => {
@@ -101,6 +102,7 @@ const FormControlGroup = (
       disabled={disabled}
       form={formId}
       onChange={handleChange}
+      style={style}
     >
       <legend>{label}</legend>
       {renderChildren()}
@@ -159,6 +161,10 @@ FormControlGroup.propTypes = {
   selectedValues: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   ),
+  /**
+   * Any inline styles you would like to add to the `<FormControlGroup />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
 FormControlGroup.defaultProps = {
@@ -171,6 +177,7 @@ FormControlGroup.defaultProps = {
   handleChange: () => {},
   label: '',
   selectedValues: [],
+  style: {},
 };
 
 export default FormControlGroup;

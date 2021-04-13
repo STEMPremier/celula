@@ -34,6 +34,7 @@ const Search = ({
   label,
   name,
   placeholder,
+  style,
 }) => {
   const [fieldValue, setFieldValue] = useState('');
   const [errMsg, setErrMsg] = useState(errorMsg);
@@ -70,7 +71,7 @@ const Search = ({
   };
 
   return (
-    <div className={classes}>
+    <div className={classes} style={style}>
       <label htmlFor={id}>{label}</label>
       {helpText && <div className="ce-search__help-text">{helpText}</div>}
       <div className="ce-search__container">
@@ -140,6 +141,10 @@ Search.propTypes = {
    * Placeholder text for the `<Search />`/
    */
   placeholder: PropTypes.string,
+  /**
+   * Any inline styles you would like to add to the `<Search />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
 Search.defaultProps = {
@@ -149,6 +154,7 @@ Search.defaultProps = {
   helpText: '',
   instantSearch: false,
   placeholder: '',
+  style: {},
 };
 
 export default Search;

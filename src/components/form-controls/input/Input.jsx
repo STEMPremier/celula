@@ -45,6 +45,7 @@ const Input = ({
   min,
   name,
   placeholder,
+  style,
 }) => {
   const [fieldValue, setFieldValue] = useState(initialValue);
   const [errMsg, setErrMsg] = useState(errorMsg);
@@ -163,7 +164,7 @@ const Input = ({
   };
 
   return (
-    <div className={classes}>
+    <div className={classes} style={style}>
       <label htmlFor={id}>{label}</label>
       {helpText && <div className="ce-input__help-text">{helpText}</div>}
       <div className="ce-input__container">
@@ -352,6 +353,10 @@ Input.propTypes = {
    * Placeholder text for the `<Input />`/
    */
   placeholder: PropTypes.string,
+  /**
+   * Any inline styles you would like to add to the `<Input />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
 Input.defaultProps = {
@@ -368,6 +373,7 @@ Input.defaultProps = {
   max: '',
   min: '',
   placeholder: '',
+  style: {},
 };
 
 export default Input;

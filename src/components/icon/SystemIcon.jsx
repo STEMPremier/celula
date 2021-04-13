@@ -29,7 +29,7 @@ import './icon.less';
  * System icons are designed to be simple, modern and friendly.
  * Each icon is reduced to its minimal form, expressing essential characteristics within the interface.
  */
-const SystemIcon = ({ className, color, name, size, title }) => {
+const SystemIcon = ({ className, color, name, size, style, title }) => {
   const classes = cx(
     'ce-icon',
     'ce-icon__system',
@@ -40,7 +40,7 @@ const SystemIcon = ({ className, color, name, size, title }) => {
   );
 
   return (
-    <span className={classes}>
+    <span className={classes} style={style}>
       <svg
         aria-hidden={!title}
         className={color && `ce-icon--${color}`}
@@ -105,6 +105,10 @@ SystemIcon.propTypes = {
   // size: PropTypes.oneOf(SIZES),
   size: PropTypes.oneOf(['small', 'large', 'jumbo']),
   /**
+   * Any inline styles you would like to add to the `<SystemIcon />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  /**
    * By default, we hide SystemIcons from assitive technologies,
    * such as screen readers, because there should be useful text
    * associated with most icons.
@@ -119,6 +123,7 @@ SystemIcon.defaultProps = {
   className: '',
   color: '',
   size: 'large',
+  style: {},
   title: '',
 };
 
