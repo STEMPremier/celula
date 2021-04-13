@@ -30,12 +30,12 @@ const Button = ({
   children,
   className,
   color,
+  disabled,
   handleClick,
   htmlType,
   size,
   style,
   type,
-  disabled,
 }) => {
   const classes = cx(
     'ce-button',
