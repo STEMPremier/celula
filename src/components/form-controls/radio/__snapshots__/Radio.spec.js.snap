@@ -16,6 +16,7 @@ exports[`<Radio /> render() render the RadioGroup and Radio components 1`] = `
       "",
     ]
   }
+  style={Object {}}
 >
   <Radio
     checked={false}
@@ -23,6 +24,7 @@ exports[`<Radio /> render() render the RadioGroup and Radio components 1`] = `
     disabled={false}
     isA="radio"
     label="Radio test label"
+    style={Object {}}
     value="Radio value here"
   />
 </FormControlGroup>

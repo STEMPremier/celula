@@ -6,6 +6,7 @@ exports[`FormControlGroup render() render a FCG with Checkboxes 1`] = `
   disabled={false}
   form=""
   onChange={[Function]}
+  style={Object {}}
 >
   <legend>
     FormControlGroup Test Label
@@ -21,6 +22,7 @@ exports[`FormControlGroup render() render a FCG with Checkboxes 1`] = `
     key=".0"
     label="Checkbox Test Label 1"
     name="FormControlGroup Test Name"
+    style={Object {}}
     value="Checkbox Value Here 1"
   />
   <Checkbox
@@ -34,6 +36,7 @@ exports[`FormControlGroup render() render a FCG with Checkboxes 1`] = `
     key=".1"
     label="Checkbox Test Label 2"
     name="FormControlGroup Test Name"
+    style={Object {}}
     value="Checkbox Value Here 2"
   />
   <span
@@ -48,6 +51,7 @@ exports[`FormControlGroup render() render a FCG with Radios 1`] = `
   disabled={false}
   form=""
   onChange={[Function]}
+  style={Object {}}
 >
   <legend>
     FormControlGroup Test Label
@@ -60,6 +64,7 @@ exports[`FormControlGroup render() render a FCG with Radios 1`] = `
     key=".0"
     label="Radio Test Label 1"
     name="FormControlGroup Test Name"
+    style={Object {}}
     value="Radio Value Here 1"
   />
   <Radio
@@ -70,6 +75,7 @@ exports[`FormControlGroup render() render a FCG with Radios 1`] = `
     key=".1"
     label="Radio Test Label 2"
     name="FormControlGroup Test Name"
+    style={Object {}}
     value="Radio Value Here 2"
   />
   <span

@@ -3,10 +3,16 @@
 exports[`<ProductIcon /> render renders the component 1`] = `
 <span
   className="ce-icon ce-icon__product ce-icon--small"
+  style={Object {}}
 >
   <svg
+    aria-hidden={true}
     className="ce-icon--white"
+    role="img"
   >
+    <title>
+      music
+    </title>
     <use
       xlinkHref="#icons_product-music"
     />
@@ -17,10 +23,16 @@ exports[`<ProductIcon /> render renders the component 1`] = `
 exports[`<SecondaryIcon /> render renders the component with an icon 1`] = `
 <span
   className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+  style={Object {}}
 >
   <svg
+    aria-hidden={true}
     className="ce-icon--white"
+    role="img"
   >
+    <title>
+      image
+    </title>
     <use
       xlinkHref="#icons_secondary-image"
     />
@@ -31,6 +43,7 @@ exports[`<SecondaryIcon /> render renders the component with an icon 1`] = `
 exports[`<SecondaryIcon /> render renders the component with text 1`] = `
 <span
   className="ce-icon ce-icon__secondary ce-icon--small ce-icon--primary"
+  style={Object {}}
 >
   <span
     className="ce-icon--text"
@@ -43,10 +56,16 @@ exports[`<SecondaryIcon /> render renders the component with text 1`] = `
 exports[`<SystemIcon /> render renders the component 1`] = `
 <span
   className="ce-icon ce-icon__system ce-icon--large"
+  style={Object {}}
 >
   <svg
+    aria-hidden={true}
     className=""
+    role="img"
   >
+    <title>
+      share
+    </title>
     <use
       xlinkHref="#icons_system-share"
     />

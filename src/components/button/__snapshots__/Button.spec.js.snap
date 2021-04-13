@@ -5,6 +5,7 @@ exports[`<Button /> render() renders the component 1`] = `
   className="ce-button ce-button--solid ce-button--large ce-button--primary"
   disabled={false}
   onClick={[Function]}
+  style={Object {}}
   type="button"
 >
   <span

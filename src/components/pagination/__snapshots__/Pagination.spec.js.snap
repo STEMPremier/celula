@@ -3,6 +3,7 @@
 exports[`<Pagination /> render() renders the component 1`] = `
 <nav
   className="ce-pagination"
+  style={Object {}}
 >
   <ul
     className="ce-pagination__container"
@@ -22,6 +23,8 @@ exports[`<Pagination /> render() renders the component 1`] = `
           color="black"
           name="navigate"
           size="large"
+          style={Object {}}
+          title=""
         />
       </button>
     </li>
@@ -95,6 +98,8 @@ exports[`<Pagination /> render() renders the component 1`] = `
           color="black"
           name="navigate"
           size="large"
+          style={Object {}}
+          title=""
         />
       </button>
     </li>

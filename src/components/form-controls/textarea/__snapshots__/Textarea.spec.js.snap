@@ -12,6 +12,7 @@ exports[`<Textarea /> render() renders the component 1`] = `
   <textarea
     disabled={false}
     form=""
+    id="textarea"
     name="textarea"
     onChange={[Function]}
     placeholder=""

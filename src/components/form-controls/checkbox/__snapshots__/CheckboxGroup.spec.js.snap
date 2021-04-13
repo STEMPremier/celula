@@ -12,6 +12,7 @@ exports[`<CheckboxGroup /> render() render the CheckboxGroup component 1`] = `
   label="CheckboxGroup Test Label"
   name="CheckboxGroup Test Name"
   selectedValues={Array []}
+  style={Object {}}
 >
   <Checkbox
     checked={false}
@@ -23,6 +24,7 @@ exports[`<CheckboxGroup /> render() render the CheckboxGroup component 1`] = `
     isA="checkbox"
     label="Checkbox Test Label 1"
     name=""
+    style={Object {}}
     value="Checkbox Value Here 1"
   />
   <Checkbox
@@ -35,6 +37,7 @@ exports[`<CheckboxGroup /> render() render the CheckboxGroup component 1`] = `
     isA="checkbox"
     label="Checkbox Test Label 2"
     name=""
+    style={Object {}}
     value="Checkbox Value Here 2"
   />
 </FormControlGroup>

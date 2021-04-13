@@ -2,7 +2,8 @@
 
 exports[`<FileUploader /> render() render the FileUploader component 1`] = `
 <div
-  className="ce-file-uploader ce-file-uploader--primary ce-file-uploader--large"
+  className="ce-file-uploader"
+  style={Object {}}
 >
   <input
     accept=""
@@ -13,17 +14,16 @@ exports[`<FileUploader /> render() render the FileUploader component 1`] = `
     name="test"
     onChange={[Function]}
     type="file"
-    value=""
   />
-  <label
-    className="ce-file-uploader__button"
-    htmlFor="test"
+  <div
+    className="ce-file-uploader__container"
   >
-    <span
-      className="ce-file-uploader__label"
+    <label
+      htmlFor="test"
     >
-      Children
-    </span>
-  </label>
+      Browse
+    </label>
+     for a file to upload
+  </div>
 </div>
 `;

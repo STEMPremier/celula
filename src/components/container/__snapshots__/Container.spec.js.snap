@@ -3,6 +3,7 @@
 exports[`<Container /> render() render the Container component 1`] = `
 <div
   className="ce-container ce-container__margin"
+  style={Object {}}
 >
   <span>
     This is stuff in a container.

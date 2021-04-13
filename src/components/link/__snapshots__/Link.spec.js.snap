@@ -4,6 +4,7 @@ exports[`<Link /> render() renders the component 1`] = `
 <a
   className="ce-link ce-link--lowercase ce-link--primary"
   href="https://app.tallo.com/register"
+  style={Object {}}
 >
   hyperlink
 </a>
