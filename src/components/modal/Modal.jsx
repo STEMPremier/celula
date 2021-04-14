@@ -70,6 +70,7 @@ const Modal = ({
   isOpen = false,
   parentEl = '',
   size = 'default',
+  style,
   title,
   triggerColor = 'primary',
   triggerLabel,
@@ -113,6 +114,7 @@ const Modal = ({
         shouldCloseOnOverlayClick
         shouldCloseOnEsc
         shouldReturnFocusAfterClose
+        style={{ content: style }}
       >
         <button
           className="ce-modal__close"
@@ -200,6 +202,10 @@ Modal.propTypes = {
   // size: PropTypes.oneOf(SIZES),
   size: PropTypes.oneOf(['default', 'small', 'large', 'jumbo']),
   /**
+   * Any inline styles you would like to add to the `<Modal />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  /**
    * The title of the `<Modal />`.
    */
   title: PropTypes.string.isRequired,
@@ -230,6 +236,7 @@ Modal.defaultProps = {
   isOpen: false,
   parentEl: '',
   size: 'default',
+  style: {},
   triggerColor: 'primary',
   triggerSize: 'large',
   triggerType: 'solid',

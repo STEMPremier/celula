@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Alert /> render() render the Alert component 1`] = `
-<div>
+<div
+  style={Object {}}
+>
   <div
     className="ce-alert ce-alert--info"
   >

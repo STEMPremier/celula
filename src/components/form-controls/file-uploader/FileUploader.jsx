@@ -21,42 +21,24 @@ import cx from 'classnames';
 
 import './file-uploader.less';
 
-import {
-  FILEUPLOADER_TYPES as TYPES,
-  COLORS,
-  SIZES,
-} from '../../../utils/constants';
-
 const FileUploader = ({
   accept,
-  children,
   className,
   capture,
-  color,
   disabled,
   errorMsg,
   formId,
   handleClick: handler,
   multiple,
   name,
-  size,
-  type,
+  style,
 }) => {
-  const [fieldValue, setFieldValue] = useState('');
+  const [setFiles] = useState([]);
   const [errMsg, setErrMsg] = useState(errorMsg);
 
   const classes = cx(
     'ce-file-uploader',
     {
-      [`ce-file-uploader--${color}`]: COLORS.includes(
-        color.toString().toLowerCase(),
-      ),
-      [`ce-file-uploader--${size}`]: SIZES.includes(
-        size.toString().toLowerCase(),
-      ),
-      [`ce-file-uploader--${type}`]: TYPES.includes(
-        type.toString().toLowerCase(),
-      ),
       'ce-file-uploader--disabled': disabled,
       'ce-file-uploader--error': errMsg,
     },
@@ -70,14 +52,19 @@ const FileUploader = ({
   }, [errorMsg]);
 
   const handleClick = event => {
-    const { value } = event.target;
+    const fs = event.target.files;
 
-    setFieldValue(value);
+    setFiles(Object.values(fs));
     handler(event);
   };
 
+  // const renderFiles = () => files.map(f => <span key={f.name}>{f.name}</span>);
+
   return (
-    <div className={classes}>
+    <div className={classes} style={style}>
+      {/* complete upload file list */}
+      {/* in-progress upload file list */}
+      {/* <div className="ce-fu-file-list">{renderFiles()}</div> */}
       <input
         accept={accept}
         capture={capture}
@@ -88,11 +75,12 @@ const FileUploader = ({
         name={name}
         onChange={handleClick}
         type="file"
-        value={fieldValue}
       />
-      <label htmlFor={id} className="ce-file-uploader__button">
-        <span className="ce-file-uploader__label">{children}</span>
-      </label>
+      {/* dotted line box container thingy */}
+      <div className="ce-file-uploader__container">
+        <label htmlFor={id}>Browse</label>
+        &nbsp;for a file to upload
+      </div>
       {errorMsg && (
         <span className="ce-file-uploader__error-text">{errorMsg}</span>
       )}
@@ -116,18 +104,9 @@ FileUploader.propTypes = {
    */
   capture: PropTypes.oneOf([undefined, 'user', 'environment']),
   /**
-   * The `<FileUploader />` label.
-   */
-  children: PropTypes.string.isRequired,
-  /**
    * A class name, or string of class names, to add to the `<FileUploader />`.
    */
   className: PropTypes.string,
-  /**
-   *  The color of the `<FileUploader />`.
-   */
-  // color: PropTypes.oneOf(COLORS),
-  color: PropTypes.oneOf(['primary', 'secondary', 'black', 'inverted']),
   /**
    * Disables the `<FileUploader />`.
    */
@@ -153,29 +132,21 @@ FileUploader.propTypes = {
    */
   name: PropTypes.string.isRequired,
   /**
-   * The size of the `<Button />`.
+   * Any inline styles you would like to add to the `<FileUploader />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
-  // size: PropTypes.oneOf(SIZES),
-  size: PropTypes.oneOf(['small', 'large', 'jumbo']),
-  /**
-   *  Which type of `<FileUpload />` to render.
-   */
-  // type: PropTypes.oneOf(TYPES),
-  type: PropTypes.oneOf(['solid', 'outline', 'text']),
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
 FileUploader.defaultProps = {
   accept: '',
   capture: undefined,
   className: '',
-  color: 'primary',
   disabled: false,
   errorMsg: '',
   formId: '',
   handleClick: () => {},
   multiple: false,
-  size: 'large',
-  type: 'solid',
+  style: {},
 };
 
 export default FileUploader;

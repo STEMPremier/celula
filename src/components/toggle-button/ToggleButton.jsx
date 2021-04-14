@@ -31,6 +31,7 @@ const ToggleButton = ({
   icon,
   name,
   size,
+  style,
   value,
 }) => {
   const id = `${name}_${value}`;
@@ -43,7 +44,7 @@ const ToggleButton = ({
   );
 
   return (
-    <div className={classes}>
+    <div className={classes} style={style}>
       <input
         defaultChecked={checked}
         disabled={disabled}
@@ -95,6 +96,10 @@ ToggleButton.propTypes = {
    */
   size: PropTypes.oneOf(SIZES),
   /**
+   * Any inline styles you would like to add to the `<ToggleButton />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  /**
    * The value of the `<ToggleButton />`.
    */
   value: PropTypes.oneOfType([
@@ -111,6 +116,7 @@ ToggleButton.defaultProps = {
   isA: 'radio',
   name: undefined,
   size: 'large',
+  style: {},
 };
 
 export default ToggleButton;

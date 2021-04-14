@@ -3,6 +3,7 @@
 exports[`<Search /> render() render the Search component 1`] = `
 <div
   className="ce-search"
+  style={Object {}}
 >
   <label
     htmlFor="test"
@@ -31,6 +32,8 @@ exports[`<Search /> render() render the Search component 1`] = `
         color="inverted"
         name="search"
         size="large"
+        style={Object {}}
+        title=""
       />
     </button>
   </div>

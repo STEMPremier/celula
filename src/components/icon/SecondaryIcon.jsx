@@ -68,7 +68,15 @@ function nameOrText(props, propName, componentName = 'SecondaryIcon') {
  * These light icons are mostly used as an actionable element.
  * Alternatively, they can be used as avatars or indicators with two varying gradient options.
  */
-const SecondaryIcon = ({ className, color, name, size, text, title }) => {
+const SecondaryIcon = ({
+  className,
+  color,
+  name,
+  size,
+  style,
+  text,
+  title,
+}) => {
   /* eslint-disable prettier/prettier */
   const classes = cx(
     'ce-icon',
@@ -100,7 +108,11 @@ const SecondaryIcon = ({ className, color, name, size, text, title }) => {
     return contents;
   };
 
-  return <span className={classes}>{renderContents()}</span>;
+  return (
+    <span className={classes} style={style}>
+      {renderContents()}
+    </span>
+  );
 };
 
 SecondaryIcon.propTypes = {
@@ -123,6 +135,10 @@ SecondaryIcon.propTypes = {
   // size: PropTypes.oneOf(SIZES),
   size: PropTypes.oneOf(['small', 'large', 'jumbo']),
   /**
+   * Any inline styles you would like to add to the `<SecondaryIcon />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  /**
    * Up to 2 characters you would like in the `<SecondaryIcon />`, rather than a predefined one.
    */
   text: nameOrText,
@@ -142,6 +158,7 @@ SecondaryIcon.defaultProps = {
   color: 'primary',
   name: '',
   size: 'small',
+  style: {},
   text: '',
   title: '',
 };

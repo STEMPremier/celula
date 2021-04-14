@@ -28,7 +28,7 @@ import './icon.less';
 /** Bold icons are used with a gradient background circle.
  * These icons can be actionable or used as a static element.
  */
-const ProductIcon = ({ className, name, size, title }) => {
+const ProductIcon = ({ className, name, size, style, title }) => {
   const classes = cx(
     'ce-icon',
     'ce-icon__product',
@@ -39,7 +39,7 @@ const ProductIcon = ({ className, name, size, title }) => {
   );
 
   return (
-    <span className={classes}>
+    <span className={classes} style={style}>
       <svg aria-hidden={!title} className="ce-icon--white" role="img">
         <title>{title || name}</title>
         <use xlinkHref={`#icons_product-${name}`} />
@@ -89,6 +89,10 @@ ProductIcon.propTypes = {
   // size: PropTypes.oneOf(SIZES),
   size: PropTypes.oneOf(['small', 'large', 'jumbo']),
   /**
+   * Any inline styles you would like to add to the `<Producticon />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  /**
    * By default, we hide ProductIcons from assitive technologies,
    * such as screen readers, because there should be useful text
    * associated with most icons.
@@ -102,6 +106,7 @@ ProductIcon.propTypes = {
 ProductIcon.defaultProps = {
   className: '',
   size: 'small',
+  style: {},
   title: '',
 };
 

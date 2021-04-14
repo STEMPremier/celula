@@ -3,6 +3,7 @@
 exports[`<ErrorBox /> render() render the ErrorBox component 1`] = `
 <div
   className="ce-errorbox"
+  style={Object {}}
 >
   <div
     className="ce-errorbox__container"

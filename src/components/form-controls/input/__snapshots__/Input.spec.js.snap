@@ -3,6 +3,7 @@
 exports[`<Input /> render() render the Input component 1`] = `
 <div
   className="ce-input ce-input--text"
+  style={Object {}}
 >
   <label
     htmlFor="test"

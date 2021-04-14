@@ -8,6 +8,7 @@ exports[`<SubmitButton /> render() renders the component 1`] = `
   handleClick={[Function]}
   htmlType="submit"
   size="small"
+  style={Object {}}
   type="solid"
 >
   click me

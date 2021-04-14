@@ -3,6 +3,7 @@
 exports[`<Switch /> render() render the Switch component 1`] = `
 <div
   className="ce-switch"
+  style={Object {}}
 >
   <input
     checked={false}

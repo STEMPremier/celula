@@ -34,6 +34,7 @@ const Switch = ({
   handleChange: handler,
   label,
   name,
+  style,
   value,
 }) => {
   const [isChecked, setIsChecked] = useState(checked);
@@ -60,7 +61,7 @@ const Switch = ({
   };
 
   return (
-    <div className={classes}>
+    <div className={classes} style={style}>
       <input
         className="switch"
         checked={isChecked}
@@ -109,6 +110,10 @@ Switch.propTypes = {
    */
   name: PropTypes.string,
   /**
+   * Any inline styles you would like to add to the `<Switch />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  /**
    * The value of the `<Switch />`.
    */
   value: PropTypes.oneOfType([
@@ -125,6 +130,7 @@ Switch.defaultProps = {
   errorMsg: '',
   handleChange: () => {},
   name: 'name',
+  style: {},
 };
 
 export default Switch;

@@ -4,10 +4,18 @@ exports[`<CircularLoader /> render() renders the component 1`] = `
 <Fragment>
   <div
     className="ce-circular-loader"
+    style={Object {}}
   >
     <svg
+      aria-labelledby="ce-cl-title"
+      role="img"
       viewBox="0 0 38 38"
     >
+      <title
+        id="ce-cl-title"
+      >
+        Circular Loader
+      </title>
       <defs>
         <filter
           id="shadow"

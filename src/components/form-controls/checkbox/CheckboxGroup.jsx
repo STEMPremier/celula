@@ -36,6 +36,7 @@ const CheckboxGroup = ({
   label,
   name,
   selectedValues,
+  style,
   // validators
 }) => {
   const classes = cx(
@@ -57,6 +58,7 @@ const CheckboxGroup = ({
       label={label}
       name={name}
       selectedValues={selectedValues}
+      style={style}
     >
       {children}
     </FormControlGroup>
@@ -105,6 +107,10 @@ CheckboxGroup.propTypes = {
   selectedValues: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   ),
+  /**
+   * Any inline styles you would like to add to the `<CheckboxGroup />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   // validators: PropTypes.array,
 };
 
@@ -115,6 +121,7 @@ CheckboxGroup.defaultProps = {
   formId: '',
   handleChange: () => {},
   selectedValues: [],
+  style: {},
   // validators: [],
 };
 

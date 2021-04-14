@@ -58,6 +58,7 @@ const Alert = ({
   dismissible,
   text,
   linkOptions: { linkName, address },
+  style,
 }) => {
   const hasIcon = icon !== '';
   const showLink = linkName !== '' && address !== '';
@@ -77,7 +78,7 @@ const Alert = ({
   );
 
   return (
-    <div>
+    <div style={style}>
       {isVisible && (
         <div className={classes}>
           {hasIcon && (
@@ -175,7 +176,11 @@ Alert.propTypes = {
    */
   linkOptions: allLinkOptions,
   /**
-   * The text is the message that will display in the alert.
+   * Any inline styles you would like to add to the `<Alert />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  /**
+   * The text is the message that will display in the `<Alert />`.
    */
   text: PropTypes.string.isRequired,
   /**
@@ -190,6 +195,7 @@ Alert.defaultProps = {
   dismissible: undefined,
   icon: '',
   linkOptions: { linkName: '', address: '' },
+  style: {},
   type: 'info',
 };
 

@@ -21,6 +21,7 @@ exports[`<ToggleButton render() render the ToggleButtonGroup and Toggle componen
       "follow",
     ]
   }
+  style={Object {}}
 >
   <ToggleButton
     checked={false}
@@ -29,6 +30,7 @@ exports[`<ToggleButton render() render the ToggleButtonGroup and Toggle componen
     icon="export"
     isA="radio"
     size="large"
+    style={Object {}}
     value="export"
   />
   <ToggleButton
@@ -38,6 +40,7 @@ exports[`<ToggleButton render() render the ToggleButtonGroup and Toggle componen
     icon="follow"
     isA="radio"
     size="large"
+    style={Object {}}
     value="follow"
   />
   <ToggleButton
@@ -47,6 +50,7 @@ exports[`<ToggleButton render() render the ToggleButtonGroup and Toggle componen
     icon="message"
     isA="radio"
     size="large"
+    style={Object {}}
     value="message"
   />
 </FormControlGroup>
