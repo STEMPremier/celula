@@ -245,7 +245,7 @@ Modal.defaultProps = {
 // The function that does the magic.
 export default (root = '#app-root') => {
   // Tell `react-modal` where it can Portal into.
-  ReactModal.setAppElement(root);
+  if (process.env.NODE_ENV !== 'test') ReactModal.setAppElement(root);
 
   // Then just return the component. You can then just use it; like any other compnent.
   return Modal;
