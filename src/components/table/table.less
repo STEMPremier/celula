@@ -58,7 +58,7 @@
       // desktop
       @media screen and (min-width: 765px) {
         align-items: center;
-        height: 5rem;
+        min-height: 5rem;
         padding-left: 2.1rem;
       }
 
@@ -98,6 +98,12 @@
 
         .ce-table__cell-body {
           font-size: 1.4rem;
+
+          // desktop
+          @media screen and (min-width: 765px) {
+            margin-bottom: 1.8rem;
+            margin-top: 1.8rem;
+          }
 
           // mobile
           @media screen and (max-width: 765px) {
