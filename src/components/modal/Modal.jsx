@@ -31,30 +31,13 @@ import Button from '../button';
 import Container from '../container';
 import { SystemIcon } from '../icon';
 
+import { functionOrUndef } from '../../utils/propValidators';
 import { SIZES } from '../../utils/constants';
 
 import './modal.less';
 
 const modalSizes = ['default', ...SIZES];
 
-// A custom prop validator for the Modal.
-// We need to check and see if a prop contains a value of undefined, (vs being undefined itself), or a function.
-function functionOrUndef(props, propName, componentName = 'Modal') {
-  let error;
-
-  if (
-    typeof props[propName] !== 'undefined' &&
-    typeof props[propName] !== 'function'
-  ) {
-    error = new Error(
-      `Invalid prop ${propName} supplied to ${componentName} Validation failed.`,
-    );
-  }
-
-  return error;
-}
-
-// The modal itself.
 /**
  * Standard modals can contain a heading, description text, inputs, various content blocks and a button. Modals are
  * fixed position to the parent page and horizontally centered. These modals also have an option to scroll within
