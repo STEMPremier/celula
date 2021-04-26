@@ -92,6 +92,7 @@ const Modal = ({
         className={classes}
         contentLabel={title}
         isOpen={visible}
+        onRequestClose={hideModal}
         overlayClassName="ce-modal-overlay"
         parentSelector={findParent}
         shouldFocusAfterRender
