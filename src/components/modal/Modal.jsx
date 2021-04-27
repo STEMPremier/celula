@@ -96,7 +96,7 @@ const Modal = ({
         overlayClassName="ce-modal-overlay"
         parentSelector={findParent}
         shouldFocusAfterRender
-        shouldCloseOnOverlayClick
+        shouldCloseOnOverlayClick={false}
         shouldCloseOnEsc
         shouldReturnFocusAfterClose
         style={{ content: style }}
