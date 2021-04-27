@@ -89,6 +89,7 @@ const Modal = ({
   return (
     <>
       <ReactModal
+        bodyOpenClassName="ce-modal--open"
         className={classes}
         contentLabel={title}
         isOpen={visible}
