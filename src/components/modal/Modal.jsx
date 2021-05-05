@@ -61,6 +61,7 @@ const Modal = ({
   triggerType = 'solid',
 }) => {
   const [visible, setVisibility] = useState(isOpen);
+  const [overflowCache, setOverflowCache] = useState('');
   const classes = cx(
     'ce-modal',
     {
@@ -73,8 +74,19 @@ const Modal = ({
     setVisibility(isOpen);
   }, [isOpen]);
 
-  const showModal = () => setVisibility(true);
-  const hideModal = () => setVisibility(false);
+  const showModal = () => {
+    setVisibility(true);
+    setOverflowCache(document.body.style.overflow);
+
+    document.body.style.overflow = 'hidden';
+  };
+
+  const hideModal = () => {
+    setVisibility(false);
+
+    document.body.style.overflow = overflowCache;
+  };
+
   const modalAction = () => {
     const action = actionFn || hideModal;
 
@@ -89,7 +101,6 @@ const Modal = ({
   return (
     <>
       <ReactModal
-        bodyOpenClassName="ce-modal--open"
         className={classes}
         contentLabel={title}
         isOpen={visible}
