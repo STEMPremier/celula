@@ -1,0 +1,71 @@
+@import '../../styles/celula';
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+};
+
+.ce-chip {
+  align-items: center;
+  background-color: @catskill-white;
+  border-radius: 1.8rem;
+  box-sizing: border-box;
+  display: inline-flex;
+  padding: 0.7rem 2rem;
+
+  .ce-chip__label {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+
+  .ce-chip__action, .ce-chip__icon {
+    display: inline-block;
+    height: 1.4rem;
+    line-height: 1.4rem;
+
+    .ce__icon {
+      height: 1.4rem;
+      line-height: 1.4rem;
+      width: 1.4rem;
+
+      svg {
+        height: 1.4rem;
+        width: 1.4rem;
+      }
+    }
+  }
+
+  &.ce-chip--selectable {
+    .ce-chip__action, .ce-chip__label {
+      cursor: pointer;
+    }
+  }
+
+  &.ce-chip--selected {
+    background-color: #192344;
+    color: #fff;
+
+    .ce-chip__action, .ce-chip__icon {
+      .ce-icon svg {
+        stroke: #fff;
+      }
+    }
+  }
+
+  .ce-chip__icon {
+    margin-right: 1rem;
+  }
+
+  .ce-chip__action {
+    background-color: transparent;
+    margin-left: 1.8rem;
+  }
+
+  input {
+    .sr-only
+  }
+}

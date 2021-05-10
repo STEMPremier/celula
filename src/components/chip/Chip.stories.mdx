@@ -1,0 +1,71 @@
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks';
+import Chip from '.';
+import { action } from '@storybook/addon-actions';
+import { boolean, text } from '@storybook/addon-knobs';
+
+<Meta component={Chip} title="Components/Atoms/Chip" />
+
+# Chip
+
+<Description of={Chip} />
+<ArgsTable of={Chip} />
+
+<Story name="Chip with Knobs" parameters={{ docs: { disable: true } }}>
+  <Chip
+    checked={boolean('checked', false)}
+    className={text('className', '')}
+    icon={text('icon', 'hobby')}
+    label={text('label', 'Engineering')}
+    selectable={boolean('selectable', false)}
+    value={text('value', 'engineering')}
+  />
+</Story>
+
+## Types
+
+### Default
+<Canvas>
+  <Story name="Default Chip">
+    <Chip label="Exclamation" />
+  </Story>
+</Canvas>
+
+### Selectable
+A selectable `Chip` acts like a (single) checkbox. A clickable icon to clear the selection is also shown.
+<Canvas>
+  <Story name="Selectable Chip">
+    <Chip label="Selection" name="off" selectable />
+  </Story>
+  <Story name="Selectable Chip - checked">
+    <Chip checked label="Selection" name="On" selectable />
+  </Story>
+</Canvas>
+
+### Actionable
+<Canvas>
+  <Story name="Actionable Chip">
+    <Chip label="Action" actionFn={action('Actionable Chip action function triggered.')} />
+  </Story>
+</Canvas>
+
+## Options
+
+### Icon
+Any type of `Chip` may also include an icon along side the label.
+<Canvas>
+  <Story name="Default Chip w/Icon">
+    <Chip label="Out of Stock" icon="warning" />
+  </Story>
+  <Story name="Selectable Chip w/Icon">
+    <Chip icon="badges" label="Most Improved" selectable />
+  </Story>
+  <Story name="Action Chip w/Icon">
+    <Chip actionFn={action('Actionable Chip w/Icon action function triggered.')} icon="filter" label="Engineering" />
+  </Story>
+</Canvas>
