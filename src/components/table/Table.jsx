@@ -24,65 +24,8 @@ import { useTable, usePagination, useRowSelect } from 'react-table';
 
 import './table.less';
 
-import { Checkbox } from '../form-controls/checkbox';
 import Pagination from '../pagination';
-
-/**
- * A `useTable` compatible hook that will add a column of/for the checkbox. To be passed into the `useTable` hook.
- * @param {object} instance - a `useTable` instance object. It is not a class so much as a pile of arrays (of functions).
- */
-const useRowSelectComponent = (selectionHeaderFn, selectionFn) => instance => {
-  // visibleColumns (a property on the instance object) is an array of functions. Each of which will allow you to decorate some aspect of the columns. In our case, we are adding a checkbox to the beginning of each row.
-  instance.visibleColumns.push(decorators => [
-    // This object is a 'constructor' for a column in the table. `useTable` will use the `Header` and `Cell` properties to determine what to put in our column. In our case they are components, but they could be strings.
-    /* eslint-disable react/display-name */
-    /* eslint-disable react/prop-types */
-    {
-      id: 'selection',
-      Header: ({
-        getToggleAllPageRowsSelectedProps,
-        page,
-        toggleAllPageRowsSelected,
-      }) => {
-        const rows = page.map(row => row.original);
-
-        return (
-          <Checkbox
-            {...getToggleAllPageRowsSelectedProps({
-              label: 'label',
-              /* When we override the deafult onChange handler provided by useRowSelect,
-               * we have to manually trigger the toggleRowSelected function manually.
-               */
-              onChange: event => {
-                toggleAllPageRowsSelected();
-                selectionHeaderFn(rows, event);
-              },
-              value: 'allRows[]',
-            })}
-          />
-        );
-      },
-      Cell: ({ row }) => (
-        <Checkbox
-          {...row.getToggleRowSelectedProps({
-            label: row.id,
-            /* When we override the deafult onChange handler provided by useRowSelect,
-             * we have to manually trigger the toggleRowSelected function manually.
-             */
-            onChange: event => {
-              row.toggleRowSelected(event.target.checked);
-              selectionFn(row.original, event);
-            },
-            value: row.id,
-          })}
-        />
-      ),
-    },
-    /* eslint-enable react/prop-types */
-    /* eslint-enable react/display-name */
-    ...decorators,
-  ]);
-};
+import useRowSelectComponent from './useRowSelectComponet';
 
 /**
  * `Tables` display information in a grid-like format of rows and columns. They organize information in a way that’s easy to scan, so that users can look for patterns and insights. Tables can contain interactive components (such as chips, buttons, or menus), non-interactive elements (such as badges).
