@@ -22,10 +22,11 @@ import cx from 'classnames';
 
 import { useTable, usePagination, useRowSelect } from 'react-table';
 
-import './table.less';
-
 import Pagination from '../pagination';
 import useRowSelectComponent from './useRowSelectComponet';
+import { functionOrUndef } from '../../utils/propValidators';
+
+import './table.less';
 
 /**
  * `Tables` display information in a grid-like format of rows and columns. They organize information in a way that’s easy to scan, so that users can look for patterns and insights. Tables can contain interactive components (such as chips, buttons, or menus), non-interactive elements (such as badges).
@@ -35,16 +36,33 @@ import useRowSelectComponent from './useRowSelectComponet';
  */
 const Table = ({
   className,
-  columns,
-  data,
-  pageSize,
   clickable,
   clickFn,
+  columns,
+  data,
+  fetchData,
+  pageCount: serversidePageCount, // serverside pagination
+  pageSize: clientsidePageSize, // uncontrolled from outside
   selectable,
   selectionHeaderFn,
   selectionFn,
   style,
 }) => {
+  const options = {
+    columns,
+    data,
+  };
+
+  let controlled = false;
+
+  // If we have both pageCount and fetchData, we assume server-side pagination.
+  if (serversidePageCount && fetchData) {
+    options.manualPagination = true;
+    options.pageCount = serversidePageCount;
+
+    controlled = true;
+  }
+
   const {
     getTableProps,
     getTableBodyProps,
@@ -58,18 +76,21 @@ const Table = ({
     nextPage,
     previousPage,
     setPageSize,
-    state: { pageIndex },
+    state: { pageIndex, pageSize },
   } = useTable(
-    {
-      columns,
-      data,
-    },
+    options,
     usePagination,
     useRowSelect,
     useRowSelectComponent(selectionHeaderFn, selectionFn),
   );
 
-  useEffect(() => setPageSize(pageSize), [pageSize]);
+  // When (if) the prop pageSize changes, tell the Table
+  useEffect(() => setPageSize(clientsidePageSize), [clientsidePageSize]);
+
+  // When (if) any one of (prop) fetchData, (the react-table states) pageIndex, or pageSize changes, fetch new data.
+  useEffect(() => {
+    if (controlled) fetchData({ pageIndex, pageSize });
+  }, [fetchData, pageIndex, pageSize]);
 
   const classes = cx(
     'ce-table',
@@ -165,61 +186,71 @@ const Table = ({
 
 Table.propTypes = {
   /**
-   * A class name, or string of class names, to add to the `<Table />`.
+   * A class name, or string of class names, to add to the `Table`.
    */
   className: PropTypes.string,
   /**
-   * An array for the column definition of your `<Table />`.
+   * An array for the column definition of your `Table`.
    */
   columns: PropTypes.arrayOf(PropTypes.object).isRequired,
   /**
-   * An array of data (objects) for the `<Table />`.
+   * An array of data (objects) for the `Table`.
    */
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
   /**
-   * The number of items per page in the `<Table />`.
+   * A function the `Table` uses to fetch data. This is only used when utilizing server-side pagination.
+   */
+  fetchData: functionOrUndef,
+  /**
+   * Used to tell the `Table` how many pages are there when utilizing server-side pagination.
+   */
+  pageCount: PropTypes.number,
+  /**
+   * The number of items per page in the `Table`.
    */
   pageSize: PropTypes.number,
   /**
-   * Make the rows in the `<Table />` clickable.
+   * Make the rows in the `Table` clickable.
    */
   clickable: PropTypes.bool,
   /**
-   * A function to trigger when clicking on a row in the `<Table />`.
+   * A function to trigger when clicking on a row in the `Table`.
    * The function accepts 2 arguments, `row` and `event`, in that order: `(row, event) => {}`.
    *
-   * @param {row} object - The row object for this row of the table.
+   * @param {row} object - The row object for this row of the `Table`.
    * @param {event} object - The event triggered by the click on the row.
    */
   clickFn: PropTypes.func,
   /**
-   * Adds a checkbox in the `<Table />`, as the first column.
+   * Adds a checkbox in the `Table`, as the first column.
    */
   selectable: PropTypes.bool,
   /**
-   * A function to trigger when clicking on the checkbox in the header row in the `<Table />`.
+   * A function to trigger when clicking on the checkbox in the header row in the `Table`.
    * The function accepts 2 arguments, `row` and `event`, in that order: `(row, event) => {}`.
    *
-   * @param {row} object - The row object for this row of the table.
+   * @param {row} object - The row object for this row of the `Table`.
    * @param {event} object - The event triggered by the click on the row.
    */
   selectionHeaderFn: PropTypes.func,
   /**
-   * A function to trigger when clicking on the checkbox in a row in the `<Table />`.
+   * A function to trigger when clicking on the checkbox in a row in the `Table`.
    * The function accepts 2 arguments, `rows` and `event`, in that order: `(row, event) => {}`.
    *
-   * @param {rows} object - The row object for this row of the table.
+   * @param {rows} object - The row object for this row of the `Table`.
    * @param {event} object - The event triggered by the click on the row.
    */
   selectionFn: PropTypes.func,
   /**
-   * Any inline styles you would like to add to the `<Table />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `Table`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
 Table.defaultProps = {
   className: '',
+  fetchData: undefined,
+  pageCount: 0,
   pageSize: 10,
   clickable: false,
   clickFn: () => {},
