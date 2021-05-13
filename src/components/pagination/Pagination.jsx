@@ -32,7 +32,7 @@ const Pagination = ({
   className,
   canNextPage,
   canPreviousPage,
-  currentPage,
+  currentPage: page,
   gotoPage,
   nextPage,
   pageCount,
@@ -40,6 +40,9 @@ const Pagination = ({
   style,
 }) => {
   const classes = cx('ce-pagination', className);
+  // Pagination accepts a 0-index currentPage, to work with Tallo's serverside, and react-table's clientside pagination's 0-index page
+  // numbers/index. However I found it way easier to work with/think about/reason about 1-indexed page numbers/index.
+  const currentPage = page + 1;
 
   const renderNumbers = () => {
     const elements = [];
@@ -204,7 +207,7 @@ Pagination.propTypes = {
    */
   canPreviousPage: PropTypes.bool,
   /**
-   * A class name, or string of class names, to add to the `<Pagination />`.
+   * A class name, or string of class names, to add to the `Pagination`.
    */
   className: PropTypes.string,
   /**
@@ -228,7 +231,7 @@ Pagination.propTypes = {
    */
   prevPage: PropTypes.func.isRequired,
   /**
-   * Any inline styles you would like to add to the `<Pagination />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `Pagination`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };

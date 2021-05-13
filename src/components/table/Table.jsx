@@ -41,8 +41,8 @@ const Table = ({
   columns,
   data,
   fetchData,
-  pageCount: serversidePageCount, // serverside pagination
-  pageSize: clientsidePageSize, // uncontrolled from outside
+  pageCount: serversidePageCount, // for serverside pagination
+  pageSize: clientsidePageSize, // for clientside pagination
   selectable,
   selectionHeaderFn,
   selectionFn,
@@ -170,10 +170,7 @@ const Table = ({
         <Pagination
           canPreviousPage={canPreviousPage}
           canNextPage={canNextPage}
-          currentPage={
-            /* Pagination expects currentPage to be 1-index, and react-table provides the number 0-indexed */
-            pageIndex + 1
-          }
+          currentPage={pageIndex}
           gotoPage={navToPage}
           nextPage={nextPage}
           pageCount={pageCount}
