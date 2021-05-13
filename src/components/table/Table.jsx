@@ -101,7 +101,7 @@ const Table = ({
     className,
   );
 
-  const navToPage = pg => gotoPage(pg - 1);
+  const navToPage = pg => gotoPage(pg);
 
   return (
     <>

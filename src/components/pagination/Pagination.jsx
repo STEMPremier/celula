@@ -127,16 +127,18 @@ const Pagination = ({
           default:
         }
 
+        /* eslint-disable prettier/prettier */
         elements.push(
           <li className={classList} key={i}>
             <button
               type="button"
-              onClick={() => gotoPage(navToPage) /* The pages are 0-indexed */}
+              onClick={() => gotoPage(navToPage - 1) /* Internally pages are 1-index, but externally they are 0-index. */}
             >
               {label}
             </button>
           </li>,
         );
+        /* eslint-enable prettier/prettier */
       }
     } else {
       for (let i = 1; i <= pageCount; i++) {
