@@ -22,6 +22,7 @@ import cx from 'classnames';
 
 import { useTable, usePagination, useRowSelect } from 'react-table';
 
+import CircularLoader from '../circular-loader';
 import Pagination from '../pagination';
 import useRowSelectComponent from './useRowSelectComponet';
 import { functionOrUndef } from '../../utils/propValidators';
@@ -41,6 +42,7 @@ const Table = ({
   columns,
   data,
   fetchData,
+  loading,
   pageCount: serversidePageCount, // for serverside pagination
   pageSize: clientsidePageSize, // for clientside pagination
   selectable,
@@ -51,16 +53,14 @@ const Table = ({
   const options = {
     columns,
     data,
+    initialState: { pageIndex: 0 },
   };
-
-  let controlled = false;
 
   // If we have both pageCount and fetchData, we assume server-side pagination.
   if (serversidePageCount && fetchData) {
+    console.log('using serverside (controlled) pagination');
     options.manualPagination = true;
     options.pageCount = serversidePageCount;
-
-    controlled = true;
   }
 
   const {
@@ -89,7 +89,7 @@ const Table = ({
 
   // When (if) any one of (prop) fetchData, (the react-table states) pageIndex, or pageSize changes, fetch new data.
   useEffect(() => {
-    if (controlled) fetchData({ pageIndex, pageSize });
+    if (fetchData) fetchData({ pageIndex, pageSize });
   }, [fetchData, pageIndex, pageSize]);
 
   const classes = cx(
@@ -129,6 +129,7 @@ const Table = ({
 
         {/* table body */}
         <div className="ce-table__body" {...getTableBodyProps()}>
+          {loading && <CircularLoader indeterminate />}
           {page.map(row => {
             prepareRow(row);
 
@@ -199,6 +200,10 @@ Table.propTypes = {
    */
   fetchData: functionOrUndef,
   /**
+   * The loading state of a `Table` with controlled pagination.
+   */
+  loading: PropTypes.bool,
+  /**
    * Used to tell the `Table` how many pages are there when utilizing server-side pagination.
    */
   pageCount: PropTypes.number,
@@ -247,6 +252,7 @@ Table.propTypes = {
 Table.defaultProps = {
   className: '',
   fetchData: undefined,
+  loading: false,
   pageCount: 0,
   pageSize: 10,
   clickable: false,
