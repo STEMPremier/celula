@@ -58,7 +58,6 @@ const Table = ({
 
   // If we have both pageCount and fetchData, we assume server-side pagination.
   if (serversidePageCount && fetchData) {
-    console.log('using serverside (controlled) pagination');
     options.manualPagination = true;
     options.pageCount = serversidePageCount;
   }
