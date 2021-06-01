@@ -19,7 +19,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import './loader.less';
+import './circular-loader.less';
 
 const INITIAL_OFFSET = 25; // The default starting place to draw the progess line is '3 o'clock'. This moves it back to '12'.
 const circleConfig = {
