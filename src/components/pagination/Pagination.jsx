@@ -138,7 +138,6 @@ const Pagination = ({
             </button>
           </li>,
         );
-        /* eslint-enable prettier/prettier */
       }
     } else {
       for (let i = 1; i <= pageCount; i++) {
@@ -149,11 +148,15 @@ const Pagination = ({
             }`}
             key={i}
           >
-            <button type="button" onClick={() => gotoPage(i - 1)}>
+            <button
+              type="button"
+              onClick={() => gotoPage(i - 1) /* Internally pages are 1-index, but externally they are 0-index. */}
+            >
               {i}
             </button>
           </li>,
         );
+        /* eslint-enable prettier/prettier */
       }
     }
 
