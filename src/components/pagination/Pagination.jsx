@@ -149,13 +149,7 @@ const Pagination = ({
             }`}
             key={i}
           >
-            <button
-              type="button"
-              onClick={() => {
-                console.log('PAGINATION: go to page', i);
-                gotoPage(i - 1);
-              }}
-            >
+            <button type="button" onClick={() => gotoPage(i - 1)}>
               {i}
             </button>
           </li>,
