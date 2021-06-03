@@ -132,7 +132,7 @@ const Pagination = ({
           <li className={classList} key={i}>
             <button
               type="button"
-              onClick={() => { console.log('PAGINATION: navToPage', navToPage); gotoPage(navToPage - 1); } /* Internally pages are 1-index, but externally they are 0-index. */}
+              onClick={() => gotoPage(navToPage - 1) /* Internally pages are 1-index, but externally they are 0-index. */}
             >
               {label}
             </button>
@@ -149,7 +149,13 @@ const Pagination = ({
             }`}
             key={i}
           >
-            <button type="button" onClick={() => gotoPage(i)}>
+            <button
+              type="button"
+              onClick={() => {
+                console.log('PAGINATION: go to page', i);
+                gotoPage(i - 1);
+              }}
+            >
               {i}
             </button>
           </li>,
