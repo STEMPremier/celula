@@ -1,0 +1,54 @@
+@import '../../styles/celula';
+
+.ce-linear-loader {
+  width: 100%;
+}
+
+.ce-ll__track, .ce-ll__fill {
+  border-radius: 5rem;
+  height: .6rem;
+  margin: 0;
+}
+
+// background
+.ce-ll__track {
+  background: #d2d3d4;
+  display: flex;
+  width: 100%;
+}
+
+// fill behavior
+.ce-ll-percentage span {
+  transition: width 1s ease-in-out;
+}
+
+.ce-ll-indeterminate .ce-ll__track span {
+  animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+// fill color
+.ce-ll__fill-cool {
+  background: @gradient-cool;
+}
+
+.ce-ll__fill-warm {
+  background: @gradient-warm;
+}
+
+.ce-ll__fill-hot {
+  background: @gradient-hot;
+}
+
+// indeterminate loader behavior
+@keyframes running-progress {
+  0% { margin-left: 0px; margin-right: 100%; }
+  50% { margin-left: 25%; margin-right: 0%; }
+  100% { margin-left: 100%; margin-right: 0; }
+}
+
+// legend
+.ce-ll__legend {
+  color: @primary-text;
+  display: inline-block;
+  margin-bottom: .6rem;
+}
