@@ -120,7 +120,7 @@ Chip.propTypes = {
   /**
    * An icon to include on the left side of the `<Chip />`.
    */
-  // icon: PropTypes.oneOf([...TYPES, '']),
+  // icon: PropTypes.oneOf([...ICONS, '']),
   icon: PropTypes.oneOf([
     'share',
     'preview',
