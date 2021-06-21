@@ -21,10 +21,14 @@ import cx from 'classnames';
 
 import './{{lowerCase componentName}}.less';
 
-const {{properCase componentName}} = ({ className }) => {
+const {{properCase componentName}} = ({ className, style }) => {
   const classes = cx('ce-{{lowerCase componentName}}', className);
 
-  return <div className={classes}>I am a {{properCase componentName}}.</div>;
+  return (
+    <div className={classes} style={style}>
+      I am a {{properCase componentName}}.
+    </div>
+  );
 };
 
 {{properCase componentName}}.propTypes = {
