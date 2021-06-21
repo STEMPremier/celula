@@ -20,7 +20,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import { SystemIcon } from '../icon';
-import { SIZES } from '../../utils/constants';
+import { SIZES /* , SYSTEM_ICONS */ } from '../../utils/constants';
 
 import './toggle-button.less';
 
@@ -79,7 +79,39 @@ ToggleButton.propTypes = {
   /**
    * The `<ToggleButton />` icon.
    */
-  icon: PropTypes.string.isRequired,
+  // icon: PropTypes.oneOf(SYSTEM_ICONS).isRequired,
+  icon: PropTypes.oneOf([
+    'share',
+    'preview',
+    'export',
+    'follow',
+    'message',
+    'badges',
+    'website',
+    'edit',
+    'clear',
+    'navigate',
+    'down',
+    'up',
+    'user',
+    'visibility',
+    'help',
+    'close',
+    'calendar',
+    'warning',
+    'add',
+    'filter',
+    'menu',
+    'search',
+    'tutorial',
+    'yes',
+    'no',
+    'hobby',
+    'interest',
+    'outdoor',
+    'indoor',
+    'popular',
+  ]).isRequired,
   /**
    * This component is to be treated as a radio button in `<FormControlGroup />`.
    * @ignore
