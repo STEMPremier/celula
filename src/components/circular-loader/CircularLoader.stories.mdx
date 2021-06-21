@@ -5,160 +5,84 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks';
-import { action } from '@storybook/addon-actions';
-import { boolean, number, select, text } from '@storybook/addon-knobs';
 
 import CircularLoader from '.';
 
-<Meta component={CircularLoader} title="Components/Atoms/CircularLoader" />
+<Meta
+  args={{ percentage: 83 }}
+  component={CircularLoader}
+  title="Components/Atoms/CircularLoader"
+/>
 
 # CircularLoader
-
 <Description of={CircularLoader}/>
 
-**Note**: All of the loaders are svg's, and have no predetermined width or height. They will expand to the size avaliable to them.
-<ArgsTable of={CircularLoader}/>
+**Note**: All of the `CircularLoaders` are svgs, and have no predetermined width or height. They
+will expand to the size avaliable to them.
 
-<Story name="CircularLoader with Knobs" parameters={{ docs: { disable: true } }}>
-  <CircularLoader
-    className={text('className', '')}
-    color={select('color', ['cool', 'warm', 'hot'], 'cool')}
-    indeterminate={boolean('indeterminate', false)}
-    legend={text('legend', '')}
-    showPercentage={boolean('showPercentage', false)}
-    percentage={number('percentage', 83)}
-  />
-</Story>
+<Canvas>
+  <Story name="CircularLoader with Controls">
+    {args => <CircularLoader {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="CircularLoader with Controls" />
 
 ## Progress Loader
-
 Progress loaders fill the circular track with color, as progress moves from 0% to 100%.
 
 <Canvas>
-  <Story name="Progress Loader">
+  <Story name="Progress CircularLoader">
     <div style={{maxWidth:'200px'}}>
-      <CircularLoader
-        percentage={83}
-      />
-    </div>
-  </Story>
-</Canvas>
-
-### Colors
-
-<Canvas>
-  <Story name="Cool Progress Loader (Default)">
-    <div style={{maxWidth:'200px'}}>
-      <CircularLoader
-        color="cool"
-        percentage={83}
-      />
-    </div>
-  </Story>
-  <Story name="Warm Progress Loader">
-    <div style={{maxWidth:'200px'}}>
-      <CircularLoader
-        color="warm"
-        percentage={83}
-      />
-    </div>
-  </Story>
-  <Story name="Hot Progress Loader">
-    <div style={{maxWidth:'200px'}}>
-      <CircularLoader
-        color="hot"
-        percentage={83}
-      />
-    </div>
-  </Story>
-</Canvas>
-
-### Options
-
-A Circular Loader may optionally display the percentage complete, and/or a legend.
-
-<Canvas>
-  <Story name="Progress Loader with Percentage">
-    <div style={{maxWidth:'200px'}}>
-      <CircularLoader
-        showPercentage={true}
-        percentage={83}
-      />
-    </div>
-  </Story>
-  <Story name="Progress Loader with a Legend">
-    <div style={{maxWidth:'200px'}}>
-      <CircularLoader
-        legend="Please wait..."
-        percentage={83}
-      />
-    </div>
-  </Story>
-  <Story name="Progress Loader with Everything">
-    <div style={{maxWidth:'200px'}}>
-      <CircularLoader
-        legend="Please wait..."
-        showPercentage={true}
-        percentage={83}
-      />
+      <CircularLoader percentage={83} />
     </div>
   </Story>
 </Canvas>
 
 ## Indeterminate Loader
 
-Indeterminate loaders spin in place, while progress is being made.
-
 <Canvas>
-  <Story name="Indeterminate Loader">
+  <Story name="Indeterminate CircularLoader">
     <div style={{maxWidth:'200px'}}>
-      <CircularLoader
-        indeterminate={true}
-      />
+      <CircularLoader indeterminate />
     </div>
   </Story>
 </Canvas>
 
-### Colors
+## Colors
+A `CircularLoader` may come in any of our gradients.
 
 <Canvas>
-  <Story name="Cool Indeterminate Loader (Default)">
+  <Story name="Cool CircularLoader">
     <div style={{maxWidth:'200px'}}>
-      <CircularLoader
-        color="cool"
-        indeterminate={true}
-      />
+      <CircularLoader color="cool" percentage={83} />
     </div>
   </Story>
-  <Story name="Warm Indeterminate Loader">
+  <Story name="Warm CircularLoader">
     <div style={{maxWidth:'200px'}}>
-      <CircularLoader
-        color="warm"
-        indeterminate={true}
-      />
+      <CircularLoader color="warm" percentage={83} />
     </div>
   </Story>
-  <Story name="Hot Indeterminate Loader">
+  <Story name="Hot CircularLoader">
     <div style={{maxWidth:'200px'}}>
-      <CircularLoader
-        color="hot"
-        indeterminate={true}
-      />
+      <CircularLoader color="hot" percentage={83} />
     </div>
   </Story>
 </Canvas>
 
-### Options
-
-A Indeterminate Loader may optionally display a legend.
+## Options
+A `CircularLoader` may optionally display a legend, and/or (in the case you are using a progress
+loader) the percentage complete.
 
 <Canvas>
-  <Story name="Indeterminate Loader with a Legend">
+  <Story name="CircularLoader with Options">
     <div style={{maxWidth:'200px'}}>
-      <CircularLoader
-        indeterminate={true}
-        legend="Please wait..."
-      />
+      <CircularLoader legend="Please wait..." percentage={83} showPercentage={true} />
+    </div>
+  </Story>
+  <Story name="Indeterminate CircularLoader with a Legend">
+    <div style={{maxWidth:'200px'}}>
+      <CircularLoader indeterminate legend="Please wait..." />
     </div>
   </Story>
 </Canvas>

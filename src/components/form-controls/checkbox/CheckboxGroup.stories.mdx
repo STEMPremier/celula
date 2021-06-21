@@ -1,98 +1,88 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { array, boolean, text } from '@storybook/addon-knobs';
 
 import { Checkbox, CheckboxGroup } from '.';
 
-<Meta component={CheckboxGroup} title="Components/Molecules/Form Controls/CheckboxGroup"/>
+<Meta
+  args={{
+    children: [
+      <Checkbox label="Vim" value="vim" />,
+      <Checkbox label="Emacs" value="emacs" />,
+      <Checkbox label="VS Code" value="vscode" />,
+      <Checkbox label="Atom" value="atom" />,
+    ],
+    handleChange: action('CheckboxGroup changed!'),
+    label: 'What is your favorite Text Editor?',
+    name: 'withControls'
+  }}
+  component={CheckboxGroup}
+  title="Components/Molecules/Form Controls/CheckboxGroup"
+  subcomponents={{Checkbox}}
+/>
 
 # CheckboxGroup
 <Description of={CheckboxGroup} />
-<ArgsTable of={CheckboxGroup} />
 
-<Story name="CheckboxGroup with Knobs" parameters={{ docs: { disable: true } }}>
-  <form id="formKnobs">
-    <CheckboxGroup
-      className={text('className', '')}
-      disabled={boolean('disabled', false)}
-      errorMsg={text('errorMsg', '')}
-      formId={text('formId', 'formKnobs')}
-      handleChange={action('`CheckboxGroup with Knobs` onChange event triggered.')}
-      label={text('label', 'Favorite Food')}
-      name={text('name', 'favoriteFood')}
-      selectedValues={array('selectedValues', ["pizza", "hamburger"])}
-    >
-      <Checkbox label='Pizza' value='pizza' />
-      <Checkbox label='Hotdog' value='hotdog' />
-      <Checkbox label='Hamburger' value='hamburger' />
-      <Checkbox label='Coleslaw' value='coleslaw' />
-    </CheckboxGroup>
-  </form>
-</Story>
-
-## Colors and States
-
-### Default
 <Canvas>
-  <Story name="Default">
-    <CheckboxGroup
-      handleChange={value => console.log(value)}
-      label="Favorite Text Editor"
-      name="favoriteTextEditor"
-      selectedValues={['vim']}
-    >
-      <Checkbox label="Vim" value="vim" />
-      <Checkbox label="Emacs" value="emacs" />
-      <Checkbox label="VS Code" value="vscode" />
-      <Checkbox label="Atom" value="atom" />
-    </CheckboxGroup>
+  <Story name="CheckboxGroup with Controls">
+    {args => <CheckboxGroup {...args} />}
   </Story>
 </Canvas>
 
-### Disabled
-<Canvas>
-  <Story name="Disabled (Group)">
-    <CheckboxGroup
-      disabled
-      handleChange={value => console.log(value)}
-      label="Favorite Beatle (Disabled Checkbox Group)"
-      name="favoriteBeatle"
-      selectedValues={['george']}
-    >
-      <Checkbox label="John Lennon" value="john" />
-      <Checkbox label="Paul Mccartney" value="paul" />
-      <Checkbox label="George Harrison" value="george" />
-      <Checkbox label="Ringo Starr" value="ringo" />
-    </CheckboxGroup>
-  </Story>
-  <Story name="Disabled (Individual)">
-    <CheckboxGroup
-      handleChange={value => console.log(value)}
-      label="Favorite Beatle (Disabled Checkbox Individual)"
-      name="favoriteBeatle2"
-    >
-      <Checkbox label="John Lennon" value="john2" />
-      <Checkbox label="Paul Mccartney" value="paul2" />
-      <Checkbox label="George Harrison" value="george2" />
-      <Checkbox label="Ringo Starr (Disabled)" value="ringo2" disabled />
-    </CheckboxGroup>
-  </Story>
-</Canvas>
+<ArgsTable story="CheckboxGroup with Controls" />
 
-## Error
-<Canvas>
-  <Story name="Error">
-    <CheckboxGroup
-      errorMsg="Unable to set Vuejs as favorite framework."
-      handleChange={value => console.log(value)}
-      label="Favorite UI Framework"
-      name="favoriteFramework"
-      selectedValues={["react", "vue"]}
-    >
-      <Checkbox label="React" value="react" />
-      <Checkbox label="AngularJS" value="angularjs" />
-      <Checkbox label="Angular" value="angular" />
-      <Checkbox label="Vue" value="vue" />
-    </CheckboxGroup>
+## States
+A `CheckboxGroup` can be disabled, allow an individual `Checkbox` to be disabled, or show an error.
+
+<Canvas isColumn>
+  <Story
+    args={{
+      name: 'default',
+      selectedValues: ['vim'],
+    }}
+    name="Default CheckboxGroup"
+  >
+    {args => <CheckboxGroup {...args} />}
+  </Story>
+  <Story
+    args={{
+      disabled: true,
+      name: 'disabled',
+      selectedValues: ['vim'],
+    }}
+    name="Disabled CheckboxGroup (Group)"
+  >
+    {args => <CheckboxGroup {...args} />}
+  </Story>
+  <Story
+    args={{
+      children: [
+        <Checkbox label="Vim" value="vim" />,
+        <Checkbox disabled label="Emacs" value="emacs" />,
+        <Checkbox label="VS Code" value="vscode" />,
+        <Checkbox label="Atom" value="atom" />,
+      ],
+      name: 'disabled2',
+      selectedValues: ['vim'],
+    }}
+    name="Disabled CheckboxGroup (Individual)"
+  >
+    {args => <CheckboxGroup {...args} />}
+  </Story>
+  <Story
+    args={{
+      errorMsg: 'You cannot select anything except Vim as your favorite.',
+      name: 'error',
+      selectedValues: ['vim', 'emacs'],
+    }}
+    name="Error CheckboxGroup"
+  >
+    {args => <CheckboxGroup {...args} />}
   </Story>
 </Canvas>

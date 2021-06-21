@@ -1,29 +1,58 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks';
 import { select } from '@storybook/addon-knobs';
 
 import { SystemIcon } from '.';
 import { SYSTEM_ICONS, COLORS } from '../../utils/constants';
 
-<Meta component={SystemIcon} title="Components/Molecules/Icons/SystemIcon" />
+<Meta
+  args={{ name: 'share' }}
+  component={SystemIcon}
+  title="Components/Molecules/Icons/SystemIcon"
+/>
 
 # SystemIcon
 <Description of={SystemIcon} />
-<ArgsTable of={SystemIcon} />
 
-<Story name="SystemIcons with Knobs" parameters={{ docs: { disable: true }}}>
-  <SystemIcon
-    color={select('color', COLORS, 'primary')}
-    name={select('name', SYSTEM_ICONS,'share')}
-  />
-</Story>
+<Canvas>
+  <Story name="SystemIcon with Controls">
+    {args => <SystemIcon {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="SystemIcon with Controls" />
 
 ## Icons
+
 <Canvas>
   <Story name="SystemIcons">
-    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
+    <div
+      style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+      }}
+    >
       {SYSTEM_ICONS.map((icon, idx) => {
         return (
-          <div key={`${icon}_${idx}`} style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 1px',borderRadius:'5px',height:'25px',minWidth:'25px'}}>
+          <div
+            key={`${icon}_${idx}`}
+            style={{
+              alignItems: 'center',
+              border: 'solid black 1px',
+              borderRadius: '5px',
+              flexDirection: 'column',
+              height: '25px',
+              padding: '15px',
+              margin: '5px',display:'flex',
+              minWidth: '25px',
+            }}
+          >
             <SystemIcon name={icon} />
             <span>{icon}</span>
           </div>
@@ -34,33 +63,94 @@ import { SYSTEM_ICONS, COLORS } from '../../utils/constants';
 </Canvas>
 
 ## Colors
+
 <Canvas>
-  <Story name="Uncolored (Default)">
-    <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 1px',borderRadius:'5px',height:'25px',minWidth:'25px'}}>
+  <Story name="Uncolored SystemIcon">
+    <div
+      style={{
+        alignItems: 'center',
+        border: 'solid black 1px',
+        borderRadius: '5px',
+        display: 'flex',
+        flexDirection: 'column',
+        height: '25px',
+        margin: '5px',
+        minWidth: '25px',
+        padding: '15px',
+      }}
+    >
       <SystemIcon name="edit" />
       <span>uncolored</span>
     </div>
   </Story>
-  <Story name="Primary">
-    <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 1px',borderRadius:'5px',height:'25px',minWidth:'25px'}}>
+  <Story name="Primary SystemIcon">
+    <div
+      style={{
+        alignItems: 'center',
+        border: 'solid black 1px',
+        borderRadius: '5px',
+        display: 'flex',
+        flexDirection: 'column',
+        height: '25px',
+        margin: '5px',
+        minWidth: '25px',
+        padding: '15px',
+      }}
+    >
       <SystemIcon name="edit" color="primary" />
       <span>primary</span>
     </div>
   </Story>
-  <Story name="Secondary">
-    <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 1px',borderRadius:'5px',height:'25px',minWidth:'25px'}}>
+  <Story name="Secondary SystemIcon">
+    <div
+      style={{
+        alignItems: 'center',
+        border: 'solid black 1px',
+        borderRadius: '5px',
+        display: 'flex',
+        flexDirection: 'column',
+        height: '25px',
+        margin: '5px',
+        minWidth: '25px',
+        padding: '15px',
+      }}
+    >
       <SystemIcon name="edit" color="secondary" />
       <span>secondary</span>
     </div>
   </Story>
-  <Story name="Black">
-    <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 1px',borderRadius:'5px',height:'25px',minWidth:'25px'}}>
+  <Story name="Black SystemIcon">
+    <div
+      style={{
+        alignItems: 'center',
+        border: 'solid black 1px',
+        borderRadius: '5px',
+        display: 'flex',
+        flexDirection: 'column',
+        height: '25px',
+        margin: '5px',
+        minWidth: '25px',
+        padding: '15px',
+      }}
+    >
       <SystemIcon name="edit" color="black" />
       <span>black</span>
     </div>
   </Story>
-  <Story name="Inverted">
-    <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 1px',borderRadius:'5px',height:'25px',minWidth:'25px'}}>
+  <Story name="Inverted SystemIcon">
+    <div
+      style={{
+        alignItems: 'center',
+        border: 'solid black 1px',
+        borderRadius: '5px',
+        display: 'flex',
+        flexDirection: 'column',
+        height: '25px',
+        margin: '5px',
+        minWidth: '25px',
+        padding: '15px',
+      }}
+    >
       <span
         style={{backgroundColor:'black'}}
       >
@@ -73,20 +163,56 @@ import { SYSTEM_ICONS, COLORS } from '../../utils/constants';
 
 ## Sizes
 <Canvas>
-  <Story name="Small">
-    <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'40px',width:'40px'}}>
+  <Story name="Small SystemIcon">
+    <div
+      style={{
+        alignItems: 'center',
+        border: 'solid black 1px',
+        borderRadius: '5px',
+        display: 'flex',
+        flexDirection: 'column',
+        height: '25px',
+        margin: '5px',
+        padding: '15px',
+        width: '40px',
+      }}
+    >
       <SystemIcon name="search" />
       <span>small</span>
     </div>
   </Story>
-  <Story name="Large (Default)">
-    <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'50px',width:'50px'}}>
+  <Story name="Large SystemIcon">
+    <div
+      style={{
+        alignItems: 'center',
+        border: 'solid black 1px',
+        borderRadius: '5px',
+        display: 'flex',
+        flexDirection: 'column',
+        height: '50px',
+        margin: '5px',
+        padding: '15px',
+        width: '50px',
+      }}
+    >
       <SystemIcon name="search" size="large" />
       <span>large</span>
     </div>
   </Story>
-  <Story name="Jumbo">
-    <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'65px',width:'65px'}}>
+  <Story name="Jumbo SystemIcon">
+    <div
+      style={{
+        alignItems: 'center',
+        border: 'solid black 1px',
+        borderRadius: '5px',
+        display: 'flex',
+        flexDirection: 'column',
+        height: '65px',
+        margin: '5px',
+        padding: '15px',
+        width: '65px',
+      }}
+    >
       <SystemIcon name="search" size="jumbo" />
       <span>jumbo</span>
     </div>

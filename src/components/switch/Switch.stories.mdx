@@ -5,45 +5,34 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks';
-import { action } from '@storybook/addon-actions';
-import { boolean, text } from '@storybook/addon-knobs';
 
 import Switch from '.';
 
-<Meta component={Switch} title="Components/Atoms/Switch" />
+<Meta
+  args={{
+    label: 'Switch',
+    value: 'on'
+  }}
+  component={Switch}
+  title="Components/Atoms/Switch"
+/>
 
 # Switch
-
 <Description of={Switch} />
-<ArgsTable of={Switch} />
-
-<Story name="Switch with Knobs" parameters={{ docs: { disable: true } }}>
-  <Switch
-    checked={boolean('checked', false)}
-    className={text('className', '')}
-    disabled={boolean('disabled', false)}
-    errorMsg={text('errorMsg', '')}
-    handleChange={action('`Switch with Knobs` onChange event triggered.')}
-    label={text('label', 'Accept Terms and Conditions')}
-    name={text('name', 'termsAndConditions')}
-    value={text('value', 'accepted')}
-  />
-</Story>
-
-## Colors and States
-
-### Default
 
 <Canvas>
-  <Story name="Default">
-    <Switch label="I am a standard Switch" name="default" value="on" />
+  <Story name="Switch with Controls">
+    {args => <Switch {...args} />}
   </Story>
 </Canvas>
 
+<ArgsTable story="Switch with Controls" />
+
+## Colors and States
 ### Disabled
 
 <Canvas>
-  <Story name="Disabled">
+  <Story name="Disabled Switch">
     <Switch
       label="This Switch is disabled"
       name="disabledChecked"
@@ -63,7 +52,7 @@ import Switch from '.';
 ### Error
 
 <Canvas>
-  <Story name="Error">
+  <Story name="Error Switch">
     <Switch
       label="This is a Switch with an error"
       name="error"

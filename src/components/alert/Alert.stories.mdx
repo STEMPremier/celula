@@ -1,222 +1,68 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
-import { action } from '@storybook/addon-actions';
-import { boolean, select, text } from '@storybook/addon-knobs';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story
+} from '@storybook/addon-docs/blocks';
 
 import Alert from '.';
-import { ALERT_TYPES as TYPES, SYSTEM_ICONS as ICONS } from '../../utils/constants';
 
-<Meta component={Alert} title="Components/Atoms/Alert" />
+<Meta args={{ text: 'You have been alerted.' }} component={Alert} title="Components/Atoms/Alert" />
 
 # Alert
 <Description of={Alert} />
-<ArgsTable of={Alert} />
 
-<Story name="Alert with Knobs" parameters={{ docs: { disable: true } }}>
-  <Alert
-    className={text('className', '', 'Alert Options')}
-    dismissible={boolean('dismissible', false, 'Alert Options')}
-    icon={select('icon', ['', ...ICONS], '', 'Alert Options')}
-    text={text('text', 'alert text', 'Alert Options')}
-    type={select('type', TYPES, 'info', 'Alert Options')}
-    linkOptions={{
-      address: text('address', 'https://app.tallo.com', 'Link Options'),
-      linkName: text('name','Alert link text', 'Link Options'),
-    }}
-  />
-</Story>
-
-## Info Alerts
-### Standard
 <Canvas>
-  <Story name="Info">
-    <Alert
-      type="info"
-      text="This is an info Alert."
-    />
+  <Story name="Alert with Controls">
+    {args => <Alert {...args} />}
   </Story>
 </Canvas>
 
-### With an Icon
-Any of the icons available in `<SystemIcon />` are available here.
+<ArgsTable story="Alert with Controls" />
 
-<Canvas>
-  <Story name="Info Icon">
+## Colors/Types
+An `Alert` may come in one of several colors, intended for a different type of alert.
+
+<Canvas isColumn>
+  <Story name="Info Alert">
+    <Alert text="This is an info Alert." type="info" />
+  </Story>
+  <Story name="Success Alert">
+    <Alert text="This is a success Alert." type="success" />
+  </Story>
+  <Story name="Warning Alert">
+    <Alert text="This is a warning Alert." type="warning" />
+  </Story>
+  <Story name="Error Alert">
+    <Alert text="This is an error Alert." type="error" />
+  </Story>
+</Canvas>
+
+## Options
+An `Alert` has several options avaliable. It may include an icon (any of the icons avaliable as a
+`SystemIcon`), a link, or be dismissable. Any of the options are avaliable for any of the alerts.
+
+<Canvas isColumn>
+  <Story name="Alert with Icon">
     <Alert
       icon="tutorial"
-      type="info"
-      text="This is an info Alert with an icon."
+      text="This is an Alert with an icon."
     />
   </Story>
-</Canvas>
-
-### With a Link
-<Canvas>
-  <Story name="Info Link">
+  <Story name="Alert with a Link">
     <Alert
       linkOptions={{
         address: '#',
         linkName: 'link',
       }}
-      type="info"
-      text="This is an info Alert with a link."
+      text="This is an Alert with a link."
     />
   </Story>
-</Canvas>
-
-### Dissmissable
-<Canvas>
-  <Story name="info Dismissable">
+  <Story name="Dismissable Alert">
     <Alert
       dismissible={true}
-      type="info"
-      text="This is an info Alert that is dismissable."
-    />
-  </Story>
-</Canvas>
-
-## Success Alerts
-### Standard
-<Canvas>
-  <Story name="Success">
-    <Alert
-      type="success"
-      text="This is a success Alert."
-    />
-  </Story>
-</Canvas>
-
-### With an Icon
-Any of the icons available in `<SystemIcon />` are available here.
-
-<Canvas>
-  <Story name="Success Icon">
-    <Alert
-      icon="badges"
-      type="success"
-      text="This is a success Alert with an icon."
-    />
-  </Story>
-</Canvas>
-
-### With a Link
-<Canvas>
-  <Story name="Success Link">
-    <Alert
-      linkOptions={{
-        address: '#',
-        linkName: 'link',
-      }}
-      type="success"
-      text="This is a success Alert with a link."
-    />
-  </Story>
-</Canvas>
-
-### Dissmissable
-<Canvas>
-  <Story name="Success Dismissable">
-    <Alert
-      dismissible={true}
-      type="success"
-      text="This is a success Alert that is dismissable."
-    />
-  </Story>
-</Canvas>
-
-## Warning Alerts
-### Standard
-<Canvas>
-  <Story name="Warning">
-    <Alert
-      type="warning"
-      text="This is a warning Alert."
-    />
-  </Story>
-</Canvas>
-
-### With an Icon
-Any of the icons available in `<SystemIcon />` are available here.
-
-<Canvas>
-  <Story name="Warning Icon">
-    <Alert
-      icon="warning"
-      type="warning"
-      text="This is a warning Alert with an icon."
-    />
-  </Story>
-</Canvas>
-
-### With a Link
-<Canvas>
-  <Story name="Warning Link">
-    <Alert
-      linkOptions={{
-        address: '#',
-        linkName: 'link',
-      }}
-      type="warning"
-      text="This is a warning Alert with a link."
-    />
-  </Story>
-</Canvas>
-
-### Dissmissable
-<Canvas>
-  <Story name="Warning Dismissable">
-    <Alert
-      dismissible={true}
-      type="warning"
-      text="This is a warning Alert that is dismissable."
-    />
-  </Story>
-</Canvas>
-
-## Error Alerts
-### Standard
-<Canvas>
-  <Story name="Error">
-    <Alert
-      type="error"
-      text="This is an error Alert."
-    />
-  </Story>
-</Canvas>
-
-### With an Icon
-Any of the icons available in `<SystemIcon />` are available here.
-
-<Canvas>
-  <Story name="Error Icon">
-    <Alert
-      icon="help"
-      type="error"
-      text="This is a error Alert with an icon."
-    />
-  </Story>
-</Canvas>
-
-### With a Link
-<Canvas>
-  <Story name="Error Link">
-    <Alert
-      linkOptions={{
-        address: '#',
-        linkName: 'link',
-      }}
-      type="error"
-      text="This is a error Alert with a link."
-    />
-  </Story>
-</Canvas>
-
-### Dissmissable
-<Canvas>
-  <Story name="Error Dismissable">
-    <Alert
-      dismissible={true}
-      type="error"
-      text="This is a error Alert that is dismissable."
+      text="This is an Alert that is dismissable."
     />
   </Story>
 </Canvas>

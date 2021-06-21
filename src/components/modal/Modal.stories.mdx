@@ -1,6 +1,10 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
-import { action } from '@storybook/addon-actions';
-import { boolean, select, text } from '@storybook/addon-knobs';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks';
 
 import Modal from './SomethingToModal';
 import { ModalDocs } from './Modal';
@@ -8,79 +12,65 @@ import Button from '../button';
 import Container from '../container';
 import { SystemIcon } from '../icon';
 
-<Meta component={ ModalDocs } title="Components/Atoms/Modal" />
+<Meta
+  args={{
+    children: 'Bacon ipsum dolor amet consectetur landjaeger proident jerky qui nisi.',
+    title: 'Example Modal',
+    triggerLabel: 'Click Me!',
+  }}
+  component={ ModalDocs }
+  title="Components/Atoms/Modal"
+/>
 
 # Modal
 <Description of={ ModalDocs } />
-<ArgsTable of={ ModalDocs } />
 
-<Story name="Modal with Knobs" parameters={ { docs: { disable: true } } }>
-  <Modal
-    actionFn={() => console.log('Modal action button clicked.')}
-    actionLabel={text('actionLabel', 'log something')}
-    actionSize={select('actionSize', ['small', 'large', 'jumbo'], 'large')}
-    isOpen={boolean('isOpen', false)}
-    size={select('size', ['default', 'small', 'large', 'jumbo'], 'default')}
-    title={text('title', 'This is My Modal')}
-    triggerLabel={text('triggerLabel', 'open modal')}
-    triggerSize={select('triggerSize', ['small', 'large', 'jumbo'], 'large')}
-    triggerType={select('triggerType', ['solid', 'outline', 'text'], 'solid')}
-  >
-    <p>
-      Bacon ipsum dolor amet consectetur landjaeger proident jerky qui
-      nisi. Exercitation excepteur cillum qui, t-bone venison corned
-      beef non sausage anim id. Cupim boudin ground round, porchetta
-      minim aliqua cow meatloaf dolore. Non hamburger cillum bresaola
-      est eu biltong rump excepteur ad kevin pastrami magna jowl.
-      Eiusmod pork belly porchetta occaecat, hamburger proident tongue
-      doner kevin cupim id salami.
-    </p>
-    <p>
-      Cillum corned beef sunt venison. Ullamco cillum pastrami nisi.
-      Chuck turducken boudin occaecat shankle. Jerky venison filet
-      mignon minim duis burgdoggen. Exercitation veniam pork loin,
-      consectetur occaecat laborum quis. Sausage filet mignon
-      incididunt, proident frankfurter adipisicing swine labore ball
-      tip. Alcatra leberkas incididunt sunt brisket, hamburger kevin.
-    </p>
-  </Modal>
-</Story>
+<Canvas>
+  <Story name="Modal with Controls">
+    {args => <Modal {...args} />}
+  </Story>
+</Canvas>
 
-The `<Modal />`  export is different from the rest of the components in Celula. Rather than just being a component that is exported;
+<ArgsTable story="Modal with Controls" />
+
+The `Modal` export is different from the rest of the components in Celula. Rather than just being a
+component that is exported;
 ```js
 import { Button } from '@talloinc/celula';
 ```
 
-It is a function that returns the `<Modal />` component;
+It is a function that returns the `Modal` component;
 ```jsx
 import React from 'react';
 import { Modal as ModalFn } from '@talloinc/celula';
 
 const Modal = ModalFn('#app-root');
 
-const MyComponent = () => {
-  return (
-    <div>
-      <Modal {/* modal props go here */}>
-        {/* modal contents go here */}
-      </Modal>
-    </div>
-  );
-};
+const MyComponent = () => (
+  <Modal {/* modal props go here */}>
+    {/* modal contents go here */}
+  </Modal>
+);
 
 export default MyComponent;
 ```
 
-We do this for the overall accessibility of the `<Modal />`. We (react-modal) has to know what DOM element is the root of your app, to make sure focus is returned appropriately, etc. Since Celula is made to be used by a consuming app, we don't know the app root. So we export a function that returns the `<Modal />` component aware of the consuming app's root element.
+We do this for the overall accessibility of the `Modal`. We (react-modal) has to know what DOM
+element is the root of your app, to make sure focus is returned appropriately, etc. Since Celula is
+made to be used by a consuming app, we don't know the app root. So we export a function that
+returns the `Modal` component aware of the consuming app's root element.
 
-The function takes the id of a DOM element, and returns the `<Modal />`, aware of where your app's root is.
+The function takes the id of a DOM element, and returns the `Modal`, aware of where your app's root
+is.
 
 ## Modal Options
-A `<Modal />` *must* have a `title`, and `children`. It also has several optional props. `size`, `className`, as well as a series of options for the action button in the Modal.
+A `Modal` *must* have a `title`, and `children`. It also has several optional props. `size`,
+`className`, as well as a series of options for the action button in the `Modal`.
 
-**Note**: The `<Modal />` will not appear inline. They are shown this way for documentation only.
+**Note**: The `Modal` will not appear inline. They are shown this way for documentation only.
 
 ### Sizes
+
 <Canvas>
   <Story name="Small Modal">
     <Modal
@@ -283,7 +273,10 @@ A `<Modal />` *must* have a `title`, and `children`. It also has several optiona
 </Canvas>
 
 ### Action Button Options
-A `<Modal />` takes a function (`actionFn`) that is trigged by the included `<Button />`. If you do not supply a function, the button will simply close the `<Modal />`. A `<Modal />` also takes label (`actionLabel`) and size (`actionSize`) for the action trigger. If you do not supply a label, the action trigger will be labeled 'Close'.
+A `Modal` takes a function (`actionFn`) that is trigged by the included `<Button />`. If you do not
+supply a function, the button will simply close the `Modal`. A `Modal` also takes a label
+(`actionLabel`) and size (`actionSize`) for the action trigger. If you do not supply a label, the
+action trigger will be labeled 'Close'.
 
 <Canvas>
   <Story name="Small Action">
@@ -336,7 +329,7 @@ A `<Modal />` takes a function (`actionFn`) that is trigged by the included `<Bu
 </Canvas>
 
 <Canvas>
-  <Story name="Large Action (Default)">
+  <Story name="Large Action">
     <Modal
       actionSize="large"
       title="Large Action"
@@ -436,7 +429,39 @@ A `<Modal />` takes a function (`actionFn`) that is trigged by the included `<Bu
 </Canvas>
 
 ## Trigger Options
-The `<Modal />` trigger is just a `<Button />`, and has all the same options as one.
+The `Modal` trigger is just a `Button`, and has all the same options as one.
+
+### Types
+
+<Canvas>
+  <Story name="Solid Trigger">
+    <Modal
+      title="Solid Trigger"
+      triggerLabel="Solid Trigger"
+      triggerType="solid"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+  <Story name="Outline Trigger">
+    <Modal
+      title="Outline Trigger"
+      triggerLabel="Outline Trigger"
+      triggerType="outline"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+  <Story name="Text Trigger">
+    <Modal
+      title="Text Trigger"
+      triggerLabel="Text Trigger"
+      triggerType="text"
+    >
+      <p>Modal Contents</p>
+    </Modal>
+  </Story>
+</Canvas>
 
 ### Sizes
 
@@ -450,7 +475,7 @@ The `<Modal />` trigger is just a `<Button />`, and has all the same options as 
       <p>Modal Contents</p>
     </Modal>
   </Story>
-  <Story name="Large Trigger">
+  <Story name=" Large Trigger">
     <Modal
       title="Large Trigger"
       triggerLabel="Large Trigger"
@@ -504,7 +529,7 @@ The `<Modal />` trigger is just a `<Button />`, and has all the same options as 
     </Modal>
   </Story>
   <Story name="Inverted Trigger">
-    <div style={{ backgroundColor: 'black' }}>
+    <div style={{ backgroundColor: 'black', display: 'inline-block' }}>
       <Modal
         title="Inverted Trigger"
         triggerColor="inverted"
@@ -521,38 +546,6 @@ The `<Modal />` trigger is just a `<Button />`, and has all the same options as 
       title="Disabled Trigger"
       triggerLabel="Disabled"
       triggerSize="small"
-    >
-      <p>Modal Contents</p>
-    </Modal>
-  </Story>
-</Canvas>
-
-### Types
-
-<Canvas>
-  <Story name="Solid Trigger">
-    <Modal
-      title="Solid Trigger"
-      triggerLabel="Solid Trigger"
-      triggerType="solid"
-    >
-      <p>Modal Contents</p>
-    </Modal>
-  </Story>
-  <Story name="Outline Trigger">
-    <Modal
-      title="Outline Trigger"
-      triggerLabel="Outline Trigger"
-      triggerType="outline"
-    >
-      <p>Modal Contents</p>
-    </Modal>
-  </Story>
-  <Story name="Text Trigger">
-    <Modal
-      title="Text Trigger"
-      triggerLabel="Text Trigger"
-      triggerType="text"
     >
       <p>Modal Contents</p>
     </Modal>

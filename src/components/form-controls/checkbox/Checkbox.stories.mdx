@@ -1,58 +1,56 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { boolean, select, text, array } from '@storybook/addon-knobs';
 
 import { Checkbox } from '.';
 
-<Meta component={Checkbox} title="Components/Molecules/Form Controls/Checkbox"/>
+<Meta
+  args={{
+    label: 'Troy and Abed In The Morning',
+    handleChange: action('Checkbox checked!'),
+    name: 'troyAbed',
+    value: 'troyAbed',
+  }}
+  component={Checkbox}
+  title="Components/Molecules/Form Controls/Checkbox"
+/>
 
 # Checkbox
 <Description of={Checkbox} />
-<ArgsTable of={Checkbox}/>
 
-<Story name="Checkbox with Knobs" parameters={{ docs: { disable: true } }}>
-  <form id="formKnobs">
-    <Checkbox
-      checked={boolean('checked', false )}
-      className={text('className', '')}
-      disabled={boolean('disabled', false)}
-      errorMsg={text('errorMsg', '')}
-      formId={text('formId', 'formKnobs')}
-      handleClick={action('`Checkbox with Knobs` onClick event triggered.')}
-      label={text('label', 'Accept Terms and Conditions')}
-      name={text('name', 'termsAndConditions')}
-      value={text('value', 'accepted')}
-    />
-  </form>
-</Story>
+<Canvas>
+  <Story name="Checkbox with Controls">
+    {args => <Checkbox {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Checkbox with Controls" />
 
 ## Colors and States
+A `Checkbox` can be disabled, or show an error.
 
-### Default
-<Canvas>
-  <Story name="Default">
+<Canvas isColumn>
+  <Story name="Default Checkbox">
     <Checkbox
       label="I am standard checkbox"
       name="default"
       value={true}
     />
   </Story>
-</Canvas>
-
-### Disabled
-<Canvas>
-  <Story name="Disabled">
+  <Story name="Disabled Checkbox">
     <Checkbox
+      disabled
       label="I am a disabled checkbox"
       name="disabled"
       value={true}
     />
   </Story>
-</Canvas>
-
-### Error
-<Canvas>
-  <Story name="Error">
+  <Story name="Error Checkbox">
     <Checkbox
       errorMsg="There is an error message."
       label="This is a checkbox with an error"

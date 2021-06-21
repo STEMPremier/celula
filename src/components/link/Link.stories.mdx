@@ -1,77 +1,48 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { select, text } from '@storybook/addon-knobs';
-
-import { COLORS, LINK_TEXT_STYLES as TYPES } from '../../utils/constants';
 
 import Link from '.';
+import { COLORS, LINK_TEXT_STYLES as TYPES } from '../../utils/constants';
 
-<Meta component={Link} title="Components/Atoms/Link" />
+<Meta
+  args={{
+    address: 'http://localhost:6006/?path=/docs/components-atoms-link--link-with-controls',
+    text: 'Here',
+  }}
+  component={Link}
+  title="Components/Atoms/Link"
+/>
 
 # Links
 <Description of={Link}/>
-<ArgsTable of={Link}/>
 
-<Story name="Link with Knobs" parameters={{ docs: { disable: true } }}>
-  <Link
-    address={text('address','https://app.tallo.com/register' )}
-    className={text('className', '')}
-    color={select('color', COLORS, 'primary')}
-    text={text('text', 'Tallo')}
-    textStyle={select('textStyle', TYPES, 'uppercase' )}
-  />
-</Story>
-
-## Uppercase
 <Canvas>
-  <Story name="Uppercase (Primary)">
+  <Story name="Link with Controls">
+    {args => <Link {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Link with Controls" />
+
+## Types
+
+<Canvas>
+  <Story name="Uppercase Link">
     <Link
-      address="#"
+      address="http://localhost:6006/?path=/docs/components-atoms-link--link-with-controls"
       text="link"
       textStyle="uppercase"
     />
   </Story>
-</Canvas>
-
-### Colors
-<Canvas>
-  <Story name="Uppercase Primary (Default)">
+  <Story name="Lowercase link">
     <Link
-      address="#"
-      color="primary"
-      text="primary"
-    />
-  </Story>
-  <Story name="Uppercase Secondary">
-    <Link
-      address="#"
-      color="secondary"
-      text="secondary"
-    />
-  </Story>
-  <Story name="Uppercase Black">
-    <Link
-      address="#"
-      color="black"
-      text="black"
-    />
-  </Story>
-  <Story name="Uppercase Inverted">
-    <div style={{backgroundColor:'black'}}>
-      <Link
-        address="#"
-        color="inverted"
-        text="inverted"
-      />
-    </div>
-  </Story>
-</Canvas>
-
-## Lowercase
-<Canvas>
-  <Story name="Lowercase">
-    <Link
-      address="#"
+      address="http://localhost:6006/?path=/docs/components-atoms-link--link-with-controls"
       text="link"
       textStyle="lowercase"
     />
@@ -79,38 +50,36 @@ import Link from '.';
 </Canvas>
 
 ### Colors
+A `Link` can come in one of our four colors.
+
 <Canvas>
-  <Story name="Lowercase Primary (Default)">
+  <Story name="Primary Link">
     <Link
-      address="#"
+      address="http://localhost:6006/?path=/docs/components-atoms-link--link-with-controls"
       color="primary"
       text="primary"
-      textStyle="lowercase"
     />
   </Story>
-  <Story name="Lowercase Secondary">
+  <Story name="Secondary Link">
     <Link
-      address="#"
+      address="http://localhost:6006/?path=/docs/components-atoms-link--link-with-controls"
       color="secondary"
       text="secondary"
-      textStyle="lowercase"
     />
   </Story>
-  <Story name="Lowercase Black">
+  <Story name="Black Link">
     <Link
-      address="#"
+      address="http://localhost:6006/?path=/docs/components-atoms-link--link-with-controls"
       color="black"
       text="black"
-      textStyle="lowercase"
     />
   </Story>
-  <Story name="Lowercase Inverted">
+  <Story name="Inverted Link">
     <div style={{backgroundColor:'black'}}>
       <Link
-        address="#"
+        address="http://localhost:6006/?path=/docs/components-atoms-link--link-with-controls"
         color="inverted"
         text="inverted"
-        textStyle="lowercase"
       />
     </div>
   </Story>

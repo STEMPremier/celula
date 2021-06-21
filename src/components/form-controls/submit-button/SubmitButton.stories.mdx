@@ -6,55 +6,91 @@ import {
   Story,
 } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { boolean, select, text } from '@storybook/addon-knobs';
-
-import { BUTTON_TYPES as TYPES, COLORS, SIZES } from '../../../utils/constants';
 
 import SubmitButton from '.';
 
 <Meta
+  args={{
+  children: 'Click Me',
+  handleClick: action('Clicked!'),
+  }}
   component={SubmitButton}
   title="Components/Molecules/Form Controls/SubmitButton"
 />
 
 # SubmitButton
-
 <Description of={SubmitButton} />
-<ArgsTable of={SubmitButton} />
-
-<Story name="SubmitButton with Knobs" parameters={{ docs: { disable: true } }}>
-  <SubmitButton
-    className={text('className', '')}
-    color={select('color', COLORS, 'primary')}
-    disabled={boolean('disabled', false)}
-    size={select('size', SIZES, 'small')}
-    type={select('type', TYPES, 'solid')}
-  >
-    {text('children', 'a button')}
-  </SubmitButton>
-</Story>
-
-## Solid SubmitButtons (Default)
-
-Solid buttons are high-emphasis, distinguished by their use of elevation and fill. They contain actions that are primary to an application.
 
 <Canvas>
-  <Story name="Solid Small">
+  <Story name="SubmitButton with Controls">
+    {args => <SubmitButton {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="SubmitButton with Controls" />
+
+## Types
+Solid buttons are high-emphasis, distinguished by their use of elevation and fill. They contain
+actions that are primary to an application.
+
+Outlined buttons are medium-emphasis buttons. They contain actions that are important, but aren’t
+the primary action in an app. Outlined buttons are also a lower emphasis alternative to contained
+buttons, or a higher emphasis alternative to text buttons.
+
+Text buttons are typically used for less-pronounced actions, including those located in dialogs and
+cards. They are often embedded in contained components like cards and dialogs, in order to relate
+themselves to the component in which they appear. Because text buttons don’t have a container,
+they don’t distract from nearby content. For consistency when using them with other buttons, text
+buttons maintain the same margin and padding between the label and the edge of the container as the
+other types.
+
+<Canvas>
+  <Story name="Solid SubmitButton">
     <SubmitButton
-      size="small"
+      handleClick={action('Clicked!')}
+    >
+      solid button
+    </SubmitButton>
+  </Story>
+  <Story name="Outline SubmitButton">
+    <SubmitButton
+      handleClick={action('Clicked!')}
+      type="outline"
+    >
+      outline button
+    </SubmitButton>
+  </Story>
+  <Story name="Text SubmitButton">
+    <SubmitButton
+      handleClick={action('Clicked!')}
+      type="text"
+    >
+      text button
+    </SubmitButton>
+  </Story>
+</Canvas>
+
+## Sizes
+
+<Canvas>
+  <Story name="Small Solid SubmitButton">
+    <SubmitButton
+      handleClick={action('Clicked!')}
     >
       small button
     </SubmitButton>
   </Story>
-  <Story name="Solid Large (Default)">
+  <Story name="Large Solid SubmitButton">
     <SubmitButton
+      handleClick={action('Clicked!')}
       size="large"
     >
       large button
     </SubmitButton>
   </Story>
-  <Story name="Solid Jumbo">
+  <Story name="Jumbo Solid SubmitButton">
     <SubmitButton
+      handleClick={action('Clicked!')}
       size="jumbo"
     >
       jumbo button
@@ -62,129 +98,152 @@ Solid buttons are high-emphasis, distinguished by their use of elevation and fil
   </Story>
 </Canvas>
 
-### Colors and States
+<Canvas>
+  <Story name="Small Outline SubmitButton">
+    <SubmitButton
+      handleClick={action('Clicked!')}
+      type="outline"
+    >
+      small button
+    </SubmitButton>
+  </Story>
+  <Story name="Large Outline SubmitButton">
+    <SubmitButton
+      handleClick={action('Clicked!')}
+      size="large"
+      type="outline"
+    >
+      large button
+    </SubmitButton>
+  </Story>
+  <Story name="Jumbo Outline SubmitButton">
+    <SubmitButton
+      handleClick={action('Clicked!')}
+      size="jumbo"
+      type="outline"
+    >
+      jumbo button
+    </SubmitButton>
+  </Story>
+</Canvas>
 
 <Canvas>
-  <Story name="Solid Primary (Default)">
+  <Story name="Small Text SubmitButton">
     <SubmitButton
-      color="primary"
-      size="small"
+      handleClick={action('Clicked!')}
+      type="text"
+    >
+      small button
+    </SubmitButton>
+  </Story>
+  <Story name="Large Text SubmitButton">
+    <SubmitButton
+      handleClick={action('Clicked!')}
+      size="large"
+      type="text"
+    >
+      large button
+    </SubmitButton>
+  </Story>
+  <Story name="Jumbo Text SubmitButton">
+    <SubmitButton
+      handleClick={action('Clicked!')}
+      size="jumbo"
+      type="text"
+    >
+      jumbo button
+    </SubmitButton>
+  </Story>
+</Canvas>
+
+## Colors and States
+
+<Canvas>
+  <Story name="Solid Primary SubmitButton">
+    <SubmitButton
+      handleClick={action('Clicked!')}
     >
       primary
     </SubmitButton>
   </Story>
-  <Story name="Solid Secondary">
+  <Story name="Solid Secondary SubmitButton">
     <SubmitButton
       color="secondary"
-      size="small"
+      handleClick={action('Clicked!')}
     >
       secondary
     </SubmitButton>
   </Story>
-  <Story name="Solid Black">
+  <Story name="Solid Black SubmitButton">
     <SubmitButton
       color="black"
-      size="small"
+      handleClick={action('Clicked!')}
     >
       black
     </SubmitButton>
   </Story>
-  <Story name="Solid Inverted">
+  <Story name="Solid Inverted SubmitButton">
     <div style={{ backgroundColor: 'black' }}>
       <SubmitButton
         color="inverted"
-        size="small"
+        handleClick={action('Clicked!')}
       >
         inverted
       </SubmitButton>
     </div>
   </Story>
-  <Story name="Solid Disabled">
+  <Story name="Solid Disabled SubmitButton">
     <SubmitButton
       disabled={true}
-      size="small"
+      handleClick={action('Clicked!')}
     >
       disabled
     </SubmitButton>
   </Story>
 </Canvas>
 
-## Outline SubmitButtons
-
-Outlined buttons are medium-emphasis buttons. They contain actions that are important, but aren’t the primary action in an app. Outlined buttons are also a lower emphasis alternative to contained buttons, or a higher emphasis alternative to text buttons.
-
 <Canvas>
-  <Story name="Outline Small">
+  <Story name="Outline Primary SubmitButton">
     <SubmitButton
-      size="small"
-      type="outline"
-    >
-      small button
-    </SubmitButton>
-  </Story>
-  <Story name="Outline Large (Default)">
-    <SubmitButton
-      size="large"
-      type="outline"
-    >
-      large button
-    </SubmitButton>
-  </Story>
-  <Story name="Outline Jumbo">
-    <SubmitButton
-      size="jumbo"
-      type="outline"
-    >
-      jumbo button
-    </SubmitButton>
-  </Story>
-</Canvas>
-
-### Colors and States
-
-<Canvas>
-  <Story name="Outline Primary (Default)">
-    <SubmitButton
-      color="primary"
-      size="small"
+      handleClick={action('Clicked!')}
       type="outline"
     >
       primary
     </SubmitButton>
   </Story>
-  <Story name="Outline Secondary">
+  <Story name="Outline Secondary SubmitButton">
     <SubmitButton
       color="secondary"
-      size="small"
+      handleClick={action('Clicked!')}
       type="outline"
     >
       secondary
     </SubmitButton>
   </Story>
-  <Story name="Outline Black">
+  <Story name="Outline Black SubmitButton">
     <SubmitButton
       color="black"
-      size="small"
+      handleClick={action('Clicked!')}
       type="outline"
     >
       black
     </SubmitButton>
   </Story>
-  <Story name="Outline Inverted">
+  <Story name="Outline Inverted SubmitButton">
     <div style={{ backgroundColor: 'black' }}>
       <SubmitButton
         color="inverted"
-        size="small"
+        handleClick={action('Clicked!')}
         type="outline"
       >
         inverted
       </SubmitButton>
     </div>
   </Story>
-  <Story name="Outline Disabled">
+  <Story name="Outline Disabled SubmitButton">
     <SubmitButton
       disabled={true}
-      size="small"
+      handleClick={action('Clicked!')}
       type="outline"
     >
       disabled
@@ -192,84 +251,48 @@ Outlined buttons are medium-emphasis buttons. They contain actions that are impo
   </Story>
 </Canvas>
 
-## Text Buttons
-
-Text buttons are typically used for less-pronounced actions, including those located in dialogs and cards.
-
-Text buttons are often embedded in contained components like cards and dialogs, in order to relate themselves to the component in which they appear. Because text buttons don’t have a container, they don’t distract from nearby content.
-
 <Canvas>
-  <Story name="Text Small">
+  <Story name="Text Primary SubmitButton">
     <SubmitButton
-      size="small"
-      type="text"
-    >
-      small button
-    </SubmitButton>
-  </Story>
-  <Story name="Text Large (Default)">
-    <SubmitButton
-      size="large"
-      type="text"
-    >
-      large button
-    </SubmitButton>
-  </Story>
-  <Story name="Text Jumbo">
-    <SubmitButton
-      size="jumbo"
-      type="text"
-    >
-      jumbo button
-    </SubmitButton>
-  </Story>
-</Canvas>
-
-### Colors and States
-
-<Canvas>
-  <Story name="Text Primary (Default)">
-    <SubmitButton
-      color="primary"
-      size="small"
+      handleClick={action('Clicked!')}
       type="text"
     >
       primary
     </SubmitButton>
   </Story>
-  <Story name="Text Secondary">
+  <Story name="Text Secondary SubmitButton">
     <SubmitButton
       color="secondary"
-      size="small"
+      handleClick={action('Clicked!')}
       type="text"
     >
       secondary
     </SubmitButton>
   </Story>
-  <Story name="Text Black">
+  <Story name="Text Black SubmitButton">
     <SubmitButton
       color="black"
-      size="small"
+      handleClick={action('Clicked!')}
       type="text"
     >
       black
     </SubmitButton>
   </Story>
-  <Story name="Text Inverted">
+  <Story name="Text Inverted SubmitButton">
     <div style={{ backgroundColor: 'black' }}>
       <SubmitButton
         color="inverted"
-        size="small"
+        handleClick={action('Clicked!')}
         type="text"
       >
         inverted
       </SubmitButton>
     </div>
   </Story>
-  <Story name="Text Disabled">
+  <Story name="Text Disabled SubmitButton">
     <SubmitButton
       disabled={true}
-      size="small"
+      handleClick={action('Clicked!')}
       type="text"
     >
       disabled

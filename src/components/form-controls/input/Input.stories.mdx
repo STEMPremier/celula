@@ -1,133 +1,96 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { boolean, select, text } from '@storybook/addon-knobs';
 
 import Input from '.';
-import { INPUT_TYPES as TYPES } from '../../../utils/constants';
 
-<Meta component={Input} title="Components/Molecules/Form Controls/Input" />
+<Meta
+  args={{
+    label: 'Input',
+    name: 'defaultLabel',
+  }}
+  component={Input}
+  title="Components/Molecules/Form Controls/Input"
+/>
 
 # Inputs
 <Description of={Input} />
-<ArgsTable of={Input} />
 
-<Story name="Input with Knobs" parameters={{ docs: { disable: true } }}>
-  <form id="inputWithKnobForm">
-    <Input
-      btnOptions={{
-        btnClick: action('`Input with Knobs` button onClick event triggered.'),
-        btnIcon: text('btnIcon', 'navigate', 'Button Options'),
-      }}
-      className={text('className', '', 'Input Options')}
-      disabled={boolean('disabled', false, 'Input Options')}
-      errorMsg={text('errorMsg', '', 'Input Options')}
-      formId={text('formId', 'inputWithKnobsForm', 'Input Options')}
-      handleChange={action('`Input with Knobs` onChange event triggered.')}
-      helpText={text('helpText', 'This is useful or helpful information.', 'Input Options')}
-      htmlType={select('htmlType', TYPES, 'text', 'Input Options')}
-      icon={text('icon', '', 'Input Options')}
-      initialValue={text('initialValue', '','Input Options')}
-      label={text('label', 'Input with Knobs', 'Input Options')}
-      name={text('name', 'inputWithKnobs', 'Input Options')}
-      placeholder={text('placeholder', 'Please fill this in.', 'Input Options')}
-    />
-  </form>
-</Story>
+<Canvas>
+  <Story name="Input with Controls">
+    {args => <Input {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Input with Controls" />
 
 ## Types
-Ther are several different types of `<Input />` available.
+There are several different types of `Input` available. `color`, `date`, `email`, `number`,
+`password`, telephone number (`tel`), `text`, `time`, and `url` are currently supported.
 
-### Color
-<Canvas>
-  <Story name="Color">
+<Canvas isColumn>
+  <Story name="Colorpicker">
     <Input
       htmlType="color"
       label="Choose a color:"
       name="color"
     />
   </Story>
-</Canvas>
-
-### Date
-<Canvas>
-  <Story name="Date">
+  <Story name="Datepicker">
     <Input
       htmlType="date"
       label="What is your birthday?"
       name="date"
     />
   </Story>
-</Canvas>
-
-### Email
-<Canvas>
-  <Story name="Email">
+  <Story name="Email Input">
     <Input
       htmlType="email"
       label="What is your email address:"
       name="email"
     />
   </Story>
-</Canvas>
-
-### Number
-<Canvas>
-  <Story name="Number">
+  <Story name="Number Input">
     <Input
       htmlType="number"
       label="How many cats do you have?"
       name="number"
     />
   </Story>
-</Canvas>
-
-### Password
-<Canvas>
-  <Story name="Password">
+  <Story name="Password Input">
     <Input
       htmlType="password"
       label="Choose a secure password:"
       name="password"
     />
   </Story>
-</Canvas>
-
-### Phone number
-<Canvas>
-  <Story name="Telephone Number">
+  <Story name="Telephone Number Input">
     <Input
       htmlType="tel"
       label="What is your phone number?"
       name="tel"
     />
   </Story>
-</Canvas>
-
-### Text
-<Canvas>
-  <Story name="Text (Default)">
+  <Story name="Text Input">
     <Input
       htmlType="text"
       label="What city where you born in?"
       name="text"
     />
   </Story>
-</Canvas>
-
-### Time
-<Canvas>
-  <Story name="Time">
+  <Story name="Time Input">
     <Input
       htmlType="time"
       label="What time is it?"
       name="time"
     />
   </Story>
-</Canvas>
-
-### URL
-<Canvas>
-  <Story name="Url">
+  <Story name="Url Input">
     <Input
       htmlType="url"
       label="What is your business' website?"
@@ -137,11 +100,13 @@ Ther are several different types of `<Input />` available.
 </Canvas>
 
 ## Options
-All of the options are avaliable on each of the different types of `<Input />`. (And you may enable all of them at the same time.) For the icon on the left of the `Input`, and in the button on the right, any of the `SystemIcons` are available to you.
+An `Input` can have help text, a helpfult icon, or an attached button. All of the options are
+avaliable on each of the different types of `Input`. (And you may enable all of them at the same
+time.) For the icon on the left of the `Input`, and in the button on the right, any of the
+`SystemIcons` are available to you.
 
-An `<Input />` can have help text.
-<Canvas>
-  <Story name="with Help Text">
+<Canvas isColumn>
+  <Story name="Input with Help Text">
     <Input
       helpText="I am helpful text."
       htmlType="text"
@@ -149,11 +114,7 @@ An `<Input />` can have help text.
       name="withHelpText"
     />
   </Story>
-</Canvas>
-
-An `<Input />` can have helpful icons. Any of the icons available in `<SystemIcon />` are available.
-<Canvas>
-  <Story name="with an Icon">
+  <Story name="Input with an Icon">
     <Input
       htmlType="text"
       icon="edit"
@@ -161,11 +122,7 @@ An `<Input />` can have helpful icons. Any of the icons available in `<SystemIco
       name="withIcon"
     />
   </Story>
-</Canvas>
-
-An `<Input />` can have an attached button. Any of the icons available in `<SystemIcon />` are available inside the button.
-<Canvas>
-  <Story name="with a Button">
+  <Story name="Input with a Button">
     <Input
       btnOptions={{
         btnClick: action(`'Input with a Button' button onClick event triggered.`),
@@ -176,11 +133,7 @@ An `<Input />` can have an attached button. Any of the icons available in `<Syst
       name="test"
     />
   </Story>
-</Canvas>
-
-An `<Input />` can have everything at the same time.
-<Canvas>
-  <Story name="with Everything">
+  <Story name="Input with Everything">
     <Input
       btnOptions={{
         btnClick: action(`'Input with Everything' button onClick event triggered.`),
@@ -196,20 +149,17 @@ An `<Input />` can have everything at the same time.
 </Canvas>
 
 ## States
-An `<Input />` can be disabled:
-<Canvas>
-  <Story name="Disabled">
+An `Input` can be disabled, or show an error.
+
+<Canvas isColumn>
+  <Story name="Disabled Input">
     <Input
       disabled
       label="Fill me in, I dare you:"
       name="disabledTextInput"
     />
   </Story>
-</Canvas>
-
-Or can have an error:
-<Canvas>
-  <Story name="Error">
+  <Story name="Error Input">
       <Input
         errorMsg="You were wrong."
         label="Try NOT to be wrong:"
