@@ -29,13 +29,19 @@ const {{properCase componentName}} = ({ className }) => {
 
 {{properCase componentName}}.propTypes = {
   /**
-   * A class name, or string of class names, to add to the `<{{properCase componentName}} />`.
+   * A class name, or a string of class names, to add to the `{{properCase componentName}}`.
    */
   className: PropTypes.string,
+  /**
+   * Any inline styles you would like to add to the `{{properCase componentName}}`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
 {{properCase componentName}}.defaultProps = {
   className: '',
+  style: {},
 };
 
 export default {{properCase componentName}};
