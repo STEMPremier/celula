@@ -17,7 +17,7 @@ const SomethingToPage = ({
   useEffect(() => setCanNext(canNext), [canNext]);
 
   const prevPage = () => {
-    const page = currentPage > 1 ? currentPage - 1 : 1;
+    const page = currentPage > 0 ? currentPage - 1 : 0;
 
     setPage(page);
   };
