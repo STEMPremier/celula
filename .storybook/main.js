@@ -9,7 +9,6 @@ module.exports = {
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
-    '@storybook/addon-knobs/register',
     '@storybook/addon-viewport/register',
   ],
   stories: ['../src/**/**/*.stories.@(js|mdx)'],
