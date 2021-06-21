@@ -29,7 +29,7 @@ exports[`<Pagination /> render() renders the component 1`] = `
       </button>
     </li>
     <li
-      className="ce-pagination__number current-page"
+      className="ce-pagination__number"
       key="1"
     >
       <button
@@ -40,7 +40,7 @@ exports[`<Pagination /> render() renders the component 1`] = `
       </button>
     </li>
     <li
-      className="ce-pagination__number"
+      className="ce-pagination__number current-page"
       key="2"
     >
       <button

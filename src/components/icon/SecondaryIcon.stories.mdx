@@ -1,31 +1,58 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
-import { select, text } from '@storybook/addon-knobs';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks';
 
 import { SecondaryIcon } from '.';
 import { SECONDARY_ICONS, SIZES } from '../../utils/constants';
 
-<Meta component={SecondaryIcon} title="Components/Molecules/Icons/SecondaryIcon" />
+<Meta
+  args={{ name: 'pdf' }}
+  component={SecondaryIcon}
+  title="Components/Molecules/Icons/SecondaryIcon"
+/>
 
 # SecondaryIcon
 <Description of={SecondaryIcon} />
-<ArgsTable of={SecondaryIcon} />
 
-<Story name="SecondaryIcons with Knobs" parameters={{ docs: { disable: true }}}>
-  <SecondaryIcon
-    color={select('color', ['primary', 'secondary'], 'primary')}
-    name={select('name', ['', ...SECONDARY_ICONS], 'pdf')}
-    size={select('size', SIZES, 'small')}
-    text={text('text', '')}
-  />
-</Story>
+<Canvas>
+  <Story name="SecondaryIcon with Controls">
+    {args => <SecondaryIcon {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="SecondaryIcon with Controls" />
 
 ## Icons
+
 <Canvas>
   <Story name="SecondaryIcons">
-    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
+    <div
+      style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+      }}
+    >
       {SECONDARY_ICONS.map((icon, idx) => {
         return (
-          <div key={`${icon}_${idx}`} style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'40px',width:'40px'}}>
+          <div
+            key={`${icon}_${idx}`}
+            style={{
+              alignItems: 'center',
+              border: 'solid black 2px',
+              borderRadius: '5px',
+              display: 'flex',
+              flexDirection: 'column',
+              height: '40px',
+              margin: '5px',
+              padding: '15px',
+              width:'40px',
+            }}
+          >
             <SecondaryIcon name={icon} />
             <span>{icon}</span>
           </div>
@@ -36,16 +63,37 @@ import { SECONDARY_ICONS, SIZES } from '../../utils/constants';
 </Canvas>
 
 ## Colors
-A `<SecondaryIcon />` can come in one of two colors.
+A `SecondaryIcon` can come in one of two colors.
+
 <Canvas>
-  <Story name="Primary (Default)">
-    <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px'}}>
+  <Story name="Primary SecondaryIcon">
+    <div
+      style={{
+        alignItems: 'center',
+        border: 'solid black 2px',
+        borderRadius: '5px',
+        display:'flex',
+        flexDirection: 'column',
+        margin: '5px',
+        padding: '15px',
+      }}
+    >
       <SecondaryIcon name="pdf" />
       <span>pdf</span>
     </div>
   </Story>
-  <Story name="Secondary">
-    <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px'}}>
+  <Story name="Secondary SecondaryIcon">
+    <div
+      style={{
+        alignItems: 'center',
+        border: 'solid black 2px',
+        borderRadius:'5px',
+        display: 'flex',
+        flexDirection: 'column',
+        margin: '5px',
+        padding: '15px',
+      }}
+    >
       <SecondaryIcon name="pdf" color="secondary" />
       <span>pdf</span>
     </div>
@@ -54,15 +102,36 @@ A `<SecondaryIcon />` can come in one of two colors.
 
 ## Options
 You can even use a small amount of text (up to two characters) in place of an icon.
+
 <Canvas>
-  <Story name="with Text 1">
-    <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px'}}>
+  <Story name="SecondaryIcon with Text 1">
+    <div
+      style={{
+        alignItems: 'center',
+        border: 'solid black 2px',
+        borderRadius: '5px',
+        display: 'flex',
+        flexDirection: 'column',
+        margin: '5px',
+        padding: '15px',
+      }}
+    >
       <SecondaryIcon text="A" />
       <span>w/text</span>
     </div>
   </Story>
-  <Story name="with Text 2">
-    <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px'}}>
+  <Story name="SecondaryIcon with Text 2">
+    <div
+      style={{
+        alignItems: 'center',
+        border: 'solid black 2px',
+        borderRadius: '5px',
+        display: 'flex',
+        flexDirection: 'column',
+        margin: '5px',
+        padding: '15px',
+      }}
+    >
       <SecondaryIcon text="+1" />
       <span>w/text</span>
     </div>
@@ -70,21 +139,52 @@ You can even use a small amount of text (up to two characters) in place of an ic
 </Canvas>
 
 ## Sizes
+
 <Canvas>
-  <Story name="Small (Default)">
-    <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'40px',width:'40px'}}>
+  <Story name="Small SecondaryIcon">
+    <div
+      style={{
+        alignItems: 'center',
+        border: 'solid black 2px',
+        borderRadius: '5px',
+        display: 'flex',
+        flexDirection: 'column',
+        margin: '5px',
+        padding: '15px',
+      }}
+    >
       <SecondaryIcon name="pdf" />
       <span>small</span>
     </div>
   </Story>
-  <Story name="Large">
-    <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'50px',width:'50px'}}>
+  <Story name="Large SecondaryIcon">
+    <div
+      style={{
+        alignItems: 'center',
+        border: 'solid black 2px',
+        borderRadius: '5px',
+        display: 'flex',
+        flexDirection: 'column',
+        margin: '5px',
+        padding: '15px',
+      }}
+    >
       <SecondaryIcon name="pdf" size="large" />
       <span>large</span>
     </div>
   </Story>
-  <Story name="Jumbo">
-    <div style={{margin:'5px',display:'flex',flexDirection:'column',alignItems:'center',padding:'15px',border:'solid black 2px',borderRadius:'5px',height:'65px',width:'65px'}}>
+  <Story name="Jumbo SecondaryIcon">
+    <div
+      style={{
+        alignItems: 'center',
+        border: 'solid black 2px',
+        borderRadius: '5px',
+        display: 'flex',
+        flexDirection: 'column',
+        margin: '5px',
+        padding: '15px',
+      }}
+    >
       <SecondaryIcon name="pdf" size="jumbo" />
       <span>jumbo</span>
     </div>

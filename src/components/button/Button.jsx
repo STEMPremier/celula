@@ -24,7 +24,8 @@ import { BUTTON_TYPES as TYPES, COLORS, SIZES } from '../../utils/constants';
 import './button.less';
 
 /**
- * `Buttons` allow users to take actions, and make choices, with a single tap. They are typically placed throughout your UI, in places like dialogs, modal windows, forms, cards, and toolbars.
+ * `Buttons` allow users to take actions, and make choices, with a single tap. They are typically
+ * placed throughout your UI, in places like dialogs, modal windows, forms, cards, and toolbars.
  */
 const Button = ({
   children,
@@ -65,43 +66,45 @@ const Button = ({
 
 Button.propTypes = {
   /**
-   * The `<Button />` label.
+   * The `Button` label.
    */
   children: PropTypes.string.isRequired,
   /**
-   * A class name, or string of class names, to add to the `<Button />`.
+   * A class name, or a string of class names, to add to the `Button`.
    */
   className: PropTypes.string,
   /**
-   * The color of the `<Button />`.
+   * The color of the `Button`.
    */
   // color: PropTypes.oneOf(COLORS),
   color: PropTypes.oneOf(['primary', 'secondary', 'black', 'inverted']),
   /**
-   * Disables the `<Button />`.
+   * Disables the `Button`.
    */
   disabled: PropTypes.bool,
   /**
-   * A function to trigger when the `<Button />` is clicked.
+   * A function to trigger when the `Button` is clicked.
    */
   handleClick: PropTypes.func.isRequired,
   /**
-   * The type of `<Button />`. This should always be `button` unless you are making a `<SubmitButton />`.
+   * The type of `Button`. This should always be `button`. if you need a submit button use
+   * `SubmitButton` instead.
    *
    * @ignore
    */
   htmlType: PropTypes.oneOf(['button', 'submit']),
   /**
-   * The size of the `<Button />`.
+   * The size of the `Button`.
    */
   // size: PropTypes.oneOf(SIZES),
   size: PropTypes.oneOf(['small', 'large', 'jumbo']),
   /**
-   * Any inline styles you would like to add to the `<Button />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `Button>`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   /**
-   * Which type of `<Button />` to render.
+   * Which type of `Button` to render.
    */
   // type: PropTypes.oneOf(TYPES),
   type: PropTypes.oneOf(['solid', 'outline', 'text']),

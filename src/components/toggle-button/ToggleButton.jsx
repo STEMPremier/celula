@@ -20,7 +20,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import { SystemIcon } from '../icon';
-import { SIZES } from '../../utils/constants';
+import { SIZES /* , SYSTEM_ICONS */ } from '../../utils/constants';
 
 import './toggle-button.less';
 
@@ -63,44 +63,78 @@ const ToggleButton = ({
 
 ToggleButton.propTypes = {
   /**
-   * Select the `<ToggleButton />`.
+   * Select the `ToggleButton`.
    * @ignore
    */
   checked: PropTypes.bool,
   /**
-   * A class name added to the `<ToggleButton />`.
+   * A class name, or a string of class names, to add to the `ToggleButton`.
    */
   className: PropTypes.string,
   /**
-   * Make the `<ToggleButton />` inactive.
+   * Make the `ToggleButton` inactive.
    * @ignore
    */
   disabled: PropTypes.bool,
   /**
-   * The `<ToggleButton />` icon.
+   * The `ToggleButton` icon.
    */
-  icon: PropTypes.string.isRequired,
+  // icon: PropTypes.oneOf(SYSTEM_ICONS).isRequired,
+  icon: PropTypes.oneOf([
+    'share',
+    'preview',
+    'export',
+    'follow',
+    'message',
+    'badges',
+    'website',
+    'edit',
+    'clear',
+    'navigate',
+    'down',
+    'up',
+    'user',
+    'visibility',
+    'help',
+    'close',
+    'calendar',
+    'warning',
+    'add',
+    'filter',
+    'menu',
+    'search',
+    'tutorial',
+    'yes',
+    'no',
+    'hobby',
+    'interest',
+    'outdoor',
+    'indoor',
+    'popular',
+  ]).isRequired,
   /**
-   * This component is to be treated as a radio button in `<FormControlGroup />`.
+   * This component is to be treated as a radio button in `FormControlGroup`.
    * @ignore
    */
   isA: PropTypes.string, // eslint-disable-line react/no-unused-prop-types
   /**
-   * The name of the `<ToggleButtonGroup />` this `<ToggleButton />` belongs to. This is created and provided by the `<RadioGroup .>`
+   * The name of the `ToggleButtonGroup` this `ToggleButton` belongs to. This is created and
+   * provided by the `RadioGroup`
    * @ignore
    */
   name: PropTypes.string,
   /**
-   * The size of the `<ToggleButton />.
+   * The size of the `ToggleButton.
    * @ignore
    */
   size: PropTypes.oneOf(SIZES),
   /**
-   * Any inline styles you would like to add to the `<ToggleButton />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `ToggleButton`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   /**
-   * The value of the `<ToggleButton />`.
+   * The value of the `ToggleButton`.
    */
   value: PropTypes.oneOfType([
     PropTypes.string,

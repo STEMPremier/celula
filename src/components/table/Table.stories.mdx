@@ -5,23 +5,31 @@ import {
   Meta,
   Story,
 } from '@storybook/addon-docs/blocks';
-import { boolean, number } from '@storybook/addon-knobs';
 
 import { data, columns } from './data.js';
 import Table from '.';
 import SomethingToMemo from './SomethingToMemo'
 
-<Meta component={Table} title="Components/Atoms/Table" />
+<Meta args={{ data, columns }} component={Table} title="Components/Atoms/Table" />
 
 # Table
-
 <Description of={Table} />
-<ArgsTable of={Table} />
+
+<Canvas>
+  <Story name="Table with Controls">
+    {args => <Table {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Table with Controls" />
 
 ## Background
-The `<Table />` component uses [react-table](https://react-table.tanstack.com/) under the hood. That confers some requirements in how you use have to set up your `<Table />`.
+The `Table` component uses [react-table](https://react-table.tanstack.com/) under the hood. That
+confers some requirements in how you use have to set up your `Table`.
 
-When building out rows and columns behind the scenes, `react-table` needs a mechanism to keep track of the which column header/title goes with which column of data. Take the following column and row data:
+When building out rows and columns behind the scenes, `react-table` needs a mechanism to keep
+track of the which column header/title goes with which column of data. Take the following column
+and row data:
 
 ```js
 // Each object in the array is describes a row of data.
@@ -70,7 +78,9 @@ That will produce a table that looks like the following:
 |Clark|Kent|
 |Jean|Gray|
 
-Furthermore it is advisable to wrap that data in a `React.useMemo` call to keep `react-table` from recreating its data graph unless the data actually changes. There is a lot of logic involved in that and we should avoid recalculating it if we can.
+Furthermore it is advisable to wrap that data in a `React.useMemo` call to keep `react-table` from
+recreating its data graph unless the data actually changes. There is a lot of logic involved in
+that and we should avoid recalculating it if we can.
 
 ```js
 const dataFromOutside = [
@@ -107,23 +117,11 @@ const columns = React.useMemo(() => [
 ```
 For More information, see [react-table](https://react-table.tanstack.com/).
 
-<Story name="Table with Knobs" parameters={{ docs: { disable: true } }}>
-  <Table
-    columns={columns}
-    data={data}
-    pageSize={number('pageSize', 5)}
-    clickable={boolean('clickable', false)}
-    clickFn={(row, event) => console.log('From the row:\nrow', row, "\nevent", event)}
-    selectable={boolean('selectable', true)}
-    selectionHeaderFn={(rows, event) => console.log('From the header checkbox:\nrows', rows, "\nevent", event)}
-    selectionFn={(row, event) => console.log('From the checkbox:\nrow', row, "\nevent", event)}
-  />
-</Story>
-
 ## Default
+A `Table` is paginated by default, with a page size of 10.
 
 <Canvas>
-  <Story name="Default">
+  <Story name="Default Table">
     <Table
       columns={columns}
       data={data}
@@ -132,8 +130,8 @@ For More information, see [react-table](https://react-table.tanstack.com/).
 </Canvas>
 
 ## Options
-
-Data tables can include interactive elements, such as making the rows clickable, checkboxes (on rows), sorting (on columns).
+Data tables can include interactive elements, such as making the rows clickable, and/or checkboxes 
+(on rows).
 
 ### Clickable
 When a user hovers over a row, that row displays a background color.
@@ -141,7 +139,7 @@ When a user hovers over a row, that row displays a background color.
 A clicked row can trigger an (optional) function, `rowFunction`, on click: `function(row, event) {}`.
 
 <Canvas>
-  <Story name="Clickable">
+  <Story name="Clickable Table">
     <Table
       columns={columns}
       data={data}
@@ -154,14 +152,19 @@ A clicked row can trigger an (optional) function, `rowFunction`, on click: `func
 ### Selectable
 When a user hovers over a row, that row displays a background color.
 
-When a row checkbox is selected, the row displays a background color. For users who use screen magnification, the background color fill provides a way to indicate that a row has been selected, as the selected checkbox may appear outside of the magnified screen area.
+When a row checkbox is selected, the row displays a background color. For users who use screen
+magnification, the background color fill provides a way to indicate that a row has been selected,
+  as the selected checkbox may appear outside of the magnified screen area.
 
-The checkbox in the header can trigger an (optional) function, `selectionHeaderFn`, on click: `function(rows, event) {}`. A checkbox in the body of the table can trigger an (optional) function, `selectionFn`, on click: `function(row, event) {}`.
+The checkbox in the header can trigger an (optional) function, `selectionHeaderFn`, on click: 
+`function(rows, event) {}`. A checkbox in the body of the table can trigger an (optional) function, 
+  `selectionFn`, on click: `function(row, event) {}`.
 
-Note: If you have both a `checkboxFunction` and a `rowFunction`, when you click the checkbox, both functions will trigger.
+Note: If you have both a `checkboxFunction` and a `rowFunction`, when you click the checkbox, both 
+functions will trigger.
 
 <Canvas>
-  <Story name="Selectable">
+  <Story name="Selectable Table">
     <Table
       columns={columns}
       data={data}

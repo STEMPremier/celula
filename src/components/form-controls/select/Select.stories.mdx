@@ -1,32 +1,20 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { boolean, number, radios, select, text } from '@storybook/addon-knobs';
 
 import Select from '.';
-import { SYSTEM_ICONS as ICONS } from '../../../utils/constants';
 
-<Meta component={Select} title="Components/Molecules/Form Controls/Select" />
-
-# Select
-<Description of={Select} />
-<ArgsTable of={Select} />
-
-<Story name="Select with Knobs" parameters={{ docs: { disable: true } }}>
-  <Select
-    btnOptions={{
-      btnClick: action('`Select with Knobs` button onClick event triggered.'),
-      btnIcon: select('btnIcon', [...ICONS, ''], 'navigate', 'Button Options'),
-    }}
-    className={text('className', '', 'Select Options')}
-    disabled={boolean('disabled', false, 'Select Options')}
-    errorMsg={text('errorMsg', '', 'Select Options')}
-    formId={text('formId', 'selectWithKnobForm', 'Select Options')}
-    handleChange={action('`Select with Knobs` onChange event triggered.')}
-    helpText={text('helpText', 'This is useful or helpful information.', 'Select Options')}
-    icon={select('icon', [...ICONS, ''], '', 'Select Options')}
-    label={text('label', 'Select with Knobs', 'Select Options')}
-    name={text('name', 'selectWithKnobs', 'Select Options')}
-    options={[
+<Meta
+  args={{
+    handleChange: action('Selected!'),
+    label: 'Select',
+    name: 'defaultSelect',
+    options: [
       {
         name: 'Option 1',
         value: '1',
@@ -35,150 +23,102 @@ import { SYSTEM_ICONS as ICONS } from '../../../utils/constants';
         name: 'Option 2',
         value: '2',
       }
-    ]}
-    placeholder={text('placeholder', 'Please make a choice', 'Select Options')}
-    selectedValue={radios('selectedValue', { None: 'none', 'Option 1': '1', 'Option 2': '2' }, 'none', 'Select Options')}
-  />
-</Story>
+    ],
+  }}
+  component={Select}
+  title="Components/Molecules/Form Controls/Select"
+/>
+
+# Select
+<Description of={Select} />
+
+<Canvas>
+  <Story name="Select with Controls">
+    {args => <Select {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Select with Controls" />
 
 ## Options
+A `Select` has several options avaliable. It can have help text, a helpfult icon, or an attached
+button. Or it can have all of them at the same time.
 
-A `<Select />` can have help text.
-<Canvas>
-  <Story name="with Help Text">
-    <Select
-      handleChange={action('`Select Types` Default Select onChange event triggered.')}
-      helpText="This is useful or helpful information."
-      label="Select with Help Text:"
-      name="withHelpText"
-      options={[
-        {
-         name: 'option 1',
-         value: 1,
-       },
-       {
-         name: 'option 2',
-         value: 2,
-        },
-     ]}
-    />
+You can put any of the `SystemIcons` on the attached button.
+
+<Canvas isColumn>
+  <Story
+    args={{
+      helpText: 'This is useful or helpful information.',
+      label: 'Select with Help Text:',
+      name: 'withHelpText',
+    }}
+    name="Select with Help Text"
+  >
+    {args => <Select {...args} />}
   </Story>
-</Canvas>
-
-A `<Select />` can have helpful icon. Any of the icons available in `<SystemIcon />` are available.
-<Canvas>
-  <Story name="with an Icon">
-    <Select
-      handleChange={action('`Select Types` Default Select with Help Text onChange event triggered.')}
-      icon="edit"
-      label="Select with an Icon:"
-      name="withIcon"
-      options={[
-        {
-         name: 'option 1',
-         value: 1,
-       },
-       {
-         name: 'option 2',
-         value: 2,
-        },
-     ]}
-    />
+  <Story
+    args={{
+      icon: 'edit',
+      label: 'Select with an Icon:',
+      name: 'withIcon',
+    }}
+    name="Select with an Icon"
+  >
+    {args => <Select {...args} />}
   </Story>
-</Canvas>
-
-A `<Select />` can have an attached button. Any of the icons available in `<SystemIcon />` are available inside the button.
-<Canvas>
-  <Story name="with a Button">
-    <Select
-      btnOptions={{
-        btnClick: action('`Select Types` Default Select with Button button onClick event triggered'),
-        btnIcon: "add",
-      }}
-      handleChange={action('`Select Types` with Icon onChange event triggered.')}
-      label="Select with Attached Button"
-      name="withAttachedButton"
-      options={[
-        {
-         name: 'option 1',
-         value: 1,
-       },
-       {
-         name: 'option 2',
-         value: 2,
-        },
-     ]}
-    />
+  <Story
+    args={{
+      btnOptions: {
+        btnClick: action('Select button clicked!'),
+        btnIcon: 'navigate',
+      },
+      label: 'Select with Attached Button',
+      name: 'withAttachedButton',
+    }}
+    name="Select with a Button"
+  >
+    {args => <Select {...args} />}
   </Story>
-</Canvas>
-
-A `<Select />` can have everything at the same time.
-<Canvas>
-  <Story name="with Everything">
-    <Select
-      btnOptions={{
-        btnClick: action('`Select Types` Default Select with Button button onClick event triggered'),
-        btnIcon: "add",
-      }}
-      handleChange={action('`Select Types` Default Select with Button onChange event triggered.')}
-      helpText="Hold the pickles."
-      icon="edit"
-      label="Select with everything:"
-      name="selectWithEverything"
-      options={[
-        {
-         name: 'option 1',
-         value: 1,
-       },
-       {
-         name: 'option 2',
-         value: 2,
-        },
-     ]}
-    />
+  <Story
+    args={{
+      btnOptions: {
+        btnClick: action('Select button clicked!'),
+        btnIcon: 'add',
+      },
+      helpText: 'Hold the pickles.',
+      icon: 'edit',
+      label: 'Select with everything:',
+      name: 'selectWithEverything',
+    }}
+    name="Select with Everything"
+  >
+    {args => <Select {...args} />}
   </Story>
 </Canvas>
 
 ## States
-A `<Select />` can be disabled.
-<Canvas>
-  <Story name="Disabled">
-    <Select
-      handleChange={action('`Select States` Default Select onChange event triggered.')}
-      label="Make a choice, I dare you:"
-      name="disbaledSelect"
-      options={[
-        {
-         name: 'option 1',
-         value: 1,
-       },
-       {
-         name: 'option 2',
-         value: 2,
-        },
-     ]}
-    />
-  </Story>
-</Canvas>
+A `Select` can be disabled, or report an error.
 
-Or can have an error.
-<Canvas>
-  <Story name="Error">
-    <Select
-      handleChange={action('`Select States` Default Select with Help Text onChange event triggered.')}
-      errorMsg="You were wrong."
-      label="Try NOT to be wrong:"
-      name="errorSelect"
-      options={[
-        {
-         name: 'option 1',
-         value: 1,
-       },
-       {
-         name: 'option 2',
-         value: 2,
-        },
-     ]}
-    />
+<Canvas isColumn>
+  <Story
+    args={{
+      disabled: true,
+      label: 'Make a choice, I dare you:',
+      name: 'disbaledSelect',
+    }}
+    name="Disabled Select"
+  >
+    {args => <Select {...args} />}
+  </Story>
+  <Story
+    args={{
+      errorMsg: 'You chose poorly.',
+      label: 'Try NOT to be wrong:',
+      name: 'errorSelect',
+    }}
+    name="Error Select"
+  >
+    {args => <Select {...args} />}
   </Story>
 </Canvas>

@@ -64,42 +64,43 @@ const RadioGroup = ({
 
 RadioGroup.propTypes = {
   /**
-   * The `<Radio />` components you want the `<RadioGroup />` to group together.
+   * The `Radio` components you want the `RadioGroup` to group together.
    */
   children: PropTypes.node.isRequired,
   /**
-   * A class name, or string of class names, to add to the `<RadioGroup />`.
+   * A class name, or a string of class names, to add to the `RadioGroup`.
    */
   className: PropTypes.string,
   /**
-   * Disables the `<RadioGroup />` and all of its children.
+   * Disables the `RadioGroup` and all of its children.
    */
   disabled: PropTypes.bool,
   /**
-   * An error message to display in the `<RadioGroup />`.
+   * An error message to display in the `RadioGroup`.
    */
   errorMsg: PropTypes.string,
   /**
-   * The id of the form the `<RadioGroup />` belongs to.
+   * The id of the form the `RadioGroup` belongs to.
    */
   formId: PropTypes.string,
   /**
-   * A function to trigger when the state of the `<RadioGroup />` changes. The function recieves 2 arguments, `event`, and `values`.
+   * A function to trigger when the state of the `RadioGroup` changes. The function recieves 2
+   * arguments, `event`, and `values`.
    *
    * @param {Event} event - The event that triggered the change.
    * @param {[]} values - The array of selected values in the <RadioGroup />.
    */
   handleChange: PropTypes.func,
   /**
-   * The `<RadioGroup />` legend.
+   * The `RadioGroup` legend.
    */
   label: PropTypes.string.isRequired,
   /**
-   * The name given to all the children of the `<RadioGroup />`.
+   * The name given to all the children of the `RadioGroup`.
    */
   name: PropTypes.string.isRequired,
   /**
-   * The value used to pre-select a child of the `<RadioGroup />`.
+   * The value used to pre-select a child of the `RadioGroup`.
    */
   selectedValue: PropTypes.oneOfType([
     PropTypes.string,
@@ -107,7 +108,8 @@ RadioGroup.propTypes = {
     PropTypes.bool,
   ]),
   /**
-   * Any inline styles you would like to add to the `<RadioGroup />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `RadioGroup`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   // validators: PropTypes.array,

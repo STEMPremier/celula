@@ -24,7 +24,9 @@ import { ErrorBox } from '../form-controls/core';
 import '../form-controls/core/selectable/selectable.less';
 
 /**
- * `Switches` toggle the state of a single setting on or off. They are the preferred way to adjust settings on mobile. Use them to toggle a single option on or off or to immediately activate or deactivate something
+ * A `Switche` toggles the state of a single setting on or off. They are the preferred way to
+ * adjust settings on mobile. Use them to toggle a single option on or off or to immediately
+ * activate or deactivate something.
  */
 const Switch = ({
   checked,
@@ -82,15 +84,15 @@ const Switch = ({
 
 Switch.propTypes = {
   /**
-   * Set the `<Switch /> to on be default`.
+   * Set the `Switch to on be default`.
    */
   checked: PropTypes.bool,
   /**
-   * A class name, or string of class names, to add to the `<Switch />`.
+   * A class name, or a string of class names, to add to the `Switch`.
    */
   className: PropTypes.string,
   /**
-   * Disables the `<Switch />`.
+   * Disables the `Switch`.
    */
   disabled: PropTypes.bool,
   /**
@@ -98,23 +100,24 @@ Switch.propTypes = {
    */
   errorMsg: PropTypes.string,
   /**
-   * A function to trigger when the state of the `<Switch />` changes.
+   * A function to trigger when the state of the `Switch` changes.
    */
   handleChange: PropTypes.func,
   /**
-   * The `<Switch />` label.
+   * The `Switch` label.
    */
   label: PropTypes.string.isRequired,
   /**
-   * The name given to all the children of the `<Switch />`.
+   * The name given to all the children of the `Switch`.
    */
   name: PropTypes.string,
   /**
-   * Any inline styles you would like to add to the `<Switch />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `Switch`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   /**
-   * The value of the `<Switch />`.
+   * The value of the `Switch`.
    */
   value: PropTypes.oneOfType([
     PropTypes.string,

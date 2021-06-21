@@ -22,86 +22,52 @@ import cx from 'classnames';
 
 import { useTable, usePagination, useRowSelect } from 'react-table';
 
+import CircularLoader from '../circular-loader';
+import Pagination from '../pagination';
+import useRowSelectComponent from './useRowSelectComponet';
+import { functionOrUndef } from '../../utils/propValidators';
+
 import './table.less';
 
-import { Checkbox } from '../form-controls/checkbox';
-import Pagination from '../pagination';
-
 /**
- * A `useTable` compatible hook that will add a column of/for the checkbox. To be passed into the `useTable` hook.
- * @param {object} instance - a `useTable` instance object. It is not a class so much as a pile of arrays (of functions).
- */
-const useRowSelectComponent = (selectionHeaderFn, selectionFn) => instance => {
-  // visibleColumns (a property on the instance object) is an array of functions. Each of which will allow you to decorate some aspect of the columns. In our case, we are adding a checkbox to the beginning of each row.
-  instance.visibleColumns.push(decorators => [
-    // This object is a 'constructor' for a column in the table. `useTable` will use the `Header` and `Cell` properties to determine what to put in our column. In our case they are components, but they could be strings.
-    /* eslint-disable react/display-name */
-    /* eslint-disable react/prop-types */
-    {
-      id: 'selection',
-      Header: ({
-        getToggleAllPageRowsSelectedProps,
-        page,
-        toggleAllPageRowsSelected,
-      }) => {
-        const rows = page.map(row => row.original);
-
-        return (
-          <Checkbox
-            {...getToggleAllPageRowsSelectedProps({
-              label: 'label',
-              /* When we override the deafult onChange handler provided by useRowSelect,
-               * we have to manually trigger the toggleRowSelected function manually.
-               */
-              onChange: event => {
-                toggleAllPageRowsSelected();
-                selectionHeaderFn(rows, event);
-              },
-              value: 'allRows[]',
-            })}
-          />
-        );
-      },
-      Cell: ({ row }) => (
-        <Checkbox
-          {...row.getToggleRowSelectedProps({
-            label: row.id,
-            /* When we override the deafult onChange handler provided by useRowSelect,
-             * we have to manually trigger the toggleRowSelected function manually.
-             */
-            onChange: event => {
-              row.toggleRowSelected(event.target.checked);
-              selectionFn(row.original, event);
-            },
-            value: row.id,
-          })}
-        />
-      ),
-    },
-    /* eslint-enable react/prop-types */
-    /* eslint-enable react/display-name */
-    ...decorators,
-  ]);
-};
-
-/**
- * `Tables` display information in a grid-like format of rows and columns. They organize information in a way that’s easy to scan, so that users can look for patterns and insights. Tables can contain interactive components (such as chips, buttons, or menus), non-interactive elements (such as badges).
+ * A `Table` displays information in a grid-like format of rows and columns. They organize
+ * information in a way that’s easy to scan, so that users can look for patterns and insights.
+ * Tables can contain interactive components (such as chips, buttons, or menus), non-interactive
+ * elements (such as badges).
  */
 /* ### *Mobile Tables*
- * These list can support up to one inline link with additional actions placed within an ellipse menu in stacked tables. The purpose of this is to retain a relatively short row height. These lists are also stacked directly next to one another vertically allowing for no spacing. Text truncation is an option if desired.
+ * These list can support up to one inline link with additional actions placed within an ellipse
+ * menu in stacked tables. The purpose of this is to retain a relatively short row height. These
+ * lists are also stacked directly next to one another vertically allowing for no spacing. Text
+ * truncation is an option if desired.
  */
 const Table = ({
   className,
-  columns,
-  data,
-  pageSize,
   clickable,
   clickFn,
+  columns,
+  data,
+  fetchData,
+  loading,
+  pageCount: serversidePageCount, // for serverside pagination
+  pageSize: clientsidePageSize, // for clientside pagination
   selectable,
   selectionHeaderFn,
   selectionFn,
   style,
 }) => {
+  const options = {
+    columns,
+    data,
+    initialState: { pageIndex: 0 },
+  };
+
+  // If we have both pageCount and fetchData, we assume server-side pagination.
+  if (serversidePageCount && fetchData) {
+    options.manualPagination = true;
+    options.pageCount = serversidePageCount;
+  }
+
   const {
     getTableProps,
     getTableBodyProps,
@@ -115,18 +81,22 @@ const Table = ({
     nextPage,
     previousPage,
     setPageSize,
-    state: { pageIndex },
+    state: { pageIndex, pageSize },
   } = useTable(
-    {
-      columns,
-      data,
-    },
+    options,
     usePagination,
     useRowSelect,
     useRowSelectComponent(selectionHeaderFn, selectionFn),
   );
 
-  useEffect(() => setPageSize(pageSize), [pageSize]);
+  // When (if) the prop pageSize changes, tell the Table
+  useEffect(() => setPageSize(clientsidePageSize), [clientsidePageSize]);
+
+  // When (if) any one of (prop) fetchData, (the react-table states) pageIndex, or pageSize
+  // changes, fetch new data.
+  useEffect(() => {
+    if (fetchData) fetchData({ pageIndex, pageSize });
+  }, [fetchData, pageIndex, pageSize]);
 
   const classes = cx(
     'ce-table',
@@ -137,7 +107,7 @@ const Table = ({
     className,
   );
 
-  const navToPage = pg => gotoPage(pg - 1);
+  const navToPage = pg => gotoPage(pg);
 
   return (
     <>
@@ -165,6 +135,7 @@ const Table = ({
 
         {/* table body */}
         <div className="ce-table__body" {...getTableBodyProps()}>
+          {loading && <CircularLoader indeterminate />}
           {page.map(row => {
             prepareRow(row);
 
@@ -206,10 +177,7 @@ const Table = ({
         <Pagination
           canPreviousPage={canPreviousPage}
           canNextPage={canNextPage}
-          currentPage={
-            /* Pagination expects currentPage to be 1-index, and react-table provides the number 0-indexed */
-            pageIndex + 1
-          }
+          currentPage={pageIndex}
           gotoPage={navToPage}
           nextPage={nextPage}
           pageCount={pageCount}
@@ -222,61 +190,78 @@ const Table = ({
 
 Table.propTypes = {
   /**
-   * A class name, or string of class names, to add to the `<Table />`.
+   * A class name, or a string of class names, to add to the `Table`.
    */
   className: PropTypes.string,
   /**
-   * An array for the column definition of your `<Table />`.
+   * An array for the column definition of your `Table`.
    */
   columns: PropTypes.arrayOf(PropTypes.object).isRequired,
   /**
-   * An array of data (objects) for the `<Table />`.
+   * An array of data (objects) for the `Table`.
    */
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
   /**
-   * The number of items per page in the `<Table />`.
+   * A function the `Table` uses to fetch data. This is only used when utilizing server-side
+   * pagination.
+   */
+  fetchData: functionOrUndef,
+  /**
+   * The loading state of a `Table` with controlled pagination.
+   */
+  loading: PropTypes.bool,
+  /**
+   * Used to tell the `Table` how many pages are there when utilizing server-side pagination.
+   */
+  pageCount: PropTypes.number,
+  /**
+   * The number of items per page in the `Table`.
    */
   pageSize: PropTypes.number,
   /**
-   * Make the rows in the `<Table />` clickable.
+   * Make the rows in the `Table` clickable.
    */
   clickable: PropTypes.bool,
   /**
-   * A function to trigger when clicking on a row in the `<Table />`.
+   * A function to trigger when clicking on a row in the `Table`.
    * The function accepts 2 arguments, `row` and `event`, in that order: `(row, event) => {}`.
    *
-   * @param {row} object - The row object for this row of the table.
+   * @param {row} object - The row object for this row of the `Table`.
    * @param {event} object - The event triggered by the click on the row.
    */
   clickFn: PropTypes.func,
   /**
-   * Adds a checkbox in the `<Table />`, as the first column.
+   * Adds a checkbox in the `Table`, as the first column.
    */
   selectable: PropTypes.bool,
   /**
-   * A function to trigger when clicking on the checkbox in the header row in the `<Table />`.
+   * A function to trigger when clicking on the checkbox in the header row in the `Table`.
    * The function accepts 2 arguments, `row` and `event`, in that order: `(row, event) => {}`.
    *
-   * @param {row} object - The row object for this row of the table.
+   * @param {row} object - The row object for this row of the `Table`.
    * @param {event} object - The event triggered by the click on the row.
    */
   selectionHeaderFn: PropTypes.func,
   /**
-   * A function to trigger when clicking on the checkbox in a row in the `<Table />`.
+   * A function to trigger when clicking on the checkbox in a row in the `Table`.
    * The function accepts 2 arguments, `rows` and `event`, in that order: `(row, event) => {}`.
    *
-   * @param {rows} object - The row object for this row of the table.
+   * @param {rows} object - The row object for this row of the `Table`.
    * @param {event} object - The event triggered by the click on the row.
    */
   selectionFn: PropTypes.func,
   /**
-   * Any inline styles you would like to add to the `<Table />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `Table`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
 Table.defaultProps = {
   className: '',
+  fetchData: undefined,
+  loading: false,
+  pageCount: 0,
   pageSize: 10,
   clickable: false,
   clickFn: () => {},

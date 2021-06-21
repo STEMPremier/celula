@@ -1,6 +1,6 @@
 {
   "name": "@talloinc/celula",
-  "version": "0.6.6",
+  "version": "0.6.7",
   "description": "Tallo Inc.'s React component library and ui documentation",
   "main": "dist/celula.js",
   "dependencies": {
@@ -16,14 +16,14 @@
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.6.3",
     "@mdx-js/loader": "^1.6.22",
-    "@storybook/addon-a11y": "^6.1.14",
-    "@storybook/addon-actions": "^6.1.14",
-    "@storybook/addon-docs": "^6.1.14",
-    "@storybook/addon-knobs": "^6.1.14",
-    "@storybook/addon-storyshots": "^6.1.14",
-    "@storybook/addon-viewport": "^6.1.14",
-    "@storybook/addons": "^6.1.14",
-    "@storybook/react": "^6.1.14",
+    "@storybook/addon-a11y": "^6.2.9",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-docs": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-storyshots": "^6.2.9",
+    "@storybook/addon-viewport": "^6.2.9",
+    "@storybook/addons": "^6.2.9",
+    "@storybook/react": "^6.2.9",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.3.1",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^25.1.0",
@@ -117,7 +117,7 @@
     }
   ],
   "engines": {
-    "node": "10.x",
+    "node": "16.x",
     "yarn": "1.x"
   },
   "license": "LGPL-3.0",

@@ -50,11 +50,11 @@ const ProductIcon = ({ className, name, size, style, title }) => {
 
 ProductIcon.propTypes = {
   /**
-   * A class name, or string of class names, to add to the `<ProductIcon />`.
+   * A class name, or a string of class names, to add to the `ProductIcon`.
    */
   className: PropTypes.string,
   /**
-   * The `<ProductIcon />`.
+   * The `ProductIcon`.
    */
   // name: PropTypes.oneOf(PRODUCT_ICONS).isRequired,
   name: PropTypes.oneOf([
@@ -84,16 +84,17 @@ ProductIcon.propTypes = {
     'career-interests',
   ]).isRequired,
   /**
-   * The size you want the `<ProductIcon />` to be.
+   * The size you want the `ProductIcon` to be.
    */
   // size: PropTypes.oneOf(SIZES),
   size: PropTypes.oneOf(['small', 'large', 'jumbo']),
   /**
-   * Any inline styles you would like to add to the `<Producticon />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `ProductIcon`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   /**
-   * By default, we hide ProductIcons from assitive technologies,
+   * By default, we hide `ProductIcons` from assitive technologies,
    * such as screen readers, because there should be useful text
    * associated with most icons.
    *

@@ -1,61 +1,51 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { boolean, select, text } from '@storybook/addon-knobs';
 
 import { ToggleButton, ToggleButtonGroup } from '.';
-import { COLORS, SIZES, SYSTEM_ICONS } from '../../utils/constants';
 
-<Meta component={ToggleButton} title="Components/Atoms/ToggleButton" />
+<Meta
+  args={{
+    children: [
+      <ToggleButton icon="export" value="export" />,
+      <ToggleButton icon="follow" value="follow" />,
+      <ToggleButton icon="message" value="message" />,
+    ],
+    selectedValue: 'follow',
+  }}
+  component={ToggleButtonGroup}
+  title="Components/Atoms/ToggleButton"
+  subcomponents={{ToggleButton}}
+/>
 
 # ToggleButton
-A `ToggleButton` is comprised of 2 seperate components; the individual buttons, `ToggleButton`, and their container, `ToggleButtonGroup`. `ToggleButtons` must always be inside a `TogglebuttonContainer` to function properly, and as a group.
+A `ToggleButton` is comprised of 2 seperate components; the individual buttons, `ToggleButton`, and
+their container, `ToggleButtonGroup`. `ToggleButtons` must always be inside a
+`TogglebuttonContainer` to function properly, and as a group.
 
-## ToggleButton
 <Description of={ToggleButton} />
-<ArgsTable of={ToggleButton}/>
-
-## ToggleButtonGroup
 <Description of={ToggleButtonGroup} />
-<ArgsTable of={ToggleButtonGroup}/>
 
-<Story name="ToggleButtonGroup with Knobs" parameters={{docs:{disable:true}}}>
-  <ToggleButtonGroup
-    className={text('className', '')}
-    color={select('color', COLORS, 'primary')}
-    disabled={boolean('disabled', false)}
-    formId={text('formId', 'formKnobs')}
-    handleChange={action('`ToggleButtonGroup with Knobs` onChange event triggered.')}
-    name={text('name', 'formKnobs')}
-    selectedValue={select('selectedValue', ['export','follow', 'message'], 'follow')}
-    size={select('size', SIZES, 'large')}
-  >
-    <ToggleButton icon="export" value="export" />
-    <ToggleButton icon="follow" value="follow" />
-    <ToggleButton icon="message" value="message" />
-  </ToggleButtonGroup>
-</Story>
+<Canvas>
+  <Story name="ToggleButton with Controls">
+    {args => <ToggleButtonGroup {...args} />}
+  </Story>
+</Canvas>
 
-<Story name="ToggleButton with Knobs" parameters={{docs:{disable:true}}}>
-  <ToggleButtonGroup
-    handleChange={action('`ToggleButton with Knobs` onChange event triggered.')}
-    name="formKnobs2"
-    selectedValue={text('selectedValue', 'follow')}
-  >
-    <ToggleButton
-      className={text('className', '')}
-      icon={select('icon', SYSTEM_ICONS,'export')}
-      value={text('value','export')}
-    />
-    <ToggleButton icon="follow" value="follow" />
-    <ToggleButton icon="message" value="message" />
-  </ToggleButtonGroup>
-</Story>
+<ArgsTable story="ToggleButton with Controls" />
 
 ## Sizes
+A `ToggleButton` can come in one of three sizes, `small`, `large`, or `jumbo`.
+
 <Canvas>
-  <Story name="Small">
+  <Story name="Small ToggleButton">
     <ToggleButtonGroup
-      handleChange={value => console.log(value)}
+      handleChange={action('You toggled a ToggleButton')}
       name={`formSizes_small`}
       selectedValue="follow"
       size="small"
@@ -65,9 +55,9 @@ A `ToggleButton` is comprised of 2 seperate components; the individual buttons, 
       <ToggleButton icon="message" value="message" />
     </ToggleButtonGroup>
   </Story>
-  <Story name="Large (Default)">
+  <Story name="Large ToggleButton">
     <ToggleButtonGroup
-      handleChange={value => console.log(value)}
+      handleChange={action('You toggled a ToggleButton')}
       name={`formSizes_large`}
       selectedValue="follow"
       size="large"
@@ -77,9 +67,9 @@ A `ToggleButton` is comprised of 2 seperate components; the individual buttons, 
       <ToggleButton icon="message" value="message" />
     </ToggleButtonGroup>
   </Story>
-  <Story name="Jumbo">
+  <Story name="Jumbo ToggleButton">
     <ToggleButtonGroup
-      handleChange={value => console.log(value)}
+      handleChange={action('You toggled a ToggleButton')}
       name={`formSizes_jumbo`}
       selectedValue="follow"
       size="jumbo"
@@ -92,65 +82,62 @@ A `ToggleButton` is comprised of 2 seperate components; the individual buttons, 
 </Canvas>
 
 ## Colors and States
+A `ToggleButton` can come in any of the same colors as a `Button` can.
+
 <Canvas>
-  <Story name="Primary (Default)">
+  <Story name="Primary ToggleButton">
     <ToggleButtonGroup
       color="primary"
-      handleChange={value => console.log(value)}
+      handleChange={action('You toggled a ToggleButton')}
       name={`formStates_primary`}
       selectedValue="follow"
     >
-      <ToggleButton icon="export" value="export" />
       <ToggleButton icon="follow" value="follow" />
       <ToggleButton icon="message" value="message" />
     </ToggleButtonGroup>
   </Story>
-  <Story name="Secondary">
+  <Story name="Secondary ToggleButton">
     <ToggleButtonGroup
       color="secondary"
-      handleChange={value => console.log(value)}
+      handleChange={action('You toggled a ToggleButton')}
       name={`formStates_secondary`}
       selectedValue="follow"
     >
-      <ToggleButton icon="export" value="export" />
       <ToggleButton icon="follow" value="follow" />
       <ToggleButton icon="message" value="message" />
     </ToggleButtonGroup>
   </Story>
-  <Story name="Black">
+  <Story name="Black ToggleButton">
     <ToggleButtonGroup
       color="black"
-      handleChange={value => console.log(value)}
+      handleChange={action('You toggled a ToggleButton')}
       name={`formStates_black`}
       selectedValue="follow"
     >
-      <ToggleButton icon="export" value="export" />
       <ToggleButton icon="follow" value="follow" />
       <ToggleButton icon="message" value="message" />
     </ToggleButtonGroup>
   </Story>
-  <Story name="Inverted">
+  <Story name="Inverted ToggleButton">
     <div style={{backgroundColor:'black'}}>
       <ToggleButtonGroup
         color="inverted"
-        handleChange={value => console.log(value)}
+      handleChange={action('You toggled a ToggleButton')}
         name={`formStates_inverted`}
         selectedValue="follow"
       >
-        <ToggleButton icon="export" value="export" />
         <ToggleButton icon="follow" value="follow" />
         <ToggleButton icon="message" value="message" />
       </ToggleButtonGroup>
     </div>
   </Story>
-  <Story name="Disabled">
+  <Story name="Disabled ToggleButton">
     <ToggleButtonGroup
       disabled={true}
-      handleChange={value => console.log(value)}
+      handleChange={action('You toggled a ToggleButton')}
       name={`formStates_disabled`}
       selectedValue="follow"
     >
-      <ToggleButton icon="export" value="export" />
       <ToggleButton icon="follow" value="follow" />
       <ToggleButton icon="message" value="message" />
     </ToggleButtonGroup>

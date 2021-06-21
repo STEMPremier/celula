@@ -1,96 +1,72 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { boolean, select, text } from '@storybook/addon-knobs';
 
 import { Radio, RadioGroup } from '.';
-import { COMPONENT_STATES as STATES } from '../../../utils/constants';
 
-<Meta component={RadioGroup} title="Components/Molecules/Form Controls/Radio" />
+<Meta
+  args={{
+    children: [
+      <Radio label='macOS' value='macos' />,
+      <Radio label='Linux' value='linux' />,
+      <Radio label='Windows' value='windows' />,
+    ],
+    handleChange: action('RadioGroup Changed!'),
+    label: 'Choose your favorite OS:',
+    name: 'withControls',
+    selectedValue: 'macos',
+  }}
+  component={RadioGroup}
+  title="Components/Molecules/Form Controls/Radio"
+  subcomponents={{Radio}}
+/>
 
 # Radio
-
-## Radio
 <Description of={Radio} />
-<ArgsTable of={Radio} />
-
-## RadioGroup
 <Description of={RadioGroup} />
-<ArgsTable of={RadioGroup} />
 
-<Story name="RadioGroup with Knobs" parameters={{ docs: {disable: true}}}>
-  <form id="formKnobs">
-    <RadioGroup
-      className={text('className', '')}
-      disabled={boolean('disabled', false)}
-      errorMsg={text('errorMsg', '')}
-      formId={text('formId', 'formKnobs')}
-      handleChange={action('`RadioGroup with Knobs` onChange event triggered.')}
-      label={text('label', 'Choose your favorite OS:')}
-      name={text('name', 'favoriteOS')}
-      selectedValue={text('selectedValue', 'macos')}
-    >
-      <Radio label='macOS' value='macos' />
-      <Radio label='Linux' value='linux' />
-      <Radio label='Windows' value='windows' />
-    </RadioGroup>
-  </form>
-</Story>
+<Canvas>
+  <Story name="Radios with Controls">
+    {args => <RadioGroup {...args} />}
+  </Story>
+</Canvas>
 
-<Story name="Radio with Knobs" parameters={{ docs: {disable: true}}}>
-  <Radio
-    className={text('className', '')}
-    label={text('label', 'macOS')}
-    value={text('value', 'macos')}
-  />
-</Story>
+<ArgsTable story="Radios with Controls" />
 
 ## States
-<Canvas>
-  <Story name="Default">
-    <RadioGroup
-      handleChange={action('`Radio States` onChange event triggered.')}
-      label="Default RadioGroup:"
-      name="default"
-      selectedValue="thatOne"
-    >
-      <Radio label="This one" value="thisOne" />
-      <Radio label="That one" value="thatOne" />
-      <Radio label="This other one" value="thisOtherOne" />
-      <Radio label="That other one" value="thatOtherOne" />
-    </RadioGroup>
-  </Story>
-</Canvas>
+A `RadioGroup` can be disabled, or show an error.
 
-<Canvas>
-  <Story name="Disabled">
-    <RadioGroup
-      disabled={true}
-      handleChange={action('`Radio States` onChange event triggered.')}
-      label="Disabled RadioGroup:"
-      name="disabled"
-      selectedValue="thatOne"
-    >
-      <Radio label="This one" value="thisOne" />
-      <Radio label="That one" value="thatOne" />
-      <Radio label="This other one" value="thisOtherOne" />
-      <Radio label="That other one" value="thatOtherOne" />
-    </RadioGroup>
+<Canvas isColumn>
+  <Story
+    args={{
+      name: 'defaultRadioGroup',
+    }}
+    name="Default Radios"
+  >
+    {args => <RadioGroup {...args} />}
   </Story>
-</Canvas>
-
-<Canvas>
-  <Story name="Error">
-    <RadioGroup
-      errorMsg="Not that one!"
-      handleChange={action('`Radio States` onChange event triggered.')}
-      label="Default RadioGroup:"
-      name="error"
-      selectedValue="thatOne"
-    >
-      <Radio label="This one" value="thisOne" />
-      <Radio label="That one" value="thatOne" />
-      <Radio label="This other one" value="thisOtherOne" />
-      <Radio label="That other one" value="thatOtherOne" />
-    </RadioGroup>
+  <Story
+    args={{
+      disabled: true,
+      name: 'disabledRadioGroup',
+    }}
+    name="Disabled Radios"
+  >
+    {args => <RadioGroup {...args} />}
+  </Story>
+  <Story
+    args={{
+      errorMsg: 'You may not select Windows!',
+      name: 'erroeRadioGroup',
+      selectedValue: 'windows',
+    }}
+    name="Error Radios"
+  >
+    {args => <RadioGroup {...args} />}
   </Story>
 </Canvas>

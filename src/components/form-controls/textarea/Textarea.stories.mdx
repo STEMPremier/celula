@@ -1,34 +1,38 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
-import { action } from '@storybook/addon-actions';
-import { boolean, text } from '@storybook/addon-knobs';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks';
 
 import Textarea from '.';
 
-<Meta component={Textarea} title="Components/Molecules/Form Controls/Textarea" />
+<Meta
+  args={{
+    label: 'Textarea',
+    name: 'demoTextarea',
+  }}
+  component={Textarea}
+  title="Components/Molecules/Form Controls/Textarea"
+/>
 
 # Textarea
 <Description of={Textarea} />
-<ArgsTable of={Textarea} />
 
-<Story name="Textarea with Knobs" parameters={{ docs: { disable: true } }}>
-  <Textarea
-    className={text('className', '')}
-    disabled={boolean('disabled', false)}
-    errorMsg={text('errorMsg', '')}
-    formId={text('formId', 'textareaWithKnobsForm')}
-    handleChange={action('`Textarea with Knobs` onChange event triggered.')}
-    helpText={text('helpText', 'This is useful or helpful information.')}
-    initialValue={text('initialValue', '')}
-    label={text('label', 'Textarea with Knobs')}
-    name={text('name', 'textareaWithKnobs')}
-    placeholder={text('placeholder', 'Please fill this in.')}
-  />
-</Story>
+<Canvas>
+  <Story name="Textarea with Controls">
+    {args => <Textarea {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Textarea with Controls" />
 
 ## Options
-A `<Textarea />` can have help text.
+A `Textarea` can have help text.
+
 <Canvas>
-  <Story name="with Help Text">
+  <Story name="Textarea with Help Text">
     <Textarea
       helpText="I am helpful text."
       label="Textarea with help text:"
@@ -39,10 +43,10 @@ A `<Textarea />` can have help text.
 </Canvas>
 
 ## States
+A `Textarea` can be disabled, or have an error.
 
-A `<Textarea />` can be disabled.
-<Canvas>
-  <Story name="Disabled">
+<Canvas isColumn>
+  <Story name="Disabled Textarea">
     <Textarea
       disabled
       label="Fill me in, I dare you:"
@@ -50,11 +54,7 @@ A `<Textarea />` can be disabled.
       placeholder="I double-dog dare you."
     />
   </Story>
-</Canvas>
-
-Or can have an error:
-<Canvas>
-  <Story name="Error">
+  <Story name="Error Textarea">
     <Textarea
       errorMsg="You were wrong!"
       label="Try NOT to be wrong:"

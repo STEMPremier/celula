@@ -1,0 +1,67 @@
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks';
+
+import LinearLoader from '.';
+
+<Meta args={{ percentage: 83 }} component={LinearLoader} title="Components/Atoms/LinearLoader" />
+
+# LinearLoader
+<Description of={LinearLoader} />
+
+<Canvas>
+  <Story name="LinearLoader with Controls">
+    {args => <LinearLoader {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="LinearLoader with Controls" />
+
+## Progress Loader
+Progress loaders fill the track with color, as progress moves from 0% to 100%.
+
+<Canvas>
+  <Story name="Progress LinearLoader">
+    <LinearLoader percentage={83} />
+  </Story>
+</Canvas>
+
+## Indeterminate Loader
+Indeterminate loaders show an indicator growing and shrinking along the track until the operation is incomplete.
+
+<Canvas>
+  <Story name="Indeterminate LinearLoader">
+    <LinearLoader indeterminate />
+  </Story>
+</Canvas>
+
+## Colors
+A `LinearLoader` may come in any of our gradients.
+
+<Canvas isColumn>
+  <Story name="Cool LinearLoader">
+    <LinearLoader color="cool" percentage={50} />
+  </Story>
+  <Story name="Warm LinearLoader">
+    <LinearLoader color="warm" percentage={50} />
+  </Story>
+  <Story name="Hot LinearLoader">
+    <LinearLoader color="hot" percentage={50} />
+  </Story>
+</Canvas>
+
+## Options
+A `LinearLoader` may optionally display a legend.
+
+<Canvas isColumn>
+  <Story name="LinearLoader with Legend">
+    <LinearLoader legend="Halfway there!" percentage={50} />
+  </Story>
+  <Story name="Indeterminate LinearLoader with Legend">
+    <LinearLoader indeterminate legend="I'm working on it!" />
+  </Story>
+</Canvas>

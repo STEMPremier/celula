@@ -1,6 +1,11 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story
+} from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { boolean, select, text } from '@storybook/addon-knobs';
 
 import {{properCase componentName}} from '.';
 
@@ -8,9 +13,11 @@ import {{properCase componentName}} from '.';
 
 # {{properCase componentName}}
 <Description of={ {{properCase componentName}} } />
-<ArgsTable of={ {{properCase componentName}} } />
 
-<Story name="{{properCase componentName}} with Knobs" parameters={ { docs: { disable: true } } }>
-  <{{properCase componentName}}>
-  </{{properCase componentName}}>
-</Story>
+<Canvas>
+  <Story name="{{properCase componentName}} with Controls">
+    {args => <{{properCase componentName}} {..args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="{{properCase componentName}} with Controls" />

@@ -15,22 +15,17 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-import React from "react";
-import PropTypes from "prop-types";
-import cx from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
 
 import './{{lowerCase componentName}}.less';
 
-const {{properCase componentName}} = ({
-  className,
-}) => {
-  const classes = cx(
-    'ce-{{lowerCase componentName}}',
-    className,
-  );
+const {{properCase componentName}} = ({ className, style }) => {
+  const classes = cx('ce-{{lowerCase componentName}}', className);
 
   return (
-    <div className={classes}>
+    <div className={classes} style={style}>
       I am a {{properCase componentName}}.
     </div>
   );
@@ -38,13 +33,19 @@ const {{properCase componentName}} = ({
 
 {{properCase componentName}}.propTypes = {
   /**
-   * A class name, or string of class names, to add to the `<{{properCase componentName}} />`.
+   * A class name, or a string of class names, to add to the `{{properCase componentName}}`.
    */
   className: PropTypes.string,
+  /**
+   * Any inline styles you would like to add to the `{{properCase componentName}}`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   */
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
 {{properCase componentName}}.defaultProps = {
   className: '',
+  style: {},
 };
 
 export default {{properCase componentName}};

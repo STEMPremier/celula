@@ -19,11 +19,14 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import './loader.less';
+import './circular-loader.less';
 
-const INITIAL_OFFSET = 25; // The default starting place to draw the progess line is '3 o'clock'. This moves it back to '12'.
+// The default starting place to draw the progess line is '3 o'clock'. This moves it back to '12'.
+const INITIAL_OFFSET = 25;
+// radius = circumference / 2pi; we want a circumferunce of 100 so we can easily display accurate
+// precentages
 const circleConfig = {
-  radius: 100 / (2 * Math.PI), // radius = circumference / 2pi; we want a circumferunce of 100 to easily display precentages
+  radius: 100 / (2 * Math.PI),
   strokeWidth: 1,
   viewBox: '0 0 38 38',
   x: '19',
@@ -31,7 +34,9 @@ const circleConfig = {
 };
 
 /**
- * Progress indicators inform users about the status of ongoing processes, such as loading an application, submitting a form or saving updates. They communicate an application’s state and indicate available actions, such as whether users can navigate away from the current screen.
+ * Progress indicators inform users about the status of ongoing processes, such as loading an
+ * application, submitting a form or saving updates. They communicate an application’s state and
+ * indicate available actions, such as whether users can navigate away from the current screen.
  */
 const CircularLoader = ({
   className,
@@ -57,7 +62,8 @@ const CircularLoader = ({
   };
 
   useEffect(() => {
-    // The else clause might look unneeded, but in actuality am specifically EXCLUDING the case where progressBar equals percentage, where I want nothing to happen.
+    // The else clause might look unneeded, but in actuality am specifically EXCLUDING the case
+    // where progressBar equals percentage, where I want nothing to happen.
     if (progressBar < percentage) {
       increasePercentage();
     } else if (progressBar > percentage) {
@@ -143,31 +149,32 @@ const CircularLoader = ({
 
 CircularLoader.propTypes = {
   /**
-   * A class name, or string of class names, to add to the `<CircularLoader />`.
+   * A class name, or a string of class names, to add to the `CircularLoader`.
    */
   className: PropTypes.string,
   /**
-   * The color of the `<CircularLoader />`.
+   * The color of the `CircularLoader`.
    */
   color: PropTypes.oneOf(['cool', 'warm', 'hot']),
   /**
-   * Changes the `<CircularLoader />` from a precentage-based one to a generic spinner-style indicator.
+   * Changes the `CircularLoader` from a precentage-based one to a generic spinner-style indicator.
    */
   indeterminate: PropTypes.bool,
   /**
-   * Any text you would like displayed below the `<CircularLoader />`.
+   * Any text you would like displayed below the `CircularLoader`.
    */
   legend: PropTypes.string,
   /**
-   * The percentage (complete) the `<CircularLoader />` indicates/fills.
+   * The percentage (complete) the `CircularLoader` indicates/fills.
    */
   percentage: PropTypes.number,
   /**
-   * Show the percentage complete, as text, in the center of the `<CircularLoader />`.
+   * Show the percentage complete, as text, in the center of the `CircularLoader`.
    */
   showPercentage: PropTypes.bool,
   /**
-   * Any inline styles you would like to add to the `<CircularLoader />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `CircularLoader`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };

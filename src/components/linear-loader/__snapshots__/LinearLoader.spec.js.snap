@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LinearLoader /> render() render the LinearLoader component 1`] = `
+<div
+  className="ce-linear-loader ce-ll-percentage"
+  style={Object {}}
+>
+  <div
+    className="ce-ll__track"
+  >
+    <span
+      className="ce-ll__fill ce-ll__fill-warm"
+      style={
+        Object {
+          "width": "0%",
+        }
+      }
+    />
+  </div>
+</div>
+`;

@@ -24,7 +24,8 @@ import './link.less';
 import { COLORS, LINK_TEXT_STYLES as TYPES } from '../../utils/constants';
 
 /**
- * Typically `Links` are used inline with a paragraph while standard all caps complement button groups or individually.
+ * Typically `Links` are used inline with a paragraph while standard all caps complement button
+ * groups or individually.
  */
 const Link = ({ className, textStyle, color, address, style, text }) => {
   const classes = cx(
@@ -47,28 +48,29 @@ const Link = ({ className, textStyle, color, address, style, text }) => {
 
 Link.propTypes = {
   /**
-   * The http address the `<Link />` points to.
+   * The http address the `Link` points to.
    */
   address: PropTypes.string.isRequired,
   /**
-   * A class name, or string of class names, to add to the `<Link />`.
+   * A class name, or a string of class names, to add to the `Link`.
    */
   className: PropTypes.string,
   /**
-   * The color of the `<Link />`.
+   * The color of the `Link`.
    */
   // color: PropTypes.oneOf(COLORS),
   color: PropTypes.oneOf(['primary', 'secondary', 'black', 'inverted']),
   /**
-   * Any inline styles you would like to add to the `<Link />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `Link`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   /**
-   * The text the `<Link />` displays.
+   * The text the `Link` displays.
    */
   text: PropTypes.string.isRequired,
   /**
-   * The `<Link />` text type.
+   * The `Link` text type.
    */
   // textStyle: PropTypes.oneOf(TYPES),
   textStyle: PropTypes.oneOf(['lowercase', 'uppercase']),

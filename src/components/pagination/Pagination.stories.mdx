@@ -1,43 +1,47 @@
 import {
+  ArgsTable,
+  Canvas,
   Description,
   Meta,
-  Preview,
-  Props,
   Story,
 } from '@storybook/addon-docs/blocks';
-import { action } from '@storybook/addon-actions';
-import { boolean, number } from '@storybook/addon-knobs';
 
 import Pagination from '.';
 import SomethingToPage from './SomethingToPage';
 
-<Meta component={Pagination} title="Components/Atoms/Pagination" />
+<Meta
+  args={{
+    currentPage: 4,
+    gotoPage: () => {},
+    nextPage: () => {},
+    pageCount: 7,
+    prevPage: () => {},
+  }}
+  component={Pagination}
+  title="Components/Atoms/Pagination"
+/>
 
 # Pagination
-
 <Description of={Pagination} />
-<Props of={Pagination} />
 
-<Story name="Pagination with Knobs" parameters={{ docs: { disable: true } }}>
-  <SomethingToPage
-    canNext={boolean('canNextPage', true)}
-    canPrev={boolean('canPrevPage', true)}
-    initialPage={number('currentPage', 1)}
-    pageCount={number('pageCount', 10)}
-  >
-    <Pagination
-      canNextPage={true}
-      canPreviousPage={true}
-      currentPage={1}
-      gotoPage={() => {}}
-      nextPage={() => {}}
-      pageCount={10}
-      prevPage={() => {}}
-    />
-  </SomethingToPage>
-</Story>
+<Canvas>
+  <Story name="Pagination with Controls">
+    {args => (
+      <SomethingToPage
+        canNext={args.canNextPage}
+        canPrev={args.canPreviousPage}
+        initialPage={args.currentPage}
+        pageCount={args.pageCount}
+      >
+        <Pagination {...args} />
+      </SomethingToPage>
+    )}
+  </Story>
+</Canvas>
 
-<Preview>
+<ArgsTable story="Pagination with Controls" />
+
+<Canvas>
   <Story name="Pagination">
     <Pagination
       canNextPage={true}
@@ -49,4 +53,4 @@ import SomethingToPage from './SomethingToPage';
       prevPage={() => console.log('Navigate down a page.')}
     />
   </Story>
-</Preview>
+</Canvas>

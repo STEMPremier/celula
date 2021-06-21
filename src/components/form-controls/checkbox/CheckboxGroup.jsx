@@ -24,7 +24,9 @@ import { FormControlGroup } from '../core';
 import '../core/selectable/selectable-group.less';
 
 /**
- * `Checkboxes` allow the user to select one or more items from a set. They can be used to turn an option on or off, select one or multiple items from a list, or present a list containing sub-selections.
+ * `Checkboxes` allow the user to select one or more items from a set. They can be used to turn an
+ * option on or off, select one or multiple items from a list, or present a list containing
+ * sub-selections.
  */
 const CheckboxGroup = ({
   children,
@@ -67,48 +69,50 @@ const CheckboxGroup = ({
 
 CheckboxGroup.propTypes = {
   /**
-   * The `<Checkbox />` components you want the `<CheckboxGroup />` to group together.
+   * The `Checkbox` components you want the `CheckboxGroup` to group together.
    */
   children: PropTypes.node.isRequired,
   /**
-   * A class name, or string of class names, to add to the `<CheckboxGroup />`.
+   * A class name, or a string of class names, to add to the `CheckboxGroup`.
    */
   className: PropTypes.string,
   /**
-   * Disables the `<CheckboxGroup />` and all of its children.
+   * Disables the `CheckboxGroup` and all of its children.
    */
   disabled: PropTypes.bool,
   /**
-   * An error message to display in the `<CheckboxGroup />`.
+   * An error message to display in the `CheckboxGroup`.
    */
   errorMsg: PropTypes.string,
   /**
-   * The id of the form the `<CheckboxGroup />` belongs to.
+   * The id of the form the `CheckboxGroup` belongs to.
    */
   formId: PropTypes.string,
   /**
-   * A function to trigger when the state of the `<CheckboxGroup />` changes. The function recieves 2 arguments, `event`, and `values`.
+   * A function to trigger when the state of the `CheckboxGroup` changes. The function recieves 2
+   * arguments, `event`, and `values`.
    *
    * @param {Event} event - The event that triggered the change.
-   * @param {[]} values - The array of selected values in the <CheckboxGroup />.
+   * @param {[]} values - The array of selected values in the CheckboxGroup.
    */
   handleChange: PropTypes.func,
   /**
-   * The `<CheckboxGroup />` legend.
+   * The `CheckboxGroup` legend.
    */
   label: PropTypes.string.isRequired,
   /**
-   * The name given to all the children of the `<CheckboxGroup />`.
+   * The name given to all the children of the `CheckboxGroup`.
    */
   name: PropTypes.string.isRequired,
   /**
-   * The values used to pre-select some children of the `<CheckboxGroup />`.
+   * The values used to pre-select some children of the `CheckboxGroup`.
    */
   selectedValues: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   ),
   /**
-   * Any inline styles you would like to add to the `<CheckboxGroup />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `CheckboxGroup`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   // validators: PropTypes.array,

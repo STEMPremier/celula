@@ -24,7 +24,9 @@ import { ErrorBox } from '../core';
 import '../core/selectable/selectable.less';
 
 /**
- * `Checkboxes` allow the user to select one or more items from a set. They can be used to turn an option on or off, select one or multiple items from a list, or present a list containing sub-selections.
+ * `Checkboxes` allow the user to select one or more items from a set. They can be used to turn an
+ * option on or off, select one or multiple items from a list, or present a list containing
+ * sub-selections.
  */
 const Checkbox = ({
   checked,
@@ -91,50 +93,51 @@ const Checkbox = ({
 
 Checkbox.propTypes = {
   /**
-   * Select the `<Checkbox />`.
+   * Select the `Checkbox`.
    */
   checked: PropTypes.bool, // eslint-disable-line react/no-unused-prop-types
   /**
-   * A class name, or string of class names, to add to the `<Checkbox />`.
+   * A class name, or a string of class names, to add to the `Checkbox`.
    */
   className: PropTypes.string,
   /**
-   * Disables the `<Checkbox />`.
+   * Disables the `Checkbox`.
    */
   disabled: PropTypes.bool,
   /**
-   * An error message to display under the `<Checkbox />`.
+   * An error message to display under the `Checkbox`.
    */
   errorMsg: PropTypes.string,
   /**
-   * The id of the form the `<Checkbox />` belongs to.
+   * The id of the form the `Checkbox` belongs to.
    * This value is set (and replaced) by the `formID` of an `<CheckboxGroup />` if present.
    */
   formId: PropTypes.string,
   /**
-   * A function to trigger when the state of the `<Checkbox />` changes.
+   * A function to trigger when the state of the `Checkbox` changes.
    */
   handleChange: PropTypes.func,
   /**
-   * This component is to be treated as a checkbox in `<FormControlGroup />`.
+   * This component is to be treated as a checkbox in `FormControlGroup`.
    * @ignore
    */
   isA: PropTypes.string, // eslint-disable-line react/no-unused-prop-types
   /**
-   * The `<Checkbox />` label.
+   * The `Checkbox` label.
    */
   label: PropTypes.string.isRequired,
   /**
-   * The name given to all the children of the `<Checkbox />`.
-   * This value is set (and replaced) by the `name` of an `<CheckboxGroup />` if present.
+   * The name given to all the children of the `Checkbox`.
+   * This value is set (and replaced) by the `name` of an `CheckboxGroup` if present.
    */
   name: PropTypes.string,
   /**
-   * Any inline styles you would like to add to the `<Checkbox />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `Checkbox`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   /**
-   * The value of the `<Checkbox />`.
+   * The value of the `Checkbox`.
    */
   value: PropTypes.oneOfType([
     PropTypes.string,

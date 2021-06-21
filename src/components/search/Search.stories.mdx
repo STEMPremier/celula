@@ -1,35 +1,42 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story,
+} from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import { boolean, text } from '@storybook/addon-knobs';
 
 import Search from '.';
 
-<Meta component={Search} title="Components/Atoms/Search" />
+<Meta
+  args={{
+    handleSearch: action('You did a search!'),
+    label: 'Do a search:',
+    name: 'searcher',
+  }}
+  component={Search}
+  title="Components/Atoms/Search"
+/>
 
 # Search
 <Description of={Search} />
-<ArgsTable of={Search} />
 
-<Story name="Search with Knobs" parameters={{ docs: { disable: true } }}>
-  <Search
-    className={text('classNames', '')}
-    disabled={boolean('disabled', false)}
-    errorMsg={text('errorMsg', '')}
-    instantSearch={boolean('instantSearch', false)}
-    handleSearch={action('Search With Knobs `handleSearch` function triggered.')}
-    helpText={text('helpText', 'Helpful text.')}
-    label={text('label', 'Do a search:')}
-    name={text('name', 'searchWithKnobs')}
-    placeholder={text('placeholder', 'Enter search terms here')}
-  />
-</Story>
+<Canvas>
+  <Story name="Search with Controls">
+    {args => <Search {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Search with Controls" />
 
 ## Types
-By default `<Search />` searches on click or press of the included button:
+By default `Search` searches on click or press of the included button:
+
 <Canvas>
-  <Story name="On Click">
+  <Story name="Search on Click">
     <Search
-      handleSearch={value => console.log(value)}
+      handleSearch={action('You searched on click.')}
       helpText="Open the console, click the button."
       label="Search on Click:"
       name="searchTypesOnClick"
@@ -39,10 +46,11 @@ By default `<Search />` searches on click or press of the included button:
 </Canvas>
 
 It has the option of searcing as you type as well:
+
 <Canvas>
-  <Story name="As You Type">
+  <Story name="Search as you Type">
     <Search
-      handleSearch={value => console.log(value)}
+      handleSearch={action('You are searching as you type!')}
       helpText="Clearing the search doesn't trigger the handleSearch function."
       instantSearch={true}
       label="Search as You Type:"
@@ -53,9 +61,10 @@ It has the option of searcing as you type as well:
 </Canvas>
 
 ## States
-A `<Search />` can be disabled:
+A `Search` can be disabled:
+
 <Canvas>
-  <Story name="Disabled">
+  <Story name="Search Disabled">
     <Search
       disabled={true}
       handleSearch={value => console.log(value)}
@@ -69,7 +78,7 @@ A `<Search />` can be disabled:
 
 Or have an error:
 <Canvas>
-  <Story name="Error">
+  <Story name="Search but Error">
     <Search
       errorMsg="Whoops! Somthing is not okay."
       handleSearch={value => console.log(value)}

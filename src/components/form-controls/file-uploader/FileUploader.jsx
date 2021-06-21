@@ -90,37 +90,40 @@ const FileUploader = ({
 
 FileUploader.propTypes = {
   /**
-   * Defines the file types the file input should accept. Inside the string, create a comma-separated list of unique file type specificiers.
+   * Defines the file types the file input should accept. Inside the string, create a
+   * comma-separated list of unique file type specificiers.
    *
-   * An example would be accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document".
+   * An example would be
+   * accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document".
    */
   accept: PropTypes.string,
   /**
-   * Specifies which cameria to use for capture of image or video data, if the accept attribute indicates that the inupt should be one of those types.
+   * Specifies which cameria to use for capture of image or video data, if the accept attribute
+   * indicates that the inupt should be one of those types.
    *
-   * A value of 'user' indicates that the user-facing camera and/or microphone should be used.
-   * A value of 'enviroment' specifies that the outward-facing camera and/or microphone should be used.
-   * If no value is declared, the use agent is free to decide on its own what to do.
+   * - A value of 'user' indicates that the user-facing camera and/or microphone should be used.
+   * - A value of 'enviroment' specifies that the outward-facing camera and/or microphone should be used.
+   * - If no value is declared, the use agent is free to decide on its own what to do.
    */
   capture: PropTypes.oneOf([undefined, 'user', 'environment']),
   /**
-   * A class name, or string of class names, to add to the `<FileUploader />`.
+   * A class name, or a string of class names, to add to the `FileUploader`.
    */
   className: PropTypes.string,
   /**
-   * Disables the `<FileUploader />`.
+   * Disables the `FileUploader`.
    */
   disabled: PropTypes.bool,
   /**
-   * An error message to display in the `<FileUploader />`.
+   * An error message to display in the `FileUploader`.
    */
   errorMsg: PropTypes.string,
   /**
-   * The id of the form the `<FileUploader />` belongs to.
+   * The id of the form the `FileUploader` belongs to.
    */
   formId: PropTypes.string,
   /**
-   * A function to trigger when the state of the `<FileUploader />` changes.
+   * A function to trigger when the state of the `FileUploader` changes.
    */
   handleClick: PropTypes.func,
   /**
@@ -128,11 +131,12 @@ FileUploader.propTypes = {
    */
   multiple: PropTypes.bool,
   /**
-   * The name given to the `<FileUploader />`. It connects the label to the `<FileUploader />`.
+   * The name given to the `FileUploader`. It connects the label to the `FileUploader`.
    */
   name: PropTypes.string.isRequired,
   /**
-   * Any inline styles you would like to add to the `<FileUploader />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `FileUploader`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };

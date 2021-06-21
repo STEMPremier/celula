@@ -31,34 +31,17 @@ import Button from '../button';
 import Container from '../container';
 import { SystemIcon } from '../icon';
 
+import { functionOrUndef } from '../../utils/propValidators';
 import { SIZES } from '../../utils/constants';
 
 import './modal.less';
 
 const modalSizes = ['default', ...SIZES];
 
-// A custom prop validator for the Modal.
-// We need to check and see if a prop contains a value of undefined, (vs being undefined itself), or a function.
-function functionOrUndef(props, propName, componentName = 'Modal') {
-  let error;
-
-  if (
-    typeof props[propName] !== 'undefined' &&
-    typeof props[propName] !== 'function'
-  ) {
-    error = new Error(
-      `Invalid prop ${propName} supplied to ${componentName} Validation failed.`,
-    );
-  }
-
-  return error;
-}
-
-// The modal itself.
 /**
- * Standard modals can contain a heading, description text, inputs, various content blocks and a button. Modals are
- * fixed position to the parent page and horizontally centered. These modals also have an option to scroll within
- * the modal.
+ * Standard modals can contain a heading, description text, inputs, various content blocks and a
+ * button. Modals are fixed position to the parent page and horizontally centered. These modals
+ * also have an option to scroll within the modal.
  */
 const Modal = ({
   actionFn = undefined,
@@ -78,6 +61,7 @@ const Modal = ({
   triggerType = 'solid',
 }) => {
   const [visible, setVisibility] = useState(isOpen);
+  const [overflowCache, setOverflowCache] = useState('');
   const classes = cx(
     'ce-modal',
     {
@@ -90,8 +74,19 @@ const Modal = ({
     setVisibility(isOpen);
   }, [isOpen]);
 
-  const showModal = () => setVisibility(true);
-  const hideModal = () => setVisibility(false);
+  const showModal = () => {
+    setVisibility(true);
+    setOverflowCache(document.body.style.overflow);
+
+    document.body.style.overflow = 'hidden';
+  };
+
+  const hideModal = () => {
+    setVisibility(false);
+
+    document.body.style.overflow = overflowCache;
+  };
+
   const modalAction = () => {
     const action = actionFn || hideModal;
 
@@ -109,9 +104,11 @@ const Modal = ({
         className={classes}
         contentLabel={title}
         isOpen={visible}
+        onRequestClose={hideModal}
+        overlayClassName="ce-modal-overlay"
         parentSelector={findParent}
         shouldFocusAfterRender
-        shouldCloseOnOverlayClick
+        shouldCloseOnOverlayClick={false}
         shouldCloseOnEsc
         shouldReturnFocusAfterClose
         style={{ content: style }}
@@ -163,66 +160,68 @@ const Modal = ({
 
 Modal.propTypes = {
   /**
-   * The action (function) the action button in the footer of the `<Modal />` triggers.
+   * The action (function) the action button in the footer of the `Modal` triggers.
    */
   actionFn: functionOrUndef,
   /**
-   * The label for the action button in the footer of the `<Modal />`.
+   * The label for the action button in the footer of the `Modal`.
    */
   actionLabel: PropTypes.string,
   /**
-   * The size of the `<Modal />` action button. Same options as `<Button />`.
+   * The size of the `Modal` action button. Same options as `Button`.
    */
   actionSize: PropTypes.oneOf(['small', 'large', 'jumbo']),
   /**
-   * The `<Modal />` body. This can be a string, a component, or anything else React can render.
+   * The `Modal` body. This can be a string, a component, or anything else React can render.
    */
   children: PropTypes.node.isRequired,
   /**
-   * A class name, or string of class names, to add to the `<Modal />`.
+   * A class name, or string of class names, to add to the `Modal`.
    */
   className: PropTypes.string,
   /**
-   * Disables the `<Modal />`.
+   * Disables the `Modal`.
    */
   disabled: PropTypes.bool,
   /**
-   * Allows you to close the `<Modal />` from out side the `<Modal />`.
+   * Allows you to close the `Modal` from out side the `Modal`.
    */
   isOpen: PropTypes.bool,
   /**
-   * The id of the element that the `<Modal />` will be rendered to. If no id is given, the modal will be rendered to the body.
+   * The id of the element that the `Modal` will be rendered to. If no id is given, the modal will
+   * be rendered to the body.
    *
    * You might use this if you need to add custom styles to the container the modal renders to.
    */
   parentEl: PropTypes.string,
   /**
-   * The size of the `<Modal />`.
+   * The size of the `Modal`.
    */
   // size: PropTypes.oneOf(SIZES),
   size: PropTypes.oneOf(['default', 'small', 'large', 'jumbo']),
   /**
-   * Any inline styles you would like to add to the `<Modal />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `Modal`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   /**
-   * The title of the `<Modal />`.
+   * The title of the `Modal`.
    */
   title: PropTypes.string.isRequired,
   /**
-   *  The `<Modal />` trigger button color.
+   *  The `Modal` trigger button color.
    */
   triggerColor: PropTypes.string,
   /**
-   * The `<Modal />` trigger button label.
+   * The `Modal` trigger button label.
    */
   triggerLabel: PropTypes.string.isRequired,
   /**
-   * The size of the `<Modal />` trigger. Same options as `<Button />`.
+   * The size of the `Modal` trigger. Same options as `Button`.
    */
   triggerSize: PropTypes.oneOf(['small', 'large', 'jumbo']),
   /**
-   * The type of trigger `<Button />` the `<Modal />` will have.
+   * The type of trigger `Button` the `Modal` will have.
    */
   triggerType: PropTypes.oneOf(['solid', 'outline', 'text']),
 };
