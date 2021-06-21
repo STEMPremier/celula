@@ -26,7 +26,8 @@ import './pagination.less';
 import { SystemIcon } from '../icon';
 
 /**
- * Pagination is the process of dividing data into discrete pages. This graphical control element is frequently used as a navigational aid.
+ * Pagination is the process of dividing data into discrete pages. This graphical control element is
+ * frequently used as a navigational aid.
  */
 const Pagination = ({
   className,
@@ -40,8 +41,9 @@ const Pagination = ({
   style,
 }) => {
   const classes = cx('ce-pagination', className);
-  // Pagination accepts a 0-index currentPage, to work with Tallo's serverside, and react-table's clientside pagination's 0-index page
-  // numbers/index. However I found it way easier to work with/think about/reason about 1-indexed page numbers/index.
+  // Pagination accepts a 0-index currentPage, to work with Tallo's serverside, and react-table's
+  // clientside pagination's 0-index page numbers/index. However I found it way easier to work
+  // with/think about/reason about 1-indexed page numbers/index.
   const currentPage = page + 1;
 
   const renderNumbers = () => {
@@ -204,19 +206,19 @@ const Pagination = ({
 
 Pagination.propTypes = {
   /**
-   * Disable the next page button if there are no more pages.
+   * Disable the next page icon.
    */
   canNextPage: PropTypes.bool,
   /**
-   * Disable the previous page if there are no prior pages.
+   * Disable the previous page icon.
    */
   canPreviousPage: PropTypes.bool,
   /**
-   * A class name, or string of class names, to add to the `Pagination`.
+   * A class name, or a string of class names, to add to the `Pagination`.
    */
   className: PropTypes.string,
   /**
-   * The current page number.
+   * The current page number. This is 0-indexed.
    */
   currentPage: PropTypes.number.isRequired,
   /**
@@ -236,7 +238,8 @@ Pagination.propTypes = {
    */
   prevPage: PropTypes.func.isRequired,
   /**
-   * Any inline styles you would like to add to the `Pagination`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `Pagination`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };

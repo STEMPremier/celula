@@ -23,7 +23,12 @@ import Button from '../../button';
 // import { BUTTON_TYPES as TYPES, COLORS, SIZES } from '../../../utils/constants';
 
 /**
- * `Submit Buttons` allow users to submit forms with a single tap. They are typically placed throughout your UI in every form.
+ * A `SubmitButton` allows users to submit forms with a single tap. They are typically placed
+ * throughout your UI in every form.
+ *
+ * A `SubmitButton` does not have a `handleClick` prop. That is because clicking it submits
+ * the form that `SubmitButton` is a part of/associated with, rather than triggering a function
+ * attached directly to it.
  */
 const SubmitButton = ({
   children,
@@ -50,39 +55,37 @@ const SubmitButton = ({
 
 SubmitButton.propTypes = {
   /**
-   * The `<SubmitButton />` label.
+   * The `SubmitButton` label.
    */
   children: PropTypes.string.isRequired,
   /**
-   * A class name, or string of class names, to add to the `<SubmitButton />`.
+   * A class name, or a string of class names, to add to the `SubmitButton`.
    */
   className: PropTypes.string,
   /**
-   * The color of the `<SubmitButton />`.
+   * The color of the `SubmitButton`.
    */
   // color: PropTypes.oneOf(COLORS),
   color: PropTypes.oneOf(['primary', 'secondary', 'black', 'inverted']),
   /**
-   * Disables the `<SubmitButton />`.
+   * Disables the `SubmitButton`.
    */
   disabled: PropTypes.bool,
   /**
-   * The size of the `<SubmitButton />`.
+   * The size of the `SubmitButton`.
    */
   // size: PropTypes.oneOf(SIZES),
   size: PropTypes.oneOf(['small', 'large', 'jumbo']),
   /**
-   * Any inline styles you would like to add to the `<SubmitButton />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `SubmitButton`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   /**
-   * Which type of `<SubmitButton />` to render.
+   * Which type of `SubmitButton` to render.
    */
   // type: PropTypes.oneOf(TYPES),
   type: PropTypes.oneOf(['solid', 'outline', 'text']),
-  /**
-   * A function that is called when the button is clicked.
-   */
 };
 
 SubmitButton.defaultProps = {

@@ -30,10 +30,16 @@ import { functionOrUndef } from '../../utils/propValidators';
 import './table.less';
 
 /**
- * `Tables` display information in a grid-like format of rows and columns. They organize information in a way that’s easy to scan, so that users can look for patterns and insights. Tables can contain interactive components (such as chips, buttons, or menus), non-interactive elements (such as badges).
+ * A `Table` displays information in a grid-like format of rows and columns. They organize
+ * information in a way that’s easy to scan, so that users can look for patterns and insights.
+ * Tables can contain interactive components (such as chips, buttons, or menus), non-interactive
+ * elements (such as badges).
  */
 /* ### *Mobile Tables*
- * These list can support up to one inline link with additional actions placed within an ellipse menu in stacked tables. The purpose of this is to retain a relatively short row height. These lists are also stacked directly next to one another vertically allowing for no spacing. Text truncation is an option if desired.
+ * These list can support up to one inline link with additional actions placed within an ellipse
+ * menu in stacked tables. The purpose of this is to retain a relatively short row height. These
+ * lists are also stacked directly next to one another vertically allowing for no spacing. Text
+ * truncation is an option if desired.
  */
 const Table = ({
   className,
@@ -86,7 +92,8 @@ const Table = ({
   // When (if) the prop pageSize changes, tell the Table
   useEffect(() => setPageSize(clientsidePageSize), [clientsidePageSize]);
 
-  // When (if) any one of (prop) fetchData, (the react-table states) pageIndex, or pageSize changes, fetch new data.
+  // When (if) any one of (prop) fetchData, (the react-table states) pageIndex, or pageSize
+  // changes, fetch new data.
   useEffect(() => {
     if (fetchData) fetchData({ pageIndex, pageSize });
   }, [fetchData, pageIndex, pageSize]);
@@ -183,7 +190,7 @@ const Table = ({
 
 Table.propTypes = {
   /**
-   * A class name, or string of class names, to add to the `Table`.
+   * A class name, or a string of class names, to add to the `Table`.
    */
   className: PropTypes.string,
   /**
@@ -195,7 +202,8 @@ Table.propTypes = {
    */
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
   /**
-   * A function the `Table` uses to fetch data. This is only used when utilizing server-side pagination.
+   * A function the `Table` uses to fetch data. This is only used when utilizing server-side
+   * pagination.
    */
   fetchData: functionOrUndef,
   /**
@@ -243,7 +251,8 @@ Table.propTypes = {
    */
   selectionFn: PropTypes.func,
   /**
-   * Any inline styles you would like to add to the `Table`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `Table`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };

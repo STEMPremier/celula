@@ -67,36 +67,36 @@ const ToggleButtonGroup = ({
 
 ToggleButtonGroup.propTypes = {
   /**
-   * The `<ToggleButton />` components you want the `<ToggleButtonGroup />` to group together.
+   * The `ToggleButton` components you want the `ToggleButtonGroup` to group together.
    */
   children: PropTypes.node.isRequired,
   /**
-   * A class name, or string of class names, to add to the `<ToggleButtonGroup />`.
+   * A class name, or string of class names, to add to the `ToggleButtonGroup`.
    */
   className: PropTypes.string,
   /**
-   * The color of the `<ToggleButtonGroup />`.\
+   * The color of the `ToggleButtonGroup`.\
    */
   // color: PropTypes.oneOf(COLORS),
   color: PropTypes.oneOf(['primary', 'secondary', 'black', 'inverted']),
   /**
-   * Disables the `<ToggleButtonGroup />` and all of its children.
+   * Disables the `ToggleButtonGroup` and all of its children.
    */
   disabled: PropTypes.bool,
   /**
-   * The id of the form the `<ToggleButtonGroup />` belongs to.
+   * The id of the form the `ToggleButtonGroup` belongs to.
    */
   formId: PropTypes.string,
   /**
-   * A function to trigger when the state of the `<ToggleButtonGroup />` changes.
+   * A function to trigger when the state of the `ToggleButtonGroup` changes.
    */
   handleChange: PropTypes.func,
   /**
-   * The name given to all the children of the `<ToggleButtonGroup />`.
+   * The name given to all the children of the `ToggleButtonGroup`.
    */
   name: PropTypes.string.isRequired,
   /**
-   * The value used to pre-select a child of the `<ToggleButtonGroup />`.
+   * The value used to pre-select a child of the `ToggleButtonGroup`.
    */
   selectedValue: PropTypes.oneOfType([
     PropTypes.string,
@@ -104,12 +104,13 @@ ToggleButtonGroup.propTypes = {
     PropTypes.bool,
   ]),
   /**
-   * The size of the `<ToggleButtonGroup />`.
+   * The size of the `ToggleButtonGroup`.
    */
   // size: PropTypes.oneOf(SIZES),
   size: PropTypes.oneOf(['small', 'large', 'jumbo']),
   /**
-   * Any inline styles you would like to add to the `<ToggleButtonGroup />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `ToggleButtonGroup`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   // validators: PropTypes.array,

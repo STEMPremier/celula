@@ -27,7 +27,8 @@ import './icon.less';
 
 /**
  * System icons are designed to be simple, modern and friendly.
- * Each icon is reduced to its minimal form, expressing essential characteristics within the interface.
+ * Each icon is reduced to its minimal form, expressing essential characteristics within the
+ * interface.
  */
 const SystemIcon = ({ className, color, name, size, style, title }) => {
   const classes = cx(
@@ -55,16 +56,16 @@ const SystemIcon = ({ className, color, name, size, style, title }) => {
 
 SystemIcon.propTypes = {
   /**
-   * A class name, or string of class names, to add to the `<SystemIcon />`.
+   * A class name, or a string of class names, to add to the `SystemIcon`.
    */
   className: PropTypes.string,
   /*
-   * The color of the `<SystemIcon />`
+   * The color of the `SystemIcon`
    */
   // color: PropTypes.oneOf(['', ...COLORS]),
   color: PropTypes.oneOf(['', 'primary', 'secondary', 'black', 'inverted']),
   /**
-   * The `<SystemIcon />`.
+   * The `SystemIcon`.
    */
   // name: PropTypes.oneOf(SYSTEM_ICONS).isRequired,
   name: PropTypes.oneOf([
@@ -100,16 +101,17 @@ SystemIcon.propTypes = {
     'popular',
   ]).isRequired,
   /**
-   * The size you want the `<SystemIcon />` to be.
+   * The size you want the `SystemIcon` to be.
    */
   // size: PropTypes.oneOf(SIZES),
   size: PropTypes.oneOf(['small', 'large', 'jumbo']),
   /**
-   * Any inline styles you would like to add to the `<SystemIcon />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `SystemIcon`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   /**
-   * By default, we hide SystemIcons from assitive technologies,
+   * By default, we hide `SystemIcons` from assitive technologies,
    * such as screen readers, because there should be useful text
    * associated with most icons.
    *

@@ -78,33 +78,34 @@ const SecondaryIcon = ({
 
 SecondaryIcon.propTypes = {
   /**
-   * A class name, or string of class names, to add to the `<SecondaryIcon />`.
+   * A class name, or a string of class names, to add to the `SecondaryIcon`.
    */
   className: PropTypes.string,
   /**
-   * The color of the `<SecondaryIcon />` background gradient.
+   * The color of the `SecondaryIcon` background gradient.
    */
   // color: PropTypes.oneOf(COLORS),
   color: PropTypes.oneOf(['primary', 'secondary']),
   /**
-   * The `<SecondaryIcon />`.
+   * The `SecondaryIcon`.
    */
   name: nameOrText,
   /**
-   * The size you want the `<SecondaryIcon />` to be.
+   * The size you want the `SecondaryIcon` to be.
    */
   // size: PropTypes.oneOf(SIZES),
   size: PropTypes.oneOf(['small', 'large', 'jumbo']),
   /**
-   * Any inline styles you would like to add to the `<SecondaryIcon />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `SecondaryIcon`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   /**
-   * Up to 2 characters you would like in the `<SecondaryIcon />`, rather than a predefined one.
+   * Up to 2 characters you would like in the `SecondaryIcon`, rather than a predefined one.
    */
   text: nameOrText,
   /**
-   * By default, we hide SecondaryIcons from assitive technologies,
+   * By default, we hide `SecondaryIcons` from assitive technologies,
    * such as screen readers, because there should be useful text
    * associated with most icons.
    *

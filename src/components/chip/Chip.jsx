@@ -28,7 +28,8 @@ import { functionOrUndef } from '../../utils/propValidators';
 import './chip.less';
 
 /**
- * `Chips` are compact elements that represent an input, attribute, or action. They allow users to make selections, filter content, or trigger actions.
+ * `Chips` are compact elements that represent an input, attribute, or action. They allow users to
+ * make selections, filter content, or trigger actions.
  */
 const Chip = ({
   actionFn,
@@ -114,7 +115,7 @@ Chip.propTypes = {
    */
   checked: PropTypes.bool,
   /**
-   * A class name, or string of class names, to add to the `<Chip />`.
+   * A class name, or a string of class names, to add to the `<Chip />`.
    */
   className: PropTypes.string,
   /**
@@ -155,23 +156,26 @@ Chip.propTypes = {
     '',
   ]),
   /**
-   * The `<Chip />` label.
+   * The `Chip` label.
    */
   label: PropTypes.string.isRequired,
   /**
-   * The name given to the `Chip`. Used to keep track of different `Chips` when multiple are present.
+   * The name given to the `Chip`. Used to keep track of different `Chips` when multiple are
+   * present.
    */
   name: PropTypes.string,
   /**
-   * Makes the `<Chip />` selectable, akin to a checkbox.
+   * Makes the `Chip` selectable, akin to a checkbox.
    */
   selectable: PropTypes.bool,
   /**
-   * Any inline styles you would like to add to the `<Chip />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `Chip`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   /**
-   * The value of the `<Chip />`. If one is not provided, and the `<Chip />` is selectable, the label will be used instead.
+   * The value of the `Chip`. If one is not provided, and the `Chip` is selectable, the label will
+   * be used instead.
    */
   // eslint-disable-next-line prettier/prettier
   value: PropTypes.oneOfType([ // eslint-disable-line react/require-default-props

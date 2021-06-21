@@ -125,15 +125,17 @@ const Alert = ({
 
 Alert.propTypes = {
   /**
-   * A class name, or string of class names, to add to the `<Alert />`.
+   * A class name, or a string of class names, to add to the `Alert`.
    */
   className: PropTypes.string,
   /**
-   * Adding the dismissible prop will activate the boolean to display the close "X" on the right hand side.  The onclick of the close "X" will hide the `<Alert />`.
+   * Make the `Alert` dismissable. An 'X' will appear in the top corner of the `Alert`. Clicking it
+   * will close the `Alert`.
    */
   dismissible: PropTypes.bool,
   /**
-   * You can choose any of the System Icons to display on the left hand side of the `<Alert />` box.  See the icons sections for a full list of System Icons.
+   * You can choose any of the `SystemIcons` to display to the left side of `Alert` text.  See the
+   * icons sections for a full list.
    */
   // icon: PropTypes.oneOf(['', ...ICONS]),
   icon: PropTypes.oneOf([
@@ -170,21 +172,24 @@ Alert.propTypes = {
     'popular',
   ]),
   /**
-   * The linkOptions configures the optional `<Link />` component to the right of the `<Alert />`.  Both `linkName` and `address` are required for the `<Link />` component to appear.
-   * `linkName` is the text that will appear as the `<Link />` itself.
-   * `address` is the http address where the user will be redirected.
+   * Configures the optional `Link` component on right side `Alert`. Both `linkName` and `address`
+   * are required for the `<Link />` component to appear.
+   *
+   * - `linkName` is the display text for the `Link`
+   * - `address` is the http address
    */
   linkOptions: allLinkOptions,
   /**
-   * Any inline styles you would like to add to the `<Alert />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `Alert`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   /**
-   * The text is the message that will display in the `<Alert />`.
+   * The text is the message that will display in the `Alert`.
    */
   text: PropTypes.string.isRequired,
   /**
-   * Which type of `<Alert />` to render.
+   * Which type of `Alert` to render.
    */
   // type: PropTypes.oneOf(TYPES),
   type: PropTypes.oneOf(['info', 'warning', 'error', 'success']),

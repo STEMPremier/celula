@@ -206,8 +206,8 @@ const Input = ({
 Input.propTypes = {
   /**
    * The options to configure the (optional) right-side button.
-   * `btnClick` is a function to trigger when the `<Input />` button is clicked.
-   * `btnIcon` is the icon you would like as the `<Input />` button label.
+   * `btnClick` is a function to trigger when the `Input` button is clicked.
+   * `btnIcon` is the icon you would like as the `Input` button label.
    */
   btnOptions: PropTypes.shape({
     btnClick: PropTypes.func,
@@ -247,31 +247,31 @@ Input.propTypes = {
     ]),
   }),
   /**
-   * A class name, or string of class names, to add to the `<Input />`.
+   * A class name, or a string of class names, to add to the `Input`.
    */
   className: PropTypes.string,
   /**
-   * Disables the `<Input />`.
+   * Disables the `Input`.
    */
   disabled: PropTypes.bool,
   /**
-   * An error message to display in the `<Input />`.
+   * An error message to display in the `Input`.
    */
   errorMsg: PropTypes.string,
   /**
-   * The id of the form the `<Input />` belongs to.
+   * The id of the form the `Input` belongs to.
    */
   formId: PropTypes.string,
   /**
-   * A function to trigger when the state of the `<Input />` changes.
+   * A function to trigger when the state of the `Input` changes.
    */
   handleChange: PropTypes.func,
   /**
-   * Any text to assist the user with this `<Input />`.
+   * Any text to assist the user with this `Input`.
    */
   helpText: PropTypes.string,
   /**
-   * The html type of the `<Input />`.
+   * The html type of the `Input`.
    */
   // htmlType: PropTypes.oneOf(TYPES),
   htmlType: PropTypes.oneOf([
@@ -287,7 +287,7 @@ Input.propTypes = {
     'url',
   ]),
   /**
-   * An icon to include on the left side of the `<Input />`.
+   * An icon to include on the left side of the `Input`.
    */
   // icon: PropTypes.oneOf([...TYPES, '']),
   icon: PropTypes.oneOf([
@@ -324,7 +324,7 @@ Input.propTypes = {
     '',
   ]),
   /**
-   * The initial value of the `<Input />`, if any.
+   * The initial value of the `Input`, if any.
    */
   initialValue: PropTypes.oneOfType([
     PropTypes.string,
@@ -332,29 +332,32 @@ Input.propTypes = {
     PropTypes.bool,
   ]),
   /**
-   * The `<Input />` label.
+   * The `Input` label.
    */
   label: PropTypes.string.isRequired,
   /**
    *  The latest date, or largest number to accept as valid input.
-   *  Note that the date and time format will vary depending on the type of input and the max must match that format.
+   *  Note that the date and time format will vary depending on the type of input and the max must
+   *  match that format.
    */
   max: PropTypes.string,
   /**
    *  The earliest date, or smallest number to accept as valid input.
-   *  Note that the date and time format will vary depending on the type of input and the min must match that format.
+   *  Note that the date and time format will vary depending on the type of input and the min must
+   *  match that format.
    */
   min: PropTypes.string,
   /**
-   * The name given to the `<Input />`. It connects the label to the `<Input />`.
+   * The name given to the `Input`. It connects the label to the `Input`.
    */
   name: PropTypes.string.isRequired,
   /**
-   * Placeholder text for the `<Input />`/
+   * Placeholder text for the `Input`.
    */
   placeholder: PropTypes.string,
   /**
-   * Any inline styles you would like to add to the `<Input />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `Input`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };

@@ -116,8 +116,8 @@ const Select = ({
 Select.propTypes = {
   /**
    * The options to configure the (optional) right-side button.
-   * `btnClick` is a function to trigger when the `<Select />` button is clicked.
-   * `btnIcon` is the icon you would like as the `<Select />` button label.
+   * `btnClick` is a function to trigger when the `Select` button is clicked.
+   * `btnIcon` is the icon you would like as the `Select` button label.
    */
   btnOptions: PropTypes.shape({
     btnClick: PropTypes.func,
@@ -157,31 +157,31 @@ Select.propTypes = {
     ]),
   }),
   /**
-   * A class name, or string of class names, to add to the `<Select />`.
+   * A class name, or a string of class names, to add to the `Select`.
    */
   className: PropTypes.string,
   /**
-   * Disables the `<Select />`.
+   * Disables the `Select`.
    */
   disabled: PropTypes.bool,
   /**
-   * An error message to display in the `<Select />`.
+   * An error message to display in the `Select`.
    */
   errorMsg: PropTypes.string,
   /**
-   * The id of the form the `<Select />` belongs to.
+   * The id of the form the `Select` belongs to.
    */
   formId: PropTypes.string,
   /**
-   * A function to trigger when the state of the `<Select />` changes.
+   * A function to trigger when the state of the `Select` changes.
    */
   handleChange: PropTypes.func,
   /**
-   * Any text to assist the user with this `<Select />`.
+   * Any text to assist the user with this `Select`.
    */
   helpText: PropTypes.string,
   /**
-   * An icon to include on the left side of the `<Select />`.
+   * An icon to include on the left side of the `Select`.
    */
   // icon: PropTypes.oneOf([...ICONS, '']),
   icon: PropTypes.oneOf([
@@ -218,11 +218,11 @@ Select.propTypes = {
     '',
   ]),
   /**
-   * The `<Select />` label.
+   * The `Select` label.
    */
   label: PropTypes.string.isRequired,
   /**
-   * The name given to the `<Select />`. It connects the label to the `<Select />`.
+   * The name given to the `Select`. It connects the label to the `Select`.
    */
   name: PropTypes.string.isRequired,
   /**
@@ -232,15 +232,16 @@ Select.propTypes = {
     PropTypes.oneOfType([PropTypes.object, PropTypes.string, PropTypes.bool]),
   ).isRequired,
   /**
-   * Placeholder text for the `<Select />`/
+   * Placeholder text for the `Select`.
    */
   placeholder: PropTypes.string,
   /**
-   * The value used to pre-select an option of the `<Select />`.
+   * The value used to pre-select an option of the `Select`.
    */
   selectedValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /**
-   * Any inline styles you would like to add to the `<Select />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `Select`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };

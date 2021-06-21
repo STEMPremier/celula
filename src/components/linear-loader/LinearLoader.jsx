@@ -58,7 +58,7 @@ const LinearLoader = ({
 
 LinearLoader.propTypes = {
   /**
-   * A class name, or string of class names, to add to the `LinearLoader`.
+   * A class name, or a string of class names, to add to the `LinearLoader`.
    */
   className: PropTypes.string,
   /**
@@ -78,7 +78,8 @@ LinearLoader.propTypes = {
    */
   percentage: PropTypes.number,
   /**
-   * Any inline styles you would like to add to the `LinearLoader`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `LinearLoader`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };

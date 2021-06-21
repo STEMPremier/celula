@@ -22,7 +22,7 @@ import cx from 'classnames';
 import './container.less';
 
 /**
- * `<Containers />` group componets together, adding margin, or padding, (or neither) and an optional border.
+ * `Container` group componets together, adding margin, padding, or neither, and an optional border.
  */
 const Container = ({ border, className, children, gap, style }) => {
   const classes = cx(
@@ -43,23 +43,24 @@ const Container = ({ border, className, children, gap, style }) => {
 
 Container.propTypes = {
   /**
-   * Add a border around the `<Container />`.
+   * Add a border around the `Container`.
    */
   border: PropTypes.bool,
   /**
-   * Any renderable elements the `<Container />` is to contain.
+   * Any renderable elements the `Container` is to contain.
    */
   children: PropTypes.node.isRequired,
   /**
-   * A class name, or string of class names, to add to the `<Container />`.
+   * A class name, or a string of class names, to add to the `Container`.
    */
   className: PropTypes.string,
   /**
-   * The method the spacing (if any) around the `<Container />` is applied.
+   * The method the spacing (if any) around the `Container` is applied.
    */
   gap: PropTypes.oneOf(['margin', 'padding', 'none']),
   /**
-   * Any inline styles you would like to add to the `<Container />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `Container`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
