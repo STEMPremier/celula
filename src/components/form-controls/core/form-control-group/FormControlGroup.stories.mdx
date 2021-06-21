@@ -1,15 +1,42 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story
+} from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
 
 import FormControlGroup from '.';
 import { Checkbox } from '../../checkbox';
 import { Radio } from '../../radio';
 
-<Meta component={FormControlGroup} title="Components/Molecules/Form Controls/Core/FormControlGroup" />
+<Meta
+  args={{
+    children: [
+      <Checkbox label='macOS' value='macos' />,
+      <Checkbox label='Linux' value='linux' />,
+      <Checkbox label='Windows' value='windows' />,
+    ],
+    handleChange: action('FormControlGroup Changed!'),
+    label: 'Choose your favorite OS:',
+    name: 'withControls',
+    selectedValue: 'macos',
+  }}
+  component={FormControlGroup}
+  title="Components/Molecules/Form Controls/Core/FormControlGroup"
+/>
 
 # FormControlGroup
 <Description of={FormControlGroup} />
-<ArgsTable of={FormControlGroup} />
+
+<Canvas>
+  <Story name="FormControlGroup with Controls">
+    {args => <FormControlGroup {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="FormControlGroup with Controls" />
 
 ## Grouping Checkboxes
 <Canvas>

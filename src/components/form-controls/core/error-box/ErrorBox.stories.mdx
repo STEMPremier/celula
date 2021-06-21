@@ -1,17 +1,31 @@
-import { ArgsTable, Canvas, Description, Meta, Story } from '@storybook/addon-docs/blocks';
-import { text } from '@storybook/addon-knobs';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Meta,
+  Story
+} from '@storybook/addon-docs/blocks';
 
 import ErrorBox from '.';
 
-<Meta component={ErrorBox} title="Components/Molecules/Form Controls/Core/ErrorBox" />
+<Meta
+  args={{
+    errorMsg: 'You were wrong.'
+  }}
+  component={ErrorBox}
+  title="Components/Molecules/Form Controls/Core/ErrorBox"
+/>
 
 # ErrorBox
 <Dscription of={ErrorBox} />
-<ArgsTable of={ErrorBox} />
 
-<Story name="ErrorBox with Knobs" parameters={{docs: {disable: true}}}>
-  <ErrorBox errorMsg={text('errorMsg', 'This is an error message.')} />
-</Story>
+<Canvas>
+  <Story name="ErrorBox with Controls">
+    {args => <ErrorBox {...args} />}
+  </Story>
+</Canvas>
+
+<ArgsTable story="ErrorBox with Controls" />
 
 <Canvas>
   <Story name="ErrorBox">

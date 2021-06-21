@@ -20,8 +20,9 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 /**
- *  `FormControlGroup` is used for grouping arbitrary form-control-like componets that need to operate like checkboxes or a radio buttons.
- *  It is the basis for the 'gouping' components found through out the ui kit.
+ *  `FormControlGroup` is used for grouping arbitrary form-control-like componets that need to
+ *  operate like checkboxes or a radio buttons. It is the basis for the 'gouping' components found
+ *  through out the ui kit.
  *
  * `FormControlGroup` has no specific styles beyone those it children componets bring with them.
  */
@@ -113,56 +114,56 @@ const FormControlGroup = (
 
 FormControlGroup.propTypes = {
   /**
-   * Props passed to all the children of the `<FormControlGroup />`.
+   * Props passed to all the children of the `FormControlGroup`.
    */
   childProps: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   /**
-   * The components you want the `<FormControlGroup />` to group together.
+   * The components you want the `FormControlGroup` to group together.
    */
   children: PropTypes.node.isRequired,
   /**
-   * A class name, or a string of class names, to add to the `<FormControlGroup />`.
+   * A class name, or a string of class names, to add to the `FormControlGroup`.
    */
   className: PropTypes.string,
   /**
-   * Disables the `<FormControlGroup />` and all of it's children.
+   * Disables the `FormControlGroup` and all of it's children.
    */
   disabled: PropTypes.bool,
   /**
-   * A class name, or string of class names, to add to your `<FormControlGroup />` if there is an error message.
+   * A class name, or string of class names, to add to your `FormControlGroup` if there is an error message.
    */
   errorClass: PropTypes.string,
   /**
-   * An error message to display in the `<FormControlGroup />`.
+   * An error message to display in the `FormControlGroup`.
    */
   errorMsg: PropTypes.string,
   /**
-   * The id of the form the `<FormControlGroup />` belongs to.
+   * The id of the form the `FormControlGroup` belongs to.
    */
   formId: PropTypes.string,
   /**
-   * A function to trigger when the state of the `<FormControlGroup />` changes. The function recieves 2 arguments, `event`, and `values`.
+   * A function to trigger when the state of the `FormControlGroup` changes. The function recieves 2 arguments, `event`, and `values`.
    *
    * @param {Event} event - The event that triggered the change.
-   * @param {[]} values - The array of selected values in the <FormControlGroup />.
+   * @param {[]} values - The array of selected values in the FormControlGroup.
    */
   handleChange: PropTypes.func,
   /**
-   * The `<FormControlGroup />` legend.
+   * The `FormControlGroup` legend.
    */
   label: PropTypes.string,
   /**
-   * The name given to all the children of the `<FormControlGroup />`.
+   * The name given to all the children of the `FormControlGroup`.
    */
   name: PropTypes.string.isRequired,
   /**
-   * An array of values used to pre-select children of the `<FormControlGroup />`.
+   * An array of values used to pre-select children of the `FormControlGroup`.
    */
   selectedValues: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
   ),
   /**
-   * Any inline styles you would like to add to the `<FormControlGroup />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `FormControlGroup`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };

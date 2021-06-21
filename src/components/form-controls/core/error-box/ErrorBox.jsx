@@ -35,11 +35,12 @@ export default ErrorBox;
 
 ErrorBox.propTypes = {
   /**
-   * An error message to display
+   * An error message to display.
    */
   errorMsg: PropTypes.string.isRequired,
   /**
-   * Any inline styles you would like to add to the `<ErrorBox />`. See the React [docs](https://reactjs.org/docs/faq-styling.html) for more.
+   * Any inline styles you would like to add to the `ErrorBox`. See the React
+   * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
