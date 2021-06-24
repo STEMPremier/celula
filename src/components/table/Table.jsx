@@ -16,7 +16,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
@@ -54,7 +54,9 @@ const Table = ({
   selectable,
   selectionHeaderFn,
   selectionFn,
+  showTotal,
   style,
+  totalItems,
 }) => {
   const options = {
     columns,
@@ -108,6 +110,35 @@ const Table = ({
   );
 
   const navToPage = pg => gotoPage(pg);
+
+  /* This is all the math to make `Showing [x] - [y] of [z]` work
+   *
+   * First figure out where the page should stop:
+   * - Multiply the number of items per page by the page number you are on.
+   *   - Keep in mind that you have the pageIndex which is 0-index, and this is all about display,
+   *     so you will need to use a 1-indexed page number.
+   * Second figure out where the page should start:
+   * - Subtract the number of items per page, less one, from where this page stops (the number from
+   *   step 1)
+   * Last check and see if 'where this page stops' is after the last item, and display the correct
+   * `to`.
+   * - If the number for where this page stops is larger than the total number of items you have,
+   *   display the total number of items rather than the number from step 1
+   *
+   * E.g. Assume our pageSize is 10, current pageIndex is 2, and we have 27 totalItems:
+   *
+   * to = 10 * (2 + 1)               // 30
+   * displayFrom = 30 - (10 - 1)     // 21
+   * displayTo = 27 > 30 ? 30 : 27   // 27
+   */
+  const [to, setTo] = useState(0);
+  const [displayFrom, setDisplayFrom] = useState(0);
+  const [displayTo, setDisplayTo] = useState(0);
+
+  useMemo(() => setTo(pageSize * (pageIndex + 1)), [pageIndex, pageSize]);
+  useMemo(() => setDisplayFrom(to - (pageSize - 1)), [to, pageSize]);
+  // eslint-disable-next-line prettier/prettier
+  useMemo(() => setDisplayTo(totalItems > to ? to : totalItems), [to, totalItems]);
 
   return (
     <>
@@ -173,6 +204,16 @@ const Table = ({
           })}
         </div>
       </div>
+      {showTotal && (
+        <span className="ce-table--info">
+          {'Showing '}
+          <strong>{displayFrom}</strong>
+          {' - '}
+          <strong>{displayTo}</strong>
+          {' of '}
+          <strong>{totalItems}</strong>
+        </span>
+      )}
       {pageCount > 1 && (
         <Pagination
           canPreviousPage={canPreviousPage}
@@ -193,6 +234,18 @@ Table.propTypes = {
    * A class name, or a string of class names, to add to the `Table`.
    */
   className: PropTypes.string,
+  /**
+   * Make the rows in the `Table` clickable.
+   */
+  clickable: PropTypes.bool,
+  /**
+   * A function to trigger when clicking on a row in the `Table`.
+   * The function accepts 2 arguments, `row` and `event`, in that order: `(row, event) => {}`.
+   *
+   * @param {row} object - The row object for this row of the `Table`.
+   * @param {event} object - The event triggered by the click on the row.
+   */
+  clickFn: PropTypes.func,
   /**
    * An array for the column definition of your `Table`.
    */
@@ -219,18 +272,6 @@ Table.propTypes = {
    */
   pageSize: PropTypes.number,
   /**
-   * Make the rows in the `Table` clickable.
-   */
-  clickable: PropTypes.bool,
-  /**
-   * A function to trigger when clicking on a row in the `Table`.
-   * The function accepts 2 arguments, `row` and `event`, in that order: `(row, event) => {}`.
-   *
-   * @param {row} object - The row object for this row of the `Table`.
-   * @param {event} object - The event triggered by the click on the row.
-   */
-  clickFn: PropTypes.func,
-  /**
    * Adds a checkbox in the `Table`, as the first column.
    */
   selectable: PropTypes.bool,
@@ -251,24 +292,34 @@ Table.propTypes = {
    */
   selectionFn: PropTypes.func,
   /**
+   * Show the total below the `Table`.
+   */
+  showTotal: PropTypes.bool,
+  /**
    * Any inline styles you would like to add to the `Table`. See the React
    * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  /**
+   * The number of total items in the `Table`.
+   */
+  totalItems: PropTypes.number,
 };
 
 Table.defaultProps = {
   className: '',
+  clickable: false,
+  clickFn: () => {},
   fetchData: undefined,
   loading: false,
   pageCount: 0,
   pageSize: 10,
-  clickable: false,
-  clickFn: () => {},
   selectable: false,
   selectionHeaderFn: () => {},
   selectionFn: () => {},
+  showTotal: false,
   style: {},
+  totalItems: 0,
 };
 
 export default Table;
