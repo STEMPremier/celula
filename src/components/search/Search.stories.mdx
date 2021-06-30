@@ -37,7 +37,7 @@ By default `Search` searches on click or press of the included button:
   <Story name="Search on Click">
     <Search
       handleSearch={action('You searched on click.')}
-      helpText="Open the console, click the button."
+      helpText="Look in the 'Actions' tab of the Canvas, and click the button."
       label="Search on Click:"
       name="searchTypesOnClick"
       placeholder="Enter search terms here"
@@ -68,7 +68,6 @@ A `Search` can be disabled:
     <Search
       disabled={true}
       handleSearch={value => console.log(value)}
-      helpText="Open the console, click the button."
       label="Disabled Search:"
       name="searchStatesDisabled"
       placeholder="Enter search terms here"
@@ -81,11 +80,26 @@ Or have an error:
   <Story name="Search but Error">
     <Search
       errorMsg="Whoops! Somthing is not okay."
-      handleSearch={value => console.log(value)}
-      helpText="Clearing the search doesn't trigger the handleSearch function."
-      instantSearch={true}
+      handleSearch={action('Your search caused an error, oh no!')}
       label="Search with Error:"
       name="searchStatesWithError"
+      placeholder="Enter search terms here"
+    />
+  </Story>
+</Canvas>
+
+## Events
+`Search` provides hooks to trigger actions at specific moments across its operation.
+
+A `Search` can trigger an action onClear:
+<Canvas>
+  <Story name="Search with onClear">
+    <Search
+      handleSearch={action('Search!')}
+      helpText="Clearing the search doesn't trigger the handleSearch function, but it does trigger the onClear function."
+      label="Search with onClear"
+      name="searchStatesWithOnClear"
+      onClear={action('You cleared the Search!')}
       placeholder="Enter search terms here"
     />
   </Story>

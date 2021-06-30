@@ -22,6 +22,8 @@ import cx from 'classnames';
 import SystemIcon from '../icon/SystemIcon';
 import { ErrorBox } from '../form-controls/core';
 
+import { functionOrUndef } from '../../utils/propValidators';
+
 import './search.less';
 
 const Search = ({
@@ -32,6 +34,7 @@ const Search = ({
   handleSearch,
   helpText,
   label,
+  onClear,
   name,
   placeholder,
   style,
@@ -68,6 +71,8 @@ const Search = ({
 
   const clear = () => {
     setFieldValue('');
+
+    if (onClear) onClear();
   };
 
   return (
@@ -134,6 +139,10 @@ Search.propTypes = {
    */
   label: PropTypes.string.isRequired,
   /**
+   * A function to trigger when the `Search` is cleared. Useful for resetting app state for example.
+   */
+  onClear: functionOrUndef,
+  /**
    * The name given to the `Search`. It connects the label to the `Search`.
    */
   name: PropTypes.string.isRequired,
@@ -154,6 +163,7 @@ Search.defaultProps = {
   errorMsg: '',
   helpText: '',
   instantSearch: false,
+  onClear: undefined,
   placeholder: '',
   style: {},
 };
