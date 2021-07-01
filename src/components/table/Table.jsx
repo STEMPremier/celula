@@ -166,45 +166,48 @@ const Table = ({
 
         {/* table body */}
         <div className="ce-table__body" {...getTableBodyProps()}>
-          {loading && <CircularLoader indeterminate />}
-          {page.map(row => {
-            prepareRow(row);
+          {loading ? (
+            <CircularLoader indeterminate />
+          ) : (
+            page.map(row => {
+              prepareRow(row);
 
-            const rowProps = {
-              className: `ce-table__row${
-                row.isSelected ? ' ce-table__row--selected' : ''
-              }`,
-              ...row.getRowProps(),
-              onClick: clickable
-                ? event => clickFn(row.original, event)
-                : () => {},
-              tabIndex: clickable ? '0' : null,
-            };
+              const rowProps = {
+                className: `ce-table__row${
+                  row.isSelected ? ' ce-table__row--selected' : ''
+                }`,
+                ...row.getRowProps(),
+                onClick: clickable
+                  ? event => clickFn(row.original, event)
+                  : () => {},
+                tabIndex: clickable ? '0' : null,
+              };
 
-            return (
-              <div key={row.id} {...rowProps}>
-                {row.cells.map(cell => (
-                  <div
-                    key={cell.id}
-                    className="ce-table__cell"
-                    {...cell.getCellProps()}
-                  >
-                    <div className="ce-table__cell-heading">
-                      {typeof cell.column.Header === 'string'
-                        ? `${cell.render('Header')}:`
-                        : cell.render('Header')}
+              return (
+                <div key={row.id} {...rowProps}>
+                  {row.cells.map(cell => (
+                    <div
+                      key={cell.id}
+                      className="ce-table__cell"
+                      {...cell.getCellProps()}
+                    >
+                      <div className="ce-table__cell-heading">
+                        {typeof cell.column.Header === 'string'
+                          ? `${cell.render('Header')}:`
+                          : cell.render('Header')}
+                      </div>
+                      <div className="ce-table__cell-body">
+                        {cell.render('Cell')}
+                      </div>
                     </div>
-                    <div className="ce-table__cell-body">
-                      {cell.render('Cell')}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            );
-          })}
+                  ))}
+                </div>
+              );
+            })
+          )}
         </div>
       </div>
-      {showTotal && (
+      {!loading && showTotal && (
         <span className="ce-table--info">
           {'Showing '}
           <strong>{displayFrom}</strong>
@@ -214,7 +217,7 @@ const Table = ({
           <strong>{totalItems}</strong>
         </span>
       )}
-      {pageCount > 1 && (
+      {!loading && pageCount > 1 && (
         <Pagination
           canPreviousPage={canPreviousPage}
           canNextPage={canNextPage}
