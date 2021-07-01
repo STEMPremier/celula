@@ -18,6 +18,7 @@ exports[`<Search /> render() render the Search component 1`] = `
       id="test"
       name="test"
       onChange={[Function]}
+      onKeyPress={[Function]}
       placeholder=""
       type="text"
       value=""

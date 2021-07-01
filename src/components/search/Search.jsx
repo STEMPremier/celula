@@ -75,6 +75,10 @@ const Search = ({
     if (onClear) onClear();
   };
 
+  const handleKeyPress = event => {
+    if (event.key === 'Enter') search();
+  };
+
   return (
     <div className={classes} style={style}>
       <label htmlFor={id}>{label}</label>
@@ -85,6 +89,7 @@ const Search = ({
           id={id}
           name={name}
           onChange={handleChange}
+          onKeyPress={handleKeyPress}
           placeholder={placeholder}
           type="text"
           value={fieldValue}
