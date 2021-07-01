@@ -19,6 +19,8 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
+import { SIZES } from '../../utils/constants';
+
 import './circular-loader.less';
 
 // The default starting place to draw the progess line is '3 o'clock'. This moves it back to '12'.
@@ -45,6 +47,7 @@ const CircularLoader = ({
   legend,
   percentage,
   showPercentage,
+  size,
   style,
 }) => {
   const [progressBar, setProgressBar] = useState(0);
@@ -73,7 +76,10 @@ const CircularLoader = ({
 
   const classes = cx(
     'ce-circular-loader',
-    { 'ce-cl-indeterminate': indeterminate },
+    {
+      [`ce-cl--${size}`]: SIZES.includes(size.toString().toLowerCase()),
+      'ce-cl-indeterminate': indeterminate,
+    },
     className,
   );
 
@@ -173,6 +179,11 @@ CircularLoader.propTypes = {
    */
   showPercentage: PropTypes.bool,
   /**
+   * The size of the `CircularLoader`.
+   */
+  // size: PropTypes.oneOf(SIZES),
+  size: PropTypes.oneOf(['small', 'large', 'jumbo']),
+  /**
    * Any inline styles you would like to add to the `CircularLoader`. See the React
    * [docs](https://reactjs.org/docs/faq-styling.html) for more.
    */
@@ -186,6 +197,7 @@ CircularLoader.defaultProps = {
   legend: '',
   percentage: 0,
   showPercentage: false,
+  size: 'large',
   style: {},
 };
 

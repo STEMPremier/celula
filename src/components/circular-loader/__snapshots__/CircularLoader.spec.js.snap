@@ -3,7 +3,7 @@
 exports[`<CircularLoader /> render() renders the component 1`] = `
 <Fragment>
   <div
-    className="ce-circular-loader"
+    className="ce-circular-loader ce-cl--large"
     style={Object {}}
   >
     <svg

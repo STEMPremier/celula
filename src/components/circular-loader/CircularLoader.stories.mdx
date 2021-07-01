@@ -33,9 +33,7 @@ Progress loaders fill the circular track with color, as progress moves from 0% t
 
 <Canvas>
   <Story name="Progress CircularLoader">
-    <div style={{maxWidth:'200px'}}>
-      <CircularLoader percentage={83} />
-    </div>
+    <CircularLoader percentage={83} />
   </Story>
 </Canvas>
 
@@ -43,9 +41,20 @@ Progress loaders fill the circular track with color, as progress moves from 0% t
 
 <Canvas>
   <Story name="Indeterminate CircularLoader">
-    <div style={{maxWidth:'200px'}}>
-      <CircularLoader indeterminate />
-    </div>
+    <CircularLoader indeterminate />
+  </Story>
+</Canvas>
+
+### Sizes
+<Canvas>
+  <Story name="Small CircularLoader">
+    <CircularLoader percentage={83} size="small" />
+  </Story>
+  <Story name="Large CircularLoader">
+    <CircularLoader percentage={83} size="large" />
+  </Story>
+  <Story name="Jumbo CircularLoader">
+    <CircularLoader percentage={83} size="jumbo" />
   </Story>
 </Canvas>
 
@@ -54,19 +63,13 @@ A `CircularLoader` may come in any of our gradients.
 
 <Canvas>
   <Story name="Cool CircularLoader">
-    <div style={{maxWidth:'200px'}}>
-      <CircularLoader color="cool" percentage={83} />
-    </div>
+    <CircularLoader color="cool" percentage={83} />
   </Story>
   <Story name="Warm CircularLoader">
-    <div style={{maxWidth:'200px'}}>
-      <CircularLoader color="warm" percentage={83} />
-    </div>
+    <CircularLoader color="warm" percentage={83} />
   </Story>
   <Story name="Hot CircularLoader">
-    <div style={{maxWidth:'200px'}}>
-      <CircularLoader color="hot" percentage={83} />
-    </div>
+    <CircularLoader color="hot" percentage={83} />
   </Story>
 </Canvas>
 
@@ -76,13 +79,9 @@ loader) the percentage complete.
 
 <Canvas>
   <Story name="CircularLoader with Options">
-    <div style={{maxWidth:'200px'}}>
-      <CircularLoader legend="Please wait..." percentage={83} showPercentage={true} />
-    </div>
+    <CircularLoader legend="Please wait..." percentage={83} showPercentage={true} />
   </Story>
   <Story name="Indeterminate CircularLoader with a Legend">
-    <div style={{maxWidth:'200px'}}>
-      <CircularLoader indeterminate legend="Please wait..." />
-    </div>
+    <CircularLoader indeterminate legend="Please wait..." />
   </Story>
 </Canvas>
