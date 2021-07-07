@@ -65,7 +65,7 @@ const Switch = ({
   return (
     <div className={classes} style={style}>
       <input
-        className="switch"
+        className="ce-s-switch"
         checked={isChecked}
         disabled={disabled}
         id={id}
