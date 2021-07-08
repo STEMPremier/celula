@@ -33,6 +33,7 @@ const Switch = ({
   className,
   disabled,
   errorMsg,
+  formId,
   handleChange: handler,
   label,
   name,
@@ -68,6 +69,7 @@ const Switch = ({
         className="ce-s-switch"
         checked={isChecked}
         disabled={disabled}
+        form={formId}
         id={id}
         name={name}
         onChange={handleChange}
@@ -100,6 +102,10 @@ Switch.propTypes = {
    */
   errorMsg: PropTypes.string,
   /**
+   * The id of the form the `Switch` belongs to.
+   */
+  formId: PropTypes.string,
+  /**
    * A function to trigger when the state of the `Switch` changes.
    */
   handleChange: PropTypes.func,
@@ -131,6 +137,7 @@ Switch.defaultProps = {
   className: '',
   disabled: false,
   errorMsg: '',
+  formId: '',
   handleChange: () => {},
   name: 'name',
   style: {},
