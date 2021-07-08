@@ -59,8 +59,9 @@ const Switch = ({
 
   const handleChange = event => {
     const { checked: targetChecked, value: targetValue } = event.target;
+
     setIsChecked(targetChecked);
-    handler(targetValue);
+    handler({ checked: targetChecked, value: targetValue });
   };
 
   return (
