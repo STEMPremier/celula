@@ -35,8 +35,8 @@ const Checkbox = ({
   errorMsg,
   formId,
   handleChange: handler,
-  name,
   label,
+  name,
   style,
   value,
   ...rest
