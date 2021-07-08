@@ -24,7 +24,7 @@ import { ErrorBox } from '../form-controls/core';
 import '../form-controls/core/selectable/selectable.less';
 
 /**
- * A `Switche` toggles the state of a single setting on or off. They are the preferred way to
+ * A `Switch` toggles the state of a single setting on or off. They are the preferred way to
  * adjust settings on mobile. Use them to toggle a single option on or off or to immediately
  * activate or deactivate something.
  */
