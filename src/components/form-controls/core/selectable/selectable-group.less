@@ -2,8 +2,6 @@
 
 .ce-checkbox-group,
 .ce-radio-group {
-  border: 0.3rem solid @white;
-  border-radius: 0.5rem;
   clear: both;
   padding-bottom: 0.6rem;
   padding-top: 1rem;
@@ -11,13 +9,9 @@
 
   legend {
     color: @legend-text;
-    margin-left: 1.5rem;
+    margin-left: -0.9rem;
     min-height: 1.6rem;
     padding: 0 0.9rem;
-  }
-
-  .ce-checkbox, .ce-radio {
-    margin-left: 1.6rem;
   }
 
   span {
@@ -42,7 +36,9 @@
   &.ce-checkbox-group--error,
   &.ce-radio-group--error {
     border: 0.3rem solid #ff3376;
+    border-radius: 0.5rem;
     color: #e5004b;
+    padding-left: 2.4rem;
 
     input[type='checkbox'],
     input[type='radio'] {
