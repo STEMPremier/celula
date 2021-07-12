@@ -10,8 +10,13 @@
 
 .ce-d-flex {
   display: flex;
+  justify-content: space-between;
 
   * {
     flex-grow: 1;
+  }
+
+  > * + * {
+    margin-left: 0.5rem;
   }
 }
