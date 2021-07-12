@@ -9,6 +9,7 @@ exports[`<Switch /> render() render the Switch component 1`] = `
     checked={false}
     className="ce-s-switch"
     disabled={false}
+    form=""
     id="Switch Test Name_switch value"
     name="Switch Test Name"
     onChange={[Function]}
