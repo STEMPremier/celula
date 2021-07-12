@@ -2,6 +2,8 @@ import { Canvas, Meta } from '@storybook/addon-docs/blocks';
 
 import {
   Checkbox,
+  CheckboxGroup,
+  FileUploader,
   Input,
   Select,
   SubmitButton,
@@ -20,17 +22,28 @@ import Container from '../../container';
 <Canvas>
   <Story name="About Forms">
     <Container>
+      <Search label="Search for a user" name="searchUser" />
+    </Container>
+    <Container>
       <form className="ce-form" id="myForm">
         <div className="ce-f-row ce-d-flex">
           <Input label="First Name" name="firstname" />
           <Input label="Last Name" name="lastname" />
         </div>
-        <RadioGroup className="ce-f-row" handleChange={() => {}} label="Gender" name="gender">
-          <Radio label="Female" value="female" />
-          <Radio label="Male" value="male" />
-          <Radio label="Non-binary" value="nonBinary" />
-          <Radio label="Other" value="other" />
-        </RadioGroup>
+        <div className="ce-f-row ce-d-flex">
+          <RadioGroup handleChange={() => {}} label="Gender" name="gender">
+            <Radio label="Female" value="female" />
+            <Radio label="Male" value="male" />
+            <Radio label="Non-binary" value="nonBinary" />
+            <Radio label="Other" value="other" />
+          </RadioGroup>
+          <CheckboxGroup handleChange={() => {}} label="Role(s)" name="roles">
+            <Checkbox label="Superuser" value="superuser" />
+            <Checkbox label="Admin" value="Admin" />
+            <Checkbox label="User" value="user" />
+            <Checkbox label="Organization" value="organization" />
+          </CheckboxGroup>
+        </div>
         <Input className="ce-f-row" label="Street Address" name="streetAddress" />
         <div className="ce-f-row ce-d-flex">
           <Input label="City" name="city" style={{flexGrow:'2'}} />
@@ -42,6 +55,10 @@ import Container from '../../container';
           <Input label="ZIP" name="zip" style={{flexGrow:'0'}} />
         </div>
         <Textarea className="ce-f-row" label="About You" name="aboutYou" />
+        <div className="ce-f-row">
+          <span className="label">Attachments</span>
+          <FileUploader className="ce-f-row" name="attachments" />
+        </div>
         <Checkbox className="ce-f-row" label="I agree to terms and conditions" name="toc" value="acceptedTOC" />
         <SubmitButton className="ce-f-row" size="large">
           Save
