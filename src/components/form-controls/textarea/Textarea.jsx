@@ -68,7 +68,7 @@ const Textarea = ({
       <label className="ce-label" htmlFor={id}>
         {label}
       </label>
-      {helpText && <div className="ce-textarea__help-text">{helpText}</div>}
+      {helpText && <span className="ce-help-text">{helpText}</span>}
       <textarea
         disabled={disabled}
         id={id}
