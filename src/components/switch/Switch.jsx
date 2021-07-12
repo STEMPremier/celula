@@ -77,9 +77,7 @@ const Switch = ({
         type="checkbox"
         value={value}
       />
-      <label htmlFor={id}>
-        <span>{label}</span>
-      </label>
+      <label htmlFor={id}>{label}</label>
       {errorMsg && <ErrorBox errorMsg={errorMsg} />}
     </div>
   );

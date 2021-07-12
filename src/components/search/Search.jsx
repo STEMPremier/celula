@@ -81,7 +81,9 @@ const Search = ({
 
   return (
     <div className={classes} style={style}>
-      <label htmlFor={id}>{label}</label>
+      <label className="label" htmlFor={id}>
+        {label}
+      </label>
       {helpText && <div className="ce-search__help-text">{helpText}</div>}
       <div className="ce-search__container">
         <input

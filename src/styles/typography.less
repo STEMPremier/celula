@@ -144,6 +144,15 @@ p, span { // p2 is the default
   }
 }
 
+label {
+  color: @label-text;
+  font-family: proxima-nova, sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+
 blockquote {
   font-family: proxima-nova, sans-serif;
   font-size: 1.6rem;
@@ -221,6 +230,11 @@ ul, ol {
   &.inverted {
     color: @inverted-secondary-text;
   }
+}
+
+.label {
+  display: block;
+  margin: 0.3rem 0;
 }
 
 .help-text {
