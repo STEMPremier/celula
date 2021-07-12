@@ -65,7 +65,7 @@ const Textarea = ({
 
   return (
     <div className={classes}>
-      <label className="label" htmlFor={id}>
+      <label className="ce-label" htmlFor={id}>
         {label}
       </label>
       {helpText && <div className="ce-textarea__help-text">{helpText}</div>}

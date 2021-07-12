@@ -72,7 +72,7 @@ const Select = ({
 
   return (
     <div className={classes} style={style}>
-      <label className="label" htmlFor={id}>
+      <label className="ce-label" htmlFor={id}>
         {label}
       </label>
       {helpText && <span className="ce-help-text">{helpText}</span>}
