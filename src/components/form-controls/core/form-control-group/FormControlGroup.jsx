@@ -107,7 +107,7 @@ const FormControlGroup = (
     >
       <legend>{label}</legend>
       {renderChildren()}
-      <span className={errorClass}>{errorMsg}</span>
+      {errorMsg && <span className={errorClass}>{errorMsg}</span>}
     </fieldset>
   );
 };
