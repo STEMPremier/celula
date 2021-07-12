@@ -168,7 +168,7 @@ const Input = ({
       <label className="label" htmlFor={id}>
         {label}
       </label>
-      {helpText && <div className="ce-input__help-text">{helpText}</div>}
+      {helpText && <span className="ce-help-text">{helpText}</span>}
       <div className="ce-input__container">
         {icon && (
           <div className="ce-input__icon">

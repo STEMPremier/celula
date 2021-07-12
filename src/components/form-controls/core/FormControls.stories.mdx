@@ -22,13 +22,25 @@ import Container from '../../container';
 <Canvas>
   <Story name="About Forms">
     <Container>
-      <Search label="Search for a user" name="searchUser" />
+      <Search
+        helpText="I am helpful text."
+        label="Search for a user"
+        name="searchUser"
+      />
     </Container>
     <Container>
       <form className="ce-form" id="myForm">
         <div className="ce-f-row ce-d-flex">
-          <Input label="First Name" name="firstname" />
-          <Input label="Last Name" name="lastname" />
+          <Input
+            helpText="I am helpful text."
+            label="First Name"
+            name="firstname"
+          />
+          <Input
+            helpText="I am helpful text."
+            label="Last Name"
+            name="lastname"
+          />
         </div>
         <div className="ce-f-row ce-d-flex">
           <RadioGroup handleChange={() => {}} label="Gender" name="gender">
@@ -44,19 +56,41 @@ import Container from '../../container';
             <Checkbox label="Organization" value="organization" />
           </CheckboxGroup>
         </div>
-        <Input className="ce-f-row" label="Street Address" name="streetAddress" />
+        <Input
+          className="ce-f-row"
+          helpText="I am helpful text."
+          label="Street Address"
+          name="streetAddress"
+        />
         <div className="ce-f-row ce-d-flex">
-          <Input label="City" name="city" style={{flexGrow:'2'}} />
+          <Input
+            helpText="I am helpful text."
+            label="City"
+            name="city"
+            style={{flexGrow:'2'}}
+          />
           <Select
+            helpText="I am helpful text."
             label="State"
             name="state"
             options={[{ name: 'Alabama', value: 'AL' }, { name: 'Oklahoma', value: 'OK' }, { name: 'Pennsylvania', value: 'PA' }, { name: 'South Carolina', value: 'SC' }]}
           />
-          <Input label="ZIP" name="zip" style={{flexGrow:'0'}} />
+          <Input
+            helpText="I am helpful text."
+            label="ZIP"
+            name="zip"
+            style={{flexGrow:'0'}}
+          />
         </div>
-        <Textarea className="ce-f-row" label="About You" name="aboutYou" />
+        <Textarea
+          className="ce-f-row"
+          helpText="I am helpful text."
+          label="About You"
+          name="aboutYou"
+        />
         <div className="ce-f-row">
           <span className="label">Attachments</span>
+          <span className="ce-help-text">I am helpful text.</span>
           <FileUploader className="ce-f-row" name="attachments" />
         </div>
         <Checkbox className="ce-f-row" label="I agree to terms and conditions" name="toc" value="acceptedTOC" />

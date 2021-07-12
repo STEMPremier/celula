@@ -84,7 +84,7 @@ const Search = ({
       <label className="label" htmlFor={id}>
         {label}
       </label>
-      {helpText && <div className="ce-search__help-text">{helpText}</div>}
+      {helpText && <span className="ce-help-text">{helpText}</span>}
       <div className="ce-search__container">
         <input
           disabled={disabled}
