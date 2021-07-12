@@ -30,7 +30,7 @@ import Container from '../../container';
     </Container>
     <Container>
       <form className="ce-form" id="myForm">
-        <div className="ce-f-row ce-d-flex">
+        <div className="ce-d-flex">
           <Input
             helpText="I am helpful text."
             label="First Name"
@@ -42,7 +42,7 @@ import Container from '../../container';
             name="lastname"
           />
         </div>
-        <div className="ce-f-row ce-d-flex">
+        <div className="ce-d-flex">
           <RadioGroup handleChange={() => {}} label="Gender" name="gender">
             <Radio label="Female" value="female" />
             <Radio label="Male" value="male" />
@@ -57,12 +57,11 @@ import Container from '../../container';
           </CheckboxGroup>
         </div>
         <Input
-          className="ce-f-row"
           helpText="I am helpful text."
           label="Street Address"
           name="streetAddress"
         />
-        <div className="ce-f-row ce-d-flex">
+        <div className="ce-d-flex">
           <Input
             helpText="I am helpful text."
             label="City"
@@ -83,18 +82,17 @@ import Container from '../../container';
           />
         </div>
         <Textarea
-          className="ce-f-row"
           helpText="I am helpful text."
           label="About You"
           name="aboutYou"
         />
-        <div className="ce-f-row">
+        <div>
           <span className="ce-label">Attachments</span>
           <span className="ce-help-text">I am helpful text.</span>
-          <FileUploader className="ce-f-row" name="attachments" />
+          <FileUploader name="attachments" />
         </div>
-        <Checkbox className="ce-f-row" label="I agree to terms and conditions" name="toc" value="acceptedTOC" />
-        <SubmitButton className="ce-f-row" size="large">
+        <Checkbox label="I agree to terms and conditions" name="toc" value="acceptedTOC" />
+        <SubmitButton size="large">
           Save
         </SubmitButton>
       </form>
