@@ -5,6 +5,7 @@ exports[`<Textarea /> render() renders the component 1`] = `
   className="ce-textarea"
 >
   <label
+    className="ce-label"
     htmlFor="textarea"
   >
     Textarea

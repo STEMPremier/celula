@@ -6,6 +6,7 @@ exports[`<Search /> render() render the Search component 1`] = `
   style={Object {}}
 >
   <label
+    className="ce-label"
     htmlFor="test"
   >
     test label

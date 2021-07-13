@@ -6,6 +6,7 @@ exports[`<Input /> render() render the Input component 1`] = `
   style={Object {}}
 >
   <label
+    className="ce-label"
     htmlFor="test"
   >
     test label

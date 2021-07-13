@@ -39,9 +39,6 @@ exports[`FormControlGroup render() render a FCG with Checkboxes 1`] = `
     style={Object {}}
     value="Checkbox Value Here 2"
   />
-  <span
-    className=""
-  />
 </fieldset>
 `;
 
@@ -77,9 +74,6 @@ exports[`FormControlGroup render() render a FCG with Radios 1`] = `
     name="FormControlGroup Test Name"
     style={Object {}}
     value="Radio Value Here 2"
-  />
-  <span
-    className=""
   />
 </fieldset>
 `;

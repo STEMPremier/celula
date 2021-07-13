@@ -19,9 +19,7 @@ exports[`<Switch /> render() render the Switch component 1`] = `
   <label
     htmlFor="Switch Test Name_switch value"
   >
-    <span>
-      Switch Test Label
-    </span>
+    Switch Test Label
   </label>
 </div>
 `;
